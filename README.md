@@ -1,0 +1,1 @@
+1. How to change dissertation.md into a scientific pdf: https://gist.github.com/maxogden/97190db73ac19fc6c1d9beee1a6e4fc8
