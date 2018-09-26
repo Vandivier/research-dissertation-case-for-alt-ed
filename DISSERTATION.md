@@ -1,3 +1,19 @@
+---
+title: "The Case for Alternative Education"
+date: "October 2018"
+author: "John Vandivier, George Mason University, Department of Economics"
+---
+
+# Abstract
+
+Recent literature deflates the value of education, but my analysis defines education along a traditional-alternative continuoum and shows that the value of alternative education remains a strong investment choice.
+
+# Overview
+
+
+
+
+---
 
 one job market paper
 one tie-to-existing
