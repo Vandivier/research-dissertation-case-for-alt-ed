@@ -40,3 +40,25 @@ Online Articles
 # 5. Miscellaneous Notes
 
 1. top econ journals; prefer top 10 https://ideas.repec.org/top/top.journals.all.html
+
+2. read more!!!! in prestigious journals by famous people. pick one, make it highly cited and relevant to other prestigious work (currenter is better). 10 - 20 pages
+
+3. bryan is more optimistic on alternative education for real learning but maybe not for job outcomes (this is where I can maybe be interesting, LATER PAPER TOO ORIGINAL)
+
+4. Portfolio theory and simultaneous operation of a portfolio as 1) a credential/signal, and, 2) an output of productivity and geniune learning/skill evidence (LATER PAPER TOO ORIGINAL)
+
+5. Some directly relevant papers saying 'dearth of data, need new data' (you can cite them, but it's not enough and bordering on too original)
+
+6. site boring papers and try to be a boring paper (add the interesting stuff on low key or later)
+
+7. building on/referencing Caplan's work is a risky move (do it low key or in a later paper)
+
+8. Recommended approach: FIND PAPERS ON RETURNS TO ALTERNATIVE EDUCATION and say "hey I'm just doing another one of these things nbd...low key on low key my man u kno..."
+
+9. Paper 2 is the emphasis: comparing traditional employment outcomes to alternative employment outcomes and then *my* measures of alternative employment outcomes
+
+10. classifiers can be included or ignored - not recommended as seperate economic paper (go ahead an include for now; knock it out of the park)
+
+11. attitudinal survey is currently fit for a think tank, not an academic job; will that change with panel? idk. (maybe a lower quality paper later on)
+
+
