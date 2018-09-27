@@ -26,12 +26,21 @@ Papers
 6. Kejriwal, Mohitosh, Xiaoxiao Li, and Evan Totty. "Multidimensional Skills and the Returns to Schooling: Evidence from an Interactive Fixed Effects Approach and a Linked Survey-Administrative Dataset." (2018).
 7. Tholen, Gerbrand. "The limits of higher education institutions as sites of work skill development, the cases of software engineers, laboratory scientists, financial analysts and press officers." Studies in Higher Education (2018): 1-12.
 8. Sitzmann, Traci, and Justin M. Weinhardt. "Approaching evaluation from a multilevel perspective: A comprehensive analysis of the indicators of training effectiveness." Human Resource Management Review (2017).
+9. a term in the literature which we are not as much interested in: 
+   a. Foley, Regina M., and Lan-Sze Pang. "Alternative education programs: Program and student characteristics." The High School Journal 89.3 (2006): 10-21.
+   b. Lange, Cheryl M., and Sandra J. Sletten. "Alternative Education: A Brief History and Research Synthesis." For full text: http://www. nasdse. org/forum. htm., 2002.
+10. Ewert, Stephanie, and Robert Kominski. "Measuring alternative educational credentials: 2012." Household Economic Studies (2014): P70-138.
+11. 
 
 Online Articles 
 
 1. Vandivier, Alternative Paths to Traditional Education
 2. http://www.educationrevolution.org/store/resources/alternatives/introtoalternatives/
-3. 
+3. case against education related articles: https://scholar.google.com/scholar?q=related:drC9cH-mewUJ:scholar.google.com/&scioq=%22the+case+against+education%22&hl=en&as_sdt=0,21
+4. https://www.insidehighered.com/digital-learning/article/2018/09/26/growing-number-colleges-partner-google-offer-credit-its-new-it
+5. https://www.insidehighered.com/content/alternative-credentials-and-emerging-pathways-between-education-and-work
+6. https://www.youtube.com/watch?v=-JE4p_EuWoc
+7. https://www.khanacademy.org/about/blog/post/177799922435/school-district-reports-test-scores-rise-with
 
 # 4. Own Technical References
 
@@ -61,4 +70,12 @@ Online Articles
 
 11. attitudinal survey is currently fit for a think tank, not an academic job; will that change with panel? idk. (maybe a lower quality paper later on)
 
+# 6. Key Terms for Search
 
+1. nonaccredited education providers
+2. alternative credentials
+3. mooc
+4. alternative education
+5. competency-based skills
+6. competency-based education
+7. evidence-based education
