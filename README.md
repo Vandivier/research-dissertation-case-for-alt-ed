@@ -41,6 +41,8 @@ Online Articles
 5. https://www.insidehighered.com/content/alternative-credentials-and-emerging-pathways-between-education-and-work
 6. https://www.youtube.com/watch?v=-JE4p_EuWoc
 7. https://www.khanacademy.org/about/blog/post/177799922435/school-district-reports-test-scores-rise-with
+8. http://connectingcredentials.org/data-point-degree-and-nondegree-credentials-held-by-labor-force-participants/
+
 
 # 4. Own Technical References
 
@@ -70,6 +72,19 @@ Online Articles
 
 11. attitudinal survey is currently fit for a think tank, not an academic job; will that change with panel? idk. (maybe a lower quality paper later on)
 
+12. https://www.youtube.com/watch?v=-JE4p_EuWoc
+    1. ~20 min define alternative credential as other than 4 year degree
+        a. "It's also more than credentials"
+        b. points out 'why so diminutive?' and call for language change
+    2. ~27 min learner control, portability, verification
+        a. what about ratings, institutional reputation, and salary/roi impact?
+
+13. measures of alternativeness? (abnormality or inverse normality)
+1 - term obscurity: google ad keyword plan tool (impressions, clicks, etc) or interest on google trends https://productforums.google.com/forum/#!topic/websearch/5NfIpQo3tII
+2 - ordinary survey
+3 - enrollment
+4 - state backing (accredition, loan programs)
+
 # 6. Key Terms for Search
 
 1. nonaccredited education providers
@@ -79,3 +94,5 @@ Online Articles
 5. competency-based skills
 6. competency-based education
 7. evidence-based education
+8. experiential learning
+9. microcredentials
