@@ -80,10 +80,12 @@ Online Articles
         a. what about ratings, institutional reputation, and salary/roi impact?
 
 13. measures of alternativeness? (abnormality or inverse normality)
-1 - term obscurity: google ad keyword plan tool (impressions, clicks, etc) or interest on google trends https://productforums.google.com/forum/#!topic/websearch/5NfIpQo3tII
-2 - ordinary survey
-3 - enrollment
-4 - state backing (accredition, loan programs)
+    1. term obscurity: google ad keyword plan tool (impressions, clicks, etc) or interest on google trends https://productforums.google.com/forum/#!topic/websearch/5NfIpQo3tII
+    2. ordinary survey
+    3. enrollment
+    4. state backing (accredition, loan programs)
+
+14. future research could measure the size of the flexibility remote stigma over time and estimate when it will become negligible; this would be a general measure of market competitiveness bc flexible work is associated with higher productivity, so pure market theory expects rapid convergence but we seem to observe slow convergence; how can we improve convergence speed? https://www.thesolutionsjournal.com/article/a-revolutionary-change-making-the-workplace-more-flexible/
 
 # 6. Key Terms for Search
 
