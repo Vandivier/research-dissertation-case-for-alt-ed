@@ -2,6 +2,23 @@
 
 Section 1 is the overview. Section 2 contains technical references for transforming markdown to a scientific paper. Section 3 is a reading list. Section 4 is own references to other repository locations for data analysis and so on. Section 5 contains miscellaneous notes.
 
+# 2. TODO
+
+1. Collapse extraneous sections
+2. Rewrite overview to correctly identify sections
+
+# 3. Justification of Work by Semester
+
+1. Spring 2018
+  1. Gathered original data. Mostly identified on GitHub in ../udacity-exploratory-analysis/do-files-and-pager-artifacts
+2. Fall 2018
+  1. Generate reading list of key books, articles, and people
+  2. Write a synthesis - review/summarize each source and extract related info
+  3. Repeat attitudinal survey to create minimal panel
+3. Spring 2019
+  1. Repeat attitudinal survey to create 3-5 period panel
+  2. If it's not done earlier, write 1 or 2 articles for publication this semester
+
 # 2. Paper Technical Build Process
 
 1. How to change dissertation.md into a scientific pdf: https://gist.github.com/maxogden/97190db73ac19fc6c1d9beee1a6e4fc8
@@ -15,6 +32,13 @@ Books
 2. Tooley, The Beautiful Tree
 3. Blake, The Expertise Economy
 4. Miller, 2014, The Self-Organizing Revolution
+5. Craig, 2018, A New U: Faster + Cheaper Alternatives to College
+
+People
+
+1. Ryan Craig
+2. Michael Horn
+3. Clayton Christensen
 
 Papers
 
@@ -89,6 +113,81 @@ Online Articles
 
 15. https://github.com/dougiebuckets/github-email-scraper
 
+* What does current literature say? alternative credentials and alternative credentials are things which are growing and may represent reduced cost for equal or better learning and signalling. Remaining questions:
+    * How fast is alternative education growing? When will alternatively-educated applicants constitute a larger share of applicants than traditionally-educated applicants?
+    * Does alternative education tend to equalize or exacerbate inequality? Does it benefit the poor vs the rich evenly or not?
+    * Is traditional education good for anyone?
+        * The smartest people
+        * The high-IQ
+        *  The high-grit or those of certain personalities?
+        * "I have trouble learning online" True or false?
+    * What treatments improve support for these programs?
+        * industry
+        * gov v nonprofit vs private
+        * US vs non-us?
+        * peer effects?
+        * presentation?
+        * Piloting?
+    * What qualities make for a good learning system [largely already known fairly different topic]
+* basic definition - https://www.higheredtoday.org/2013/10/01/the-emerging-world-of-alternative-credentials/
+* federal jobs as a norm-maker (GS scale): http://www.federaljobs.net/federal-jobs-outlook.htm
+    * can substitute experience for degree - great!
+    * but what about substitution of alternative credential for degree and/or experience?
+    * Or, productivity in lieu of experience (eg prove I'm more productive at .5 years than some people at 3 years)
+* https://github.com/Vandivier/research-dissertation-case-for-alt-ed/blob/master/DISSERTATION.md
+* https://www.fastcompany.com/40577234/report-demand-for-these-skills-will-rise-dramatically-by-2030
+* https://www.insidehighered.com/special-reports
+    * On-Ramps and Off-Ramps: Alternative Credentials and Emerging Pathways Between Education and Work
+* https://www.insidehighered.com/blogs/world-view/advancing-employability-through-labor-market-information-system
+* https://www.chronicle.com/blogs/wiredcampus/coursera-takes-a-nuanced-view-of-mooc-dropout-rates/43341
+* http://www.learningexecutive.com/cllc/2014/ga_whatwearelearningfromonlineeducation_chi.pdf
+* https://www.immagic.com/eLibrary/ARCHIVES/GENERAL/CHRON_HE/C120719Y.pdf
+* https://www.immagic.com/eLibrary/ARCHIVES/GENERAL/CHRON_HE/C130109C.pdf
+* https://eric.ed.gov/?id=EJ1062706
+* Learning vs signalling: Degreed may have solved signalling anything, but how do we learn those things effectively?
+    * https://degreed.com/
+* http://universityventures.com/news.php?title=ryan-craig-author-new-book-faster-cheaper-college
+    * major key alert
+    * read & cite Ryan Craig, University Ventures
+    * all star education ensamble: Craig, Caplan, who else? Hanushek? what would it take to actually get a policy passed (eg allowance for evidence-based exemption to degree or experience reqs in federal jobs)
+    * https://www.youtube.com/watch?v=xSlVEw9jY6Q
+    * he also has 'the great unbundling of higher education'
+    * Richard Mayer, Science of Education https://www.amazon.com/Learning-Science-Instruction-Guidelines-Multimedia/dp/1119158664
+* https://www.forbes.com/sites/ryancraig/2015/09/30/coursera-udacity-and-the-future-of-credentials/#6332b9b42b31
+    * random buzz words like adaptive and immersive learning
+* https://www.youtube.com/watch?v=L5EdjW1rTH4
+    * Michael Horn, https://www.amazon.com/Michael-B.-Horn/e/B001JRZ8KK/ref=sr_ntt_srch_lnk_2?qid=1540552702&sr=8-2
+    * "Clayton Magleby Christensen is an American academic, business consultant, and religious leader who currently serves as the Kim B. Clark Professor of Business Administration at the Harvard Business School of Harvard University."
+    * ryan craig - school purpose from learning to job prep: (50->90) https://www.youtube.com/watch?v=dZolFNqR-hA
+* http://universityventures.com/uv_news.php
+* https://www.learntechlib.org/p/130655/
+* http://er.dut.ac.za/handle/123456789/45
+* https://scholar.google.com/scholar?start=30&q=udacity&hl=en&as_sdt=0,21
+* https://www.huffingtonpost.com/entry/digital-divide-brookings-institute_us_5674586be4b014efe0d55041
+* http://online.illinois.edu/articles/online-learning/item/2017/06/05/5-benefits-of-studying-online-(vs.-face-to-face-classroom)
+* https://www.insidehighered.com/news/2018/03/16/udacity-ends-pledge-students-get-hired-or-get-their-money-back
+* https://www.youtube.com/watch?v=U6FvJ6jMGHU
+* https://www.youtube.com/watch?v=n9mdVGG1UbE
+* https://www.youtube.com/watch?v=Ghrp-4PBt_M
+    * why are you paying full price for school? because cheap school produce low income; but wait! we already proved high performers perform well regardless, so cheap school low income production seems to be negative signalling, not causal. A smart person should be able to get a cheap degree and not succumb to this low pay tendency
+* suppose alt creds are gaining approval over time; does this mean they are efficient? do more-successful-than-average companies tend to be more open to alt creds? do more-successful-than-average companies tend to be more open to remote work? do more-successful-than-average companies tend to be more open to ideas in general? or certain kinds of ideas? what factors create an informationally-open company? can this mindset be trained in or endowed by treatment to some degree? what about simply teaching managers and executives that openness to new ideas can lead to short, mid, and long term profit gains?
+* ongoing research discussion with markus - https://docs.google.com/document/d/1pYacGfsmrxvDaTSw3lbiO8nWzFCTj5OtQIm0MBbXW5Y/edit#heading=h.w8ycpfmmu9de
+* The case against education
+    * Somewhere in the book was a data point he said "I didn't think of that" on an alternative, perhaps superior, calculation scheme; perhaps related to tuition and fees? check that out.
+    * Chapter 1 Caplan argues people can't go from high school to labor market bc no one would believe their skills; anyone can claim skill; that is, the academic degree is evidence of ability / potential skill; not just actual skill; alternative credentials can substitute in this role and enable high-school-to-labor-market or even better.
+        * Caplan allows 33-80%; he's right that it's closer to 80% but he doesn't push it; alternative credentials, apprenticeships, vocational, and other options have better (smaller) signaling ratios
+    * Chapter 2, Caplan describes the outright catch 22 of alternative signals of conformity; they signal nonconformity.
+        * This would seem to immediately counter alternative credentials
+        * But wait! Conformity vs nonconformity is a pseudo-boolean. Really, this is a continuous variable. Online education may be slightly non-conformist, but it's not 0% conformist. Under strict nonconformity, even having attended a private school would be considered nonconformist. Yet, many people learn you went to private school and think more positively of you. Perhaps nonconformity on average has a negative effect, but strategic nonconformity can have a positive effect, and even nonconformity's negative effect may be negligible compared to the gains from nonconformity-based signalling to the signaler (eg I got to skip college, nbd if I'm 5k less salary for a few years).
+        * While Caplan's note that anyone can study at Princeton for free is eye-opening, it's also a bit disingenuous. Traveling and living at Princeton is costly in pecuniary and non-pecuniary terms. Many professors actually won't allow an additional student in, or in any case they won't be invited to engage exercises and tests and receive grades and feedback. Grades and feedback are key. They aren't just the material of third party student evaluation, they are also the material of first party student evaluation. That is, feedback facilitates learning by indicating to the learner that they are doing things correctly. Imagine a boxer who could feel no pain. At first this might seem to be an advantage, but it would plausibly ultimately reduce the boxer's incentive to develop specific skills and finesse; mainly those of a defensive type. Alternatively, imagine a boxer who's opponent gives no feedback when receiving a blow. It might indicate to the puncher that his punches make no difference; they are trivial. This could motivate quitting or giving up, as opposed to finishing out a near victory. The same may be even more clear with a sprinter who has the finish line in his sights. The low quality of feedback, or its absence altogether, is a minor note in the case of physically going to Princeton or whatever school. It is dwarfed by the plain economic cost to the would-be student and the reduced expected benefit from uncharitable professors. However, MOOCs represent a certain kind of ironman of Caplan's argument. There are little to no economic costs or unwilling professors with a MOOC. So why do MOOCs perform poorly? One answer is that the feedback mechanism with a MOOC is weak or absent. Also, social networking and individual-level psychological effects may play a role.
+    * https://talent.works/blog/2018/03/28/the-science-of-the-job-search-part-iii-61-of-entry-level-jobs-require-3-years-of-experience/
+* Experience inflation??? only solution would be to start working earlier. How? 1) engage an extended search process for lower req 2) apply anyway 3) substitute for credential (eg take a test to certify skills with recruiter). 4) start with an internship, extracurricular, or something else you can 'argue-as-work' 5) build a portfolio of work 6) freelance work 7) irrelevant prior experience may not be irrelevant; general work ethic and references. Argue components similar (may be more helpful for mid-career switch than new jobs) eg my data analyst to programmer had some overlap with db work and programming as a secondary task.
+
+random books
+https://talent.works/
+https://talent.works/blog/2018/03/28/the-science-of-the-job-search-part-iii-61-of-entry-level-jobs-require-3-years-of-experience/
+https://talent.works/blog/2018/04/10/the-science-of-the-job-search-part-iv-why-is-it-so-hard-to-get-a-job/
+
 # 6. Key Terms for Search
 
 1. nonaccredited education providers
@@ -161,15 +260,6 @@ Question - does the relation attenuate or grow when adjusted by state or by spen
 
 What actionable private lessons can we extract? One is, hey, enroll ur kids in charters. Is there anything else? Are there systematic differences in charter tooling, curricula, or process?
 
-Another question...does he see a publishable space for the Vandivierian Wager and other economic arguments for god, for and against.
-1 - the contingent miracle of the resurrection and why it's so plausible bc people come out onof medical death all the time, the real hard part is sinlessness and fulfilling of prophecy 
-2 - V wager basically that Sola fide makes Christianity the best investment. Note pascals wager and the need for iron manning as a standard method. The chief complaint is the many gods problem, with is trivially defeated by simply aluminum foil manning, not even real ironmanning. The poor guy was dead so he couldn't defend himself and you often don't hear that when learning the argument in class. I think the human sympathy which immediately proceeds from this knowledge is important and in its favor: people didn't take it seriously or defeat it and they just moved on.
-3 - argument from institutional durability, christianity is durable, durable is good/preferred, therefore Christianity is good/preferred. Address the meme of durable atheism and look at buddhist to Christian conversion for specific comparative durability.
-4 - against: education is correlated with secularism. Therefore, atheism is more likely correct. Defeat with systematic liberal critique of university and compare with real success ie earnings and life satisfaction. Note probs with all these proxy approaches - the best test is to examine the claims them selves and show atheism to be both factually wrong and nonp referred in rational expectation.
-5 - for: education has a quadratic or cubic pro- religious relation, it's just the majority of low-higher-educated affecting the simple relation. Highest education is associated with conversion from atheism to religion. Also, many PhDs come from families of phds or essential aristocracy so they were born nonreligious and are just following their parents like the religious do. Once we adjust to find the wokest individuals, what happens? Perhaps look at perpetual beta superforecasters, highest iq, highest earners, highest achievers, even the highest achievers in academia, only the last is questionably religious
-6 - ironmanning atheism, what can we grant and what does this do? For example, suppose the bible has the dozen or so mistakes pointed out by ehrman. Also discuss the problem of fools golding and self-fools-golding where overconfidence leads to mistaking a poor argument for a good one or mistaking an open Question for a closed one or a controversial assumption for a solid one. Academics are supposed to be peculiar in their lack of such behavior, which is descriptive of a typical sorted, stubborn-minded, nonindependent, ideological voter.
-7 - Christians don't have the luxury of being stubborn-minded if acting properly, the bible forbids it and calls us to be soft hearted and child-like (in the proper sense of trust, not to be uneducated). Is there empirical evidence showing stubborn-mindedNess as a luxury good? Maybe the idea that older folks and those who have been traumatized, esp threatened, tend conservative and religious.
-
 Top-down vs bottom-up measures of success; do standardized scores benefit public schools? What if we use during and post grad earnings, productivity, happiness, and college completion...also SAT vs state-based benchmark.
 
 He doesn't have a causal story but does he gave literature recommendations. Eye contact and personal interaction?. Spiral method??
@@ -218,4 +308,3 @@ In-school money would be a direct utilitarian mechanism to motivate the student.
 Vouchers can theoretically result in the child being fully compensated, but practice is another question. Parents might not compensate the child even while they could. Given imperfect compensation in any non-zero degree, direct mechanisms are theoretically better than direct mechanisms.
 
 Yet there is another possibility: Parents can get voucher money and compensate the child using a lesser amount of ordinary cash. Yet, since this cash has a wide array of uses it may be a net-positive transaction for both the child and the parent. For example, many children will value $1500 in cash more than $2000 in school voucher money. The child may be motivated by their parent's contingent promise of $1500 rather than by the $2000. If this process is realistically the case, then models should include parental strategy factors. Those parents preferring this strategy will have effective children while other strategies will be less effective. For example, some parents may not compensate the child at all or they may attempt motivation through a threat of punishment for weak performance.
-
