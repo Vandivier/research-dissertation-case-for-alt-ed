@@ -182,11 +182,15 @@ Online Articles
         * While Caplan's note that anyone can study at Princeton for free is eye-opening, it's also a bit disingenuous. Traveling and living at Princeton is costly in pecuniary and non-pecuniary terms. Many professors actually won't allow an additional student in, or in any case they won't be invited to engage exercises and tests and receive grades and feedback. Grades and feedback are key. They aren't just the material of third party student evaluation, they are also the material of first party student evaluation. That is, feedback facilitates learning by indicating to the learner that they are doing things correctly. Imagine a boxer who could feel no pain. At first this might seem to be an advantage, but it would plausibly ultimately reduce the boxer's incentive to develop specific skills and finesse; mainly those of a defensive type. Alternatively, imagine a boxer who's opponent gives no feedback when receiving a blow. It might indicate to the puncher that his punches make no difference; they are trivial. This could motivate quitting or giving up, as opposed to finishing out a near victory. The same may be even more clear with a sprinter who has the finish line in his sights. The low quality of feedback, or its absence altogether, is a minor note in the case of physically going to Princeton or whatever school. It is dwarfed by the plain economic cost to the would-be student and the reduced expected benefit from uncharitable professors. However, MOOCs represent a certain kind of ironman of Caplan's argument. There are little to no economic costs or unwilling professors with a MOOC. So why do MOOCs perform poorly? One answer is that the feedback mechanism with a MOOC is weak or absent. Also, social networking and individual-level psychological effects may play a role.
     * https://talent.works/blog/2018/03/28/the-science-of-the-job-search-part-iii-61-of-entry-level-jobs-require-3-years-of-experience/
 * Experience inflation??? only solution would be to start working earlier. How? 1) engage an extended search process for lower req 2) apply anyway 3) substitute for credential (eg take a test to certify skills with recruiter). 4) start with an internship, extracurricular, or something else you can 'argue-as-work' 5) build a portfolio of work 6) freelance work 7) irrelevant prior experience may not be irrelevant; general work ethic and references. Argue components similar (may be more helpful for mid-career switch than new jobs) eg my data analyst to programmer had some overlap with db work and programming as a secondary task.
-
-random books
-https://talent.works/
-https://talent.works/blog/2018/03/28/the-science-of-the-job-search-part-iii-61-of-entry-level-jobs-require-3-years-of-experience/
-https://talent.works/blog/2018/04/10/the-science-of-the-job-search-part-iv-why-is-it-so-hard-to-get-a-job/
+* https://talent.works/
+* https://talent.works/blog/2018/03/28/the-science-of-the-job-search-part-iii-61-of-entry-level-jobs-require-3-years-of-experience/
+* https://talent.works/blog/2018/04/10/the-science-of-the-job-search-part-iv-why-is-it-so-hard-to-get-a-job/
+* https://www.glassdoor.com/research/app/uploads/sites/2/2017/04/FULL-STUDY-PDF-Gender-Pay-Gap2FCollege-Major.pdf
+  * from searching "most common jobs for college graduates"
+  * https://cew.georgetown.edu/cew-reports/valueofcollegemajors/
+  * https://twitter.com/JohnVandivier/status/1058577634299465728
+  * business is 26% of degrees but only 11% of resumes
+  * I want 90% coverage of either metric (50 common majors covers 90% degrees awarded or 90% resumes) 
 
 # 6. Key Terms for Search
 

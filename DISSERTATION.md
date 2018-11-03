@@ -6,6 +6,25 @@ author: "John Vandivier, George Mason University, Department of Economics"
 
 # Abstract
 
+**
+Utilization of alternative credentials may be beneficial in many situations for individuals, firms, and society at large. Alternative credentials can provide a cleaner signal of productivity or skill. Obtaining alternative credentials may entail more effective learning. When society shifts from traditional credentials to alternative credentials we may see a reduction in credential inflation and student debt concerns, as well as less direct national wealth affects from better cross-sector labor resource allocation.
+
+Comparative benefits to utilization of alternative credentials in preference to traditional credentials are heterogenous and occassionally net negative. The goal of this paper is to:
+1 - Identify concrete education plans, or multi-specific education pathways, which support the majority of American students.
+    a. Including K-12 and post-secondary
+    b. Estimate comparative gains per plan
+2 - Explore public disposition on alternative credentials over time, with forecasting
+    a. Explanatory factors
+    b. Forecasts
+    c. Treatments for employer favorability & adoption
+    d. Treatments for student favorability & adoption
+**
+
+The Preference Problem: Is it plausible to ask liberal arts students to become programmers? Or even medical folks?
+  a. Solution 1: everyone becomes a programmer (highest paying major field of study, upper bound on gains)
+  b. Solution 2: hold major constant; only some majors are currently alternativizable and it's not realistic to convert these people (pessimisstic / lower bound on gains)
+  c. Solution 3: identify better-paying jobs with a similar personality profile (eg English -> history, phil, business, etc; middle-of-the-road story, medium gains)
+
 Recent literature deflates the value of education, but my analysis defines education along a traditional-alternative continuoum and shows that the value of alternative education remains a strong investment choice.
 
 *learning is something we do by necessity; the question is how best to do it not whether or not to do it; specifically, autonomous vs directed learning. there is a careful distinction between voluntarily directed and involuntarily directed learning.
