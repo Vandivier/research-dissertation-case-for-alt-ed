@@ -6,7 +6,7 @@ author: "John Vandivier, George Mason University, Department of Economics"
 
 # Abstract
 
-**
+***
 Utilization of alternative credentials may be beneficial in many situations for individuals, firms, and society at large. Alternative credentials can provide a cleaner signal of productivity or skill. Obtaining alternative credentials may entail more effective learning. When society shifts from traditional credentials to alternative credentials we may see a reduction in credential inflation and student debt concerns, as well as less direct national wealth affects from better cross-sector labor resource allocation.
 
 Comparative benefits to utilization of alternative credentials in preference to traditional credentials are heterogenous and occassionally net negative. The goal of this paper is to:
