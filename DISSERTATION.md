@@ -18,7 +18,7 @@ Comparative benefits to utilization of alternative credentials in preference to 
     b. Forecasts
     c. Treatments for employer favorability & adoption
     d. Treatments for student favorability & adoption
-**
+*
 
 The Preference Problem: Is it plausible to ask liberal arts students to become programmers? Or even medical folks?
   a. Solution 1: everyone becomes a programmer (highest paying major field of study, upper bound on gains)
