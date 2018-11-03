@@ -190,7 +190,13 @@ Online Articles
   * https://cew.georgetown.edu/cew-reports/valueofcollegemajors/
   * https://twitter.com/JohnVandivier/status/1058577634299465728
   * business is 26% of degrees but only 11% of resumes
-  * I want 90% coverage of either metric (50 common majors covers 90% degrees awarded or 90% resumes) 
+  * I want 90% coverage of either metric (50 common majors covers 90% degrees awarded or 90% resumes)
+  * Compares self against NCES 2014-2015 year; I can refer to closer 2015-2016 year (https://nces.ed.gov/fastfacts/display.asp?id=37)
+    * business is 19 %
+    * govt def of a traditional cred institution: "later data are for postsecondary institutions that participate in Title IV federal financial aid programs"
+    * NCES maps majors into groups differently than Glassdoor; NCES has 32 majors. I need to map NCES to glassdoor's 50
+    * ummm...economics is not an option for NCES, wtf thx bro
+    * yet economics is mentioned here, so wtf, i guess NCES maps economics into the 32 somewhere else? https://nces.ed.gov/programs/coe/pdf/coe_sbc.pdf
 
 # 6. Key Terms for Search
 
