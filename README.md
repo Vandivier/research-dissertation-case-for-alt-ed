@@ -188,6 +188,11 @@ Online Articles
 * https://www.glassdoor.com/research/app/uploads/sites/2/2017/04/FULL-STUDY-PDF-Gender-Pay-Gap2FCollege-Major.pdf
   * from searching "most common jobs for college graduates"
   * https://cew.georgetown.edu/cew-reports/valueofcollegemajors/
+    * "the economic benefit of earning an advanced degree by undergraduate major."
+    * "In some sense, deciding what to major in is more important than deciding whether to attend college."
+    * focuses on the path-to-graduate-degree question
+    * p 200, "ALL MAJORS BY GROUP, ranked by earnings and popularity"
+    * p 208, " just by popularity for bachelor's; p 209 for master's
   * https://twitter.com/JohnVandivier/status/1058577634299465728
   * business is 26% of degrees but only 11% of resumes
   * I want 90% coverage of either metric (50 common majors covers 90% degrees awarded or 90% resumes)
@@ -197,6 +202,9 @@ Online Articles
     * NCES maps majors into groups differently than Glassdoor; NCES has 32 majors. I need to map NCES to glassdoor's 50
     * ummm...economics is not an option for NCES, wtf thx bro
     * yet economics is mentioned here, so wtf, i guess NCES maps economics into the 32 somewhere else? https://nces.ed.gov/programs/coe/pdf/coe_sbc.pdf
+    * according to Georgetown, economics is a social science
+    * 90.9% of glassdoor work records sample (in top 50 majors) captured in top 30 majors
+    * see glassdoor-georgetown-map.csv; top 30 majors very roughly cover 66.2% of NCES and 76% of Georgetown community survey; ie most college students
 
 # 6. Key Terms for Search
 
