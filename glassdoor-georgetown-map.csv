@@ -1,32 +1,32 @@
-glassdoor common rank	glassdoor college major name	glassdoor work record count	glassdoor percent of sample	glassdoor median base pay	comparable georgetown college major name	comparable georgetown group percent of sample	comparable georgetown subgroup percent of group	comparable georgetown percent of sample	comparable georgetown graduate degree attainment	comparable nces major name	"comparable nces count of degrees awarded, 2015-2016"	"comparable nces percent of degrees awarded, 2015-2016"
-1	business	8837	11.32498622	46302	business	26.1	57.5	15.0075	TODO: weighted average of non-excluded subgroups	Business	371694	19.35182572
-2	computer science and engineering	7769	9.956299419	70000	computer science subgroup	5.6	43.6	2.4416	30.9	Computer and information sciences	64405	3.353173136
-3	psychology	5880	7.535466674	41500	psychology subgroup	5.2	78.2	4.0664	46.1	Psychology	117440	6.114380143
-4	electrical engineering	5206	6.671707398	68438	electrical engineering subgroup	8.3	20.3	1.6849		Engineering	106850	5.563023828
-5	mechanical engineering	3592	4.603298689	66040	mechanical engineering subgroup	8.3	16	1.328		n/a or included elsewhere		0
-6	communications	3338	4.277787033	43576	communications and mass media subgroup	5.2	68	3.536		"Communication, journalism, and related programs"	92554	4.818718833
-7	marketing	3334	4.272660866	46000	marketing and market research subgroup	26.1	12.1	3.1581		n/a or included elsewhere		0
-8	information technology	3069	3.933052248	63500	information sciences subgroup	5.6	4.3	0.2408	26	n/a or included elsewhere		0
-9	economics	2991	3.833091976	55000	economics subgroup	6.9	27	1.863		n/a or included elsewhere		0
-10	finance	2967	3.802334969	55000	finance subgroup	26.1	8.9	2.3229		n/a or included elsewhere		0
-11	accounting	2677	3.430687804	51562	accounting subgroup	26.1	17.7	4.6197		n/a or included elsewhere		0
-12	biology	2630	3.370455332	42000	botany and life sciences	3.3	100	3.3	57.7	Biological and biomedical sciences	113749	5.922212423
-13	english	2361	3.025720547	43688	english language and literature subgroup	8.6	29.1	2.5026		English language and literature/letters	42795	2.228073044
-14	political science	2031	2.602811703	45000	political science and government subgroup	6.9	27.4	1.8906		n/a or included elsewhere		0
-15	criminal justice	1480	1.896682088	40000	criminal justice and fire protection subgroup	2.6	85	2.21	20.7	"Homeland security, law enforcement, and firefighting"	61157	3.184069707
-16	sociology	1454	1.863361997	42200	sociology subgroup	6.9	22.9	1.5801		Social sciences and history	161230	8.394256731
-17	mathematics	1334	1.709576963	51250	mathematics subgroup	5.6	16.4	0.9184	48.8	Mathematics and statistics	22777	1.185858622
-18	history	1186	1.519908754	45000	history subgroup	8.6	19	1.634		n/a or included elsewhere		0
-19	nursing	1015	1.300765081	63000	nursing subgroup	7.5	60.1	4.5075		n/a or included elsewhere		0
-20	civil engineering	968	1.240532609	63000	civil engineering subgroup	8.3	10.1	0.8383		n/a or included elsewhere		0
-21	chemical engineering	862	1.104689162	65000	chemical engineering subgroup	8.3	5.2	0.4316		n/a or included elsewhere		0
-22	chemistry	851	1.090592201	43040	chemistry subgroup	2.5	26	0.65		Physical sciences and science technologies	30477	1.586750371
-23	human resources	806	1.032922813	45000	human resources and personnel management subgroup	26.1	1.9	0.4959		n/a or included elsewhere		0
-24	journalism	800	1.025233561	43576	journalism subgroup	5.2	22	1.144		n/a or included elsewhere		0
-25	public relations	714	0.915020953	43500	advertising and public relations subgroup	5.2	34	1.768		n/a or included elsewhere		0
-26	international relations	692	0.88682703	45000	international relations subgroup	6.9	2.9	0.2001		n/a or included elsewhere		0
-27	education	598	0.766362087	41203	education	9.4	100	9.4		Education	87217	4.540853993
-28	management information systems	517	0.662557189	60960	management information systems and statistics subgroup	26.1	1.9	0.4959		n/a or included elsewhere		0
-29	graphic design	498	0.638207892	45000	commercial art and graphic design subgroup	4.8	30	1.44		n/a or included elsewhere		0
-30	industrial engineering	474	0.607450885	62270	industrial and manufacturing engineering subgroup	8.3	4.1	0.3403		n/a or included elsewhere		0
-total			90.90105215					76.0162				66.24319655
+﻿glassdoor common rank,glassdoor college major name,glassdoor work record count,glassdoor percent of sample,glassdoor median base pay,comparable georgetown college major name,comparable georgetown group percent of sample,comparable georgetown subgroup percent of group,comparable georgetown percent of sample,comparable georgetown graduate degree attainment,comparable nces major name,"comparable nces count of degrees awarded, 2015-2016","comparable nces percent of degrees awarded, 2015-2016"
+1,business,8837,11.32498622,46302,business,26.1,57.5,15.0075,TODO: weighted average of non-excluded subgroups,Business,371694,19.35182572
+2,computer science and engineering,7769,9.956299419,70000,computer science subgroup,5.6,43.6,2.4416,30.9,Computer and information sciences,64405,3.353173136
+3,psychology,5880,7.535466674,41500,psychology subgroup,5.2,78.2,4.0664,46.1,Psychology,117440,6.114380143
+4,electrical engineering,5206,6.671707398,68438,electrical engineering subgroup,8.3,20.3,1.6849,,Engineering,106850,5.563023828
+5,mechanical engineering,3592,4.603298689,66040,mechanical engineering subgroup,8.3,16,1.328,,n/a or included elsewhere,,0
+6,communications,3338,4.277787033,43576,communications and mass media subgroup,5.2,68,3.536,,"Communication, journalism, and related programs",92554,4.818718833
+7,marketing,3334,4.272660866,46000,marketing and market research subgroup,26.1,12.1,3.1581,,n/a or included elsewhere,,0
+8,information technology,3069,3.933052248,63500,information sciences subgroup,5.6,4.3,0.2408,26,n/a or included elsewhere,,0
+9,economics,2991,3.833091976,55000,economics subgroup,6.9,27,1.863,,n/a or included elsewhere,,0
+10,finance,2967,3.802334969,55000,finance subgroup,26.1,8.9,2.3229,,n/a or included elsewhere,,0
+11,accounting,2677,3.430687804,51562,accounting subgroup,26.1,17.7,4.6197,,n/a or included elsewhere,,0
+12,biology,2630,3.370455332,42000,botany and life sciences,3.3,100,3.3,57.7,Biological and biomedical sciences,113749,5.922212423
+13,english,2361,3.025720547,43688,english language and literature subgroup,8.6,29.1,2.5026,,English language and literature/letters,42795,2.228073044
+14,political science,2031,2.602811703,45000,political science and government subgroup,6.9,27.4,1.8906,,n/a or included elsewhere,,0
+15,criminal justice,1480,1.896682088,40000,criminal justice and fire protection subgroup,2.6,85,2.21,20.7,"Homeland security, law enforcement, and firefighting",61157,"	3.184069707"
+16,sociology,1454,1.863361997,42200,sociology subgroup,6.9,22.9,1.5801,,Social sciences and history,161230,8.394256731
+17,mathematics,1334,1.709576963,51250,mathematics subgroup,5.6,16.4,0.9184,48.8,Mathematics and statistics,22777,1.185858622
+18,history,1186,1.519908754,45000,history subgroup,8.6,19,1.634,,n/a or included elsewhere,,0
+19,nursing,1015,1.300765081,63000,nursing subgroup,7.5,60.1,4.5075,,n/a or included elsewhere,,0
+20,civil engineering,968,1.240532609,63000,civil engineering subgroup,8.3,10.1,0.8383,,n/a or included elsewhere,,0
+21,chemical engineering,862,1.104689162,65000,chemical engineering subgroup,8.3,5.2,0.4316,,n/a or included elsewhere,,0
+22,chemistry,851,1.090592201,43040,chemistry subgroup,2.5,26,0.65,,Physical sciences and science technologies,30477,1.586750371
+23,human resources,806,1.032922813,45000,human resources and personnel management subgroup,26.1,1.9,0.4959,,n/a or included elsewhere,,0
+24,journalism,800,1.025233561,43576,journalism subgroup,5.2,22,1.144,,n/a or included elsewhere,,0
+25,public relations,714,0.915020953,43500,advertising and public relations subgroup,5.2,34,1.768,,n/a or included elsewhere,,0
+26,international relations,692,0.88682703,45000,international relations subgroup,6.9,2.9,0.2001,,n/a or included elsewhere,,0
+27,education,598,0.766362087,41203,education,9.4,100,9.4,,Education,87217,4.540853993
+28,management information systems,517,0.662557189,60960,management information systems and statistics subgroup,26.1,1.9,0.4959,,n/a or included elsewhere,,0
+29,graphic design,498,0.638207892,45000,commercial art and graphic design subgroup,4.8,30,1.44,,n/a or included elsewhere,,0
+30,industrial engineering,474,0.607450885,62270,industrial and manufacturing engineering subgroup,8.3,4.1,0.3403,,n/a or included elsewhere,,0
+total,,,90.90105215,,,,,76.0162,,,,66.24319655
