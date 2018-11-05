@@ -205,6 +205,9 @@ Online Articles
     * according to Georgetown, economics is a social science
     * 90.9% of glassdoor work records sample (in top 50 majors) captured in top 30 majors
     * see glassdoor-georgetown-map.csv; top 30 majors very roughly cover 66.2% of NCES and 76% of Georgetown community survey; ie most college students
+* https://www.glassdoor.com/blog/no-degree-required/
+  * no degree required? start with these companies! (how many jobs do they collectively annually hire and across how many states? argue as a microeconomic actor there should be little trouble taking this alt route of work first, study second)
+  * peter thiel since 2011: https://techcrunch.com/2011/04/10/peter-thiel-were-in-a-bubble-and-its-not-the-internet-its-higher-education/
 
 # 6. Key Terms for Search
 
@@ -326,3 +329,89 @@ In-school money would be a direct utilitarian mechanism to motivate the student.
 Vouchers can theoretically result in the child being fully compensated, but practice is another question. Parents might not compensate the child even while they could. Given imperfect compensation in any non-zero degree, direct mechanisms are theoretically better than direct mechanisms.
 
 Yet there is another possibility: Parents can get voucher money and compensate the child using a lesser amount of ordinary cash. Yet, since this cash has a wide array of uses it may be a net-positive transaction for both the child and the parent. For example, many children will value $1500 in cash more than $2000 in school voucher money. The child may be motivated by their parent's contingent promise of $1500 rather than by the $2000. If this process is realistically the case, then models should include parental strategy factors. Those parents preferring this strategy will have effective children while other strategies will be less effective. For example, some parents may not compensate the child at all or they may attempt motivation through a threat of punishment for weak performance.
+
+# 12 more from evernote; mainly on the hiring process
+
+Chapter 4 Heckman availability bias
+Chapter 4 1/3 signaling 1/3 ability by us 1/3 education. This results is consistent with Ford and the logic and risk minimization because as a no hypothesis we assume each factor has an equal share. This is also kind of showing points for a showing styleA showing. Shelling style distribution. Blog about Shelley important
+Chapter four to ACS major and ability Bice
+
+
+Unrelated to book: chicken egg problem with some credentials such as registered nurse, CPA, and other common certified financial planner etc.
+PMP, CSM, portfolio, internship or other experience
+
+
+Policy change: don’t require degrees
+Firm productivity game: so don’t require degrees, internal employee cross training and hiring from within and continuous change and Employee learning and training, retain meant and hiring benefits, integrated with evidence-based performance reviews for better hiring and firing and other decision making.
+
+
+Database of credentials. I know that exists, but what about a database that includes credential reviews or ratings and information about value of the credential and courses with completion success rates and so on.
+
+
+People learn for productivity or leisure (citation). Alternative and traditional pathways exist for both types. When learning for productivity, the quality of a learning program is demonstrated by the change to productivity explained. Very low quality programs can easily reduce productivity in the real world. Low to medium quality programs will be able to claim no change or a slight increase to productivity, but on closer inspection those programs are not comparatively better than normal employment in a task for a similar amount of time. High quality programs will result in productivity gains more quickly than ordinary work. All of these programs actually exist based on data (examples, citations).
+
+
+The demonstration of productivity is itself a signal. Ordinary labor generates a signal, and it's a special kind of signal which is non-hollow. Not all signals are equally valuable. Noisy signals have a low correlation with real productivity and clean signals have a strong correlation with real productivity. Ordinary labor is a signal as clean as the process which measures it. Admittedly, measuring labor productivity is much more difficult in the real world than on paper. Some measurements are subjective and may be susceptible to bias. During interviews, candidates may systematically under-perform due to being in a different environment, lacking their usual tools, and being under unusual stress or pressure to perform. Despite the various problems one can envision, work sample tests task-based or competency-based interviews, are the most effective form of interview, even outperforming measuring cognitive ability directly [[1]], [[2]].
+
+
+When planners use clean signals they reduce risk and improve accuracy compared to when planners use noisy signals, so clean signals are higher in value.
+
+
+When learning for productivity, one must eventually measure productivity. The measurement of productivity, however, is a type of signal. So learning becomes a special case of signaling. The relation between learning and signaling in an evidence-based learning system is like the relation between a rectangle and a square. All enhancements to productivity are accompanied by signals, but not all signals are accompanied by enhancements to productivity. Every time you actualize learning you are in fact producing, and producing is a special case of signalling. It is a non-hollow signal. Even so, it's useful to recognize the full value of wages as based on signals so as to produce an apples-to-apples comparison.
+
+
+[[1]]: https://bobsutton.typepad.com/my_weblog/2009/10/selecting-talent-the-upshot-from-85-years-of-research.html
+[[2]]: https://www.researchgate.net/publication/309203898_The_Validity_and_Utility_of_Selection_Methods_in_Personnel_Psychology_Practical_and_Theoretical_Implications_of_100_Years_of_Research_Findings
+
+
+traditional education -> traditional credential -> traditional signal -> job
+alternative education -> alternative credential -> alternative signal -> job
+** alternative education -> alternative signal -> job
+
+
+** A related pathway which is of only secondary interest is that sometimes alternative education does not result in a credential.
+
+
+Why do we care about credentials at all? Signals vs credentials
+
+
+One reason that employers value credentials is because credentials reduce risk, improve competency estimate accuracy, and save time. From an employer's perspective, credentials economize in the evaluation phase of the hiring process. Credentials also 
+
+
+The end-to-end process of hiring involves the employer establishing a match between a candidate and a job.
+
+
+It is the case that employers value 
+
+
+*sometimes the alternative credential is institutionally backed and sometimes it is autonomously generated.
+
+
+The Hiring Process
+
+No step necessarily follows the prior step, but these steps always occur in order prior to a new hire taking place. The employer's perspective operates concurrently with the employee's perspective.
+
+
+Employer's perspective.
+1 - An employer wonders whether an addition of labor can improve profit. [market research phase]
+2 - An employer communicates a specific job demand to the market. [candidate search phase]
+3 - An employer receives and comparatively evaluates a collection of offers. [evaluation phase]
+4 - An employer decides to make a collection of hiring offers. [offer and negotiation]
+5 - An employer on-boards each new employee. [on-boarding]
+6 - An employer maintains and develops an employee
+7 - An employer terminates employment
+
+
+Hiring begins as a question. An employer wonders whether an addition of labor can improve profit. How an employer comes to wondering such things is an important process which is now briefly considered, but is taken for granted in the higher-level hiring process model which will be utilized throughout this paper.
+
+
+will now consider briefly, but we will, but one we will take for granted. As a quick aside, internal communications systems within an organization are extremely important to the efficiency of any organization. Ultimately, when an employer wonders, it originates in the mind of one individual as an individual question. The individual question is submitted by an individual to the firm itself according to firm-specific processes, after which it is either resolved or transformed into some other question.
+
+
+As a meta-process, an employer which wonders important questions is expected to flourish relative to an employer which wonders less important questions. Suggestion generation seems to obtain at the individual level, concordant with individual intelligence, and typed according to the task of the suggesting individual. Feedback and communication systems within organizations are extremely important. Curation mechanisms can quickly prioritize important suggestions for broader firm or leadership consideration, and automatically resolve many questions. Curation mechanisms include organizational structure, culture, knowledge base solutions, learning management, and more.
+
+
+ begins with a question. An employer wonders whether an addition of labor can improve profit. This questioning triggers a search process, which can also be called a market research process. The employer may concurrently consider modifying production processes, hiring labor of various qualities, investing into physical or human capital
+
+
+* use of alternative credentials is consistent with evidence-based business processes; evidence-based business process utilization can improve all major categories of business process including human resource management, production, 
