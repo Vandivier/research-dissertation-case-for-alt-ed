@@ -29,10 +29,10 @@ Section 1 is the overview. Section 2 contains technical references for transform
 Books
 
 1. Caplan, The Case against Education
-2. Tooley, The Beautiful Tree
+2. Craig, 2018, A New U: Faster + Cheaper Alternatives to College
 3. Blake, The Expertise Economy
-4. Miller, 2014, The Self-Organizing Revolution
-5. Craig, 2018, A New U: Faster + Cheaper Alternatives to College
+4. Tooley, The Beautiful Tree
+5. Miller, 2014, The Self-Organizing Revolution
 
 People
 
@@ -66,6 +66,7 @@ Online Articles
 6. https://www.youtube.com/watch?v=-JE4p_EuWoc
 7. https://www.khanacademy.org/about/blog/post/177799922435/school-district-reports-test-scores-rise-with
 8. http://connectingcredentials.org/data-point-degree-and-nondegree-credentials-held-by-labor-force-participants/
+9. https://www.edsurge.com/news/2018-11-07-the-rise-of-early-career-enhancers-in-education
 
 
 # 4. Own Technical References
@@ -338,6 +339,10 @@ Chapter four to ACS major and ability Bice
 
 
 Unrelated to book: chicken egg problem with some credentials such as registered nurse, CPA, and other common certified financial planner etc.
+actually, related to book in case of 'government credentialism', see late chapter 4 (audible position 00:36:44); well, what he talks about is different that what i mean by like 'govt says you need a degree to do X, even in the private sector' eg licensed nursing; or are rns considered public? no i don't think so...when he compares salary he seems to be leaving off benefits like govt retirement and pension, sometimes student loan benefits...govt may also be a norms-maker even if it isn't the highest paying. what about private firms that serve government? private firms that serve government and private market? the last case seems to be profit-maximzing but also shows how govt rules can be norms-making for this type of business's operations
+
+more related he talks about licensing in chapter 4, audible position 00:20:00
+
 PMP, CSM, portfolio, internship or other experience
 
 
@@ -415,3 +420,166 @@ As a meta-process, an employer which wonders important questions is expected to 
 
 
 * use of alternative credentials is consistent with evidence-based business processes; evidence-based business process utilization can improve all major categories of business process including human resource management, production, 
+
+11/9 updates
+
+Chapter 6 Krueger study which compares students who applied to multiple universities and fines determination and ambition or she usually reward it on the market. This appears to be a non-cognitive skill related to great or big five etc.
+
+
+Chapter 7 I think, although maybe not, Kaplan refers to the College Board. Check whether my am claimant at the college board can be used to engage additional information.
+
+
+Chapter 8 late in the chapter deals with online education directly and name drops can’t Academy and others. Reference the section heavily. Brian issues the challenge clearly that technophiles in favor of online learning shouldn’t expect revolution until they can explain why an off-line and testing revolution has an already taken place. He discount of course the explanation that it’s simply legal. He explains that degrees signal more than conscientiousness and intelligence or ability. He even grants the point that online facilities may devise extremely accurateTest of both conscientiousness and called native ability.My intuition is that it’s largely a reputation game where employers are on able to trust diverse alternative credentials but they will trust government and in fact there is a regulatory perspective 4° or sometimes required and government can become norms setting. Wow Caplan’s TA or that he thinks fit degrees Cygnal something alternative credentials do not signal he is not clear about specifically what it is. He thinks it’s he seems to indicate that it is something like normal Ness. At the same time he seems to undervalue something like grit, and he grants conscientiousness to alternative credentials, so it’s not obvious to me exactly what he is indicating it’s not simply work for compliance. Jk yes he’s clear it’s conformity, so this should snowball on acceptance over time except for govt anchoring. How to directly test
+Caplan’s TA says online education is growing into directions: one online courses for brick and mortar institutions, to alternative credentials affectively that is independent websites. He ignores three, employer learning management systems. This directly contradicts the thesis that these credentials don’t represent a substitution to the church not agree.
+
+
+Chapter 11, I relate to Julie and the tech journalist. Caplan’s TA has education has weathered such storms for centuries, but education as it stands today has not existed for centuries. Notably referring to government subsidies at the Stafford loan, various legal requirements for degrees, and so on. The catch 22 on conformity signaling with alternate eight alternative credentials is not in fact a catch 22, it’s a logical issue without an empirical issue. Alternative providers are already sneaking in to the existing universities as one strategy. For example con Academy partnering with SAT prep and college board and also providing material two universities. Degreed the platform is working with universities to execute Craig credentialed and continuous learning in partnership with the grade. Your dad said he course Sarah etc. are working with universities to provide degrees. So while out ride avoiding college has had an issue, alternative learning providers our already in the main stream behind the scenes. Wow university attendance may or may not have dropped 10%, as in Kaplan‘s bet, Well over 10% of university students now are all online. That is online learning has ticked up, even while the number of college degrees has not dramatically decreased.
+
+
+Review of faster and cheaper you by Craig
+The preamble in chapter 1 or the first part of part one contain plenty of anecdotes and I’m extremely fan on numerical data antics and kind of seem like typical sociology or psychology of education or even non-academic books. So I immediately got a poor taste in my mouth after just immediately coming from reading Bryan D. Caplan‘s case against education. However this book does provideA rich qualitative survey of types of education programs, even with questionable numerical – empirical data. It is also extremely relatable due to the frequent use of personal stories with a significant amount of detail and personal touch in each. It’s also, unfortunately, heavy on normative rhetoric, often including superlatives statements lacking data to support them in an objective faction. However this may appeal to certain readers. It’s certainly targeting a different audience then Bryan D. Caplan’s book. So taking together they may reach a wider audience
+
+
+Returning to my research for moment: cat Flynn Kaplan states that there’s this Catch-22 around credential credibility and that’s why employers will never except alternative credentials. However there are other mechanisms which explain failure to adopt by employers. One is employer bias like 18 evection bias innovation, Another explanation is employer ignorance, a third is Caplan’s TA story, and a fourth is in bedded processes including firm processes, industry norms, and public policy’s. The last category prevents or slows change even in the case when employers desire the change. The survey monkey survey can shed some light on the degree to which each of theseFactors contributes
+
+
+Location 370 5722, 7%, Craig opposes Kaplan where Kaplan indicates universities have been robots to change for hundreds of years etc. etc., Craig sides with me in saying that the G.I. Bill was a landmark change. Prior to that according to Craig, college is served the merchant elite and degrees were is much about signaling the status of the father as the child. This is a place where Craig actually has some data: before World War II about 5% of adults had degrees after World War II about 30% or more dead. Craig says employers began using degrees as a quality screening mechanism between the 1970s in the 1990s. So when we use college as a signaling mechanism, it’s hardly something that has been around for hundreds of years, it’s more like something that’s been around for less than 100 years, for a generation too well for two generations
+
+
+Craig agrees on signaling and not just the signaling exists but that Cygnal he is the “primary” explainer of college degree value so as in more than half.
+
+
+
+
+And Caplan’s TA Chi Quetion of education does he use for years to obtain a degree or six years or something else. Craig notes only half of US students complete a degree within six years. This obviously affects return on investment.
+
+
+Location 397, inspect Craigs sources of attainment confidence. Look for trends over time. He notes in one place that first time students think they will get a degree with 89% confidence and in another place on the 55% of students think they will get a degree in 2017.
+
+
+Craig know it’s only 26% of employers thought college graduates had excellent critical thinking skills. What is the difference between critical thinking in detailed thinking? Could it be that high-level programmers such as those produced by Boot Camp’s obtain critical thinking skills with out liberal education, by virtue of the fact that they are required to take in concrete in detailed terms? Basically could Boot Camp’s produce critical thinkers at a higher rate or higher quality than liberal education?
+
+
+Location 414, no student satisfaction and engagement rates. Compared to alternative learning systems like on academy
+
+
+On YouTube engineered truth has a video call Mike do online classes help you get a job. Thousands of views and over 99.9% voted big concludes that using a portfolio of real projects is ideal and should be mentioned on a resume, but specific courses probably should not be mentioned on a resume. This is common advice and it actually supports the human capital model of alternative education over signaling. It also supports the idea that that a portfolio is both a CygnalAnd a credential. I don’t necessarily think the same advice follows for actual alternative credentials such as a specialization, I Nino degree, etc. I think this advice holds for one off classes. Engineered truth video is from three years ago and has /80,000 views
+
+
+The friendly reviewer has a review of coarse Sarah you density and Alex. Over 125,000 views within and the past couple years and similarly about it over 99% thumbs up. He suggests that for alternative credentials specifically such as the specialization nano degree or micro master, you can place it on your resume if your intent is to freshen up the resume, Or if you don’t have appropriate experience because, for example, you are trying to switch careers. He does state that if you have experience that will be more valuable than the small credentials. He also notes that the micro masters from Alex is eligible for university credit. This is an interesting hybrid model which points to another way in which alternative education and traditional education are not exactly antagonistic although they can be substituted from the consumer viewpoint. Also college board let you test out of courses and other stuff like that too.
+
+
+Nathan Young has videos on a degree in one year where he largely tested out of college Using programs like DSST, clap, CLEP, TECEP.
+* cheaper college: https://study.com/academy/popular/what-are-the-pass-rates-for-the-clep.html
+* https://www.youtube.com/watch?v=Hm_vl2FRiNQ
+* https://vhslearning.org/virtual-high-school-ap%C2%AE-student-pass-rates-surpass-national-average-2017-survey-finds-online-courses
+* https://www.degreequery.com/fastest-online-bachelors-degree/
+* https://www.onlinecollegeplan.com/fastest-online-programs/
+
+
+alternative paths:
+* alternative credential
+* quick completion
+* test out of credit
+    * you can take AP classes after graduating! also clep, others
+    * many schools have 'credit by exam' local to their school, alternative to the standardized testing option
+        * aka  departmental credit http://ussc.uh.edu/tests-offered.aspx
+    * found by exploring university website; maybe a good approach is to look at those universities then work backwards; 'college hacking'
+    * https://www.quora.com/Can-you-take-AP-exams-after-graduating-high-school
+    * watch out for residency requirements!! how have these changed over time at top 50 schools over past 30 years?
+    * propero / ACE / Pearson
+        * https://www.acenet.edu/news-room/Pages/ACE-Alternative-Credit-Project-to-Increase-Attainment-Levels-for-Nontraditional-Learners-With-Some-College-No-Degree.aspx
+        * "In December 2019, the CREDIT transcript will be transformed into a modular, digital profile that includes workplace competencies in addition to credit recommendations, allowing students to use their training to seek new employment opportunities as well as apply to college. If you are interested in learning more, visit our digital partner, Credly, and sign up to receive updates." https://www.acenet.edu/news-room/Pages/College-Credit-Recommendation-Service-CREDIT.aspx
+        * https://www.pearson.com/us/higher-education/products-services-teaching/distance-learning-solutions/propero/students/earning-college-credit.html
+    * credit for prior learning (CPL) https://www.pearson.com/us/higher-education/products-services-institutions/credit-for-prior-learning.html
+    * https://www.excelsior.edu/support-resources/onetranscript/
+    * "Increasingly, more employers are using competencies to identify which candidates would be successful for a position, demonstrating a shift from degree-based hiring to skills-based hiring practices. According to a recent report by Innovate+Educate, companies that use skills-based hiring have seen significant improvements in performance, with 70% reductions in cost to hire, 50% reductions in time-to-train, and 25-75% reductions in turnover." https://resources.credly.com/blog/post/canvas-integrates-with-credly-rules-engine
+    * institutional name dropping: http://www.castleworldwide.com/home/the-credentialing-checklist/
+    * https://www.capella.edu/lp/flexpath/
+* work while u educate
+
+educational drake equation: reduce time, reduce tuition, improve completion...anything else?
+improve financing: does bryan account for financing the student debt at a specific interest rate?
+  * some financers will pay for u to go in exchange for a portion of your earnings
+these drake-games might reduce institutional quality, but institutional quality seems to have a negligible effect on salary after completion
+
+overall impression of Craig so far: meh. he semi-convincingly argues that faster, better, cheaper ed can be done, but I haven't seen 1) any concrete plans, or 2) what 'affordable' means technically. It's like he's expecting u to make that judgement call. (econs would technically compare to ROI of next best thing / max profit)
+
+***
+Location 504 Craig’s book, universities are using deflated measures of cost of living.
+
+
+Location 533 Caplan’s TA Shmoney survey, 21% or so of parents do not think the cost of college is justified.
+
+
+Location 562, average tuition discount from 10% to 50% is a major indicator of competition or at least a market change.
+
+
+Location 742, 80% of college graduates are obtaining an internship now, from 10% to generation ago
+
+
+Location 768, ironically I creation standards force accredited degrees to be based on outdated information due to the fact that curriculum needs to be approved by faculty and faculty is generally theoreticians.
+
+
+Location 904, enrollment is already declining, down 12% in some cases. Compared to Kaplan’s wager.
+***
+
+effect of unhappiness on success?
+- we want to tell people 'if you are willing to adopt this plan, do it, but if you aren't willing to adopt this plan fine do your own thing.' Alternatively we could say, 'even if you don't want to change majors, it will still be good for you,' but would that be true? How likely am I to finish a degree I hate? In this case I'm not interested in assessing a career of suffering, but I am looking at whether it's worth it to endure a disliked degree which will ultimately satisfy a desirable job.
+  * on the job ~12% https://www.journals.uchicago.edu/doi/abs/10.1086/681096
+  * however studying is less pleasant than working (per caplan); if the happiness-productivity relation exhibits inada conditions then students have more to gain through happiness
+  * when a team creates a happy culture, productivity can increase 31%
+    * how to form a team atmosphere with alternative credentials and/or online courses? hire a tutor, get someone to take the class with you, or connect with other people taking the class.
+    * http://studybuddyhelp.org/how-it-works
+    * https://www.mooclab.club/study_buddy/
+  * happiness is trainable: https://executiveeducation.wharton.upenn.edu/thought-leadership/wharton-at-work/2014/03/positivity-habits/
+  * placebo effect matters, and expectation of success is placebo-like (not the same as happiness, but related)
+  * bouts of unhappiness contribute to emotional development: http://psycnet.apa.org/record/2016-48467-001
+  * obviously, if you believe you are experiencing something like clinical depression, seek out a competent professional to help with that.
+  * people have a strong individual-level component they generally revert to: https://www.reading.ac.uk/web/files/economics/emdp2017131.pdf
+  * ratings short-cut happiness concerns; unhappy students rate classes down. 
+  * does alternative learning not make students happier?
+
+decomposing the college bundle:
+  * career placement sucks, that's why we have recruiters which are more effective
+  * networking off-campus is substitutable or better than networking on-campus (with job interest, professionals v students, career services sucks)
+    * meetups, for example. Company HR and recruiters even attend these things. Earning a personal referral has a stronger positive effect on hiring than the negative stigma of an alternative credential; indeed not only is the overall effect larger but it counters the exact stigma itself at the mechanistic level; a referral can assure the hiring manager that a person isn't too weird according to a person who already works there, rather than according to the candidate or the candidate's unknown buddies.
+  * alternative signaling
+  * alternative learning
+  * what's left? college 'puts it all together' for you, but 1) it's more expensive, 2) it's lower quality, 3) it includes stuff you don't need. If you can manage your learning yourself then you can get better for cheaper, and really, isn't the ability to self-manage learning the real 'learning how to learn'? Self-directed education, an alternative pathway, teaches you to learn how to learn, not traditional education.
+  * this decomposing looks just like Christiansen's model of disruptive innovation (what is a respectable timeline? has it already been happening? yep.)
+
+***
+TODO: Net promoter score for alternative credential utilization.
+"Would you recommend this to a friend?" [alternative education]
+
+Craig's book, location 964-1038; experts estimate 80% of employers use an applicant tracking system (ATS). These systems filter based on resume format and keywords. Keywords are often technical skills because general skills are not good discriminators. So a liberal education really doesn't help here, but technical learning does help. Also, consulting with experts in hiring for that specific profession will help; recruiters know how to format resumes and what words to use. They also know what words or phrases can be stretched for a job and what is considered dishonest. They can often recommend training resources and sometimes assist with tests to certify specific knowledge.
+
+*** guaranteed jobs
+https://www.ere.net/pay-2500-follow-the-program-and-get-a-100k-job-guaranteed/
+https://www.springboard.com/workshops/data-science-career-track
+https://www.insidehighered.com/news/2018/03/16/udacity-ends-pledge-students-get-hired-or-get-their-money-back
+    * Craig pointed to a 2017 report from VentureBeat, which stated that of around 10,000 students who had earned nanodegrees since 2014, around 1,000 had found jobs as a result. “A placement rate of around 10 percent should spell the demise of any last-mile training program,” said Craig.
+
+*** join military
+  * cheap school
+  * side benefits like housing; you basically won't be functionally poor
+  * higher than min wage income
+  * gain skills, maybe you won't even need college after the fact
+  * easier degree bc college credit waiver
+  * does GI Bill explain much of credential inflation?
+  * does going military actually make you a better student?
+    * https://www.usatoday.com/story/news/nation/2014/03/24/veterans-students-graduation-college-completion-rates-va/6735003/
+        * "The completion rate for these veterans of 51.7% is lower than the four-year graduation rate for younger, non-veteran peers, which was 59% in 2011, according to the National Center for Education Statistics."
+        * "veterans appear to be doing better than other so-called non-traditional students — those who delay attending college, enroll part-time or have children, factors common with many current veterans.
+        * "The veterans completion rate counted those who used GI Bill benefits to obtain a bachelor's or graduate degree, but also a vocational certificate or associate degree, even those who completed an on-the-job training course."
+    * https://www.theatlantic.com/education/archive/2017/04/why-is-the-student-veteran-graduation-rate-so-low/523779/
+        * "Community Colleges Rarely Graduate the Veterans They Recruit"
+        * drake equation data
+
+this stuff maybe related
+ * https://www.insidehighered.com/news/2018/10/31/growing-number-public-universities-have-become-less-affordable
+ * https://www.newamerica.org/education-policy/press-releases/new-america-launches-multi-year-multi-stakeholder-initiative-expand-youth-apprenticeship/
+
+
+
