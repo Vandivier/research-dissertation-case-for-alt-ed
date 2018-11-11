@@ -598,8 +598,12 @@ this stuff maybe related
 
 ## Concrete Substitutions: 30 Most Common Degrees
 
+refer to Table 2 and/or whatever is available at main suppliers https://www.glassdoor.com/research/app/uploads/sites/2/2017/04/FULL-STUDY-PDF-Gender-Pay-Gap2FCollege-Major.pdf
+
+I ignore managerial positions bc I don't see them as entry level. I also ignore intern positions bc those are pre-entry level and don't require degree.
+
  * business
-    * Target role: Business Analyst (55k)
+    * Two target roles! 1) Business Analyst (55k), and 2) Sales
     * UoPeople https://www.uopeople.edu/
     * Capella FlexPath
     * Udacity Nanodegree
@@ -615,25 +619,46 @@ this stuff maybe related
     * Coursera Specializations
     * General Assembly, Flatiron, and many other bootcamps
  * psychology
-    * Capella FlexPath
+    * per glassdoor, the common profession is mental health counselor. that has a legal licensure requirement of a master's or higher.
+        * https://onlinecounselingprograms.com/become-a-counselor/counseling-careers/mental-health-counselor/
+        * one alternative route there is to become a military psychologist https://www.psychologist-license.com/types-of-psychologists/military-psychologist.html#context/api/listings/prefilter
+        * But I recommend going into business or sales. interesting to think about the military roi tho.
+    * Capella FlexPath, including thru master's.
  * electrical engineering
+    * Per glassdoor, they end up becoming software engineers. See all the resources available there.
  * mechanical engineering
+    * TODO: maybe the exception to the rule
  * communications
+    * social media / tech writer / marketing
  * marketing
     * Udacity Nanodegree
  * information technology
+    * Per glassdoor, they end up becoming software engineers. See all the resources available there.
     * Capella FlexPath
  * economics
+    * TODO: financial/data analyst
  * finance
+    * TODO: financial/data analyst
  * accounting
+    * "Most states require that you have a bachelor’s degree in accounting in order to sit for the exam, but not all of them"
+    * alt path: move states!
+    * otherwise, basically another case of non-innovatable-by-license
  * biology
+    * TODO: pharmacy tech
  * english
+    * social media / tech writer / marketing
  * political science
+    * tough transition...law clerk technically doesn't need a law degree but it's like always a step towards a real legal career which does require that, bar, etc...
+    * alt path: you can become a lawyer without going to law school! https://priceonomics.com/how-to-be-a-lawyer-without-going-to-law-school/
+    * alternatively, political science degrees can be used much like business/marketing/communication degree
  * criminal justice
     * Capella FlexPath
  * sociology
+    * TODO: they go into sales
  * mathematics
+    * TODO: financial/data analyst
  * history
+    * TODO: they go into sales
  * nursing
     * Capella FlexPath
  * civil engineering
@@ -642,15 +667,15 @@ this stuff maybe related
  * human resources
     * Capella FlexPath
  * journalism
+    * Social media / tech writer
  * public relations
+    * TODO: PR / social media
  * international relations
  * education
  * management information systems
  * graphic design
     * Udacity Nanodegree
  * industrial engineering
-
-
 
 experiments TODO:
 1 - use degreed skill certification to compare udacity vs coursera vs normal school (vs capella?) vs pluralsight skillIq vs ordinary IQ
