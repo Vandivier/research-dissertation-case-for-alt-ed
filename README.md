@@ -560,6 +560,12 @@ https://www.ere.net/pay-2500-follow-the-program-and-get-a-100k-job-guaranteed/
 https://www.springboard.com/workshops/data-science-career-track
 https://www.insidehighered.com/news/2018/03/16/udacity-ends-pledge-students-get-hired-or-get-their-money-back
     * Craig pointed to a 2017 report from VentureBeat, which stated that of around 10,000 students who had earned nanodegrees since 2014, around 1,000 had found jobs as a result. “A placement rate of around 10 percent should spell the demise of any last-mile training program,” said Craig.
+https://www.bloc.io/faq
+    * "We have a 97% success rate for job-seeking students in 2016."
+also general assembly, gridiron, competitors; i can also attest to codecademy, pluralsight, code school, + github portfolio + slay interview.
+
+my research is completely in line with Jordan Friedman
+    * https://www.usnews.com/education/online-education/articles/2016-01-22/what-employers-think-of-badges-nanodegrees-from-online-programs
 
 *** join military
   * cheap school
@@ -580,6 +586,72 @@ https://www.insidehighered.com/news/2018/03/16/udacity-ends-pledge-students-get-
 this stuff maybe related
  * https://www.insidehighered.com/news/2018/10/31/growing-number-public-universities-have-become-less-affordable
  * https://www.newamerica.org/education-policy/press-releases/new-america-launches-multi-year-multi-stakeholder-initiative-expand-youth-apprenticeship/
+ * credit from khan academy and any mooc at https://www.insidehighered.com/news/2012/06/15/earning-college-credit-moocs-through-prior-learning-assessment
+
+* problems with payscale's college roi report: 1) doesn't consider alt creds, 2) it's a level-measure not a % measure https://www.payscale.com/college-roi5
+* arbitrary skill certification: https://degreed.com/skill-certification
+
+"“I don’t think it will replace the degree,” he said. “I think it will be a healthy thing for the degree.”" https://gigaom.com/2013/09/17/will-khan-academy-someday-offer-students-a-college-degree/
+
+* micromaster's doesn't cut it bc u need bach before master's; we want an entry-level solution
+* udemy doesn't cut it with 1-off courses; we want a substantial credential with reputation
+
+## Concrete Substitutions: 30 Most Common Degrees
+
+ * business
+    * Target role: Business Analyst (55k)
+    * UoPeople https://www.uopeople.edu/
+    * Capella FlexPath
+    * Udacity Nanodegree
+    * Coursera Specializations
+    * GA Product management https://generalassemb.ly/education/product-management
+    * Internship Path. Plausibly an antipattern. Internships require college enrollment. One year of internship experience may help you get a job, but so would the year of college without the internship. The internship becomes largely extraneous.
+    * IIBA, ECBA http://www.iiba.org/Certification/certificationlevels.aspx
+    * https://www.cio.com/article/3269514/certifications/6-business-analyst-certifications-to-advance-your-analytics-career.html
+ * computer science and engineering
+    * Target role: Software Developer (70k)
+    * Udacity Nanodegree
+    * UoPeople https://www.uopeople.edu/
+    * Coursera Specializations
+    * General Assembly, Flatiron, and many other bootcamps
+ * psychology
+    * Capella FlexPath
+ * electrical engineering
+ * mechanical engineering
+ * communications
+ * marketing
+    * Udacity Nanodegree
+ * information technology
+    * Capella FlexPath
+ * economics
+ * finance
+ * accounting
+ * biology
+ * english
+ * political science
+ * criminal justice
+    * Capella FlexPath
+ * sociology
+ * mathematics
+ * history
+ * nursing
+    * Capella FlexPath
+ * civil engineering
+ * chemical engineering
+ * chemistry
+ * human resources
+    * Capella FlexPath
+ * journalism
+ * public relations
+ * international relations
+ * education
+ * management information systems
+ * graphic design
+    * Udacity Nanodegree
+ * industrial engineering
 
 
 
+experiments TODO:
+1 - use degreed skill certification to compare udacity vs coursera vs normal school (vs capella?) vs pluralsight skillIq vs ordinary IQ
+2 - have kids attempt any of my alt paths out of highschool and record results
