@@ -233,3 +233,62 @@ Loc 1175 Craig refers to a working paper on experience inflation. For Craig, Bid
 
 Loc 1199 Discusses Ernst and Young battery of assessments; perhaps another alternative path? Is the traditional result really a credential or is it a job? Perhaps the college degree is neotraditional, not traditional. And the job is paleotraditional to isolate it as a subset of the whole of traditional which includes both neo and paleo. E&y’s move resulted in a diversity increase - an espoused goal among many would-be policy changers. Penguin Random House and Nestle also. Nestle found 20% of new hires would not have even gotten an interview. Also IBM. I’m sure I could find more such employers by looking around. This would just be a roundabout approach to measuring the total jobs which don’t require a degree. As I’ve said previously, at the individual level it’s easy to handle: work with a recruiter or get an interaction then get hired off experience.
 
+loose notes end with Loc 1199 Discusses Ernst and Young battery of assessments
+ 
+Location 1226 Craig know it’s a hard research Associates survey in which 80% of employers with the sample size of 400 indicated that it would be Very or fairly useful to see an electronic portfolio of work
+
+loc 1229 2013 survey, 71% of employers said they would consider hiring a candidate without a degree over another candidate with a degree
+
+loc 1237, Chapter 3 key points: "Deteriorating employment outcomes...are primarily a result of changes in the hiring process". Note: I say employers are the key to change, it's actually reassuring that they are already driving changes and more open to change perhaps than university (although they arguably haven't changed enough on average but a microeconomic actor needn't really worry about the average too much and some universities are making cool changes)
+
+GE fridge story in Ch 4, another example of a possibly funny possibly relatable, low-density on facts, not academic sounding. concept of the last mile introduced around loc 1274
+
+Loc 1298, “most student-pay bootcamps show placement rates north of 80%” also interesting thing about risk; many last-mile options offer employment or income guarantees, so the risk-adjusted income is even higher for most people and particularly high for risk sensitive people. Interesting because some perceive alternative education as a risky endeavor, partly bc it is abnormal therefore not tried and true
+
+Loc 1309 alt Ed is more technical than traditional Ed; indicates different tools for different purposes rather than substitutes. But technical is the right tool for the purpose of specific employment. Liberal arts or nontechnical might be preferable for generAl but not particular employment...in theory anyway, in practice it may not be comparatively better for either
+
+4 of Craig’s 6 last mile traits I agree with
+
+Loc 1383, 57% of colleges and universities are blaming the likes of software coding bootcamps for declines in enrollment
+
+Loc 1432, ch 4, coding camps 4 weeks to 2 years, 14 weeks average. Time cost should be considered in education cost. Loc 1439: 95 coding schools as of this year, started in 2012. Now graduate about one third as university comp sci. 80 percent plus placement rate is within 6 months. 99.8% employers that have hired plan to hire more: 72 percent say equally qualified compared to school and 12 percent say better
+
+Loc 1568 bootcamps outside of coding. Gen assembly has UX and product management, PrepMD for medical, (Jessie, Katie, others: would  you be more likely to do prepmd over coding bootcamp or 1 -2 year online bio or nursing degree?)
+
+Lots of anecdotes eg ch 4 contribute both to the no academic relatability and also to low info density.
+
+Loc 1626 what is Besomebody Paths? Dental, sales, culinary, auto? AlwaysHired sales. Can top college degrees all match to a bootcamp? Medical Sales College.
+
+Ch 6, loc 1845: at what point does a last mile program become a viable alternative to college? Ch 5 many are intended as top up programs, but ch 6 24% enter with no degree. Loc the 1911, college mvp includes cog and non cognitive skill development over last mile program...but is it even good at that?? Can better training on those be found elsewhere?
+
+Loc 1923: financing of alt Ed vs traditional Ed...alt financing can sometimes be used for traditional Ed too tho. Eg income share agreement is dischargeable w bankruptcy
+
+Loc 2068 Craig refers to Christiansen institute. College mvp is a real thing distinct from bootcamp or certificTion etc. not accredited.
+
+Loc 2132... what industries are covered by apprenticeship?? Digital is well covered but what else. Also loc 2140. Looks like internship to me. Blue color union stuff mostly like plumber. Apprenticeship service provider is popular in uk, not USA. WhiteHat covers accounting. Aon, Zurich, and hartford have insurance and Human Resources. Guaranteed full time work and an associates degree in the case of aon. Salary of 35k isn’t great, but better than going out of pocket and much better adjusting for risk or compared to grocery store job held while in college. This in USA 
+
+Wells Fargo for collections and management. Cvs has pharmacy tech.
+
+Loc 2332 on the importance of staffing firms in driving this. Loc 2350 a bad hire can cost a firm 240k!! Whoa! How they get that?
+
+2485 - did Avenica go live w new project in 2018 across industries?
+
+2545, ch 8 - "Prominent researchers have questioned the return on investment for online courses." citation(s) may provide sources for the "opposition to my view..." but wait what is my view? my view is still in formation...i guess my view is "alternative paths are sometimes preferred to the traditional path" but this doesn't seem to be a thing anyone opposes...it's more like some people might contest a specific prescription, not that general point. But, if someone generally detracts from online, vocational, or otherwise alternative, or if someone supports the traditional route to an extreme (eg 90-100% of high school students should do it), then that could be considered an opponent of my present working view.
+
+loc 2575: not only are universities adopting innovative or alternative strategies, non-traditional providers are adopting traditional strategies in some cases. Prototypical alternative online educator Udacity launched a series of physical campuses in 2016 under a program called Udacity Connect. Udacity Connect offers the same courses which are offered under MOOCs, but with a physical place for students and teachers to interact. Udacity points out that students using Udacity Connect graduate 5x more frequently than those using the online-only version of the class.
+
+loc 2727 - simple knowledge sharing / communication / career discovery is a big bottleneck. Yellowbrick is a resource which awards certificates in Fashion, Beauty, and Sports so-called industry essentials, but these certificate courses largely consist of career discovery instruction, and career preparedness including the development of an e-portfolio along recommended lines.
+
+loc 2820 - portfolios for non-developers! including microcredidentials; so, ostensibly at a minimum anyone who has micro creds can have a portfolio, and this does cut across major industries, eg it does substitute for common degrees
+
+loc 3023 - "go to college indicators." How does craig stack against caplan? Vs my opinion? I would be hard pressed to tell anyone not to go to college if it contributed to net higher lifetime earnings, but preference always matters...
+
+loc 3363, ch 10. raises the objection to short-term, focused education on the fact that less short term options yield better long-term employment. In one rebut to this criticism, Craig harps on one of his favorite key phrases: "new color," which is not traditional blue color or vocational but is instead a software-integrated vocational role, requiring at least expert familiarity with a set of software and general digital skills, as well as often requiring or favoring those with some some creative digital expertise (code, UX, agile process mgmt, business analysts, software creation or mgmt)
+
+loc 3380 agrees w caplan that fadeout on learning is severe, but do Craig's sources on the Ebbinghaus forgetting curve not actually present an even more calculation-friendly approach?? Caplan seems to argue based on a wider set of evidence at the expense of losing a potent, concise formulation in ebbinghaus. ultimately, these approaches go together but i prefer ebbinghaus for calculation and quick, though non-comprehensive, reference
+
+loc 3442 - it's always discomforting when an author refers to a source you know to be questionable; the chocolate milk from brown cows research is such an essentially discredited story. Americans tend to think milk cows in general are brown: Jersey cows are brown for example. The researchers are not even fourthcoming with the exact question(s) and answer(s). the result is a discredit case of common-man bashing which, like many such cases, on further investigation, reveals the common man is often surprisingly well informed. Indeed, it may be the case that milk producing cows tend to be brown cows.
+
+finally, ch 10 lements the 'loss of fun,' but I think that is a value overstated in the literature, and particularly by education scholars. I think Caplan rightly points out many people see college activities as net suffering, even compared to ordinary work.
+
+loc 3800, the appendix, a directory of alternatives to college, including which jobs each program prepares a participant for, is a phenomenal resource. For the relevant consumer, the appendix alone makes purchase of the book more than worthwhile.
