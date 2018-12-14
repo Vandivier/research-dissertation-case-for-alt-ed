@@ -42,9 +42,63 @@ The first section provides the motivation for this paper and describes the organ
 
 ## 3. On Disrupting Class
 
-- go over background
-- summarize/review notes
-- relate externally and compare/contrast with prior sections (can't really comp/con in this case bc no prior sections)
+TODO:
+- Summarize notes
+- Compare/contrast with prior sections
+
+## 4. On The Innovative University
+
+TODO:
+- Summarize notes
+- Compare/contrast with prior sections
+
+## 5. On College (Un) Bound
+
+In Chapter 1, Salingo agrees with Caplan and disagrees with one reading of Christiansen in that he sees government forces providing universities with a barrier against market forces. Salingo and Caplan argue that universities will not disappear any time soon.
+
+Jeff agrees that the bundled service model of the traditional 4-year undergraduate degree is collapsing, but rather than foreseeing a market takeover by nimbler competitors, Jeff is optimistic that universities will be able to adapt. This theme of universities succesfully adapting to become like their competitors, rather than being ousted by competitors, is a major theme of the book.
+
+Jeff's thesis seems to contextualize a series of related wagers put forth by Caplan as wrong-headed. Caplan argues "New Tech Won't Gut Higher Education," [4] Bryan has indicated sustained confidence by offering a series of similar wagers over time. As recently as September 2018, Bryan has wagered that the fraction of American 18-24 year-olds enrolled in traditional four-year colleges will not significantly decrease [5]. This wager, however, hardly shows that new technology hasn't been deeply disruptive. Four-year colleges have maintained enrollment in large part by adapting. Utilizing new technologies, partnering with and giving credit for learning from non-traditional providers, engaging online or hybrid courses, and supporting timeframes varying widely from the fictional four-year standard.
+
+In chapter 2, Jeff notices that many universities are creating degrees which sound vocational, like graphic design or athletic training. He reads this as a sign of disruption. In chapter 3, Jeff notes that some degrees cost the university money. These include majors like Chemistry which are generally well reputed. This seems to be an unaccounted complication to the calculation of social benefit by major found in Caplan and others.
+
+Chapters 3, 5, and 6, details some ways in which power is shifting from the teachers to the students in the university. One way is simple expenditure. Non-learning service spending has increased much faster than faculty spending in recent years. Salingo indicates this is a positive change which goes hand-in-hand with disruptive pedagogies like the flipped classroom. Chapter 6 notes that many students graduate with excess credits. Associate degree graduates graduate with 19 extra credits on average, and 16 is the average at the bachelor's level. Excess credits are attributable in part to major-switching and transferring. Such excess credit serves to inflate actual student costs over, student expectations, estimates published by universities, and even academic calculations of degree cost and return.
+
+In chapter 6, Jeff suggests that many college freshman decide on a major based on the recommendations of a relative. In an obvious way this is problematic, but it is also encouraging because it provides evidence that student major selection is somewhat open to external influence, and this allows us to relax the assumption that strategies utilized to improve student education must hold the major constant.
+
+College (Un) Bound is rich in qualitative observation and plausible reasoning, but occassionally wanting in data and also occassionally stretching what counts as plausible reasoning past the breaking point. One instance is observed in chapter 6, where Jeff states that if match.com can make two people fall in love, then surely society can design a better college experience using technology.
+
+
+
+## 6. On Blended
+
+TODO:
+- Summarize notes
+- Compare/contrast with prior sections
+
+## 7. On College Disrupted
+
+TODO:
+- Summarize notes
+- Compare/contrast with prior sections
+
+## 8. On Creative Schools
+
+TODO:
+- Summarize notes
+- Compare/contrast with prior sections
+
+## 9. On The Case Against Education
+
+TODO:
+- Summarize notes
+- Compare/contrast with prior sections
+
+## 10. On A New U
+
+TODO:
+- Summarize notes
+- Compare/contrast with prior sections
 
 ## Trends over time
 
@@ -64,4 +118,20 @@ The first section provides the motivation for this paper and describes the organ
 
 ## Bibliography
 
+TODO: Format entries properly.
 
+[1] 2008, Disrupting Class: How Disruptive Innovation Will Change the Way the World Learns, Clayton M. Christensen, Curtis W. Johnson, and Michael B. Horn
+[2] 2011, The Innovative University: Changing the DNA of Higher Education from the Inside Out, Clayton M. Christensen and Henry J. Eyring
+[3] 2013, College (Un) Bound, Jeffrey Salingo
+[4] http://www.econlib.org/archives/2011/10/stably_wasteful.html
+[5] https://www.econlib.org/education-the-betting-continues/
+[6] 2014, Blended, Heather Staker and Michael B. Horn
+[7] March 2015, College Disrupted: The Great Unbundling of Higher Education, Ryan Craig
+[8] April 2015, Creative Schools: The Grassroots Revolution That’s Transforming Education, Ken Robinson
+[9] Jan 2018, The Case Against Education, Bryan Caplan
+[10] Sept 2018, A New U: Faster + Cheaper Alternatives to College, Ryan Craig
+[11]
+[12]
+[13]
+[14]
+[15]

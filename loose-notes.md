@@ -16,38 +16,16 @@ alternative credentials net promoter score: aggregate top online learning produc
 * now: compare average NPS of different technologies over time. Esp other investment types and other skill-enhancing things. do universities publish NPS? also, does Degreed dude ever regress NPS on SkillIQ?
 * 
 
-College unbound notes
-Chapter one towards the end, about 25 minute mark, this author agrees with Kaplan in disagrees with Christiansen in that he sees government forces providing universities with a barrier against market forces and so he does not agree that universities will simply disappeared.
-
-Jeff thinks many use universities will adapt. He also agrees that the bundled service model of university is collapsing.This is a major theme of the book and it’s exactly what he means by unbound. It’s sort of makes Kaplan’s wager out to be like a miss guided wager.
-
 This site estimates and PS from publicly available information including the sentiment of tweets 
 https://customer.guru/net-promoter-score/strayer-education-inc
 
-This book also seems then on data, but Rich and qualitative notes. In chapter 2, Jeff notices the futility of many universities seeking to educate for jobs that do not yet exist. He notices for example that the that three majors I think it is in the top 10 today didn’t exist in 1990. Something like that. He also notes many universities creating vocational – sounding degrees like athletic training or graphic design. This is another sign of ongoing disruption, or, adaptation. Project management as a masters degree is another example of a vocational degree, at this time at the graduate level. The p.m. I Institute is well known for certifying project managers. That would make the PMI credential an alternative credential. But now there are degrees which are officially accredited by PMI. This again indicates a sort of hybrid solution rather than a market flip.
-
-
-In chapter 3 Jeff notices a powershift in the classroom from professor to student. This is a soft change or an attitude and of shift but stone important one. In this chapter Jeff notes that spending in non-learning services such as food and even like pools four students increased much faster than spending on teachers. So when someone purchases or university degree and the traditional system the density of learning is reduced this way. So an adaptive university will cut down on these expenses and increase learning spending
-
-In chapter 3 Jeff notes that psalm majors cost the University rather than making the University money. Specifically he states that chemistry has been subsidized as long as chemistry has been taught. Interestingly, chemistry is considered a privately and socially beneficial major. I wonder if the fact that it subsidized has implications for Kaplan’s calculations.
-
 I think it’s worth noting that when many students enter college their brains are not fully developed. Also I think many of them don’t understand the value of a dollar because they haven’t worked much. This allows them to except dad without really understanding at a volitional level or at at a deeper level how much debt they’re really getting into. Working a bit before going to school would help in either of these cases
 
-Summarize chapter 5, Jeff does a good job of describing for forces that improve alternative credential programs, but the description is too wordy so needs to be some rice.
+Sal Kan is described as a disruptor but he’s also partnering with universities, so it’s not as if he’s necessarily advocating alternative, I think is very much open to like working together
 
-Salcon is described as a disruptor but he’s also partnering with universities, so it’s not as if he’s necessarily advocating alternative, I think is very much open to like working together
+Check out Degree Compress course recommendations software. For part of my dissertation and or for part of a book which I may write as a result of this research, hey section should be devoted to optimizing advice for the student who does decide that the traditional route is best. Degree compass and things like intelligent university selection and things like intelligent professor in course selection and things like utilizing cheap or free online software to assist in studying to facilitate pass rate and other things like that may all be helpful
 
-Chapter 5 gives some reasons that the traditional professor is losing power to the students. Chapter 6 highlights the fact that flipping the classroom is a key alternative pedagogy which goes hand-in-hand with current technological advances. As a third when flipping the classroom effectively outsources some of the teaching labor 2 students which drives self-directed learning and cuts teaching costs. None of these are really taken to be decisive reasons for alternative credentials to replace traditional credentials. No one even Kaplan, Thinks that traditional institutions have nothing to learn from alternative institutions. But these are places where synthesis or adaptation is already taking place. Traditional institutions are increasingly leveraging technology’s and flipped classroom pedagogy.
-
-Occasionally books like college unbound engage in plausible reasoning the likes of which might make some empirical economists cringe. For example in chapter 6, Jeff states if match.com can make two people fall in love then we can design a better college experience through technology.
-
-Traditional degree cost is somewhat understated because the average degree recipients holds more credits then required for graduation. According to chapter 6 in college and bound for the associates degree this is like 19 credits in for the Bashelors it is 16.
-
-
-Check out degree compress Kors recommendations software. For part of my dissertation and or for part of a book which I may write as a result of this research, hey section should be devoted to optimizing advice for the student who does decide that the traditional route is best. Degree compass and things like intelligent university selection and things like intelligent professor in course selection and things like utilizing cheap or free online software to assist in studying to facilitate pass rate and other things like that may all be helpful
-
-
-In chapter 6, Jeff suggests that many college freshman decide on a major based on the recommendations of a relative. This sort of indecision seems less like a student who is intentionally exploring and has intentionally reserves deciding to that point. It sounds more like someone who is uninformed or open to suggestions. This may indicate higher levels of openness at a younger age, which is consistent with the broader literature. So suggesting major shifts maybe effective to younger people Or people hire an open Ness. So my research need not assume that people will not change their majors, indeed it seems like this is already something to college and tag people are aware of. Jeff says he will talk more about it in chapter 8.
+College unbound notes
 
 In chapter 7, Jeff compares online learning to online news media which disrupted the print media industry. This is a common go to for disruptors, but it also shows that alternatives do not directly substitute for traditional solutions. The major traditional news media sources still exist today however they adopted and evolved. The market in general for print media consolidated but it did not go away and media is still a big thing today. So we can expect the traditional credentialing system to consolidate and evolveBut not to go away I think this is a great synthesis of the disrupting camp and the robots traditional institution can buy Kaplan.
 
