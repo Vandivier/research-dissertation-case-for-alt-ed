@@ -25,34 +25,11 @@ Sal Kan is described as a disruptor but he’s also partnering with universities
 
 Check out Degree Compress course recommendations software. For part of my dissertation and or for part of a book which I may write as a result of this research, hey section should be devoted to optimizing advice for the student who does decide that the traditional route is best. Degree compass and things like intelligent university selection and things like intelligent professor in course selection and things like utilizing cheap or free online software to assist in studying to facilitate pass rate and other things like that may all be helpful
 
-College unbound notes
-
-In chapter 7, Jeff compares online learning to online news media which disrupted the print media industry. This is a common go to for disruptors, but it also shows that alternatives do not directly substitute for traditional solutions. The major traditional news media sources still exist today however they adopted and evolved. The market in general for print media consolidated but it did not go away and media is still a big thing today. So we can expect the traditional credentialing system to consolidate and evolveBut not to go away I think this is a great synthesis of the disrupting camp and the robots traditional institution can buy Kaplan.
-
-But not to go away I think this is a great Synthesis of the disrupter camp and the robust traditional institution camp
-
-
-In chapter 7, Jeff finally takes traditional college institution credit on and ahead on fashion. He says one of the main current problems at the time of his writing is the failure of moves space MOOCS space to deliver academic credit. He says I doubt this will be a problem much longer as MOOCS continue to partner with universities.
-
-In chapter 7 Jeff states that 40% of college freshman require remedial course work. This is in addition to typical credits like 120 credits. So this inflates some estimates of college cost. These expenses can be easily identified prior to enrollment and can group students into different buckets. So average student cost may be more than necessary student costs even had a traditional University.
-
-In chapter 7, Jeff calculates the revenue from an undergraduate class at George Mason University. He calculates for principles of economics 103 by Boudreau. He calculates that this course brings in at least $420,000 and that is assuming they are all Virginia residents where a Virginia resident pays something like $1400 and an out-of-state student pay something like $3600. That is as of the year of writing of this book I’m not sure what year that is. So in today’s money this is I believe Over half $1 million. Diaz Kaplan in clued this money and his calculation of social cost? Space for each class that is converted from this sort of class into a free online course or cheap online course there is approximately half $1 million in social gain if I’m thinking about the problem correctly. Actually it may raise it even further if the online learning is more affective, which seems to be the case based on generalized information about online learning, but also due to specific information in chapter 7 given by Sebastian through this case where students would take his in person class and his online class simultaneously they would skip class learn from the online class and then obtain even better results on the test
-
-Chapter 8 discusses a program called StraighterLine. Look into this as an alternative path education.
-
-Maybe I should focus less on alternative education and more on affective education? My book can be called the case for education with Claire reference to Kaplan. The idea here is to test everything and hold onto the good, where traditional education must have some good because it’s a robust institution. The question becomes what’s good about it.
-
-According to chapter 823% of students from families with over $100,000 of annual income attended to communicate with each up from 12% five years ago.
-
-In chapter 8 Jeff discusses a competency based degree plan supposed to credit our best degree plan and apparently New Hampshire Ave. see you and Western Governors are trying to target $2500 per year for a four year degree under this plan. Sorry, southern New Hampshire. Leblanc at Snh apparently considers himself a disruptionist and considers online learning old news, that competency based education is the new disruption, and that the method will be through existing institutions, and it won’t replace 4 year programs it will be a new service and additional revenue stream
+Chapter 8 in College unbound discusses a program called StraighterLine. Look into this as an alternative path education.
 
 check Christiansen innovative university (2011) and 
 https://www.amazon.com/Innovative-University-Changing-Higher-Education/dp/1118063481
 Disrupting Class, Expanded Edition: How Disruptive Innovation Will Change the Way the World Learns
-
-Create a list of 5 to 10 notable data sources about higher education and also alternative education of possible although I don’t think those exist although maybe some niche things like charter schools and private schools homeschooling on schooling and so forth maybe those neck things have associated surveys. One for Hyridge Acacian is the national survey of like college student engagement. Another I think it’s called like the ACL American commute or ACS American community survey something like that. One of the later chapters in college I’m down like 56 or seven discusses standardized measurements of Hyridge Acacian outcomes I think it Chapter 7 or eight actually maybe chapter 9 or 10
-
-In chapter 10, Jeff states that an important measure of active learning is called time on task. Active learning has been shown more effective than traditional learning methods including lecture. Time on task indicates time that a student is actively working on in the same task for the purposes of learning. What this means is that jobs or career work is nearly 100% time on task and therefore can be considered active learning. So working is literally a form of learning so the Decotah me between work and school is a false economy. Schooling can be viewed as work with a zero or negative wage and possibly with different products at work.
 
 Contact Kevin Currie Knight about my research, discuss his self directed learning live stream, will it be available, would he consider referring me for humane studies?
 https://m.youtube.com/watch?reload=9&v=G1krPg4f-XE
@@ -61,6 +38,19 @@ https://www.luminafoundation.org/all-learning-counts
 *  in favor of demonstrated learning and competency-based learning; another buzzword 'non-institutional learning toward credentials'
 * competency-based approach https://www.youtube.com/watch?v=3S12oNjc9Uk
 * competency = capability = skill
+
+Maybe I should focus less on alternative education and more on affective education? My book can be called the case for education with Claire reference to Kaplan. The idea here is to test everything and hold onto the good, where traditional education must have some good because it’s a robust institution. The question becomes what’s good about it.
+
+----------------------------------------------
+College unbound notes
+
+According to chapter 8, 23% of students from families with over $100,000 of annual income attended to community college which is up from 12% five years ago.(economics & norms)
+
+In chapter 8 Jeff discusses a competency based degree plan supposed to credit our best degree plan and apparently New Hampshire Ave. see you and Western Governors are trying to target $2500 per year for a four year degree under this plan. Sorry, southern New Hampshire. Leblanc at Snh apparently considers himself a disruptionist and considers online learning old news, that competency based education is the new disruption, and that the method will be through existing institutions, and it won’t replace 4 year programs it will be a new service and additional revenue stream
+
+Create a list of 5 to 10 notable data sources about higher education and also alternative education of possible although I don’t think those exist although maybe some niche things like charter schools and private schools homeschooling on schooling and so forth maybe those neck things have associated surveys. One for Hyridge Acacian is the national survey of like college student engagement. Another I think it’s called like the ACL American commute or ACS American community survey something like that. One of the later chapters in college I’m down like 56 or seven discusses standardized measurements of Hyridge Acacian outcomes I think it Chapter 7 or eight actually maybe chapter 9 or 10
+
+In chapter 10, Jeff states that an important measure of active learning is called time on task. Active learning has been shown more effective than traditional learning methods including lecture. Time on task indicates time that a student is actively working on in the same task for the purposes of learning. What this means is that jobs or career work is nearly 100% time on task and therefore can be considered active learning. So working is literally a form of learning so the Decotah me between work and school is a false economy. Schooling can be viewed as work with a zero or negative wage and possibly with different products at work.
 
 In chapter 11 Jeff discusses a company called on sure which takes under employed workers in the United States and employees them mainly apparently an IT jobs. He says it similar to an apprenticeship but they are working with universities to get college credit for their training at on sure. Germany has common apprenticeship programs and this results historically in faster job placement for Germans compared to US college grads
 
@@ -86,6 +76,7 @@ I think kids these days in middle school and high school should absolutely be es
 
 I wonder how common is it for high schools to allow an elective class or something like that to students who create such a digital portfolio said that they might even be able to get three benefits for the price of one
 
+----------------------------------------------------------------
 Beginning notes for Creative schools Mike and Robinson. In chapter 1 he defines education which is like obvious and useful although the previous two books they didn’t do that also his definition of education is more broad in scope and ends up actually contradicting the definition used by Kaplan.
 
 In chapter 2 highlights a connection between personalized learning and passion. As Kevin Carey night notes and also Angela Duckworth great is composed of passion and perseverance both of them. There also seems to be an element of reciprocity in the smoky road story.
