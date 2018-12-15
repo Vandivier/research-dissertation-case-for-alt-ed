@@ -1,3 +1,5 @@
+https://sr.ithaka.org/publications/mapping-the-wild-west-of-pre-hire-assessment/
+
 for applied learning plan / personal economic management plan, distinguish my approach from careerbuilder.com
 * scale of 1 to 10: willingness to change: Does user want jobs that are already a good fit, or are they willing to take a job that may be more stressful to work in or take longer to get in exchange for more pay, employment rate, etc.
 * measure grit (structurally interacts with willingness to change)
@@ -41,34 +43,11 @@ https://www.luminafoundation.org/all-learning-counts
 
 Maybe I should focus less on alternative education and more on affective education? My book can be called the case for education with Claire reference to Kaplan. The idea here is to test everything and hold onto the good, where traditional education must have some good because it’s a robust institution. The question becomes what’s good about it.
 
-----------------------------------------------
-College unbound notes
-
-According to chapter 8, 23% of students from families with over $100,000 of annual income attended to community college which is up from 12% five years ago.(economics & norms)
-
-In chapter 8 Jeff discusses a competency based degree plan supposed to credit our best degree plan and apparently New Hampshire Ave. see you and Western Governors are trying to target $2500 per year for a four year degree under this plan. Sorry, southern New Hampshire. Leblanc at Snh apparently considers himself a disruptionist and considers online learning old news, that competency based education is the new disruption, and that the method will be through existing institutions, and it won’t replace 4 year programs it will be a new service and additional revenue stream
-
 Create a list of 5 to 10 notable data sources about higher education and also alternative education of possible although I don’t think those exist although maybe some niche things like charter schools and private schools homeschooling on schooling and so forth maybe those neck things have associated surveys. One for Hyridge Acacian is the national survey of like college student engagement. Another I think it’s called like the ACL American commute or ACS American community survey something like that. One of the later chapters in college I’m down like 56 or seven discusses standardized measurements of Hyridge Acacian outcomes I think it Chapter 7 or eight actually maybe chapter 9 or 10
 
-In chapter 10, Jeff states that an important measure of active learning is called time on task. Active learning has been shown more effective than traditional learning methods including lecture. Time on task indicates time that a student is actively working on in the same task for the purposes of learning. What this means is that jobs or career work is nearly 100% time on task and therefore can be considered active learning. So working is literally a form of learning so the Decotah me between work and school is a false economy. Schooling can be viewed as work with a zero or negative wage and possibly with different products at work.
+In the 13th section, right after the conclusion, Jeff goes over a short list of recommended/innovative universities. This information should be included in my section on advising students for whom a traditional school is a good fit
 
-In chapter 11 Jeff discusses a company called on sure which takes under employed workers in the United States and employees them mainly apparently an IT jobs. He says it similar to an apprenticeship but they are working with universities to get college credit for their training at on sure. Germany has common apprenticeship programs and this results historically in faster job placement for Germans compared to US college grads
-
-In the second half of chapter 11 Jeff criticizes some modes of economic analysis of the value of an education. I think he does so unsuccessfully and most of his points are either empirically questionable and importance or else Marshal addressed by Kaplan. He also defines alternative education a skip in college entirely and says he is an opponent of it.
-
-
-In chapter 13 Jeff goes over a short list of recommended/innovative universities. This information should be included in my section on advising students for whom a traditional school is a good fit
-
-
-In chapter 14 Jeff discusses lake community cop college wake forest which gives both high school credit and two years of college credit and four or five years of schooling. I think they can also produce like health certifications or something. He says this is part of the early college movement so look into that. This route can shorten college time by a couple years so that would obviously improve return on investment.
-
-This also indicates that your college activities and college optimizing plans go back before senior year of high school and even into middle school perhaps earlier than that I’m not sure but if we were to create a tool which advised parents or students to optimally plan one of the questions we need to be like what age are you and it would need to give different advice if the person was still early in high school or before high school because choosing the high school can provide credit towards college
-
-In fact there are so many diverse programs at the college out level and also in high school and before that that’s one thing which can be done in addition to the 30 concrete plans is a variable methodology for value assessment which is more like a checklist of things for the student with a parent to investigate and then it leaves the investigation work to that parent or student rather than the analyst. But it should eventually result in an apples to apples comparison of return on investment
-
-In chapter 14 Jeff notes Westminster College requires the creation of a digital portfolio for all students beginning with the freshman class of 2011. This highlights that even send me a traditional universities see value in a portfolio of demonstrated learning. This adds to the discussion on whether a portfolio is simultaneously a work product and they work Cygnal which I think it is
-
-In chapter 15 Jeff mentions the American Council on education credit service which is a service that is able to evaluate I guess like tasks done outside the classroom for the purposes of college credit
+In section 15, Jeff mentions the American Council on education credit service which is a service that is able to evaluate I guess like tasks done outside the classroom for the purposes of college credit
 
 I wonder if colleges would be open to evaluating church attendance as academic credit for religious studies or like evidence-based church participation such as proven membership with a church for number of years or something. Also get hub portfolios and work experience including things like just like working at the store which may not necessarily be connected to the degree.
 

@@ -19,6 +19,8 @@ This semester I focused on identifying and reading the literature. I identified 
 
 * These books were read this semester.
 
+I also began collecting information on specific educational alternatives to the most frequently enrolled undergraduate degrees. This information will help calculate comparative private return to non-traditional education.
+
 ## Attitudinal Survey Update
 
 In addition to reading the literature, I collected additional samples for an attitudinal survey on alternative credentials. Because this resulted in a panel where t = 2, most findings are still insignificant. More samples will be collected over time. Basic analysis in STATA is stored at the below URL:
