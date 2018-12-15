@@ -1,5 +1,3 @@
-https://sr.ithaka.org/publications/mapping-the-wild-west-of-pre-hire-assessment/
-
 for applied learning plan / personal economic management plan, distinguish my approach from careerbuilder.com
 * scale of 1 to 10: willingness to change: Does user want jobs that are already a good fit, or are they willing to take a job that may be more stressful to work in or take longer to get in exchange for more pay, employment rate, etc.
 * measure grit (structurally interacts with willingness to change)
@@ -45,28 +43,25 @@ Maybe I should focus less on alternative education and more on affective educati
 
 Create a list of 5 to 10 notable data sources about higher education and also alternative education of possible although I don’t think those exist although maybe some niche things like charter schools and private schools homeschooling on schooling and so forth maybe those neck things have associated surveys. One for Hyridge Acacian is the national survey of like college student engagement. Another I think it’s called like the ACL American commute or ACS American community survey something like that. One of the later chapters in college I’m down like 56 or seven discusses standardized measurements of Hyridge Acacian outcomes I think it Chapter 7 or eight actually maybe chapter 9 or 10
 
-In the 13th section, right after the conclusion, Jeff goes over a short list of recommended/innovative universities. This information should be included in my section on advising students for whom a traditional school is a good fit
-
-In section 15, Jeff mentions the American Council on education credit service which is a service that is able to evaluate I guess like tasks done outside the classroom for the purposes of college credit
-
-I wonder if colleges would be open to evaluating church attendance as academic credit for religious studies or like evidence-based church participation such as proven membership with a church for number of years or something. Also get hub portfolios and work experience including things like just like working at the store which may not necessarily be connected to the degree.
-
-I think kids these days in middle school and high school should absolutely be establishing a digital portfolio and then they can choose what to do with that portfolio because it could be used for academic credit as well as present it to employers so that even if the student is not able to go directly to work they haven’t wasted their time and there is some chance they could go directly to work it’s a win-win in either case
-
-I wonder how common is it for high schools to allow an elective class or something like that to students who create such a digital portfolio said that they might even be able to get three benefits for the price of one
+In the 13th section of college unbound, right after the conclusion, Jeff goes over a short list of recommended/innovative universities. This information should be included in my section on advising students for whom a traditional school is a good fit
 
 ----------------------------------------------------------------
 Beginning notes for Creative schools Mike and Robinson. In chapter 1 he defines education which is like obvious and useful although the previous two books they didn’t do that also his definition of education is more broad in scope and ends up actually contradicting the definition used by Kaplan.
 
-In chapter 2 highlights a connection between personalized learning and passion. As Kevin Carey night notes and also Angela Duckworth great is composed of passion and perseverance both of them. There also seems to be an element of reciprocity in the smoky road story.
+In chapter 2 highlights a connection between personalized learning and passion. As Kevin Carey night notes and also Angela Duckworth, grit is composed of passion and perseverance. There also seems to be an element of reciprocity in the smoky road story.
 
-In chapter 2 can discuss his PISA, another standardized test in data source.
+Creative schools chapter 2 discusses PISA, a standardized test in data source. TODO: gather a list of such sources.
+
+In chapter 3 Chan (Ken?) has a section specifically on so called alternative education. He knows that these are programs designed for students who are having trouble in school or have altogether dropped out. This is worn out and some of the academic literature on the topic of alternative education. This is a an example of what I’m not talking about when I talk about alternative education. So perhaps I need a different term notably the alternative education can refers to often coincides with low performing students. It sometimes coincides with Entech or innovative approaches to education, but the goal is to enable low performance students. In contrast when I discuss alternative education, I’m very interested in how to unlock the potential of high-performing students. I’m not simply interested in facilitating learning for low performing students, although that is interesting, but I am interested equally in allowing high-performing students to reach they were highs that they would never have seen under the traditional model.
+
+Perhaps, Non-traditional education is a better word for my use case compared to alternative education.
+
+I could perhaps even utilize an Autre term a more odd term to really distinguish my definition and perhaps bring some positive connotation. For example progressive education or something else like that. Or innovative education or new education. Something that has a semantic appeal to facilitate marketing, Tiffany still take normalization, and to undercut conscious or unconscious bias which would inhibit adoption or a pose my views. It very well may deserve a section of a paper on a note about semantics.
 
 https://www.charteroak.edu/
 "You can earn credit through alternate sources like testing, exams, military training, lifelong learning through our portfolio program, credit evaluated by ACE, National CCRS, or the Connecticut Credit Assessment Program (CCAP), and credential evaluation." look into state-specific programs
 https://www.excelsior.edu/start-with-more-credit
 PMP, Nursing, IT, FEMA, and more
-
 
 unrelated to book for a moment; in my own research I showed that people who are more familiar with alt creds tend to favor them and have a higher chance of saying they work for entry level position and are good for society overall. In my limited temporal sample I've yet to see awareness is growing, but the books seem to indicate awareness is growing. New thought: use Google Trends!
 
@@ -76,28 +71,7 @@ Prepare 5 questions for caplan as a separate artifact
 
 https://www.google.com/search?q=what+are+middle+skills&rlz=1C1GCEB_enUS822US822&oq=what+are+middle+skills&aqs=chrome..69i57j0l5.3632j1j7&sourceid=chrome&ie=UTF-8
 
-Around the middle of chapter 5, Ken indicates that he sees ikioo as a Nero week measure of intelligence intelligence. He indicates that he is a fan of the theory of multiple intelligence.
-
-Later in chapter 5 he speaks highly of self-directed learning and play for children in elementary school and ostensibly otherwise. He name dropped Peter Gray affably.
-
-About a quarter through chapter 6, can discuss his progressive versus traditional teaching. He claims progressive teaching or progressive learning is constituted of self discovery and group activities it’s sort of seems like active learning to me. Where traditional learning would be a lecture.
-
-Can states the distinction between These two is more theoretical than real, and in practice mode most teachers do and should use both. For 10, having a good teacher is a critical piece of learning experience. Just after describing the difference between progressive and traditional education, Ken gives four qualities of an expert teacher. It seems that Kenst conception of the teacher is other than the individual which makes it strange to discuss self learning and I can Stijl frame work
-
 Towards the middle of Chapter 6 10 references Braxton to talk about a concept called building learning power BLP. This seems to be a learning how to learn paradigm were there some sort of accumulation of something called learning power was just sort of like a stock or a capital of some sort.
-
-Around the middle of Chapter 6 can discuss his mastery learning. I don’t think Kaplan adjusts fade out calculations for whether or not the learning was mastery best or not.
-
-34-35 minutes into chapter 6, Ken Robinson discusses how flipped classrooms cause better outcomes. So pedagogies are often causally responsible, not merely asssociated, with outcomes. He actually does cite a paper on this topic. At 35:01, saying, there was a paper in the late 90s where peer instruction lead to results standard deviations higher than those in traditional courses. He says other studies have shown similarly dramatic results. In 2012 
-
-# related to idk what
-In chapter 3 Chan has a section specifically on so called alternative education. He knows that these are programs designed for students who are having trouble in school or have altogether dropped out. This is worn out and some of the academic literature on the topic of alternative education. This is a an example of what I’m not talking about when I talk about alternative education. So perhaps I need a different term notably the alternative education can refers to often coincides with low performing students. It sometimes coincides with Entech or innovative approaches to education, but the goal is to enable low performance students. In contrast when I discuss alternative education, I’m very interested in how to unlock the potential of high-performing students. I’m not simply interested in facilitating learning for low performing students, although that is interesting, but I am interested equally in allowing high-performing students to reach they were highs that they would never have seen under the traditional model.
-
-Perhaps, Non-traditional education is a better word for my use case compared to alternative education.
-
-I could perhaps even utilize an Autre term a more odd term to really distinguish my definition and perhaps bring some positive connotation. For example progressive education or something else like that. Or innovative education or new education. Something that has a semantic appeal to facilitate marketing, Tiffany still take normalization, and to undercut conscious or unconscious bias which would inhibit adoption or a pose my views. It very well may deserve a section of a paper on a note about semantics.
-
-# more evernote dump, finishing UnBound and returning to Craig
 
 Ch6 39 min mark he discusses creativity, imagination, and innovation in a sensible way. He basically calls it applies innovation and goes through some myths such as it’s only ties to art or only certain people have it and it can’t be taught or developed
 
@@ -107,24 +81,15 @@ As I Listen to the introduction of chapter 7, I realize that the audiobook consi
 
 Early chapter 7 which is to say early chapter 6 does a good job of going over and I’ll turn it of pedagogy called project-based learning. This could be advertise a bowl to an employer because project-based learning as much in common with projectbased production that is many employers, particularly an IT and corporate setting, have projectbased production with project managers and so on. Of course this is not all employers, so part of a good education involves working backwards from a concrete set of employers not even just jobs but actually The employer.
 
-I’m just going to go ahead and continue using the Audible chapters and I’ll correct for them at analysis time. In chapter 7 about 12 to 13 minutes and, Kim states that a recent move and education is to focus on what students should have in terms of capabilities as a result of their education. He says this is a good idea. This is exactly parallel what I think is a good idea when I say that we should work backwards not only from a profession but even from a specific employer. Similarly, specific classes should work backwards from Desired capabilities. When we say should we are proposing that this approach will lead to a higher quality for a lower price, but this does need to be proven and it does assumed that hire Kody for a lower price is better. But that’s not really controversial. Ken goes further than to state that capabilities as the proper ends and he actually states eight competencies which she thinks all students must end up with. I think this is substantially more controversial. He does not demonstrate hire chief meant being associated with these except through possible reasoning, and he leaves out quite a few important competencies in the job market, he also disregards that mini capabilities should be self selected by the students in other words Capability production should be individualized
+I’m just going to go ahead and continue using the Audible chapters and I’ll correct for them at analysis time. In chapter 7 about 12 to 13 minutes and, Ken states that a recent move in education is to focus on what students should have in terms of capabilities as a result of their education. He says this is a good idea. This is exactly parallel what I think is a good idea when I say that we should work backwards not only from a profession but even from a specific employer. Similarly, specific classes should work backwards from Desired capabilities. When we say should we are proposing that this approach will lead to a higher quality for a lower price, but this does need to be proven and it does assumed that hire Kody for a lower price is better. But that’s not really controversial. Ken goes further than to state that capabilities as the proper ends and he actually states eight competencies which she thinks all students must end up with. I think this is substantially more controversial. He does not demonstrate hire chief meant being associated with these except through possible reasoning, and he leaves out quite a few important competencies in the job market, he also disregards that mini capabilities should be self selected by the students in other words Capability production should be individualized
 
 On further reflection cans eight capabilities are even further controversial because some of them directly a pose what Caplan’s Argues that employers are looking for, such as being normalAnd conforming, which seems to be somewhat opposed to being creative and innovative. By the way I’m not arguing with Ken, I think the capabilities he names are very often cool, but he doesn’t very well prove the necessity of these and neither are they obviously what employers want, even if they are good for the purposes of human capital and real learning
 
 Add about the 16 minute mark, can it gives a list of what is meant by critical thinking and that it is in excess of formal reasoning. This is interesting and relates to my conversation on Weather critical thinking is affectively detailed thinking. I think detailed thinking is different from what Ken has in mind, but Kenst seems to use many terms in his own way rather than in a way tradition of the literature
 
-In chapter 710 of poses engagement to boredom. This seems kind of obvious but I’m not sure that connection has been made in the literature. So in this view passion become synonymous with or at least operationalized by engagement, so be sure to reference that link with papers.
-
-Can also mix is public and private interest in his description of the egg capabilities all students should have for example one of them is being a good citizen which is inextricably intertwined to a functioning democracy according to Ken. However one this seems to be a social benefit not a private benefit and to this restricts his concepts of education only to the Society switch wish to maintain a democratic system.
-
-He also engages additional argument without the use of evidence are in the use of superlative saying things like dance is the best way to understand another cultures are experience.
-
-
-Cannot Robinson considers to be a science while other academics consider it to be a liberal art.
+Ken also mixes public and private interest in his description of the egg capabilities all students should have for example one of them is being a good citizen which is inextricably intertwined to a functioning democracy according to Ken. However one this seems to be a social benefit not a private benefit and to this restricts his concepts of education only to the Society switch wish to maintain a democratic system.
 
 At the 33 minute mark ken discusses design thinking. This is a common paradigm in agile software development and also in professional design more broadly. Ken does a good job of emphasizing the importance of teaching entire modes of thinking and application over or equal to specific classes, facts, and skills. I wonder if learning by reasoning is more robust against fadeout and framework based learning is like a macrocosm of reasoning to a solution. Eg economic analysis or design thinking or agile planning, where knowledge of a new concept can fit inside of an existing framework, and sometimes the framework can even help or lead to the discovery of the new information. Anecdotally I’ve often found reasoning to an answer far easier than memorization
-
-Kenst vans a large portion of the second half of chapter 7 because we are removing the distinction between classroom-based learning and Learn outside of the classroom. He emphasizes a pedagogical approach called big picture learning, which in turn emphasizes internship. He also sticks up for vocational learning
 
 Chapter 7/8 is about testing. One teacher estimates standardized test prep requires about one month of work per year. The issues raised are the common issues and no innovative solutions are discussed. As economists often remark, obvious to our paradigm, it is not obvious that these tests are a net bad or a poor return on investment despite having some real costs. Ken states that there are two main problems, neither of which I consider claimed in a convincing way: 1, instead of becoming a means to better education, standardization has become an ends in itself, and 2) tests focus on limited forms of response, such as multiple choice, they don’t focus on what’s important, they eschew complexity or nuance, and they don’t account for situational factors on the part of the test taker
 
@@ -160,7 +125,7 @@ Non rigorous statements like “it’s essential to have high standards and a co
 
 Around 39 minute mark, Ken states that no category of alternative model of school such as private or charter has been shown to be better than a “well supported” public school. Of course this is wrong. Charters and private schools are more cost efficient, which means for any level of funding the better result would come from the non public school. Funding is what he means by support. In any case the argument for one category is disengenuous. We know personalizes learning is best and no one category is best for all groups. The obvious solution is public choice: allow them all. If or when the public schools flounder, exactly as they have done historically when choice is introduced, they will reveal themselves as comparatively weak, low quality, expensive, fragile, and non adaptable institutions.
 
-The afterword name drops interesting thinkers in education including Montessori and Steiner who lead to school approaches. He says these traditions tend to emphasize personali3: learning 
+--------------
 
 Ch 3 Craig’s book
  85% jobs posted online and 80% of employers use an application tracking system. These systems include functionality which ranks and filters candidates by keyword matching. These matching algorithms are known to have systematic accuracy problems. Check Burning glass research. Technical keywords have exploaded within jds as they are effective descriminators. Their use has highlighted a keyword-level skills gap. It’s not general but it’s to do with specific skills, within and without traditional it/development. The skills gap is particularly obvious at the entry level, meaning traditional education providers are not equipping students with skills

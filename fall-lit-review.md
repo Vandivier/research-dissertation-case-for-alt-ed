@@ -90,6 +90,8 @@ WTCC is one example of many which show that optimal alternative education planni
 
 Another interesting program discussed in section 14 involves Westminster College. This program requires the creation of a digital portfolio for all students. One approach to job placement recommended by proponents of alternative education is to build a digital portfolio to demonstrate skill. This technique may also be utilized by individuals who are self-taught or completely skip formal education. This adds evidence to the claim that cutting-edge universities are integrating alternative techniques. It also highlights an interesting question about whether portfolios function as credentials, learning tools, production outputs, or perhaps all of the above. Students may be able to save time and money by asking a university to evaluate a portfolio created while in high school or earlier for college credit.
 
+A recent report indicates that ePortfolios are becoming increasingly supported by institutions of higher education, but their full value remains yet unobserved by employers because there is currently an integration bottleneck with the application tracking systems used by employers [13].
+
 ## 6. On Blended
 
 TODO:
@@ -104,9 +106,19 @@ TODO:
 
 ## 8. On Creative Schools
 
-TODO:
-- Summarize notes
-- Compare/contrast with prior sections
+While acknowledging that education is an essentially contentested concept, Ken concisely defines learning in the introduction as the process of acquiring knowledge and skills. Ken defines education, particularly formal education, as an organized program of learning. Clearly, organization involves planning, and this precludes learning by surprise from education. I think this is a good thing, because learning by surprise seems like the sort of thing which cannot be invested in or optimized.
+
+Around the middle of chapter 4, Ken indicates that he sees IQ as a narrow measure of intelligence intelligence. He indicates that he is a fan of the theory of multiple intelligence. Later in chapter 4 he speaks highly of self-directed learning and play for children in elementary school and ostensibly otherwise. He name dropped Peter Gray affably.
+
+Clearly Ken and Caplan differ in their position on IQ. Their definitions on education also differ. By including self-directed learning within the concept of education, Ken adopts a broad concept of education. When Caplan argues against education, on the other hand, he clearly does not oppose vocational training in many cases, and he doesn't even oppose education for all student profiles. Caplan seems to be arguing against the four year degree, with some caveats, and also against certain public policies, not analyzing education broadly. Ken's concept of education includes alternative modes of education, and by grouping these two together it may become more plausible to argue that they can substitute for one another substantially, though imperfectly.
+
+Around the middle of chapter 5, Ken discusses mastery learning. Sal Khan, founder of Khan Academy, has called mastery learning the common sense approach to education, and a way to enhance the K-12 status quo in the US[9]. Khan refers to a long literature, dating at least back to Benjamin Bloom in 1984[10] demonstrating significantly better student outcomes under mastery learning. This brings up an interesting question about whether topics learned to mastery obtain slower fadeout. Khan indicates mastery learning as a form of personalized learning, because the pace of learning is individualized.
+
+In chapter 5, Ken argues that the flipped classroom technique, non-substantively different from peer instruction, causes superior outcomes compared to lecture. Ken refers to Mezur[15] for empirical backing. For Ken and Mezur, pedagogies are often causally responsible, not merely asssociated, with outcomes. In chapter 6, Ken opposes engagement to boredom. In this view passion becomes synonymous with or operationalized by engagement. Ken associates personalized learning with higher passion, engagement, and grit. 
+
+In chapter 6, Ken voices support for vocational education directly, and also for alternative pedagogical approaches which are job-like. Project based learning involves learning by creating a deliverable with a team. This is very similar to many positions of employment. Big picture learning is a pedagogical approach which emphasizes the importance of an internship. Ken also discusses design thinking in this chapter. The details of design thinking are largely extraneous, but it is a good example of a systematic analytical approach, and one which is often used in business. I wonder whether learning by reasoning is more robust against fadeout compared to fadeout of memorized knowledge which is not embedded within a larger system of reasoning. If learning by reasoning is more robust, then learning in the context of a systematic analytical approach like design thinking or economic analysis might resist fadeout.
+
+In chapter 7, Ken reminds us that GPA is a better predictor of college completion than SAT scores, and he discusses the learning record, which is an alternative assessment scheme similar to a portfolio plus principled portfolio grading. Ken speaks highly of homeschooling towards the end of chapter 9. The afterword, occuring after chapter 10, name drops interesting thinkers in education including, Montessori and Steiner, who've lead to schools fashioned after their ideas. He says these traditions tend to emphasize personalized learning.
 
 ## 9. On The Case Against Education
 
@@ -148,10 +160,9 @@ TODO: Format entries properly.
 [6] 2014, Blended, Heather Staker and Michael B. Horn
 [7] March 2015, College Disrupted: The Great Unbundling of Higher Education, Ryan Craig
 [8] April 2015, Creative Schools: The Grassroots Revolution That’s Transforming Education, Ken Robinson
-[9] Jan 2018, The Case Against Education, Bryan Caplan
-[10] Sept 2018, A New U: Faster + Cheaper Alternatives to College, Ryan Craig
-[11]
-[12]
+[9] https://www.cbsnews.com/news/sal-khan-academy-mastery-learning/
+[10] http://web.mit.edu/5.95/readings/bloom-two-sigma.pdf
+[11] Jan 2018, The Case Against Education, Bryan Caplan
+[12] Sept 2018, A New U: Faster + Cheaper Alternatives to College, Ryan Craig
 [13]
-[14]
-[15]
+[14]http://web.mit.edu/jbelcher/www/TEALref/Crouch_Mazur.pdf
