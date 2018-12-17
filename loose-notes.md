@@ -146,45 +146,7 @@ Around 39 minute mark, Ken states that no category of alternative model of schoo
 --------------
 Craig's book
 
-Craig states that using software can be considered a "middle skill," while a higher level of proficiency is represented in being able to create or manipulate software. That is, programming skill. He refers to Robert Cohen at the economic strategy institute who states modern entry jobs require a noticeably high level of proficiency with software development. Burning Glass reported that 49% of jobs with a starting salary over 70k require programming skills. Many education reform advocates recommend allowing programming to substitute for a foreign language requirement, but why stop there? If people are consuming school in order to find gainful employment these days, why not prepare them for a career in programming by default? Setting defaults and expectations makes a huge difference. Many people complain about a career in programming because they think it’s too difficult or boring; myths which would be largely remedied simply by having these people actually try programming. Craig convincingly argues with multiple sources that IT roles are the highest paid, most in demand jobs in recent years including pure programming roles, specialty programming roles like artificial intelligence, and near-programming roles like data science and UX.
-
-At loc 1097, Craig gives some reasons that institutions have been slow to adapt, or unable to satisfactorally provide these technical skills. Among other reasons he names faculty control and the nature of the credit hour itself. Key insight: upper level courses are largely dictated by faculty research interests, which are largely independent of labor market needs. Potential solution? Applied research which extends actual labor market concerns; this sort of research is frequently found within private firm R&d departments. Craig notes even highly relevant degrees like a BS in comp science is often far less applied than employers want.
-
-Craig notes the uptrend in double majoring and attributes this behavior to a hedge on the part of students to hedge against unemployment due to misaligned curriculum 
-
-Craig Also notes that it appears that university is not preparing graduates with soft or non-cognitive skills either. So basically, graduates are not ready with any of the skills and players one. It may be the case that having prior work experience is more helpful for developing soft skills than a university degree. For example teamwork, communication, and punctuality are all considered soft skills. These skills matter even in basic work like grocery store Cashier and so on which don’t even require a degree.
-
-Loc 1157 has data on credential inflation; using masters in lieu of bachelors and the Burning Glass credential gap. Many 0-to-1 professions requiring degree. Craig echos caplan in asking whether more demanding jobs are a plausible cause and he echoes caplan in finding that jobs are easier, not harder.
-
-Todo: maybe make a spreadsheet of key points and show where each book lands on this. Matrix or feature style instead of book by book.
-
-Loc 1175 Craig refers to a working paper on experience inflation. For Craig, Bidwell’s empty quadrant is attributable to the low skill human product of the university education. Craig also notes the trend in jettisoning degree requirements altogether, a significant development largely discounted or ignored by the other scholars in the area, putting Craig to the right of even Christiansen on the degree-no degree spectrum 
-
-Loc 1199 Discusses Ernst and Young battery of assessments; perhaps another alternative path? Is the traditional result really a credential or is it a job? Perhaps the college degree is neotraditional, not traditional. And the job is paleotraditional to isolate it as a subset of the whole of traditional which includes both neo and paleo. E&y’s move resulted in a diversity increase - an espoused goal among many would-be policy changers. Penguin Random House and Nestle also. Nestle found 20% of new hires would not have even gotten an interview. Also IBM. I’m sure I could find more such employers by looking around. This would just be a roundabout approach to measuring the total jobs which don’t require a degree. As I’ve said previously, at the individual level it’s easy to handle: work with a recruiter or get an interaction then get hired off experience.
-
-loose notes end with Loc 1199 Discusses Ernst and Young battery of assessments
- 
-Location 1226 Craig know it’s a hard research Associates survey in which 80% of employers with the sample size of 400 indicated that it would be Very or fairly useful to see an electronic portfolio of work
-
-loc 1229 2013 survey, 71% of employers said they would consider hiring a candidate without a degree over another candidate with a degree
-
-loc 1237, Chapter 3 key points: "Deteriorating employment outcomes...are primarily a result of changes in the hiring process". Note: I say employers are the key to change, it's actually reassuring that they are already driving changes and more open to change perhaps than university (although they arguably haven't changed enough on average but a microeconomic actor needn't really worry about the average too much and some universities are making cool changes)
-
-GE fridge story in Ch 4, another example of a possibly funny possibly relatable, low-density on facts, not academic sounding. concept of the last mile introduced around loc 1274
-
-Loc 1298, “most student-pay bootcamps show placement rates north of 80%” also interesting thing about risk; many last-mile options offer employment or income guarantees, so the risk-adjusted income is even higher for most people and particularly high for risk sensitive people. Interesting because some perceive alternative education as a risky endeavor, partly bc it is abnormal therefore not tried and true
-
-Loc 1309 alt Ed is more technical than traditional Ed; indicates different tools for different purposes rather than substitutes. But technical is the right tool for the purpose of specific employment. Liberal arts or nontechnical might be preferable for generAl but not particular employment...in theory anyway, in practice it may not be comparatively better for either
-
-4 of Craig’s 6 last mile traits I agree with
-
-Loc 1383, 57% of colleges and universities are blaming the likes of software coding bootcamps for declines in enrollment
-
-Loc 1432, ch 4, coding camps 4 weeks to 2 years, 14 weeks average. Time cost should be considered in education cost. Loc 1439: 95 coding schools as of this year, started in 2012. Now graduate about one third as university comp sci. 80 percent plus placement rate is within 6 months. 99.8% employers that have hired plan to hire more: 72 percent say equally qualified compared to school and 12 percent say better
-
 Loc 1568 bootcamps outside of coding. Gen assembly has UX and product management, PrepMD for medical, (Jessie, Katie, others: would  you be more likely to do prepmd over coding bootcamp or 1 -2 year online bio or nursing degree?)
-
-Lots of anecdotes eg ch 4 contribute both to the no academic relatability and also to low info density.
 
 Loc 1626 what is Besomebody Paths? Dental, sales, culinary, auto? AlwaysHired sales. Can top college degrees all match to a bootcamp? Medical Sales College.
 
