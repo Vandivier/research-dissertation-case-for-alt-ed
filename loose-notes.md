@@ -1,3 +1,21 @@
+- Are sheepskin effects changing over time? did the recession impact them? if caplan is right (and I think he is), but if I am also right and universities are evolving to adopt from alternatives, one would suspect that the alternatives would be less socially unacceptable; so rudimentary analysis would show smaller sheepskin effects, and complex analysis would show that specifically among the population that receives alternative education, sheepskin effects are small and/or shrinking compared to 10 or 20 years ago.
+
+https://sr.ithaka.org/blog/alternative-postsecondary-pathways/
+
+- Survey of Firms:
+1 - How frequently does your firm perform employee evaluations? (none, anually, biannually, between biannually and monthly, monthly, continuously, other)
+2 - (Optional) Leave a URL to your company website. (Researcher can use this info to look up firm revenue, size, etc).
+3 - During your employee evaluations, do employees receive numeric scores for performance?
+4 - Other than the numeric scores your employees receive during employee evaluation, does your firm collect other measurements of employee performance?
+5 - How does your firm measure employee performance?
+    * Our firm depends on licensure or evaluation, and that licensure or evaluation involves numerical scoring, not simply participation.
+    * Our firm internally and numerically measures general performance.
+    * Our firm internally and numerically measures performance with specific tasks or skills.
+    * Our firm does not numerically measure performance.
+
+Are you equipped to measure employee skill?
+Do you trust ANY skill measurement service, or do you trust only internal skill
+
 for applied learning plan / personal economic management plan, distinguish my approach from careerbuilder.com
 * scale of 1 to 10: willingness to change: Does user want jobs that are already a good fit, or are they willing to take a job that may be more stressful to work in or take longer to get in exchange for more pay, employment rate, etc.
 * measure grit (structurally interacts with willingness to change)
@@ -126,11 +144,9 @@ Non rigorous statements like “it’s essential to have high standards and a co
 Around 39 minute mark, Ken states that no category of alternative model of school such as private or charter has been shown to be better than a “well supported” public school. Of course this is wrong. Charters and private schools are more cost efficient, which means for any level of funding the better result would come from the non public school. Funding is what he means by support. In any case the argument for one category is disengenuous. We know personalizes learning is best and no one category is best for all groups. The obvious solution is public choice: allow them all. If or when the public schools flounder, exactly as they have done historically when choice is introduced, they will reveal themselves as comparatively weak, low quality, expensive, fragile, and non adaptable institutions.
 
 --------------
+Craig's book
 
-Ch 3 Craig’s book
- 85% jobs posted online and 80% of employers use an application tracking system. These systems include functionality which ranks and filters candidates by keyword matching. These matching algorithms are known to have systematic accuracy problems. Check Burning glass research. Technical keywords have exploaded within jds as they are effective descriminators. Their use has highlighted a keyword-level skills gap. It’s not general but it’s to do with specific skills, within and without traditional it/development. The skills gap is particularly obvious at the entry level, meaning traditional education providers are not equipping students with skills
-
-Craig states that using software can be considered a “middle skill,” while a higher level of proficiency is represented in being able to create or manipulate software. That is, programming skill. He refers to Robert Cohen at the economic strategy institute who states modern entry jobs require a noticeably high level of proficiency with software development. Burning Glass reported that 49% of jobs with a starting salary over 70k require programming skills. Many education reform advocates recommend allowing programming to substitute for a foreign language requirement, but why stop there? If people are consuming school in order to find gainful employment these days, why not prepare them for a career in programming by default? Setting defaults and expectations makes a huge difference. Many people complain about a career in programming because they think it’s too difficult or boring; myths which would be largely remedied simply by having these people actually try programming. Craig convincingly argues with multiple sources that IT roles are the highest paid, most in demand jobs in recent years including pure programming roles, specialty programming roles like artificial intelligence, and near-programming roles like data science and UX.
+Craig states that using software can be considered a "middle skill," while a higher level of proficiency is represented in being able to create or manipulate software. That is, programming skill. He refers to Robert Cohen at the economic strategy institute who states modern entry jobs require a noticeably high level of proficiency with software development. Burning Glass reported that 49% of jobs with a starting salary over 70k require programming skills. Many education reform advocates recommend allowing programming to substitute for a foreign language requirement, but why stop there? If people are consuming school in order to find gainful employment these days, why not prepare them for a career in programming by default? Setting defaults and expectations makes a huge difference. Many people complain about a career in programming because they think it’s too difficult or boring; myths which would be largely remedied simply by having these people actually try programming. Craig convincingly argues with multiple sources that IT roles are the highest paid, most in demand jobs in recent years including pure programming roles, specialty programming roles like artificial intelligence, and near-programming roles like data science and UX.
 
 At loc 1097, Craig gives some reasons that institutions have been slow to adapt, or unable to satisfactorally provide these technical skills. Among other reasons he names faculty control and the nature of the credit hour itself. Key insight: upper level courses are largely dictated by faculty research interests, which are largely independent of labor market needs. Potential solution? Applied research which extends actual labor market concerns; this sort of research is frequently found within private firm R&d departments. Craig notes even highly relevant degrees like a BS in comp science is often far less applied than employers want.
 

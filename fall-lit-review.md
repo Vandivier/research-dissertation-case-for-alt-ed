@@ -13,7 +13,7 @@ This research reviews and synthesizes a number of sources as part of an ongoing 
 7. Jan 2018, The Case Against Education, Bryan Caplan
 8. Sept 2018, A New U: Faster + Cheaper Alternatives to College, Ryan Craig
 
-Other papers are referred to incidentally. This paper adds to existing knowledge in that several of these books have never been reviewed within a journal of economics, and no paper exists which specifically compares and contrasts these books.
+Other works are referred to incidentally. This paper adds to existing knowledge in that several of these books have never been reviewed within a journal of economics, and no paper exists which specifically compares and contrasts these books.
 
 A further bit of background information which will prove useful is on the use of certain terms. This information is equally background information and also a result of the synthesis of this literature. The reconciled meaning of these terms assists in creating a standard way to comparatively analyze traditional and alternative modes of education. Due to length, this discussion of terms is provided a dedicated section 
 
@@ -128,11 +128,41 @@ TODO:
 
 ## 10. On A New U
 
-TODO:
-- Summarize notes
-- Compare/contrast with prior sections
+Craig's book takes a non-academic style with frequent anecdote and about one joke per chapter. I find this style distracting and verbose, but perhaps the fact that this book is written in a style uncommon among top books on the subject will serve to reach a different or broader audience. There isn't much useful factual information until around the third chapter, but just when an academic may be inclined to put the book away, Criag unleashes a torrent of useful factual information, and he continues this pattern of discontinuous segments of high-density information throughout the book.
 
-## Trends over time
+In chapter 3, Craig notes that 85% of jobs posted online, and 80% of employers, use an application tracking system (ATS). These software systems include functionality which ranks and filters candidates, primarily using keyword matching. Craig refers to Burning Glass research and to others to argue that These matching algorithms are known to have systematic accuracy problems. One key point is that ranking candidates is much easier to do using niche or technical skills and terms, rather than broad skills like communication or critical thinking. As a result, technical keywords have exploaded within job descriptions used by employers. Their use has highlighted, and perhaps exacerbated, a keyword-level skills gap. The skills gap is particularly severe at the entry level, indicating that traditional education providers are not equipping students with the specific skills employers are searching for.
+
+Craig points out that technical terms often consist of software names or standard business processes. As a result, alternative systems of job preparedness can flourish around software solutions like Salesforce or business processes like Agile or Design Thinking. Because this is a software-driven revolution, software developers themselves are particularly open to non-traditional paths to employment. This ecosytem effect is supplemented by the fact that software capability is relatively easy to test, measure, and verify, through the use of a portfolio for example, in contrast to many soft skills.
+
+## General Findings
+
+General findings are worth breaking into two groups. The first group is atemporal findings. The second group includes trends over time.
+
+### Atemporal Findings
+
+Intellectually, there is a clean distinction between a disruption camp and a non-disruption camp. In the real world, the leaders in either camp exist much more in the middle of the two than toward the extemes. The leading thinkers and practitioners in favor of the university system acknowledge that universities should continue to innovate, and adopting non-traditional features is practically, and in some sense tautologically, the means to that end. The leading thinkers and practitioners opposed to the legacy system acknowledge that the legacy system is firmly entrenched and will continue to be so for many years, and so the optimal course of action for individuals and for society is for new providers to integrate, cooperate, and coordinate with those legacy systems, instead of attempting to steal consumers in a winner-take-all fashion.
+
+The result is that leading thinkers and practitioners on both sides largely support both alternative education and traditional education. Moreover, leaders on both sides generally agree on which pedagogies, technologies, and so on, provide optimal results in most cases. A cursory glance at the non-book literature demonstrates the difficulty involved in locating a formal paper with citations in excess of the single digits which promotes the traditional lecture mode of class instruction. I could only find one from by Kalogeras in 1976 [15]. While the magazines occassionally headline an article which pretends to defend lecture, seldom make and evidence-based case and often essentially concede the point. Consider *In Defense of the Lecture*, a 2014 article from the Chronicle of Higher Education. This article points out specific virtues of lecture, even while conceding "...lecturing as a means of transferring basic factual information is a poor way to teach. I agree..."
+
+The differences in opinion seem rather limitted, and they almost universally apply to macroeconomic issues. The closest thing to disagreement on microeconmic choices seems to be twofold:
+
+1 - Some scholars are aware of interesting programs or technologies which other scholars are not aware of.
+
+2 - Scholars heterogenously trust the payoff claims of particular programs of alternative learning.
+
+It is worth mentioning that both of these main microeconomic concerns are being addressed over time by projects like Credential Engine, which seeks to comprehensively catalog non-accredited credentials and standardize their outcome measurement and reporting[16]. An alternative strategy is provided by firms like Degreed, which markets a generalized service to measure any skill [17]. This approach simplifies the measurement trust problem from a need to trust heterogenous providers to the need to trust a single provider of learning measurement, Degreed.
+
+Many less comprehensive skill measurement providers exist. Pluralsight, for example, is a relatively well known and reputed firm in the IT market. Pluralsight provides a standard measurement service for a specific range of skills[18]. This measurement process obtains independent from where the learning or skill development occured. In this sense, employers can choose to trust a skill measurement provider instead of directly trusting a learning provider. This simplifies the analysis problem for employers, and it also creates an additional incentive for learning providers to provide good content. If many students pass through an alternative learning process, then perform poorly during standard evaluation, the poor performance becomes attributable in part or whole to that alternative learning process.
+
+The main sources of debate seem to be on macroeconomic concerns. These concerns are completely out of my interest, but they are worth noting:
+
+1 - What is the best course of action for the mean or median student?
+
+2 - What should be done with public funds for education?
+
+3 - Should the existing educational requirements for certain professional licenses be reevaluated, or should certain licenses be created or destroyed?
+
+### Trends Over Time
 
 - Udacity is our bright-line. Nothing was the same before and after 2011/2012
   - Founded in 2011
@@ -164,5 +194,9 @@ TODO: Format entries properly.
 [10] http://web.mit.edu/5.95/readings/bloom-two-sigma.pdf
 [11] Jan 2018, The Case Against Education, Bryan Caplan
 [12] Sept 2018, A New U: Faster + Cheaper Alternatives to College, Ryan Craig
-[13]
+[13]https://sr.ithaka.org/publications/mapping-the-wild-west-of-pre-hire-assessment/
 [14]http://web.mit.edu/jbelcher/www/TEALref/Crouch_Mazur.pdf
+[15]https://www.jstor.org/stable/41947890
+[16]https://credentialengine.org/about/
+[17]https://degreed.com/skill-certification
+[18]https://www.pluralsight.com/product/skill-iq
