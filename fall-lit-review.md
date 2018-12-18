@@ -2,7 +2,7 @@
 
 ## 1. Introduction
 
-This research reviews and synthesizes a number of sources as part of an ongoing research effort to assist the understanding and advising of education provision and consumption. The paper is chiefly concerned with the synthesis of the following eight key books, ordered temporally and identified by section:
+This paper outlines findings from a literature review concerned with understanding optimal decisionmaking, particularly at the microeconomic level, in the market for education. The analysis was conducted in a book-first fashion, and the following eight books, ordered by chronology of publication, were identified as relevant:
 
 1. 2008, Disrupting Class: How Disruptive Innovation Will Change the Way the World Learns, Clayton M. Christensen, Curtis W. Johnson, and Michael B. Horn
 2. 2011, The Innovative University: Changing the DNA of Higher Education from the Inside Out, Clayton M. Christensen and Henry J. Eyring
@@ -13,19 +13,19 @@ This research reviews and synthesizes a number of sources as part of an ongoing 
 7. Jan 2018, The Case Against Education, Bryan Caplan
 8. Sept 2018, A New U: Faster + Cheaper Alternatives to College, Ryan Craig
 
-Other works are referred to incidentally. This paper adds to existing knowledge in that several of these books have never been reviewed within a journal of economics, and no paper exists which specifically compares and contrasts these books.
+Several other works are referred to incidentally. Note that the present analysis does not intend to be a comprehensive review of journal work. This paper adds to existing knowledge in that several of these books have never been reviewed within a journal of economics, and no paper exists which compares, contrasts, or concurrently cites even half of these books in the context of a single paper.
 
-A further bit of background information which will prove useful is on the use of certain terms. This information is equally background information and also a result of the synthesis of this literature. The reconciled meaning of these terms assists in creating a standard way to comparatively analyze traditional and alternative modes of education. Due to length, this discussion of terms is provided a dedicated section 
-
-The first section provides the motivation for this paper and describes the organization of this paper. The second section discusses variance in the use of key terms across the literature, then settles the meaning of certain key terms for the purpose of this paper. Each section inclusively between section 3 and section 10 is responsible for reviewing one of the six key books this paper is generally concerned with. The sections are ordered temporally. That is, the same order they were listed above. Temporal ordering was done for conciseness, and also to clarify changes over time. Later work sometimes builds on earlier work, so temporal ordering removes the need for various explanatory asides. Changes over time are specifically summed up in section 10. Section 11 concludes by anticipating future work which may build on this paper.
+The first section provides background and motivation for the current analysis, then gives the organization of the paper. The second section discusses variance in the use of key terms across the literature, then settles the meaning of certain key terms for the purpose of this paper. Each section inclusively between 3 and 10 is dedicated to reviewing one of the eight key books mentioned above, in the same chronological order identified above. A rough tendency is for later sections to compare and contrast the current book of analysis with earlier sections. Section 11 reports general findings across all sections, and this section includes subsections for Atemporal Findings and Trends Over Time.
 
 ## 2. Terms
 
-If there was one thing that scholars of education ought to be able to, it would be to define education. The problem is not that particular education scholars fail to come up with a particular definition of education, but rather that seperate scholars continue to fail in coming up with the same definition of education. As discussed in section 8, Ken Robinson concludes that education is an essentially contentested concept.
+If there was one thing that scholars of education ought to be able to, it would seem to be construction of a standard definition of education and related terms. In contrast to this intuition, Ken Robinson concludes in Creative Schools, discussed further in section 8, that education is an essentially contested concept. Rather than depending on conflicting third party definitions, I outline working definitions in this section for the purposes of this paper. Key terms settled here include education, learning, credentials, and the concept of a pathway.
 
-Rather than depending on conflicting third party definitions, I outline working definitions in this section for the purposes of this paper. Education is any process which causes learning. To receive an education is to have learned. The difference is so nuanced as not to exist. Traditional learning is, as used in this paper, synonmous with traditional education. Learning is any activity undertaken by an individual which results in accrual of new knowledge or skill.
+Education is any process which causes learning. To receive an education is to have learned. The difference is so nuanced as not to exist. Traditional learning is, as used in this paper, synonmous with traditional education. Learning is any activity undertaken by an individual which results in accrual of new knowledge or skill.
 
-Traditional learning is intended mainly in the context of the US. This includes K-12 education. A four-year degree is also considered a modern component of traditional education, although a stricter analysis would rule a four-year degree out of the category of traditional because most Americans do not obtain a four-year degree, and the four-year degree has only become common since the latter half of the 1900s. Non-traditional and alternative are used synonymously as a prefix to nouns like learning, education, and so on. Pedagogy and organization is included in the concept of education, so that a traditional education is conceived of as a teacher delivering an offline lecture to multiple students.
+The conversational notion of a traditional process is one which has been usually undertaken over a substantial period of time. For the purpose of this paper, traditional learning is bound to the context of the United States. This includes K-12 education. A four-year degree is also considered a modern component of traditional education, although a stricter analysis would rule a four-year degree out of the category of traditional because only about one third of Americans obtain an undergraduate degree[42].
+
+Non-traditional and alternative are used as interchangeable prefixes. Pedagogy and organization are included in the concept of education, so a traditional education is conceived of as a teacher delivering an offline lecture to multiple students.
 
 While I think my use of these terms is mainly consistent with the literature, if there is a distinction to be found between the present paper and the broader literature, it is that the present paper takes an intentionally broad conceptualization of education. Online learning, self-directed learning, homeschooling, modern graduate education, and ancient Socratic dialogue all fall within my conceptualization of learning. I would like to think that this concept is particularly devoid of hidden meaning, perhaps unlike other papers. I do not assume the presence of a school, an accrediting body, or even a teacher distinct from the student. Autodidactism and introspection, to the degree they generate new knowledge or skill, count as learning.
 
@@ -213,7 +213,7 @@ In chapter 10, Craig again agrees with Caplan in noting that fadeout from educat
 
 The final section of the book, in the appendix, is a directory of alternatives to college, including which jobs each program prepares a participant for. This is a phenomenal resource. For the relevant consumer, the appendix alone makes purchase of the book more than worthwhile.
 
-## General Findings
+## 11. General Findings
 
 General findings are worth breaking into two groups. The first group is atemporal findings. The second group includes trends over time.
 
@@ -282,43 +282,85 @@ Standardized exams typically have certain question formats, including multiple c
 TODO: Format entries properly.
 
 [1] 2008, Disrupting Class: How Disruptive Innovation Will Change the Way the World Learns, Clayton M. Christensen, Curtis W. Johnson, and Michael B. Horn
+
 [2] 2011, The Innovative University: Changing the DNA of Higher Education from the Inside Out, Clayton M. Christensen and Henry J. Eyring
+
 [3] 2013, College (Un) Bound, Jeffrey Selingo
+
 [4] http://www.econlib.org/archives/2011/10/stably_wasteful.html
+
 [5] https://www.econlib.org/education-the-betting-continues/
+
 [6] 2014, Blended, Heather Staker and Michael B. Horn
+
 [7] March 2015, College Disrupted: The Great Unbundling of Higher Education, Ryan Craig
+
 [8] April 2015, Creative Schools: The Grassroots Revolution That’s Transforming Education, Ken Robinson
+
 [9] https://www.cbsnews.com/news/sal-khan-academy-mastery-learning/
+
 [10] http://web.mit.edu/5.95/readings/bloom-two-sigma.pdf
+
 [11] Jan 2018, The Case Against Education, Bryan Caplan
+
 [12] Sept 2018, A New U: Faster + Cheaper Alternatives to College, Ryan Craig
+
 [13]https://sr.ithaka.org/publications/mapping-the-wild-west-of-pre-hire-assessment/
+
 [14]http://web.mit.edu/jbelcher/www/TEALref/Crouch_Mazur.pdf
+
 [15]https://www.jstor.org/stable/41947890
+
 [16]https://credentialengine.org/about/
+
 [17]https://degreed.com/skill-certification
+
 [18]https://www.pluralsight.com/product/skill-iq
+
 [19]https://www.burning-glass.com/research-project/middle-skills/
+
 [20]https://www.nationalskillscoalition.org/state-policy/fact-sheets
+
 [21]http://hanushek.stanford.edu/publications/saving-schools-why-more-money-not-answer
+
 [22]https://www.huffingtonpost.com/entry/germany-apprenticeship-america-trump_us_594be9ebe4b0a3a837be16b5
+
 [23]https://www.brookings.edu/blog/brown-center-chalkboard/2017/06/28/apprenticeship-programs-in-a-changing-economic-world/
+
 [24]https://journals.aom.org/doi/abs/10.5465/ambpp.2016.12359abstract
+
 [25]https://www.coursera.org/degrees/masters-in-computer-data-science
+
 [26]https://www.coursereport.com/schools?track=Full-Stack+Web+Development&subject=Choose+Technology&type=&cost=&start_date=&location=
+
 [27]https://www.coursereport.com/schools
+
 [28]https://www.coursereport.com/reports/2016-coding-bootcamp-job-placement-demographics-report
+
 [29]https://www.udacity.com/uconnect
+
 [30]https://www.playworks.org/news/playworks-is-top-10-education-finalist-in-global-100change-competition/
+
 [31]http://100andchange.foundationcenter.org/dashboard/
+
 [32]https://www.macfound.org/programs/100change-2017-semifinalists/
+
 [33]https://www.khanacademy.org/about/blog/post/160451329150/studying-for-the-sat-for-20-hours-on-khan-academy
+
 [34]https://www.khanacademy.org/about/blog/post/163503591115/khan-academy-is-the-official-practice-partner-for
+
 [35]https://en.wikipedia.org/w/index.php?title=Udacity&oldid=853136895
+
 [36]https://www.nytimes.com/2018/07/19/us/politics/trump-worker-training.html
+
 [37]https://www.khanacademy.org/badges/great-listener
+
 [38]https://en.wikipedia.org/w/index.php?title=Forgetting_curve&oldid=872497490
+
 [39]https://reason.com/reasontv/2018/01/22/school-a-waste-of-time-and-money
+
 [40]http://www.econlib.org/archives/2009/06/friedmans_law.html
+
 [41]https://www.youtube.com/watch?v=Hm_vl2FRiNQ
+
+[42]https://www.census.gov/content/dam/Census/library/publications/2016/demo/p20-578.pdf
