@@ -1,5 +1,3 @@
-NOTE: Other than this note, the content of this file is copied and pasted into fall-cover-letter.docx. It is further formatted within the docx. This pattern is a temporary workaround because I haven't yet implented the md-to-pdf processing. It is not recommended that this process is followed next semester or in the future, for text-diff and version control reasons. Once future artifacts are satisfactorily created, these files should be removed from the repository.
-
 # Fall Cover Letter
 
 This cover letter introduces fall-literature-review.docx. The two documents are seperated because the other document is intended to be written in the fashion of a proper paper, and this document outlines other work conducted in the Fall 2018 semester which was out-of-scope for the fall-literature-review.docx. This document also outlines planned work for Spring 2019.
