@@ -1,3 +1,5 @@
+- Ryan Craig got Jeb Bush to endorse his book, and he published it prominently on the front cover above the title. What kind of targeting is that? Craig seems to be advocating disruption and alternative education, but neocons in general and Jeb in particular are notorious public ed spenders. Jeb is clearly a neocon, not a classical or paleoconservative, and I state that as a factual observation not an attempt at slander, but suppose Jeb were a paleoconservative. The idea here might be that pro-market conservatives would support disruption, but my survey indicates that progressives are more open to alternative education, and my literature review indicates that real disruption comes about through integration, not substitution.
+
 - Are sheepskin effects changing over time? did the recession impact them? if caplan is right (and I think he is), but if I am also right and universities are evolving to adopt from alternatives, one would suspect that the alternatives would be less socially unacceptable; so rudimentary analysis would show smaller sheepskin effects, and complex analysis would show that specifically among the population that receives alternative education, sheepskin effects are small and/or shrinking compared to 10 or 20 years ago.
 
 https://sr.ithaka.org/blog/alternative-postsecondary-pathways/
@@ -142,3 +144,44 @@ Ch 10/11 is about public policy... less interesting for my objective which is op
 Non rigorous statements like “it’s essential to have high standards and a collaborative process to decide what those standards should be” may sound good but they easily lead to self defeat and they are without evidence. In short, they aren’t true. It’s like indulging social desirability bias rather than actually helping anyone. But then these are the content of many policy conversations, not just kens view
 
 Around 39 minute mark, Ken states that no category of alternative model of school such as private or charter has been shown to be better than a “well supported” public school. Of course this is wrong. Charters and private schools are more cost efficient, which means for any level of funding the better result would come from the non public school. Funding is what he means by support. In any case the argument for one category is disengenuous. We know personalizes learning is best and no one category is best for all groups. The obvious solution is public choice: allow them all. If or when the public schools flounder, exactly as they have done historically when choice is introduced, they will reveal themselves as comparatively weak, low quality, expensive, fragile, and non adaptable institutions.
+
+
+---
+
+1 - sound check
+2 - thanks for meeting! i hope you've been well
+3 - I have a agenda to keep us on track, but first wanted to ask if u had any comments or items of discussion beforehand*
+	- he did have comments, notes below.
+4 - cover letter, overarching plan
+	- dissertation-by-publication; three papers = dissertation. get 1 done at a time.
+	- concrete degree-to-alternative maps
+	- measure student and employer oppenness in general and in particular, ROI impacts vs college degree
+5 - actual lit review, plan to extend
+
+Notes:
+- dissertations don't look like this
+- journal of econ literature: only lit reviews. find a journal publishing what we like..."that's his book report"
+	- fleshing this out and reformatting, plus much more reading, could result in a publishable lit review
+	- but, this doesn't work as a dissertation chapter. modern way to lit review is to discuss in passing, integrated with paper text; not serially in a dedicated section
+- fix the section on nathan young; don't say 'shake' or 'slight' and notice he had very high motivation
+- section 9 "won't move the needle" rising acceptability of bootcamps in CS...
+	- text of point he is addressing pasted:
+		"As discussed in the section 10, On A New U, bootcamps provide nearly one third of the number of
+		computer science graduates that universities collectively provide. It is implausible to argue that
+		such large numbers of non-traditional learners entering the workplace will not move the needle on
+		what counts as normal. Employers are extremely satisfied with bootcamp gradautes, and most claim
+		that bootcamp graduates are just as qualified as university graduates."
+	- Bryan says this could form an interesting paper could form a paper, although prob more interesting in industrial psychology than economics
+	- In saying 'attitudes on alt learning for comp sci changing could form a paper,' Bryan acknowledges this could relate to the attitudinal survey
+	- another approach he recommends: interview 50 employers (3 topics bootcamps...2 other topics, figure that out)
+- show him the survey...t = 3... main issue is surveying over...traditional 100k survey for journal...check with journals.
+	- he seemed to indicate t = 3 wasn't good, and also it wasn't needed.
+	- run the right survey once and you are covered; show him this survey ASAP. min 300 samples.
+	- put in 'stuff on ability testing as an employment tool'
+	- look for existing data sources...field is called industrial psychology...read more...email people working in there
+- important thing is to network!
+	- email people a question about their work. come back in a few weeks to ask for something if needed, eg review my paper or share data
+	- cultivate network of people; every tenure track prof on econ of education... email a few (or 30!) each weeks
+- Spring Goal...1 publishable piece, and a well crafted survey
+	- well crafted survey complete by end of spring... do survey, start 
+	- three interesting topics
