@@ -1,37 +1,8 @@
-Loose Notes for Current Papers
+description: This is basically an archive file for unresolved notes and ideas. These notes and ideas are basically no longer fresh, so I put them over here. This is in contrast to loose-notes.md which is like a current working notes section, containing notes and ideas which are relevant to a current working paper, although they may be disorganized so i don't want to put them in the working paper in their current form. the workflow is basically like I put notes in the fresh doc, then form a working paper, then any notes which aren't used up are pasted here.
 
-1. Overview
+- Ryan Craig got Jeb Bush to endorse his book, and he published it prominently on the front cover above the title. What kind of targeting is that? Craig seems to be advocating disruption and alternative education, but neocons in general and Jeb in particular are notorious public ed spenders. Jeb is clearly a neocon, not a classical or paleoconservative, and I state that as a factual observation not an attempt at slander, but suppose Jeb were a paleoconservative. The idea here might be that pro-market conservatives would support disruption, but my survey indicates that progressives are more open to alternative education, and my literature review indicates that real disruption comes about through integration, not substitution.
 
-This file contains notes relevant to some working paper. Each section should note which paper it's relevant to. The first section outlines the totality of sections contained in the document, and in so doing it provides an overview of my current work. The sections are organized as follows:
-
-1. Overview
-
-2. Consumption of Higher Education Agent-Based Model
-
-3. Alternative Credential Scraping Project
-
-4. Alternative Credential Panel Attitudinal Survey
-
-5. Alternative Education and Employment Literature Review
-	* interdisciplinary review focused on an applied problem: optimizing the education-to-employment pipeline
-	* econ of education
-	* industrial psychology / organizational psychology / i-o psychology
-	* labor microeconomics
-	* business administration
-	* human resource management
-	* https://www.gradschools.com/doctorate/human-resources-management
-	* https://work.chron.com/difference-between-industrial-organizational-psychology-human-resource-management-26676.html
-	* https://www.verywellmind.com/what-is-industrial-organizational-psychology-2795302
-	* https://www.jstor.org/stable/1942687?seq=1#page_scan_tab_contents
-
-6. Changing Labor Dynamics in Software Development
-	* obsolescence rate higher creates demand for credentials which are tightly bound to real skills; technical credentials not liberal education; this is driven by profit optimization. productivity constantly improved by constant stream of new tools but people need to be able to use these tools and a liberal education doesn't cut it
-	* 
-
-8. Changing Dynamics in the Labor of Information Technology
-	- not just computer science; programming is central but his includes software development-adjacent roles like project management, business analysis, testing, design, scrum master
-
-The second section is on the 
+- Are sheepskin effects changing over time? did the recession impact them? if caplan is right (and I think he is), but if I am also right and universities are evolving to adopt from alternatives, one would suspect that the alternatives would be less socially unacceptable; so rudimentary analysis would show smaller sheepskin effects, and complex analysis would show that specifically among the population that receives alternative education, sheepskin effects are small and/or shrinking compared to 10 or 20 years ago.
 
 https://sr.ithaka.org/blog/alternative-postsecondary-pathways/
 
