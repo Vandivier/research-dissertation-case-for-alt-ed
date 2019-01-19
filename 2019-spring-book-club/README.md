@@ -1,8 +1,8 @@
 # Spring 2019 Reading Group
 #### On Alternative Education
 
-1. [Group Purpose](1-group-purpose)
-2. [Reading Schedule](2---reading-schedule)
+1. [Group Purpose](#1---group-purpose)
+2. [Reading Schedule](#2---reading-schedule)
 
 #### 1 - Group Purpose
 
