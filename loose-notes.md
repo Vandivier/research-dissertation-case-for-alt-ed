@@ -77,6 +77,57 @@ Sal Kan is described as a disruptor but he’s also partnering with universities
 Check out Degree Compress course recommendations software. For part of my dissertation and or for part of a book which I may write as a result of this research, hey section should be devoted to optimizing advice for the student who does decide that the traditional route is best. Degree compass and things like intelligent university selection and things like intelligent professor in course selection and things like utilizing cheap or free online software to assist in studying to facilitate pass rate and other things like that may all be helpful
 
 Chapter 8 in College unbound discusses a program called StraighterLine. Look into this as an alternative path education.
+  * i looked into straighterline and it's awesome. they cost 99/month + 59/course and guaranteed transfer to 130+ colleges, mainly competency based and online programs like WGU but some exceptions. https://www.straighterline.com/
+  * The StraighterLine WGU partnership awards a 2k scholarship which can cover a ton of credit. StraighterLine says a student should be able to complete a course in a month, of course no guarantee, and working simultaneously makes that harder. Say that you do half that and only complete 6 courses per year, this would be 6*60+12*100 ~=$1600, which is less than the 2k scholarship so it would basically be a free year of education.
+  * StraighterLine offers credit by examination, including some AP courses! That's right, usually this is for high school students but somehow StraighterLine is able to do this? https://www.straighterline.com/test-for-credit/advanced-placement-exams/
+  * other options...what courses are available specifically? https://www.straighterline.com/blog/test-comparison-clep-vs-dsst-vs-ece/
+  * testing for credit pass rates can be estimated. if ur iq is higher than average, ceteris paribus, you should be able to score better.
+	* IQ exam online in less than 30 minutes, costs $20! https://www.test-iq.org/
+	* my iq was 127, top 5%
+  * test grit: https://angeladuckworth.com/grit-scale/
+	* my grit score is 4.2, "scored higher than about 80% of American adults"
+  * 18 credits in 3 weeks: https://www.reddit.com/r/clep/comments/ai2flt/my_clep_experience_earned_18_credits_in_3_weeks/
+  * the student should substitute an alternative semester for a traditional semester, and reevaluate periodically.
+	* this will limit potential 'damage' to a semester or two, which is fine because that's lost in the noise of traditional graduation anyway.
+	* a single exam pass or fail shouldn't mean much. But if a student fails an entire alt semester, all exams, that is a sign the alt approach may not be a good fit.
+	* recommend taking a pseudo-full course load of 4-5 classes (maybe 4 to promote focus? but do them 1 at a time no?)
+	* recommended approach, sub
+	* "Will I pass?" raw pass rates are available, and some red/green testing can quickly create a more accurate, personalized picture:
+		* 7 checks: 1) IQ, 2) grit, 3) household income [support and available effort proxy, potentially could be much more detailed], 4) personality (esp openness to this weird process) 5) Weinstein LASSI, 6) Alternative Education Preparedness Inventory (capture specific attitiduinal, confidence, and placebo effects.) 7) Exam Preparredness Inventory (for passing a specific exam)
+		* Research question: how do these modify 
+		* "Regression analyses indicated that confidence was related to test performance but self-perception of test taking skills was not"
+		* we also know placebo effect is real: if you think it will work it is more likely to work.
+		* lassi: Learning and Study Skills Inventory
+		* other than the 5 checks we can almost certainly modify performance by creating financial or other incentives, eg a scholarship. one interesting design would be to partner with parents and have them sign a pledge: I pledge to award my child an amount of X for X performance in the alternative education semester. or churches???
+		* https://otago.ourarchive.ac.nz/bitstream/handle/10523/6962/Confidence%20ms%20for%20NAJP%20PENULTIMATE%5B1%5D.pdf?sequence=1&isAllowed=y
+		* quick check would be aggregate (homogenous) ratio above/below average. more concrete check would be heterogenous distribution percentile effects
+		* (10 bucks) https://www.understandmyself.com/personality-assessment
+			* free versions may work too; let's check that out later.
+			* is using LASSI more accurate, cheaper, quicker, or any benefit at all compared to SAT score??
+		* https://files.eric.ed.gov/fulltext/ED509393.pdf
+			* gender interacts importantly with LASSI
+		* maybe age, gender, ethnicity, and/or is english my primary language are important too
+	* duckworth highlights importance of metacognition: https://qz.com/work/1233940/angela-duckworth-explains-grit-is-the-key-to-success-and-self-confidence/
+	* https://www.hhpublishing.com/LASSImanual.pdf
+	* a training program would at least improve confidence and create a placebo. For example, nonfamiliarity breeds aversion, but familiarity breeds confidence. this effect alone would allow a learning candidate to perform better on the "Will I Pass?" Screening in the check #6.
+	* need to develop alternative education preparedness inventory.
+		* there should be a general preparedness inventory and a specific preparedness inventory. the latter is with respect to a particular exam. the former is for alternative college credit attainment fit in general.
+		* I have heard of: (checkbox) CLEP, AP, PLA, DSST, ECE
+			* (I could even be like: "CLEP stands for:" and let them choose the right one.)
+		* which of these is *not* an alternative way to earn college credit?
+		* I have passed a practice exam on the topic multiple times in the past month
+			* eg https://www.mometrix.com/academy/clep/college-math/
+		* I have taken a free CLEP course
+		* (for CLEP): I have reviewed the official CLEP study guide(s) https://clep.collegeboard.org/earn-college-credit/practice
+	* I took the College Math CLEP practice exam unprepared and got a 70%
+	* more LASSI - https://www.tandfonline.com/doi/abs/10.1080/19388079409558163?journalCode=ulri19
+	* LASSI for Learning Online - https://journals.sagepub.com/doi/abs/10.2190/EC.45.4.b
+	* LLO vs LASSI+: https://www.hhpublishing.com/ap/_assessments/LLO.html
+	* Developing Metacognition with LASSI Online: http://edisdat.ied.edu.hk/pubarch/b15907314/full_paper/560189363.pdf
+	* should we prefer LLO or LASSI+?
+	
+
+* college board has effectively endorsed the Modern States' Freshman Year for Free program by linking to it on CB website and discussing it with positive sentiment.
 
 check Christiansen innovative university (2011) and 
 https://www.amazon.com/Innovative-University-Changing-Higher-Education/dp/1118063481
