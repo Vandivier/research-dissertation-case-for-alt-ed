@@ -267,3 +267,7 @@ Notes:
 - Spring Goal...1 publishable piece, and a well crafted survey
 	- well crafted survey complete by end of spring... do survey, start 
 	- three interesting topics
+
+- jesv grit scor 3.6
+  - iq test 122
+  - female, age 23
