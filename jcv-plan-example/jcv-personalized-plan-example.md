@@ -18,6 +18,19 @@
     * prepping for the exam might be tricky.
         * Obviously, one can simply take an excelsior course on statistics.
         * there are also official UExcel content guides: https://www.excelsior.edu/exams/get-ready
+        * Excelsior offers a 'value package' of 'one practice exam, one official exam, and the extra insurance of a free retake':
+            * https://www.excelsior.edu/exams/choose-your-exam
+            * https://my.excelsior.edu/documents/78666/102207/Value_Package_Exams_List.pdf/1cf2b17a-58a3-41e6-a8ec-8cc04513dd37
         * One might also prep for AP Statistics to take the UExcel exam. There are plenty of official and non-official materials for that. Example: https://apcentral.collegeboard.org/courses/ap-statistics/course
         * Finally, Khan Academy is great on stats! However, those classes are ostensibly not aligned to UExcel courses as well as the official guides.
     * of importance to the associate in science degree, Statistics can be taken by UExcel instead of Calculus II in the classroom.
+* Recommended Fulfillment Approach disregards transfer credit.
+* Notes on Spanish CLEP:
+    * May count for two semesters.
+        * See https://clep.collegeboard.org/pdf/spanish-language-fact-sheet.pdf
+        * According to the source above, "The American Council on Education has recommended that colleges grant six credits for a score of 50, which is equivalent to a course grade of C, on the CLEP Spanish Language exam, and nine credits for a score of 63. Each college, however, is responsible for setting its own policy. For candidates with satisfactory scores on the Spanish Language examination, colleges may grant credit toward fulfillment of a distribution requirement, or for a particular course that matches the exam in content. Check with your school to find out the score it requires for granting credit, the number of credit hours granted, and the course that can be bypassed with a passing score."
+    * Easyness scores maybe biased by takers being actually bilingual or spanish.
+    * Next easiest courses include Info Systems, Intro to Sociology, and Principles of Marketing. Considered easiest by http://www.dantes.doded.mil/EducationPrograms/get-credit/creditexam.html
+    * NCSU doesn't take spanish clep https://admissions.ncsu.edu/apply/credit-opportunities/college-level-examination-program-clep/
+    * However, looks like NCSU will transfer some NOVA spanish credit (2-11 credits) https://www.acs.ncsu.edu/php/transfer/
+

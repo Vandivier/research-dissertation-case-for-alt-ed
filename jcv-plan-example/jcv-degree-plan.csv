@@ -1,5 +1,19 @@
-﻿NOVA Course,Course Name(s),Alternative Option(s),Fulfillment Approach,Notes
-ENG 111,College Composition I,College Composition CLEP,,
-GENERAL EDUCATION ELECTIVE,,,,
-MTH 263,Calculus I,Calculus CLEP,,Students not adequately prepared for MTH 263 may be required to take MTH 167 or MTH 161 and MTH 162.
-"MTH 167 OR BIO 101-102, BIO 110, BIO 120, CHM 111-112, GOL 105-106, PHY 201-202, PHY 231-232, or any 200-level biology, chemistry, geology, or physics course.",,Precalculus CLEP,,
+﻿NOVA Course,Course Name(s),Alternative Option(s),Recommended Fulfillment Approach,Actual Fulfillment Approach,Pseudosemester,Notes
+ENG 111,College Composition I,College Composition CLEP,,,1,
+General Education Elective,General Education Elective,Spanish CLEP,,,1,See Notes on Spanish CLEP in jcv-personalized-plan-example.md
+MTH 167,Precalculus with Trigonometry,Precalculus CLEP,,,1,"MTH 161 AND MTH 162 may substitute for MTH 167, but I don't think that's needed in this case. Students who place into Calculus will not be given credit for completing precalculus."
+MTH 263,Calculus I,Calculus CLEP,,,3,Students not adequately prepared for MTH 263 may be required to take MTH 167 or MTH 161 and MTH 162.
+SDV 100,College Success Skills,,,,1,"No apparent alternatives, except perhaps to prepare an own course which addressess all course requirements. Plausibly easier just to take the course."
+ENG 112 OR ENG 125,College Composition II OR Introduction to Literature,Analyzing and Interpreting Literature CLEP,,,2,"Could also try American or English Literature CLEPs in case one is easier, or need additional tries in short time frame."
+MTH 245,Statistics I,UExcel Statistics,,,2,MTH 245 may be substituted for MTH 264 for biology majors
+Physical or Life Science Elective w/Lab,Physical or Life Science Elective w/Lab,Biology CLEP,,,2,"Students who plan to major in Biology should elect CHM 111-112, BIO 101-102 or BIO 110 and BIO 120, and either BIO 206 and PHY 201 or PHY 201-202...For all intended majors, it is strongly recommended that you contact your counselor or academic advisor to identify courses that meet requirements of your transfer institution."
+Social Science Elective,Social Science Elective,Introductory Sociology CLEP,,,2,
+HIS Elective,HIS Elective,History of the US I CLEP,,,3,"HIS 101, HIS 102, HIS 111, HIS 112, HIS 121, or HIS 122 "
+Humanities/Fine Arts Elective,Humanities/Fine Arts Elective,English Literature CLEP,,,3,
+MTH or Physical or Life Science Elective w/Lab,MTH or Physical or Life Science Elective w/Lab,Chemistry CLEP,,,3,
+Social Science Elective,Social Science Elective,Principles of Micro CLEP,,,3,
+CST 110,Intro. to Communication,UExcel Interpersonal Communication,,,4,
+General Education Elective,General Education Elective,Principles of Macro CLEP,,,4,"May not be needed if covered by spanish. Other options include Introductory Psychology CLEP, or UExcel ethics or bioethics. Can try American Literature CLEP, but apparently it's difficult?"
+Humanities/Fine Arts Elective,Humanities/Fine Arts Elective,Humanities CLEP,,,4,
+MTH or Physical or Life Science Elective w/Lab,MTH or Physical or Life Science Elective w/Lab,UExcel Physics,,,4,"Other options: UExcel Pathophysiology or in-class options: Calc II, Stats II, Biology 2** or 3**"
+Physical or Life Science Elective w/Lab,Physical or Life Science Elective w/Lab,UExcel Anatomy and Physiology I,,,4,"Probably take Uexcel Anatomy and Physiology II after transfer, or in case another course exam is failed."
