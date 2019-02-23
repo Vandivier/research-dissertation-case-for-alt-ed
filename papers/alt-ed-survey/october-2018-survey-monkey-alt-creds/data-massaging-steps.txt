@@ -1,0 +1,5 @@
+1 - export from SurveyMonkey. Save As all response data, original view, condensed, numerical value.
+2 - remove extraneous second row
+3 - rename empty columns subsequent to "have you heard of" to "heard of udacity," etc
+4 - for state-friendliness; rename "q vars" which are scale of 1 to 10 questions
+5 - remove columns: first name, last name, email address
