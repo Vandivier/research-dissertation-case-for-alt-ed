@@ -152,3 +152,14 @@ reg voi_index _* c* eq* is*
 // intial result: counterintuitively, conservatives seem more opposed to alternative credentials; maybe an attitudinal opposition
 //   theory: conservatives are more pro-free market, but this is outpaced by progressive's pro-innovation
 //   above theory can be somewhat tested using nationalism and innovation proxies
+
+// question text
+// q1 - For many professions, alternative credentials can qualify a person for an entry-level position.
+// q2 - It will soon become fairly conventional for high school graduates to obtain alternative credentials instead of going to college.
+// q3 - When you add up the pros and cons for online education, it's probably a good thing for society overall.
+// q4 - When you add up the pros and cons for artificial intelligence, it's probably a good thing for society overall.
+// q5 - When you add up the pros and cons for cryptocurrency, it's probably a good thing for society overall.
+// q6 - When evaluating an applicant's education, it is important is important to check whether the degree was awarded from a US institution.
+// q7 - I consider myself religious
+// q8 - I consider myself Christian
+// q9 - Government regulation helps ensure businesses treat individuals more fairly.

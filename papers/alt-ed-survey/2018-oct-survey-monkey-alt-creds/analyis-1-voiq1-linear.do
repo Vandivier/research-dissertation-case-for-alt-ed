@@ -32,7 +32,7 @@ reg voi_q1 ismale _stem2 _region1 _region7 _region9 _industry8 _industry9 _indus
 // adjr2:           .40
 // f-complexity:    12
 // q-complexity:    8
-// note: cprovider was the longest-lasting nonlinear chain (linear, quadratic, and cubic)
+// note: artificial intelligence / aq4 was the longest-lasting nonlinear chain (linear, quadratic, and cubic)
 // note: regional and industry effects filtered
 // note: aq9 survived to strong model; I think 7,8,9 were new survey questions;
 //      this explains sustained low n, seems like throwing out old samples.
