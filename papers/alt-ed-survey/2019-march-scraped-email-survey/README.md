@@ -8,4 +8,4 @@ Those invited to take the survey were scraped from Github profiles. The populati
 
 # Related Links
 
-1. https://github.com/dougiebuckets/github-email-scraper
+1. https://github.com/Vandivier/github-email-scraper-node
