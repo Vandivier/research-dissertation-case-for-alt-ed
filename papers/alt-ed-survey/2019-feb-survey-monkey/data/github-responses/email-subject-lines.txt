@@ -1,0 +1,24 @@
+1. Contribute to Education Research!
+    1. collector-business-id, with email-body-1: 11
+    1. collector-business-id, with email-body-2: 12
+    1. collector-business-id, with email-body-3: 13
+
+2. Response Needed: Github portfolio survey
+    1. collector-business-id, with email-body-1: 21
+    1. collector-business-id, with email-body-2: 22
+    1. collector-business-id, with email-body-3: 23
+
+3. Do you care about education?
+    1. collector-business-id, with email-body-1: 31
+    1. collector-business-id, with email-body-2: 32
+    1. collector-business-id, with email-body-3: 33
+
+4. This software trend isn't about code...
+    1. collector-business-id, with email-body-1: 41
+    1. collector-business-id, with email-body-2: 42
+    1. collector-business-id, with email-body-3: 43
+
+5. Do Nanodegrees matter?
+    1. collector-business-id, with email-body-1: 51
+    1. collector-business-id, with email-body-2: 52
+    1. collector-business-id, with email-body-3: 53

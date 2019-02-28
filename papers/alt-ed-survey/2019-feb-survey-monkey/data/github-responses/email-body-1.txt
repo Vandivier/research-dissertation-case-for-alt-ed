@@ -1,0 +1,20 @@
+Hey[if firstname: ' ' + firstname],
+
+[if firstname: 'I got that name from Github, hope it's right.
+']
+I'm a PhD student with George Mason University and I'm researching alternative credentials.
+
+Have you heard of Udacity Nanodegrees? I'm researching stuff like that. Even a Github portfolio can be considered an alternative credential.
+
+You might be surprised to hear that academics really don't have good data on this stuff. Would you mind taking ~2 minutes to answer 10-12 questions?
+
+Here's the link: [link based on collector-business-id]
+
+I encourage you to share the survey with others, even if they aren't on Github.
+
+If you want to hear about the results, just email me at john at afterecon.com.
+
+Btw, feel free to add me on Github too [: https://github.com/Vandivier
+
+Best,
+John
