@@ -1,2 +1,3 @@
-email	emailed-from	first-name	full-name	github-url	github-username	collector-business-id	email-subject-line	email-body	open-confirmed	click-confirmed	response-confirmed
-jashkenas@gmail.com	jv-personal-email	Jeremy	Jeremy Ashkenas	https://github.com/jashkenas	jashkenas	21	2	1			
+email	emailed-from	first-name	full-name	github-url	github-username	collector-business-id	email-subject-line	email-body	open-confirmed	click-confirmed	response-confirmed	email-sent-hour-of-day
+jashkenas@gmail.com	jv-personal-email	Jeremy	Jeremy Ashkenas	https://github.com/jashkenas	jashkenas	21	2	1				10
+rauchg@gmail.com	jv-personal-email	Guillermo	Guillermo Rauch	https://github.com/rauchg	rauchg	51	5	1				11
