@@ -29,9 +29,36 @@ function fGetInputFileLocations() {
     .map(sSubfolder => path.join(sSubfolder, ...arrsSurveyMonkeyCsvConventionalLocation));
 }
 
+function fGetTransformersWithIndex(arrarrsCsvCells) {
+    const arrsFirstRow = arrarrsCsvCells[0];
+    const arrsSecondRow = arrarrsCsvCells[1]; // survey monkey does this thing where the second row is also basically a title row
+  
+    return arroColumnTransforms.filter(oTransformer => {
+        let iColumn = arrsFirstRow.findIndex(sColumnText => fiGetMatchingColumn(oTransformer, sColumnText));
+        if (iColumn === -1) iColumn = arrsSecondRow.findIndex(sColumnText => fiGetMatchingColumn(oTransformer, sColumnText));
+        if (iColumn !== -1) {
+            oTransformer.iColumn = iColumn;
+            iLargestColumnIndex = Math.max(iLargestColumnIndex, iColumn)
+        }
+    
+        return oTransformer.iColumn || oTransformer.bGeneratedColumn;
+      })
+      .map(oTransformer => {
+          if (oTransformer.bGeneratedColumn) {
+            iLargestColumnIndex++;
+            oTransformer.iColumn = iLargestColumnIndex;
+          }
+    
+          return oTransformer;
+      });
+}
+
 function fiGetMatchingColumn(oTransformer, sColumnText) {
-  const sToMatch = oTransformer.sMatcher.toLowerCase();
-  return sColumnText.toLowerCase().includes(sToMatch);
+  if (oTransformer.bExactMatch) {
+      return sColumnText === oTransformer.sMatcher;
+  }
+
+  return sColumnText.toLowerCase().includes(oTransformer.sMatcher.toLowerCase());
 }
 
 const fpWrangleSurveyMonkeyFile = async sLocation => {
@@ -51,22 +78,28 @@ const fsGetNewSurveyMonkeyFileName = sLocation => {
 };
 
 function fsTransformSurveyMonkeyCsvContent(sOriginalFileContent) {
+  const iLargestColumnIndex = 0;
   const arrarrsCsvCells = CSVToArray(sOriginalFileContent);
-  const arrsFirstRow = arrarrsCsvCells[0];
-  const arrsSecondRow = arrarrsCsvCells[1]; // survey monkey does this thing where the second row is also basically a title row
-  const arroTransformersWithIndex = arroColumnTransforms.filter(oTransformer => {
-    let iColumn = arrsFirstRow.findIndex(sColumnText => fiGetMatchingColumn(oTransformer, sColumnText));
-    if (iColumn === -1) iColumn = arrsSecondRow.findIndex(sColumnText => fiGetMatchingColumn(oTransformer, sColumnText));
-    if (iColumn !== -1) oTransformer.iColumn = iColumn;
+  const arroTransformersWithIndex = fGetTransformersWithIndex(arrarrsCsvCells);
 
-    return oTransformer.iColumn;
-  });
-
+  // TODO: write title line
   return arrarrsCsvCells
     .slice(2, arrarrsCsvCells.length)
     .map(arrsSurveyResponse => {
-      // TODO...use arroTransformersWithIndex
-      return arrsSurveyResponse;
+      const arroTransformedCells = arroTransformersWithIndex.reduce((arroAcc, oTransformer) => {
+          let arroDataForThisCell = [];
+          const sCellValue = arrsSurveyResponse[oTransformer.iColumn];
+
+          if (oTransformer.farroTransformer) {
+            arroDataForThisCell = oTransformer.farroTransformer(sCellValue, arroTransformersWithIndex);
+          } else {
+            arroDataForThisCell = [sCellValue];
+          }
+
+          return arroAcc.concat(...arroDataForThisCell);
+        }, []);
+
+      return arrsTransformedCells.join(','); // TODO: ensure sort order is consistent and maybe add quotes as well?
     })
     .join(EOL);
 }

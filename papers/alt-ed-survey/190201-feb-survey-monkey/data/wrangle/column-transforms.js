@@ -5,11 +5,10 @@ module.exports = [{
 },{
     "sMatcher": 'End Date',
 },{
-    "sMatcher": 'Do you contribute to hiring and firing decisions at your company?'
-    /*,
-    fTransformer: function(oSurveyResponse) {
+    "sMatcher": 'Do you contribute to hiring and firing decisions at your company?',
+    farroTransformer: function(sCellValue, arroTransformersWithIndex) {
 
-    }*/
+    }
 },{
     "sMatcher": 'alternative credentials can qualify a person for an entry-level position',
 },{
@@ -29,19 +28,32 @@ module.exports = [{
 },{
     "sMatcher": 'Lynda.com',
 },{
-    "sMatcher": 'Pluralsight',
+    "sMatcher": 'Which of these industries most closely matches your profession?',
 },{
-    "sMatcher": 'Pluralsight',
+    "sMatcher": 'businesses treat individuals more fairly',
 },{
-    "sMatcher": 'Pluralsight',
+    "bExactMatch": true,
+    "sMatcher": 'Gender?',
 },{
-    "sMatcher": 'Pluralsight',
+    "bExactMatch": true,
+    "sMatcher": 'Household Income?',
 },{
-    "sMatcher": 'Pluralsight',
+    "bExactMatch": true,
+    "sMatcher": 'Age?',
 },{
-    "sMatcher": 'Pluralsight',
+    "bExactMatch": true,
+    "sMatcher": 'Age',
 },{
-    "sMatcher": 'Pluralsight',
+    "bExactMatch": true,
+    "sMatcher": 'Gender',
 },{
-    "sMatcher": 'Pluralsight',
+    "bExactMatch": true,
+    "sMatcher": 'Household Income',
+},{
+    "bExactMatch": true,
+    "sMatcher": 'Region',
+},
+{
+    "bGeneratedColumn": true,
+    "sOutputColumnName": "IsManager"
 }]
