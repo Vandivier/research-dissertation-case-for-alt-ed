@@ -30,7 +30,7 @@ function fGetInputFileLocations() {
 }
 
 function fGetTransformersWithIndex(arrarrsCsvCells) {
-    const iLargestColumnIndex = 0;
+    let iLargestColumnIndex = 0;
     const arrsFirstRow = arrarrsCsvCells[0];
     const arrsSecondRow = arrarrsCsvCells[1]; // survey monkey does this thing where the second row is also basically a title row
   
@@ -55,6 +55,8 @@ function fGetTransformersWithIndex(arrarrsCsvCells) {
 }
 
 function fiGetMatchingColumn(oTransformer, sColumnText) {
+  if (!sColumnText || oTransformer.bGeneratedColumn) return;
+
   if (oTransformer.bExactMatch) {
       return sColumnText === oTransformer.sMatcher;
   }
