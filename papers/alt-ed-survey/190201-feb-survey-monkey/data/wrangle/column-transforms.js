@@ -7,7 +7,13 @@ module.exports = [{
 },{
     "sMatcher": 'Do you contribute to hiring and firing decisions at your company?',
     farroTransformer: function(sCellValue, arroTransformersWithIndex) {
+        const oTransformerManager = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsManager');
+        const oTransformerUnemployed = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsUnemployed');
 
+        return [
+            Object.assign({}, oTransformerManager, {value: sCellValue === '1' ? 1 : 0}),
+            Object.assign({}, oTransformerUnemployed, {value: sCellValue === '3' ? 1 : 0})
+        ];
     }
 },{
     "sMatcher": 'alternative credentials can qualify a person for an entry-level position',
@@ -56,4 +62,8 @@ module.exports = [{
 {
     "bGeneratedColumn": true,
     "sOutputColumnName": "IsManager"
+},
+{
+    "bGeneratedColumn": true,
+    "sOutputColumnName": "IsUnemployed"
 }]

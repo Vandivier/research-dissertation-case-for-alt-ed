@@ -30,6 +30,7 @@ function fGetInputFileLocations() {
 }
 
 function fGetTransformersWithIndex(arrarrsCsvCells) {
+    const iLargestColumnIndex = 0;
     const arrsFirstRow = arrarrsCsvCells[0];
     const arrsSecondRow = arrarrsCsvCells[1]; // survey monkey does this thing where the second row is also basically a title row
   
@@ -78,7 +79,6 @@ const fsGetNewSurveyMonkeyFileName = sLocation => {
 };
 
 function fsTransformSurveyMonkeyCsvContent(sOriginalFileContent) {
-  const iLargestColumnIndex = 0;
   const arrarrsCsvCells = CSVToArray(sOriginalFileContent);
   const arroTransformersWithIndex = fGetTransformersWithIndex(arrarrsCsvCells);
 
@@ -92,14 +92,16 @@ function fsTransformSurveyMonkeyCsvContent(sOriginalFileContent) {
 
           if (oTransformer.farroTransformer) {
             arroDataForThisCell = oTransformer.farroTransformer(sCellValue, arroTransformersWithIndex);
-          } else {
-            arroDataForThisCell = [sCellValue];
+          } else if(!oTransformer.bGeneratedColumn) {
+            arroDataForThisCell = [Object.assign({}, oTransformer, {value: sCellValue})];
           }
 
           return arroAcc.concat(...arroDataForThisCell);
         }, []);
 
-      return arrsTransformedCells.join(','); // TODO: ensure sort order is consistent and maybe add quotes as well?
+        const arrsTransformedCells = arroTransformedCells.sort((oa, ob) => oa.iColumn > ob.iColumn ? 1 : -1).map(oTransformer => oTransformer.value);
+
+      return arrsTransformedCells.join(','); // TODO: ensure sort order is correct and maybe add quotes around cell values
     })
     .join(EOL);
 }
