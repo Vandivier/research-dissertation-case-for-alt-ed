@@ -42,7 +42,7 @@ function fGetTransformersWithIndex(arrarrsCsvCells) {
             iLargestColumnIndex = Math.max(iLargestColumnIndex, iColumn)
         }
     
-        return oTransformer.iColumn || oTransformer.bGeneratedColumn;
+        return Number.isInteger(oTransformer.iColumn) || oTransformer.bGeneratedColumn;
       })
       .map(oTransformer => {
           if (oTransformer.bGeneratedColumn) {
@@ -80,32 +80,43 @@ const fsGetNewSurveyMonkeyFileName = sLocation => {
   return (sDataFolderName + ' ' + path.basename(sLocation)).toLowerCase().replace(/[^\w.]/g, '-');
 };
 
+function fsObservationRowsContent (arrarrsCsvCells, arroTransformersWithIndex) {
+  return arrarrsCsvCells
+  .slice(2, arrarrsCsvCells.length)
+  .map(arrsSurveyResponse => {
+    const arroTransformedCells = arroTransformersWithIndex.reduce((arroAcc, oTransformer) => {
+        let arroDataForThisCell = [];
+        const sCellValue = arrsSurveyResponse[oTransformer.iColumn];
+
+        if (oTransformer.farroTransformer) {
+          arroDataForThisCell = oTransformer.farroTransformer(sCellValue, arroTransformersWithIndex);
+        } else if(!oTransformer.bGeneratedColumn) {
+          arroDataForThisCell = [Object.assign({}, oTransformer, {value: sCellValue})];
+        }
+
+        return arroAcc.concat(...arroDataForThisCell);
+      }, []);
+
+      const arrsTransformedCells = arroTransformedCells.sort((oa, ob) => oa.iColumn > ob.iColumn ? 1 : -1).map(oTransformer => oTransformer.value);
+
+    return arrsTransformedCells.join(','); // TODO: ensure sort order is correct and maybe add quotes around cell values
+  })
+  .join(EOL);
+}
+
+function fsTitleLineContent(arroTransformersWithIndex) {
+  return arroTransformersWithIndex
+    .filter(oTransformer => !oTransformer.farroTransformer)
+    .map(oTransformer => oTransformer.sOutputColumnName || oTransformer.sMatcher)
+}
+
 function fsTransformSurveyMonkeyCsvContent(sOriginalFileContent) {
   const arrarrsCsvCells = CSVToArray(sOriginalFileContent);
   const arroTransformersWithIndex = fGetTransformersWithIndex(arrarrsCsvCells);
+  debugger
+  const sNewFileContent = fsTitleLineContent(arroTransformersWithIndex) + EOL + fsObservationRowsContent(arrarrsCsvCells, arroTransformersWithIndex);
 
-  // TODO: write title line
-  return arrarrsCsvCells
-    .slice(2, arrarrsCsvCells.length)
-    .map(arrsSurveyResponse => {
-      const arroTransformedCells = arroTransformersWithIndex.reduce((arroAcc, oTransformer) => {
-          let arroDataForThisCell = [];
-          const sCellValue = arrsSurveyResponse[oTransformer.iColumn];
-
-          if (oTransformer.farroTransformer) {
-            arroDataForThisCell = oTransformer.farroTransformer(sCellValue, arroTransformersWithIndex);
-          } else if(!oTransformer.bGeneratedColumn) {
-            arroDataForThisCell = [Object.assign({}, oTransformer, {value: sCellValue})];
-          }
-
-          return arroAcc.concat(...arroDataForThisCell);
-        }, []);
-
-        const arrsTransformedCells = arroTransformedCells.sort((oa, ob) => oa.iColumn > ob.iColumn ? 1 : -1).map(oTransformer => oTransformer.value);
-
-      return arrsTransformedCells.join(','); // TODO: ensure sort order is correct and maybe add quotes around cell values
-    })
-    .join(EOL);
+  return sNewFileContent;
 }
 
 async function main() {
