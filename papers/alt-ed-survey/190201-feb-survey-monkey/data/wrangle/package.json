@@ -1,0 +1,20 @@
+{
+  "name": "190201-feb-survey-monkey-wrangle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "wrangler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "wrangle",
+    "data",
+    "massage"
+  ],
+  "author": "John vandivier",
+  "license": "ISC",
+  "dependencies": {
+    "ella-utils": "1.0.7",
+    "js-beautify": "1.9.0"
+  }
+}
