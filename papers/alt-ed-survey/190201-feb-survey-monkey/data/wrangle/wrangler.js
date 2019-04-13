@@ -33,8 +33,9 @@ function fGetTransformersWithIndex(arrarrsCsvCells) {
   let iLargestColumnIndex = 0;
   const arrsFirstRow = arrarrsCsvCells[0];
   const arrsSecondRow = arrarrsCsvCells[1]; // survey monkey does this thing where the second row is also basically a title row
+  const arroColumnTransformsClone = JSON.parse(JSON.stringify(arroColumnTransforms)); // clone it so column numbers and other info for one spreadsheet don't propagate across sheets.
 
-  return arroColumnTransforms
+  return arroColumnTransformsClone
     .filter(oTransformer => {
       let iColumn = arrsFirstRow.findIndex(sColumnText => fiGetMatchingColumn(oTransformer, sColumnText));
       if (iColumn === -1) iColumn = arrsSecondRow.findIndex(sColumnText => fiGetMatchingColumn(oTransformer, sColumnText));
@@ -43,7 +44,7 @@ function fGetTransformersWithIndex(arrarrsCsvCells) {
         iLargestColumnIndex = Math.max(iLargestColumnIndex, iColumn);
       }
 
-      return Number.isInteger(oTransformer.iColumn) || oTransformer.bGeneratedColumn;
+      return Number.isInteger(oTransformer.iColumn) && oTransformer.iColumn > -1 || oTransformer.bGeneratedColumn;
     })
     .map(oTransformer => {
       if (oTransformer.bGeneratedColumn) {
