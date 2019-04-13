@@ -30,35 +30,36 @@ function fGetInputFileLocations() {
 }
 
 function fGetTransformersWithIndex(arrarrsCsvCells) {
-    let iLargestColumnIndex = 0;
-    const arrsFirstRow = arrarrsCsvCells[0];
-    const arrsSecondRow = arrarrsCsvCells[1]; // survey monkey does this thing where the second row is also basically a title row
-  
-    return arroColumnTransforms.filter(oTransformer => {
-        let iColumn = arrsFirstRow.findIndex(sColumnText => fiGetMatchingColumn(oTransformer, sColumnText));
-        if (iColumn === -1) iColumn = arrsSecondRow.findIndex(sColumnText => fiGetMatchingColumn(oTransformer, sColumnText));
-        if (iColumn !== -1) {
-            oTransformer.iColumn = iColumn;
-            iLargestColumnIndex = Math.max(iLargestColumnIndex, iColumn)
-        }
-    
-        return Number.isInteger(oTransformer.iColumn) || oTransformer.bGeneratedColumn;
-      })
-      .map(oTransformer => {
-          if (oTransformer.bGeneratedColumn) {
-            iLargestColumnIndex++;
-            oTransformer.iColumn = iLargestColumnIndex;
-          }
-    
-          return oTransformer;
-      });
+  let iLargestColumnIndex = 0;
+  const arrsFirstRow = arrarrsCsvCells[0];
+  const arrsSecondRow = arrarrsCsvCells[1]; // survey monkey does this thing where the second row is also basically a title row
+
+  return arroColumnTransforms
+    .filter(oTransformer => {
+      let iColumn = arrsFirstRow.findIndex(sColumnText => fiGetMatchingColumn(oTransformer, sColumnText));
+      if (iColumn === -1) iColumn = arrsSecondRow.findIndex(sColumnText => fiGetMatchingColumn(oTransformer, sColumnText));
+      if (iColumn !== -1) {
+        oTransformer.iColumn = iColumn;
+        iLargestColumnIndex = Math.max(iLargestColumnIndex, iColumn);
+      }
+
+      return Number.isInteger(oTransformer.iColumn) || oTransformer.bGeneratedColumn;
+    })
+    .map(oTransformer => {
+      if (oTransformer.bGeneratedColumn) {
+        iLargestColumnIndex++;
+        oTransformer.iColumn = iLargestColumnIndex;
+      }
+
+      return oTransformer;
+    });
 }
 
 function fiGetMatchingColumn(oTransformer, sColumnText) {
   if (!sColumnText || oTransformer.bGeneratedColumn) return;
 
   if (oTransformer.bExactMatch) {
-      return sColumnText === oTransformer.sMatcher;
+    return sColumnText === oTransformer.sMatcher;
   }
 
   return sColumnText.toLowerCase().includes(oTransformer.sMatcher.toLowerCase());
@@ -80,41 +81,43 @@ const fsGetNewSurveyMonkeyFileName = sLocation => {
   return (sDataFolderName + ' ' + path.basename(sLocation)).toLowerCase().replace(/[^\w.]/g, '-');
 };
 
-function fsObservationRowsContent (arrarrsCsvCells, arroTransformersWithIndex) {
+function fsObservationRowsContent(arrarrsCsvCells, arroTransformersWithIndex) {
   return arrarrsCsvCells
-  .slice(2, arrarrsCsvCells.length)
-  .map(arrsSurveyResponse => {
-    const arroTransformedCells = arroTransformersWithIndex.reduce((arroAcc, oTransformer) => {
+    .slice(2, arrarrsCsvCells.length)
+    .map(arrsSurveyResponse => {
+      const arroTransformedCells = arroTransformersWithIndex.reduce((arroAcc, oTransformer) => {
         let arroDataForThisCell = [];
         const sCellValue = arrsSurveyResponse[oTransformer.iColumn];
 
         if (oTransformer.farroTransformer) {
           arroDataForThisCell = oTransformer.farroTransformer(sCellValue, arroTransformersWithIndex);
-        } else if(!oTransformer.bGeneratedColumn) {
-          arroDataForThisCell = [Object.assign({}, oTransformer, {value: sCellValue})];
+        } else if (!oTransformer.bGeneratedColumn) {
+          arroDataForThisCell = [Object.assign({}, oTransformer, { value: sCellValue })];
         }
 
         return arroAcc.concat(...arroDataForThisCell);
       }, []);
 
-      const arrsTransformedCells = arroTransformedCells.sort((oa, ob) => oa.iColumn > ob.iColumn ? 1 : -1).map(oTransformer => oTransformer.value);
+      const arrsTransformedCells = arroTransformedCells
+        .sort((oa, ob) => (oa.iColumn > ob.iColumn ? 1 : -1))
+        .map(oTransformer => oTransformer.value);
 
-    return arrsTransformedCells.join(','); // TODO: ensure sort order is correct and maybe add quotes around cell values
-  })
-  .join(EOL);
+      return arrsTransformedCells.join(','); // TODO: ensure sort order is correct and maybe add quotes around cell values
+    })
+    .join(EOL);
 }
 
 function fsTitleLineContent(arroTransformersWithIndex) {
   return arroTransformersWithIndex
     .filter(oTransformer => !oTransformer.farroTransformer)
-    .map(oTransformer => oTransformer.sOutputColumnName || oTransformer.sMatcher)
+    .map(oTransformer => oTransformer.sOutputColumnName || oTransformer.sMatcher);
 }
 
 function fsTransformSurveyMonkeyCsvContent(sOriginalFileContent) {
   const arrarrsCsvCells = CSVToArray(sOriginalFileContent);
   const arroTransformersWithIndex = fGetTransformersWithIndex(arrarrsCsvCells);
-  debugger
-  const sNewFileContent = fsTitleLineContent(arroTransformersWithIndex) + EOL + fsObservationRowsContent(arrarrsCsvCells, arroTransformersWithIndex);
+  const sNewFileContent =
+    fsTitleLineContent(arroTransformersWithIndex) + EOL + fsObservationRowsContent(arrarrsCsvCells, arroTransformersWithIndex);
 
   return sNewFileContent;
 }
