@@ -54,10 +54,6 @@ module.exports = [
     sOutputColumnName: 'FavorAI',
   },
   {
-    sMatcher: 'When you add up the pros and cons for artificial intelligence',
-    sOutputColumnName: 'FavorAI',
-  },
-  {
     sMatcher: 'is important to check whether the degree was awarded from a US institution',
     sOutputColumnName: 'FavorAmerican',
   },
