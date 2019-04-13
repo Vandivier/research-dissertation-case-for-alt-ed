@@ -1,6 +1,6 @@
 # 2019-feb-survey-monkey data README
 
-Section 1 describes transformation of raw survey data into the spreadsheet used by Stata.
+Section 1 describes obtaining and wrangling raw data into the output.csv used for STATA analysis.
 
 Section 2 has notes on collecting responses, with emphasis on responses obtained through Github.
 
@@ -8,19 +8,7 @@ Section 3 has miscellaneous notes.
 
 ## Transformation of Raw Survey Data
 
-Massaging is accomplished by executing a JavaScript / Node process. The /massage folder contains the code for that program.
-
-The program reads CSV files within the /2018 and /2019 folders to produce /data/output.csv
-
-From SurveyMonkey's perspective, all observations fall under two distinct surveys:
-
-1. Survey on Alternative Credentials was administered multiple times in 2018.
-
-2. Survey on Alternative Credentials-2 was administered in February 2019.
-
-The question set from Oct 2018 was a superset of Feb 2018, so a new SurveyMonkey survey wasn't needed, just new collectors.
-
-However, the Feb 2019 questions were a subset of Oct 2018, so a new survey needed to be created, or else data would have been thrown out.
+Data was sourced through multiple administrations of differently formatted SurveyMonkey surveys.
 
 When exporting data from SurveyMonkey, the following steps were taken:
 
@@ -33,6 +21,32 @@ When exporting data from SurveyMonkey, the following steps were taken:
 4. Click export button.
 
 5. The zip was extracted to the relevant folder and the Excel folder was deleted, leaving the CSV folder and READ_ME.txt
+
+From SurveyMonkey's perspective, all observations fall under two distinct surveys:
+
+1. Survey on Alternative Credentials was administered multiple times in 2018.
+
+2. Survey on Alternative Credentials-2 was administered multiple times in 2019.
+
+Because SurveyMonkey exports by survey rather than by administration, this yields two CSV source files. The folder containing each CSV file is labeled by year.
+
+Wrangling survey data is documented as code within /wrangle/wrangle.js.
+
+Wrangling involves variable preperation. For example, a wrangling operation might be to transform the question on whether the respondent contributes to hiring decisions from a categorical variable with answers yes, no, and I am currently unemployed, into two boolean variables called IsManager and IsUnemployed which represent the same information in a slightly more analytical-friendly way.
+
+Each source file is independently wrangled into an intermediary output file, and these files are then joined to form output.csv. The joining process uses two scripts copied from the /github-email-scraper-node repository at revision d08724f0c63b on 4/12/19. The two scripts are called unwrite-csv.js and write-csv.js.
+
+With a terminal open in the /wrangle folder, the wrangling and joining process is accomplished by running the following three bash commands in order:
+
+1. `npm install`
+
+2. `node wrangler`
+
+3. `node unwrite-csv 2018-survey-on-alternative-credentials 2019-survey-on-alternative-credentials --UniqueKey=sRespondentID`
+
+4. `node write-csv 2018-survey-on-alternative-credentials 2019-survey-on-alternative-credentials --UniqueKey=sRespondentID`
+    1. TODO: fix this step; write-csv is depending on key index which varies by file so output is incorrectly merged
+    2. output file doesn't even have all expected columns (eg superset of two input files)
 
 ## Collecting Responses
 
