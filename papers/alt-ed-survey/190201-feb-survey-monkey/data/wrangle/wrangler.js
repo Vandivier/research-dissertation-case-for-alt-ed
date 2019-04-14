@@ -36,12 +36,18 @@ function fGetTransformersWithIndex(arrarrsCsvCells) {
   const arroColumnTransformsClone = JSON.parse(JSON.stringify(arroColumnTransforms)); // clone it so column numbers and other info for one spreadsheet don't propagate across sheets.
 
   return arroColumnTransformsClone
-    .filter(oTransformer => {
+    .filter((oTransformer, iTransformerIndex) => {
       let iColumn = arrsFirstRow.findIndex(sColumnText => fiGetMatchingColumn(oTransformer, sColumnText));
       if (iColumn === -1) iColumn = arrsSecondRow.findIndex(sColumnText => fiGetMatchingColumn(oTransformer, sColumnText));
       if (iColumn !== -1) {
         oTransformer.iColumn = iColumn;
         iLargestColumnIndex = Math.max(iLargestColumnIndex, iColumn);
+      }
+
+      // reference the transformer function if it exists
+      // this is lost during clone step
+      if (arroColumnTransforms[iTransformerIndex].farroTransformer) {
+        oTransformer.farroTransformer = arroColumnTransforms[iTransformerIndex].farroTransformer
       }
 
       return Number.isInteger(oTransformer.iColumn) && oTransformer.iColumn > -1 || oTransformer.bGeneratedColumn;
@@ -91,7 +97,7 @@ function fsObservationRowsContent(arrarrsCsvCells, arroTransformersWithIndex) {
         const sCellValue = arrsSurveyResponse[oTransformer.iColumn];
 
         if (oTransformer.farroTransformer) {
-          arroDataForThisCell = oTransformer.farroTransformer(sCellValue, arroTransformersWithIndex);
+          arroDataForThisCell = oTransformer.farroTransformer(sCellValue, oTransformer, arroTransformersWithIndex);
         } else if (!oTransformer.bGeneratedColumn) {
           arroDataForThisCell = [Object.assign({}, oTransformer, { value: sCellValue })];
         }

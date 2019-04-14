@@ -1,3 +1,9 @@
+// if a cell value is empty transform it to 0
+// if a cell value is non-empty, transform it to 1
+function fBooleanize(sCellValue, oTransformer) {
+  return [Object.assign({}, oTransformer, { value: sCellValue ? 1 : 0 })];
+}
+
 module.exports = [
   {
     sMatcher: 'Respondent ID',
@@ -10,7 +16,7 @@ module.exports = [
   },
   {
     sMatcher: 'Do you contribute to hiring and firing decisions at your company?',
-    farroTransformer: function(sCellValue, arroTransformersWithIndex) {
+    farroTransformer: function(sCellValue, oTransformer, arroTransformersWithIndex) {
       const oTransformerManager = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsManager');
       const oTransformerUnemployed = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsUnemployed');
 
@@ -22,10 +28,11 @@ module.exports = [
   },
   {
     sMatcher: 'Do you work in a STEM profession?',
-    farroTransformer: function(sCellValue, arroTransformersWithIndex) {
+    farroTransformer: function(sCellValue, oTransformer, arroTransformersWithIndex) {
       const oTransformerStem = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsStem');
       const oTransformerUnsureStem = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsUnsureStem');
 
+      // TODO: this doesn't work
       return [
         Object.assign({}, oTransformerStem, { value: sCellValue === '1' ? 1 : 0 }),
         Object.assign({}, oTransformerUnsureStem, { value: sCellValue === '3' ? 1 : 0 }),
@@ -59,18 +66,24 @@ module.exports = [
   },
   {
     sMatcher: 'Udacity',
+    farroTransformer: fBooleanize,
   },
   {
     sMatcher: 'Udemy',
+    farroTransformer: fBooleanize,
   },
   {
     sMatcher: 'Coursera',
+    farroTransformer: fBooleanize,
   },
   {
     sMatcher: 'Pluralsight',
+    farroTransformer: fBooleanize,
   },
   {
     sMatcher: 'Lynda.com',
+    farroTransformer: fBooleanize,
+    sOutputColumnName: 'Lynda',
   },
   {
     sMatcher: 'Which of these industries most closely matches your profession?',
