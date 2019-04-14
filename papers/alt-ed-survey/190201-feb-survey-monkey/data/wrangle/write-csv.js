@@ -98,6 +98,8 @@ function fParseOptions() {
 }
 
 function fMergeCaches() {
+  let oColumns = {};
+
   const oMergedCache = arroCaches.reduce((oMergedCacheAcc, oCurrentCache, i) => {
     return Object.keys(oCurrentCache).reduce((oCurrentCacheAcc, sOriginalRecordKey, ii) => {
       const oCurrentRecord = oCurrentCache[sOriginalRecordKey];
@@ -107,16 +109,26 @@ function fMergeCaches() {
       if (oExistingRecord) {
         if (oOptions.mergeDuplicates) {
           // existing column values survive; only overwrite unpopulated columns
-          oCurrentCacheAcc[sNewRecordKey] = Object.assign({}, oNew, oExisting);
+          oCurrentCacheAcc[sNewRecordKey] = Object.assign({}, oCurrentRecord, oExistingRecord);
         }
         // else do nothing; the existing record survives and current record is dropped
       } else {
         oCurrentCacheAcc[sNewRecordKey] = Object.assign({}, oCurrentRecord);
       }
 
+      oColumns = Object.assign({}, oColumns, oCurrentRecord);
+
       return oCurrentCacheAcc;
     }, oMergedCacheAcc);
   }, {});
+
+  // normalize columns
+  // make sure every record has every column referenced, even if the value is empty
+  Object.entries(oMergedCache).forEach(([sUniqueRecordKey, oRecord]) => {
+    Object.keys(oColumns).forEach(sColumnKey => {
+      oRecord[sColumnKey] = oRecord[sColumnKey] || '';
+    });
+  });
 
   arroCaches = [oMergedCache];
 }
