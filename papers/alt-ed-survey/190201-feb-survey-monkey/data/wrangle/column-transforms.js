@@ -32,11 +32,15 @@ module.exports = [
     sMatcher: 'Do you work in a STEM profession?',
     farroTransformer: function(sCellValue, oTransformer, arroTransformersWithIndex) {
       const oTransformerStem = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsStem');
+      const oTransformerNotStem = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsNotStem');
       const oTransformerUnsureStem = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsUnsureStem');
+      const oTransformerUnreportedStem = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsUnreportedStem');
 
       return [
         Object.assign({}, oTransformerStem, { value: sCellValue === '1' ? 1 : 0 }),
+        Object.assign({}, oTransformerNotStem, { value: sCellValue === '2' ? 1 : 0 }),
         Object.assign({}, oTransformerUnsureStem, { value: sCellValue === '3' ? 1 : 0 }),
+        Object.assign({}, oTransformerUnreportedStem, { value: !sCellValue ? 1 : 0 }),
       ];
     },
   },
@@ -108,8 +112,37 @@ module.exports = [
   },
   {
     bExactMatch: true,
+    bTransientColumn: true,
+    farroTransformer: function(sCellValue, oTransformer, arroTransformersWithIndex) {
+      const oTransformerMale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsReportedMale');
+      const oTransformerFemale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsReportedFemale');
+      const oTransformerNonbinary = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsReportedNonbinary');
+      const oTransformerUnreportedGender = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsUnreportedGender');
+
+      return [
+        Object.assign({}, oTransformerMale, { value: sCellValue === '2' ? 1 : 0 }),
+        Object.assign({}, oTransformerFemale, { value: sCellValue === '1' ? 1 : 0 }),
+        Object.assign({}, oTransformerNonbinary, { value: sCellValue === '3' ? 1 : 0 }),
+        Object.assign({}, oTransformerUnreportedGender, { value: !sCellValue ? 1 : 0 }),
+      ];
+    },
     sMatcher: 'Gender?',
-    sOutputColumnName: 'ReportedGender',
+  },
+  {
+    bGeneratedColumn: true,
+    sOutputColumnName: 'IsReportedMale',
+  },
+  {
+    bGeneratedColumn: true,
+    sOutputColumnName: 'IsReportedFemale',
+  },
+  {
+    bGeneratedColumn: true,
+    sOutputColumnName: 'IsReportedNonbinary',
+  },
+  {
+    bGeneratedColumn: true,
+    sOutputColumnName: 'IsUnreportedGender',
   },
   {
     bExactMatch: true,
@@ -128,8 +161,31 @@ module.exports = [
   },
   {
     bExactMatch: true,
+    bTransientColumn: true,
+    farroTransformer: function(sCellValue, oTransformer, arroTransformersWithIndex) {
+      const oTransformerMale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsSurveyMonkeyMale');
+      const oTransformerFemale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsSurveyMonkeyFemale');
+      const oTransformerUnreportedGender = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsSurveyMonkeyUnreportedGender');
+
+      return [
+        Object.assign({}, oTransformerMale, { value: sCellValue === '1' ? 1 : 0 }),
+        Object.assign({}, oTransformerFemale, { value: sCellValue === '2' ? 1 : 0 }),
+        Object.assign({}, oTransformerUnreportedGender, { value: !sCellValue ? 1 : 0 }),
+      ];
+    },
     sMatcher: 'Gender',
-    sOutputColumnName: 'SurveyMonkeyGender',
+  },
+  {
+    bGeneratedColumn: true,
+    sOutputColumnName: 'IsSurveyMonkeyMale',
+  },
+  {
+    bGeneratedColumn: true,
+    sOutputColumnName: 'IsSurveyMonkeyFemale',
+  },
+  {
+    bGeneratedColumn: true,
+    sOutputColumnName: 'IsSurveyMonkeyUnreportedGender',
   },
   {
     bExactMatch: true,
@@ -155,6 +211,42 @@ module.exports = [
   },
   {
     bGeneratedColumn: true,
+    sOutputColumnName: 'IsNotStem',
+  },
+  {
+    bGeneratedColumn: true,
     sOutputColumnName: 'IsUnsureStem',
-  }
+  },
+  {
+    bGeneratedColumn: true,
+    sOutputColumnName: 'IsUnreportedStem',
+  },
+  {
+    bGeneratedColumn: true,
+    bTransientColumn: true,
+    farroTransformer: function(sCellValue, oTransformer, arroTransformersWithIndex) {
+      const oTransformerReportedMale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsReportedMale');
+      const oTransformerReportedFemale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsMale');
+      const oTransformerSurveyMonkeyMale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsMale');
+      const oTransformerSurveyMonkeyFemale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsMale');
+      const oTransformerMale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsMale');
+      const oTransformerFemale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsFemale');
+
+      const bIsMale = oTransformerReportedMale.value === 1 || oTransformerSurveyMonkeyMale.value === 1;
+      const bIsFemale = oTransformerReportedFemale.value === 1 || oTransformerSurveyMonkeyFemale.value === 1;
+
+      return [
+        Object.assign({}, oTransformerMale, { value: bIsMale ? 1 : 0 }),
+        Object.assign({}, oTransformerFemale, { value: bIsFemale ? 1 : 0 }),
+      ];
+    },
+  },
+  {
+    bGeneratedColumn: true,
+    sOutputColumnName: 'IsMale',
+  },
+  {
+    bGeneratedColumn: true,
+    sOutputColumnName: 'IsFemale',
+  },
 ];
