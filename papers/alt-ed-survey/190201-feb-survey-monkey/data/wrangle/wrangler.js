@@ -109,14 +109,14 @@ function fsObservationRowsContent(arrarrsCsvCells, arroTransformersWithIndex) {
         .sort((oa, ob) => (oa.iColumn > ob.iColumn ? 1 : -1))
         .map(oTransformer => oTransformer.value);
 
-      return arrsTransformedCells.join(','); // TODO: ensure sort order is correct and maybe add quotes around cell values
+      return arrsTransformedCells.join(',');
     })
     .join(EOL);
 }
 
 function fsTitleLineContent(arroTransformersWithIndex) {
   return arroTransformersWithIndex
-    .filter(oTransformer => !oTransformer.farroTransformer)
+    .filter(oTransformer => !oTransformer.bTransientColumn)
     .map(oTransformer => oTransformer.sOutputColumnName || oTransformer.sMatcher);
 }
 

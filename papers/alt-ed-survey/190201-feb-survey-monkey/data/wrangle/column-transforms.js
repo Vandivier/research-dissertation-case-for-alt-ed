@@ -15,6 +15,7 @@ module.exports = [
     sMatcher: 'End Date',
   },
   {
+    bTransientColumn: true,
     sMatcher: 'Do you contribute to hiring and firing decisions at your company?',
     farroTransformer: function(sCellValue, oTransformer, arroTransformersWithIndex) {
       const oTransformerManager = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsManager');
@@ -27,12 +28,12 @@ module.exports = [
     },
   },
   {
+    bTransientColumn: true,
     sMatcher: 'Do you work in a STEM profession?',
     farroTransformer: function(sCellValue, oTransformer, arroTransformersWithIndex) {
       const oTransformerStem = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsStem');
       const oTransformerUnsureStem = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsUnsureStem');
 
-      // TODO: this doesn't work
       return [
         Object.assign({}, oTransformerStem, { value: sCellValue === '1' ? 1 : 0 }),
         Object.assign({}, oTransformerUnsureStem, { value: sCellValue === '3' ? 1 : 0 }),
