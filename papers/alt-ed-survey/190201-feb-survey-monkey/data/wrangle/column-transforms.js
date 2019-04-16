@@ -68,23 +68,27 @@ module.exports = [
   {
     sMatcher: 'Udacity',
     farroTransformer: fBooleanize,
+    sOutputColumnName: 'HeardOfUdacity',
   },
   {
     sMatcher: 'Udemy',
     farroTransformer: fBooleanize,
+    sOutputColumnName: 'HeardOfUdemy',
   },
   {
     sMatcher: 'Coursera',
     farroTransformer: fBooleanize,
+    sOutputColumnName: 'HeardOfCoursera',
   },
   {
     sMatcher: 'Pluralsight',
     farroTransformer: fBooleanize,
+    sOutputColumnName: 'HeardOfPluralsight',
   },
   {
     sMatcher: 'Lynda.com',
     farroTransformer: fBooleanize,
-    sOutputColumnName: 'Lynda',
+    sOutputColumnName: 'HeardOfLynda',
   },
   {
     sMatcher: 'Which of these industries most closely matches your profession?',
