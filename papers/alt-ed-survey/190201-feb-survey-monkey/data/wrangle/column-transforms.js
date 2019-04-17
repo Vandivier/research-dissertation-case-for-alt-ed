@@ -15,6 +15,7 @@ module.exports = [
     sMatcher: 'End Date',
   },
   {
+    arrsGeneratedChildMatchers: ['IsManager', 'IsManager'],
     bTransientColumn: true,
     sMatcher: 'Do you contribute to hiring and firing decisions at your company?',
     farroTransformer: function(sCellValue, oTransformer, arroTransformersWithIndex) {
@@ -28,6 +29,8 @@ module.exports = [
     },
   },
   {
+    // TODO: maybe implement simplematch feature where arrsGeneratedChildMatchers: [['IsStem', '1'],['IsUnsureStem', '3']] substitutes for farroTransformer
+    arrsGeneratedChildMatchers: ['IsStem', 'IsNotStem', 'IsUnsureStem', 'IsUnreportedStem'],
     bTransientColumn: true,
     sMatcher: 'Do you work in a STEM profession?',
     farroTransformer: function(sCellValue, oTransformer, arroTransformersWithIndex) {
@@ -111,6 +114,7 @@ module.exports = [
     sOutputColumnName: 'FavorChristianity',
   },
   {
+    arrsGeneratedChildMatchers: ['IsReportedMale', 'IsReportedFemale', 'IsReportedNonbinary', 'IsUnreportedGender'],
     bExactMatch: true,
     bTransientColumn: true,
     farroTransformer: function(sCellValue, oTransformer, arroTransformersWithIndex) {
@@ -130,7 +134,7 @@ module.exports = [
   },
   {
     bGeneratedColumn: true,
-    sOutputColumnName: 'IsReportedMale',
+    sOutputColumnName: 'IsReportedMale', // these columns are being inappropriately skipped for row content
   },
   {
     bGeneratedColumn: true,
@@ -160,6 +164,7 @@ module.exports = [
     sOutputColumnName: 'SurveyMonkeyAge',
   },
   {
+    arrsGeneratedChildMatchers: ['IsSurveyMonkeyMale', 'IsSurveyMonkeyFemale', 'IsSurveyMonkeyUnreportedGender'],
     bExactMatch: true,
     bTransientColumn: true,
     farroTransformer: function(sCellValue, oTransformer, arroTransformersWithIndex) {
@@ -222,19 +227,22 @@ module.exports = [
     sOutputColumnName: 'IsUnreportedStem',
   },
   {
+    arrsGeneratedChildMatchers: ['IsMale', 'IsFemale'],
     bGeneratedColumn: true,
     bTransientColumn: true,
     farroTransformer: function(sCellValue, oTransformer, arroTransformersWithIndex) {
       const oTransformerReportedMale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsReportedMale');
-      const oTransformerReportedFemale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsMale');
-      const oTransformerSurveyMonkeyMale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsMale');
-      const oTransformerSurveyMonkeyFemale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsMale');
+      const oTransformerSurveyMonkeyMale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsSurveyMonkeyMale');
       const oTransformerMale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsMale');
+
+      const oTransformerReportedFemale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsReportedFemale');
+      const oTransformerSurveyMonkeyFemale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsSurveyMonkeyFemale');
       const oTransformerFemale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsFemale');
 
-      const bIsMale = oTransformerReportedMale.value === 1 || oTransformerSurveyMonkeyMale.value === 1;
-      const bIsFemale = oTransformerReportedFemale.value === 1 || oTransformerSurveyMonkeyFemale.value === 1;
+      const bIsMale = oTransformerReportedMale && oTransformerReportedMale.value === 1 || oTransformerSurveyMonkeyMale && oTransformerSurveyMonkeyMale.value === 1;
+      const bIsFemale = oTransformerReportedFemale && oTransformerReportedFemale.value === 1 || oTransformerSurveyMonkeyFemale && oTransformerSurveyMonkeyFemale.value === 1;
 
+      // TODO: this doesn't work
       return [
         Object.assign({}, oTransformerMale, { value: bIsMale ? 1 : 0 }),
         Object.assign({}, oTransformerFemale, { value: bIsFemale ? 1 : 0 }),

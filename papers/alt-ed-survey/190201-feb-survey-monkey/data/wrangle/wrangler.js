@@ -50,8 +50,19 @@ function fGetTransformersWithIndex(arrarrsCsvCells) {
         oTransformer.farroTransformer = arroColumnTransforms[iTransformerIndex].farroTransformer
       }
 
-      return Number.isInteger(oTransformer.iColumn) && oTransformer.iColumn > -1 || oTransformer.bGeneratedColumn;
+      const bKeepColumn = Number.isInteger(oTransformer.iColumn) && oTransformer.iColumn > -1 || oTransformer.bGeneratedColumn;
+
+      // if we don't keep a column, don't keep it's generated children either
+      if (oTransformer.arrsGeneratedChildMatchers && !bKeepColumn) {
+        oTransformer.arrsGeneratedChildMatchers.forEach(sMatcher => {
+          const oRelevantTransformer = arroColumnTransformsClone.find(oTransformer => oTransformer.sOutputColumnName === sMatcher);
+          oRelevantTransformer.bMarkedForDeletion = true;
+        })
+      }
+
+      return bKeepColumn;
     })
+    .filter(oTransformer => !oTransformer.bMarkedForDeletion)
     .map(oTransformer => {
       if (oTransformer.bGeneratedColumn) {
         iLargestColumnIndex++;
@@ -116,6 +127,7 @@ function fsObservationRowsContent(arrarrsCsvCells, arroTransformersWithIndex) {
 
 function fsTitleLineContent(arroTransformersWithIndex) {
   return arroTransformersWithIndex
+    .sort((oa, ob) => (oa.iColumn > ob.iColumn ? 1 : -1))
     .filter(oTransformer => !oTransformer.bTransientColumn)
     .map(oTransformer => oTransformer.sOutputColumnName || oTransformer.sMatcher);
 }
