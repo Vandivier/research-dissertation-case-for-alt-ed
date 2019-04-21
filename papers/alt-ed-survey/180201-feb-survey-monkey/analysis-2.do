@@ -1,5 +1,6 @@
-do "D:\GitHub\data-science-practice\stata\udacity-exploratory-analysis\analysis.do"
-//do "C:\Users\john.vandivier\workspace\data-science-practice\stata\udacity-exploratory-analysis\analysis.do"
+clear
+
+do "D:\GitHub\research-dissertation-case-for-alt-ed\papers\alt-ed-survey\180201-feb-survey-monkey\analysis-1.do"
 
 // paper: step 1: discuss analysis, explaning q2
 // step 2: discuss analysis 2, explaining index
