@@ -23,8 +23,10 @@ reg voi issurveymonkeyfemale isnotstem isindustry3 isindustry7 isindustry8 isind
 * // r2:              .?
 * // adjr2:           .?
 * // n:               ?
+reg voi issurveymonkeyfemale isnotstem isindustry3 isindustry8 isindustry9 isindustry12 isregion5 isregion7 isregion9 nvoifai1 nvoifai2 nvoifai3 nvoifconventionalsoon1 nvoifcrypto2 nvoifcrypto3 nvoifonline2 nvoifregulation3 nvoifreligion1 csmage2 csmincome1 csmincome2 cprovider1 cprovider2
 
 * // 2018voistrong
 * // r2:              .?
 * // adjr2:           .?
 * // n:               ?
+reg voi issurveymonkeyfemale isregion7 nvoifai1 nvoifai2 nvoifai3 nvoifconventionalsoon1 nvoifcrypto3 nvoifonline2 nvoifregulation3 csmage2 csmincome1 csmincome2 cprovider1 cprovider2
