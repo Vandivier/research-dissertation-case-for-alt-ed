@@ -7,6 +7,7 @@ ssc install fsum, replace
 fsum, stats(n mean sd min p25 p50 p75 max)
 
 * // voi explains about 62.5% of the general index.
+* // special regression 1
 reg ioi voi
 * // reg exploration, short
 * // demonstrate strong cross-correlation within ioi
@@ -15,6 +16,8 @@ reg voi nvoifconventionalsoon1 nvoifonline1
 reg nvoifonline1 nvoifai1 nvoifcrypto1
 * // prima facie other technologies are weak predictors; we'll see if they are better in the long reg
 reg voi nvoifonline1 nvoifai1 nvoifcrypto1
+
+* // special regression 5
 * // managers are more positive than non-managers
 reg voi ismanager
 * // looks like being a manager doesn't predict nationalism (no anti-foreign bias wrt employer)
@@ -30,10 +33,21 @@ reg voi nvoifchristianity1
 * //   theory: conservatives are more pro-free market, but this is outpaced by progressive's pro-innovation
 * //   above theory can be somewhat tested using nationalism and innovation proxies
 reg voi nvoifregulation1
+
+* // special reg 10
 * // simple reg time has weak negative impact!
 reg voi ctime1
 * // nonlinear time is insignificant, but directional effects are more intuitive; linear increasing and negative quadratic
 reg voi ctime1 ctime2
+
+* // 6 individuals identified an nonbinary
+count if isreportednonbinary == 1
+* // special reg 12
+* // max p value of .594 on nonbinary; coeffecient in excess of .5, while issurveymonkeymale has -.686
+reg voi issurveymonkeymale ismanager isunemployed isreportednonbinary isindustry1 isindustry2 isindustry3 isindustry4 isindustry5 isindustry6 isindustry7 isindustry8 isindustry10 isindustry11 isindustry12 isregion5 isregion6 isregion7 nvoifai1 nvoifai2 nvoifconventionalsoon1 nvoifconventionalsoon3 nvoifonline1 nvoifonline2 nvoifonline3 nvoifregulation1 nvoifregulation2 nvoifregulation3 crage1 crage2 crage3 csmage1 csmage2 crincome1 crincome2 crincome3 csmincome1 csmincome2 csmincome3 cprovider1 cprovider2 cprovider3 ctime3
+
+* // minors are markedly pessimistic!
+tab voi crage1
 
 * // 2018 variables long reg
 * // omits reported variables (eg, isreportedmale or crage1), voi, and ioi from right hand
