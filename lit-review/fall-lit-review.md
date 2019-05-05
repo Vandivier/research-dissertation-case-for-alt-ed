@@ -161,7 +161,7 @@ Tangentially, chapter 10 is conversational in tone and formatted a bit like a sc
 
 Craig's book takes a non-academic style with frequent anecdote and about one joke per chapter. I find this style distracting and verbose, but perhaps the fact that this book is written in a style uncommon among top books on the subject will serve to reach a different or broader audience. There isn't much useful factual information until around the third chapter, but just when an academic may be inclined to put the book away, Criag unleashes a torrent of useful factual information, and he continues this pattern of discontinuous segments of high-density information throughout the book.
 
-In chapter 3, Craig notes that 85% of jobs posted online, and 80% of employers, use an application tracking system (ATS). These software systems include functionality which ranks and filters candidates, primarily using keyword matching. Craig refers to Burning Glass research and to others to argue that These matching algorithms are known to have systematic accuracy problems. One key point is that ranking candidates is much easier to do using niche or technical skills and terms, rather than broad skills like communication or critical thinking. As a result, technical keywords have exploaded within job descriptions used by employers. Their use has highlighted, and perhaps exacerbated, a keyword-level skills gap. The skills gap is particularly severe at the entry level, indicating that traditional education providers are not equipping students with the specific skills employers are searching for.
+In chapter 3, Craig notes that more than 90% of students enroll in an undergraduate degree for job, career, or income reasons. In chapter 3, Craig notes that 85% of jobs posted online, and 80% of employers, use an application tracking system (ATS). These software systems include functionality which ranks and filters candidates, primarily using keyword matching. Craig refers to Burning Glass research and to others to argue that These matching algorithms are known to have systematic accuracy problems. One key point is that ranking candidates is much easier to do using niche or technical skills and terms, rather than broad skills like communication or critical thinking. As a result, technical keywords have exploaded within job descriptions used by employers. Their use has highlighted, and perhaps exacerbated, a keyword-level skills gap. The skills gap is particularly severe at the entry level, indicating that traditional education providers are not equipping students with the specific skills employers are searching for.
 
 Craig points out that technical terms often consist of software names or standard business process names. A competency in these categories is a good example of a middle-skill. Between high-skill labor and low-skill labor is the category of middle-skill labor, which is identified as a job that requires more than a high school diploma and less than a four-year degree [19]. The National Skills Coalition states that middle-skills "make up the largest part of the labor market in the United States and in each of the 50 states." [20]
 
@@ -203,7 +203,7 @@ In chapter 7, Craig highlights apprenticeships and other practices which mix edu
 
 In chapter 8, Craig gives a brief history of online learning, MOOCs, and providers like Udacity and Coursera. Craig's treatment of this subject is wanting, although he rightly points out that MOOCs went through periods of immense excitement and disasterous failure, from which online learning providers are only recently recovering. In 2017, Craig observes, Udacity's nanodegree had a placement rate of about 10%. This is substantially lower than ordinary university placement rates, which are themselves lower than placement rates from bootcamps and many other alternative learning approaches.
 
-While Udacity failed in one endeavor during 2017, they succeeded in another. The online provider launched their first in-person course offering, called Udacity Connect. So far, Udacity Connect appears to be much more effective, with a graduation rate about 500% higher than that of students doing online-only Nanodegree programs[29]. Overall, Craig's treatment of the evolution of MOOCs, Udacity, and Udacity's founder, Dr. Sebastian Thrun, is not very in-depth. See my Trends Over Time section where I give more detail to the history of Udacity.
+While Udacity failed in one endeavor during 2017, they succeeded in another. The online provider launched their first in-person course offering, called Udacity Connect. So far, Udacity Connect appears to be much more effective, with a graduation rate about 500% higher than that of students doing online-only Nanodegree programs[29]. In addition, compared with similar Nanodegree students who did not participate in the pilot, Udacity Connect students had a 30 percent increase in project submissions and were three times more likely to complete their Nanodegree program during a pilot conducted prior to April 2016[30]. Overall, Craig's treatment of the evolution of MOOCs, Udacity, and Udacity's founder, Dr. Sebastian Thrun, is not very in-depth. See my Trends Over Time section where I give more detail to the history of Udacity.
 
 Craig also covers Yellowbrick and microcredentials in chapter 8. Yellowbrick is a resource which awards certificates in Fashion, Beauty, and Sports so-called industry essentials, but these certificate courses largely consist of career discovery instruction, and career preparedness including the development of an e-portfolio along recommended lines. Certificates can be seen as a kind of microcredential, but microcredentials are a broad group. The difference between a credential and a microcredential is that a microcredential is meant to signal a single specific competency. Certificates may signal one or more skills, so they may or may not count. Degress are far too broad to be a microcredential.
 
@@ -341,28 +341,30 @@ TODO: Format entries properly.
 
 [29]https://www.udacity.com/uconnect
 
-[30]https://www.playworks.org/news/playworks-is-top-10-education-finalist-in-global-100change-competition/
+[30]https://blog.udacity.com/2016/04/introducing-udacity-connect-turbocharged-learning.html
 
-[31]http://100andchange.foundationcenter.org/dashboard/
+[31]https://www.playworks.org/news/playworks-is-top-10-education-finalist-in-global-100change-competition/
 
-[32]https://www.macfound.org/programs/100change-2017-semifinalists/
+[32]http://100andchange.foundationcenter.org/dashboard/
 
-[33]https://www.khanacademy.org/about/blog/post/160451329150/studying-for-the-sat-for-20-hours-on-khan-academy
+[33]https://www.macfound.org/programs/100change-2017-semifinalists/
 
-[34]https://www.khanacademy.org/about/blog/post/163503591115/khan-academy-is-the-official-practice-partner-for
+[34]https://www.khanacademy.org/about/blog/post/160451329150/studying-for-the-sat-for-20-hours-on-khan-academy
 
-[35]https://en.wikipedia.org/w/index.php?title=Udacity&oldid=853136895
+[35]https://www.khanacademy.org/about/blog/post/163503591115/khan-academy-is-the-official-practice-partner-for
 
-[36]https://www.nytimes.com/2018/07/19/us/politics/trump-worker-training.html
+[36]https://en.wikipedia.org/w/index.php?title=Udacity&oldid=853136895
 
-[37]https://www.khanacademy.org/badges/great-listener
+[37]https://www.nytimes.com/2018/07/19/us/politics/trump-worker-training.html
 
-[38]https://en.wikipedia.org/w/index.php?title=Forgetting_curve&oldid=872497490
+[38]https://www.khanacademy.org/badges/great-listener
 
-[39]https://reason.com/reasontv/2018/01/22/school-a-waste-of-time-and-money
+[39]https://en.wikipedia.org/w/index.php?title=Forgetting_curve&oldid=872497490
 
-[40]http://www.econlib.org/archives/2009/06/friedmans_law.html
+[40]https://reason.com/reasontv/2018/01/22/school-a-waste-of-time-and-money
 
-[41]https://www.youtube.com/watch?v=Hm_vl2FRiNQ
+[41]http://www.econlib.org/archives/2009/06/friedmans_law.html
 
-[42]https://www.census.gov/content/dam/Census/library/publications/2016/demo/p20-578.pdf
+[42]https://www.youtube.com/watch?v=Hm_vl2FRiNQ
+
+[43]https://www.census.gov/content/dam/Census/library/publications/2016/demo/p20-578.pdf
