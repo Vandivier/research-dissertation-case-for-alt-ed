@@ -37,7 +37,9 @@ module.exports = [
       const oTransformerStem = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsStem');
       const oTransformerNotStem = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsNotStem');
       const oTransformerUnsureStem = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsUnsureStem');
-      const oTransformerUnreportedStem = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsUnreportedStem');
+      const oTransformerUnreportedStem = arroTransformersWithIndex.find(
+        oTransformer => oTransformer.sOutputColumnName === 'IsUnreportedStem'
+      );
 
       return [
         Object.assign({}, oTransformerStem, { value: sCellValue === '1' ? 1 : 0 }),
@@ -54,7 +56,7 @@ module.exports = [
   {
     sMatcher:
       'It will soon become fairly conventional for high school graduates to obtain alternative credentials instead of going to college.',
-      sOutputColumnName: 'FavorConventionalSoon',
+    sOutputColumnName: 'FavorConventionalSoon',
   },
   {
     sMatcher: 'When you add up the pros and cons for online education',
@@ -120,8 +122,12 @@ module.exports = [
     farroTransformer: function(sCellValue, oTransformer, arroTransformersWithIndex) {
       const oTransformerMale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsReportedMale');
       const oTransformerFemale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsReportedFemale');
-      const oTransformerNonbinary = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsReportedNonbinary');
-      const oTransformerUnreportedGender = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsUnreportedGender');
+      const oTransformerNonbinary = arroTransformersWithIndex.find(
+        oTransformer => oTransformer.sOutputColumnName === 'IsReportedNonbinary'
+      );
+      const oTransformerUnreportedGender = arroTransformersWithIndex.find(
+        oTransformer => oTransformer.sOutputColumnName === 'IsUnreportedGender'
+      );
 
       return [
         Object.assign({}, oTransformerMale, { value: sCellValue === '2' ? 1 : 0 }),
@@ -170,7 +176,9 @@ module.exports = [
     farroTransformer: function(sCellValue, oTransformer, arroTransformersWithIndex) {
       const oTransformerMale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsSurveyMonkeyMale');
       const oTransformerFemale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsSurveyMonkeyFemale');
-      const oTransformerUnreportedGender = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsSurveyMonkeyUnreportedGender');
+      const oTransformerUnreportedGender = arroTransformersWithIndex.find(
+        oTransformer => oTransformer.sOutputColumnName === 'IsSurveyMonkeyUnreportedGender'
+      );
 
       return [
         Object.assign({}, oTransformerMale, { value: sCellValue === '1' ? 1 : 0 }),
@@ -232,15 +240,25 @@ module.exports = [
     bTransientColumn: true,
     farroTransformer: function(sCellValue, oTransformer, arroTransformersWithIndex, arrsSurveyResponse, arroAcc) {
       const oTransformerReportedMale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsReportedMale');
-      const oTransformerSurveyMonkeyMale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsSurveyMonkeyMale');
+      const oTransformerSurveyMonkeyMale = arroTransformersWithIndex.find(
+        oTransformer => oTransformer.sOutputColumnName === 'IsSurveyMonkeyMale'
+      );
       const oTransformerMale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsMale');
 
-      const oTransformerReportedFemale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsReportedFemale');
-      const oTransformerSurveyMonkeyFemale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsSurveyMonkeyFemale');
+      const oTransformerReportedFemale = arroTransformersWithIndex.find(
+        oTransformer => oTransformer.sOutputColumnName === 'IsReportedFemale'
+      );
+      const oTransformerSurveyMonkeyFemale = arroTransformersWithIndex.find(
+        oTransformer => oTransformer.sOutputColumnName === 'IsSurveyMonkeyFemale'
+      );
       const oTransformerFemale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsFemale');
 
-      const bIsMale = oTransformerReportedMale && arrsSurveyResponse[oTransformerReportedMale.iColumn] === 1 || oTransformerSurveyMonkeyMale && arrsSurveyResponse[oTransformerSurveyMonkeyMale.iColumn] === 1;
-      const bIsFemale = oTransformerReportedFemale && arrsSurveyResponse[oTransformerReportedFemale.iColumn] === 1 || oTransformerSurveyMonkeyFemale && arrsSurveyResponse[oTransformerSurveyMonkeyFemale.iColumn] === 1;
+      const bIsMale =
+        (oTransformerReportedMale && arrsSurveyResponse[oTransformerReportedMale.iColumn] === 1) ||
+        (oTransformerSurveyMonkeyMale && arrsSurveyResponse[oTransformerSurveyMonkeyMale.iColumn] === 1);
+      const bIsFemale =
+        (oTransformerReportedFemale && arrsSurveyResponse[oTransformerReportedFemale.iColumn] === 1) ||
+        (oTransformerSurveyMonkeyFemale && arrsSurveyResponse[oTransformerSurveyMonkeyFemale.iColumn] === 1);
 
       return [
         Object.assign({}, oTransformerMale, { value: bIsMale ? 1 : 0 }),

@@ -47,17 +47,17 @@ function fGetTransformersWithIndex(arrarrsCsvCells) {
       // reference the transformer function if it exists
       // this is lost during clone step
       if (arroColumnTransforms[iTransformerIndex].farroTransformer) {
-        oTransformer.farroTransformer = arroColumnTransforms[iTransformerIndex].farroTransformer
+        oTransformer.farroTransformer = arroColumnTransforms[iTransformerIndex].farroTransformer;
       }
 
-      const bKeepColumn = Number.isInteger(oTransformer.iColumn) && oTransformer.iColumn > -1 || oTransformer.bGeneratedColumn;
+      const bKeepColumn = (Number.isInteger(oTransformer.iColumn) && oTransformer.iColumn > -1) || oTransformer.bGeneratedColumn;
 
       // if we don't keep a column, don't keep it's generated children either
       if (oTransformer.arrsGeneratedChildMatchers && !bKeepColumn) {
         oTransformer.arrsGeneratedChildMatchers.forEach(sMatcher => {
           const oRelevantTransformer = arroColumnTransformsClone.find(oTransformer => oTransformer.sOutputColumnName === sMatcher);
           oRelevantTransformer.bMarkedForDeletion = true;
-        })
+        });
       }
 
       return bKeepColumn;
@@ -108,7 +108,13 @@ function fsObservationRowsContent(arrarrsCsvCells, arroTransformersWithIndex) {
         const sCellValue = arrsSurveyResponse[oTransformer.iColumn];
 
         if (oTransformer.farroTransformer) {
-          arroNewDataForThisCell = oTransformer.farroTransformer(sCellValue, oTransformer, arroTransformersWithIndex, arrsSurveyResponse, arroAcc);
+          arroNewDataForThisCell = oTransformer.farroTransformer(
+            sCellValue,
+            oTransformer,
+            arroTransformersWithIndex,
+            arrsSurveyResponse,
+            arroAcc
+          );
         } else if (!oTransformer.bGeneratedColumn) {
           arroNewDataForThisCell = [Object.assign({}, oTransformer, { value: sCellValue })];
         }
