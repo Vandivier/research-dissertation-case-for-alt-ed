@@ -260,7 +260,6 @@ module.exports = [
         (oTransformerReportedFemale && oTransformerReportedFemale.value === 1) ||
         (oTransformerSurveyMonkeyFemale && oTransformerSurveyMonkeyFemale.value === 1);
 
-        debugger
       return [
         Object.assign({}, oTransformerMale, { value: bIsMale ? 1 : 0 }),
         Object.assign({}, oTransformerFemale, { value: bIsFemale ? 1 : 0 }),
