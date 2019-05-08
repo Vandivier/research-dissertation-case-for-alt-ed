@@ -230,7 +230,7 @@ module.exports = [
     arrsGeneratedChildMatchers: ['IsMale', 'IsFemale'],
     bGeneratedColumn: true,
     bTransientColumn: true,
-    farroTransformer: function(sCellValue, oTransformer, arroTransformersWithIndex) {
+    farroTransformer: function(sCellValue, oTransformer, arroTransformersWithIndex, arrsSurveyResponse, arroAcc) {
       const oTransformerReportedMale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsReportedMale');
       const oTransformerSurveyMonkeyMale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsSurveyMonkeyMale');
       const oTransformerMale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsMale');
@@ -239,10 +239,9 @@ module.exports = [
       const oTransformerSurveyMonkeyFemale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsSurveyMonkeyFemale');
       const oTransformerFemale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsFemale');
 
-      const bIsMale = oTransformerReportedMale && oTransformerReportedMale.value === 1 || oTransformerSurveyMonkeyMale && oTransformerSurveyMonkeyMale.value === 1;
-      const bIsFemale = oTransformerReportedFemale && oTransformerReportedFemale.value === 1 || oTransformerSurveyMonkeyFemale && oTransformerSurveyMonkeyFemale.value === 1;
+      const bIsMale = oTransformerReportedMale && arrsSurveyResponse[oTransformerReportedMale.iColumn] === 1 || oTransformerSurveyMonkeyMale && arrsSurveyResponse[oTransformerSurveyMonkeyMale.iColumn] === 1;
+      const bIsFemale = oTransformerReportedFemale && arrsSurveyResponse[oTransformerReportedFemale.iColumn] === 1 || oTransformerSurveyMonkeyFemale && arrsSurveyResponse[oTransformerSurveyMonkeyFemale.iColumn] === 1;
 
-      // TODO: this doesn't work
       return [
         Object.assign({}, oTransformerMale, { value: bIsMale ? 1 : 0 }),
         Object.assign({}, oTransformerFemale, { value: bIsFemale ? 1 : 0 }),

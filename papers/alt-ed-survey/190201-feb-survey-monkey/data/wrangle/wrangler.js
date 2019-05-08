@@ -16,7 +16,7 @@ const farrsGetSubfolderPathsByFolderPath = sPath =>
     .map(sFileName => {
       const sFilePath = path.join(sPath, sFileName);
 
-      if (fs.statSync(sFilePath).isDirectory()) {
+      if (!isNaN(sFileName[0]) && fs.statSync(sFilePath).isDirectory()) {
         return sFilePath;
       }
     })
@@ -104,16 +104,16 @@ function fsObservationRowsContent(arrarrsCsvCells, arroTransformersWithIndex) {
     .slice(2, arrarrsCsvCells.length)
     .map(arrsSurveyResponse => {
       const arroTransformedCells = arroTransformersWithIndex.reduce((arroAcc, oTransformer) => {
-        let arroDataForThisCell = [];
+        let arroNewDataForThisCell = [];
         const sCellValue = arrsSurveyResponse[oTransformer.iColumn];
 
         if (oTransformer.farroTransformer) {
-          arroDataForThisCell = oTransformer.farroTransformer(sCellValue, oTransformer, arroTransformersWithIndex);
+          arroNewDataForThisCell = oTransformer.farroTransformer(sCellValue, oTransformer, arroTransformersWithIndex, arrsSurveyResponse, arroAcc);
         } else if (!oTransformer.bGeneratedColumn) {
-          arroDataForThisCell = [Object.assign({}, oTransformer, { value: sCellValue })];
+          arroNewDataForThisCell = [Object.assign({}, oTransformer, { value: sCellValue })];
         }
 
-        return arroAcc.concat(...arroDataForThisCell);
+        return arroAcc.concat(...arroNewDataForThisCell);
       }, []);
 
       const arrsTransformedCells = arroTransformedCells
