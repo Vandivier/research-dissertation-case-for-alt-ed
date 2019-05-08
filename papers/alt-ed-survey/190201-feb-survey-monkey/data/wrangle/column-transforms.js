@@ -239,27 +239,28 @@ module.exports = [
     bGeneratedColumn: true,
     bTransientColumn: true,
     farroTransformer: function(sCellValue, oTransformer, arroTransformersWithIndex, arrsSurveyResponse, arroAcc) {
-      const oTransformerReportedMale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsReportedMale');
-      const oTransformerSurveyMonkeyMale = arroTransformersWithIndex.find(
+      const oTransformerReportedMale = arroAcc.find(oTransformer => oTransformer.sOutputColumnName === 'IsReportedMale');
+      const oTransformerSurveyMonkeyMale = arroAcc.find(
         oTransformer => oTransformer.sOutputColumnName === 'IsSurveyMonkeyMale'
       );
       const oTransformerMale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsMale');
 
-      const oTransformerReportedFemale = arroTransformersWithIndex.find(
+      const oTransformerReportedFemale = arroAcc.find(
         oTransformer => oTransformer.sOutputColumnName === 'IsReportedFemale'
       );
-      const oTransformerSurveyMonkeyFemale = arroTransformersWithIndex.find(
+      const oTransformerSurveyMonkeyFemale = arroAcc.find(
         oTransformer => oTransformer.sOutputColumnName === 'IsSurveyMonkeyFemale'
       );
       const oTransformerFemale = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsFemale');
 
       const bIsMale =
-        (oTransformerReportedMale && arrsSurveyResponse[oTransformerReportedMale.iColumn] === 1) ||
-        (oTransformerSurveyMonkeyMale && arrsSurveyResponse[oTransformerSurveyMonkeyMale.iColumn] === 1);
+        (oTransformerReportedMale && oTransformerReportedMale.value === 1) ||
+        (oTransformerSurveyMonkeyMale && oTransformerSurveyMonkeyMale.value === 1);
       const bIsFemale =
-        (oTransformerReportedFemale && arrsSurveyResponse[oTransformerReportedFemale.iColumn] === 1) ||
-        (oTransformerSurveyMonkeyFemale && arrsSurveyResponse[oTransformerSurveyMonkeyFemale.iColumn] === 1);
+        (oTransformerReportedFemale && oTransformerReportedFemale.value === 1) ||
+        (oTransformerSurveyMonkeyFemale && oTransformerSurveyMonkeyFemale.value === 1);
 
+        debugger
       return [
         Object.assign({}, oTransformerMale, { value: bIsMale ? 1 : 0 }),
         Object.assign({}, oTransformerFemale, { value: bIsFemale ? 1 : 0 }),
