@@ -155,9 +155,22 @@ module.exports = [
     sOutputColumnName: 'IsUnreportedGender',
   },
   {
+    arrsGeneratedChildMatchers: ['IsReportedIncomePreferNotDisclose'],
     bExactMatch: true,
     sMatcher: 'Household Income?',
     sOutputColumnName: 'ReportedIncome',
+    farroTransformer: function(sCellValue, oTransformer, arroTransformersWithIndex) {
+      const oTransformerPreferNotDisclose = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsReportedIncomePreferNotDisclose');
+
+      return [
+        Object.assign({}, oTransformer, { value: sCellValue === '11' ? '' : sCellValue }),
+        Object.assign({}, oTransformerPreferNotDisclose, { value: sCellValue === '11' ? 1 : 0 }),
+      ];
+    },
+  },
+  {
+    bGeneratedColumn: true,
+    sOutputColumnName: 'IsReportedIncomePreferNotDisclose',
   },
   {
     bExactMatch: true,
@@ -201,9 +214,22 @@ module.exports = [
     sOutputColumnName: 'IsSurveyMonkeyUnreportedGender',
   },
   {
+    arrsGeneratedChildMatchers: ['IsSurveyMonkeyIncomePreferNotDisclose'],
     bExactMatch: true,
     sMatcher: 'Household Income',
     sOutputColumnName: 'SurveyMonkeyIncome',
+    farroTransformer: function(sCellValue, oTransformer, arroTransformersWithIndex) {
+      const oTransformerPreferNotDisclose = arroTransformersWithIndex.find(oTransformer => oTransformer.sOutputColumnName === 'IsSurveyMonkeyIncomePreferNotDisclose');
+
+      return [
+        Object.assign({}, oTransformer, { value: sCellValue === '11' ? '' : sCellValue }),
+        Object.assign({}, oTransformerPreferNotDisclose, { value: sCellValue === '11' ? 1 : 0 }),
+      ];
+    },
+  },
+  {
+    bGeneratedColumn: true,
+    sOutputColumnName: 'IsSurveyMonkeyIncomePreferNotDisclose',
   },
   {
     bExactMatch: true,
