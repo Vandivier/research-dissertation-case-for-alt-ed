@@ -10,6 +10,7 @@ import delimited D:\GitHub\research-dissertation-case-for-alt-ed\papers\alt-ed-s
 tab collector, gen(iscollector)
 tab industry, gen(isindustry)
 tab surveymonkeyregion, gen(isregion)
+tab ethnicity, gen(isethnicity)
 
 * // nvoi => not variable of interest
 * // nvoif => not variable of interest, favorability question
@@ -74,6 +75,10 @@ gen crage1 = reportedage
 gen crage2 = reportedage*reportedage
 gen crage3 = reportedage*reportedage*reportedage
 
+gen crea1 = reportedexactage
+gen crea2 = reportedexactage*reportedexactage
+gen crea3 = reportedexactage*reportedexactage*reportedexactage
+
 * // generate continuous survey monkey account-reported age
 gen csmage1 = surveymonkeyage
 gen csmage2 = surveymonkeyage*surveymonkeyage
@@ -93,6 +98,10 @@ gen cprovider1 = heardofcoursera + heardoflynda + heardofpluralsight + heardofud
 gen cprovider2 = cprovider1*cprovider1
 gen cprovider3 = cprovider1*cprovider1*cprovider1
 
+gen ceduc1 = educ
+gen ceduc2 = ceduc1*ceduc1
+gen ceduc3 = ceduc1*ceduc1*ceduc1
+
 * // timedays is the time when a single user submitted his response, where time is finitely-measured at the daily level.
 * // ref: https:* //www.stata.com/support/faqs/data-management/creating-date-variables/
 split enddate
@@ -102,11 +111,13 @@ gen ctime2 = ctime1*ctime1
 gen ctime3 = ctime1*ctime1*ctime1
 
 drop collector
+drop educ
 drop heard*
 drop enddat*
 drop favor*
 drop industry
 drop reportedage
+drop reportedexactage
 drop reportedincome
 drop respondentid
 drop surveymonk*

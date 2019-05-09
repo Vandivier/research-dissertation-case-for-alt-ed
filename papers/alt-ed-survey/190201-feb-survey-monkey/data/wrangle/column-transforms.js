@@ -173,8 +173,8 @@ module.exports = [
     sOutputColumnName: 'IsReportedIncomePreferNotDisclose',
   },
   {
-    bExactMatch: true,
-    sMatcher: 'Which race/ethnicity best describes you?',
+    bExactMatch: false,
+    sMatcher: 'ethnicity best describes you?',
     sOutputColumnName: 'Ethnicity',
   },
   {
