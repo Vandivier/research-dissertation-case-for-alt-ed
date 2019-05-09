@@ -174,8 +174,23 @@ module.exports = [
   },
   {
     bExactMatch: true,
+    sMatcher: 'Which race/ethnicity best describes you?',
+    sOutputColumnName: 'Ethnicity',
+  },
+  {
+    bExactMatch: true,
+    sMatcher: 'What is the highest level of education you have completed?',
+    sOutputColumnName: 'Education',
+  },
+  {
+    bExactMatch: true,
     sMatcher: 'Age?',
     sOutputColumnName: 'ReportedAge',
+  },
+  {
+    bExactMatch: true,
+    sMatcher: 'Exact Age',
+    sOutputColumnName: 'ReportedExactAge',
   },
   {
     bExactMatch: true,
