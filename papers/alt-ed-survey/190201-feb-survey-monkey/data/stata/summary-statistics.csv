@@ -1,93 +1,107 @@
-Variable	N	Mean	SD	P25	Median	P75	Min	Max	Factor Short Name	2018 Feb Strength	2018 Oct Strength	2019 Feb Strength	2019 May Strength	Overall Strength
-cprovider1	784	1.19	1.23	0	1	2	0	5	Provider Recognition	S				
-cprovider2	784	2.92	5.27	0	1	4	0	25	Provider Recognition	S				
-cprovider3	784	9.48	24	0	1	8	0	125	Provider Recognition	W				
-crage1	403	3.21	1.01	2	3	4	1	5	Age	N				
-crage2	403	11.3	6.61	4	9	16	1	25	Age	N				
-crage3	403	42.81	35.38	8	27	64	1	125	Age	N				
-crincome1	403	4.95	2.67	3	4	6	1	11	Income	N				
-crincome2	403	31.61	33.74	9	16	36	1	121	Income	N				
-crincome3	403	243.89	374.94	27	64	216	1	1331	Income	N				
-csmage1	563	3.42	1.09	2	4	4	2	5	Age	W				
-csmage2	563	12.9	7.55	4	16	16	4	25	Age	S				
-csmage3	563	52.32	41.97	8	64	64	8	125	Age	W				
-csmincome1	563	4.81	2.84	3	4	6	1	11	Income	S				
-csmincome2	563	31.25	36.12	9	16	36	1	121	Income	S				
-csmincome3	563	250.07	407.87	27	64	216	1	1331	Income	L				
-ctime1	784	21495.96	134.3	21463	21604	21604	21241	21610	Time	L				
-ctime2	784	4.62E+08	5.76E+06	4.61E+08	4.67E+08	4.67E+08	4.51E+08	4.67E+08	Time	L				
-ctime3	784	9.93E+12	1.85E+11	9.89E+12	1.01E+13	1.01E+13	9.58E+12	1.01E+13	Time	L				
-ioi	784	19.18	6.1	15	19	23	3	30	VOI	VOI				
-iscollector1	784	0.05	0.21	0	0	0	0	1	Collector	N				
-iscollector10	784	0.35	0.48	0	0	1	0	1	Collector	N				
-iscollector2	784	0.13	0.34	0	0	0	0	1	Collector	N				
-iscollector3	784	0.03	0.16	0	0	0	0	1	Collector	N				
-iscollector4	784	0.14	0.34	0	0	0	0	1	Collector	N				
-iscollector5	784	0.04	0.19	0	0	0	0	1	Collector	N				
-iscollector6	784	0.11	0.31	0	0	0	0	1	Collector	N				
-iscollector7	784	0.02	0.15	0	0	0	0	1	Collector	N				
-iscollector8	784	0.13	0.34	0	0	0	0	1	Collector	N				
-iscollector9	784	0.01	0.11	0	0	0	0	1	Collector	N				
-isfemale	784	0.47	0.5	0	0	1	0	1	Gender	L				
-isindustry1	784	0.01	0.12	0	0	0	0	1	Industry	L				
-isindustry10	784	0.25	0.44	0	0	1	0	1	Industry	L				
-isindustry11	784	0.09	0.28	0	0	0	0	1	Industry	L				
-isindustry12	784	0.03	0.17	0	0	0	0	1	Industry	M				
-isindustry2	784	0.13	0.34	0	0	0	0	1	Industry	L				
-isindustry3	784	0.02	0.15	0	0	0	0	1	Industry	M				
-isindustry4	784	0.07	0.25	0	0	0	0	1	Industry	L				
-isindustry5	784	0.13	0.34	0	0	0	0	1	Industry	L				
-isindustry6	784	0.17	0.38	0	0	0	0	1	Industry	L				
-isindustry7	784	0.04	0.19	0	0	0	0	1	Industry	W				
-isindustry8	784	0.04	0.2	0	0	0	0	1	Industry	M				
-isindustry9	784	0.01	0.11	0	0	0	0	1	Industry	M				
-ismale	784	0.42	0.49	0	0	1	0	1	Gender	L				
-ismanager	784	0.36	0.48	0	0	1	0	1	Employment	L				
-isnotstem	381	0.65	0.48	0	1	1	0	1	STEM	M				
-isregion1	562	0.05	0.22	0	0	0	0	1	Region	W				
-isregion2	562	0.12	0.32	0	0	0	0	1	Region	L				
-isregion3	562	0.13	0.33	0	0	0	0	1	Region	L				
-isregion4	562	0.07	0.25	0	0	0	0	1	Region	L				
-isregion5	562	0.19	0.39	0	0	0	0	1	Region	M				
-isregion6	562	0.07	0.25	0	0	0	0	1	Region	L				
-isregion7	562	0.09	0.29	0	0	0	0	1	Region	S				
-isregion8	562	0.08	0.27	0	0	0	0	1	Region	L				
-isregion9	562	0.21	0.41	0	0	0	0	1	Region	M				
-isreportedfemale	403	0.5	0.5	0	0	1	0	1	Gender	N				
-isreportedmale	403	0.49	0.5	0	0	1	0	1	Gender	N				
-isreportednonbinary	403	0.01	0.12	0	0	0	0	1	Gender	N				
-isreportedincomeprefernotdisclos									Income	N				
-isstem	381	0.23	0.42	0	0	0	0	1	STEM	L				
-issurveymonkeyfemale	784	0.4	0.49	0	0	1	0	1	Gender	S				
-issurveymonkeymale	784	0.32	0.47	0	0	1	0	1	Gender	L				
-issurveymonkeyunreportedgender	784	0.28	0.45	0	0	1	0	1	Gender	L				
-issurveymonkeyincomeprefernotdis									Income	N				
-isunemployed	784	0.13	0.33	0	0	0	0	1	Employment	L				
-isunreportedgender	403	0	0	0	0	0	0	0	Gender	N				
-isunreportedstem	381	0	0	0	0	0	0	0	STEM	L				
-isunsurestem	381	0.12	0.32	0	0	0	0	1	STEM	L				
-nvoifai1	643	5.75	2.53	4	6	8	1	10	Artificial Intelligence	S				
-nvoifai2	643	39.51	29.74	16	36	64	1	100	Artificial Intelligence	S				
-nvoifai3	643	300.3	308.34	64	216	512	1	1000	Artificial Intelligence	S				
-nvoifamerican1	381	5.94	2.63	4	6	8	1	10	US Degree Centrism	N				
-nvoifamerican2	381	42.22	30.85	16	36	64	1	100	US Degree Centrism	N				
-nvoifamerican3	381	329.63	318.86	64	216	512	1	1000	US Degree Centrism	N				
-nvoifchristianity1	240	5.15	3.66	1	5	9	1	10	Christianity	W				
-nvoifchristianity2	240	39.79	40.48	1	25	81	1	100	Christianity	W				
-nvoifchristianity3	240	349.15	411.8	1	125	729	1	1000	Christianity	W				
-nvoifconventionalsoon1	784	5.95	2.65	4	6	8	1	10	Conventionalism	S				
-nvoifconventionalsoon2	784	42.38	31.26	16	36	64	1	100	Conventionalism	N				
-nvoifconventionalsoon3	784	332.24	327.03	64	216	512	1	1000	Conventionalism	N				
-nvoifcrypto1	381	4.62	2.6	2	5	6	1	10	Cryptocurrency	N				
-nvoifcrypto2	381	28.12	26.91	4	25	36	1	100	Cryptocurrency	M				
-nvoifcrypto3	381	197.13	259.62	8	125	216	1	1000	Cryptocurrency	S				
-nvoifonline1	784	6.66	2.51	5	7	9	1	10	Online Education	N				
-nvoifonline2	784	50.71	31.49	25	49	81	1	100	Online Education	S				
-nvoifonline3	784	414.82	341.93	125	343	729	1	1000	Online Education	N				
-nvoifregulation1	643	6.12	2.57	4	6	8	1	10	Regulatory Policy	W				
-nvoifregulation2	643	44.06	30.48	16	36	64	1	100	Regulatory Policy	W				
-nvoifregulation3	643	345.56	318.92	64	216	512	1	1000	Regulatory Policy	S				
-nvoifreligion1	240	5.09	3.4	1	5	8	1	10	Religiousness	M				
-nvoifreligion2	240	37.38	37.12	1	25	64	1	100	Religiousness	W				
-nvoifreligion3	240	312.66	373.82	1	125	512	1	1000	Religiousness	W				
-voi	784	6.57	2.56	5	7	8	1	10	VOI	VOI				
+Variable,N,Mean,SD,P25,Median,P75,Min,Max,Factor Short Name,2018 Feb Strength,2018 Oct Strength,2019 Feb Strength,2019 May Strength,Overall Strength,,,Variable,N,Mean,SD,P25,Median,P75,Min,Max
+ceduc1,370,4.68,1.39,4,5,5,1,8,Education,N,N,N,,,,,,,,,,,,,
+ceduc2,370,23.78,13.22,16,25,25,1,64,Education,N,N,N,,,,,,,,,,,,,
+ceduc3,370,129.1,104.93,64,125,125,1,512,Education,N,N,N,,,,,,,,,,,,,
+cprovider1,1154,1.29,1.2,1,1,2,0,5,Provider Recognition,S,,,,,,,,,,,,,,,
+cprovider2,1154,3.11,5.22,1,1,4,0,25,Provider Recognition,S,,,,,,,,,,,,,,,
+cprovider3,1154,9.85,23.71,1,1,8,0,125,Provider Recognition,W,,,,,,,,,,,,,,,
+crage1,773,3.18,0.99,2,3,4,1,5,Age,N,,,,,,,,,,,,,,,
+crage2,773,11.07,6.52,4,9,16,1,25,Age,N,,,,,,,,,,,,,,,
+crage3,773,41.54,34.9,8,27,64,1,125,Age,N,,,,,,,,,,,,,,,
+crea1,370,39.58,13.44,29,36.5,50,17,80,Age,N,N,N,,,,,,,,,,,,,
+crea2,370,1747.06,1178.94,841,1332.5,2500,289,6400,Age,N,N,N,,,,,,,,,,,,,
+crea3,370,84738.66,85285.02,24389,48654.5,1.25E+05,4913,5.12E+05,Age,N,N,N,,,,,,,,,,,,,
+crincome1,738,4.31,2.07,3,4,5,1,10,Income,N,,,,,,,,,,,,,,,
+crincome2,738,22.86,22.69,9,16,25,1,100,Income,N,,,,,,,,,,,,,,,
+crincome3,738,144.04,221.79,27,64,125,1,1000,Income,N,,,,,,,,,,,,,,,
+csmage1,735,3.42,1.09,2,4,4,2,5,Age,W,,,,,,,,,,,,,,,
+csmage2,735,12.86,7.47,4,16,16,4,25,Age,S,,,,,,,,,,,,,,,
+csmage3,735,51.97,41.41,8,64,64,8,125,Age,W,,,,,,,,,,,,,,,
+csmincome1,664,4.08,2.07,3,4,5,1,10,Income,S,,,,,,,,,,,,,,,
+csmincome2,664,20.95,21.25,9,16,25,1,100,Income,S,,,,,,,,,,,,,,,
+csmincome3,664,127.79,200.63,27,64,125,1,1000,Income,L,,,,,,,,,,,,,,,
+ctime1,1154,21554,139.26,21464,21604,21677,21241,21677,Time,L,,,,,,,,,,,,,,,
+ctime2,1.15E+03,4.65E+08,5.98E+06,4.61E+08,4.67E+08,4.70E+08,4.51E+08,4.70E+08,Time,L,,,,,,,,,,,,,,,
+ctime3,1154,1.00E+13,1.93E+11,9.89E+12,1.01E+13,1.02E+13,9.58E+12,1.02E+13,Time,L,,,,,,,,,,,,,,,
+ioi,1154,19.52,6.12,16,20,24,3,30,VOI,VOI,,,,,,,,,,,,,,,
+iscollector1,1154,0.03,0.18,0,0,0,0,1,Collector,N,,,,,,,,,,,,,,,
+iscollector10,1154,0.24,0.43,0,0,0,0,1,Collector,N,,,,,,,,,,,,,,,
+iscollector11,1154,0.17,0.38,0,0,0,0,1,Collector,N,N,N,,,,,,,,,,,,,
+iscollector12,1154,0.15,0.36,0,0,0,0,1,Collector,N,N,N,,,,,,,,,,,,,
+iscollector2,1154,0.09,0.29,0,0,0,0,1,Collector,N,,,,,,,,,,,,,,,
+iscollector3,1154,2.00E-02,1.30E-01,0.00E+00,0.00E+00,0.00E+00,0,1,Collector,N,,,,,,,,,,,,,,,
+iscollector4,1154,9.00E-02,2.90E-01,0.00E+00,0.00E+00,0.00E+00,0,1,Collector,N,,,,,,,,,,,,,,,
+iscollector5,1154,0.03,0.16,0,0,0,0,1,Collector,N,,,,,,,,,,,,,,,
+iscollector6,1154,0.07,0.26,0,0,0,0,1,Collector,N,,,,,,,,,,,,,,,
+iscollector7,1154,0.02,0.13,0,0,0,0,1,Collector,N,,,,,,,,,,,,,,,
+iscollector8,1154,0.09,0.28,0,0,0,0,1,Collector,N,,,,,,,,,,,,,,,
+iscollector9,1154,0.01,0.09,0,0,0,0,1,Collector,N,,,,,,,,,,,,,,,
+isethnicity1,370,0.02,0.13,0,0,0,0,1,Ethnicity,N,N,N,,,,,,,,,,,,,
+isethnicity2,370,0.14,0.35,0,0,0,0,1,Ethnicity,N,N,N,,,,,,,,,,,,,
+isethnicity3,370,0.1,0.3,0,0,0,0,1,Ethnicity,N,N,N,,,,,,,,,,,,,
+isethnicity4,370,0.07,0.26,0,0,0,0,1,Ethnicity,N,N,N,,,,,,,,,,,,,
+isethnicity5,370,0.65,0.48,0,1,1,0,1,Ethnicity,N,N,N,,,,,,,,,,,,,
+isethnicity6,370,0.02,0.15,0,0,0,0,1,Ethnicity,N,N,N,,,,,,,,,,,,,
+isfemale,1154,0.47,0.5,0,0,1,0,1,Gender,L,,,,,,,,,,,,,,,
+isindustry1,1154,0.02,0.13,0,0,0,0,1,Industry,L,,,,,,,,,,,,,,,
+isindustry10,1154,0.25,0.43,0,0,0,0,1,Industry,L,,,,,,,,,,,,,,,
+isindustry11,1154,0.09,0.29,0,0,0,0,1,Industry,L,,,,,,,,,,,,,,,
+isindustry12,1154,0.03,0.18,0,0,0,0,1,Industry,M,,,,,,,,,,,,,,,
+isindustry2,1154,0.12,0.33,0,0,0,0,1,Industry,L,,,,,,,,,,,,,,,
+isindustry3,1154,0.02,0.15,0,0,0,0,1,Industry,M,,,,,,,,,,,,,,,
+isindustry4,1154,0.08,0.27,0,0,0,0,1,Industry,L,,,,,,,,,,,,,,,
+isindustry5,1154,0.12,0.32,0,0,0,0,1,Industry,L,,,,,,,,,,,,,,,
+isindustry6,1154,0.18,0.39,0,0,0,0,1,Industry,L,,,,,,,,,,,,,,,
+isindustry7,1154,0.03,0.18,0,0,0,0,1,Industry,W,,,,,,,,,,,,,,,
+isindustry8,1154,0.05,0.22,0,0,0,0,1,Industry,M,,,,,,,,,,,,,,,
+isindustry9,1154,0.01,0.11,0,0,0,0,1,Industry,M,,,,,,,,,,,,,,,
+ismale,1154,0.46,0.5,0,0,1,0,1,Gender,L,,,,,,,,,,,,,,,
+ismanager,1154,0.38,0.49,0,0,1,0,1,Employment,L,,,,,,,,,,,,,,,
+isnotstem,381,0.65,0.48,0,1,1,0,1,STEM,M,,,,,,,,,,,,,,,
+isregion1,734,0.06,0.24,0,0,0,0,1,Region,W,,,,,,,,,,,,,,,
+isregion2,734,0.13,0.34,0,0,0,0,1,Region,L,,,,,,,,,,,,,,,
+isregion3,734,0.12,0.33,0,0,0,0,1,Region,L,,,,,,,,,,,,,,,
+isregion4,734,0.07,0.26,0,0,0,0,1,Region,L,,,,,,,,,,,,,,,
+isregion5,734,0.19,0.39,0,0,0,0,1,Region,M,,,,,,,,,,,,,,,
+isregion6,734,0.06,0.24,0,0,0,0,1,Region,L,,,,,,,,,,,,,,,
+isregion7,734,0.09,0.29,0,0,0,0,1,Region,S,,,,,,,,,,,,,,,
+isregion8,734,0.07,0.26,0,0,0,0,1,Region,L,,,,,,,,,,,,,,,
+isregion9,734,0.2,0.4,0,0,0,0,1,Region,M,,,,,,,,,,,,,,,
+isreportedfemale,773,0.47,0.5,0,0,1,0,1,Gender,N,,,,,,,,,,,,,,,
+isreportedincomeprefernotdisclos,773,0.05,0.21,0,0,0,0,1,Gender,N,,,,,,,,,,,,,,,
+isreportedmale,773,0.51,0.5,0,1,1,0,1,Gender,N,,,,,,,,,,,,,,,
+isreportednonbinary,773,0.02,0.14,0,0,0,0,1,Income,N,,,,,,,,,,,,,,,
+isstem,381,0.23,0.42,0,0,0,0,1,STEM,L,,,,,,,,,,,,,,,
+issurveymonkeyfemale,1154,0.35,0.48,0,0,1,0,1,Gender,S,,,,,,,,,,,,,,,
+issurveymonkeyincomeprefernotdis,1154,0.06,0.24,0,0,0,0,1,Gender,L,,,,,,,,,,,,,,,
+issurveymonkeymale,1154,0.29,0.45,0,0,1,0,1,Gender,L,,,,,,,,,,,,,,,
+issurveymonkeyunreportedgender,1154,0.36,0.48,0,0,1,0,1,Income,N,,,,,,,,,,,,,,,
+isunemployed,1154,0.12,0.32,0,0,0,0,1,Employment,L,,,,,,,,,,,,,,,
+isunreportedgender,773,0,0,0,0,0,0,0,Gender,N,,,,,,,,,,,,,,,
+isunreportedstem,381,0,0,0,0,0.00E+00,0,0,STEM,L,,,,,,,,,,,,,,,
+isunsurestem,381,0.12,0.32,0,0,0,0,1,STEM,L,,,,,,,,,,,,,,,
+nvoifai1,1013,5.96,2.51,4,6,8,1,10,Artificial Intelligence,S,,,,,,,,,,,,,,,
+nvoifai2,1013,41.85,29.94,16,36,64,1,100,Artificial Intelligence,S,,,,,,,,,,,,,,,
+nvoifai3,1013,322.57,312.31,64,216,512,1,1000,Artificial Intelligence,S,,,,,,,,,,,,,,,
+nvoifamerican1,381,5.94,2.63,4,6,8,1,10,US Degree Centrism,N,,,,,,,,,,,,,,,
+nvoifamerican2,381,42.22,30.85,16,36,64,1,100,US Degree Centrism,N,,,,,,,,,,,,,,,
+nvoifamerican3,381,329.63,318.86,64,216,512,1,1000,US Degree Centrism,N,,,,,,,,,,,,,,,
+nvoifchristianity1,240,5.15,3.66,1,5,9,1,10,Christianity,W,,,,,,,,,,,,,,,
+nvoifchristianity2,240,39.79,40.48,1,25,81,1,100,Christianity,W,,,,,,,,,,,,,,,
+nvoifchristianity3,240,349.15,411.8,1,125,729,1,1000,Christianity,W,,,,,,,,,,,,,,,
+nvoifconventionalsoon1,1154,6.11,2.6,4,6,8,1,10,Conventionalism,S,,,,,,,,,,,,,,,
+nvoifconventionalsoon2,1154,44.07,31.06,16,36,64,1,100,Conventionalism,N,,,,,,,,,,,,,,,
+nvoifconventionalsoon3,1154,347.62,326.8,64,216,512,1,1000,Conventionalism,N,,,,,,,,,,,,,,,
+nvoifcrypto1,381,4.62,2.6,2,5,6,1,10,Cryptocurrency,N,,,,,,,,,,,,,,,
+nvoifcrypto2,381,28.12,26.91,4,25,36,1,100,Cryptocurrency,M,,,,,,,,,,,,,,,
+nvoifcrypto3,381,197.13,259.62,8,125,216,1,1000,Cryptocurrency,S,,,,,,,,,,,,,,,
+nvoifonline1,1154,6.83,2.46,5,7,9,1,10,Online Education,N,,,,,,,,,,,,,,,
+nvoifonline2,1154,52.64,31.27,25,49,81,1,100,Online Education,S,,,,,,,,,,,,,,,
+nvoifonline3,1154,434.3,341.33,125,343,729,1,1000,Online Education,N,,,,,,,,,,,,,,,
+nvoifregulation1,1013,6.23,2.49,5,6,8,1,10,Regulatory Policy,W,,,,,,,,,,,,,,,
+nvoifregulation2,1013,44.98,29.84,25,36,64,1,100,Regulatory Policy,W,,,,,,,,,,,,,,,
+nvoifregulation3,1013,352.25,313.67,125,216,512,1,1000,Regulatory Policy,S,,,,,,,,,,,,,,,
+nvoifreligion1,240,5.09,3.4,1,5,8,1,10,Religiousness,M,,,,,,,,,,,,,,,
+nvoifreligion2,240,37.38,37.12,1,25,64,1,100,Religiousness,W,,,,,,,,,,,,,,,
+nvoifreligion3,240,312.66,373.82,1,125,512,1,1000,Religiousness,W,,,,,,,,,,,,,,,
+voi,1154,6.58,2.58,5,7,8,1,10,VOI,VOI,,,,,,,,,,,,,,,

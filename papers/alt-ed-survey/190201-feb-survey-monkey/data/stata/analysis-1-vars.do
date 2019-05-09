@@ -112,6 +112,7 @@ gen ctime3 = ctime1*ctime1*ctime1
 
 drop collector
 drop educ
+drop eth
 drop heard*
 drop enddat*
 drop favor*
