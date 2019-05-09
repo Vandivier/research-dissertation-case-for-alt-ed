@@ -9,24 +9,29 @@ fsum, stats(n mean sd min p25 p50 p75 max)
 * // voi explains about 62.5% of the general index.
 * // special regression 1
 reg ioi voi
+
 * // reg exploration, short
 * // demonstrate strong cross-correlation within ioi
 reg voi nvoifconventionalsoon1 nvoifonline1
+
 * // demonstrate strong cross-correlation within technologies (innovation bias)
-reg nvoifonline1 nvoifai1 nvoifcrypto1
 * // prima facie other technologies are weak predictors; we'll see if they are better in the long reg
-reg voi nvoifonline1 nvoifai1 nvoifcrypto1
+reg nvoifonline1 nvoifai1 nvoifcrypto1
 
 * // special regression 5
 * // managers are more positive than non-managers
 reg voi ismanager
+
 * // looks like being a manager doesn't predict nationalism (no anti-foreign bias wrt employer)
 reg nvoifamerican1 ismanager
+
 * // nationalism is weakly and weirdly associated with pro-alt education; maybe it's conservatism or chance?
 reg voi nvoifamerican1
+
 * // higher if specifically Christian, proxy for socially conservative
 * // weak positive correlation exists
 reg voi nvoifchristianity1
+
 * // higher economic progressivism / statism / regulatory favorability; low is fiscal conservatism
 * // strong positive correlation exists. why would statists support this? maybe is a personality thing like openness
 * // intial result: counterintuitively, conservatives seem more opposed to alternative credentials; maybe an attitudinal opposition
@@ -37,11 +42,13 @@ reg voi nvoifregulation1
 * // special reg 10
 * // simple reg time has weak negative impact!
 reg voi ctime1
+
 * // nonlinear time is insignificant, but directional effects are more intuitive; linear increasing and negative quadratic
 reg voi ctime1 ctime2
 
-* // 6 individuals identified an nonbinary
+* // some individuals identified an nonbinary
 count if isreportednonbinary == 1
+
 * // special reg 12
 * // max p value of .594 on nonbinary; coeffecient in excess of .5, while issurveymonkeymale has -.686
 reg voi issurveymonkeymale ismanager isunemployed isreportednonbinary isindustry1 isindustry2 isindustry3 isindustry4 isindustry5 isindustry6 isindustry7 isindustry8 isindustry10 isindustry11 isindustry12 isregion5 isregion6 isregion7 nvoifai1 nvoifai2 nvoifconventionalsoon1 nvoifconventionalsoon3 nvoifonline1 nvoifonline2 nvoifonline3 nvoifregulation1 nvoifregulation2 nvoifregulation3 crage1 crage2 crage3 csmage1 csmage2 crincome1 crincome2 crincome3 csmincome1 csmincome2 csmincome3 cprovider1 cprovider2 cprovider3 ctime3
@@ -53,6 +60,18 @@ reg cprovider1 isunemployed
 * // special reg 14, simple linear of provider familiarity on alt learning suitability
 * // _cons of 6.4 indicates that when cprovider is 0 people are still positive, and it only gets more positive from there.
 reg voi cprovider1
+
+* // special reg 15, showdown of the partialling out
+* // looks like exact reported age is linearly better than age group or income effects
+* // but equal in significance on marginal and cubic fx to income
+reg voi cr*
+
+* // special reg 16, introducing education strengthens crea and also education is a big deal
+* // notice a mild ishighered effect. Learner's regret? and linear ceduc is insane
+reg voi cr* cedu* ishighered
+
+* // linear age has a negative effect on online favorability
+reg nvoifonline1 crea1
 
 * // minors are markedly pessimistic!
 tab voi crage1

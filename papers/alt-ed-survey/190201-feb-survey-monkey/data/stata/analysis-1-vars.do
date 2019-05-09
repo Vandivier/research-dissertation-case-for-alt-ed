@@ -12,6 +12,9 @@ tab industry, gen(isindustry)
 tab surveymonkeyregion, gen(isregion)
 tab ethnicity, gen(isethnicity)
 
+gen ishighered = 0 if !missing(educ)
+replace ishighered = 1 if educ >= 5
+
 * // nvoi => not variable of interest
 * // nvoif => not variable of interest, favorability question
 * // voi => variable of interest
