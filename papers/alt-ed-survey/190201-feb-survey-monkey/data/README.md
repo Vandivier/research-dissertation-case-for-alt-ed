@@ -42,9 +42,9 @@ With a terminal open in the /wrangle folder, the wrangling and joining process i
 
 2. `node wrangler`
 
-3. `node unwrite-csv 2018-survey-on-alternative-credentials 2019-survey-on-alternative-credentials --UniqueKey=sRespondentID`
+3. `node unwrite-csv 2018-oct-survey-on-alternative-credentials 2019-feb-survey-on-alternative-credentials 2019-may-survey-on-alternative-credentials --UniqueKey=sRespondentID`
 
-4. `node write-csv 2018-survey-on-alternative-credentials 2019-survey-on-alternative-credentials --UniqueKey=sRespondentID`
+4. `node write-csv 2018-oct-survey-on-alternative-credentials 2019-feb-survey-on-alternative-credentials 2019-may-survey-on-alternative-credentials --UniqueKey=sRespondentID`
     1. TODO: fix this step; write-csv is depending on key index which varies by file so output is incorrectly merged
     2. output file doesn't even have all expected columns (eg superset of two input files)
 
