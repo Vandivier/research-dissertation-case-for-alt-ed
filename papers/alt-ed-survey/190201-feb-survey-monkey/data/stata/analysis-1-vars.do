@@ -15,6 +15,9 @@ tab ethnicity, gen(isethnicity)
 gen ishighered = 0 if !missing(educ)
 replace ishighered = 1 if educ >= 5
 
+gen is2018longmodelresponse = 0
+replace is2018longmodelresponse = 1 if !missing(nvoifchristianity1) & !missing(csmincome1)
+
 * // nvoi => not variable of interest
 * // nvoif => not variable of interest, favorability question
 * // voi => variable of interest

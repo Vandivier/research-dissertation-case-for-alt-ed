@@ -39,34 +39,33 @@ reg voi nvoifchristianity1
 * //   above theory can be somewhat tested using nationalism and innovation proxies
 reg voi nvoifregulation1
 
-* // special reg 10
-* // simple reg time has weak negative impact!
+* // special reg 10-12
+* // insignificant negative linear, weak marginal and cubic, maybe suggests early stage of s-curve adoption
 reg voi ctime1
-
-* // nonlinear time is insignificant, but directional effects are more intuitive; linear increasing and negative quadratic
 reg voi ctime1 ctime2
+reg voi ctime1 ctime2 ctime3
 
 * // some individuals identified an nonbinary
 count if isreportednonbinary == 1
 
-* // special reg 12
+* // special reg 13
 * // max p value of .594 on nonbinary; coeffecient in excess of .5, while issurveymonkeymale has -.686
 reg voi issurveymonkeymale ismanager isunemployed isreportednonbinary isindustry1 isindustry2 isindustry3 isindustry4 isindustry5 isindustry6 isindustry7 isindustry8 isindustry10 isindustry11 isindustry12 isregion5 isregion6 isregion7 nvoifai1 nvoifai2 nvoifconventionalsoon1 nvoifconventionalsoon3 nvoifonline1 nvoifonline2 nvoifonline3 nvoifregulation1 nvoifregulation2 nvoifregulation3 crage1 crage2 crage3 csmage1 csmage2 crincome1 crincome2 crincome3 csmincome1 csmincome2 csmincome3 cprovider1 cprovider2 cprovider3 ctime3
 
-* // special reg 13, the unemployed are the least familiar with alternative learning providers
+* // special reg 14, the unemployed are the least familiar with alternative learning providers
 * // it's a 0.000 p value! effect is nontrivial at -.6
 reg cprovider1 isunemployed
 
-* // special reg 14, simple linear of provider familiarity on alt learning suitability
+* // special reg 15, simple linear of provider familiarity on alt learning suitability
 * // _cons of 6.4 indicates that when cprovider is 0 people are still positive, and it only gets more positive from there.
 reg voi cprovider1
 
-* // special reg 15, showdown of the partialling out
+* // special reg 16, showdown of the partialling out
 * // looks like exact reported age is linearly better than age group or income effects
 * // but equal in significance on marginal and cubic fx to income
 reg voi cr*
 
-* // special reg 16, introducing education strengthens crea and also education is a big deal
+* // special reg 17, introducing education strengthens crea and also education is a big deal
 * // notice a mild ishighered effect. Learner's regret? and linear ceduc is insane
 reg voi cr* cedu* ishighered
 
@@ -75,6 +74,10 @@ reg nvoifonline1 crea1
 
 * // minors are markedly pessimistic!
 tab voi crage1
+
+* // 2018 weak and long model respondents
+* // 2018 mean of 6.351, but this is lower than non-2018, insignificantly, 6.657.
+tab is2018, sum (voi)
 
 * // 2018 variables long reg
 * // omits reported variables (eg, isreportedmale or crage1), voi, and ioi from right hand
