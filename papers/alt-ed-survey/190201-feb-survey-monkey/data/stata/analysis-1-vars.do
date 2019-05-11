@@ -15,9 +15,6 @@ tab ethnicity, gen(isethnicity)
 gen ishighered = 0 if !missing(educ)
 replace ishighered = 1 if educ >= 5
 
-gen is2018longmodelresponse = 0
-replace is2018longmodelresponse = 1 if !missing(nvoifchristianity1) & !missing(csmincome1)
-
 * // nvoi => not variable of interest
 * // nvoif => not variable of interest, favorability question
 * // voi => variable of interest
@@ -108,13 +105,6 @@ gen ceduc1 = educ
 gen ceduc2 = ceduc1*ceduc1
 gen ceduc3 = ceduc1*ceduc1*ceduc1
 
-gen logconventionalsoon1 = log(conventionalsoon1)
-gen logtime = log(ctime1)
-gen logvoi = log(voi)
-
-gen managertime1 = ismanager*ctime1
-gen managertime2 = managertime1*managertime1
-
 * // timedays is the time when a single user submitted his response, where time is finitely-measured at the daily level.
 * // ref: https:* //www.stata.com/support/faqs/data-management/creating-date-variables/
 split enddate
@@ -122,6 +112,16 @@ gen enddatestatafriendly = subinstr(enddate1, "/", "-", .)
 gen ctime1 = date(enddatestatafriendly, "MDY")
 gen ctime2 = ctime1*ctime1
 gen ctime3 = ctime1*ctime1*ctime1
+
+gen logconventionalsoon1 = log(nvoifconventionalsoon1)
+gen logtime = log(ctime1)
+gen logvoi = log(voi)
+
+gen managertime1 = ismanager*ctime1
+gen managertime2 = managertime1*managertime1
+
+gen is2018sample = 0
+replace is2018sample = 1 if !missing(nvoifchristianity1) & !missing(csmincome1)
 
 drop collector
 drop educ

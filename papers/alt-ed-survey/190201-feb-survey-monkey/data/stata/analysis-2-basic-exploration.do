@@ -130,6 +130,9 @@ tab voi crage1
 * // 2018 mean of 6.351, but this is lower than non-2018, insignificantly, 6.657.
 tab is2018, sum (voi)
 
+* // table 3
+tab is2018sample, sum(voi)
+
 * // 2018 variables long reg
 * // omits reported variables (eg, isreportedmale or crage1), voi, and ioi from right hand
 * // r2 = .52, adjr2 = .3054, n = 188
