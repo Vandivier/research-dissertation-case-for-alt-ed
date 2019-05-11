@@ -1,108 +1,108 @@
-Variable,N,Mean,SD,P25,Median,P75,Min,Max,Factor Short Name,2018 Strength,2019 Strength,Preferred Strength
-ceduc1,406,4.65,1.4,4,5,5,1,8,Education,N,,
-ceduc2,406,23.55,13.26,16,25,25,1,64,Education,N,,
-ceduc3,406,127.51,105.17,64,125,125,1,512,Education,N,,
-cprovider1,1190,1.29,1.2,0,1,2,0,5,Provider Recognition,W,,
-cprovider2,1190,3.1,5.22,0,1,4,0,25,Provider Recognition,M,,
-cprovider3,1190,9.85,23.71,0,1,8,0,125,Provider Recognition,W,,
-crage1,809,3.19,0.99,2,3,4,1,5,Age,N,,
-crage2,809,11.14,6.52,4,9,16,1,25,Age,N,,
-crage3,809,41.88,34.91,8,27,64,1,125,Age,N,,
-crea1,406,39.97,13.72,29,37,50,17,88,Age,N,,
-crea2,406,1785.07,1221.51,841,1369,2500,289,7744,Age,N,,
-crea3,406,87800.18,90599.36,24389,50653,1.25E+05,4913,6.81E+05,Age,N,,
-crincome1,773,4.28,2.08,3,4,5,1,10,Income,N,,
-crincome2,773,22.6,22.54,9,16,25,1,100,Income,N,,
-crincome3,773,141.9,219.35,27,64,125,1,1000,Income,N,,
-csmage1,771,3.42,1.08,2,4,4,2,5,Age,M,,
-csmage2,771,12.88,7.44,4,16,16,4,25,Age,S,,
-csmage3,771,52.05,41.27,8,64,64,8,125,Age,M,,
-csmincome1,699,4.06,2.07,3,4,5,1,10,Income,S,,
-csmincome2,699,20.76,21.24,9,16,25,1,100,Income,M,,
-csmincome3,699,126.53,200.29,27,64,125,1,1000,Income,L,,
-ctime1,1190,21557.74,138.76,21466,21604,21677,21241,21678,Time,M,,
-ctime2,1190,4.65E+08,5.96E+06,4.61E+08,4.67E+08,4.70E+08,4.51E+08,4.70E+08,Time,L,,
-ctime3,1190,1.00E+13,1.92E+11,9.89E+12,1.01E+13,1.02E+13,9.58E+12,1.02E+13,Time,L,,
+Variable,N,Mean,SD,P25,Median,P75,Min,Max,Factor Short Name,2018 Strength,2019 Strength,Variable Preferred
+ceduc1,406,4.65,1.4,4,5,5,1,8,Education,N,M,Y
+ceduc2,406,23.55,13.26,16,25,25,1,64,Education,N,M,Y
+ceduc3,406,127.51,105.17,64,125,125,1,512,Education,N,L,N
+cprovider1,1190,1.29,1.2,0,1,2,0,5,Provider Recognition,W,M,Y
+cprovider2,1190,3.1,5.22,0,1,4,0,25,Provider Recognition,M,M,Y
+cprovider3,1190,9.85,23.71,0,1,8,0,125,Provider Recognition,W,W,N
+crage1,809,3.19,0.99,2,3,4,1,5,Age,N,W,N
+crage2,809,11.14,6.52,4,9,16,1,25,Age,N,W,N
+crage3,809,41.88,34.91,8,27,64,1,125,Age,N,L,N
+crea1,406,39.97,13.72,29,37,50,17,88,Age,N,L,N
+crea2,406,1785.07,1221.51,841,1369,2500,289,7744,Age,N,W,N
+crea3,406,87800.18,90599.36,24389,50653,1.25E+05,4913,6.81E+05,Age,N,W,N
+crincome1,773,4.28,2.08,3,4,5,1,10,Income,N,L,N
+crincome2,773,22.6,22.54,9,16,25,1,100,Income,N,W,N
+crincome3,773,141.9,219.35,27,64,125,1,1000,Income,N,L,N
+csmage1,771,3.42,1.08,2,4,4,2,5,Age,M,M,Y
+csmage2,771,12.88,7.44,4,16,16,4,25,Age,S,M,Y
+csmage3,771,52.05,41.27,8,64,64,8,125,Age,M,M,Y
+csmincome1,699,4.06,2.07,3,4,5,1,10,Income,S,W,Y
+csmincome2,699,20.76,21.24,9,16,25,1,100,Income,M,M,Y
+csmincome3,699,126.53,200.29,27,64,125,1,1000,Income,L,M,Y
+ctime1,1190,21557.74,138.76,21466,21604,21677,21241,21678,Time,M,L,Y
+ctime2,1190,4.65E+08,5.96E+06,4.61E+08,4.67E+08,4.70E+08,4.51E+08,4.70E+08,Time,L,L,Y
+ctime3,1190,1.00E+13,1.92E+11,9.89E+12,1.01E+13,1.02E+13,9.58E+12,1.02E+13,Time,L,M,Y
 ioi,1190,19.55,6.13,16,20,24,3,30,VOI,VOI,VOI,VOI
-iscollector1,1190,0.03,0.18,0,0,0,0,1,Collector,N,,
-iscollector10,1190,0.23,0.42,0,0,0,0,1,Collector,N,,
-iscollector11,1190,0.17,0.37,0,0,0,0,1,Collector,N,,
-iscollector12,1190,0.17,0.38,0,0,0,0,1,Collector,N,,
-iscollector2,1190,0.09,0.28,0,0,0,0,1,Collector,N,,
-iscollector3,1190,0.02,0.13,0,0,0,0,1,Collector,N,,
-iscollector4,1190,0.09,0.28,0,0,0,0,1,Collector,N,,
-iscollector5,1190,0.03,0.16,0,0,0,0,1,Collector,N,,
-iscollector6,1190,0.07,0.26,0,0,0,0,1,Collector,N,,
-iscollector7,1190,0.02,0.13,0,0,0,0,1,Collector,N,,
-iscollector8,1190,0.08,0.28,0,0,0,0,1,Collector,N,,
-iscollector9,1190,0.01,0.09,0,0,0,0,1,Collector,N,,
-isethnicity1,406,0.02,0.13,0,0,0,0,1,Ethnicity,N,,
-isethnicity2,406,0.14,0.34,0,0,0,0,1,Ethnicity,N,,
-isethnicity3,406,0.1,0.3,0,0,0,0,1,Ethnicity,N,,
-isethnicity4,406,0.07,0.26,0,0,0,0,1,Ethnicity,N,,
-isethnicity5,406,0.65,0.48,0,1,1,0,1,Ethnicity,N,,
-isethnicity6,406,0.03,0.17,0,0,0,0,1,Ethnicity,N,,
-isfemale,1190,0.47,0.5,0,0,1,0,1,Gender,L,,
-ishighered,1190,0.84,0.37,1,1,1,0,1,Education,N,,
-isindustry1,1190,0.02,0.13,0,0,0,0,1,Industry,M,,
-isindustry10,1190,0.25,0.43,0,0,0,0,1,Industry,M,,
-isindustry11,1190,0.09,0.29,0,0,0,0,1,Industry,M,,
-isindustry12,1190,0.03,0.18,0,0,0,0,1,Industry,L,,
-isindustry2,1190,0.12,0.33,0,0,0,0,1,Industry,M,,
-isindustry3,1190,0.02,0.14,0,0,0,0,1,Industry,L,,
-isindustry4,1190,0.08,0.26,0,0,0,0,1,Industry,M,,
-isindustry5,1190,0.12,0.32,0,0,0,0,1,Industry,M,,
-isindustry6,1190,0.18,0.38,0,0,0,0,1,Industry,M,,
-isindustry7,1190,0.03,0.18,0,0,0,0,1,Industry,L,,
-isindustry8,1190,0.05,0.22,0,0,0,0,1,Industry,L,,
-isindustry9,1190,0.01,0.11,0,0,0,0,1,Industry,L,,
-ismale,1190,0.46,0.5,0,0,1,0,1,Gender,L,,
-ismanager,1190,0.37,0.48,0,0,1,0,1,Employment,L,,
-isnotstem,381,0.65,0.48,0,1,1,0,1,STEM,M,,
-isregion1,770,0.06,0.23,0,0,0,0,1,Region,L,,
-isregion2,770,0.13,0.34,0,0,0,0,1,Region,S,,
-isregion3,770,0.13,0.33,0,0,0,0,1,Region,M,,
-isregion4,770,0.07,0.26,0,0,0,0,1,Region,L,,
-isregion5,770,0.19,0.39,0,0,0,0,1,Region,L,,
-isregion6,770,0.06,0.24,0,0,0,0,1,Region,M,,
-isregion7,770,0.09,0.29,0,0,0,0,1,Region,S,,
-isregion8,770,0.07,0.26,0,0,0,0,1,Region,L,,
-isregion9,770,0.2,0.4,0,0,0,0,1,Region,L,,
-isreportedfemale,809,0.48,0.5,0,0,1,0,1,Gender,N,,
-isreportedincomeprefernotdisclos,809,0.04,0.21,0,0,0,0,1,Gender,N,,
-isreportedmale,809,0.5,0.5,0,1,1,0,1,Gender,N,,
-isreportednonbinary,809,0.02,0.14,0,0,0,0,1,Gender,N,,
-isstem,381,0.23,0.42,0,0,0,0,1,STEM,M,,
-issurveymonkeyfemale,1190,0.36,0.48,0,0,1,0,1,Gender,S,,
-issurveymonkeyincomeprefernotdis,1190,0.06,0.24,0,0,0,0,1,Income,L,,
-issurveymonkeymale,1190,0.29,0.45,0,0,1,0,1,Gender,L,,
-issurveymonkeyunreportedgender,1190,0.35,0.48,0,0,1,0,1,Income,L,,
-isunemployed,1190,0.12,0.33,0,0,0,0,1,Employment,L,,
-isunreportedgender,809,0,0,0,0,0,0,0,Gender,N,,
-isunreportedstem,381,0,0,0,0,0,0,0,STEM,L,,
-isunsurestem,381,0.12,0.32,0,0,0,0,1,STEM,L,,
-nvoifai1,1049,5.95,2.53,4,6,8,1,10,Artificial Intelligence,S,,
-nvoifai2,1049,41.79,30.03,16,36,64,1,100,Artificial Intelligence,S,,
-nvoifai3,1049,322.39,313.02,64,216,512,1,1000,Artificial Intelligence,L,,
-nvoifamerican1,381,5.94,2.63,4,6,8,1,10,US Degree Centrism,L,,
-nvoifamerican2,381,42.22,30.85,16,36,64,1,100,US Degree Centrism,S,,
-nvoifamerican3,381,329.63,318.86,64,216,512,1,1000,US Degree Centrism,L,,
-nvoifchristianity1,240,5.15,3.66,1,5,9,1,10,Christianity,W,,
-nvoifchristianity2,240,39.79,40.48,1,25,81,1,100,Christianity,W,,
-nvoifchristianity3,240,349.15,411.8,1,125,729,1,1000,Christianity,W,,
-nvoifconventionalsoon1,1190,6.13,2.6,4,6,8,1,10,Conventionalism,W,,
-nvoifconventionalsoon2,1190,44.26,31.17,16,36,64,1,100,Conventionalism,W,,
-nvoifconventionalsoon3,1190,349.73,328.68,64,216,512,1,1000,Conventionalism,S,,
-nvoifcrypto1,381,4.62,2.6,2,5,6,1,10,Cryptocurrency,L,,
-nvoifcrypto2,381,28.12,26.91,4,25,36,1,100,Cryptocurrency,M,,
-nvoifcrypto3,381,197.13,259.62,8,125,216,1,1000,Cryptocurrency,L,,
-nvoifonline1,1190,6.81,2.49,5,7,9,1,10,Online Education,L,,
-nvoifonline2,1190,52.55,31.45,25,49,81,1,100,Online Education,S,,
-nvoifonline3,1190,434.07,342.81,125,343,729,1,1000,Online Education,M,,
-nvoifregulation1,1049,6.23,2.5,5,6,8,1,10,Regulatory Policy,S,,
-nvoifregulation2,1049,45.03,29.92,25,36,64,1,100,Regulatory Policy,M,,
-nvoifregulation3,1049,352.99,314.41,125,216,512,1,1000,Regulatory Policy,M,,
-nvoifreligion1,240,5.09,3.4,1,5,8,1,10,Religiousness,S,,
-nvoifreligion2,240,37.38,37.12,1,25,64,1,100,Religiousness,L,,
-nvoifreligion3,240,312.66,373.82,1,125,512,1,1000,Religiousness,L,,
+iscollector1,1190,0.03,0.18,0,0,0,0,1,Collector,N,L,N
+iscollector10,1190,0.23,0.42,0,0,0,0,1,Collector,N,L,N
+iscollector11,1190,0.17,0.37,0,0,0,0,1,Collector,N,L,N
+iscollector12,1190,0.17,0.38,0,0,0,0,1,Collector,N,L,N
+iscollector2,1190,0.09,0.28,0,0,0,0,1,Collector,N,L,N
+iscollector3,1190,0.02,0.13,0,0,0,0,1,Collector,N,L,N
+iscollector4,1190,0.09,0.28,0,0,0,0,1,Collector,N,L,N
+iscollector5,1190,0.03,0.16,0,0,0,0,1,Collector,N,L,N
+iscollector6,1190,0.07,0.26,0,0,0,0,1,Collector,N,L,N
+iscollector7,1190,0.02,0.13,0,0,0,0,1,Collector,N,L,N
+iscollector8,1190,0.08,0.28,0,0,0,0,1,Collector,N,L,N
+iscollector9,1190,0.01,0.09,0,0,0,0,1,Collector,N,L,N
+isethnicity1,406,0.02,0.13,0,0,0,0,1,Ethnicity,N,L,N
+isethnicity2,406,0.14,0.34,0,0,0,0,1,Ethnicity,N,L,N
+isethnicity3,406,0.1,0.3,0,0,0,0,1,Ethnicity,N,L,N
+isethnicity4,406,0.07,0.26,0,0,0,0,1,Ethnicity,N,M,Y
+isethnicity5,406,0.65,0.48,0,1,1,0,1,Ethnicity,N,W,N
+isethnicity6,406,0.03,0.17,0,0,0,0,1,Ethnicity,N,M,Y
+isfemale,1190,0.47,0.5,0,0,1,0,1,Gender,L,W,N
+ishighered,1190,0.84,0.37,1,1,1,0,1,Education,N,M,Y
+isindustry1,1190,0.02,0.13,0,0,0,0,1,Industry,M,W,Y
+isindustry10,1190,0.25,0.43,0,0,0,0,1,Industry,M,M,Y
+isindustry11,1190,0.09,0.29,0,0,0,0,1,Industry,M,W,Y
+isindustry12,1190,0.03,0.18,0,0,0,0,1,Industry,L,M,Y
+isindustry2,1190,0.12,0.33,0,0,0,0,1,Industry,M,W,Y
+isindustry3,1190,0.02,0.14,0,0,0,0,1,Industry,L,W,N
+isindustry4,1190,0.08,0.26,0,0,0,0,1,Industry,M,W,Y
+isindustry5,1190,0.12,0.32,0,0,0,0,1,Industry,M,W,Y
+isindustry6,1190,0.18,0.38,0,0,0,0,1,Industry,M,W,Y
+isindustry7,1190,0.03,0.18,0,0,0,0,1,Industry,L,M,Y
+isindustry8,1190,0.05,0.22,0,0,0,0,1,Industry,L,W,N
+isindustry9,1190,0.01,0.11,0,0,0,0,1,Industry,L,L,N
+ismale,1190,0.46,0.5,0,0,1,0,1,Gender,L,S,N
+ismanager,1190,0.37,0.48,0,0,1,0,1,Employment,L,M,Y
+isnotstem,381,0.65,0.48,0,1,1,0,1,STEM,M,N,Y
+isregion1,770,0.06,0.23,0,0,0,0,1,Region,L,L,N
+isregion2,770,0.13,0.34,0,0,0,0,1,Region,S,M,Y
+isregion3,770,0.13,0.33,0,0,0,0,1,Region,M,M,Y
+isregion4,770,0.07,0.26,0,0,0,0,1,Region,L,M,Y
+isregion5,770,0.19,0.39,0,0,0,0,1,Region,L,L,N
+isregion6,770,0.06,0.24,0,0,0,0,1,Region,M,L,Y
+isregion7,770,0.09,0.29,0,0,0,0,1,Region,S,L,Y
+isregion8,770,0.07,0.26,0,0,0,0,1,Region,L,L,N
+isregion9,770,0.2,0.4,0,0,0,0,1,Region,L,W,N
+isreportedfemale,809,0.48,0.5,0,0,1,0,1,Gender,N,L,N
+isreportedincomeprefernotdisclos,809,0.04,0.21,0,0,0,0,1,Gender,N,L,N
+isreportedmale,809,0.5,0.5,0,1,1,0,1,Gender,N,W,N
+isreportednonbinary,809,0.02,0.14,0,0,0,0,1,Gender,N,L,N
+isstem,381,0.23,0.42,0,0,0,0,1,STEM,M,N,Y
+issurveymonkeyfemale,1190,0.36,0.48,0,0,1,0,1,Gender,S,L,Y
+issurveymonkeyincomeprefernotdis,1190,0.06,0.24,0,0,0,0,1,Income,L,L,N
+issurveymonkeymale,1190,0.29,0.45,0,0,1,0,1,Gender,L,M,Y
+issurveymonkeyunreportedgender,1190,0.35,0.48,0,0,1,0,1,Income,L,L,N
+isunemployed,1190,0.12,0.33,0,0,0,0,1,Employment,L,M,Y
+isunreportedgender,809,0,0,0,0,0,0,0,Gender,N,L,N
+isunreportedstem,381,0,0,0,0,0,0,0,STEM,L,N,N
+isunsurestem,381,0.12,0.32,0,0,0,0,1,STEM,L,N,N
+nvoifai1,1049,5.95,2.53,4,6,8,1,10,Artificial Intelligence,S,L,Y
+nvoifai2,1049,41.79,30.03,16,36,64,1,100,Artificial Intelligence,S,L,Y
+nvoifai3,1049,322.39,313.02,64,216,512,1,1000,Artificial Intelligence,L,S,Y
+nvoifamerican1,381,5.94,2.63,4,6,8,1,10,US Degree Centrism,L,N,N
+nvoifamerican2,381,42.22,30.85,16,36,64,1,100,US Degree Centrism,S,N,Y
+nvoifamerican3,381,329.63,318.86,64,216,512,1,1000,US Degree Centrism,L,N,N
+nvoifchristianity1,240,5.15,3.66,1,5,9,1,10,Christianity,W,N,N
+nvoifchristianity2,240,39.79,40.48,1,25,81,1,100,Christianity,W,N,N
+nvoifchristianity3,240,349.15,411.8,1,125,729,1,1000,Christianity,W,N,N
+nvoifconventionalsoon1,1190,6.13,2.6,4,6,8,1,10,Conventionalism,W,L,N
+nvoifconventionalsoon2,1190,44.26,31.17,16,36,64,1,100,Conventionalism,W,S,Y
+nvoifconventionalsoon3,1190,349.73,328.68,64,216,512,1,1000,Conventionalism,S,S,Y
+nvoifcrypto1,381,4.62,2.6,2,5,6,1,10,Cryptocurrency,L,N,N
+nvoifcrypto2,381,28.12,26.91,4,25,36,1,100,Cryptocurrency,M,N,Y
+nvoifcrypto3,381,197.13,259.62,8,125,216,1,1000,Cryptocurrency,L,N,N
+nvoifonline1,1190,6.81,2.49,5,7,9,1,10,Online Education,L,M,Y
+nvoifonline2,1190,52.55,31.45,25,49,81,1,100,Online Education,S,S,Y
+nvoifonline3,1190,434.07,342.81,125,343,729,1,1000,Online Education,M,M,Y
+nvoifregulation1,1049,6.23,2.5,5,6,8,1,10,Regulatory Policy,S,S,Y
+nvoifregulation2,1049,45.03,29.92,25,36,64,1,100,Regulatory Policy,M,L,Y
+nvoifregulation3,1049,352.99,314.41,125,216,512,1,1000,Regulatory Policy,M,L,Y
+nvoifreligion1,240,5.09,3.4,1,5,8,1,10,Religiousness,S,N,Y
+nvoifreligion2,240,37.38,37.12,1,25,64,1,100,Religiousness,L,N,N
+nvoifreligion3,240,312.66,373.82,1,125,512,1,1000,Religiousness,L,N,N
 voi,1190,6.61,2.57,5,7,9,1,10,VOI,VOI,VOI,VOI
