@@ -45,6 +45,8 @@ reg voi ctime1
 reg voi ctime1 ctime2
 reg voi ctime1 ctime2 ctime3
 
+reg logtime logconventionalsoon1
+
 * // some individuals identified an nonbinary
 count if isreportednonbinary == 1
 

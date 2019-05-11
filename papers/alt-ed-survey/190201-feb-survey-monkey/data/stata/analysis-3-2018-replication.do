@@ -36,10 +36,10 @@ reg voi issurveymonkeyfemale isstem isnotstem isindustry1 isindustry2 isindustry
 estimates store voimaxar2018, title(voimaxar2018)
 
 * // model name:      voistr2018
-* // r2:              .?
-* // adjr2:           .?
-* // n:               ?
-* // v-complexity:    ?
-* // q-complexity:    ?
+* // r2:              .5044
+* // adjr2:           .4660
+* // n:               168
+* // v-complexity:    12
+* // q-complexity:    8
 reg voi issurveymonkeyfemale isregion2 isregion7 nvoifai1 nvoifai2 nvoifamerican2 nvoifconventionalsoon3 nvoifonline2 nvoifregulation1 nvoifreligion1 csmage2 csmincome1
 estimates store voistr2018, title(voistr2018)
