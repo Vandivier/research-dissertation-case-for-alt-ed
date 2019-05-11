@@ -45,7 +45,49 @@ reg voi ctime1
 reg voi ctime1 ctime2
 reg voi ctime1 ctime2 ctime3
 
-reg logtime logconventionalsoon1
+* // our best time regression... p = .004
+reg logconventionalsoon1 logtime
+
+* // we gonna use this in a second...
+predict predictedlogconventionalsoon
+
+* // voi-log conventionality rocks
+reg voi logconventionalsoon
+
+* // direct log time on voi or logvoi sucks
+reg logvoi logtime
+
+* // indirect log time on voi fails
+reg voi predictedlogconventionalsoon
+
+* // try nonlinear time on voi
+* // nice!
+* // r2 .8972, p ~0.000, t 40.72
+nl (voi = {b0=2}*(1 - exp(-1*{b1=0.1}*nvoifconventionalsoon1)))
+* // smaller increments doesn't gain us anything
+* // r2 .8972, p ~0.000
+nl (voi = {b0=1.1}*(1 - exp(-1*{b1=0.01}*nvoifconventionalsoon1)))
+* // exponent change gains us a little bit of r2, smaller t
+* // r2 .9029, p ~0.000, t 33.8
+nl (voi = {b0=2}*(exp(-1*{b1=0.1}*nvoifconventionalsoon1)))
+* // simpler expression doesn't lose anything
+nl (voi = {b0}*(exp({b1}*nvoifconventionalsoon1)))
+* // adding a constant makes the model suck, but t is huge, but constant is negative
+* // r2 .2621, t 1077.23
+nl (voi = {b1}+{b2=2}*(exp({b3=0.1}*nvoifconventionalsoon1)))
+
+* // wait...i did it wrong by using conventionality on the right hand. let's use time
+* // r2 .8691, p .811, t -.24
+nl (voi = {b0}*(exp({b1}*ctime1)))
+* // basically invalid form...
+* // r2 0.0, p n/a, taken as constant, t n/a, taken as constant
+nl (voi = {b1}+{b2}*(exp({b3}*ctime1)))
+* // r2 .8691, p ~0.000, t 12467.46
+* // form of: b1*b2^ctime1
+nl exp2: voi ctime1
+* // r2 0.0, p ~0.000, t 10759.63
+* // form of: voi = b0 + b1*b2^ctime1
+nl exp3: voi ctime1
 
 * // some individuals identified an nonbinary
 count if isreportednonbinary == 1
@@ -73,6 +115,13 @@ reg voi cr* cedu* ishighered
 
 * // linear age has a negative effect on online favorability
 reg nvoifonline1 crea1
+
+* // related to figure 4:
+reg voi ctime1 ctime2 managertime1 managertime2
+
+* // also figure 4...prior reg constant is implausible:
+* // notice in this regression, managertime effects are more positive than ctime effects are negative.
+reg voi ctime1 ctime2 managertime1 managertime2, noconstant
 
 * // minors are markedly pessimistic!
 tab voi crage1

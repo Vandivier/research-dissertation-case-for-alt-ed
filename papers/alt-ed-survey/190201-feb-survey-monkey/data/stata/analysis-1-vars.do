@@ -110,6 +110,10 @@ gen ceduc3 = ceduc1*ceduc1*ceduc1
 
 gen logconventionalsoon1 = log(conventionalsoon1)
 gen logtime = log(ctime1)
+gen logvoi = log(voi)
+
+gen managertime1 = ismanager*ctime1
+gen managertime2 = managertime1*managertime1
 
 * // timedays is the time when a single user submitted his response, where time is finitely-measured at the daily level.
 * // ref: https:* //www.stata.com/support/faqs/data-management/creating-date-variables/
