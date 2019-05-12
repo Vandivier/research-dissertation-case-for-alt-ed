@@ -1,4 +1,4 @@
-Variable,N,Mean,SD,P25,Median,P75,Min,Max,Factor Short Name,2018 Strength,2019 Strength,Variable Preferred
+Variable,N,Mean,SD,P25,Median,P75,Min,Max,Factor  Name,2018 Strength,2019 Strength,Preferred
 ceduc1,406,4.65,1.4,4,5,5,1,8,Education,N,M,Y
 ceduc2,406,23.55,13.26,16,25,25,1,64,Education,N,M,Y
 ceduc3,406,127.51,105.17,64,125,125,1,512,Education,N,L,N
