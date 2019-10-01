@@ -1,0 +1,1798 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Attitudinal Trends in Alternative Postsecondary Learning</title>
+
+    <!-- ref: https://github.com/thomaspark/pubcss/issues/20 -->
+    <!-- ref: https://github.com/thomaspark/pubcss/blob/master/dist/ieee/templates/ieee-sample.html -->
+    <!-- ref: https://www.aeaweb.org/journals/aer/submissions/accepted-articles/styleguide -->
+    <link rel="stylesheet" type="text/css" href="./pubcss-ieee.css" />
+    <link rel="stylesheet" type="text/css" href="./pubcss-aea.css" />
+  </head>
+
+  <body class="aea">
+    <header class="col-span">
+      <h1
+        class="title counter-skip"
+        id="attitudinal-trends-in-alternative-postsecondary-learning"
+      >
+        <!-- TODO: should title really be sans-serif per template, like arial? -->
+        Attitudinal Trends in Alternative Postsecondary Learning
+      </h1>
+      <div class="authors">
+        <div class="author">
+          <div><span class="font-style-italic">By</span> John Vandivier*</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="abstract">
+      <p>
+        Traditional postsecondary learning in the United States is associated
+        with increased earnings and employment, but these benefits come at
+        substantial cost. Nontraditional education provides a partial workaround
+        with a variety of caveats including nonconformity stigma. This paper
+        explores a novel data set (n = 1190) to understand trends in public
+        disposition on alternative credentials. Results indicate that
+        favorability is high, declining in the short term, and may reverse trend
+        over time. Leveraging alternative pathways to reduce cost and accelerate
+        completion of accredited education is a recommended strategy. Some
+        policy considerations are discussed.
+      </p>
+      <p>
+        KEYWORDS: Education economics, alternative education, debt crisis,
+        signaling
+      </p>
+      <p>JEL CODES: D12, I21, I22, I24, I25, I26</p>
+    </div>
+
+    <p class="contact">
+      * Vandivier: George Mason University, 4400 University Dr, Fairfax, VA
+      22030 (e-mail: jvandivi@masonlive.gmu.edu). The author acknowledges
+      valuable input from Bryan Caplan at George Mason University.
+    </p>
+
+    <!-- TODO: don't start with a section called introduction -->
+    <h1 id="introduction">Introduction</h1>
+    <p>
+      The concept of a student debt crisis has found durable academic and media
+      coverage. In 1999, Roots called the student loan debt crisis a lesson in
+      unintended consequences. He identified the issue as attributable in large
+      part to the Guaranteed Student Loan Program of 1965.
+    </p>
+    <p>
+      It was neither a new lesson at that time, nor a lesson finally learned at
+      that time. Hansendn and Rhodes discuss the student debt crisis in 1988.
+      Van Dusen published a genuinely prescient paper, The Coming Crisis in
+      Student Aid, in February 1979. Forbes noted in 2019 that “Student loan
+      debt in 2019 is the highest ever…There are more than 44 million borrowers
+      who collectively owe \$1.5 trillion in student loan debt in the U.S.
+      alone.”
+    </p>
+    <p>
+      Recent work has called into question both the social return and the
+      individual return to spending on education. Alternatives to the status quo
+      in education present the opportunity for significant economic benefit.
+      From 1989 to 2012, the average cost of a year of undergraduate education
+      in the US rose 79%. Over the same period, per pupil public expenditure for
+      K-12 students increased 27%. This indicates that postsecondary education
+      presents a particularly valuable area of exploration.
+    </p>
+    <p>
+      From 1989 to 2012, K-12 student expenditure increased significantly and
+      the cost of a year of undergraduate education grew nearly three times more
+      quickly, but the adjusted average starting salary of a college graduate
+      decreased. In real terms, the average starting salary of a college
+      graduate decreased about 9%. Additional temporal sampling from 1960 to
+      2015 indicates that the longer trend for education is modestly positive,
+      with a real increase of about 6% over that period. It’s worth noting that
+      the highest paying years for the degree were observed around 1970 in real
+      terms, and salaries after the Great Recession have remained lower than the
+      early 2000s.
+    </p>
+    <p>
+      Because the price of college is rising several times faster than the rate
+      at which the salary of new graduates is increasing, the traditional degree
+      is becoming a dynamically worse financial investment, and current research
+      shows it is already a relatively poor choice compared to investing in a
+      standard fund from the social point of view, although it is clearly
+      lucrative from the individual perspective. Caplan estimates the private
+      average annual return to attempting a year of college is about 4.9% in
+      Chapter 5 of The Case Against Education. In Chapter 6 he calculates the
+      social return to college at less than 2%.
+    </p>
+    <p>
+      Annualized 20 year returns on an S&amp;P index, in contrast, typically
+      return between 4 and 9%. It’s worth noting that Caplan uses 2011-2012
+      in-state tuition and fees at public four-year universities when
+      calculating return. From the 2011-2012 school year to the 2018-2019 school
+      year, the relevant cost figure increased from 8,244 in 2011 dollars to
+      10,230 in 2018 dollars. This represents a real cost increase of about 11%
+      from 9,203 to 10,230 in 2018 dollars, after accounting for a cumulative
+      rate of inflation of about 11.6% from 2011 to 2018.
+    </p>
+    <p>
+      It’s also worth noting that this return on investment assumes no
+      expenditure for residence. Ostensibly the student will be living at home.
+      In practice, this greatly reduces the number of actual universities
+      available for a learner to choose from, and this may force a student to
+      choose a more expensive school. Many schools have an on-campus residency
+      requirement, and many other schools will be too far to commute for most
+      learners. Learning exclusively online from a provider which has no
+      on-campus residency requirement remains an option, but this can safely be
+      considered a non-traditional practice. In 2015, less than 15% of students
+      were exclusively distance learners, although the number is trending up
+      over time.
+    </p>
+    <p>
+      Mattern and Wyatt note that college students live an average distance of
+      268 miles from home and a median of 94 miles. This indicates that most
+      students don’t live at home, and as a result housing costs should be
+      included in both the average and median analysis of college price. Baum
+      and Ma give the $8,244 tuition and fees figure used by Caplan, and they
+      also provide a room and board figure of $8,887 for the 2011-2012 academic
+      year. Abodo reports that median rent in 2018 for a 1/1 was about $1,010
+      per month, and this works out to about $803 in 2011 dollars. At 9 months
+      per year, it would have been a more affordable \$7,227 for the typical
+      student to live in a 1/1 apartment than to consume university room and
+      board.
+    </p>
+    <p>
+      Consider that the modal degree is a Business degree, and the average
+      salary for a business degree graduate is about $54,000. A common,
+      in-demand occupation for someone holding a business degree is a business
+      analyst role. Business analysts earn about $67,000 per year, and there
+      many reputable bootcamp-style alternative learning programs for this
+      occupation. Many of these bootcamps are online and take less than 6 months
+      to complete and cost less than half of the \$7,227 price of housing alone.
+      Online learning is not equally suited to all individuals. Minnesota State
+      has a short quiz which helps individuals identify if online learning is a
+      good fit.
+    </p>
+    <p>
+      While traditional education is a decent investment, once we ignore typical
+      housing costs, alternative education is a strictly better investment. This
+      is because an individual can utilize alternative education to obtain a
+      traditional credential for a lower price at an accelerated rate, and
+      employers pay based on credentialing. The meaning of alternative education
+      for the purposes of this paper is detailed in section 2, but one example
+      of an alternative pathway to a traditional degree would be to leverage
+      credit by examination. Almost any degree program can be partially
+      fulfilled through credit by examination. In section 2.4 the price of
+      credit by examination is calculated as about 15% of the traditional way to
+      obtain credit in the average case.
+    </p>
+    <p>
+      In addition to generalized cost reductions from alternative pathways,
+      alternative credentialing programs sometimes allow learners to obtain
+      better salary or employment for even less than 15% of the price of a
+      traditional degree, and often over a much shorter time. In other cases,
+      alternative education may be more expensive but desirable even so. General
+      Assembly is an example of an Information Technology industry bootcamp.
+      They teach business, marketing, and design courses in addition to the
+      typical programming courses offered at similar programs. General Assembly
+      costs $14,950 for its priciest full-time, immersive course, but students
+      can finance in creative ways like $0 upfront with an income sharing
+      agreement, where a student doesn’t need to pay until employed full-time.
+      The immersive lasts about 3 months. 88% of GA students found full-time
+      work within 90 days of graduation, and 99% found full-time work within 180
+      days. This is in notable contrast to the traditional degree, where 54% of
+      the class of 2015 had found a standard, full-time job 6 months after
+      graduation.
+    </p>
+    <p>
+      Bootcamps can sometimes be used as a college substitute, but they can also
+      be used after college graduation to differentiate a job candidate from
+      competitors, or to switch careers or brush up on recent changes
+      mid-career. Finally, many traditional universities now offer through prior
+      learning assessments or credit by portfolio, so that bootcamps can result
+      in college credit even without officially partnering with a university.
+    </p>
+    <p>
+      Traditional education might still be an optimal consumption choice if
+      students demand higher education as leisure, but survey data indicates
+      that this is not the case. Among a mix of prospective and first year
+      college students from ages 16-40, Rachel Fishman finds that the top three
+      reasons to go to college are improved employment, making more money, and
+      getting a good job. Over 90% of respondents affirmed at least one of these
+      reasons.
+    </p>
+    <p>
+      In A New U, Craig documents several faster and cheaper alternatives to
+      college. Craig establishes that many of these alternative education
+      solutions are quickly growing in both supply and demand, but it is not
+      obvious whether the programs Craig discusses are representative of the
+      broader ecosystem of alternative learning. Prior to Craig’s writing, Bryan
+      Caplan argues for the signaling model of postsecondary credential value.
+      On Caplan’s view, the consumer of alternative credentials faces a signal
+      composition problem which threatens the value of the credential.
+      Traditional credentials may do a better job of signaling things like work
+      ethic and conformity.
+    </p>
+    <p>
+      Alternative education, however, may endow real skills at a better rate
+      than traditional education. Caplan estimates, for example, that the value
+      of vocational education benefits is 40% signaling, in contrast with 80%
+      signaling for the usual college education. If employers can obtain
+      better-skilled workers for lower cost, they would be expected to have some
+      willingness to give on conformity. In addition, as alternative credentials
+      become more widely accepted, any stigma or nonconformity costs from
+      pursuing alternative education is expected to diminish. Additionally,
+      prior research has yet to establish magnitudes and dynamic trends on those
+      magnitudes for many of these important effects.
+    </p>
+    <p>
+      This paper explores a novel attitudinal data set on alternative
+      credentials. This paper tests the thesis that employers will favor
+      alternative credentials as a mechanism to identify suitable entry level
+      employment. As a secondary interest, changes over time to the relation of
+      interest are investigated. The structure of included survey data allows
+      for exploration of several other interesting tertiary relations.
+    </p>
+    <p>
+      The first section describes the organization of the paper, the motivation,
+      and the main thesis. The second section gives theoretical and historical
+      context. The third section presents findings. The fourth section describes
+      applications or use cases for findings.
+    </p>
+    <h2 id="section-2-1-introduction-to-the-theory-of-alternative-education">
+      Section 2.1 - Introduction to the Theory of Alternative Education
+    </h2>
+    <p>
+      This second section is broken into six subsections. The first subsection
+      gives an overview of the subsequent five sections.
+    </p>
+    <p>
+      Because alternative education is characterized as the negation of
+      traditional education, the second subsection begins by conceptualizing
+      tradition. Section 2.3 moves from theoretical conceptualization of
+      tradition into a brief inventory of actual American history, including
+      legislation relevant to the topic of interest. The description of
+      traditional credentials toward the end of the third section flows
+      naturally into a discussion on alternative credentials in the fourth
+      section. The three subtypes of alternative education are detailed
+      throughout the fourth section. The subtypes include alternative
+      credentials, alternative pathways, and alternative pedagogies.
+    </p>
+    <p>
+      Section 2.5 synthesizes these subtypes into a discussion of alternative
+      education and alternativeness in a general way. The fifth subsection also
+      discusses minor results from outside of the main data set which help
+      concretize the concept of alternativeness intended throughout the paper.
+      To further clarify the intuition of the thesis, Subsection 2.6 describes a
+      game-theoretic model of dynamic norms.
+    </p>
+    <h2 id="section-2-2-traditions-conceptualized">
+      Section 2.2 - Traditions Conceptualized
+    </h2>
+    <p>
+      Throughout the paper, the variable of interest will be referred to in a
+      few ways. The variable of interest is most concisely described as
+      entry-level suitability. More completely, the variable of interest is
+      favorability on the use of alternative credentials to qualify an
+      entry-level candidate who is applying for a career position. Technically,
+      and most completely, the variable of interest is a response between 1 and
+      10 to the question, “For many professions, alternative credentials can
+      qualify a person for an entry-level position.” A response of 10 represents
+      a strong agreement.
+    </p>
+    <p>
+      Alternative credentials fit into the broader research area on alternative
+      education. Alternative education is defined as all education other than
+      traditional education. Alternative education decomposes into three
+      subtopics including alternative credentials, alternative pathways, and
+      alternative pedagogy. Each of these alternative entities is defined by the
+      negation of their traditional counterpart.
+    </p>
+    <p>
+      In service of an effective description of alternative credentials,
+      traditions are described in this subsection. Traditions can be concisely
+      described as intertemporal social norms. As such, traditions exist in
+      socio-temporal space. The maximum socio-temporal space that such a
+      tradition could occupy would be from the dawn of humankind until today,
+      and among all humans. Tradition can be viewed on a spectrum, where some
+      processes are relatively traditional, and the modal process among a group
+      of comparable processes is the strictly defined traditional process,
+      implied when the singular traditional process is referred to.
+    </p>
+    <h2
+      id="section-2-3-actual-traditions-a-history-of-accreditation-and-student-lending-in-the-united-states"
+    >
+      Section 2.3 - Actual Traditions: A History of Accreditation and Student
+      Lending in the United States
+    </h2>
+    <p>
+      From the vantage point just established, postsecondary accreditation is a
+      peculiar and infant approach to learning and education. Private
+      accrediting agencies began forming in the 1880s in the United States, and
+      private accreditation had become a well-established element of the higher
+      education landscape by the 1930s. The G.I. Bill was signed into law in
+      1944, and provisions of the bill boosted consumption of higher education
+      through subsidy to military service members. The number of degrees awarded
+      by US colleges and universities more than doubled between 1940 and 1950.
+      The increased demand for education stimulated the formation of many new
+      colleges, and some of these were perceived to be “of dubious quality.” The
+      G.I. Bill was reauthorized in 1952, but this time the educational benefits
+      it included were restricted in availability to those students enrolling at
+      an accredited institution, and the U.S. Commissioner of Education began
+      publishing a list of federally recognized accredited institutions.
+    </p>
+    <p>
+      Over time, federal recognition criteria became more elaborate. The 1992
+      Amendments to the Higher Education Act is a notable act in this regard.
+      Federal lending began in a military-oriented fashion with the National
+      Defense Education Act of 1958, but lending was expanded to the general
+      population with the 1965 Higher Education Act and subsequent legislation.
+      As earlier noted, Roots and other scholars identify this legislative trend
+      as essentially causal to our present student debt crisis.
+    </p>
+    <p>
+      This brief history indicates that federal postsecondary accreditation is
+      not only new as a human institution, but also new within the much more
+      limited context of United States history. It’s true that market-driven
+      accreditation has existed since the 1880s, and therefore may be considered
+      a traditional process in United States education, but it is not true that
+      the federal accreditation process which exists today has been around
+      through most of American history. In this sense, federal accreditation is
+      both causal in our present debt crisis and decidedly nontraditional.
+    </p>
+    <p>
+      The point of this exercise is both to familiarize the reader with a bit of
+      relevant history, and to initiate conceptualization of traditional
+      education as a special case of alternative education, rather than
+      something altogether different. The traditional education of today was
+      itself an alternative form of education at some point in time, and it
+      remains a minority approach to education within a variety of nontrivial
+      timeframes.
+    </p>
+    <p>
+      Caplan rightly argues that part of the signal of a traditional degree is
+      to signal conformity, but throughout most of history it would be the
+      nonconformist who possesses the thing we now call a traditional degree.
+      Given this prior information, it becomes more plausible that society might
+      one day return to such a situation. Obtaining a federally accredited
+      undergraduate degree is a rather new practice, although we call it a
+      tradition, and it has always been dubiously socially beneficial.
+    </p>
+    <p>
+      Traditional education is loosely synonymous with accredited education in
+      the United States, but there are important technical differences.
+      Accredited credentials in the context of the US include the high school
+      diploma, the accredited undergraduate degree, and accredited graduate
+      education. While graduate education is accredited, it is also excluded
+      from the concept of traditional education. While tradition indicates a
+      normal activity, graduate education is unusual. About 9% of U.S. adults
+      had a graduate degree in 2000, and about 13% had such a degree as of 2018.
+    </p>
+    <p>
+      In fact, it’s not technically traditional to get a college degree.
+      Technically speaking, the American tradition is to enroll in college
+      degree and never graduate. The history of factors leading to higher
+      enrollment in higher education in the United States, was previously
+      discussed, but it’s an important historical watermark to notice that 51%
+      of Americans immediately enrolled in college after high school completion
+      beginning in 1975. Between 1975 and 2011, the immediate college enrollment
+      rate increased from 51 percent to 68 percent. Immediate transition to
+      college plateaued after the turn of the century. The immediate college
+      enrollment rates for 4-year and for 2-year colleges in 2016 were not
+      measurably different from 2000.
+    </p>
+    <p>
+      Enrolling in college has been a tradition since 1975, but obtaining a
+      degree never was a tradition in the same way. The fact that the trend on
+      immediate enrollment has slowed from a positive trend into a plateau,
+      which has now remained stably flat for more than a decade, casts doubt on
+      the plausibility of a move back to a positive trend. For the foreseeable
+      future, the expected trend on immediate enrollment is between flat and the
+      possibility of a small decline.
+    </p>
+    <p>
+      In 2016, the percentage of students enrolling in college in the fall
+      immediately following high school completion was 69.8%, but in 2016 the
+      percentage of the adult population with a bachelor’s degree or higher was
+      33.4% for “the first time in decades of data.” To reiterate the point, the
+      strictly modal pattern of educational attainment would be for an American
+      student to obtain a diploma, enroll in an accredited undergraduate degree
+      program, and never obtain an undergraduate degree.
+    </p>
+    <h2 id="section-2-4-three-subtypes-of-alternative-education">
+      Section 2.4 - Three Subtypes of Alternative Education
+    </h2>
+    <p>
+      While the final paragraph of the above section describes the strictly
+      modal pattern of educational attainment in the modern United States, the
+      pattern of enrollment plus noncompletion does not describe the state of
+      being desired by those who enroll. The desired situation would be college
+      graduation. As all ideas are antecedent to action, the desire to complete
+      college is identified as more traditional than the actualization of
+      college completion. The nuanced difference between a desire and its
+      actualization is lost when speaking loosely, and as a result the actual
+      four-year degree is loosely identified as a traditional credential.
+    </p>
+    <p>
+      Alternative education is a general term which includes alternative
+      credentials, alternative pathways, and alternative pedagogies. Each of
+      these alternative entities is characterized by the negation of a
+      traditional counterpart.
+    </p>
+    <p>
+      Traditional pedagogy is the lecture format. K-12 education and higher
+      education have both typically utilized this teaching method during and
+      outside of the post-1975 period of interest, despite wide knowledge on the
+      ineffectiveness of this approach. In 2014, for example, a meta-analysis of
+      225 studies found that undergraduate students in classes with traditional
+      lectures are 1.5 times more likely to fail than students in classes that
+      use active learning methods.
+    </p>
+    <p>
+      A pathway is a series of actions culminating in the attainment of
+      education or a credential. The traditional pathway always culminates in
+      the traditional credential, but alternative pathways may also culminate in
+      the traditional credential. For example, a student may obtain significant
+      college credit or even complete an entire degree program through credit by
+      examination. This competency-based pathway is importantly different
+      compared to the traditional pathway based on the credit hour.
+    </p>
+    <p>
+      While it’s common for students to self-study in preparation for credit by
+      examination, it’s also common for students to attend preparatory classes
+      or even obtain knowledge for the purposes of testing out of one course by
+      sitting in another traditional course. That situation could occur if a
+      student took a course at one university, changed universities, and the
+      credit would not transfer for the original course. Although their credit
+      did not automatically transfer, the student might be able to test out at
+      the second school. In cases like these, the student may have obtained a
+      traditional credential through education using a traditional lecture-based
+      pedagogy, and yet the pathway was not traditional.
+    </p>
+    <p>
+      The distinction of pathways might seem like splitting hairs in theory, but
+      in practice alternative pathways like credit by examination, prior
+      learning assessment, credit by portfolio, and similar processes hold
+      immense potential as a time and cost savings mechanism for the student,
+      while holding constant any concerns over lack of an accredited degree. To
+      briefly illustrate, the price of a CLEP test is $89 in 2019 dollars, while
+      the average cost per credit hour at an accredited college is $594 in 2018
+      dollars. A CLEP test may substitute for a 4-credit course. This means
+      credit by examination is approximately 15% of the price of credit by
+      credit hour.
+    </p>
+    <h2 id="section-2-5-alternative-education-broadly-conceptualized">
+      Section 2.5 - Alternative Education Broadly Conceptualized
+    </h2>
+    <p>
+      Alternative education broadly encompasses all forms of formal and informal
+      learning, but such a process space exceeds feasible study in a single
+      paper, and frankly eludes sufficient study after combining many papers
+      across several fields. Instead of studying alternative education
+      holistically, researchers typically identify and studying a special case
+      or particular implementation of alternative education.
+    </p>
+    <p>
+      One benefit of this approach is that the researcher may identify specific
+      instances of alternative education which are faster, cheaper, or otherwise
+      preferred in some way relative to traditional education, but a weakness of
+      such an approach is that findings appear small, rare, disbursed, and ad
+      hoc. To collect such effects into a strong case against the existing norm,
+      a systematic approach is required which establishes alternativeness as an
+      independent factor which can then be tested for effect.
+    </p>
+    <p>
+      Alternativeness can be conceptualized ordinally or cardinally. Remember
+      that the three subtypes of alternative education are alternative
+      credentials, alternative pathways, and alternative pedagogies. Within each
+      of these three subtypes, solutions within a given subtype can be
+      identified and ranked according to popularity. After ranking from most
+      popular to n-popularity, an increase in rank number synonymously
+      represents decreasing traditional status and increasing alternativeness.
+    </p>
+    <p>
+      By directly utilizing the underlying measure of popularity, a cardinal
+      operationalization is achieved. Examples of popularity measures include
+      number of applications, number of enrollments, expenditure toward a
+      program, or survey-based measures of familiarity and favorability with
+      respect to a specific program.
+    </p>
+    <p>
+      As a brief concretization, a secondary data set is investigated. The
+      College Board, which administers the SAT, recognizes four types of high
+      school in 2014 and other years. These types include public, religiously
+      affiliated, independent, and a group combining other and unknown types of
+      schools. Table 1 shows reported measures of SAT performance by type of
+      high school, augmented with third party data for homeschoolers. Table 2
+      shows basic model results for cardinal and ordinal operationalizations,
+      with linear and marginal effects in their expected directions. Low
+      significance is attributable to small sample size. Notice the non-trivial
+      R-square values identified despite the small sample size.
+    </p>
+    <p>
+      Other research indicates that charter schools perform modestly better than
+      public schools when standardizing by SAT score, although nationally
+      representative charter school data could not be found, and gains vary
+      importantly by state and other factors.
+    </p>
+    <h2 id="table-1-sat-score-by-school-type">
+      Table 1 – SAT Score by School Type
+    </h2>
+    <h2 id="table-2-models-of-sat-score-by-alternativeness">
+      Table 2 – Models of SAT Score by Alternativeness
+    </h2>
+    <h2 id="section-2-6-a-game-theoretic-model-of-dynamic-norms">
+      Section 2.6 - A Game-Theoretic Model of Dynamic Norms
+    </h2>
+    <p>
+      It’s expected and intuitive that rank alternativeness would have a
+      positive linear and negative marginal effect. Traditions are a kind of
+      durable norm or institution. It’s a foundational lesson of New
+      Institutional Economics that norms, institutions, and other classes of
+      informal rules are self-sustaining and socially valued. If alternativeness
+      continued to move in a positive direction ad infinitum, this would seem to
+      indicate that traditions are perfectly opposed to maximal social value.
+      That would be a jarring result which would fly in the face of much of
+      mainline economics. Instead, the observed positive linear and negative
+      marginal effects collectively indicate something much more compatible with
+      orthodox economics. The indication is that some of tradition’s near
+      neighbors represent an improvement, but continuing into the deeply
+      alternative eventually detracts from value.
+    </p>
+    <p>
+      Education fits a non-special case of norms models. As a completely
+      standard example, Conley and Neilson use a prisoner’s dilemma to
+      demonstrate equilibrium adoption of social norms. Suppose we modify this
+      approach to account for dynamic technical improvement. In the present
+      approach, consider an infinitely repeated prisoner’s dilemma where each
+      round adds an additional option to choose cooperateN. CooperateN pays off
+      (1 + cooperateN-1), and in the first round the participants are known to
+      choose cooperate, because they have already equilibrated on the cooperate
+      choice as a social norm. For the sake of modelling, also suppose there is
+      a defectN added in each round as well, and it pays off (defectN-1 – 1),
+      although it’s immediately obvious that coordination on such defects never
+      obtains.
+    </p>
+    <p>
+      Alternative credentials include both technological improvements, and
+      ostensibly technological degradation, relative to present-day norms, but
+      according to the above game-theoretic representation, it’s not expected
+      for society to equilibrate on any of the technologically degraded choices.
+      Instead, it’s observed in the model that society will tend to adopt those
+      preferred alternatives as they become available over time.
+    </p>
+    <p>
+      In a more complex model, suppose that instead of both players gaining
+      certain knowledge of the new cooperate option, each player had some
+      probability of knowledge of the new cooperate option and some level of
+      risk aversion. It’s now seen that there is some delay in adoption of the
+      new cooperate choice, and in some rounds one or both players may prefer to
+      remain on the prior cooperate space, but eventually all players tend
+      toward the highest value cooperate choice.
+    </p>
+    <p>
+      In a third model of highest complexity, suppose that two new cooperate
+      choices are added each round instead of a single choice each round, but
+      players only probabilistically know about the new choices. Figure 1
+      presents a diagram of this game. The first new cooperate choice is
+      revealed to both players with 99% probability, and the second cooperate
+      choice has a payoff which is larger by one unit, but it is revealed to
+      each player with a probability of 10%. Given standard models of nonlinear
+      risk aversion, players will coordinate on the choice which is revealed
+      with near certainty.
+    </p>
+    <p>
+      Figure 1 – Modified Iterated Prisoner’s Dilemma with Probabilistic
+      Discovery
+    </p>
+    <p>
+      Other research echoes this story of dynamic curvilinear adoption of new
+      technology under risk and uncertainty, with or without the game-theoretic
+      explanation in similar or other forms. Marra et al covers this literature
+      well in a paper on adoption of agricultural innovation. Marra emphasizes
+      that agriculture is just one instance of a general learning concern, and
+      the present paper considers itself similarly.
+    </p>
+    <p>
+      This model clarifies risk aversion as a powerful mechanism for the
+      incremental transition of norms from tradition toward alternatives. I
+      propose that additional unmodeled mechanisms exist in the real world, but
+      that the real-world trend nevertheless moves in the modeled direction. One
+      example of an unmodeled consideration is that when an individual consumes
+      alternative education in the real world, the payoff might be smaller than
+      the traditional payoff.
+    </p>
+    <h2
+      id="section-2-7-actual-alternatives-a-history-of-alternative-education-in-the-united-states"
+    >
+      Section 2.7 - Actual Alternatives: A History of Alternative Education in
+      the United States
+    </h2>
+    <p>
+      Several other papers do a great job of assessing the history of
+      alternative education prior to 2000. One important point in much of this
+      literature is that differing concepts of alternative education are used.
+      Aron states that the term alternative education, “in its broadest sense
+      covers all educational activities that fall outside the traditional K-12
+      school system (including home schooling, GED preparation K-12 school
+      system (including home schooling, GED preparation programs, special
+      programs for gifted children, charter schools, etc.), although the term is
+      often used to describe programs serving vulnerable youth who are no longer
+      in traditional schools.” In the same literature, Lange and Sletten are not
+      abnormal in nearly using the term as a synonym for K-12 special education.
+      They collect earlier research on the subject beginning in the 1960s.
+    </p>
+    <p>
+      The present paper takes an even broader look at alternative education by
+      considering alternative post-secondary education including professional
+      certifications and a crop of new, non-accredited, digital credentials like
+      the Udacity Nanodegree. By looking at post-secondary education, the
+      present paper unifies the literature on K-12 alternative education with
+      the literature on nontraditional students. One might think nontraditional
+      students exist in the K-12 space, and they do, but the nontraditional
+      student literature focuses on college students in particular. Dill and
+      Henly, operationalize a nontraditional student as “as having multiple
+      roles (e.g., parent, employee, student) and at least 1 year between high
+      school and college.” Taniguchi and Kaufman define a nontradional student
+      as, “those who enter four-year colleges or universities as adults, or at
+      age 21 or older.”
+    </p>
+    <p>
+      A variety of definitions are used for alternative education and
+      nontraditional learning, but many of the solutions are robust across these
+      definitions. The present paper emphasizes postsecondary alternative
+      learning, but many of the technical solutions which are helpful in this
+      space are also helpful elsewhere. Partially or fully online learning,
+      personalized learning, and active learning are examples of alternative
+      pedagogies which improve results across many of these categories.
+    </p>
+    <p>
+      Harasim gives a good history of online education from the founding of the
+      world wide web in 1992 through the year 2000. Allen and Seaman gave an
+      early look at online education beginning in 2003 and proceeding annually,
+      then they released an informative 10-year review in 2013. From these
+      papers we can already see some clear problems and advantages with online
+      learning. Advantages include lower cost and improved learning outcomes
+      from web-assisted or hybrid courses. The effectiveness of online learning
+      grew importantly over the early 2000s. In 2003, 57.2 percent of academic
+      leaders rated learning outcomes from online education as the same or
+      better than face-to-face, while the number rose to 77% in 2012.
+    </p>
+    <p>
+      Massive Open Online Courses, or MOOCs, are a major topic in the modern
+      digital learning literature. In the Allen and Seaman note that, “Academic
+      leaders remain unconvinced that MOOCs represent a sustainable method for
+      offering online courses, but do believe they provide an important means
+      for institutions to learn about online pedagogy.” The literature on MOOCs
+      is broadly pessimistic about effectiveness. A well-designed study in 2015
+      found that a majority of MOOCs scored highly on organization of material
+      and low on instructional design.
+    </p>
+    <p>
+      Universities are shifting to become more like their alternative
+      competitors, but an interesting finding is that their competitors are also
+      shifting to become more university-like, so that traditional educators and
+      disruptive educators both appear to be equilibrating around a hybrid
+      model, and even partnering directly with each other so that online
+      education providers are beginning to offer college credit.
+    </p>
+    <p>
+      The present paper is focused on suitability of alternative credential. A
+      prototypical example of the type of modern, digital, alternative
+      credential the research is intended to relate to would be the Udacity
+      Nanodegree. This credential is specifically mentioned during survey
+      administration. The survey includes a brief statement on alternative
+      credentials as follows:
+    </p>
+    <p>
+      Alternative credentials include certificates, documents, and other proof
+      of receiving education, other than traditional credentials. Traditional
+      credentials include a high school diploma or an undergraduate degree from
+      an accredited university. An example of an alternative credential is a
+      Nanodegree from Udacity.
+    </p>
+    <p>
+      While there is some ongoing discussion in the current literature to the
+      effect that online education is still contentious, the present section
+      shows that online and hybrid learning are in fact a new normal which has
+      been developing for some time. The disruptive education of Clayton
+      Christiansen and Michael Horn has already been incorporated into the
+      typical university.
+    </p>
+    <p>
+      While the present paper strongly argues for alternative education, it
+      agrees with scholars like Jeffrey Selingo. Jeff agrees that the bundled
+      service model of the traditional 4-year undergraduate degree is
+      collapsing, but rather than foreseeing a market takeover by nimbler
+      competitors, Jeff is optimistic that universities will be able to adapt.
+      This theme of universities successfully adapting to become like their
+      competitors, rather than being ousted by competitors, is a major theme of
+      the book.
+    </p>
+    <p>
+      In Robinson and Selingo we see traditional providers including four-year
+      universities adapting and innovating by adopting best-of-breed
+      technologies, pedagogies, and program structures piloted by alternative
+      providers. Craig shows that this flow is bidirectional, rather than
+      unidirectional. Craig notes that Udacity&#39;s latest innovation is the
+      in-person course. Besomebody Paths are fully offline. The typical course
+      seems to be achieving equilibrium among a range of subtly different, but
+      substantively similar, hybrid modes. Far from being an artifact of
+      overfitting this literature, the elucidated pattern is consistent with
+      multiple stories that none of these authors mention.
+    </p>
+    <p>
+      An elementary conversation on alternative education consists in
+      contrasting disruptive private education and online learning providers
+      with traditional education. Clayton Christiansen lead development of
+      thought on disruptive innovation and worked with Michael Horn to bring
+      this analysis to the field of education in 2008 with a book entitled
+      Disrupting Class: How Disruptive Innovation Will Change the Way the World
+      Learns. Notice the change in tense between 2008 and 2011, when Clayton
+      publishes a second book on the subject called The Innovative University:
+      Changing the DNA of Higher Education from the Inside Out.
+    </p>
+    <p>
+      A correct understanding of those in the movement of the disruption of
+      education is not that they are anticipating declining university
+      enrollment any time soon. Southern New Hampshire University and Western
+      Governors University‎ are mentioned as leaders in competency-based
+      education. In one part of Selingo’s College (Un)Bound, he mentions Paul
+      LeBlanc. Paul LeBlanc identifies himself as a disrupter in the vein of
+      Christiansen. He considers the online learning revolution old news and
+      competency-based education is the more recent innovation. LeBlanc believes
+      that competency-based education will come from existing institutions, and
+      will exist alongside four-year programs.
+    </p>
+    <p>
+      In 2011, the same year that Christiansen noticed the present-tense
+      changing of higher education’s DNA, Sebastian Thrun manifested the
+      Christiansen of 2008 and ignored the Christiansen of 2011 by relinquishing
+      his tenure at Stanford to found Udacity. Udacity&#39;s first courses began
+      taking students in early 2012. Only in 2013 did Udacity begin contributing
+      to changing the university by offering some courses for college credit. In
+      2014, Udacity entered into its first full-fledged partnership with a
+      university. The same year, Udacity released its first signature
+      alternative credential, the Nanodegree. Excitement filled the air. About
+      that time, as Craig informs us, the evidence on weak outcomes for
+      Udacity&#39;s courses and other MOOCs began to cause significant doubt. In
+      2017, Udacity Connect was launched. This product is a hybrid learning
+      solution which occurs partly in a classroom setting and partly online. Now
+      that the results have started coming in, as earlier mentioned, this
+      approach has shown about a 500% increase in graduation rate.
+    </p>
+    <p>
+      In 2016, Khan Academy applied for the \$100 million dollar grant by
+      100&amp;Change in order to create a globally recognized secondary
+      education diploma. 1904 organizations applied for the grant. 1870
+      proposals are documented in a solution explorer made public by
+      100&amp;Change. 375 proposals are in the education category. When
+      decisions were rendered in 2017, Khan Academy&#39;s proposal earned an
+      honorable mention as one of the top ten in the education category, but it
+      did not place among the 8 semi-finalists across categories and did not
+      earn a financial award.
+    </p>
+    <p>
+      Like Udacity, Khan Academy is an online learning provider which went
+      through a period of immense excitement followed by failure, and also like
+      Udacity, Khan Academy achieved a remarkable success on a different project
+      during the same calander year as their disenchanting loss. In 2017, Khan
+      Academy released the results of a study they conducted with the College
+      Board. It showed that studying for the SAT using Khan Academy is
+      associated with 115-point average score increase. Khan Academy also became
+      the official practice partner for AP exams in 2017.
+    </p>
+    <p>
+      Not only do Udacity and Khan Academy share a Jungian hero typology, they
+      have both evolved from traditional learning competitors to traditional
+      learning allies. Like Coursera, edX, and others, the best-of-breed
+      alternative learning providers of today are not substituting for
+      traditional education providers, they are integrating with them. Likewise,
+      the best-of-breed traditional providers are not rejecting new learning
+      approaches, they are partnering with them, awarding credit to students for
+      alternative learning, and even supplying online education providers with
+      content.
+    </p>
+    <p>
+      While literature can be found further back that applies in ways
+      increasingly less direct, I consider Christiansen&#39;s 2008 piece to be a
+      watermark in the literature. With Udacity&#39;s course offerings in early
+      2012, I observe a bright line in the actualization of modern alternative
+      education provision. With Udacity, Coursera, Khan Academy, and other major
+      online learning providers having been through significant revision in just
+      a few years, I consider 2018 to be a new age of alternative education.
+      Significant changes occured during 2017, so 2018 will have been the first
+      year in which these changes were available throughout the period.
+    </p>
+    <p>
+      The general trend is toward integration of traditional and alternative
+      providers, but alternative learning systems are heterogenous and these
+      heterogenous solutions are not equal in optimality for consumption by any
+      particular individual, nor at the social level. Portfolios, and digital
+      portfolios in particular, are in demand by employers. Digital portfolios
+      have recently become trendy among universities, while they have been in
+      fashion with alternative providers for some time. Standardized portfolio
+      artifact generation and evaluation is becoming more standardized over
+      time, assisted by certain dedicated evaluation providers.
+    </p>
+    <p>
+      Apprenticeship programs are making a comeback as a matter of fact,
+      although it is controversial to claim that this is an obvious social good.
+      These programs never truly left Germany, but they have revived from
+      slumber in the UK. Under Trump, the US saw a major step forward for a
+      particular implementation of apprenticeship, but it has been a
+      controversial policy implementation, as discussed in the atemporal
+      findings section. Like apprenticeship, many scholars find themselves
+      supporting evidence-based learning, even while criticizing particular
+      implementations of learning assessment. It is particularly fashionable to
+      criticize standardized examination.
+    </p>
+    <p>
+      Standardized exams typically have certain question formats, including
+      multiple choice or essay response questions which may be graded according
+      to a rubric. Examples of standardized exams include the SAT, the ACT, the
+      international PISA, and many state-level exams including the Texas STAAR.
+      Standardized exams are generally cost-effective means of generating
+      meaningful signals, but these signals are often systematically imperfect,
+      and those imperfections are the source of much discussion. While
+      portfolios may be costlier to generate and evaluate, they seem to be
+      substantially less controversial in both the literature and when surveying
+      professionals. Portfolios may include a broad range of expression, and the
+      complexity of normalizing these expressions may be one reason for a
+      silence in the academic literature. The best explanation for high
+      professional opinion, on the other hand, may be plain efficacy of skill
+      demonstration by the candidate to a knowledgeable portfolio reviewer.
+    </p>
+    <h2 id="section-2-8-atemporal-findings-in-the-academic-literature">
+      Section 2.8 - Atemporal Findings in the Academic Literature
+    </h2>
+    <p>
+      A history of alternative education was just given, evidencing an argument
+      about the directional trend of education. Earlier a similar thing was done
+      with traditional education. This section notes some important points on
+      education which seem to hold in a non-trending way.
+    </p>
+    <p>
+      Intellectually, there is a clean distinction between a disruption camp and
+      a non-disruption camp. In the real world, the leaders in either camp exist
+      much more in the middle of the two than toward the extremes. The leading
+      thinkers and practitioners in favor of the university system acknowledge
+      that universities should continue to innovate, and adopting
+      non-traditional features is practically, and in some sense tautologically,
+      the means to that end. The leading thinkers and practitioners opposed to
+      the legacy system acknowledge that the legacy system is firmly entrenched
+      and will continue to be so for many years, and so the optimal course of
+      action for individuals and for society is for new providers to integrate,
+      cooperate, and coordinate with those legacy systems, instead of attempting
+      to steal consumers in a winner-take-all fashion.
+    </p>
+    <p>
+      The result is that leading thinkers and practitioners on both sides
+      largely support both alternative education and traditional education.
+      Moreover, leaders on both sides generally agree on which pedagogies,
+      technologies, and so on, provide optimal results in most cases. A cursory
+      glance at the non-book literature demonstrates the difficulty involved in
+      locating a formal paper with citations in excess of the single digits
+      which promotes the traditional lecture mode of class instruction. I could
+      only find one from by Kalogeras in 1976. While the magazines occasionally
+      headline an article which pretends to defend lecture, seldom make and
+      evidence-based case and often essentially concede the point. Consider
+      <em>In Defense of the Lecture</em>, a 2014 article from the Chronicle of
+      Higher Education. This article points out specific virtues of lecture,
+      even while conceding &quot;...lecturing as a means of transferring basic
+      factual information is a poor way to teach. I agree...&quot;
+    </p>
+    <p>
+      The differences in opinion seem rather limited, and they almost
+      universally apply to macroeconomic issues. The closest thing to
+      disagreement on microeconomic choices seems to be threefold:
+    </p>
+    <p>
+      Some scholars are aware of interesting programs or technologies which
+      other scholars are not aware of.
+    </p>
+    <p>
+      Scholars heterogeneously trust the payoff claims of particular programs of
+      alternative learning.
+    </p>
+    <p>Some scholars oppose particular alternative education techniques.</p>
+    <p>
+      Expanding on the third point above, Eric Hanushek recently stated “We
+      should not delude ourselves into thinking that Trump’s apprenticeship
+      expansion will substitute for our failing K-12 schooling
+      system...Vocationally-trained workers with relatively narrow skills face a
+      harsher labor market with time as the nature of production changes.” Along
+      the same lines, a Brooking study to which Hanushek contributed found that
+      excess utilization of an apprenticeship model at the social level could
+      generate a skill gap. Despite Hanushek&#39;s particular position on the
+      Trump plan, and perhaps his general opposition to excess utilization of
+      apprenticeship, it is clear that he does not oppose alternative education
+      writ large, and that he does not deny the utility of vocational training
+      for particular individuals.
+    </p>
+    <p>
+      It is worth mentioning that both of these main microeconomic concerns are
+      being addressed over time by projects like Credential Engine, which seeks
+      to comprehensively catalog non-accredited credentials and standardize
+      their outcome measurement and reporting. An alternative strategy is
+      provided by firms like Degreed, which markets a generalized service to
+      measure any skill. This approach simplifies the measurement trust problem
+      from a need to trust heterogenous providers to the need to trust a single
+      provider of learning measurement, Degreed.
+    </p>
+    <p>
+      Many less comprehensive skill measurement providers exist. Pluralsight,
+      for example, is a relatively well known and reputed firm in the IT market.
+      Pluralsight provides a standard measurement service for a specific range
+      of skills. This measurement process obtains independent from where the
+      learning or skill development occurred. In this sense, employers can
+      choose to trust a skill measurement provider instead of directly trusting
+      a learning provider. This simplifies the analysis problem for employers,
+      and it also creates an additional incentive for learning providers to
+      provide good content. If many students pass through an alternative
+      learning process, then perform poorly during standard evaluation, the poor
+      performance becomes attributable in part or whole to that alternative
+      learning process.
+    </p>
+    <p>
+      The main sources of debate seem to be on macroeconomic concerns. These
+      concerns are completely out of my interest, but they are worth noting:
+    </p>
+    <p>What is the best course of action for the mean or median student?</p>
+    <p>What should be done with public funds for education?</p>
+    <p>
+      Should the existing educational requirements for certain professional
+      licenses be reevaluated, or should certain licenses be created or
+      destroyed?
+    </p>
+    <p>
+      It seems to me that if there is to be any meaning to the labelling of a
+      scholar as in favor of traditional education, it merely means that, with
+      respect to the macroeconomic points mentioned above, the scholar believes
+      at least one of, and possibly all of, the following:
+    </p>
+    <p>The mean or median student should obtain a four-year degree.</p>
+    <p>
+      The growth in public education spending should remain constant, or perhaps
+      grow.
+    </p>
+    <p>
+      At least some professions benefit from licensing, and at least some
+      licenses benefit from requiring accredited education.
+    </p>
+    <p>
+      Caplan would represent, then, a non-traditional position. Hanushek would
+      represent a moderate position between these extremes, arguing that
+      policymakers should not grow spending, or perhaps cut it non-drastically,
+      but mainly focus on spending in a more intelligent way.
+    </p>
+    <p>
+      Under this macroeconomic categorization, even the proponent of traditional
+      education need not say a particular student should necessarily obtain a
+      four-year degree, although it would seem to be a null hypothesis. It is
+      this null hypothesizing mechanism which finally allows us to obtain some
+      meaningful distinction at the microeconomic level, whereas breaking
+      scholars into camps according to their attitude on disruption seems like a
+      red herring.
+    </p>
+    <h2 id="section-3-1-methodology-and-organization-of-findings">
+      Section 3.1 - Methodology and Organization of Findings
+    </h2>
+    <p>
+      Comparable survey questions obtained a maximum of 1190 responses during
+      four administration windows including portions of February 2018, October
+      2018, February 2019, and May 2019. Appendix 1 details the wording of
+      questions and the answers available. Appendix 2 identifies which factors
+      were included in each administration, notes significant factors by
+      administration, and gives shorthand factor names. In general, significant
+      factors and variables of interest were persisted across administration.
+      Weak factors or tangential curiosities were included only in a subset of
+      administrations.
+    </p>
+    <p>
+      The survey was created in SurveyMonkey and responses were gathered using
+      SurveyMonkey Paid Audiences, Amazon Mechanical Turk, social media posts,
+      and word of mouth. Responses were grouped according to their origin using
+      a construct in SurveyMonkey which is called a collector. Collector effects
+      were insignificant. This is interesting for two reasons. First, the source
+      populations are known to be systematically different. Perhaps the most
+      notable known systematic difference is that Amazon Mechanical Turk
+      respondents were guaranteed to be U.S. High School graduates. A second
+      reason the insignificance of collector effects is important is that
+      response prices were significantly different. Amazon Mechanical Turk
+      responses were more than 20% cheaper than SurveyMonkey Paid Audience
+      responses on average.
+    </p>
+    <p>
+      Systematic analysis of the novel data set includes 106 right-hand
+      variables and two left-hand variables. Ad hoc analysis checked another 8
+      selectively created interaction or similar variables.
+    </p>
+    <p>
+      Variable-level sample sizes range from 240 to 1190. Appendix 3 lists
+      technical variable names in alphabetical order along with summary
+      statistics. Appendix 4 lists variable names in alphabetical order, and
+      summarizes factor strength across models. Factors are generally
+      operationalized into multiple variables. Appendix 4 makes this
+      factor-to-variable mapping clear by identifying the factor short name
+      related to each variable. For example, 9 gender variables were explored.
+      These variables are sometimes complimentary, and in other cases they are
+      directly redundant with another representation of the same construct.
+    </p>
+    <p>
+      Data exploration began and by investigating arbitrary relations of
+      interest. These ad hoc findings of interest are discussed in section 3.5.
+      The primary variable of interest goes by the variable name voi and is
+      referred to in shorthand as entry-level suitability. It is structured as a
+      favorability question on a scale from 1 to 10. See the description of
+      question number 2 in appendix 1 for the wording of the question.
+    </p>
+    <p>
+      The secondary variable of interest goes by the variable name ioi and is
+      referred to in shorthand as the index of interest. This is a 3-factor
+      index which establishes a more general favorability measure of alternative
+      education, whereas entry-level suitability is narrowly focused on the
+      favorability of using alternative credentials in entry-level job
+      application. The index of interest includes the variable of interest, and
+      the two factors are strongly correlated, so general comments on
+      favorability of alternative education should be considered a reference to
+      both. Results for the index of interest were mainly uninteresting, as they
+      were very much in line with an attenuated form of the results for the
+      variable of interest.
+    </p>
+    <p>
+      Systematic analysis leveraged ordinary least squares regression analysis
+      and identification of four key models for each administration year. The
+      first model is a long model which involves multiple regression of every
+      available right-hand variable. The second model of interest is the weak
+      model which involves regressing all variables with a p-value less than .5.
+      The third model is the adjusted r-squared maximizing model, and the fourth
+      model, also called the strong model, involves regressing variables which
+      have a p-value less than .1.
+    </p>
+    <p>
+      Systematic exploration began with the long model and variables were
+      eliminated one at a time by significance until the next model of interest
+      was discovered. The long model is interesting because it shows the maximum
+      explanatory power of the available data set. The weak model is interesting
+      because each variable which survives to this model is more likely than not
+      to have an effect on the left-hand variable. The adjusted r-squared model
+      is interesting because it balances between model complexity and
+      explanatory power in a standard way. The strong model is interesting
+      because it includes factors which have had an effect identified rigorously
+      to a high degree of precision. With the probable exception of the long
+      model, any of these models might be useful in varying applied business
+      scenarios. While the long models seem to have high complexity relative to
+      added value, it is interesting to note that the raw explanatory power of
+      .5635 is greater than .5. This is important because it means the long
+      model explains more of the variation than it fails to explain among the
+      observations it is fit against.
+    </p>
+    <p>
+      Because the October 2018 administration variables are a superset of the
+      February 2018 variables, a single systematic exploration was conducted
+      concerning the 2018 administration year. Similarly, May 2019 variables are
+      a superset of February 2019, and a single systematic exploration was
+      conducted for 2019 variables. This analysis did not restrict the sample,
+      however, and it turned out exegetically that the 2019 strong model holds
+      for 2018 as well. That is, the most significant factors identified in the
+      2019 samples were also measured in the 2018 administrations. This is
+      likely a case of statistical endogeneity of significance, however, as
+      these variables may be significantly identified precisely because they
+      were oversampled.
+    </p>
+    <h2 id="section-3-2-complexity-and-the-preferred-model">
+      Section 3.2 – Complexity and The Preferred Model
+    </h2>
+    <p>
+      4 of the 8 systematically derived models are reported in Table 3. Long and
+      weak models are not recorded in the table for brevity, but factor strength
+      across all models is reported in Appendix 4, and discussion is given to
+      these models and their weak and super-weak factors when relevant. Adjusted
+      r-squared maximizing models are also called medium models, and the
+      variables in these models is considered to have medium importance.
+    </p>
+    <p>
+      Overall, the 2019 medium model is preferred. It obtains high raw and
+      adjusted explanatory power while maintaining relatively low complexity. It
+      is not, however, the highest of all adjusted-r squared among the four
+      models. The medium model including 2018-only variables had a higher
+      adjusted r-squared. There are a couple potential reasons for this. First,
+      variables which were included in 2018 and not included in 2019 are likely
+      to contain important effects which would add to adjusted explanatory
+      power. Secondly, there might be additional variation in the newer samples
+      which would cause weaker fit even in the presence of 2018 variables.
+    </p>
+    <p>
+      Initial investigation at the time of the 2018 survey administrations
+      indicated that stem identification and religiosity were insignificant, so
+      they were removed from later investigation. More recent replication of
+      those results uncovered that those effects were moderately important, and
+      inclusion in future research is recommended for reanalysis.
+    </p>
+    <p>
+      During 2018 investigation, there was suspect improvement to simplicity
+      when filtering by factor significance from the weak into the medium model.
+      7 variables were eliminating, leading to nontrivial gain in adjusted
+      r-squared, however the practical complexity of the matter did not
+      significantly reduce because only one survey question could be eliminated
+      in order to implement the medium model instead of the weak model. This is
+      a different perspective on complexity which is an economically important
+      distinction. As a result, a metric called q-complexity was checked for all
+      models. This metric simply measures the number of questions which would be
+      asked during a survey in order to implement a model.
+    </p>
+    <p>
+      Q-complexity is more directly connected to expenditure when constructing a
+      survey or other data collection system, and it also more accurately
+      assesses the interpretive complexity compared to adjusted r-squared in
+      some cases. A model with 9 regional effects instead of 10 is unimportantly
+      simpler compared to the reduction in complexity achieved when a survey
+      with 9 yes or no questions is administered in comparison to a survey with
+      10 such questions. Q-complexity detects this nuance while adjusted
+      r-squared is blind to it.
+    </p>
+    <p>
+      This background is an important reason for selecting the 2019 medium
+      model. The 2018 medium model decreased q-complexity by 1 relative to the
+      2018 weak model, so practically the weak model is not more expensive to
+      implement, and it may gain substantively in raw explanatory power. In the
+      2019 case, however, the medium model reduces q-complexity from the 2019
+      weak model by 4, or 25%, so it achieves an economically important
+      reduction in implementation use and it is also substantively simpler to
+      reason about.
+    </p>
+    <p>Table 3 – Medium and Strong Models</p>
+    <h2 id="section-3-3-systematic-exploration-of-the-2018-data-set">
+      Section 3.3 - Systematic Exploration of the 2018 Data Set
+    </h2>
+    <p>
+      There were 168 observations in the 2018 long model. Model hardening from
+      the long model to the weak model for 2018 resulted in a reduction from 69
+      to 39 variables. The 69 variables were associated with 15 questions, and
+      the surviving 39 variables in the weak model were associated with 14
+      questions. Surprisingly, the only question which was fully filtered out
+      was the question on employment status.
+    </p>
+    <p>
+      The original hypothesis was that employers would be willing to support
+      alternative credentials. The systematically derived 2018 models indicate
+      that the attitudes of those individuals who make hiring and firing
+      decisions are not significantly different than the general population, but
+      this simply begs a question about whether the general population supports
+      alternative credentials. Appendix 3 answers this question by presenting
+      summary data on all variables. The mean of the variable of interest is
+      about 6.614, which is significantly more favorable than not across the
+      population. Table 4 adds a bit of detail with respect to the specific
+      sample included in the 2018 long and weak models. Individuals within this
+      sample had an average favorability of about 6.351, although this is
+      insignificantly different from average.
+    </p>
+    <h2 id="table-4-cross-tab-voi-by-is2018longmodelresponse">
+      Table 4 – Cross Tab VOI by is2018LongModelResponse
+    </h2>
+    <p>
+      While cross tabulation within this sample seems to hint at weak positive
+      temporal trend, direct interrogation of time variables yields a mixed
+      confirmation. Simple regression of linear time on the variable of interest
+      has a super-weak (p &gt; .5) negative effect. A regression of linear and
+      squared time on the variable of interest yields stronger effects on each
+      factor, but the effects are still weak (.5 &gt; p &gt; .1). Interestingly,
+      the weak temporal effects are opposite expectation. Linear positive
+      effects with a negative marginal effect would be intuitive, but the
+      observed weak temporal effects are linearly negative and marginally
+      positive. Positive marginal effects are generally considered
+      unsustainable, but this finding may indicate that entry-level suitability
+      resides on the early portion of an s-curve for adoption.
+    </p>
+    <p>
+      When cubic time is introduced to the right hand, linear time becomes
+      omitted due to collinearity. The p-values of marginal and cubic effects
+      are slightly better than the p-values of the linear and marginal effects
+      in the simpler model, but the marginal effect has a negative value in this
+      model. Theoretically, as time increases arbitrarily the cubic effect would
+      dominate, so that this model also suggests unbounded increasing returns to
+      scale. As earlier mentioned, this is generally considered theoretically
+      unsustainable, and so a more plausible interpretation of this temporally
+      complex model is simply that it is replicating the suggestion that
+      entry-level suitability exists at the early phase of an adoption growth
+      curve, prior to inflection, sometimes called the lag phase.
+    </p>
+    <p>
+      Based on exploration up to this point, the working answer to the
+      hypothesis is that employers are favorable toward using alternative
+      credentials, but so is everyone else. In addition, there is weak evidence
+      that exponential favorability is down the road, but favorability may
+      decrease in the immediate future and for some time. The date construct
+      used is the number of days since 1960. Time effect coefficients indicate
+      that the total time effect will net positive with central estimates of
+      80-120 years. The variety of events which could occur over such a time
+      jeopardize reasonable confidence about the magnitude of these effects, and
+      statistical significance in these effects is low enough that it would be
+      unsurprising for inflection to obtain within 5 years. High variability in
+      temporal estimation underscores the potential value of additional temporal
+      sampling.
+    </p>
+    <p>
+      Reducing the weak 2018 model into the 2018 adjusted r-squared maximizing
+      model eliminates Christian identification as an important variable. This
+      variable competed with generic religious identification, and linear
+      religiosity survives to this model with a positive effect. Religiosity is
+      typically associated with political conservatism, and conservatism is
+      thought to move with status quo bias. The present article gives mixed
+      confirmation of a positive relation between religiosity and
+      anti-innovation bias, but education appears to be an important exception.
+    </p>
+    <p>
+      Innovation proxy variables include favorability to artificial
+      intelligence, cryptocurrency, and online education. These variables are
+      cross-correlated with one another with a p-value of less than .001.
+      Religiosity is negatively related only to artificial intelligence, but
+      artificial intelligence is the only variable in this set of three which
+      survives to the strong model. The negative linear correlation between
+      religiosity and artificial intelligence is also more significant and
+      larger in magnitude compared to the relation of religiosity to other
+      innovation proxies.
+    </p>
+    <p>
+      Conservatism is characterized by high religiosity and high favorability to
+      market-based solutions. Regulatory favorability is positively associated
+      with all proxies of innovation. This amounts to confirmation on the
+      association of market favorability with status quo bias, but it also
+      presents two paradoxes. First, the market is considered an effective tool
+      of innovation, so individuals seeking to maintain the status quo ought to
+      disfavor it rather than favor it. Second, traditional education is
+      regulated education, and alternative credentials are deregulated, so
+      individuals committed to high levels of regulation ought to disfavor
+      alternative credentials. One hypothesized explanation to this apparent
+      paradox is oriented around individual personality. If those on the
+      political left are high in openness, then they might also favor
+      alternative credentials.
+    </p>
+    <p>
+      Industrial effects are common in weaker models, but fail to survive into
+      the strong model for 2018. The most significant industrial effect was for
+      those who chose other as their industry. The second most significant
+      effect was for information technology. Two regions have significant
+      effects in the strong model. The mid-atlantic region, including much of
+      Washington DC, is associated with a positive effect. The west south
+      central region is associated with a large negative effect. This region
+      consists of Arkansas, Louisiana, Oklahoma, and Texas. Gender, age, and
+      income were significant. Anti-foreign bias was tested and identified, but
+      it’s explanation is not intuitive. Anti-foreign bias is positively
+      correlated with favorability on alternative education.
+    </p>
+    <h2 id="section-3-4-systematic-exploration-of-the-2019-data-set">
+      Section 3.4 - Systematic Exploration of the 2019 Data Set
+    </h2>
+    <p>
+      The 2019 strong model identifies gender, innovation bias, expected
+      conventionalism, online education favorability, and regulatory
+      favorability as the strongest factors. Effects move in their expected
+      directions, except for regulatory favorability which is linearly positive
+      with respect to the entry level suitability. It’s interesting that the
+      question about whether alternative credentials will be conventional soon
+      survives into the strong model, because this reinforces two key
+      theoretical stories in the literature.
+    </p>
+    <p>
+      First, it highlights the importance of education as a norm, which is key
+      to Caplan’s criticism of alternative credentials. Second, the surviving
+      positive quadratic and negative cubic effects reinforces the story that
+      alternative credential adoption is progressing through an s-curve. Figure
+      3 shows the that the effect of expected conventionality on entry-level
+      suitability follows an s-curve. This only reinforces our temporal story if
+      time moves with expected conventionality, and indeed with nonlinear
+      conventionality, but it turns out that this is exactly the case. While our
+      earlier simple analysis of time on the variable of interest involved
+      p-values on time variables in the neighborhood of .4, a regression of
+      linear time on nonlinear expected conventionality reveals a positive
+      coefficient with a p-value of .024.
+    </p>
+    <h2
+      id="figure-3-effect-of-expected-conventionality-on-entry-level-suitability-in-the-2019-strong-model"
+    >
+      Figure 3 – Effect of Expected Conventionality on Entry-Level Suitability
+      in the 2019 Strong Model
+    </h2>
+    <p>
+      The vertical line in Figure 3 occurs at a value of about 6.1, which is the
+      mean value of expected conventionality in the survey. Notice that this
+      story about s-curve adoption is slightly different than our earlier story.
+      The conventionality-based adoption analysis indicates that alternative
+      credentials are past the lagged phase of adoption and recently past the
+      point of inflection. Extrapolating far into the future seems to indicate
+      an eventual demise to suitability, but this extrapolation is inappropriate
+      for a few reasons. First, the model turns negative around an expected
+      conventionality value of 11, but the maximum value this construct is
+      capable of taking on is 10. At 10, we seem to see a marginal value near
+      zero, which is consistent with the second extrapolation issue. In theory,
+      we have good reason to expect decreasing marginal effects, but we have not
+      identified any reason to expected negative marginal effects. Section 2.6
+      discusses some of this theory on growth curves, learning curves, and so
+      on.
+    </p>
+    <p>
+      Finally, the shape of the curve is the result of analytical design.
+      Quadratic and cubic factors were constructed rather than directly
+      measured. These constructs are useful because they offer simple detection
+      of non-linear effects, but not because they are optimal for all analytical
+      purposes. S-curves are prototypically modeled as a sigmoid function, and
+      log-log modelling is also common for learning or experience curves. While
+      individuals are not treated and measured for learning in this paper, the
+      idea is that society as a whole is learning about alternative credentials
+      over time. Log-log regression for time on conventionalism was checked, and
+      indeed it has an even better p-value of .004. Under that model there would
+      be no extrapolative decline in entry-level suitability as a function of
+      arbitrarily, indeed impossibly, large expected conventionality. For
+      practical purposes there is little substantive difference in these
+      approaches with respect to the variables in question. Expected
+      conventionality is not binary, but transformation of this variable is
+      possible to allow logistic regression to model a sigmoid.
+    </p>
+    <p>
+      Logarithmic analysis obtains higher confidence, but the relation is
+      indirect to the variable of interest. Unfortunately, log-linear and
+      log-log analysis of time directly to the variable of interest is
+      super-weak, so the indirect relation seems to be both our most accurate
+      story and also a relatively complex story to predict on and reason about.
+      The log-linear regression of expected conventionality on the variable of
+      interest is exceedingly significance with a p-value under .001, but it is
+      less explanatory than a multiple regression of linear, quadratic, and
+      cubic expected conventionality on the variable of interest, and in the
+      longer regression all right-hand variables are significant with p-values
+      under .08.
+    </p>
+    <p>
+      Because the direct relation between the variable of interest and time is
+      insignificant, but each step of an indirect relationship is significant,
+      an indirect model is tested by generating the predicted log of expected
+      conventionality from log time, and the variable of interest is regressed
+      on predicted log expected conventionality. Yet, this relation is also
+      insignificant with a p-value of .811 for the predicted coefficient in the
+      regression.
+    </p>
+    <p>
+      Still, following the intuition of this indirect relation, nonlinear
+      regressions are explored for significance. Eventually, three interesting
+      models are identified. One strong temporal model was identified and two
+      nonlinear regressions of expected conventionality on the variable of
+      interest. A dynamic model was identified with the form:
+    </p>
+    <p>
+      This temporal model obtained an r-squared of .8691 and b2 had a p-value
+      less than .001. The estimate of b2 was less than 1, indicating exponential
+      decay rather than exponential growth. This is the best fit temporal trend
+      for the observed data, indicating a decreasing nonlinear trend in
+      alternative credential suitability over the sample. Combining insights
+      from 2018 and 2019 trend analysis, the evidence toward a short run
+      reduction in alternative credential favorability is strong, and there is
+      some comparatively weak evidence for a longer run reversal.
+    </p>
+    <p>
+      Regarding nonlinear regression of conventionality, a two-factor
+      exponential expansion obtains an r-squared of .9029. Let X represent
+      expected conventionality, then two-factor model takes the form:
+    </p>
+    <p>
+      A three-factor exponential expansion obtains an r-squared of .2621. The
+      three-factor model takes the form:
+    </p>
+    <p>
+      The three-factor expansion is interesting because the exponentiated
+      parameter is identified with a t statistic of 1077.23. This immense
+      t-statistic seems to indicate the parameter is identified with high
+      precision. However, the constant in this model takes the implausible value
+      of about -171, and the exponentiated parameter takes the implausible value
+      of about 175. Remember that the variable of interest is observed between 1
+      and 10. The two-factor model estimates the exponentiated parameter at
+      about 4. The two-factor model also estimates the exponentiated parameter
+      with a t-statistic of about 33.8, and an associated p-value of about 0.
+      While this lower t-statistic is technically a less strong identification,
+      it is practically unimportant, and the estimated value is plausible.
+    </p>
+    <p>
+      The positive association between conventionality and entry-level
+      suitability is already firmly established, as is the short run negative
+      association between time and the variable of interest. One interesting
+      note to add is that when expected conventionality is interacted with time,
+      a multiple regression of time, conventionality, and the interacted
+      variable reveals a positive relation between the interacted variable and
+      entry-level suitability. This may point to long run normalization of
+      alternative credentials as a mechanism toward eventual recovery in
+      entry-level suitability.
+    </p>
+    <p>
+      Employer effects refer to the effect associated with an individual’s
+      statement that they influence hiring and firing decisions in their place
+      of work. Employer effects were weak in the 2018 sample, but additional
+      sampling across 2018 and 2019 allowed employer effects to survive into the
+      preferred 2019 model. The preferred 2019 model is the model which
+      maximizes adjusted r-squared. Employer effects are negative in that model,
+      with a coefficient of about -.47. Employer effects are slightly negative
+      to a lesser extent in a simple regression against the variable of
+      interest, with a coefficient of about -.1.
+    </p>
+    <p>
+      A simple interpretation is that employers are more pessimistic than others
+      on alternative credentials. Another interesting possibility views this
+      effect from a process perspective. From a process perspective, employers
+      are a driver of changes to the labor market, so that population
+      favorability lags employer favorability. It’s clear that entry-level
+      suitability will decline in the short term, and this is consistent with
+      employers having a more negative view than average. The interesting
+      finding here is to note that when we interact time with employer status,
+      the employer effects are already reversed from the general population. A
+      regression of four parameters on the variable of interest is depicted in
+      Figure 4, which illustrates a hypothetical reversal in entry-level
+      suitability. The figure is conceptual and not to scale. The population
+      trend is illustrated at A, and employer views are represented at B. At A,
+      time effects are linearly negative and marginally positive. Linear
+      employer-time effects are positive, but marginal employer-time effects are
+      negative. The plausibility of a reversal story is enhanced when noting
+      that interacted manager-time effects are more positive than and
+      significant compared to ordinary time effects.
+    </p>
+    <h2 id="figure-4-employer-driven-favorability">
+      Figure 4 – Employer-Driven Favorability
+    </h2>
+    <p>
+      Other interesting findings from the 2019 data analysis includes the fact
+      that age group had a more robust effect compared to exact age, which may
+      indicate something like a cohort effect. Prior analysis indicated that
+      regional effects were moderately important. Ethnicity was introduced into
+      the survey in part to distinguish between underlying policy or culture
+      partials of regional effects. Regional effects were significant after the
+      introduction of ethnicity, but ethnic effects were also moderately
+      significant. Future analysis could identify state of residence to partial
+      out policy effects to a greater extent.
+    </p>
+    <p>
+      Educational attainment obtained an important effect which was more
+      significant than either age or income effects. In addition to level of
+      education, a dummy variable for whether education was at or greater than
+      obtaining a college degree was found to be significant, and it had a
+      positive effect on favorability to alternative education. It seems that
+      individuals who have obtained a traditional degree are more appreciative
+      of alternative education.
+    </p>
+    <h2 id="section-3-4-other-interesting-results">
+      Section 3.4 - Other Interesting Results
+    </h2>
+    <p>
+      Previous research found student indifference toward debt on the part of
+      undergraduate students. The present paper replicates and extends such
+      findings by identifying youth antagonism to alternative credentials. Prior
+      research often measured debt attitudes among college students, but such
+      evidence is susceptible to selection bias because debt-tolerant
+      individuals might have a propensity to consume higher education. In
+      contrast, the present paper identifies generalized youth antagonism to
+      alternative credentials.
+    </p>
+    <p>
+      A simple regression of exact age on the variable of interest yields a
+      slight negative effect. Age group was more important than exact age, and
+      including age group and exact age simultaneously replicates linear
+      negative association across both variables. These regression results
+      obfuscate a narrative which is readily apparent in Tables 5 and 6, a
+      crosstab of age group on entry level suitability, and a summary of mean
+      response to the variable of interest by age group. Notice that the most
+      positive group is not the youngest group, but the age group actively
+      attending or having just graduated college.
+    </p>
+    <p>
+      30% of minors gave the lowest possible entry-level suitability response,
+      and only 10% gave the highest response. Minors are the only age group
+      which is unfavorable toward alternative credentials on average, with an
+      average response of 4.6. One age group up, less than 3% of college-aged
+      individuals gave a response of 1, while more than 20% gave a response of
+      10. Entry-level suitability attenuates downward for age groups 3 and 4,
+      but it is still positive on average. The oldest age group also has the
+      highest proportion of individuals in maximal favor of alternative
+      credentials, with about 1 in 4 giving a response of 10. The oldest age
+      group has a strongly bimodal response, and they are on average less
+      favorable than other groups except minors, but the pessimistic peak among
+      the elderly is still favorable, at a value of 6.
+    </p>
+    <p>
+      The youngest group is a group of small sample size, and therefore not
+      weighed heavily into the lines of best fit, and they are also the most
+      pessimistic about alternative education. Contrary to the stereotype of the
+      innovative youth against the in-their-ways elderly, the present paper
+      indicates that the youth are less innovative than any other group. In the
+      preferred model, which maximizes adjusted r-squared across all 2018 and
+      2019 data, we see that educational effects are important, including a
+      dummy variable for having received a college-level or better education.
+      While neither age nor educational attainment survive into the strong
+      model, educational effects are more significant in the preferred model. It
+      seems that having been through the education system is the more
+      explanatory factor, and age is a side-effect, rather than the other way
+      around. The uneducated, including the youth, appear to be less innovative
+      than the elderly.
+    </p>
+    <p>
+      This information provides for a better marketing strategy for alternative
+      credentials. Instead of marketing to those about to enter college, market
+      to their parents. Marketing to active college students is also a plausible
+      path, although these students are already invested. Some approaches to
+      alternative education, however, work in concert with traditional
+      education. For example, credit by examination is an affordable, fast-paced
+      alternative pathway toward a traditional degree.
+    </p>
+    <p>
+      Plausible explanations for elderly favorability include memory of a time
+      before the 1980s when a degree wasn’t as essential. These individuals have
+      also often obtained a degree and worked for a substantial amount of time,
+      and they may have noticed only a small attainment of job-related skills
+      from the degree. Younger individuals may have a lack of skin in the game
+      and a longer time horizon for repayment.
+    </p>
+    <p>
+      Another interesting, if tangential, result is that to the author’s
+      knowledge, the present paper is the first to look at the effect of
+      nonbinary gender identification on not only the variable of interest, but
+      other items contained in the survey. Nonbinary gender identification
+      obtained for 16 respondents, and it was motivated for inclusion by a
+      desire to reduce noise in known gender effects, but it turns out to have a
+      significant relation to the variable of interest by itself.
+    </p>
+    <p>
+      A simple regression of nonbinary gender identification on the variable of
+      interest reveals a coefficient of about -1.3 with a p-value less than .05.
+      Gender nonbinary individuals are also pessimistic about online education,
+      with a coefficient of about -1.1 and a p-value of less than .08 in that
+      simple regression. Gender effects survive into the strong model, but not
+      in the form of the nonbinary identification variable. Substituting
+      nonbinary identification in for other gender variables in the strong model
+      maintains the negative direction of effect, but the magnitude of effect is
+      attenuated to -.48, this time with relatively low significance and a
+      p-value of .374.
+    </p>
+    <p>
+      A final interesting note is that every factor tested had at least one
+      variable representation that was moderately significant in at least one of
+      the administrations, with two exceptions. Collector effects were utterly
+      insignificant, and Christian identification was weak at best. Ethnicity
+      effects varied by ethnicity. Two were moderately important and none were
+      strong. Hispanics, represented by isethnicity4, and also other
+      ethnicities, represented by isethnicity6, were the two ethnicity variables
+      present in the preferred model. Both ethnic effects were positive with
+      nontrivial magnitudes of .87 and 1.68. These effects were nearly strong
+      with a maximum p-value of .128 in the preferred model.
+    </p>
+    <p>Table 5 – Crosstab of Age Group on Entry Level Suitability</p>
+    <p>Table 6 – Mean VOI by Age Group</p>
+    <h2 id="section-4-applications">Section 4 - Applications</h2>
+    <p>
+      There are several important microeconomic applications of the present
+      research. Key applications include accelerating and reducing cost for
+      traditional education, improving employment and earnings through
+      alternative credentials, individual application during the interview
+      process, individual application in the context of corporate politics, firm
+      application in competitive analysis, and individual application while
+      facing the education consumption decision.
+    </p>
+    <p>
+      Accelerating and reducing cost for traditional education can be
+      accomplished in several ways. First, identify the average public in-state
+      tuition for four-year public universities in the learner’s state of
+      residence. Then, filter possible learning providers to ensure this is the
+      maximum amount paid. Second, utilize online learning providers if the
+      professional education desired support than, and if the learner is
+      comfortable doing so. If the professional education desired involves
+      hand-on experience, like science lab or medical, pure online solutions may
+      not be ideal. Business, information technology, and liberal arts degrees
+      are largely consumable online. Identify the learner’s desired career path
+      and work backwards from that, taking note of relevant certifications, and
+      directly pursuing certification as part of or in lieu of traditional
+      education if possible. Leverage credit by examination and prior learning
+      assessments when possible. Make it a goal to work while going to school
+      and obtain employer reimbursement for college expenses to the maximum
+      available amount.
+    </p>
+    <p>
+      During the application process, an individual who has received alternative
+      education should bear in mind the preferred model of alternative education
+      favorability. The employment candidate will have opportunities to observe
+      interviewers who will interview on behalf of the employer and contribute
+      to an employment decision. The candidate can strategically communicate
+      their educational history by observing interviewers and roughly
+      calculating their favorability to alternative education.
+    </p>
+    <p>
+      In the context of corporate politics, an individual may already be
+      employed and may be seeking to garner consensus within the organization
+      for a policy change. An example of a desired policy change might be to
+      eliminate the requirement for a traditional degree from certain job
+      requisitions, or to allow specific alternative credentials to substitute
+      for that requirement in some cases. Many corporations offer thousands of
+      dollars per employee in tuition assistance. A second example of a desired
+      policy change might be to modify tuition assistance to target CLEP
+      testing, so that recipients would be able to more quickly and cheaply
+      obtain college credit, and potentially reduce assistance outlays from the
+      employer. Bearing in mind the preferred model might assist a change
+      advocate in identifying those individuals best predisposed to agreement
+      with the change, facilitating consensus building and execution of that
+      change.
+    </p>
+    <p>
+      For the two above scenarios, a key rhetorical strategy is to ask a person
+      about whether they are familiar with alternative credentials. If they are
+      not, talk a bit about them. After ensuring the concept is familiar,
+      proceed to ask whether the person thinks these will soon become
+      conventional. This is a key non-observable factor which is extremely
+      explanatory in the model, but when asked in conversation it comes across
+      in a non-technical, comfortable way. Handled properly, this question can
+      be a good ice breaker and help the person asking the question to
+      understand their audience without giving away the views of the person
+      asking the question. The findings in the present paper indicate that
+      people are receptive to alternative credentials even if they aren’t
+      familiar with the topic, and that they become more favorable as they learn
+      more. Outside of formal processes, these positive effects may indicate
+      that conversation around alternative credentials is generally positive,
+      and it might be applicable as ordinary leisure conversation material,
+      which might eventually contribute to wider social acceptance by word of
+      mouth.
+    </p>
+    <p>
+      Regarding competitive analysis from the firm perspective, particularly in
+      the case of labor competition, firms already know that alternative
+      education is important. People often learn about alternative learning
+      providers through their employer. This is reflected in the findings from
+      the present research in that unemployed status has a highly significant
+      association with lack of knowledge about alternative learning providers.
+      While employers are already driving alternative learning adoption, this
+      kind of learning is typically used as a layer of professional learning,
+      upskilling, or continuous education on top of a prior traditional degree.
+    </p>
+    <p>
+      The competitive trend is the tendency to allow that learning to substitute
+      for the degree. This improvement to the prior human resource process
+      allows access to a larger pool of qualified candidates who tend to accept
+      offers at lower salary. Google was in early on this trend. In 2013, Laszlo
+      Bock, Senior Vice President at Google, was interviewed by Adam Bryant of
+      The New York Times. He stated that Google’s data at that time indicated
+      that on the job performance was insignificantly related to GPA or test
+      scores after 2-3 years, and the proportion of people without any college
+      education at Google was increased over time. Years later, in 2018, a
+      well-known salary aggregator called Glassdoor reported on 15 major
+      companies, including Google, which no longer required a degree. Glassdoor
+      stated, “Increasingly, there are many companies offering well-paying jobs
+      to those with non-traditional education or a high-school diploma.”
+    </p>
+    <p>
+      Alternative learning providers are also a key approach to improving
+      workforce diversity. In order to align with other industry-leading firms,
+      drive down labor cost, and improve workforce diversity, the present
+      findings suggest a best practice policy is to marginally reduce
+      traditional educational requirements in as many professional positions as
+      feasible for a given firm.
+    </p>
+    <p>
+      Facing the education consumption decision includes at least two
+      sub-scenarios. In one scenario the consumer is the student, and in another
+      scenario the consumer is financing a third-party student. Typically, a
+      financier would be a parent paying for their child to receive additional
+      education, but there are many non-parental cases of third-party financing.
+      Employers are a key example of non-parental education financing.
+    </p>
+    <p>
+      The important takeaway from the findings for individuals facing education
+      consumption choices is that most people are favorable to the idea of
+      alternative education, although we may soon enter a period where that
+      favorability decreases substantially. Even facing lower favorability,
+      though, it may still be worth exploring alternative credentials due to
+      their affordability and rapid ability to attain. Finally, alternative
+      education is broader than alternative credentials, and it’s possible to
+      leverage alternative education as a way to accelerate or cheapen the
+      completion of a traditional education.
+    </p>
+    <p>
+      Learning while employed makes a learner a nontraditional student, but it
+      greatly enhances the return to college. This for at least three reasons.
+      First, because foregone earnings are a major college expense. Second,
+      gaining experience allows the learner to obtain even higher earnings at
+      graduation time. Third, many employers reimburse a significant amount of
+      employee expenses toward college.
+    </p>
+    <p>
+      This research also informs several potential macroeconomic policy
+      enhancements. Federal lending programs, the G.I. Bill, and similar
+      programs could be redirected, growth-limited, frozen, amended with a
+      sunset provision, or terminated. Licensing regulation entailing formal
+      education could be written to target evidence-based competency in lieu of
+      accredited education. Internship requirements could be relaxed, or the
+      minimum wage could be reduced. Finally, tax write-offs and tax-privileged
+      investment vehicles targeted at accredited education could be liberalized
+      to allow various forms of alternative education. While the present paper
+      has focused on post-secondary credentials, it finds itself in harmony with
+      a broad literature identifying favorable outcomes for school choice and
+      self-directed learning at all ages.
+    </p>
+    <h2 id="appendix-1-question-reference">Appendix 1 - Question Reference</h2>
+    <p>
+      Do you contribute to hiring and firing decisions at your company? One
+      selection among the following was allowed: Yes No Unemployed For many
+      professions, alternative credentials can qualify a person for an
+      entry-level position. An integer selection inclusively between 1 and 10.
+      Value of 1 labeled “Strongly Disagree” Value of 10 labeled “Strongly
+      Agree” Other values unlabeled. This is the default answer pattern. If some
+      question doesn’t specify the available answers, then the answers available
+      are similar to question #2. It will soon become fairly conventional for
+      high school graduates to obtain alternative credentials instead of going
+      to college. When you add up the pros and cons for online education,
+      it&#39;s probably a good thing for society overall When you add up the
+      pros and cons for artificial intelligence, it&#39;s probably a good thing
+      for society overall. When you add up the pros and cons for cryptocurrency,
+      it&#39;s probably a good thing for society overall. When evaluating an
+      applicant&#39;s education, it is important is important to check whether
+      the degree was awarded from a US institution. Have you heard of any of the
+      following online course providers? Zero to many selections among the
+      following were allowed: Udacity Udemy Coursera Pluralsight Lynda.com Note:
+      In the May 2019 administration and onward, the choice for Lynda.com was
+      changed to Lynda.com / LinkedIn Learning. This is due to the LinkedIn
+      acquisition of Lynda.com. Do you work in a STEM profession? One selection
+      among the following was allowed: Yes No Unsure Which of these industries
+      most closely matches your profession? One selection among the following
+      was allowed: Agriculture Education Energy Finance, Investment, or
+      Accounting Health Information Technology Law Manufacturing Military Other
+      Retail Transportation I consider myself religious I consider myself
+      Christian Government regulation helps ensure businesses treat individuals
+      more fairly. Age Included by SurveyMonkey in 2018. In 2019 the question
+      was explicitly asked. In May 2019 and onward, exact age was also asked.
+      One selection among the following was allowed: &lt; 18 18 -29 30-44 45-60
+    </p>
+    <blockquote>
+      <p>
+        60 Gender Included by SurveyMonkey in 2018. In 2019 the question was
+        explicitly asked and the value of Other became a choice. One selection
+        among the following was allowed: Male Female Household Income Included
+        by SurveyMonkey in 2018. In 2019 the question was explicitly asked.
+        Measured annually, in nominal USD. One selection among the following was
+        allowed: 0-9,999 10,000-24,999 25,000-49,999 50,000-74,999 75,000-99,999
+        100,000-124,999 125,000-149,999 150,000-174,999 175,000-199,999 200,000+
+        Prefer not to answer Region Included by SurveyMonkey One selection among
+        the following was allowed: New England Middle Atlantic East North
+        Central West North Central South Atlantic East South Central West South
+        Central Mountain Pacific Device Type Included by SurveyMonkey One
+        selection among the following was allowed: iOS Phone / Tablet Android
+        Other Phone / Tablet Windows Desktop MacOS Desktop Other What is the
+        highest level of education you have completed? Did Not Graduate from
+        High School GED High School Diploma Some College Obtained Undergraduate
+        Degree Obtained Non-Doctoral Graduate Degree Obtained a Doctoral Degree
+        Which race/ethnicity best describes you? American Indian or Alaskan
+        Native Asian / Pacific Islander Black or African American Hispanic White
+        / Caucasian Other
+      </p>
+    </blockquote>
+    <h2 id="appendix-2-questions-per-survey">
+      Appendix 2 – Questions Per Survey
+    </h2>
+    <ul>
+      <li>
+        Question definition number allows cross-reference into Appendix 1 and is
+        not a statement about the presentation order of questions. C - Response
+        value was determined automatically, rather than by response of the
+        participant.  VOI - Question was present and represents the variable of
+        interest. X - Question was present for survey. This does not guarantee
+        every respondent answered the question. Particularly, Q14-Q18 were
+        presented as SurveyMonkey included data for paid responses only during
+        2018. Beginning in 2019, Q14-Q16 were asked of all respondents, but
+        Q17-Q18 remained observed for SurveyMonkey paid responses.
+      </li>
+    </ul>
+    <h2 id="appendix-3-table-of-variable-summary-statistics">
+      Appendix 3 – Table of Variable Summary Statistics
+    </h2>
+    <h2 id="appendix-4-table-of-variable-strength">
+      Appendix 4 – Table of Variable Strength
+    </h2>
+    <p>
+      *The letter represents the most significant model the factor survived
+      into. N = Not present in this administration. VOI = included as a variable
+      of interest, and not assessed for explanatory significance. L = Long
+      Model, W = Weak Model, M = Adjuster R-squared Maximizing Model, or Medium
+      Importance, and S = Strong Model. Preferred variables were M or S in
+      exploration of at least one year.
+    </p>
+  </body>
+</html>
