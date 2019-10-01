@@ -1,5 +1,5 @@
-.blg
-.fls
-.fdb*
-.gz
-.pages
+*.blg
+*.fls
+*.fdb*
+*.gz
+*.pages
