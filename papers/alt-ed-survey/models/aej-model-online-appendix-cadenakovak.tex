@@ -1,0 +1,79 @@
+% AEJ-Article.tex for AEA last revised 22 June 2011
+\documentclass[AEJ]{AEA}
+
+% The mathtime package uses a Times font instead of Computer Modern.
+% Uncomment the line below if you wish to use the mathtime package:
+%\usepackage[cmbold]{mathtime}
+% Note that miktex, by default, configures the mathtime package to use commercial fonts
+% which you may not have. If you would like to use mathtime but you are seeing error
+% messages about missing fonts (mtex.pfb, mtsy.pfb, or rmtmi.pfb) then please see
+% the technical support document at http://www.aeaweb.org/templates/technical_support.pdf
+% for instructions on fixing this problem.
+
+% Note: you may use either harvard or natbib (but not both) to provide a wider
+% variety of citation commands than latex supports natively. See below.
+
+% Uncomment the next line to use the natbib package with bibtex 
+%\usepackage{natbib}
+
+% Uncomment the next line to use the harvard package with bibtex
+\usepackage[abbr]{harvard}
+\usepackage{hyperref}
+ \usepackage{graphicx}
+ \usepackage{fancyhdr}
+  %\usepackage[center]{caption}
+
+% This command determines the leading (vertical space between lines) in draft mode
+% with 1.5 corresponding to "double" spacing.
+\draftSpacing{1.5}
+
+\begin{document}
+
+\title{}
+\shortTitle{}
+\author{}}
+\date{}
+\pubMonth{Month}
+\pubYear{Year}
+\pubVolume{Vol}
+\pubIssue{Issue}
+\JEL{}
+\Keywords{}
+
+\begin{abstract}
+
+\end{abstract}
+
+\maketitle
+
+
+\clearpage
+\bibliographystyle{aea}
+\bibliography{}
+
+\clearpage
+\pagestyle{fancy}
+\lhead{Online Appendix, AEJ:Applied}
+\rhead{Immigrants Equilibrate Local Markets}
+\cfoot{\thepage}
+%\pagestyle{plain}
+\renewcommand{\headrulewidth}{0pt}
+
+{\center \textbf{Online Appendix for ``Immigrants Equilibrate Local Labor Markets: Evidence from the Great Recession'' by Brian C. Cadena and Brian K. Kovak}}
+
+
+\appendix
+\setcounter{page}{1}
+\renewcommand\thesection{\Alph{section}}
+\renewcommand\thesubsection{\arabic{subsection}}
+\singlespacing
+\setcounter{table}{0}
+\renewcommand\thetable{\Alph{section}-\arabic{table}}
+\setcounter{figure}{0}
+\renewcommand\thefigure{\Alph{section}-\arabic{figure}}
+\section{Appendix\label{appendix}}
+\input{gr_appendix}
+
+
+\end{document}
+
