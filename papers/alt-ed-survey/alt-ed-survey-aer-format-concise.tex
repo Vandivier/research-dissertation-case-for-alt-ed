@@ -633,8 +633,16 @@ but the indirect relation through dynamic expected conventionality motivates fur
 
 \begin{figure}[h!]
     \centering
-     \includegraphics[width=0.9\textwidth]{./figures-and-tables/figure-3.png}
-    % \caption{}
+    \caption{Suitability by Expected Conventionality}
+    
+        \begin{tikzpicture}[element/.style={minimum width=1.75cm, minimum height=0.85cm}]
+
+        \node (n1) {\includegraphics[width=0.7\textwidth]{./figures-and-tables/figure-3.png}};
+        \node (n2) [above=0.25cm] at ($(n1)!0.5!(n1) - (6.2, 0)$) {\textbf{Suitability}};
+        \node (n3) [above=0.25cm] at ($(n1)!0.5!(n1) - (0, 4)$) {\textbf{Expected Conventionality}};
+
+        \end{tikzpicture}
+
     \label{fig:expect_convention_voi}
     \end{figure}
 
@@ -681,7 +689,7 @@ Exploring this notion, an interesting finding is identified using a multiple reg
 This regression of four parameters on the variable of interest is depicted in
 Figure \ref{fig:employer_driven_favorability}, which illustrates a hypothetical reversal in entry-level
 suitability. The figure is conceptual and not to scale. The population
-trend is illustrated at A, and employer views are represented at B. At A,
+trend is illustrated at II, and employer views are represented at III. At II,
 time effects are linearly negative and marginally positive. Linear
 employer-time effects are positive, but marginal employer-time effects are
 negative. The plausibility of a reversal story is enhanced when noting
@@ -689,8 +697,16 @@ that the coefficient of interacted manager-time is positive and large in magnitu
 
 \begin{figure}[h!]
     \centering
-     \includegraphics[width=0.9\textwidth]{./figures-and-tables/figure-4.png}
-    % \caption{}
+    \caption{Employer Driven Favorability}
+
+    \begin{tikzpicture}[element/.style={minimum width=1.75cm, minimum height=0.85cm}]
+
+    \node (n1) [above=0.25cm] {\includegraphics[width=0.7\textwidth]{./figures-and-tables/figure-4.png}};
+    \node (n2) [above=0.25cm] at ($(n1)!0.5!(n1) - (6.2, 0)$) {\textbf{Suitability}};
+    \node (n3) [above=0.25cm] at ($(n1)!0.5!(n1) - (0, 3.5)$) {\textbf{Time}};
+
+    \end{tikzpicture}
+
     \label{fig:employer_driven_favorability}
     \end{figure}
 
