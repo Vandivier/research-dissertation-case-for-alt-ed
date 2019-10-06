@@ -27,11 +27,15 @@
 \usepackage{graphicx}
 \graphicspath{{./figures-and-tables}}
 
+\usepackage{hyperref}
+
 \begin{document}
 
-\title{Attitudinal Trends in Alternative Postsecondary Learning}
+\title{Attitudinal Trends in Alternative Postsecondary Learning
+    \thanks{Go to \url{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3387110} to visit the article page for additional materials including the online appendix, survey data, and data analysis source code.}}
 \shortTitle{Trends in Alternative Learning}
-\author{John Vandivier\thanks{Vandivier: George Mason University, 4400 University Dr, Fairfax, VA 22030, jvandivi@masonlive.gmu.edu. The author acknowledges valuable input from Bryan Caplan at George Mason University.}}
+\author{John Vandivier
+    \thanks{Vandivier: George Mason University, 4400 University Dr, Fairfax, VA 22030, jvandivi@masonlive.gmu.edu. The author acknowledges valuable input from Bryan Caplan at George Mason University.}}
 \date{\today}
 \pubMonth{Month}
 \pubYear{Year}
@@ -54,8 +58,6 @@ policy considerations are discussed.
 \end{abstract}
 
 \maketitle
-
-\section{Background and Motivation}
 
 The concept of a student debt crisis has found durable academic and media
 coverage. Van Dusen published a prescient paper in 1979 \cite{van1979coming}. Forbes noted in 2019\cite{friedman2018student} that “Student loan
@@ -177,9 +179,7 @@ prior research has yet to establish magnitudes and dynamic trends on those
 magnitudes for many of these important effects.
 
 This paper explores a novel attitudinal data set on alternative
-credentials\footnote{ The data used in this survey are publicly accessible
-at https://github.com/Vandivier/research-dissertation-case-for-alt-ed/tree/master/papers/alt-ed-survey/190201-feb-survey-monkey/data}.
-This paper tests the thesis that employers will favor
+credentials to test the thesis that employers will favor
 alternative credentials as a mechanism to identify suitable entry-level
 employment. As a secondary interest, changes over time to the relation of
 interest are investigated. The structure of included survey data allows
@@ -797,7 +797,9 @@ For the corporate intrapreneur, direct appeal to industry leaders is one strateg
 Another strategy is simply continued socialization of the topic within the organization.
 Results indicate that people are receptive to alternative education even if they aren’t
 familiar with the topic, and they become more favorable as they learn
-more\footnote{Technically, `reg voi cprovider1` indicates that when a person doesn’t know of any alternative learning providers, there is still a constant of 6.4 in the simple linear regression, indicating positive favorability to the variable of interest. In addition, cprovider1 itself has a significant, positive effect, indicating that informing a person about an alternative learning provider is expected to have a positive impact to the variable of interest, which is alternative credential favorability.}.
+more\footnote{In a simple regression, respondents that know none of the available learning providers have predicted suitability at the model constant value of 6.4.
+Suitability moves positively with knowledge of additional alternative learning providers.
+Prima facie, this indicates that informing a person about alternative learning providers are expected to improve predicted suitability.}.
 A third strategy is to appeal to the underlying costs and benefits of an alternatively educated labor force.
 Alternatively educated students tend to be more diverse\cite{florentine_2018}, and improving diversity is often a corporate goal in itself.
 Alternatively educated students are also often willing to take a lower starting salary during the junior phase of their career, while providing similar or superior technical output.
@@ -822,7 +824,7 @@ to support alternative education.
 
 % ref: https://www.youtube.com/watch?v=KS9GvK7cvmo
 % https://tex.stackexchange.com/a/51501/197312
-\bibliographystyle{/Users/zyl357/Documents/GitHub/research-dissertation-case-for-alt-ed/papers/alt-ed-survey/aea-latex-templates/aea}
+\bibliographystyle{./aea-latex-templates/aea}
 \bibliography{BibFile}
 
 \end{document}
