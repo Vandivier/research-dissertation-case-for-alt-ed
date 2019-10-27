@@ -112,6 +112,7 @@ gen enddatestatafriendly = subinstr(enddate1, "/", "-", .)
 gen ctime1 = date(enddatestatafriendly, "MDY")
 gen ctime2 = ctime1*ctime1
 gen ctime3 = ctime1*ctime1*ctime1
+gen ctime1zeroed = ctime1 - 21241
 
 gen logconventionalsoon1 = log(nvoifconventionalsoon1)
 gen logtime = log(ctime1)

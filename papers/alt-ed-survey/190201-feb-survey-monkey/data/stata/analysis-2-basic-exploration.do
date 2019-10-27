@@ -60,6 +60,7 @@ reg logvoi logtime
 * // indirect log time on voi fails
 reg voi predictedlogconventionalsoon
 
+* // special eg 18
 * // try nonlinear time on voi
 * // nice!
 * // r2 .8972, p ~0.000, t 40.72
@@ -76,15 +77,36 @@ nl (voi = {b0}*(exp({b1}*nvoifconventionalsoon1)))
 * // r2 .2621, t 1077.23
 nl (voi = {b1}+{b2=2}*(exp({b3=0.1}*nvoifconventionalsoon1)))
 
+* // special reg 23
 * // wait...i did it wrong by using conventionality on the right hand. let's use time
 * // r2 .8691, p .811, t -.24
 nl (voi = {b0}*(exp({b1}*ctime1)))
 * // basically invalid form...
 * // r2 0.0, p n/a, taken as constant, t n/a, taken as constant
 nl (voi = {b1}+{b2}*(exp({b3}*ctime1)))
-* // r2 .8691, p ~0.000, t 12467.46
-* // form of: b1*b2^ctime1
+
+* // special reg 25
+* // r2 .8691, adj r2 = .8689, p ~0.000
+* // below is preferred. form of: voi = b1*b2^ctime1
+* // b1 and b0 both more significant compared to special reg 23
+* // b1 coeff 10.044, p = 0.565
+* // b2 coeff .99998, p = 0.000
 nl exp2: voi ctime1
+
+* // special reg 26
+* // prefer for interpretability; time is days since Monday, February 26, 2018
+* // r2 .8691, adj r2 = .8689, p ~0.000
+* // below is preferred. form of: voi = b1*b2^ctime1
+* // b1 and b0 both more significant compared to special reg 23
+* // b1 coeff 6.655, p = 0.000
+* // b2 coeff .99998, p = 0.000
+* // note: let t = 0, y = 6.655
+* // note: let t = 437 (max), y = 6.59
+* // note: let t = 557 (4 months), y = 6.58
+* // note: let t = 802 (1 year, ), y = 6.55
+* // decrease is unimportant; trend effectively flat
+nl exp2: voi ctime1zeroed
+
 * // r2 0.0, p ~0.000, t 10759.63
 * // form of: voi = b0 + b1*b2^ctime1
 nl exp3: voi ctime1

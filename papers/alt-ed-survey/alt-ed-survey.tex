@@ -43,7 +43,7 @@
         \pubIssue{Issue}
         \JEL{D12, I21, I22, I24, I25, I26}
         \Keywords{Education economics, alternative education, debt crisis, signaling}
-        
+
         \begin{abstract}
         Traditional postsecondary learning in the United States is associated
         with increased earnings and employment, but these benefits come at
@@ -51,20 +51,22 @@
         with a variety of caveats including nonconformity stigma. This paper
         explores a novel data set (n = 1190) to understand trends in public
         disposition on alternative credentials. Results indicate that
-        favorability is high, declining in the short term, and may reverse trend
-        over time. Leveraging alternative pathways to reduce cost and accelerate
-        completion of accredited education is a recommended strategy. Some
-        policy considerations are discussed.
+        favorability is positive and will remain flat over the next year.
+        Leveraging alternative pathways to reduce cost and accelerate
+        completion of accredited education is a recommended learner strategy.
+        Allowing alternative learning to satisfy licensing requirements
+        will reduce labor friction.
         \end{abstract}
-        
+
         \maketitle
-        
+
         The concept of a student debt crisis has found durable academic and media
-        coverage. Van Dusen published a prescient paper in 1979 \cite{van1979coming}. Forbes noted in 2019\cite{friedman2018student} that “Student loan
+        coverage. Van Dusen published a prescient paper in 1979 \cite{van1979coming}.
+        Forbes noted in 2019\cite{friedman2018student} that “Student loan
         debt in 2019 is the highest ever...There are more than 44 million borrowers
         who collectively owe \$1.5 trillion in student loan debt in the U.S.
         alone.”
-        
+
         Recent work has called into question the social and individual returns to spending on
         education\footnote{Eg, \cite{caplan2018case} and \cite{craig_2018}}. From 1989 to 2012, the average cost of a year of undergraduate education
         in the US rose 79 percent\footnote{This represents a price increase from \$11,862 to \$21,222 in constant 2016
@@ -314,78 +316,7 @@
         network effects are sample mechanisms which contribute to
         self-sustaining of norms. Search costs are an example constraint
         which provides a barrier to individuals interested in alternatives
-        to the norm. Norms may be a non-special case of
-        information technology, and education fits a non-special case of norms models.
-        
-        Conley and Neilson use a prisoner’s dilemma in a standard way to model adoption
-        of social norms\cite{conley2009endogenous}. Suppose this approach is modified
-        to account for dynamic technical improvement. In the present
-        approach, consider an infinitely repeated prisoner’s dilemma where each
-        round adds an additional option to choose $C_N$. $C_N$ pays
-        (1 + $C_N-1$), and in the first round the participants are known to
-        choose $C_1$, because the game begins with a social norm in place.
-        If players fail to coordinate on $C_K$, they are both paid ($C_1$ - 1).
-        The result is that both players will always play $C_N$.
-        
-        Figure 1 illustrates a more complex form of this game. Two new cooperate
-        choices are added each round, but
-        players only probabilistically know about either new choice. The first new cooperate choice is
-        revealed to both players with 99 percent probability. The second cooperate
-        choice has a higher payoff, but it is revealed to
-        each player with a probability of 10 percent. Suppose that any option
-        revealed with any probability in a prior round becomes revealed with certainty in the current round. Given standard models of nonlinear
-        risk aversion, players will coordinate on the choice which is revealed
-        with with 99 percent probability.
-        
-        With many players, risk aversion may be ignored because
-        some portion of the population will be aware of both options, but most
-        players will coordinate on the norm because it is the best option they are aware of.
-        This game is another demonstration of the same lesson already given. Selection of
-        a specific alternative, but neither a random alternative nor even the majority of
-        alternatives, may be individually preferred to a social norm.
-        
-        % ref: https://tex.stackexchange.com/questions/148607/problem-typesetting-a-prisoners-dilemma-table\begin{tikzpicture}[element/.style={minimum width=1.75cm,minimum height=0.85cm}]
-        \begin{figure}
-            \centering
-            \caption{Modified Iterated Prisoner's Dilemma}
-            \label{Modified Iterated PD Label}
-            \begin{tikzpicture}[element/.style={minimum width=1.75cm, minimum height=0.85cm}]
-        
-            \matrix (m1) [matrix of nodes,
-                nodes={element},
-            column sep=-\pgflinewidth,
-            row sep=-.05cm,]
-            {
-                & P1C2 & P1C1 \\
-                P2C2 & |[draw]|1,4,4 & |[draw]|1,0,2 \\
-                P2C1 & |[draw]|1,2,0 & |[draw]|1,0,0 \\
-            };
-            
-            % m1 label node
-            \node[above=0.25cm] at ($(m1-1-2)!0.5!(m1-1-3)$) {\textbf{Stage 1}};
-        
-            \matrix (m2) [matrix of nodes,
-                nodes={element},
-            column sep=-\pgflinewidth,
-            row sep=-.05cm,
-            anchor=north,]
-                 at ($(m1-1-2)!0.5!(m1-1-3) + (-.75, -3)$)
-            {
-                & P1C4 & P1C3 & P1C2 & P1C1 \\
-                P2C4 & |[draw]|.01,8,8 & |[draw]|.1,0,2 & |[draw]|.1,0,2 & |[draw]|.1,0,2 \\
-                P2C3 & |[draw]|.1,2,0 & |[draw]|.98,6,6 & |[draw]|.99,0,2 & |[draw]|.99,0,2 \\
-                P2C2 & |[draw]|.1,2,0 & |[draw]|.99,2,0 & |[draw]|1,4,4 & |[draw]|1,0,2 \\
-                P2C1 & |[draw]|.1,2,0 & |[draw]|.99,2,0 & |[draw]|1,2,0 & |[draw]|1,0,0 \\
-            };
-            
-            % m2 label node
-            \node[above=0.25cm] at ($(m1-1-2)!0.5!(m1-1-3) + (0, -3.5)$) {\textbf{Stage 2}};
-        
-            \end{tikzpicture}
-            \begin{figurenotes}
-                Probability of cell existence rounded to the nearest hundredth.
-            \end{figurenotes}
-        \end{figure}
+        to the norm. Education fits a non-special case of norms models.
         
         Other research echoes this story of dynamic curvilinear adoption of new
         technology under risk and uncertainty, with or without the game-theoretic
