@@ -180,18 +180,11 @@
         other are the two largest significant effects, and they are both positive
         \footnote{
             This ignores a complex discussion on gender. 
-            \ref{tab:models} indicates the effect of male
-            identification with most significant is small, at about -0.42.
-            A weaker effect is identified in the 2019 medium model, and that is
-            due to the presence of additional gender variables. Profile male is
-            and individual who identified as male at account creation time.
-            Male is an individual who identified as male at some point, whether at
-            account creation time or at survey administration time. The interesting
-            edge case is that some individuals switched their identification between
-            account creation and survey administration time. No further information
-            is available to indicate whether this is simply a participant mistake
-            or an intentional choice. This is an extremely rare case, and usually
-            male identification will be associated with the small effect near -0.42.
+            \ref{tab:models} indicates the effect of male identification is
+            large in the preferred model, but this is attributable to the
+            concurrent presence of additional, insignificant gender variables.
+            Male identification is taken to have a true effect close to -0.42,
+            the value identified in the strong model with higher significance.
         }.
         Employer effects are not significant in any model, although in the preferred
         model employer effects obtain a coefficient of about -.47 and a p-value of .215.
@@ -224,8 +217,8 @@
             \begin{tabular}{lllll}
             Factor & 2018 Medium & 2018 Strong & 2019 Medium & 2019 Strong \\
             \toprule
-            Profile Female & 1.091** & 0.955** \\ % issurveymonkeyfemale
-            Profile Male &  &  & 2.162* &  \\ % issurveymonkeymale
+            %Profile Female & 1.091** & 0.955** \\ % issurveymonkeyfemale
+            %Profile Male &  &  & 2.162* &  \\ % issurveymonkeymale
             Male &  &  & -2.458* & -0.422** \\
             % isstem & TODO & TODO & TODO & TODO \\
             Not STEM & -1.269* \\ % isnotstem
@@ -248,7 +241,7 @@
             Pro AI & 0.700* & 0.776** \\ % nvoifai1
             Quadratic
             \\Pro AI & -0.065* & -0.069** \\ % nvoifai2
-            Cubic Pro AI &  &  & 0.001 & 0.000* \\ % nvoifai3
+            % Cubic Pro AI &  &  & 0.001 & 0.000* \\ % nvoifai3
             Quadratic
             \\Pro American & 0.011* & 0.011* \\ % nvoifamerican2
             Quadratic Expect
@@ -272,7 +265,7 @@
             % csmincome3 & TODO & TODO & TODO & TODO \\
             % cprovider1 & TODO & TODO & TODO & TODO \\
             % cprovider2 & TODO & TODO & TODO & TODO \\
-            Cubic Time & -0.000 &  & 0.000* &  \\ % ctime3
+            % Cubic Time & -0.000 &  & 0.000* &  \\ % ctime3
             % ismanager & TODO & TODO & TODO & TODO \\
             Unemployed &  &  & 1.118* &  \\ % isunemployed
             % isethnicity4 & TODO & TODO & TODO & TODO \\
@@ -289,7 +282,9 @@
                 * p $<$ .05
                 ** p $<$ .01
                 *** p $<$ .001
+                Additional gender variables are excluded for simplicity.
                 Industrial and regional effects are also excluded for brevity.
+                Cubic effects are excluded where the significant coefficient would display as 0.000.
                 Selected variables include all other variables which are significant at one of the noted levels in at least one model presented in this table.
                 See the online appendix for coefficient data for further information.
             \end{tablenotes}
@@ -327,6 +322,17 @@
         It may be the case that many of these same individuals would favor alternative
         credentials when a logical mode of thought is activated over fast thinking or intuition.
         
+        Age group had a more robust effect compared to exact age, which may
+        indicate something like a cohort effect.
+        Minors are the only age group which is unfavorable toward alternative credentials on average.
+        Minors have the largest share of minimum-favorability responses.
+        Minors are also the least sampled group in this data set.
+        
+        Educational attainment obtained an important effect which was more
+        significant than either age or income effects. In addition to level of
+        education, a dummy variable for whether education was at or greater than
+        obtaining a college degree was found to be independently significant.
+        
         Three industrial effects exist in the preferred model and they are all negative.
         At -2.51, the legal industry is associated with one of the largest negative effects in any model.
         The coefficient for law is significant with a p-value of 0.006.
@@ -334,79 +340,37 @@
         Responses of other industry are negative but insignificant, with a p-value of .294 and a coefficient of -.41.
         Three regions have effects in the preferred model, but only one is significant.
         The mid-atlantic region, including Washington DC and New York City, is associated with a coefficient of -1.21 and a p-value of 0.01.
+        Regional effect robustness to the introduction of an ethnicity question in the 2019 administation supports the thesis that policy is relevant to the growth of alternative education.
+        The legal and transportation industries share a common theme of licensing.
         
-        Time has a significant and positive, but unimportant and small cubic effect in the preferred model.
-        The mean of the variable of interest is about 6.61 with a standard deviation of about 2.57.
+        Time has an unimportant effect in the preferred model.
+        The standard deviation of the variable of interest is about 2.57.
         Disaggregation by year indicates a mean response of about 6.66 in 2019 and an insignificantly
         different mean of 6.35 in 2018.
         % previously called table 3 from analysis-2-basic-exploration.do; `tab is2018sample, sum (voi)`
-        
-        Strong positive quadratic and negative cubic effects are identified for
-        the question about whether alternative credentials will be conventional soon.
-        Figure \ref{fig:expect_convention_voi} illustrates this result. Notice that the effect of expected conventionality on entry-level suitability follows an s-curve.
-        Expected conventionality, in turn, is related to time.
-        Simple regression of time on suitability revealed an insignificant direct relation,
-        but the indirect relation through dynamic expected conventionality motivates further exploration into alternatives to the least squares model.
-        
-        \begin{figure}[h!]
-            \centering
-            \caption{Suitability by Expected Conventionality}
-            
-                \begin{tikzpicture}[element/.style={minimum width=1.75cm, minimum height=0.85cm}]
-        
-                \node (n1) {\includegraphics[width=0.7\textwidth]{./figures-and-tables/figure-3.png}};
-                \node (n2) [above=0.25cm] at ($(n1)!0.5!(n1) - (6.2, 0)$) {\textbf{Suitability}};
-                \node (n3) [above=0.25cm] at ($(n1)!0.5!(n1) - (0, 4)$) {\textbf{Expected Conventionality}};
-        
-                \end{tikzpicture}
-        
-            \label{fig:expect_convention_voi}
-            \end{figure}
-        
-        The vertical line in Figure \ref{fig:expect_convention_voi} occurs at the mean value of expected conventionality, or about 6.1.
-        Alternative credentials are past the lagged phase of adoption and recently past the
-        point of inflection. Because expected conventionality cannot exceed a value of 10 by
-        construction, the relation is isomorphic to a sigmoid over the range of actual values.
-        Log-log regression of conventionalism on time obtains a p-value of .004.
-        Expected conventionality is not binary,
-        but a transformed variable was utilized for sigmoid modelling with logistic regression \cite{cox2008stata},
-        Logistic regression obtained additional significance.
-        
-        Log-log, s-curve, and sigmoid relations are standard models for a variety of structurally important relationships.
-        Social learning, experience, social influence, and contagion effects are some of the
-        indicated structural relations\cite{young2009innovation}.
-        Further identification of optimal fit may indicate effective accelerators of normalization.
-        
-        While the relationship between conventionality and time was strong,
-        this is indirect to the variable of interest. Direct modelling of suitability
-        on time was insignificant using logarithmic and logistic analysis, but
-        a two-factor exponential expansion was discovered which forms a useful dynamic model:
+        Modelling of suitability on time was also insignificant using logarithmic and logistic analysis,
+        but a two-factor exponential expansion was discovered which forms a useful dynamic model:
         
         \begin{equation} f(x) = b_1b_2^t \end{equation}
         
-        This nonlinear model obtained an r-squared of .8691 and $b_2$ had a p-value
-        less than .001. The estimate of b2 was less than 1, indicating exponential
-        decay rather than exponential growth. The data indicates a short-run reduction in entry-level
-        suitability, with comparatively weak evidence for a reversal over time.
+        This nonlinear model obtained an adjusted r-squared of .8689 and $b_2$ had a p-value
+        less than .001. The estimate of $b2$ was less than 1, indicating exponential
+        decay, but the rate of decay is trivial so that forecasting is essentially flat.
+        % see special reg 26
+        On Monday, February 26, 2018, when $t=0$ the predicted dependent variable is equal to $b1$, which is estimated at about 6.65.
+        $t$ increments by the day, and the maximum value within the sample is 437. At that time, the point estimate
+        for the dependent variable is about 6.59. Forecasting a year into the future, the estimate is about 6.55.
         
-        When conventionality is interacted with time, a multiple regression suitability on time, conventionality, and the interaction
-        reveals a positive relation between the interacted variable and suitability.
-        This may point to long run normalization of alternative credentials as a mechanism toward eventual improvement in entry-level suitability.
-        
-        A simple interpretation is that employers are more pessimistic than others
-        on alternative credentials. Another interesting possibility is that employer attitude is a leading indicator of population attitude.
-        Nonlinear regression on time indicates a short-term decline in population favorability,
-        which is consistent with employer-lead favorability, given that employers are more pessimistic than average in 2019 data.
-        
-        Exploring this notion, an interesting finding is identified using a multiple regression with interacted time and employer status.
-        This regression of four parameters on the variable of interest is depicted in
-        Figure \ref{fig:employer_driven_favorability}, which illustrates a hypothetical reversal in entry-level
-        suitability. The figure is conceptual and not to scale. The population
-        trend is illustrated at II, and employer views are represented at III. At II,
-        time effects are linearly negative and marginally positive. Linear
-        employer-time effects are positive, but marginal employer-time effects are
-        negative. The plausibility of a reversal story is enhanced when noting
-        that the coefficient of interacted manager-time is positive and large in magnitude compared to ordinary time effects.
+        % reg voi ctime1 ctime2 managertime1 managertime2, noconstant
+        A different dynamic perspective involves employer-lead favorability cycles.
+        A multiple regression of four variables on the variable of interest results in an adjusted r-squared of about .8692.
+        These four variables include time interacted with employer status, linear time, and the squares of each of those two.
+        In this model, time has a linear negative and positive marginal coefficient, although neither are significant.
+        Interacted employer-time, however, is significant, as is its quadratic variant. Linear employer-time is positive
+        and the marginal effect is negative. The linear effect is about 0.002, with a p-value of about 0.03.
+        The quadratic p-value is also about 0.03, but the coefficient is unimportant.
+        This cycle model is conceptually depicted in Figure \ref{fig:employer_driven_favorability}.
+        Population favorability exists at II and employer attitudes are represented at III.
         
         \begin{figure}[h!]
             \centering
@@ -422,71 +386,7 @@
         
             \label{fig:employer_driven_favorability}
             \end{figure}
-        
-        Age group had a more robust effect compared to exact age, which may
-        indicate something like a cohort effect. Ethnic effects were moderately
-        significant, and regional effects continued to be significant after the
-        introduction of the ethnicity question in 2019, supporting the thesis
-        that policy differences are important in this regard.
-        
-        Educational attainment obtained an important effect which was more
-        significant than either age or income effects. In addition to level of
-        education, a dummy variable for whether education was at or greater than
-        obtaining a college degree was found to be significant. Increased
-        education, whther traditional or non-traditional, appears to be
-        associated with increased support for alternative credentials.
-        
-        % TODO: remove from concise paper
-        \section{Other Interesting Results}
-        
-        Prior research finds student indifference toward debt\cite{davies1995student}.
-        The present paper replicates and extends such
-        findings to identify youth antagonism to alternative credentials. Prior
-        research often measures debt attitudes among college students, but such
-        evidence is susceptible to selection bias because debt-tolerant
-        individuals might have a propensity to consume higher education. In
-        contrast, the present paper identifies generalized youth antagonism to
-        alternative credentials.
-        
-        In a simple regression, age has a small negative coefficient.
-        Table \ref{tab:partial_crosstab_voi_agegroup} tells a more complex story.
-        The most positive group is not the youngest group, but the age group actively
-        attending or having just graduated college.
-        
-        \begin{table}
-            \caption{Partial Crosstab of Age Group on Suitability}
-            \begin{tabular}{lllllll}
-                Suitability & $<$18 & 18-29 & 30-44 & 45-60 & 60$<$ & Total \\
-                1 & 3 & 9 & 11 & 13 & 4 & 40 \\
-                5 & 1 & 28 & 31 & 27 & 9 & 96 \\
-                10 & 1 & 46 & 39 & 36 & 19 & 141 \\
-                Total & 10 & 227 & 250 & 245 & 77 & 809 \\
-                Average & 4.60 & 6.93 & 6.62 & 6.40 & 6.34 & 6.59 %
-            \end{tabular}
-            \label{tab:partial_crosstab_voi_agegroup}
-            \end{table}
-        
-        Minors are the only age group which is unfavorable toward alternative credentials on average.
-        Minors have the largest share of minimum-favorability responses.
-        Minors are also the least sampled group in this data set.
-        
-        In the preferred model and several others, educational effects are important, including a
-        dummy variable for having received a college-level or better education.
-        One explanation is that participation in the traditional higher education
-        drives support for alternative credentials, and the relationship with age is a
-        side effect.
-        
-        An interesting, tangential result is the effect of nonbinary gender identification.
-        Nonbinary gender identification, obtained for 16 respondents, was included in order to
-        reduce noise on gender effects, but it turned out to have a significant independent effect.
-        
-        Simple regression of nonbinary gender identification on the variable of
-        interest reveals a coefficient of about -1.3 with a p-value less than .05.
-        Substituting nonbinary identification in for other gender variables in the strong model
-        maintains the negative direction of effect, but the effect is
-        attenuated to a coefficient of -.48 and a p-value of .374.
-        
-        % previously: \section{Applications}
+
         \section{Conclusions}
         
         Suppose that the average alternative learning program and the average traditional program
