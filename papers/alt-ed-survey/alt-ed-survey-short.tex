@@ -15,8 +15,10 @@
         % the technical support document at 
         % for instructions on fixing this problem.
         
-        % Uncomment the next line to use the harvard package with bibtex
+        % harvard for bibtex, recommended by AEA
         \usepackage[abbr]{harvard}
+        % booktabs for tables, recommended by https://tex.stackexchange.com/a/59035/197312
+        \usepackage{booktabs}
         
         % This command determines the leading (vertical space between lines) in draft mode
         % with 1.5 corresponding to "double" spacing.
@@ -183,8 +185,9 @@
             \caption{Medium and Strong Models, Selected Variables}
             \begin{tabular}{lllll}
             Factor & 2018 Medium & 2018 Strong & 2019 Medium & 2019 Strong \\
-            Profile Female & 1.091** & 0.955** \\ % issurveymonkeyfemale
-            Profile Male &  &  & 2.162* &  \\ % issurveymonkeymale
+            \toprule
+            % Profile Female & 1.091** & 0.955** \\ % issurveymonkeyfemale
+            % Profile Male &  &  & 2.162* &  \\ % issurveymonkeymale
             Male &  &  & -2.458* & -0.422** \\
             % isstem & TODO & TODO & TODO & TODO \\
             Not STEM & -1.269* \\ % isnotstem
@@ -240,6 +243,7 @@
             % ceduc1 & TODO & TODO & TODO & TODO \\
             % ceduc2 & TODO & TODO & TODO & TODO \\
             X$_0$ & 1105.125 & .106 & -12345.347* & 3.289*** \\
+            \bottomrule
             R-Squared & .597 & .504 & .526 & .319 %
         
             \end{tabular}
@@ -247,6 +251,7 @@
                 * p $<$ .05
                 ** p $<$ .01
                 *** p $<$ .001
+                
                 Industrial and regional effects are also excluded for brevity.
                 Selected variables include all other variables which are significant at one of the noted levels in at least one model presented in this table.
                 See the online appendix for coefficient data for further information.
