@@ -172,13 +172,51 @@
         model is a strong model involving factors with a p-value less than .1.
 
         \section{Empirical analysis and results}
-        
-        Factors of the index of interest the two factors
-        are strongly intercorrelated. Results for the index of interest were in line
-        with results for the variable of interest, indicating robustness of results
-        to the wording of the question used to measure the variable of interest.
-        A second key result is that the 2019 long model explains the majority of data observed, with an r-squared of .5635.
-        Table 3 reports selected models. Factor strength across all models is reported in Appendix D.
+
+        The average response for the variable of interest was 6.61.
+        The median response was 7 and the 25th percentile was 5.
+        This indicates uncorrected broad positive sentiment.
+        Unemployed status and identification with the ethnicity of
+        other are the two largest significant effects, and they are both positive
+        \footnote{
+            This ignores a complex discussion on gender. 
+            \ref{tab:models} indicates the effect of male
+            identification with most significant is small, at about -0.42.
+            A weaker effect is identified in the 2019 medium model, and that is
+            due to the presence of additional gender variables. Profile male is
+            and individual who identified as male at account creation time.
+            Male is an individual who identified as male at some point, whether at
+            account creation time or at survey administration time. The interesting
+            edge case is that some individuals switched their identification between
+            account creation and survey administration time. No further information
+            is available to indicate whether this is simply a participant mistake
+            or an intentional choice. This is an extremely rare case, and usually
+            male identification will be associated with the small effect near -0.42.
+        }.
+        Employer effects are not significant in any model, although in the preferred
+        model employer effects obtain a coefficient of about -.47 and a p-value of .215.
+
+        Two negative coefficients obtain a p-value of less than 0.1, but neither effect is
+        large enough over the relevant range to reduce favorability to a disfavorable
+        state of less than 5. Male gender identification reduces the point estimate of the
+        dependent variable by about 0.42, and the quadratic negative effect of expected
+        conventionality is attenuated by a positive linear effect.
+
+        Expected conventionality is one of three components of the secondary variable of interest, the index of interest.
+        It is a favorability question on a scale of 1 to 10 about the statement,
+        "It will soon become fairly conventional for high school graduates to obtain alternative credentials instead of going to college."
+        The average response for this question is 6.1, which is lower than entry-level
+        suitability and favorability of online education, the other two components of the index.
+
+        The average response for favorability of online education was the highest among the three components at 6.81.
+        The average response for the index was 19.55.
+        All three components of the index of interest are strongly intercorrelated,
+        indicating results for the entry-level suitability of alternative credentials
+        in particular are importantly generalizable to alternative education in general.
+        Moreover, the shape of the relation between any two of these components is
+        linearly positive with decreasing marginal effects.
+        Additional selected factor results are presented in \ref{tab:voi_by_is2018response}.
+        Appendix D describes factor strength across all models.
         
         % commented means insignificant across all.
         \begin{table}
@@ -186,8 +224,8 @@
             \begin{tabular}{lllll}
             Factor & 2018 Medium & 2018 Strong & 2019 Medium & 2019 Strong \\
             \toprule
-            % Profile Female & 1.091** & 0.955** \\ % issurveymonkeyfemale
-            % Profile Male &  &  & 2.162* &  \\ % issurveymonkeymale
+            Profile Female & 1.091** & 0.955** \\ % issurveymonkeyfemale
+            Profile Male &  &  & 2.162* &  \\ % issurveymonkeymale
             Male &  &  & -2.458* & -0.422** \\
             % isstem & TODO & TODO & TODO & TODO \\
             Not STEM & -1.269* \\ % isnotstem
@@ -251,7 +289,6 @@
                 * p $<$ .05
                 ** p $<$ .01
                 *** p $<$ .001
-                
                 Industrial and regional effects are also excluded for brevity.
                 Selected variables include all other variables which are significant at one of the noted levels in at least one model presented in this table.
                 See the online appendix for coefficient data for further information.
@@ -259,89 +296,50 @@
             \label{tab:models}
             \end{table}
         
-        Profile gender variables are a binary response by a respondent at the time the sign up for a Survey Monkey account.
-        The survey presents male, female, and nonbinary gender response. In several cases a person responded with a gender other than their profile gender.
-        Male respnse is true when profile gender is male or survey response on gender is male.
-        
         Overall, the 2019 medium model is preferred. This model obtains high explanatory power while maintaining relatively low complexity.
-        The medium model in 2018 obtains even higher adjusted explanatory power.
+        This model explains the majority of the sample variation, with an r-squared of about .526 and an adjusted r-squared of about .44.
         Investigation of the 2018 results initially indicated weak effects for religiosity and STEM identification,
         but reanalysis with added 2019 data suggests that inclusion of these variables may add importantly to adjusted explanatory power.
         
-        There were 168 observations in the 2018 long model. Model hardening from
-        the long model to the weak model for 2018 resulted in a reduction from 69
-        to 39 variables. The 69 variables were associated with 15 questions, and
-        the surviving 39 variables in the weak model were associated with 14
-        questions. Surprisingly, the question which was filtered out
-        was the question on employment status, which is typically regarded important.
-        
-        Employment status includes whether an individual makes hiring and firing decisions.
-        2018 model results indicate that employers favor alternative credentials
-        no differently than average, which is to say have they obtain moderately positive favorability.
-        
-        The mean of the variable of interest is about 6.614.
-        Table \ref{tab:voi_by_is2018response} disaggregates average response by year.
-        The average response on entry-level suitability in the 2018
-        sample took a value of 6.531, but this is not significantly different
-        from the average of about 6.6.
-        
-        \begin{table}
-            \caption{Average Response by Year}
-            \begin{tabular}{llll}
-                Response Year & Mean & SD & Frequency \\
-                2018 & 6.658 & 2.557 & 1022 \\
-                2019 & 6.351 & 2.624 & 168 \\
-                Total & 6.614 & 2.568 & 1190 %
-            \end{tabular}
-            \label{tab:voi_by_is2018response}
-            \end{table}
-        
-        Tabulation by year hints at a positive trend,
-        but ordinary least squares models yield no significant results.
-        The adjusted r-squared maximizing model eliminates Christian identification as an important variable,
-        in comparative favor of non-specific religiosity.
-        Religiosity is typically associated with political conservatism, and conservatism is
-        thought to move with status quo bias\cite{eidelman2012bias}. The present article gives mixed
-        confirmation of a positive relation between religiosity and
-        anti-innovation bias, but innovation in education appears to be an important exception.
-        
-        Innovation proxy variables include favorability to artificial
+        Innovation proxies include favorability to artificial
         intelligence, cryptocurrency, and online education. These variables are
         cross-correlated with one another with a p-value of less than .001.
-        Religiosity is negatively related to artificial intelligence, and
-        artificial intelligence is identified as a strong factor.
+        An apparent paradox is identified regarding innovation proxies.
+        Favorability to government regulation is positively associated with
+        innovation proxies, while religiosity is associated with reduced
+        innovation favorability.
         
-        Conservatism is characterized by religiosity and free enterprise favorability.
-        Regulatory favorability is positively associated with all proxies of innovation.
-        This amounts to replication of a negative relation between innovation and conservatism,
-        but the replication comes with two apparent paradoxes.
-        First, the market is considered an effective tool of innovation\cite{baumol2002free},
+        Suppose a religious individual is a conservative.
+        This amounts to identification status quo bias
+        by conservatives, a theme common in the literature\cite{eidelman2012bias}.
+        In the case of education, however, this is a bit paradoxical.
+        The market is considered an effective tool of innovation\cite{baumol2002free},
         so individuals seeking to maintain the status quo ought to disfavor it rather than favor it.
         Second, traditional education is regulated education,
-        and alternative credentials aren't mainly regulated by polcy,
         so individuals committed to high levels of regulation ought to disfavor
         alternative credentials.
-        One explanation to these apparent paradoxes is based in personality and cognitive bias.
-        In Kahneman's language\cite{kahneman2011thinking}, survey respondents may be thinking fast.
+
+        A Kahneman-like explanation may reconcile this paradox.
+        Survey respondents may be thinking fast\cite{kahneman2011thinking}.
         The preference of some conservatives for the status quo in education becomes explained by
         decisionmaking which is driven preferentially by
         risk aversion, loss aversion, lack of openness, and related factors.
         It may be the case that many of these same individuals would favor alternative
         credentials when a logical mode of thought is activated over fast thinking or intuition.
         
-        Weak industrial effects were common in the 2018 data, but no strong effects were identified.
-        The most significant industrial effect was the factor for other industries. Information technology was the second most significant industry.
-        Two regions have significant effects in the strong model.
-        The mid-atlantic region, including much of Washington DC, is associated with a positive effect.
-        The west south central region is associated with a large negative effect.
-        This region consists of Arkansas, Louisiana, Oklahoma, and Texas\cite{uscensusbureau_2016}.
-        Gender, age, and income were significant.
+        Three industrial effects exist in the preferred model and they are all negative.
+        At -2.51, the legal industry is associated with one of the largest negative effects in any model.
+        The coefficient for law is significant with a p-value of 0.006.
+        The transportation industry effect is also significant with a p-value of 0.086 and a coefficient of -1.67.
+        Responses of other industry are negative but insignificant, with a p-value of .294 and a coefficient of -.41.
+        Three regions have effects in the preferred model, but only one is significant.
+        The mid-atlantic region, including Washington DC and New York City, is associated with a coefficient of -1.21 and a p-value of 0.01.
         
-        2019 data identifies gender, innovation bias, expected
-        conventionalism, online education favorability, and regulatory
-        favorability as the strongest factors. Effects move in their expected directions,
-        with the exception of regulatory favorability.
-        This factor related positively to the variable of interest, replicating an unexpected 2018 finding which was earlier discussed.
+        Time has a significant and positive, but unimportant and small cubic effect in the preferred model.
+        The mean of the variable of interest is about 6.61 with a standard deviation of about 2.57.
+        Disaggregation by year indicates a mean response of about 6.66 in 2019 and an insignificantly
+        different mean of 6.35 in 2018.
+        % previously called table 3 from analysis-2-basic-exploration.do; `tab is2018sample, sum (voi)`
         
         Strong positive quadratic and negative cubic effects are identified for
         the question about whether alternative credentials will be conventional soon.
@@ -394,10 +392,6 @@
         When conventionality is interacted with time, a multiple regression suitability on time, conventionality, and the interaction
         reveals a positive relation between the interacted variable and suitability.
         This may point to long run normalization of alternative credentials as a mechanism toward eventual improvement in entry-level suitability.
-        
-        While employment status was super weak in 2018 models,
-        employer effects survived to the preferred 2019 model.
-        Employer effects are negative in this model, with a coefficient of about -.47 and a p-value of .215.
         
         A simple interpretation is that employers are more pessimistic than others
         on alternative credentials. Another interesting possibility is that employer attitude is a leading indicator of population attitude.
