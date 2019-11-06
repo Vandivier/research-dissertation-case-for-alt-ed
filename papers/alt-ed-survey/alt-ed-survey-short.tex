@@ -1,7 +1,7 @@
 % AER-Article.tex for AEA last revised 22 June 2011
 
 % \documentclass[AER]{AEA} modified for the full path to my AEA.cls file
-    \documentclass[AER]{./aea-latex-templates/AEA}
+    \documentclass[review]{elsarticle}
 
         \usepackage{tikz}
         \usetikzlibrary{calc,matrix}
@@ -16,7 +16,7 @@
         % for instructions on fixing this problem.
         
         % harvard for bibtex, recommended by AEA
-        \usepackage[abbr]{harvard}
+        % \usepackage[abbr]{harvard}
         % booktabs for tables, recommended by https://tex.stackexchange.com/a/59035/197312
         \usepackage{booktabs}
         
@@ -346,9 +346,6 @@
         For roles where a degree is inessential to junior placement, students should prefer a strategy of
         deferred college and leverage employer assistance once a role is obtained.
         
-        % ref: https://www.youtube.com/watch?v=KS9GvK7cvmo
-        % https://tex.stackexchange.com/a/51501/197312
-        \bibliographystyle{./aea-latex-templates/aea}
         \bibliography{BibFile}
         
         \end{document}
