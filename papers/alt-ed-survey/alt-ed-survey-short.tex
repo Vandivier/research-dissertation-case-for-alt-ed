@@ -1,70 +1,104 @@
-% AER-Article.tex for AEA last revised 22 June 2011
+% using Elseveir template per https://www.elsevier.com/authors/author-schemas/latex-instructions
+\documentclass[review]{elsarticle}
 
-% \documentclass[AER]{AEA} modified for the full path to my AEA.cls file
-    \documentclass[review]{elsarticle}
+\usepackage{lineno,hyperref}
+\modulolinenumbers[5]
 
-        \usepackage{tikz}
-        \usetikzlibrary{calc,matrix}
-        
-        % The mathtime package uses a Times font instead of Computer Modern.
-        % Uncomment the line below if you wish to use the mathtime package:
-        % \usepackage[cmbold]{mathtime}
-        % Note that miktex, by default, configures the mathtime package to use commercial fonts
-        % which you may not have. If you would like to use mathtime but you are seeing error
-        % messages about missing fonts (mtex.pfb, mtsy.pfb, or rmtmi.pfb) then please see
-        % the technical support document at 
-        % for instructions on fixing this problem.
-        
-        % harvard for bibtex, recommended by AEA
-        % \usepackage[abbr]{harvard}
-        % booktabs for tables, recommended by https://tex.stackexchange.com/a/59035/197312
-        \usepackage{booktabs}
-        
-        % This command determines the leading (vertical space between lines) in draft mode
-        % with 1.5 corresponding to "double" spacing.
-        \draftSpacing{1.5}
-        
-        % allowing images as figures
-        % ref: https://tex.stackexchange.com/questions/19176/how-to-insert-an-image-into-latex-document
-        \usepackage{graphicx}
-        \graphicspath{{./figures-and-tables}}
-        
-        \usepackage{hyperref}
-        
-        \begin{document}
-        
-        \title{Attitudinal Trends in Alternative Postsecondary Learning
-            \thanks{
-                Go to \url{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3387110} to visit
-                the article page for additional materials including the online appendix,
-                survey data, and data analysis source code.
-            }
-        }
-        \shortTitle{Trends in Alternative Learning}
-        \author{John Vandivier
-            \thanks{
-                    Vandivier: George Mason University,
-                    4400 University Dr, Fairfax, VA 22030,
-                    jvandivi@masonlive.gmu.edu.
-                    The author acknowledges valuable input from Bryan Caplan at George Mason University.
-                }
-            }
-        \date{\today}
-        \pubMonth{Month}
-        \pubYear{Year}
-        \pubVolume{Vol}
-        \pubIssue{Issue}
-        \JEL{D12, I21, I22, I24, I25, I26}
-        \Keywords{Education economics, alternative education, debt crisis, signaling}
+\journal{Journal of \LaTeX\ Templates}
 
-        \begin{abstract}
-        This paper explores a novel data set (n = 1190) to understand trends in public
-        disposition toward alternative postsecondary learning, with a focus on employers.
-        Results indicate that public favorability is positive and will remain flat over the next year.
-        Employer attitudes are not meaningfully different from the general public.
-        \end{abstract}
+%%%%%%%%%%%%%%%%%%%%%%%
+%% Elsevier bibliography styles
+%%%%%%%%%%%%%%%%%%%%%%%
+%% To change the style, put a % in front of the second line of the current style and
+%% remove the % from the second line of the style you would like to use.
+%%%%%%%%%%%%%%%%%%%%%%%
 
-        \maketitle
+%% Numbered
+%\bibliographystyle{model1-num-names}
+
+%% Numbered without titles
+%\bibliographystyle{model1a-num-names}
+
+%% Harvard
+%\bibliographystyle{model2-names.bst}\biboptions{authoryear}
+
+%% Vancouver numbered
+%\usepackage{numcompress}\bibliographystyle{model3-num-names}
+
+%% Vancouver name/year
+%\usepackage{numcompress}\bibliographystyle{model4-names}\biboptions{authoryear}
+
+%% APA style
+%\bibliographystyle{model5-names}\biboptions{authoryear}
+
+%% AMA style
+%\usepackage{numcompress}\bibliographystyle{model6-num-names}
+
+%% `Elsevier LaTeX' style
+\bibliographystyle{elsarticle-num}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{booktabs}
+% allowing images as figures
+% ref: https://tex.stackexchange.com/questions/19176/how-to-insert-an-image-into-latex-document
+\usepackage{graphicx}
+\graphicspath{{./figures-and-tables}}
+\usepackage{hyperref}
+\usepackage{threeparttable}  
+\usepackage{tikz}
+\usetikzlibrary{calc,matrix}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{
+    Attitudinal Trends in Alternative Postsecondary Learning
+    \tnoteref{titlenotes}
+}
+\tnotetext[titlenotes]{
+    Go to \url{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3387110} to visit
+    the article page for additional materials including the online appendix,
+    survey data, and data analysis source code.
+}
+
+%% Group authors per affiliation:
+\author[mymainaddress]{John Vandivier} % \fnref{authorlinefootnote}}
+\address[mymainaddress]{4400 University Dr, Fairfax, VA 22030}
+\ead{jvandivi@masonlive.gmu.edu}
+% \fntext[authorlinefootnote]{
+%     Vandivier: George Mason University,
+%     4400 University Dr, Fairfax, VA 22030,
+%     jvandivi@masonlive.gmu.edu.
+%     The author acknowledges valuable input from Bryan Caplan at George Mason University.
+% }
+
+%% or include affiliations in footnotes:
+%\author[mymainaddress,mysecondaryaddress]{Elsevier Inc}
+%\ead[url]{www.elsevier.com}
+
+%\author[mysecondaryaddress]{Global Customer Service\corref{mycorrespondingauthor}}
+%\cortext[mycorrespondingauthor]{Corresponding author}
+%\ead{support@elsevier.com}
+
+%\address[mymainaddress]{1600 John F Kennedy Boulevard, Philadelphia}
+%\address[mysecondaryaddress]{360 Park Avenue South, New York}
+
+\begin{abstract}
+    This paper explores a novel data set (n = 1190) to understand trends in public
+    disposition toward alternative postsecondary learning, with a focus on employers.
+    Results indicate that public favorability is positive and will remain flat over the next year.
+    Employer attitudes are not meaningfully different from the general public.
+\end{abstract}
+
+\begin{keyword}
+education economics, alternative education, debt crisis, signaling
+\MSC[2010] 00-01\sep  99-00
+\end{keyword}
+
+\end{frontmatter}
+
+\linenumbers
         
         \section{Introduction and Description of Data}
 
@@ -157,7 +191,7 @@
         All three components of the index of interest are strongly intercorrelated,
         indicating results for the entry-level suitability of alternative credentials
         are somewhat generalizable to alternative education broadly.
-        Additional selected factor results are presented in \ref{tab:voi_by_is2018response}.
+        Additional selected factor results are presented in \ref{tab:models}.
         Appendix D describes factor strength across all models.
         
         % commented means insignificant across all.
@@ -345,6 +379,8 @@
         prior learning assessments, and credit by examination.
         For roles where a degree is inessential to junior placement, students should prefer a strategy of
         deferred college and leverage employer assistance once a role is obtained.
+
+        \section*{References}
         
         \bibliography{BibFile}
         
