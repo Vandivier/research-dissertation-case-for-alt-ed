@@ -1,12 +1,14 @@
 # Papers README
 
-Each subdirectory of this /papers directory is in connection with a single publishable paper.
+Each subdirectory of this `/papers` directory is in connection with a single publishable paper.
 
 My workflow is that I first publish to SSRN then I attempt to get it published in a journal.
 
-If a paper has reached a stage where it is available on SSRN, it will have a /major-revisions subfolder.
+The working version will be a folder-named PDF file. For example: `/alt-ed-survey/alt-ed-survey.pdf`
 
-If there are multiple versions within /major-revisions then there will be a README explaining what each version is for.
+If a paper has reached a stage where it is available on SSRN, it will have a `/major-revisions` subfolder.
+
+If there are multiple versions within `/major-revisions` then there will be a README explaining what each version is for.
 
 # Prioritized Paper Ideas
 
