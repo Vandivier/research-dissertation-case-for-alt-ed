@@ -42,7 +42,7 @@
 % allowing images as figures
 % ref: https://tex.stackexchange.com/questions/19176/how-to-insert-an-image-into-latex-document
 \usepackage{graphicx}
-\graphicspath{{./figures-and-tables}}
+\graphicspath{{../alt-ed-survey/figures-and-tables}}
 \usepackage{hyperref}
 \usepackage{threeparttable}  
 \usepackage{tikz}
@@ -53,7 +53,7 @@
 \begin{frontmatter}
 
 \title{
-    Attitudinal Trends in Alternative Postsecondary Learning
+    Preliminary Attitudinal Trends in Alternative Postsecondary Learning
     \tnoteref{titlenotes}
 }
 \tnotetext[titlenotes]{
@@ -103,19 +103,19 @@ education economics, alternative education, debt crisis, signaling
         
         \section{Introduction and Description of Data}
 
-        Student loan debt in the United States is a recognized concern\cite{friedman2018student},
-        but partial mitigation is offered by recent growth in alternatives to traditional education.
-        This paper fills an empirical gap in scholarly research by supplying
-        data on public and employer favorability of alternative credentials.
-        This paper tests the hypothesis that employer favorability is positive toward alternative credentials.
-        
-        Alternative postsecondary learning activities are diverse and do not
-        exclude attainment of an accredited degree, but may involve strategic
-        delay or acceleration of accredited education when compared to traditional approaches.
-        Delayed formal education improves the return to education for
-        individuals who are able to leverage employer funding. Accelerated completion improves the return
-        to education in general.
-        Online education is an alternative approach which reduces the cost of college for most students
+        Student loan debt in the United States is a recognized concern\cite{friedman2018student}.
+        Alternative postsecondary learning strategies can largely resolve this crisis, but an adoption problem is currently observed.
+        % address criticism "is not sufficiently substantive"
+        This paper identifies factors of learner and employer favorability over time, then recommends activities to improve adoption.
+        % address criticism "I am not sure exactly what we are supposed to take away from the study"
+        The reader should take away a better understanding of the market of alternative postsecondary learning, forecasted outlook on adoption,
+        and individual or policy levers which influence the return to postsecondary education.
+        The key hypothesis tested in this paper is that employers have positive favorability toward alternative credentials.
+        This paper is also preliminary in the sense that it produces forecasts which can be validated in subsequent work.
+
+        Alternative postsecondary learning includes obtaining an accredited degree if such degree is obtained in a non-traditional manner.
+        Examples of alternative pathways to a traditional credential include delayed, accelerated, and online-only courses of study.
+        These approaches offer better access and return to education for many students
         \footnote{
             Mattern and Wyatt\cite{mattern2009student} note that college students live an average distance of
             268 miles from home and a median of 94 miles. This indicates that most students could reduce
@@ -129,9 +129,25 @@ education economics, alternative education, debt crisis, signaling
         Appendix B identifies factors included in each administration.
 
         Responses were collected mainly through SurveyMonkey, Amazon Mechanical
-        Turk, and social media. Each origination channel was grouped using a construct
-        called a collector. Collector effects were insignificant.
-        
+        Turk, and social media. Each origination channel was grouped using a construct called a collector.
+        % address criticism "I am not convinced that the data collection ensure representativeness"
+        % NOTE: my initial strategy is to keep it short here and modify population definition
+        %  if people keep complaining I will add context, although it is wordy, but I feel it's better to add than subtract context.
+        %Collector effects were insignificant, which is an important demonstration of the representativeness of this data.
+        %Concerns about representativeness are unimportant for three reasons.
+        %First, I am happy to define the population of interest as internet-using adults.
+        %Second, only 10 percent of Americans are not internet-using\cite{anderson2019}.
+        %Today, the national population essentially is internet-using.
+        %Third, control variables exist for usual demographic concerns\cite{fricker2008sampling} including age, gender, education, ethnicity, and more.
+        %The insignificance of collector effects is a small demonstration of the efficacy of these controls.
+        %The Mechanical Turk respondent population was designed to ensure that respondents had graduated from High School.
+        %The SurveyMonkey Audience population, in contrast, is census-balanced.
+        %The insignificance of collector effects here entails there is no connection between the correlation of interest and having graduated from high school, but this is only the case after correcting for education.
+        %This means that the right hand control factor for education did its job.
+        Collector effects were insignificant.
+        The population of interest is internet-using adult Americans.
+        About 10 percent of Americans are not internet-using\cite{anderson2019}.
+
         Factor-level sample size ranges from 240 to 1190. Appendix C lists
         technical variable names in alphabetical order along with summary
         statistics. Appendix D lists variable names in alphabetical order, and
@@ -344,7 +360,7 @@ education economics, alternative education, debt crisis, signaling
         
             \begin{tikzpicture}[element/.style={minimum width=1cm, minimum height=0.75cm}]
         
-            \node (n1) [above=0.25cm] {\includegraphics[width=0.5\textwidth]{./figures-and-tables/figure-4.png}};
+            \node (n1) [above=0.25cm] {\includegraphics[width=0.5\textwidth]{../alt-ed-survey/figures-and-tables/figure-4.png}};
             \node (n2) [above=0.25cm] at ($(n1)!0.5!(n1) - (4, 1)$) {\rotatebox{90}{\textbf{Suitability}}};
             \node (n3) [above=0.25cm] at ($(n1)!0.5!(n1) - (0, 3)$) {\textbf{Time}};
         
@@ -376,7 +392,7 @@ education economics, alternative education, debt crisis, signaling
         For roles where a degree is inessential to junior placement, students should prefer a strategy of
         deferred college and leverage employer assistance once a role is obtained.
         
-        \bibliography{BibFile}
+        \bibliography{./BibFile}
         
         \end{document}
         
