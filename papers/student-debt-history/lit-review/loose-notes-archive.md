@@ -1,65 +1,33 @@
-description: This is basically an archive file for unresolved notes and ideas. These notes and ideas are basically no longer fresh, so I put them over here. This is in contrast to loose-notes.md which is like a current working notes section, containing notes and ideas which are relevant to a current working paper, although they may be disorganized so i don't want to put them in the working paper in their current form. the workflow is basically like I put notes in the fresh doc, then form a working paper, then any notes which aren't used up are pasted here.
-
-- Ryan Craig got Jeb Bush to endorse his book, and he published it prominently on the front cover above the title. What kind of targeting is that? Craig seems to be advocating disruption and alternative education, but neocons in general and Jeb in particular are notorious public ed spenders. Jeb is clearly a neocon, not a classical or paleoconservative, and I state that as a factual observation not an attempt at slander, but suppose Jeb were a paleoconservative. The idea here might be that pro-market conservatives would support disruption, but my survey indicates that progressives are more open to alternative education, and my literature review indicates that real disruption comes about through integration, not substitution.
-
 - Are sheepskin effects changing over time? did the recession impact them? if caplan is right (and I think he is), but if I am also right and universities are evolving to adopt from alternatives, one would suspect that the alternatives would be less socially unacceptable; so rudimentary analysis would show smaller sheepskin effects, and complex analysis would show that specifically among the population that receives alternative education, sheepskin effects are small and/or shrinking compared to 10 or 20 years ago.
 
-https://sr.ithaka.org/blog/alternative-postsecondary-pathways/
+- financial advising, career counseling, and education planning should all be executed in a holistic, integrative way
+  - and they should be extended into economic planning which takes into account non-financial return like wellbeing, happiness, etc
+    _ scale of 1 to 10: willingness to change: Does user want jobs that are already a good fit, or are they willing to take a job that may be more stressful to work in or take longer to get in exchange for more pay, employment rate, etc.
+    _ measure grit (structurally interacts with willingness to change)
+    _ change timeline? (you can't become a different person tomorrow w new skills and personality even if you were willing to do so.)
+    _ high school gpa? (estimate college completion; does class rank matter in addition?)
+    _ iq?
+    _ multi-factor personality? (big 5, kaldor-hicks at least...peterson's version?)
+    _ current education level, gender, age, sex, household income (calculate all the things)
+    _ it should produce a career result with explainers, estimated stress level, estimated reward level, and a pathway to get there
+    _ have option to 'rule out' paths, eg "I don't want to go to university" or "at least not that specific university"
+    _ user should be able select # of results, sort by stress score / match level, or by benefit score, or by net. they should get a warning when match / benefit / net is not statistically confident., does Degreed dude ever regress NPS on SkillIQ?
 
-- Survey of Firms:
-1 - How frequently does your firm perform employee evaluations? (none, anually, biannually, between biannually and monthly, monthly, continuously, other)
-2 - (Optional) Leave a URL to your company website. (Researcher can use this info to look up firm revenue, size, etc).
-3 - During your employee evaluations, do employees receive numeric scores for performance?
-4 - Other than the numeric scores your employees receive during employee evaluation, does your firm collect other measurements of employee performance?
-5 - How does your firm measure employee performance?
-    * Our firm depends on licensure or evaluation, and that licensure or evaluation involves numerical scoring, not simply participation.
-    * Our firm internally and numerically measures general performance.
-    * Our firm internally and numerically measures performance with specific tasks or skills.
-    * Our firm does not numerically measure performance.
+I think it’s worth noting that when many students enter college their brains are not fully developed. Also I think many of them don’t understand the value of a dollar because they haven’t worked much. This allows them to except debt without really understanding at a volitional level or at at a deeper level how much debt they’re really getting into. Working a bit before going to school would help in either of these cases
 
-Are you equipped to measure employee skill?
-Do you trust ANY skill measurement service, or do you trust only internal skill
-
-for applied learning plan / personal economic management plan, distinguish my approach from careerbuilder.com
-* scale of 1 to 10: willingness to change: Does user want jobs that are already a good fit, or are they willing to take a job that may be more stressful to work in or take longer to get in exchange for more pay, employment rate, etc.
-* measure grit (structurally interacts with willingness to change)
-* change timeline? (you can't become a different person tomorrow w new skills and personality even if you were willing to do so.)
-* high school gpa? (estimate college completion; does class rank matter in addition?)
-* iq?
-* multi-factor personality? (big 5, kaldor-hicks at least...peterson's version?)
-* current education level, gender, age, sex, household income (calculate all the things)
-* it should produce a career result with explainers, estimated stress level, estimated reward level, and a pathway to get there
-  * have option to 'rule out' paths, eg "I don't want to go to university" or "at least not that specific university"
-* user should be able select # of results, sort by stress score / match level, or by benefit score, or by net. they should get a warning when match / benefit / net is not statistically confident.
-
-alternative credentials net promoter score: aggregate top online learning products and average them;
-* every product NPS is a combination of systematic favor and non-systematic favor; non-systematic favor is towards the underlying concept or technology, eg online learning, systematic is in favor of the specific product
-* averaging nullifies the systematic to some extent, like indexing stocks
-* now: compare average NPS of different technologies over time. Esp other investment types and other skill-enhancing things. do universities publish NPS? also, does Degreed dude ever regress NPS on SkillIQ?
-* 
-
-This site estimates and PS from publicly available information including the sentiment of tweets 
-https://customer.guru/net-promoter-score/strayer-education-inc
-
-I think it’s worth noting that when many students enter college their brains are not fully developed. Also I think many of them don’t understand the value of a dollar because they haven’t worked much. This allows them to except dad without really understanding at a volitional level or at at a deeper level how much debt they’re really getting into. Working a bit before going to school would help in either of these cases
-
-Sal Kan is described as a disruptor but he’s also partnering with universities, so it’s not as if he’s necessarily advocating alternative, I think is very much open to like working together
-
-Check out Degree Compress course recommendations software. For part of my dissertation and or for part of a book which I may write as a result of this research, hey section should be devoted to optimizing advice for the student who does decide that the traditional route is best. Degree compass and things like intelligent university selection and things like intelligent professor in course selection and things like utilizing cheap or free online software to assist in studying to facilitate pass rate and other things like that may all be helpful
+Check out Degree Compass course recommendations software (https://er.educause.edu/articles/2013/9/degree-compass-a-course-recommendation-system). For part of my dissertation and or for part of a book which I may write as a result of this research, hey section should be devoted to optimizing advice for the student who does decide that the traditional route is best. Degree compass and things like intelligent university selection and things like intelligent professor in course selection and things like utilizing cheap or free online software to assist in studying to facilitate pass rate and other things like that may all be helpful
 
 Chapter 8 in College unbound discusses a program called StraighterLine. Look into this as an alternative path education.
 
-check Christiansen innovative university (2011) and 
+check Christiansen innovative university (2011) and
 https://www.amazon.com/Innovative-University-Changing-Higher-Education/dp/1118063481
 Disrupting Class, Expanded Edition: How Disruptive Innovation Will Change the Way the World Learns
 
-Contact Kevin Currie Knight about my research, discuss his self directed learning live stream, will it be available, would he consider referring me for humane studies?
-https://m.youtube.com/watch?reload=9&v=G1krPg4f-XE
-
 https://www.luminafoundation.org/all-learning-counts
-*  in favor of demonstrated learning and competency-based learning; another buzzword 'non-institutional learning toward credentials'
-* competency-based approach https://www.youtube.com/watch?v=3S12oNjc9Uk
-* competency = capability = skill
+
+- in favor of demonstrated learning and competency-based learning; another buzzword 'non-institutional learning toward credentials'
+- competency-based approach https://www.youtube.com/watch?v=3S12oNjc9Uk
+- competency = capability = skill
 
 Maybe I should focus less on alternative education and more on affective education? My book can be called the case for education with Claire reference to Kaplan. The idea here is to test everything and hold onto the good, where traditional education must have some good because it’s a robust institution. The question becomes what’s good about it.
 
@@ -67,7 +35,8 @@ Create a list of 5 to 10 notable data sources about higher education and also al
 
 In the 13th section of college unbound, right after the conclusion, Jeff goes over a short list of recommended/innovative universities. This information should be included in my section on advising students for whom a traditional school is a good fit
 
-----------------------------------------------------------------
+---
+
 Beginning notes for Creative schools Mike and Robinson. In chapter 1 he defines education which is like obvious and useful although the previous two books they didn’t do that also his definition of education is more broad in scope and ends up actually contradicting the definition used by Kaplan.
 
 In chapter 2 highlights a connection between personalized learning and passion. As Kevin Carey night notes and also Angela Duckworth, grit is composed of passion and perseverance. There also seems to be an element of reciprocity in the smoky road story.
@@ -121,7 +90,7 @@ They were vary compliant, could easily follow direction, and their creativity we
 
 In chapter 8 Ken reminds us again of both his insights and blindspots. He correctly reminds us that GPA is a better predictor of college completion than sat scores, but he also goes further citing someone who says that sat scores measure nothing of value, seemingly ignoring the fact that sat scores measure iq fairly well and correlate with life success. Ken emphasizes that he isn’t rejecting the need for assessment but he is complaining about the form assessment now takes. He seems to be particularly critical of standardized and high stakes testing. Clearly such tests have a role as low stakes testing is ineffective (eg performance is better predicted on incentivized tests while non incentivized tests are noisy, high stakes are effectively high incentive) and something like personalized, as opposed to standardized, testing would be useful for self-to-self comparison but not cross-individual comparison. Among education scholars it is popular to talk negatively about standardization, but economists are keenly aware that standardization is a strategy with specific costs and benefits that often yields overall market efficiency. Ken acknowledges creative assessment is more costly and contestable. Overall, it is not at all clear that standardized testing is a net loss for the economy or education system as a whole despite very real cases of loss for individuals in specific cases. Ken at best makes the case for the use of standard plus nonstandard assessment, but he hardly undercuts standard assessments utility. Ironically standard plus nonstandard assessment would lead to an increase in overall assessment time, which he is generally opposed to, and nonstandard assessments are generally lengthier than standard ones. It’s not clear that acting out his recommendations would lead to the world he seems to desire.
 
-Later in ch 7/8 is some discussion about how standardization itself may not be a dirty word, but simply the US implementation thereof. That even the lauded finissh system standardizes, but they do so differently 
+Later in ch 7/8 is some discussion about how standardization itself may not be a dirty word, but simply the US implementation thereof. That even the lauded finissh system standardizes, but they do so differently
 
 Gpa should be considered when advising kids on college
 
@@ -141,49 +110,31 @@ Chapter 9/10 is about the parents role in education. I wonder if household situa
 
 Towards the end of ch 9/10, the last fifth, Ken seems to speak highly of homeschooling. He calls it the highest form of parental involvement and notes that 3% of students were homeschooled in 2011/2012 school year. Interesting question: what’s best - self directed education or parental involvement? Perhaps there is no contradiction at all...typical caveats like it may stunt socialization...but does it? Where is the research on this?
 
-Ch 10/11 is about public policy... less interesting for my objective which is optimal individual planning. Interesting to note his assumptions completely rule out full privatization before the conversation even begins. What about a homeschooling mandate? Yet he already noted that national bodies are resistant to homeschooling despite its high quality product, not even mentioning its cost efficiency which he doesn’t consider. Generally, a problem in the book is that he doesn’t pay attention to costs. Saying things like real time data is a benefit is obvious. Saying programs built with this data can achieve better results is obvious. Saying it’s the best available use of public or private money is both non obvious and not seriously addressed by Ken 
+Ch 10/11 is about public policy... less interesting for my objective which is optimal individual planning. Interesting to note his assumptions completely rule out full privatization before the conversation even begins. What about a homeschooling mandate? Yet he already noted that national bodies are resistant to homeschooling despite its high quality product, not even mentioning its cost efficiency which he doesn’t consider. Generally, a problem in the book is that he doesn’t pay attention to costs. Saying things like real time data is a benefit is obvious. Saying programs built with this data can achieve better results is obvious. Saying it’s the best available use of public or private money is both non obvious and not seriously addressed by Ken
 
 Non rigorous statements like “it’s essential to have high standards and a collaborative process to decide what those standards should be” may sound good but they easily lead to self defeat and they are without evidence. In short, they aren’t true. It’s like indulging social desirability bias rather than actually helping anyone. But then these are the content of many policy conversations, not just kens view
 
 Around 39 minute mark, Ken states that no category of alternative model of school such as private or charter has been shown to be better than a “well supported” public school. Of course this is wrong. Charters and private schools are more cost efficient, which means for any level of funding the better result would come from the non public school. Funding is what he means by support. In any case the argument for one category is disengenuous. We know personalizes learning is best and no one category is best for all groups. The obvious solution is public choice: allow them all. If or when the public schools flounder, exactly as they have done historically when choice is introduced, they will reveal themselves as comparatively weak, low quality, expensive, fragile, and non adaptable institutions.
 
-
 ---
 
 1 - sound check
 2 - thanks for meeting! i hope you've been well
-3 - I have a agenda to keep us on track, but first wanted to ask if u had any comments or items of discussion beforehand*
-	- he did have comments, notes below.
-4 - cover letter, overarching plan
-	- dissertation-by-publication; three papers = dissertation. get 1 done at a time.
-	- concrete degree-to-alternative maps
-	- measure student and employer oppenness in general and in particular, ROI impacts vs college degree
+3 - I have a agenda to keep us on track, but first wanted to ask if u had any comments or items of discussion beforehand\* - he did have comments, notes below.
+4 - cover letter, overarching plan - dissertation-by-publication; three papers = dissertation. get 1 done at a time. - concrete degree-to-alternative maps - measure student and employer oppenness in general and in particular, ROI impacts vs college degree
 5 - actual lit review, plan to extend
 
 Notes:
+
 - dissertations don't look like this
-- journal of econ literature: only lit reviews. find a journal publishing what we like..."that's his book report"
-	- fleshing this out and reformatting, plus much more reading, could result in a publishable lit review
-	- but, this doesn't work as a dissertation chapter. modern way to lit review is to discuss in passing, integrated with paper text; not serially in a dedicated section
+- journal of econ literature: only lit reviews. find a journal publishing what we like..."that's his book report" - fleshing this out and reformatting, plus much more reading, could result in a publishable lit review - but, this doesn't work as a dissertation chapter. modern way to lit review is to discuss in passing, integrated with paper text; not serially in a dedicated section
 - fix the section on nathan young; don't say 'shake' or 'slight' and notice he had very high motivation
-- section 9 "won't move the needle" rising acceptability of bootcamps in CS...
-	- text of point he is addressing pasted:
-		"As discussed in the section 10, On A New U, bootcamps provide nearly one third of the number of
-		computer science graduates that universities collectively provide. It is implausible to argue that
-		such large numbers of non-traditional learners entering the workplace will not move the needle on
-		what counts as normal. Employers are extremely satisfied with bootcamp gradautes, and most claim
-		that bootcamp graduates are just as qualified as university graduates."
-	- Bryan says this could form an interesting paper could form a paper, although prob more interesting in industrial psychology than economics
-	- In saying 'attitudes on alt learning for comp sci changing could form a paper,' Bryan acknowledges this could relate to the attitudinal survey
-	- another approach he recommends: interview 50 employers (3 topics bootcamps...2 other topics, figure that out)
-- show him the survey...t = 3... main issue is surveying over...traditional 100k survey for journal...check with journals.
-	- he seemed to indicate t = 3 wasn't good, and also it wasn't needed.
-	- run the right survey once and you are covered; show him this survey ASAP. min 300 samples.
-	- put in 'stuff on ability testing as an employment tool'
-	- look for existing data sources...field is called industrial psychology...read more...email people working in there
-- important thing is to network!
-	- email people a question about their work. come back in a few weeks to ask for something if needed, eg review my paper or share data
-	- cultivate network of people; every tenure track prof on econ of education... email a few (or 30!) each weeks
-- Spring Goal...1 publishable piece, and a well crafted survey
-	- well crafted survey complete by end of spring... do survey, start 
-	- three interesting topics
+- section 9 "won't move the needle" rising acceptability of bootcamps in CS... - text of point he is addressing pasted:
+  "As discussed in the section 10, On A New U, bootcamps provide nearly one third of the number of
+  computer science graduates that universities collectively provide. It is implausible to argue that
+  such large numbers of non-traditional learners entering the workplace will not move the needle on
+  what counts as normal. Employers are extremely satisfied with bootcamp gradautes, and most claim
+  that bootcamp graduates are just as qualified as university graduates." - Bryan says this could form an interesting paper could form a paper, although prob more interesting in industrial psychology than economics - In saying 'attitudes on alt learning for comp sci changing could form a paper,' Bryan acknowledges this could relate to the attitudinal survey - another approach he recommends: interview 50 employers (3 topics bootcamps...2 other topics, figure that out)
+- show him the survey...t = 3... main issue is surveying over...traditional 100k survey for journal...check with journals. - he seemed to indicate t = 3 wasn't good, and also it wasn't needed. - run the right survey once and you are covered; show him this survey ASAP. min 300 samples. - put in 'stuff on ability testing as an employment tool' - look for existing data sources...field is called industrial psychology...read more...email people working in there
+- important thing is to network! - email people a question about their work. come back in a few weeks to ask for something if needed, eg review my paper or share data - cultivate network of people; every tenure track prof on econ of education... email a few (or 30!) each weeks
+- Spring Goal...1 publishable piece, and a well crafted survey - well crafted survey complete by end of spring... do survey, start - three interesting topics
