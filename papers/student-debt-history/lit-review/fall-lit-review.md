@@ -33,17 +33,19 @@ Credentials and pathways, or paths, are the final important terms. While I consi
 
 As a result, individuals may move back and forth between traditional and non-traditional learning under a non-traditional pathway, but not under a traditional pathway. The traditional pathway always results in a traditional credential, but alternative pathways may result in traditional credentials, non-traditional credentials, or no credentials at all. Under this conception, dropping out of high school and graduating early would both be non-traditional. An exception is made for college, where obtaining a four year degree in four years is in fact abnormal.
 
-Traditionalism technically occurs along a spectrum where the most normal thing is the most traditional and the least normal thing is the least traditional. In this sense, for example, public high school is more traditional than private high school, which in turn is more traditional than homeschooling. Practically, however, private accredited programs are extremely similar and both considered relatively traditional. Under this rule, 
+Traditionalism technically occurs along a spectrum where the most normal thing is the most traditional and the least normal thing is the least traditional. In this sense, for example, public high school is more traditional than private high school, which in turn is more traditional than homeschooling. Practically, however, private accredited programs are extremely similar and both considered relatively traditional. Under this rule,
 
 ## 3. On Disrupting Class
 
 TODO:
+
 - Summarize notes
 - Compare/contrast with prior sections
 
 ## 4. On The Innovative University
 
 TODO:
+
 - Summarize notes
 - Compare/contrast with prior sections
 
@@ -71,7 +73,7 @@ A middle-ground between the two would be market adaptation. In this view, some n
 
 Also in chapter 6, Jeff states that a problem with MOOCs is their failure to deliver academic credit. Jeff claims this won't be a problem for long, as MOOC and other alternative learning providers will continue to partner with universities.
 
-According to chapter 7, 23% of students from families with over $100,000 of annual income attended to community college which is up from 12% five years ago. First, this may indicate that American society is at a point where income effects dominate social stigma associated with non-traditional education. Second, the degree of that stigma is expected to weaken as this pattern continues. Another topic in chapter 8 is the comparison between a competency based degree plan and a degree plan based on the credit hour. A competency based degree plan is an innovative approach which allows students to complete a degree more cheaply and quickly.
+According to chapter 7, 23% of students from families with over \$100,000 of annual income attended to community college which is up from 12% five years ago. First, this may indicate that American society is at a point where income effects dominate social stigma associated with non-traditional education. Second, the degree of that stigma is expected to weaken as this pattern continues. Another topic in chapter 8 is the comparison between a competency based degree plan and a degree plan based on the credit hour. A competency based degree plan is an innovative approach which allows students to complete a degree more cheaply and quickly.
 
 Southern New Hampshire University and Western Governors University‎ are mentioned as leaders in competency based education. Paul LeBlanc identifies himself as a disrupter. He considers the online learning revolution old news and competency based education is the more recent innovation. LeBlanc believes that competency based education will come from existing institutions, and will exist alongside four-year programs.
 
@@ -90,12 +92,14 @@ A recent report indicates that ePortfolios are becoming increasingly supported b
 ## 6. On Blended
 
 TODO:
+
 - Summarize notes
 - Compare/contrast with prior sections
 
 ## 7. On College Disrupted
 
 TODO:
+
 - Summarize notes
 - Compare/contrast with prior sections
 
@@ -109,7 +113,7 @@ Clearly Ken and Caplan differ in their position on IQ. Their definitions on educ
 
 Around the middle of chapter 5, Ken discusses mastery learning. Sal Khan, founder of Khan Academy, has called mastery learning the common sense approach to education, and a way to enhance the K-12 status quo in the US[9]. Khan refers to a long literature, dating at least back to Benjamin Bloom in 1984[10] demonstrating significantly better student outcomes under mastery learning. This brings up an interesting question about whether topics learned to mastery obtain slower fadeout. Khan indicates mastery learning as a form of personalized learning, because the pace of learning is individualized.
 
-In chapter 5, Ken argues that the flipped classroom technique, non-substantively different from peer instruction, causes superior outcomes compared to lecture. Ken refers to Mezur[15] for empirical backing. For Ken and Mezur, pedagogies are often causally responsible, not merely asssociated, with outcomes. In chapter 6, Ken opposes engagement to boredom. In this view passion becomes synonymous with or operationalized by engagement. Ken associates personalized learning with higher passion, engagement, and grit. 
+In chapter 5, Ken argues that the flipped classroom technique, non-substantively different from peer instruction, causes superior outcomes compared to lecture. Ken refers to Mezur[15] for empirical backing. For Ken and Mezur, pedagogies are often causally responsible, not merely asssociated, with outcomes. In chapter 6, Ken opposes engagement to boredom. In this view passion becomes synonymous with or operationalized by engagement. Ken associates personalized learning with higher passion, engagement, and grit.
 
 In chapter 6, Ken voices support for vocational education directly, and also for alternative pedagogical approaches which are job-like. Project based learning involves learning by creating a deliverable with a team. This is very similar to many positions of employment. Big picture learning is a pedagogical approach which emphasizes the importance of an internship. Ken also discusses design thinking in this chapter. The details of design thinking are largely extraneous, but it is a good example of a systematic analytical approach, and one which is often used in business. I wonder whether learning by reasoning is more robust against fadeout compared to fadeout of memorized knowledge which is not embedded within a larger system of reasoning. If learning by reasoning is more robust, then learning in the context of a systematic analytical approach like design thinking or economic analysis might resist fadeout.
 
@@ -183,7 +187,7 @@ Craig defines the concept of the last mile in chapter 4. The idea originated in 
 
 One common last mile learning implementation is the bootcamp. Craig states that "most student-pay bootcamps show placement rates north of 80%." Those placements are measured to have occured within 6 months. While bootcamps, and last mile providers in general, are most common for software development roles and development-adjacent roles like designer, business analyst, software tester, scrum master, and so on, they do exist for entirely non-development roles. Sales is one non-development role which has a substantial number of reputed last mile providers.
 
-When considering the return from any of these providers, it is critical to adjust for risk. Some providers often employment guarantees, financing, high salary upon graduation, and high graduation rates, while other providers offer fewer or none of those features. Tuition and time costs are also critical factors to consider. Learning course costs range from less than $100 into the 5-digit range. Some learning providers charge nearly as much as a traditional university would. That becomes intuitive when it is observed that some alternative learning providers partner with traditional universities to offer products which are ultimately indistinguishable from the traditional product in the eyes of an employer. Coursera, for example, offers a Master in Computer Science through a partnership with the University of Illinois[25]. The time to complete an alternative program of learning can range from days to years. Craig notes that the subset of alternative learning programs called bootcamps range in completion time from four weeks to two years, with 14 weeks as an average.
+When considering the return from any of these providers, it is critical to adjust for risk. Some providers often employment guarantees, financing, high salary upon graduation, and high graduation rates, while other providers offer fewer or none of those features. Tuition and time costs are also critical factors to consider. Learning course costs range from less than \$100 into the 5-digit range. Some learning providers charge nearly as much as a traditional university would. That becomes intuitive when it is observed that some alternative learning providers partner with traditional universities to offer products which are ultimately indistinguishable from the traditional product in the eyes of an employer. Coursera, for example, offers a Master in Computer Science through a partnership with the University of Illinois[25]. The time to complete an alternative program of learning can range from days to years. Craig notes that the subset of alternative learning programs called bootcamps range in completion time from four weeks to two years, with 14 weeks as an average.
 
 Few economists or education scholars believe that alternative learning providers directly substitute for traditional providers in a winner-take-all fashion, but Craig points to a survey by the National Association of College and University Business Officers wherein 57% of colleges and universities attribute "the likes of software coding bootcamps" for enrollment declines, at least for particular subjects. Craig states that there are "now" 95 non-accreddited so-called coding schools, although they only began popping up in 2012. He attributes this figure to Course Report, but my own search on the Course Report website indicates that as of December 2018 there are 332 bootcamps supporting a full-stack development position[26], a particularly intense kind of high-skill software developer. A full-stack developer is expected to have all skills held by a front end developer and all skills expected by a back end developer.
 
@@ -207,11 +211,11 @@ While Udacity failed in one endeavor during 2017, they succeeded in another. The
 
 Craig also covers Yellowbrick and microcredentials in chapter 8. Yellowbrick is a resource which awards certificates in Fashion, Beauty, and Sports so-called industry essentials, but these certificate courses largely consist of career discovery instruction, and career preparedness including the development of an e-portfolio along recommended lines. Certificates can be seen as a kind of microcredential, but microcredentials are a broad group. The difference between a credential and a microcredential is that a microcredential is meant to signal a single specific competency. Certificates may signal one or more skills, so they may or may not count. Degress are far too broad to be a microcredential.
 
-Coursera Specializations, Udacity Nanodegrees, and other signature credentials from leading online learning providers are often thought of as microcredentials, but in some cases even they may be too broad. Craig mentions badges which are a good example of a very narrowly-scoped credential. Khan Academy, for example, has one badge which is awarded for listening to 30 minutes of video on a single topic[37]. One to many badges, then, might be acquired for completing a single course, whereas one to many courses might be required to obtain a Coursera Specialization or a Udacity Nanodegree. Microcredentials are interesting because an individuals may assemble them into a digital portfolio demonstrates knowledge in a way that is highly specific to the portfolio owner. In contrast to the heterogeneity within the category of persons holding a business degree, a highly specified portfolio allows for low-noise signalling to an informed portfolio observer, better requirement fit, and less irrelevant learning. Microcredentials, like ordinary credentials, can be included in a factor analysis of employee performance, labor outcomes, and so on, to identify whether they provide evidence of value added.
+Coursera Specializations, Udacity Nanodegrees, and other signature credentials from leading online learning providers are often thought of as microcredentials, but in some cases even they may be too broad. Craig mentions badges which are a good example of a very narrowly-scoped credential. Khan Academy, for example, has one badge which is awarded for listening to 30 minutes of video on a single topic[38]. One to many badges, then, might be acquired for completing a single course, whereas one to many courses might be required to obtain a Coursera Specialization or a Udacity Nanodegree. Microcredentials are interesting because an individuals may assemble them into a digital portfolio demonstrates knowledge in a way that is highly specific to the portfolio owner. In contrast to the heterogeneity within the category of persons holding a business degree, a highly specified portfolio allows for low-noise signalling to an informed portfolio observer, better requirement fit, and less irrelevant learning. Microcredentials, like ordinary credentials, can be included in a factor analysis of employee performance, labor outcomes, and so on, to identify whether they provide evidence of value added.
 
 One of the few interesting components of chapter 9 is a list of "Go to College Indicators" assembled by Craig. I think a review of this checklist is a value to any individual pondering whether or not to go to college, and it is a relief to see the list is in harmony with much of Caplan's discussion in The Case Against Education. Craig doesn't have quite the level of rigour as Caplan in that Craig does not actually calculate return on investment for various choices, but instead advises a reader to do that which is affordable, leaving the conception of affordability to the reader.
 
-In chapter 10, Craig again agrees with Caplan in noting that fadeout from education is significant. Craig emphasizes the Ebbinghaus forgetting curve as an estimate of fadeout. This fadeout heuritistic is a non-comprehensive simplification compared to the discussion found in Caplan, but the single-sourced nature of the heuristic facilitates discussion and memory. The simple formula for the curve also facilitates calculation[38].
+In chapter 10, Craig again agrees with Caplan in noting that fadeout from education is significant. Craig emphasizes the Ebbinghaus forgetting curve as an estimate of fadeout. This fadeout heuritistic is a non-comprehensive simplification compared to the discussion found in Caplan, but the single-sourced nature of the heuristic facilitates discussion and memory. The simple formula for the curve also facilitates calculation[39].
 
 The final section of the book, in the appendix, is a directory of alternatives to college, including which jobs each program prepares a participant for. This is a phenomenal resource. For the relevant consumer, the appendix alone makes purchase of the book more than worthwhile.
 
@@ -223,7 +227,7 @@ General findings are worth breaking into two groups. The first group is atempora
 
 Intellectually, there is a clean distinction between a disruption camp and a non-disruption camp. In the real world, the leaders in either camp exist much more in the middle of the two than toward the extemes. The leading thinkers and practitioners in favor of the university system acknowledge that universities should continue to innovate, and adopting non-traditional features is practically, and in some sense tautologically, the means to that end. The leading thinkers and practitioners opposed to the legacy system acknowledge that the legacy system is firmly entrenched and will continue to be so for many years, and so the optimal course of action for individuals and for society is for new providers to integrate, cooperate, and coordinate with those legacy systems, instead of attempting to steal consumers in a winner-take-all fashion.
 
-The result is that leading thinkers and practitioners on both sides largely support both alternative education and traditional education. Moreover, leaders on both sides generally agree on which pedagogies, technologies, and so on, provide optimal results in most cases. A cursory glance at the non-book literature demonstrates the difficulty involved in locating a formal paper with citations in excess of the single digits which promotes the traditional lecture mode of class instruction. I could only find one from by Kalogeras in 1976 [15]. While the magazines occassionally headline an article which pretends to defend lecture, seldom make and evidence-based case and often essentially concede the point. Consider *In Defense of the Lecture*, a 2014 article from the Chronicle of Higher Education. This article points out specific virtues of lecture, even while conceding "...lecturing as a means of transferring basic factual information is a poor way to teach. I agree..."
+The result is that leading thinkers and practitioners on both sides largely support both alternative education and traditional education. Moreover, leaders on both sides generally agree on which pedagogies, technologies, and so on, provide optimal results in most cases. A cursory glance at the non-book literature demonstrates the difficulty involved in locating a formal paper with citations in excess of the single digits which promotes the traditional lecture mode of class instruction. I could only find one from by Kalogeras in 1976 [15]. While the magazines occassionally headline an article which pretends to defend lecture, seldom make and evidence-based case and often essentially concede the point. Consider _In Defense of the Lecture_, a 2014 article from the Chronicle of Higher Education. This article points out specific virtues of lecture, even while conceding "...lecturing as a means of transferring basic factual information is a poor way to teach. I agree..."
 
 The differences in opinion seem rather limitted, and they almost universally apply to macroeconomic issues. The closest thing to disagreement on microeconmic choices seems to be twofold:
 
@@ -262,16 +266,6 @@ Under this macroeconomic categorization, even the proponent of traditional educa
 ### Trends Over Time
 
 In Robinson and Selingo we see traditional providers including four year universities adapting and innovating by adopting best-of-breed technologies, pedagogies, and program structures piloted by alternative providers. In Craig see that this flow is bidirectional, rather than unidirectional. Craig notes that Udacity's latest innovation is the in-person course. Besomebody Paths are fully offline. The typical course seems to be achieving equilibrium among a range of subtly different, but substantively similar, hybrid modes. Far from being an artifact of overfitting this literature, the elucidated pattern is consistent with multiple stories that none of these authors mention.
-
-Christiansen et al published *Disrupting Class: How Disruptive Innovation Will Change...* in 2008. Christiansen and Eyring published *The Innovative University: Changing...* in 2011. Notice the predictive tone of the former in constrast with the active tone of the latter. The same year, 2011, Sebastian Thrun manifested the Christiansen of 2008 and ignored the Christiansen of 2011 by relinquishing his tenure at Stanford to found Udacity. Udacity's first courses began taking students in early 2012[35]. Only in 2013 did Udacity begin contributing to changing the university by offering some courses for college credit. In 2014, Udacity entered into its first full-fledged partnership with a university. The same year, Udacity released its first signature alternative credential, the Nanodegree. Excitement filled the air. About that time, as Craig informs us, the evidence on weak outcomes for Udacity's courses and other MOOCs began to cause significant doubt. In 2017, Udacity Connect was launched. This product is a hybrid learning solution which occurs partly in a classroom setting and partly online. Now that the results have started coming in, as earlier mentioned, this approach has shown about a 500% increase in graduation rate.
-
-In 2016, Khan Academy applied for the $100 million dollar grant by 100&Change in order to create a globally recognized secondary education diploma. 1904 organizations applied for the grant[30]. 1870 proposals are documented in a solution explorer made public by 100&Change[31]. 375 proposals are in the education category. When decisions were rendered in 2017, Khan Academy's proposal earned an honorable mention as one of the top ten in the education category, but it did not place among the 8 semi-finalists across categories and did not earn a financial award[32].
-
-Like Udacity, Khan Academy is an online learning provider which went through a period of immense excitement followed by failure, and also like Udacity, Khan Academy achieved a remarkable success on a different project during the same calander year as their disenchanting loss. In 2017, Khan Academy released the results of a study they conducted with the College Board. It showed that studying for the SAT using Khan Academy is associated with 115-point average score increase[33]. Khan Academy also became the official practice partner for AP exams in 2017[34].
-
-Not only do Udacity and Khan Academy share a Jungian hero typology, they have both evolved from traditional learning competitors to traditional learning allies. Like Coursera, edX, and others, the best-of-breed alternative learning providers of today are not substituting for traditional education providers, they are integrating with them. Likewise, the best-of-breed traditional providers are not rejecting new learning approaches, they are partnering with them, awarding credit to students for alternative learning, and even supplying online education providers with content.
-
-While literature can be found further back that applies in ways increasingly less direct, I consider Christiansen's 2008 piece to be a watermark in the literature. With Udacity's course offerings in early 2012, I observe a bright line in the actualization of modern alternative education provision. With Udacity, Coursera, Khan Academy, and other major online learning providers having been through significant revision in just a few years, I consider 2018 to be a new age of alternative education. Significant changes occured during 2017, so 2018 will have been the first year in which these changes were available throughout the period.
 
 The general trend is toward integration of traditional and alternative providers, but alternative learning systems are heterogenous and these heterogenous solutions are not equal in optimality for consumption by any particular individual, nor at the social level. Portfolios, and digital portfolios in particular, are in demand by employers. Digital portfolios have recently become trendy among universities, while they have been in fashion with alternative providers for some time. Standardized portfolio artifact generation and evaluation is becoming more standardized over time, assisted by certain dedicated evaluation providers.
 
@@ -343,15 +337,15 @@ TODO: Format entries properly.
 
 [30]https://blog.udacity.com/2016/04/introducing-udacity-connect-turbocharged-learning.html
 
-[31]https://www.playworks.org/news/playworks-is-top-10-education-finalist-in-global-100change-competition/
+[31]
 
-[32]http://100andchange.foundationcenter.org/dashboard/
+[32]
 
-[33]https://www.macfound.org/programs/100change-2017-semifinalists/
+[33]
 
-[34]https://www.khanacademy.org/about/blog/post/160451329150/studying-for-the-sat-for-20-hours-on-khan-academy
+[34]
 
-[35]https://www.khanacademy.org/about/blog/post/163503591115/khan-academy-is-the-official-practice-partner-for
+[35]
 
 [36]https://en.wikipedia.org/w/index.php?title=Udacity&oldid=853136895
 
