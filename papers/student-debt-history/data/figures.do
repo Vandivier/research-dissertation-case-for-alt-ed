@@ -2,9 +2,14 @@ clear
 
 import delimited D:\GitHub\research-dissertation-case-for-alt-ed\papers\student-debt-history\data\google-search-wgu.csv
 
-line results year, ylabel(, angle(horizontal)) ytitle("Count", orientation(horizontal))
+ssc install grstyle, replace
+ssc install palettes, replace
+grstyle init
+grstyle set plain
 
-graph export D:\GitHub\research-dissertation-case-for-alt-ed\papers\student-debt-history\figures-and-tables\figure-1-google-search-wgu.png
+line results year, ylabel(, angle(horizontal)) ytitle("Count", orientation(horizontal)) bgcolor(white)
+
+graph export D:\GitHub\research-dissertation-case-for-alt-ed\papers\student-debt-history\figures-and-tables\google-search-wgu.png
 
 clear
 
@@ -14,7 +19,7 @@ gen formattedMonth = subinstr(month, "-", "",.) + "01"
 gen dates = date(formattedMonth, "YMD")
 
 tsset dates, daily
-twoway (tsline moocs onlinedegree wgu udacity), tlabel(, format(%dCY)) ylabel(, angle(horizontal)) ttitle("Date")
+twoway (tsline moocs onlinedegree wgu udacity), tlabel(, format(%dCY)) ylabel(, angle(horizontal)) ttitle("Date") bgcolor(white) ytitle("Interest")
 
-graph export D:\GitHub\research-dissertation-case-for-alt-ed\papers\student-debt-history\figures-and-tables\figure-2-google-trends-digital-education.png
+graph export D:\GitHub\research-dissertation-case-for-alt-ed\papers\student-debt-history\figures-and-tables\google-trends-digital-education.png
 

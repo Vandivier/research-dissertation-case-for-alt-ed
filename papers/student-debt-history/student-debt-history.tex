@@ -55,7 +55,7 @@ education economics, debt crisis, digital education, hype cycle
         
     \section{Introduction}
 
-    The prescient Van Dusen published in 1979 on The Coming Crisis in Student Aid\cite{van1979coming}.
+    Van Dusen discusses The Coming Crisis in Student Aid as early as 1979\cite{van1979coming}.
     Discussion on the issue has proceeded continuously.
     Forbes\cite{friedman2019student} noted that "Student loan debt in 2019 is the highest ever,"
     months before Ryan Craig would announce the Third Age of Online Education had begun\cite{craig2019welcome}.
@@ -107,8 +107,11 @@ education economics, debt crisis, digital education, hype cycle
     As of 2019, Sebastian Thrun reports 4 percent is the MOOC completion rate,
     but Nanodegree programs have a 34 percent graduation rate, and using new personalized mentorship programs, cohorts commonly exceed 60 percent graduation rates.
 
-    In 2016, Khan Academy applied for the \$100 million dollar grant by 100&Change in order to create a globally recognized secondary education diploma.
+    In 2016, Khan Academy applied for the \$100 million dollar grant
+    by 100\&Change in order to create a globally recognized secondary education diploma.
     1904 organizations applied for the grant\cite{conrad_2016}.
+
+    
     When decisions were rendered in 2017, Khan Academy's proposal earned an honorable mention as one of the top ten in the education category,
     but it did not earn a financial award\cite{cushing_2017}.
 
@@ -183,10 +186,10 @@ education economics, debt crisis, digital education, hype cycle
     but it is hardly necessary because it has been qualitatively covered in the section on historical context
     and also because the sustained growth in the market associated with hype already implies positive sentiment on average.
 
-    Google Trends provides an index of search volume over time.
-    The index is not an exact search frequency.
-    The index takes a value between 0 and 100, inclusive, and is normalized for each series against itself, not across series.
-    The key result is the establishment of a hype cycle in the trend of a series in relation to itself over time, not a comparison across series.
+    Google Trends provides an index of search volume, called interest, over time.
+    The interest index is not an exact search frequency.
+    Interest takes a value between 0 and 100, inclusive, and is normalized across each concurrently measured series.
+    The key result is the establishment of a hype cycle in the trend of a series in relation to itself over time.
     Google Trends data is available using Google-defined topics as well as keyword matching.
     Google-defined topics are generally preferred as more precise, and that is the form of data which I use.
     Keyword matching is less precise because there is a boolean or statement used by the querying engine, resulting in many false positive results and significant noise in the data.
@@ -210,45 +213,96 @@ education economics, debt crisis, digital education, hype cycle
 
     \section{Results}
 
-    The first result is an illustration of Google Trend data over time.
+    The first main result is depicted in Figure \ref{fig:google_trends_digital_education}.
+    In this graph we can see that online degrees have sustained high interest for as long as Google data has been available.
+    That is, from 2004 to 2020, the present year.
+    While general interest has remained high, there is a clear downturn in 2010, and a recovery of interest in 2017.
+    MOOCs, in contrast, see a clear uptick in interest in 2012, and the beginning of decline the next year.
+    The general interest in MOOCs never recovers.
+
+    \begin{figure}[h!]
+        \centering
+        \caption{Annualized Interest}
     
-    % google trends becomes relevant at this point; see the other chart where gradual increase shown
+        \begin{tikzpicture}[element/.style={minimum width=1cm, minimum height=0.75cm}]
+        \node (n1) [above=0.25cm] {\includegraphics[width=1\textwidth]{../student-debt-history/figures-and-tables/google-trends-digital-education.png}};
+        \end{tikzpicture}
 
+        \label{fig:google_trends_digital_education}
+        \end{figure}
+
+    The particular case of Udacity is slightly different compared to the general data on MOOCs,
+    and the particular case of Western Governors University is different than the general trend in online degrees.
+    Udacity sees a local maximum in June 2012, followed by decline.
+    Udacity recovers to an even higher local maximum in January 2018.
+    Interest in Udacity is presently declining, but Udacity has declined and recovered before,
+    in contrast to the concave-down trend for MOOCs generally.
+    This empirical data lines up well with the Three Ages conceptualization.
+
+    In the Third Age, learning online is growing in interest, but it is being fueled by providers
+    like WGU, rather than providers like Udacity.
+    WGU presents an odd case here, because there is no substantive hype cycle.
+    One might argue for a minor cycle from August 2015 to May 2017, but this pales in comparison to accelerating adoption across the whole period.
+    On Google Trends data alone, it appears plausible that WGU's growth is manic and ripe for correction.
+
+    The WGU mania theory has two issues.
+    First, in the section on historical context, we uncovered fundamental changes in the economy which would stimulate growth in WGU interest in the Third Age.
+    Namely, growth in employer tuition assistance, growing social desire for online learning,
+    and the decline of for-profit providers like University of Phoenix.
+    Secondly, the truncation of data in 2004 creates a bit of an illlusion.
+    As we see in Figure \ref{fig:wgu_search_results}, 2004 was near a low point in WGU's history.
+    The dot-com boom and bust is clearly depicted with WGU as a participant.
+    Figure \ref{fig:wgu_search_results} is constructed wtilizing Google's Advanced Search to filter results by year
     \footnote{
-        Technically, the boolean query "Western Governor's University" OR "Western Governors University" was used.
+        Result count obtained using the boolean query "Western Governor's University" OR "Western Governors University" was used.
         Plenty of online discussion on WGU involves this typo.
-        The result number excludes articles which Google excluded by default.
+        The count used excludes articles which Google excludes by default.
         Google excludes some web results by default, generally because the excluded results seem to be copies of results already shown.
-    }
+    }.
 
-    % yes, we are thru hype cycle
-    % online is already normal and it will continue to be even more normal
-    % students, employers, policymakers shouldn't fear online education
-    % it may slow graduation, but as long as you are working while learning the strategy still nets out a financial win
-    %   -> let's do an example comparison of education ROI to prove the above line, and contrast that with Caplan's return estimates or the rest of the literature.
+    \begin{figure}[h!]
+        \centering
+        \caption{WGU Search Results by Year}
+    
+        \begin{tikzpicture}[element/.style={minimum width=1cm, minimum height=0.75cm}]
+        \node (n1) [above=0.25cm] {\includegraphics[width=1\textwidth]{../student-debt-history/figures-and-tables/google-search-wgu.png}};
+        \end{tikzpicture}
 
-    % sustainable growth and non-need for policy intervention consistent with below...
-    % Fall 2012, more than 10% students exclusively online https://nces.ed.gov/pubs2014/2014023.pdf
-    % In 2017, online learning grew why overall enrollment shrank https://www.insidehighered.com/digital-learning/article/2018/11/07/new-data-online-enrollments-grow-and-share-overall-enrollment
-    % net tuition is largely flat since 2000; what about before that?
-    % https://research.collegeboard.org/trends/college-pricing/figures-tables/average-net-price-sector-over-time
-    % what about debt per student?
-    % datasource = IPEDS, NCES
-    % people are digital natives now
-        %Second, only 10 percent of Americans are not internet-using\cite{anderson2019}.
-        %Today, the national population essentially is internet-using.
-    % can go to school for under 5250 deduction; additional deductions
-    % spread of true cost instead of average sticker cost
-    % argue out of pocket cost = 0; straighterline, credit by exam, University of the People
+        \label{fig:wgu_search_results}
+        \end{figure}
     
     \section{Conclusions}
 
-    % it's a problem that will take care of itself, so long as we don't make things worse
-    % example of outdated paper: https://www.westga.edu/~distance/ojdla/spring121/columbaro121.html
-    % obscelescence of much research in turn creates a demand for new research in the area: How do employers feel today,
-    % and how should we expect them to feel in the future in light of new information?
-    % high level positivity is expected based on this paper, given hype cycle dynamics and aggregate market growth,
-    % but that is essentially an aggregate answer that could be improved by accounting for employer and learner heterogeneity
+    This paper demonstrates that interest in online degrees has survived the trough of disillusionment
+    and is becoming a normal part of higher education.
+    Renewed interest in online education has coevolved with changes in society and the character of
+    online learning. Evidence supports a Three Ages description of the character of online education.
+    Online enrollments increased in 2017, even while general postsecondary enrollment declined\cite{lederman2018online}.
+    This indicates that not only is online education trending up, but it is substituting for traditional education.
+
+    These findings have several implications. For policy, an implication is that existing policies
+    including the write off for tuition reimbursement are sufficient.
+    Because employers are financing employee education, the need for further education subsidy is undercut.
+    For students, a strategy of learning while working is recommended,
+    although questions remain about the best strategy for full-time workers with low income.
+
+    For students, Third Age learning means a higher private return to education.
+    Because this lifestyle is provisioned by an employer,
+    the distinction between continuous professional education and undergraduate education blurs.
+
+    For academics, the Three Ages characterization means that much prior research is now obsolete.
+    In turn, demand for new research is stimulated.
+    Hype cycle dynamics, aggregate market growth, and the research presented in this paper
+    result in an expectation of continued growth in online education in the future.
+    Continued social normalization and financial improvements are also expected,
+    but many questions remain.
+
+    The growth rate of student debt is expected to decrease, but the rate and schedule of this decrease isn't clear.
+    Whether the growth rate will move close to zero or past zero into substantially negative territory isn't clear.
+    It's clear that learners and employers generally support online education,
+    but it's not clear why this general support is resisted by some.
+    Microanalysis which accounts for employer and learner heterogeneity in the Third Age
+    of online learning is needed to create insights which are optimally actionable for particular individuals.
 
     \bibliography{./BibFile}
 
