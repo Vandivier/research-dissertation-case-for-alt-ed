@@ -45,22 +45,87 @@
 
 \pagebreak
 \linenumbers
-        
+
     \section{Introduction}
     
-    % TODO ~ 10 lines
+    Online education and other alternative forms of education have grown in popularity in recent decades.
+    Alternative education may improve access, quality, and cost in education.
+    This paper contributes to the literature by providing an experimental study on an approach to stimulating demand
+    for alternative education.
+    Three treatment effects of interest are studied including a treatment effect on alternative education favorability,
+    alternative education net promoter score,
+    and traditional education net promoter score.
+    
+    Experimental results are relevant at the social level in three ways. First, the treatment involves simple information exposure,
+    and comparable information exposure is occuring at large scale in society already, so any pattern of established endogeneity
+    becomes somewhat predictive in current society. The second and third applications are in industry and policy. If a treatment effect is
+    identified, the treatment becomes useful in both industrial and policy applications as a stimulant to demand for alternative education.
+    The main policy use case for such a treatment would be as a solution to the student debt crisis.
 
     \section{Experimental Design}
 
+    The experiment followed a pretest-posttest design in an online environment.
+    After a pretest, four online exercises were immediately conducted as a treatment, and a posttest was immediately administered on completion.
+    318 total responses, including partial responses, were obtained through the SurveyMonkey Audiences service.
+    Respondents are US persons aged 18-44 with representation from every region of the United States.
+    % related to SurveyMonkey Audiences, which are not direct-paid but result in donations to a participant's cause https://www.sciencedirect.com/science/article/pii/S221480431930206X
+
     % 2.1. Experiment
+
+    The four computer-based exercises can be broken into two groups.
+    The first group is a reading exercise.
+    Three articles were selected for reading in order to help communicate aspects of alternative education suspected to be minimally understood be the public.
+    The first article is a Forbes article\cite{friedman_2019} which emphasizes that it is possible to receive an accredited degree as the result of an alternative education program.
+    As an example, it refers to Walmart's employee benefit which allows employees to attend college for one dollar per day.
+    The second article combats the notion that programming is a special case where a degree may not be needed for career entry.
+    It highlights an alternative career preparation program for creative visual designers.
+    The third article discusses vocational education and apprenticeships as an alternative to the traditional undergraduate degree.
+
+    The fourth exercise is in a seperate category compared to the first three reading assignments.
+    It is important to note that completion of the fourth exercise was optional.
+    In this fourth exercise, the participant completes an introductory online programming lesson.
+    The programming lesson was free, introductory in level, and provided by Codecademy, an industry-leading provider in the space.
+    The lesson is an instructorless learning module which has already been in frequent use by the public.
+    It is not a lesson which was built for this particular study.
+
+    Completion of the introductory lesson takes about 45 minutes on average.
+    The extent of completion was observed, with some respondents skipping the exercise entirely,
+    and other participants electing to continue learning on Codecademy after the first lesson.
+    
+
     % 2.2. Questionnaire
     
-    % TODO
+    The pretest contained elevent questions, and another five data points were included for most respondents by virtue of their involvement in the SurveyMonkey Audiences program.
+    % see the appendix and data set at location bla bla bla
+    The posttest contained six questions, three of which were also contained within the prettest.
+
 
     \section{Results and discussion}
 
     % 3.1. Descriptive Statistics
-    % 3.2? Textual Response Analysis
+    % 3.2 Textual Response Analysis
+    This questionnaire included an open-ended long-answer question (required?). These responses (n=?) were formally analyzed by converting them into two variables.
+    The open-ended question was, "In 2 or more sentences, please explain your selection on 'How likely is it that you would recommend alternative education to a friend or colleague?' Include why your score did or did not change after completing the exercises."
+    The two derived variables were Comment Quality and Comment Theme. Both variables were generated based on manual review.
+    Comment Quality is scored from one to four. A score of one indicates a nonsensical response. Two examples are "Fddd" and "eh."
+    A score of two indicates the response was at least an english word, although it still didn't answer the question. Two examples include "unsure" and "If that is the best route for them, then that is the best route."
+    A score of three indicates that an answer was given with some kind of justification, although it may be an incomplete sentance or a justification that doesn't follow.
+    An example would be "some people cant afford school." Notice that this would not be a reason to prefer traditional education over alternative education,
+    it isn't a complete sentance, and it doesn't entirely answer the question.
+    Specifically, it doesn't answer, "Include why your score did or did not change after completing the exercises."
+    A score of four indicates a high-quality response.
+    With a score of three or four it is possible to further derive a comment theme. Comment themes 
+
+    A collection or response error on the following question:
+    "How many of the three articles contained information you were previously unaware of?"
+    Yielded many invalid results, where an invalid result is a response greater than 3.
+    The nature of the error was systematic and intuitative based on the questionnaire response tool,
+    and insight into the response problem allowed for the generation of several derived variables in an attempt to salvage invalid responses.
+    The questionnaire response tool allowed a user respond either by entering a number with the keyboard, or by clicking and dragging a slider with the mouse.
+    Several derived variables were generated in an attempt to salvage invalid responses, based on intuition about how the response tool was used.
+    See the image of the confusing slider response widget.
+    % 0, 1, 2, 3, 33, 67, 100, raw, proportional, proportionalOver3
+
     % 3.3. Multivariate Analysis
 
     % TODO
