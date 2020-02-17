@@ -114,6 +114,8 @@ reg totalen new1 new2 visaenroll pce exnew1 exnew2 exvisaenroll stategi3
 * // all vars still significant, r2 still > .999
 * // this is key reg with n = 27 over period 1990 - 2017
 * // as a tertiary interest, gi bill effect is negative on enrollment
+* // one interpretation might be it incentivized individual attendance of college later in time
+* // so within a bounded time frame it looks like a negative effect due to sample truncation
 reg totalen new1 new2 visaenroll pce exnew1 exnew2 exvisaenroll stategi3, robust
 
 * // git bill effect on tuition is an insignificant and unimportant increase (p = .975)
