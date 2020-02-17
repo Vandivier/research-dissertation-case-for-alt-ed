@@ -94,3 +94,29 @@ reg tuition new1 new2 visaenroll pce exnew1 exnew2 exvisaenroll year
 reg tuition visaenroll exnew1 exnew2 exvisaenroll year
 reg tuition new1 totalen visaenroll exnew1 exnew2 exvisaenroll year
 reg tuition new1 totalen exnew1 exnew2 exvisaenroll year
+
+* // now introduce stafford loan variables
+* // they should be kinda implicit in time, so we don't expect r2 increase
+* // but it should repartial effect coefficients to more accurate values
+* // r2 is same, adj r2 decreases
+* // perhaps surprisingly, stafford limits are totally insignificant
+* // coefficients of interest don't move noticeably
+reg totalen new1 new2 visaenroll pce exnew1 exnew2 exvisaenroll stafford* stategi*
+
+* // now introduce GI variables
+* // mostly dropped for colinearity except 3, because effective sample is 1990-2017
+* // GI Bill is significant, stafford still isn't, r2 and adj r2 up but negligibly bc we near 1
+* // more importantly, what are the effects on coefficients of interest? values shift slightly but no sign change
+reg totalen new1 new2 visaenroll pce exnew1 exnew2 exvisaenroll stafford* stategi*
+reg totalen new1 new2 visaenroll pce exnew1 exnew2 exvisaenroll stategi3
+
+* // lastly, add robust flag
+* // all vars still significant, r2 still > .999
+* // this is key reg with n = 27 over period 1990 - 2017
+* // as a tertiary interest, gi bill effect is negative on enrollment
+reg totalen new1 new2 visaenroll pce exnew1 exnew2 exvisaenroll stategi3, robust
+
+* // git bill effect on tuition is an insignificant and unimportant increase
+* // point estimate of $4 increase in tuition, concordant with a scale explanation but it doesn't matter
+reg tuition new1 totalen exnew1 exnew2 exvisaenroll year stategi*
+reg tuition new1 totalen exnew1 exnew2 exvisaenroll year stategi3

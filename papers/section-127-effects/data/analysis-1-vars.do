@@ -16,4 +16,6 @@ gen exnew1 = empassist*new1
 gen exnew2 = empassist*new2
 gen exvisaenroll = empassist*visaenrollinteracted
 
+tab gi, gen(stategi)
+
 drop newh1

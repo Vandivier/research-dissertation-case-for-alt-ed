@@ -19,7 +19,8 @@
 \begin{frontmatter}
 
 \title{
-    Comparative Policy Effects for Educational Diversity in Higher Education
+    % Comparative Policy Effects for Educational Diversity in Higher Education
+    The Effect of H-1B and Section 127 Policy Interaction on Higher Education
     \tnoteref{titlenotes}
 }
 \tnotetext[titlenotes]{
@@ -40,6 +41,17 @@
     Enrollment effects are decomposed by student salary to discover policies preferentially benefiting lower class and minority learners.
     Costs for encouraging lower class enrollment are compared between employer assitance and student loan approaches.
     Evidence suggests that [POLICY X] preferentially benefits lower and middle class individuals.
+    % policy interaction with H-1B visa?
+    % degree requirement as a strategy to import cheap, effective foreign labor (VISA)
+    % this prevents high school graduates from directly entering roles that typically award section 127 (white color, major employer, corporate work)
+    % until recently, that is, with walmart, mcdonalds, starbucks giving section 127 i think even to part timers
+    % 1952 allows unlimited merit immigration, 1990 there is a quota and degree requirement added to H-1B: https://en.wikipedia.org/wiki/H-1B_visa#Immigration_Act_of_1990
+    % New and initial H-1B and H-1B1 visas issued by the U.S. Department of State through consular offices
+    % https://en.wikipedia.org/wiki/H-1B_visa#H-1B_visas_issued_per_year
+    % crackdown in 2017: https://www.investopedia.com/news/impact-trumps-h1b-visa-crackdown-5-charts/
+    % Theory: After 1990, companies began requiring a 4 year degree so they could have an H-1B justification.
+    % This caused more americans to pursue an undergraduate degree without section 127. we should see section 127 use decline after 1990.
+    % Recently, employers have begun giving the benefit anyway due to labor selection and internal ROI benefits
 \end{abstract}
 
 \begin{keyword}
@@ -83,6 +95,23 @@ education economics, alternative education, debt crisis, signaling
         The local effect in 1970s seems very small or even negative, counter to prima facia economics
         If there's an effect at all it is for a small set of the population so it doesn't show in aggregate.
         Seems like loans are a much bigger effect.
+        Actually this could still be interesting as it's prima facie an economic paradox
+        % total enrollment: https://nces.ed.gov/programs/digest/d18/tables/dt18_303.10.asp
+        % need employers offering the benefit over time.
+
+        % what about student loans? here are the limits over time: https://www.finaid.org/loans/historicallimits.phtml
+        % actual undergrad loans awarded since 1990 in the excel at https://research.collegeboard.org/trends/student-aid
+        % but i don't think we should use actuals there bc that would explain away demand effects...we want to preserve those (do a better job explaining this plz)
+        % so, prefer the limits over time...those are attributed to the school year, so rules beginning July 1993 are true for 1993 (start of school year)
+        % eg dummy for "limit is subsidized plus unsubsidized" begins to be true for 1993 in my csv
+        %
+        % GI Bill accounting https://en.wikipedia.org/wiki/G.I._Bill#Chapter_30_(Montgomery_GI_Bill)
+        % Variable implemented as categorical
+        % [state A] original bill was 1944-1984
+        % [state B] VEAP established 1981 https://www.benefits.va.gov/gibill/veap.asp
+        % [state C] Montgommery GI went into effect 1984
+        % [state D] Post-9/11 Montgomery GI Bill went into effect for 2009 school year https://www.thebalancecareers.com/gi-bill-for-the-21st-century-3347143
+        % [state E] Forever GI bill rolls out new benefits starting in 2018 https://rebootcamp.militarytimes.com/education-transition/education/2017/08/16/trump-signed-the-forever-gi-bill-here-are-11-things-you-should-know/
 
         \section{Results}
         
@@ -131,6 +160,7 @@ education economics, alternative education, debt crisis, signaling
         % it moved 5000->5250 in 1986
         % can we see effect on median-and-below vs above?
         % important to look at wages not income (which would include investments, etc, see shrm's discussion: http://www.cpepea.com/wp-content/uploads/2017/05/10-0418-Coalition-Report-on-Public-Policy-Issue-E-P-E-A_FNL.pdf)
+        % SHRM assessed only a single year, 2008. Shows Section 127 is mostly a Master's degree tool rn.
         % 75 percentile for salaries in 2017 was 54250 https://bizfluent.com/info-10032733-percentile-salary.html
         % define middle class as 50-75 percentile, lower class as under 50 percentile. break down effect by salary classification and see if it helps lower/middle
         % if so, it should improve diversity of education leading to a more diverse workforce which employers crave (TM) and politicians, etc...
@@ -138,6 +168,9 @@ education economics, alternative education, debt crisis, signaling
         % Other options like extending the benefit to repayment https://blog.shrm.org/blog/let-s-fight-the-skills-gap-by-expanding-tax-free-education-assistance
         % we can also consider extending the education benefit to unaccredited education and income share agreements not just loans
         
+        % https://www.nber.org/papers/w9225.pdf 
+        % https://www.nber.org/digest/feb03/w9225.html
+
         \bibliography{./BibFile}
         
         \end{document}
