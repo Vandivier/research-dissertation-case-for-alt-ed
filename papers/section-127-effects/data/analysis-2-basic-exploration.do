@@ -116,7 +116,7 @@ reg totalen new1 new2 visaenroll pce exnew1 exnew2 exvisaenroll stategi3
 * // as a tertiary interest, gi bill effect is negative on enrollment
 reg totalen new1 new2 visaenroll pce exnew1 exnew2 exvisaenroll stategi3, robust
 
-* // git bill effect on tuition is an insignificant and unimportant increase
+* // git bill effect on tuition is an insignificant and unimportant increase (p = .975)
 * // point estimate of $4 increase in tuition, concordant with a scale explanation but it doesn't matter
 reg tuition new1 totalen exnew1 exnew2 exvisaenroll year stategi*
 reg tuition new1 totalen exnew1 exnew2 exvisaenroll year stategi3
