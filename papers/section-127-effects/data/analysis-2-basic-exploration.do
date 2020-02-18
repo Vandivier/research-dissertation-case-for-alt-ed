@@ -112,11 +112,16 @@ reg totalen new1 new2 visaenroll pce exnew1 exnew2 exvisaenroll stategi3
 
 * // lastly, add robust flag
 * // all vars still significant, r2 still > .999
-* // this is key reg with n = 27 over period 1990 - 2017
+* // this is the key / preferred regression with n = 27 over period 1990 - 2017
 * // as a tertiary interest, gi bill effect is negative on enrollment
 * // one interpretation might be it incentivized individual attendance of college later in time
 * // so within a bounded time frame it looks like a negative effect due to sample truncation
+* // it is not correct to interpret the negative non-interacted visa coefficients as their policy effect
+* // regressing only visa variables shows nonlinear effects are insignificant
+* // - and linear effect is positive, as we would expect
 reg totalen new1 new2 visaenroll pce exnew1 exnew2 exvisaenroll stategi3, robust
+reg totalen new1 new2 new3
+reg totalen new1
 
 * // git bill effect on tuition is an insignificant and unimportant increase (p = .975)
 * // point estimate of $4 increase in tuition, concordant with a scale explanation but it doesn't matter
