@@ -127,3 +127,21 @@ reg totalen new1
 * // point estimate of $4 increase in tuition, concordant with a scale explanation but it doesn't matter
 reg tuition new1 totalen exnew1 exnew2 exvisaenroll year stategi*
 reg tuition new1 totalen exnew1 exnew2 exvisaenroll year stategi3
+
+* // as a seperate regression, not a modification to the other, I check interaction effect on total loans
+* // it is important we don't put loans into the key regression because it partials out inappropriately
+* // the loans variable will partial out a demand effect, but that effect belongs to the visa policy, the loan limit, or enrollment
+* // actual loans are an outcome of policy, not an input (unless you have some real esoteric downstream feedback effect theory, which I don't)
+* // pretty much start with the kitchen sink and filter for strong factors
+reg loans totalen new1 new2 visaenroll pce exnew1 exnew2 exvisaenroll stafford* stategi* tuition empassist year year2
+* // empassist weakly seems to have encouraged loans in this period which is reasonable bc empassist would no longer cover the whole degree
+* // but effect is insignifant; p=.3
+* // adj r2 here is .9959
+reg loans totalen new1 visaenroll exnew1 exnew2 exvisaenroll stafford* tuition empassist year year2
+
+* // strong factor loan reg. Adj r2 .9958
+* // simple visa effect is to increase loans, but this is due to the interacted components of the effect
+* // interacted visa effects are all positive and significant, confirming out theory
+* // enrollment, tuition, and time all in their expected directions; time is linear up with decreasing marginal effect
+reg loans totalen new1 exnew1 exnew2 stafford* tuition year year2
+reg loans new1

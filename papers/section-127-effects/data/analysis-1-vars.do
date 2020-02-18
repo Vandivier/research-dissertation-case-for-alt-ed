@@ -15,6 +15,7 @@ gen empassist = realassistancelimitallinstitut
 gen exnew1 = empassist*new1
 gen exnew2 = empassist*new2
 gen exvisaenroll = empassist*visaenrollinteracted
+gen loans = totalfederal
 
 tab gi, gen(stategi)
 
