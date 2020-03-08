@@ -3,8 +3,6 @@ clear
 do "D:\GitHub\research-dissertation-case-for-alt-ed\papers\section-127-effects\data\analysis-1-vars.do"
 
 * // ref: youtube.com/watch?v=wqwDcY9pq5I
-tsset year
-
 * // anderson-hsiao adjustment using double lagged voi as instrument
 ivreg d.totalen d.new1 (l.d.totalen=l2.d.totalen)
 

@@ -14,9 +14,11 @@ gen pce = annualaveragepce
 gen empassist = realassistancelimitallinstitut
 gen exnew1 = empassist*new1
 gen exnew2 = empassist*new2
+gen exnew3 = empassist*new3
 gen exvisaenroll = empassist*visaenrollinteracted
 gen loans = totalfederal
 
 tab gi, gen(stategi)
+tsset year
 
 drop newh1
