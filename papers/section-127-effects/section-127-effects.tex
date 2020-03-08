@@ -71,7 +71,7 @@
     % % this abstract length = 91 words
     % % technical micropaper structure
     % % ---
-    % This paper explores the dynamic effects of Section 127, GI Bill, Stafford loan, and H-1 Visa policy
+    % This paper explores the dynamic effects of Section 127, veteran education benefits, Stafford loan, and H-1 Visa policy
     % on total enrollment in the United States
     % using annual data from degree-granting institutions in the United States during the 27-year period from 1990 to 2016.
     % By applying panel vector autoregression (PVAR) and dynamic least squares (DOLS) methods,
@@ -80,14 +80,14 @@
 \end{abstract}
 
 \begin{keyword}
-education economics, section 127, educational assistance, gi bill, h-1b, debt crisis, dols, vars
+education economics, section 127, educational assistance, veteran education, h-1b, debt crisis, dols, vars
 \MSC[2010] % TODO
 \end{keyword}
 \end{frontmatter}
 
 \pagebreak
 \linenumbers
-        
+
     \section{Introduction}
 
     % background scratch notes in this comment block:
@@ -103,7 +103,7 @@ education economics, section 127, educational assistance, gi bill, h-1b, debt cr
     % Recently, employers have begun giving the benefit anyway due to labor selection and internal ROI benefits
 
     Basic supply and demand theory indicate that a reduction in price is associated with an increase to the quantity demanded.
-    In 1978, employer educational assistance became tax-deductable in the United States up to the original, nominal limit of 5,000 dollars.
+    In 1978, a bill was passed allowing employer educational assistance to be tax-deductable in the United States up to a nominal limit of 5,000 dollars.
     It is surprising, therefore, that 1978 is associated with a local decrease in the growth rate on both total and public university enrollment.
     This study exploits real variation in the tax-deductable employer educational assistance limit to eventually identify the expected positive effect,
     but not before identifying and correcting for several interesting things going on in the economy.
@@ -117,6 +117,11 @@ education economics, section 127, educational assistance, gi bill, h-1b, debt cr
     Two of the four low-rate intervals occured immediately subsequent to the 1978 creation of Section 127.
     The interval just prior, from 1970-1975, saw the highest growth in enrollment across the period.
     It does not appear to be a one-year fluke that the employer educational assistance is associated with declined enrollment growth.
+    
+    Another important point is that Section 127 was passed in 1978, but it took effect in the 1979 tax year.
+    1979 saw modest growth in enrollment,
+    but given the pre-existing long-run context of positive trend in enrollment,
+    it is not clear that Section 127 can be attributed any causality.
 
     An alternative to the 3 or 5 year lagged analysis is to directly refer to surveys of employers.
     Cappelli\cite{cappelli2004employers} identifies 3 employer surveys from 1992 and 1993 which indicate that at least 86 percent of surveyed employers provided educational assistance.
@@ -130,7 +135,7 @@ education economics, section 127, educational assistance, gi bill, h-1b, debt cr
     In 2017, World at Work found that 85 percent of employers offered such a benefit,
     with another 7 percent offering non-reimbursement tuition assistance, such as upfront tuition discounts\cite{talentculture_2018}.
 
-    \subsection{H-1B, GI Bill, and Stafford Loan Connections}
+    \subsection{H-1B, Veteran Education Benefits, and Stafford Loan Interaction}
     The idea that graduate students mainly use employer education benefits motivates hypotheses around undergraduate access.
     Increasingly since the 1990s, developed economies have experienced degree inflation and experience inflation.
     Entry level positions now require a degree when previously this was not necessary, even when technology has made the work easier.
@@ -160,7 +165,7 @@ education economics, section 127, educational assistance, gi bill, h-1b, debt cr
     After 1980 we see an upward trend in price and also an upward trend in college-age enrollment percentage, as well as simple total enrollment.
 
     With an increase to the Stafford limit in the 1977 school year,
-    a major change to the GI Bill in the 1981 school year,
+    a major change to veteran education benefits in the 1981 school year,
     Section 127 beginning in the 1978 school year,
     and price changes in higher education and for all other goods,
     claims about a particular cause become dubious without full and corrective statistical treatment.
@@ -182,7 +187,7 @@ education economics, section 127, educational assistance, gi bill, h-1b, debt cr
     \end{equation}
 
     The Section 127 policy coefficient is the parameter of interest.
-    Three other policy variables are included for federal lending policy, GI Bill education benefits, and H-1 Visa policy.
+    Three other policy variables are included for federal lending policy, veteran education benefits, and H-1 Visa policy.
     In addition to the four policy variables, 
     enrollment is modelled as a function of time,
     and the price of tuition and fees.
@@ -217,14 +222,28 @@ education economics, section 127, educational assistance, gi bill, h-1b, debt cr
     This price information is presented in constant 2016 dollars.
     % https://nces.ed.gov/programs/digest/d17/tables/dt17_330.10.asp
 
-    PCE data is based on a series provided by the Federal Reserve.
-
-    % inflation adjustment by PCE over time
+    Personal Consumption Expenditures (PCE) data is a measure of inflation provided by the U.S. Bureau of Economic Analysis (BEA)\cite{bea_2020}.
     % https://fred.stlouisfed.org/series/PCE
 
-    Nominal Section 127 limits are a matter of public law (cite)
-
-    GI Bill major changes are based on law (cite)
+    Nominal Section 127 limits are a matter of public law.
+    Section 127 took effect beginning after December 31, 1978 with a nominal assistance limit of 5,000 dollars\cite{plaw95_600_1978}.
+    In October 1986, Pub. L. 99–514 increased the nominal assistance limit to 5,250 dollars\cite{plaw99_514_1986}.
+    
+    Changes to veteran education benefits are also a matter of public law.
+    A categorical variable is used to capture the state of veteran education benefits among five possible states over the period from 1970 to 2020.
+    The Servicemen's Readjustment Act of 1944,
+    also called the G.I. Bill,
+    is the first interesting case of veteran benefits,
+    but it precedes the period of interest for this study.
+    The original bill expired in 1956.
+    This expired state is the first state represented by the veteran education state parameter in the data set.
+    The Veterans Educational Assistance Program (VEAP) is established in 1981,
+    and a third period of interest begins in 1984 with the enactment of the Montgommery GI Bill.
+    The Post-9/11 Montgommery GI Bill went into effect for the 2009 school year,
+    creating a fourth distinct period of interest for veteran education benefits.
+    Finally, benefits from the Forever GI Bill became effective in 2018,
+    but this fifth state is too recent to be included in the period of interest.
+    This change in veteran education benefits is a critical caveat for any attempt at forecasting or prediction outside of the period of study.
 
     % GI Bill accounting https://en.wikipedia.org/wiki/G.I._Bill#Chapter_30_(Montgomery_GI_Bill)
     % Variable implemented as categorical
@@ -234,12 +253,13 @@ education economics, section 127, educational assistance, gi bill, h-1b, debt cr
     % [state D] Post-9/11 Montgomery GI Bill went into effect for 2009 school year https://www.thebalancecareers.com/gi-bill-for-the-21st-century-3347143
     % [state E] Forever GI bill rolls out new benefits starting in 2018 https://rebootcamp.militarytimes.com/education-transition/education/2017/08/16/trump-signed-the-forever-gi-bill-here-are-11-things-you-should-know/
 
+    Due to constraints on the availability of other data,
+    the period of analysis ranges from 1990 to 2016.
+    Veteran education benefits exhibit only one change during this period,
+    but this factor proves to be significant in the preferred model.
+
+    % TODO below
     and stafford (law cite)
-    
-    % Pub. L. 99–514, § 1162(a)(2), substituted “$5,250” for “$5,000” in heading and twice in text
-    % https://www.law.cornell.edu/rio/citation/Pub._L._99-514
-    % https://www.ucop.edu/research-policy-analysis-coordination/_files/Public%20Law%2099-514.pdf
-    % it moved 5000->5250 in 1986
 
     The real employer assistance limit values are my own calculations,
     based on the public nominal limits and corrected based on NPSAS tuition and fees rather than PCE.
