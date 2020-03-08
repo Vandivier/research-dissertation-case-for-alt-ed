@@ -112,7 +112,7 @@ reg totalen new1 new2 visaenroll pce exnew1 exnew2 exvisaenroll stategi3
 
 * // lastly, add robust flag
 * // all vars still significant, r2 still > .999
-* // this is the key / preferred regression with n = 27 over period 1990 - 2017
+* // this is the key / preferred regression with n = 27 over period 1990 - 2016
 * // as a tertiary interest, gi bill effect is negative on enrollment
 * // one interpretation might be it incentivized individual attendance of college later in time
 * // so within a bounded time frame it looks like a negative effect due to sample truncation

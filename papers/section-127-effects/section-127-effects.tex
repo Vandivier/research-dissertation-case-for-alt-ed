@@ -1,5 +1,6 @@
 % using Elseveir template per https://www.elsevier.com/authors/author-schemas/latex-instructions
 % model paper: Dynamic effects of teacher turnover on the quality of instruction (2016)
+%   Hanushek et al
 %   from Economics of Education Review
 
 % secondary model paper: The effects of economic policy and political uncertainties on economic activities
@@ -39,38 +40,43 @@
 \ead{jvandivi@masonlive.gmu.edu}
 
 \begin{abstract}
-    % It is widely believed that teacher turnover adversely affects the quality of instruction in urban schools serving predominantly disadvantaged children,
-    % and a growing body of research investigates various components of turnover effects.
-    % The evidence at first seems contradictory,
-    as the quality of instruction appears to decline following turnover despite the fact that most work shows higher attrition for less effective teachers.
-    This raises concerns that confounding factors bias estimates of transition differences in teacher effectiveness,
-    the adverse effects of turnover or both.
-    % After taking more extensive steps to account for nonrandom sorting of students into classrooms and endogenous teacher exits and grade-switching,
-    % we replicate existing findings of adverse selection out of schools and negative effects of turnover in lower-achievement schools.
-    But we find that these turnover effects can be fully accounted for by the resulting loss in experience and productivity loss following the reallocation of some incumbent teachers to different grades.
-
+    % role model abstract based on Hanushek et al (2016)
+    % model length = 151 words
+    % this abstract length = 165 words
+    % ---
     It is widely believed that employer educational assistance increases the quantity demanded for higher education,
     but the original passage of Section 127 which enables this tax-deduction for employers is associated with a reduction to the growth of higher education enrollment,
-    and a simple regression of the assistance limit on total enrollment indicates a significant negative correlation.
-    % technically, `reg totalen emp' in my data set
-    Comparative supply-side and demand-side explanations are discussed and evaluated.
-    After taking extensive steps to account for policy and other changes in the economy,
-    real variation in employer educational assistance over time is exploited
-    to identify the effect of the employer assistance amount on higher education enrolment using Dynamic Ordinary Least Squares (DOLS).
-    We robustly identify a positive effect on enrollment from employer educational assistance.
-    In the preferred ordinary least squares regression,
+    and a simple regression of the assistance limit on total enrollment indicates a significant negative correlation. % technically, `reg totalen emp' in my data set
+    This raises concerns that confounding factors bias estimates of the effectiveness of Section 127 assistance.
+    After taking extensive steps to account for policy effects and other dynamic economic factors,
+    I robustly identify a positive effect on enrollment from employer educational assistance
+    by exploiting real variation in employer educational assistance over the 27-year period from 1990 to 2016.
+    Results are validating using panel vector autoregression (PVAR),
+    dynamic least squares (DOLS) methods,
+    and instrumental variable (IV) approaches.
+    In the preferred model,
     an increase in tax-deductable employer educational assistance
     in the amount of one dollar is associated with
     an increase of about 600 to national total enrollment in institutions of higher education.
-    % mention vector autoregression
-    However X
-    Therefore Y
 
     % Highlights
     % 1. Section 127 Employer Assistance
     % 2. 
     % 3. 
     % 4. 
+
+    % alternate role model abstract based on Gholipour
+    % model length = 129 words
+    % this abstract length = ?? words
+    % ---
+    This paper explores the dynamic effects of Section 127, GI Bill, Stafford loan, and H-1 Visa policy
+    on total enrollment in the United States
+    using annual data from degree-granting institutions in the United States during the 27-year period from 1990 to 2016.
+    By applying panel vector autoregression (PVAR) and dynamic least squares (DOLS) methods,
+    % the results show that a positive shock to EPU triggers a negative response from BFI, RE, FIN and PAT in the short-run.
+    % In addition, I find that higher levels of EPU significantly decrease BFI, RE and FIN in the long-run.
+    % The findings also suggest that BFI, RE and PAT respond positively to a shock in PS in the short-run and there is a positive,
+    % long-run relationship between PS, RE and FIN.
     
     % degree requirement as a strategy to import cheap, effective foreign labor (VISA)
     % this prevents high school graduates from directly entering roles that typically award section 127 (white color, major employer, corporate work)
@@ -168,7 +174,7 @@ education economics, section 127, educational assistance, gi bill, h-1b, debt cr
     % \section{Teacher transitions and productivity}
     \section{Empirical Model}
 
-    Equation \ref{eq1} is an ordinary least squares model of total enrollment for all accredited institutions of higher education in the United States.
+    Equation \ref{eq1} is an ordinary least squares model of total enrollment higher education in the United States.
 
     \begin{equation}
         Y = \beta_1X_1+\beta_2X_2...+\beta_kX_k+e
@@ -190,15 +196,26 @@ education economics, section 127, educational assistance, gi bill, h-1b, debt cr
     % \section{Texas Schools Project data}
     \section{Data}
 
-    Information on the average undergraduate tuition and fees for full-time students in all degree-granting postsecondary institutions
-    is provided in constant 2016 dollars by NPSAS:19
+    Information on total enrollment for all degree-granting postsecondary institutions in the United States
+    is provided by the National Center for Education Statistics (NCES)\cite{nces_2019}.
+    Enrollment figures are for the fall semester of the school year.
+    Information on selected years from 1947 to 2028 is provided, where values for 2018 and later are projected.
+    The present study does not use any of the projected values.
+    Other data sources and policy considerations constrain the period of interest to the 27-year period from 1990 to 2016.    
+    % total enrollment: https://nces.ed.gov/programs/digest/d18/tables/dt18_303.10.asp
 
-    % NPSAS:19
-    % Average undergraduate tuition and fees
-    % for full-time students in all degree-granting postsecondary institutions,
-    % by level and control of institution: Selected years, 1970-2016 [school year beginning 2016]
+    % Percentage of 18- to 24-year-olds enrolled in college,
+    % by level of institution and sex and race/ethnicity of student: 1970 through 2017
+    % https://nces.ed.gov/programs/digest/d18/tables/dt18_302.60.asp
+
+    % college more diverse than ever https://www.aacu.org/aacu-news/newsletter/2019/march/facts-figures
+    % more poor folks entering college https://www.insidehighered.com/news/2019/05/23/pew-study-finds-more-poor-students-attending-college
+    % but can we do even better...? and not saddle them with debt? are these folks more in debt (higher debt load by status)...?
+
+    Information on the average undergraduate tuition and fees for full-time students in all degree-granting postsecondary institutions
+    is also provided by NCES\cite{nces_2017}.
+    This price information is presented in constant 2016 dollars.
     % https://nces.ed.gov/programs/digest/d17/tables/dt17_330.10.asp
-    % Constant 2016 dollars
 
     PCE data is based on a series provided by the Federal Reserve.
 
@@ -230,8 +247,7 @@ education economics, section 127, educational assistance, gi bill, h-1b, debt cr
     and I also included PCE as an independent variable. In neither case did PCE present as a significant factor.
     % 2016 is base year for corrected real deduction limit
 
-    % TODO: discuss loan and enrollment data
-    % total enrollment: https://nces.ed.gov/programs/digest/d18/tables/dt18_303.10.asp
+    % TODO: discuss loan data
     % what about student loans? here are the limits over time: https://www.finaid.org/loans/historicallimits.phtml
     % actual undergrad loans awarded since 1990 in the excel at https://research.collegeboard.org/trends/student-aid
     % My variable `Total UG Federal Loans` adapted from CB xlsx worksheet `Table 2_UG`
@@ -301,14 +317,6 @@ education economics, section 127, educational assistance, gi bill, h-1b, debt cr
     
     % https://www.nber.org/papers/w9225.pdf 
     % https://www.nber.org/digest/feb03/w9225.html
-
-    % Percentage of 18- to 24-year-olds enrolled in college,
-    % by level of institution and sex and race/ethnicity of student: 1970 through 2017
-    % https://nces.ed.gov/programs/digest/d18/tables/dt18_302.60.asp
-
-    % college more diverse than ever https://www.aacu.org/aacu-news/newsletter/2019/march/facts-figures
-    % more poor folks entering college https://www.insidehighered.com/news/2019/05/23/pew-study-finds-more-poor-students-attending-college
-    % but can we do even better...? and not saddle them with debt? are these folks more in debt (higher debt load by status)...?
 
     \bibliography{./BibFile}
     
