@@ -12,6 +12,8 @@ gen tuition = averagetuition
 gen pce = annualaveragepce
 
 gen empassist = realassistancelimitallinstitut
+gen em2 = empassist*empassist
+gen em3 = empassist*empassist*empassist
 gen exnew1 = empassist*new1
 gen exnew2 = empassist*new2
 gen exnew3 = empassist*new3

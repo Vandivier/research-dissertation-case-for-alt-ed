@@ -1,6 +1,10 @@
 % using Elseveir template per https://www.elsevier.com/authors/author-schemas/latex-instructions
 % model paper: Dynamic effects of teacher turnover on the quality of instruction (2016)
 %   from Economics of Education Review
+
+% secondary model paper: The effects of economic policy and political uncertainties on economic activities
+% Gholipour, 2019
+% https://www.sciencedirect.com/science/article/pii/S0275531918306081
 \documentclass[review]{elsarticle}
 
 \usepackage{lineno,hyperref}
@@ -34,8 +38,6 @@
 \address[mymainaddress]{4400 University Dr, Fairfax, VA 22030}
 \ead{jvandivi@masonlive.gmu.edu}
 
-
-
 \begin{abstract}
     % It is widely believed that teacher turnover adversely affects the quality of instruction in urban schools serving predominantly disadvantaged children,
     % and a growing body of research investigates various components of turnover effects.
@@ -48,13 +50,19 @@
     But we find that these turnover effects can be fully accounted for by the resulting loss in experience and productivity loss following the reallocation of some incumbent teachers to different grades.
 
     It is widely believed that employer educational assistance increases the quantity demanded for higher education,
-    but the original passage of Section 127 which enables this tax-deduction for employers is associated with a reduction to the growth of higher education enrollment.
+    but the original passage of Section 127 which enables this tax-deduction for employers is associated with a reduction to the growth of higher education enrollment,
+    and a simple regression of the assistance limit on total enrollment indicates a significant negative correlation.
+    % technically, `reg totalen emp' in my data set
     Comparative supply-side and demand-side explanations are discussed and evaluated.
     After taking extensive steps to account for policy and other changes in the economy,
     real variation in employer educational assistance over time is exploited
     to identify the effect of the employer assistance amount on higher education enrolment using Dynamic Ordinary Least Squares (DOLS).
     We robustly identify a positive effect on enrollment from employer educational assistance.
-    % what is the coefficient? mention vector autoregression too
+    In the preferred ordinary least squares regression,
+    an increase in tax-deductable employer educational assistance
+    in the amount of one dollar is associated with
+    an increase of about 600 to national total enrollment in institutions of higher education.
+    % mention vector autoregression
     However X
     Therefore Y
 
@@ -157,118 +165,152 @@ education economics, section 127, educational assistance, gi bill, h-1b, debt cr
     The main contribution of this line of thought to a more general analysis is that corrective statistics should include price data
     for education in particular, and also for the general economy.
 
+    % \section{Teacher transitions and productivity}
+    \section{Empirical Model}
+
+    Equation \ref{eq1} is an ordinary least squares model of total enrollment for all accredited institutions of higher education in the United States.
+
+    \begin{equation}
+        Y = \beta_1X_1+\beta_2X_2...+\beta_kX_k+e
+        \label{eq1}
+    \end{equation}
+
+    The Section 127 policy coefficient is the parameter of interest.
+    Three other policy variables are included for federal lending policy, GI Bill education benefits, and H-1 Visa policy.
+    In addition to the four policy variables, 
+    enrollment is modelled as a function of time,
+    and the price of tuition and fees.
+    A variable for personal consumption expenditures (PCE) as an measure of inflation is also included.
+
+    For robustness and analytical completeness, I test two other left hand variables using ordinary least squares,
+    then I also test the relation of interest with two other modelling approaches.
+    Specifically, I explore vector autoregressive (VAR) models
+    and an instrumental variable regression following the Anderson–Hsiao pattern\cite{anderson1981estimation} with the lagged variable of interest as an instrument.
+
     % \section{Texas Schools Project data}
     \section{Data}
 
-    % \section{Teacher transitions and productivity}
-    \section{Empirical Model}
+    Information on the average undergraduate tuition and fees for full-time students in all degree-granting postsecondary institutions
+    is provided in constant 2016 dollars by NPSAS:19
+
+    % NPSAS:19
+    % Average undergraduate tuition and fees
+    % for full-time students in all degree-granting postsecondary institutions,
+    % by level and control of institution: Selected years, 1970-2016 [school year beginning 2016]
+    % https://nces.ed.gov/programs/digest/d17/tables/dt17_330.10.asp
+    % Constant 2016 dollars
+
+    PCE data is based on a series provided by the Federal Reserve.
+
+    % inflation adjustment by PCE over time
+    % https://fred.stlouisfed.org/series/PCE
+
+    Nominal Section 127 limits are a matter of public law (cite)
+
+    GI Bill major changes are based on law (cite)
+
+    % GI Bill accounting https://en.wikipedia.org/wiki/G.I._Bill#Chapter_30_(Montgomery_GI_Bill)
+    % Variable implemented as categorical
+    % [state A] original bill was 1944-1984
+    % [state B] VEAP established 1981 https://www.benefits.va.gov/gibill/veap.asp
+    % [state C] Montgommery GI went into effect 1984
+    % [state D] Post-9/11 Montgomery GI Bill went into effect for 2009 school year https://www.thebalancecareers.com/gi-bill-for-the-21st-century-3347143
+    % [state E] Forever GI bill rolls out new benefits starting in 2018 https://rebootcamp.militarytimes.com/education-transition/education/2017/08/16/trump-signed-the-forever-gi-bill-here-are-11-things-you-should-know/
+
+    and stafford (law cite)
+    
+    % Pub. L. 99–514, § 1162(a)(2), substituted “$5,250” for “$5,000” in heading and twice in text
+    % https://www.law.cornell.edu/rio/citation/Pub._L._99-514
+    % https://www.ucop.edu/research-policy-analysis-coordination/_files/Public%20Law%2099-514.pdf
+    % it moved 5000->5250 in 1986
+
+    The real employer assistance limit values are my own calculations,
+    based on the public nominal limits and corrected based on NPSAS tuition and fees rather than PCE.
+    Because this could present a deviation from the general price level, I also tested adjusting the employer assistance limit based on PCE,
+    and I also included PCE as an independent variable. In neither case did PCE present as a significant factor.
+    % 2016 is base year for corrected real deduction limit
+
+    % TODO: discuss loan and enrollment data
+    % total enrollment: https://nces.ed.gov/programs/digest/d18/tables/dt18_303.10.asp
+    % what about student loans? here are the limits over time: https://www.finaid.org/loans/historicallimits.phtml
+    % actual undergrad loans awarded since 1990 in the excel at https://research.collegeboard.org/trends/student-aid
+    % My variable `Total UG Federal Loans` adapted from CB xlsx worksheet `Table 2_UG`
+    % but i don't think we should use actuals there bc that would explain away demand effects...we want to preserve those (do a better job explaining this plz)
+    % so, prefer the limits over time...those are attributed to the school year, so rules beginning July 1993 are true for 1993 (start of school year)
+    % eg dummy for "limit is subsidized plus unsubsidized" begins to be true for 1993 in my csv
 
     % \section{Aggregate disruption}
     \section{Aggregate Results}
 
+    1. > .995 adjusted r2 for preferred ols model
+    2. empassist has positive coefficient in the range of 150-850; preferred measure around 600
+    3. visa effects are complex and important, but signing the effect is sensitive to specification
+    4. stafford and gi bill effects are also significant in the prefered model.
+
     % \section{Reconciling selection and turnover effects in low-achievement schools}
     % \section{Reconciling selection and turnover effects in low-achievement schools}
+    
+    % \begin{table}
+    %     \caption{Medium and Strong Models, Selected Variables}
+    %     \begin{tabular}{lllll}
+    %     Factor & 2018 Medium & 2018 Strong & 2019 Medium & 2019 Strong \\
+    %     \toprule
+    %     Male &  &  & -2.458* & -0.422** \\
+    %     Not STEM & -1.269* \\
+    %     X$_0$ & 1105.125 & .106 & -12345.347* & 3.289*** \\
+    %     \bottomrule
+    %     R-Squared & .597 & .504 & .526 & .319 %
+    
+    %     \end{tabular}
+    %     \begin{tablenotes}
+    %         \item{
+    %             * p $<$ .05
+    %             ** p $<$ .01
+    %             *** p $<$ .001
+    %         }
+    %     \end{tablenotes}
+    %     \label{tab:models}
+    %     \end{table}
+    
+    % \begin{figure}[h!]
+    %     \centering
+    %     \caption{Employer Driven Favorability}
+    
+    %     \begin{tikzpicture}[element/.style={minimum width=1cm, minimum height=0.75cm}]
+    
+    %     \node (n1) [above=0.25cm] {\includegraphics[width=0.5\textwidth]{../alt-ed-survey/figures-and-tables/figure-4.png}};
+    %     \node (n2) [above=0.25cm] at ($(n1)!0.5!(n1) - (4, 1)$) {\rotatebox{90}{\textbf{Suitability}}};
+    %     \node (n3) [above=0.25cm] at ($(n1)!0.5!(n1) - (0, 3)$) {\textbf{Time}};
+    
+    %     \end{tikzpicture}
+
+    %     \label{fig:employer_driven_favorability}
+    %     \end{figure}
 
     \section{Conclusions}
 
-        % maybe talk about stress and debt for why debt is important
+    % maybe talk about stress and debt for why debt is important
+    % important to look at wages not income (which would include investments, etc, see shrm's discussion: http://www.cpepea.com/wp-content/uploads/2017/05/10-0418-Coalition-Report-on-Public-Policy-Issue-E-P-E-A_FNL.pdf)
+    % SHRM assessed only a single year, 2008. Shows Section 127 is mostly a Master's degree tool rn.
+    % 75 percentile for salaries in 2017 was 54250 https://bizfluent.com/info-10032733-percentile-salary.html
+    % define middle class as 50-75 percentile, lower class as under 50 percentile. break down effect by salary classification and see if it helps lower/middle
+    % if so, it should improve diversity of education leading to a more diverse workforce which employers crave (TM) and politicians, etc...
+    % Should we actually enact this policy? Effect on alternative credentials and credential inflation
+    % Other options like extending the benefit to repayment https://blog.shrm.org/blog/let-s-fight-the-skills-gap-by-expanding-tax-free-education-assistance
+    % we can also consider extending the education benefit to unaccredited education and income share agreements not just loans
+    
+    % https://www.nber.org/papers/w9225.pdf 
+    % https://www.nber.org/digest/feb03/w9225.html
 
-        % NPSAS:19
-        % Average undergraduate tuition and fees
-        % for full-time students in all degree-granting postsecondary institutions,
-        % by level and control of institution: Selected years, 1970-2016 [school year beginning 2016]
-        % https://nces.ed.gov/programs/digest/d17/tables/dt17_330.10.asp
-        % Constant 2016 dollars
+    % Percentage of 18- to 24-year-olds enrolled in college,
+    % by level of institution and sex and race/ethnicity of student: 1970 through 2017
+    % https://nces.ed.gov/programs/digest/d18/tables/dt18_302.60.asp
 
-        % inflation adjustment by PCE over time
-        % https://fred.stlouisfed.org/series/PCE
+    % college more diverse than ever https://www.aacu.org/aacu-news/newsletter/2019/march/facts-figures
+    % more poor folks entering college https://www.insidehighered.com/news/2019/05/23/pew-study-finds-more-poor-students-attending-college
+    % but can we do even better...? and not saddle them with debt? are these folks more in debt (higher debt load by status)...?
 
-        % 2016 is base year for corrected real deduction limit
-
-        % Percentage of 18- to 24-year-olds enrolled in college,
-        % by level of institution and sex and race/ethnicity of student: 1970 through 2017
-        % https://nces.ed.gov/programs/digest/d18/tables/dt18_302.60.asp
-
-        % college more diverse than ever https://www.aacu.org/aacu-news/newsletter/2019/march/facts-figures
-        % more poor folks entering college https://www.insidehighered.com/news/2019/05/23/pew-study-finds-more-poor-students-attending-college
-        % but can we do even better...? and not saddle them with debt? are these folks more in debt (higher debt load by status)...?
-        
-        % total enrollment: https://nces.ed.gov/programs/digest/d18/tables/dt18_303.10.asp
-
-        % what about student loans? here are the limits over time: https://www.finaid.org/loans/historicallimits.phtml
-        % actual undergrad loans awarded since 1990 in the excel at https://research.collegeboard.org/trends/student-aid
-        % My variable `Total UG Federal Loans` adapted from CB xlsx worksheet `Table 2_UG`
-        % but i don't think we should use actuals there bc that would explain away demand effects...we want to preserve those (do a better job explaining this plz)
-        % so, prefer the limits over time...those are attributed to the school year, so rules beginning July 1993 are true for 1993 (start of school year)
-        % eg dummy for "limit is subsidized plus unsubsidized" begins to be true for 1993 in my csv
-        %
-        % GI Bill accounting https://en.wikipedia.org/wiki/G.I._Bill#Chapter_30_(Montgomery_GI_Bill)
-        % Variable implemented as categorical
-        % [state A] original bill was 1944-1984
-        % [state B] VEAP established 1981 https://www.benefits.va.gov/gibill/veap.asp
-        % [state C] Montgommery GI went into effect 1984
-        % [state D] Post-9/11 Montgomery GI Bill went into effect for 2009 school year https://www.thebalancecareers.com/gi-bill-for-the-21st-century-3347143
-        % [state E] Forever GI bill rolls out new benefits starting in 2018 https://rebootcamp.militarytimes.com/education-transition/education/2017/08/16/trump-signed-the-forever-gi-bill-here-are-11-things-you-should-know/
-
-        \section{Results}
-        
-        % \begin{table}
-        %     \caption{Medium and Strong Models, Selected Variables}
-        %     \begin{tabular}{lllll}
-        %     Factor & 2018 Medium & 2018 Strong & 2019 Medium & 2019 Strong \\
-        %     \toprule
-        %     Male &  &  & -2.458* & -0.422** \\
-        %     Not STEM & -1.269* \\
-        %     X$_0$ & 1105.125 & .106 & -12345.347* & 3.289*** \\
-        %     \bottomrule
-        %     R-Squared & .597 & .504 & .526 & .319 %
-        
-        %     \end{tabular}
-        %     \begin{tablenotes}
-        %         \item{
-        %             * p $<$ .05
-        %             ** p $<$ .01
-        %             *** p $<$ .001
-        %         }
-        %     \end{tablenotes}
-        %     \label{tab:models}
-        %     \end{table}
-        
-        % \begin{figure}[h!]
-        %     \centering
-        %     \caption{Employer Driven Favorability}
-        
-        %     \begin{tikzpicture}[element/.style={minimum width=1cm, minimum height=0.75cm}]
-        
-        %     \node (n1) [above=0.25cm] {\includegraphics[width=0.5\textwidth]{../alt-ed-survey/figures-and-tables/figure-4.png}};
-        %     \node (n2) [above=0.25cm] at ($(n1)!0.5!(n1) - (4, 1)$) {\rotatebox{90}{\textbf{Suitability}}};
-        %     \node (n3) [above=0.25cm] at ($(n1)!0.5!(n1) - (0, 3)$) {\textbf{Time}};
-        
-        %     \end{tikzpicture}
-
-        %     \label{fig:employer_driven_favorability}
-        %     \end{figure}
-
-        \section{Conclusions}
-        
-        % Pub. L. 99–514, § 1162(a)(2), substituted “$5,250” for “$5,000” in heading and twice in text
-        % https://www.law.cornell.edu/rio/citation/Pub._L._99-514
-        % https://www.ucop.edu/research-policy-analysis-coordination/_files/Public%20Law%2099-514.pdf
-        % it moved 5000->5250 in 1986
-        % can we see effect on median-and-below vs above?
-        % important to look at wages not income (which would include investments, etc, see shrm's discussion: http://www.cpepea.com/wp-content/uploads/2017/05/10-0418-Coalition-Report-on-Public-Policy-Issue-E-P-E-A_FNL.pdf)
-        % SHRM assessed only a single year, 2008. Shows Section 127 is mostly a Master's degree tool rn.
-        % 75 percentile for salaries in 2017 was 54250 https://bizfluent.com/info-10032733-percentile-salary.html
-        % define middle class as 50-75 percentile, lower class as under 50 percentile. break down effect by salary classification and see if it helps lower/middle
-        % if so, it should improve diversity of education leading to a more diverse workforce which employers crave (TM) and politicians, etc...
-        % Should we actually enact this policy? Effect on alternative credentials and credential inflation
-        % Other options like extending the benefit to repayment https://blog.shrm.org/blog/let-s-fight-the-skills-gap-by-expanding-tax-free-education-assistance
-        % we can also consider extending the education benefit to unaccredited education and income share agreements not just loans
-        
-        % https://www.nber.org/papers/w9225.pdf 
-        % https://www.nber.org/digest/feb03/w9225.html
-
-        \bibliography{./BibFile}
-        
-        \end{document}
+    \bibliography{./BibFile}
+    
+    \end{document}
         
