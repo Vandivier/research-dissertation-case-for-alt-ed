@@ -235,22 +235,21 @@ education economics, section 127, educational assistance, veteran education, h-1
     also called the G.I. Bill,
     is the first interesting case of veteran benefits,
     but it precedes the period of interest for this study.
-    The original bill expired in 1956.
-    This expired state is the first state represented by the veteran education state parameter in the data set.
-    The Veterans Educational Assistance Program (VEAP) is established in 1981,
-    and a third period of interest begins in 1984 with the enactment of the Montgommery GI Bill.
-    The Post-9/11 Montgommery GI Bill went into effect for the 2009 school year,
-    creating a fourth distinct period of interest for veteran education benefits.
-    Finally, benefits from the Forever GI Bill became effective in 2018,
-    but this fifth state is too recent to be included in the period of interest.
-    This change in veteran education benefits is a critical caveat for any attempt at forecasting or prediction outside of the period of study.
-
+    The original bill expired in 1956\cite{glass_2010}.
+    This expired state is the first state represented by the veteran education state variable.
+    The Veterans Educational Assistance Program (VEAP) was established in 1981\cite{veteransaffairs_2017}.
+    A third period of interest begins in 1984 with the enactment of the Montgomery GI Bill\cite{powers_2018}.
+    A fourth period of interest begins in 2009 with the Post-9/11 GI Bill.
+    Finally, many benefits from the Forever GI Bill became effective in 2018,
+    with additional provisions taking effect in 2020 and 2022\cite{veteransaffairs_2020}.
+    but this fifth policy state is too recent to be included in the period of interest.
+    The recent changes in veteran education benefits are a critical caveat for any attempt at forecasting or prediction outside of the period of study.
     % GI Bill accounting https://en.wikipedia.org/wiki/G.I._Bill#Chapter_30_(Montgomery_GI_Bill)
     % Variable implemented as categorical
     % [state A] original bill was 1944-1984
     % [state B] VEAP established 1981 https://www.benefits.va.gov/gibill/veap.asp
     % [state C] Montgommery GI went into effect 1984
-    % [state D] Post-9/11 Montgomery GI Bill went into effect for 2009 school year https://www.thebalancecareers.com/gi-bill-for-the-21st-century-3347143
+    % [state D] Post-9/11 GI Bill went into effect for 2009 school year https://www.thebalancecareers.com/gi-bill-for-the-21st-century-3347143
     % [state E] Forever GI bill rolls out new benefits starting in 2018 https://rebootcamp.militarytimes.com/education-transition/education/2017/08/16/trump-signed-the-forever-gi-bill-here-are-11-things-you-should-know/
 
     Due to constraints on the availability of other data,
@@ -258,17 +257,27 @@ education economics, section 127, educational assistance, veteran education, h-1
     Veteran education benefits exhibit only one change during this period,
     but this factor proves to be significant in the preferred model.
 
-    % TODO below
-    and stafford (law cite)
+    Stafford loan data is another key component of the analysis.
+    Stafford loan data is directly relevant by itself,
+    but it is further intended a proxy for broader non-military federal student aid policy.
+    There are two variables for Stafford loans.
+    The first is the nominal loan limit for undergraduates.
+    The second is a dummy variable indicating whether the undergraduate loan limit
+    is the combined limit for undergraduate and graduate loans.
+    A policy change became effective in 1993 which grouped these limits together.
+    Stafford loan data is sourced from FinAid\cite{finaid_2020}.
+    % TODO: should I dive into an explanation for focus on undergraduate education?
 
+    % TODO: real employer assistance limit
     The real employer assistance limit values are my own calculations,
     based on the public nominal limits and corrected based on NPSAS tuition and fees rather than PCE.
     Because this could present a deviation from the general price level, I also tested adjusting the employer assistance limit based on PCE,
     and I also included PCE as an independent variable. In neither case did PCE present as a significant factor.
     % 2016 is base year for corrected real deduction limit
 
+    % TODO: Visa data
     % TODO: discuss loan data
-    % what about student loans? here are the limits over time: https://www.finaid.org/loans/historicallimits.phtml
+    
     % actual undergrad loans awarded since 1990 in the excel at https://research.collegeboard.org/trends/student-aid
     % My variable `Total UG Federal Loans` adapted from CB xlsx worksheet `Table 2_UG`
     % but i don't think we should use actuals there bc that would explain away demand effects...we want to preserve those (do a better job explaining this plz)
