@@ -181,7 +181,7 @@ education economics, section 127, educational assistance, veteran education, h-1
         \label{eq1}
     \end{equation}
 
-    The Section 127 policy coefficient is the parameter of interest.
+    The Section 127 policy effect is the variable of interest.
     Three other policy variables are included for federal lending policy, veteran education benefits, and H-1 Visa policy.
     In addition to the four policy variables, 
     enrollment is modelled as a function of time,
@@ -288,14 +288,44 @@ education economics, section 127, educational assistance, veteran education, h-1
     % more state variable food https://redbus2us.com/h1b-visa-total-cap-history-from-1990-to-current-year/
     % 1952 allows unlimited merit immigration, 1990 there is a quota and degree requirement added to H-1B: https://en.wikipedia.org/wiki/H-1B_visa#Immigration_Act_of_1990
     % A crackdown in 2017: https://www.investopedia.com/news/impact-trumps-h1b-visa-crackdown-5-charts/
+    % other policies for policy state analysis:
+    %   https://en.wikipedia.org/wiki/Legal_Immigration_Family_Equity_Act#V_visa
+    %   not sure it's relevant - https://en.wikipedia.org/wiki/Immigration_Reform_and_Control_Act_of_1986
+    %   https://en.wikipedia.org/wiki/H-1B_Visa_Reform_Act_of_2004
+    %   1986 we get h-2a and h-2b https://www.uscis.gov/ilink/docView/AFM/HTML/AFM/0-0-0-1/0-0-0-13593/0-0-0-13614.html
+    %   more 1986 context https://www.vox.com/2014/9/3/18080710/immigration-immigrants-reform-us
+    %   various visa info https://uk.usembassy.gov/visas/temporary-employment/petition-based-visas/
+    % 
+    % Open SE questions looking for more data:
+    % 1) https://politics.stackexchange.com/questions/52279/us-pre-1987-visa-issue-data
+    % 2)
+    % 
+    % Open Tweet looking for more data:
+    % https://twitter.com/JohnVandivier/status/1243975718649974786
+    % apparantly official response via twitter...cite if you dare: https://twitter.com/TravelGov/status/1243985245382283266
+    % they daring me: https://academia.stackexchange.com/questions/119549/can-a-tweet-be-added-to-graduate-research-proposal
+    % "with the caveat of ambiguous language,
+    %   the State Department appears to confirm tha pre-1987 data is currently digitally unavailable,
+    %   and perhaps permentantly unrecorded even offline."
 
-    Loan data is the last key element of the analysis.
-    % TODO: why do we are about loan data? discuss    
+    The last data source of interest is on actual federal loans.
+    Actual federal loans stand in contrast to loan limits which are represented by the Stafford loan limit variable.
+    Loan limits are a policy choice, but after correcting for loan limits the actuals primarily represent a demand effect.
+    As such, we would not want to correct for actual loans.
+    That would wipe out the effect of interest,
+    which is the demand effect attributable to various policies,
+    and Section 127 employer educational assistance in particular.
+
+    Instead, loan data is taken as a left hand variable of secondary interest.
+    Section 127 is taken as a right hand variable in that brief investigation.
+    This allows us to briefly review the relationship between Section 127 employer assistance
+    and the student debt crisis, a potentially related topic of importance.
+    The variable I use in this regard is total federal undergraduate loans,
+    which is extracted from a worksheet labeled "Table 2_UG" in a data set provided by College Board\cite{cb_excel_2019}.
+    Given additional context provided by The College Board in a related report\cite{cb_trends_2019},
+    it is plausible that a seperate analysis which decomposes decomposing aggregate total federal loans by type of loan may yield marginal statistical improvement.
     % actual undergrad loans awarded since 1990 in the excel at https://research.collegeboard.org/trends/student-aid
     % My variable `Total UG Federal Loans` adapted from CB xlsx worksheet `Table 2_UG`
-    % but i don't think we should use actuals there bc that would explain away demand effects...we want to preserve those (do a better job explaining this plz)
-    % so, prefer the limits over time...those are attributed to the school year, so rules beginning July 1993 are true for 1993 (start of school year)
-    % eg dummy for "limit is subsidized plus unsubsidized" begins to be true for 1993 in my csv
 
     \section{Aggregate Results}
 
