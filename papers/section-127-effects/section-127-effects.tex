@@ -94,13 +94,9 @@ education economics, section 127, educational assistance, veteran education, h-1
     % degree requirement as a strategy to import cheap, effective foreign labor (VISA)
     % this prevents high school graduates from directly entering roles that typically award section 127 (white color, major employer, corporate work)
     % until recently, that is, with walmart, mcdonalds, starbucks giving section 127 i think even to part timers
-    % 1952 allows unlimited merit immigration, 1990 there is a quota and degree requirement added to H-1B: https://en.wikipedia.org/wiki/H-1B_visa#Immigration_Act_of_1990
-    % New and initial H-1B and H-1B1 visas issued by the U.S. Department of State through consular offices
-    % https://en.wikipedia.org/wiki/H-1B_visa#H-1B_visas_issued_per_year
-    % crackdown in 2017: https://www.investopedia.com/news/impact-trumps-h1b-visa-crackdown-5-charts/
     % Theory: After 1990, companies began requiring a 4 year degree so they could have an H-1B justification.
     % This caused more americans to pursue an undergraduate degree without section 127. we should see section 127 use decline after 1990.
-    % Recently, employers have begun giving the benefit anyway due to labor selection and internal ROI benefits
+    % Revisit in conclusion -> Recently, employers have begun giving the benefit anyway due to labor selection and internal ROI benefits
 
     Basic supply and demand theory indicate that a reduction in price is associated with an increase to the quantity demanded.
     In 1978, a bill was passed allowing employer educational assistance to be tax-deductable in the United States up to a nominal limit of 5,000 dollars.
@@ -176,7 +172,6 @@ education economics, section 127, educational assistance, veteran education, h-1
     The main contribution of this line of thought to a more general analysis is that corrective statistics should include price data
     for education in particular, and also for the general economy.
 
-    % \section{Teacher transitions and productivity}
     \section{Empirical Model}
 
     Equation \ref{eq1} is an ordinary least squares model of total enrollment higher education in the United States.
@@ -198,7 +193,6 @@ education economics, section 127, educational assistance, veteran education, h-1
     Specifically, I explore vector autoregressive (VAR) models
     and an instrumental variable regression following the Anderson–Hsiao pattern\cite{anderson1981estimation} with the lagged variable of interest as an instrument.
 
-    % \section{Texas Schools Project data}
     \section{Data}
 
     Information on total enrollment for all degree-granting postsecondary institutions in the United States
@@ -209,41 +203,43 @@ education economics, section 127, educational assistance, veteran education, h-1
     Other data sources and policy considerations constrain the period of interest to the 27-year period from 1990 to 2016.    
     % total enrollment: https://nces.ed.gov/programs/digest/d18/tables/dt18_303.10.asp
 
-    % Percentage of 18- to 24-year-olds enrolled in college,
-    % by level of institution and sex and race/ethnicity of student: 1970 through 2017
-    % https://nces.ed.gov/programs/digest/d18/tables/dt18_302.60.asp
-
-    % college more diverse than ever https://www.aacu.org/aacu-news/newsletter/2019/march/facts-figures
-    % more poor folks entering college https://www.insidehighered.com/news/2019/05/23/pew-study-finds-more-poor-students-attending-college
-    % but can we do even better...? and not saddle them with debt? are these folks more in debt (higher debt load by status)...?
-
-    Information on the average undergraduate tuition and fees for full-time students in all degree-granting postsecondary institutions
-    is also provided by NCES\cite{nces_2017}.
-    This price information is presented in constant 2016 dollars.
-    % https://nces.ed.gov/programs/digest/d17/tables/dt17_330.10.asp
-
     Personal Consumption Expenditures (PCE) data is a measure of inflation provided by the U.S. Bureau of Economic Analysis (BEA)\cite{bea_2020}.
+    Education-specific inflation is also calculated using NCES data\cite{nces_2017}.
+    NCES data is the nominal average tuition and required fees for full-time undergraduate students across all degree-granting postsecondary institutions.
+    The price of room and board is ignored.
     % https://fred.stlouisfed.org/series/PCE
+    % https://nces.ed.gov/programs/digest/d17/tables/dt17_330.10.asp
 
     Nominal Section 127 limits are a matter of public law.
     Section 127 took effect beginning after December 31, 1978 with a nominal assistance limit of 5,000 dollars\cite{plaw95_600_1978}.
     In October 1986, Pub. L. 99–514 increased the nominal assistance limit to 5,250 dollars\cite{plaw99_514_1986}.
+    Real Section 127 employer assistance limits are calculated two ways.
+    One variable is constructed for each measure of inflation.
+    Price deflators for each measure of inflation use 2016 as a base year.
     
+    % begin discuss veteran benefits data
     Changes to veteran education benefits are also a matter of public law.
     A categorical variable is used to capture the state of veteran education benefits among five possible states over the period from 1970 to 2020.
     The Servicemen's Readjustment Act of 1944,
     also called the G.I. Bill,
     is the first interesting case of veteran benefits,
     but it precedes the period of interest for this study.
+
     The original bill expired in 1956\cite{glass_2010}.
     This expired state is the first state represented by the veteran education state variable.
     The Veterans Educational Assistance Program (VEAP) was established in 1981\cite{veteransaffairs_2017}.
     A third period of interest begins in 1984 with the enactment of the Montgomery GI Bill\cite{powers_2018}.
     A fourth period of interest begins in 2009 with the Post-9/11 GI Bill.
+
     Finally, many benefits from the Forever GI Bill became effective in 2018,
     with additional provisions taking effect in 2020 and 2022\cite{veteransaffairs_2020}.
-    but this fifth policy state is too recent to be included in the period of interest.
+    This fifth policy state is too recent to be included in the period of interest.
     The recent changes in veteran education benefits are a critical caveat for any attempt at forecasting or prediction outside of the period of study.
+
+    Due to constraints on the availability of other right hand variable data,
+    the main period of regression analysis ranges from 1990 to 2016.
+    Veteran education benefits exhibit only one change during this period,
+    but this factor proves to be significant in the preferred model.
     % GI Bill accounting https://en.wikipedia.org/wiki/G.I._Bill#Chapter_30_(Montgomery_GI_Bill)
     % Variable implemented as categorical
     % [state A] original bill was 1944-1984
@@ -251,11 +247,8 @@ education economics, section 127, educational assistance, veteran education, h-1
     % [state C] Montgommery GI went into effect 1984
     % [state D] Post-9/11 GI Bill went into effect for 2009 school year https://www.thebalancecareers.com/gi-bill-for-the-21st-century-3347143
     % [state E] Forever GI bill rolls out new benefits starting in 2018 https://rebootcamp.militarytimes.com/education-transition/education/2017/08/16/trump-signed-the-forever-gi-bill-here-are-11-things-you-should-know/
-
-    Due to constraints on the availability of other data,
-    the period of analysis ranges from 1990 to 2016.
-    Veteran education benefits exhibit only one change during this period,
-    but this factor proves to be significant in the preferred model.
+    %
+    % end discuss veteran benefits data
 
     Stafford loan data is another key component of the analysis.
     Stafford loan data is directly relevant by itself,
@@ -266,25 +259,44 @@ education economics, section 127, educational assistance, veteran education, h-1
     is the combined limit for undergraduate and graduate loans.
     A policy change became effective in 1993 which grouped these limits together.
     Stafford loan data is sourced from FinAid\cite{finaid_2020}.
-    % TODO: should I dive into an explanation for focus on undergraduate education?
+    % TODO: should I dive into an explanation for focus on undergraduate education? not doing for now.
 
-    % TODO: real employer assistance limit
-    The real employer assistance limit values are my own calculations,
-    based on the public nominal limits and corrected based on NPSAS tuition and fees rather than PCE.
-    Because this could present a deviation from the general price level, I also tested adjusting the employer assistance limit based on PCE,
-    and I also included PCE as an independent variable. In neither case did PCE present as a significant factor.
-    % 2016 is base year for corrected real deduction limit
+    Visa policy is a complex issue.
+    Annual H-1B visa award is an important and simple variable used for the purposes of this study.
+    The Immigration Act of 1990 decomposed the existing H-1 visa into distinct H-1A and H-1B categories.
+    Over time, H-1B1 and H-1C classifications were established,
+    and many other important but less relevant classifications outside of the H-1 family exist as well.
+    The H-1B visa is most relevant for this study because it specifically relates to the undergraduate degree.
+    The Immigration Act of 1990 makes available the H-1B classification for specialized workers,
+    or workers in a specialty occupation.
+    A specialty occupation is formally defined as "an occupation that requires...attainment of a bachelor's or higher degree..."
 
-    % TODO: Visa data
-    % TODO: discuss loan data
-    
+    H-1 visas are a subgroup of nonimmigrant visas.
+    Nonimmigrant visa award data by classification from 1987 to 2019 is provided by
+    the Bureau of Consular Affairs within the United States State Department\cite{bureauof_2020}.
+    This paper exclusively uses the most relevant H-1B visa award numbers,
+    but reanalysis with other visa classifications could yield statistically significant findings.
+    The prior H-1 visa was also a merit worker visa, but it had no formal definition of merit.
+    In 1989, 48,820 H-1 visas were awarded.
+    In 1991, 7,443 H-1A visas were awarded, and 51,882 H-1B visas were awarded.
+    It's plausible that the college-educated effect informally existed prior to the 1990 legislation.
+    One might also find small but significant effects by looking into visas outside the H-1 family.
+    Besides the number of actual visa awards, an analyst could look for visa cap effects,
+    or visa policy state effects.
+    For example, Pew Research Center notes that the American Competitiveness in the 21st Century Act of 2000 exempts certain entities from the H-1B cap\cite{ruiz2017key}.
+    % ref: https://en.wikipedia.org/wiki/H-1B_visa#H-1B_visas_issued_per_year
+    % more state variable food https://redbus2us.com/h1b-visa-total-cap-history-from-1990-to-current-year/
+    % 1952 allows unlimited merit immigration, 1990 there is a quota and degree requirement added to H-1B: https://en.wikipedia.org/wiki/H-1B_visa#Immigration_Act_of_1990
+    % A crackdown in 2017: https://www.investopedia.com/news/impact-trumps-h1b-visa-crackdown-5-charts/
+
+    Loan data is the last key element of the analysis.
+    % TODO: why do we are about loan data? discuss    
     % actual undergrad loans awarded since 1990 in the excel at https://research.collegeboard.org/trends/student-aid
     % My variable `Total UG Federal Loans` adapted from CB xlsx worksheet `Table 2_UG`
     % but i don't think we should use actuals there bc that would explain away demand effects...we want to preserve those (do a better job explaining this plz)
     % so, prefer the limits over time...those are attributed to the school year, so rules beginning July 1993 are true for 1993 (start of school year)
     % eg dummy for "limit is subsidized plus unsubsidized" begins to be true for 1993 in my csv
 
-    % \section{Aggregate disruption}
     \section{Aggregate Results}
 
     1. > .995 adjusted r2 for preferred ols model
@@ -292,6 +304,19 @@ education economics, section 127, educational assistance, veteran education, h-1
     3. visa effects are complex and important, but signing the effect is sensitive to specification
     4. stafford and gi bill effects are also significant in the prefered model.
 
+    % subsection: Factor analysis for education cost and inflation
+    I also tested PCE as a distinct independent variable.
+    In neither case did PCE present as a significant factor.
+    The second approach turned out to be more significant
+    \footnote{
+        % TODO: Footnote [or optional table] comparing p-values for:
+        % 1. reg VOI PCECORRECTION ALL_INSTITUTION_CORRECTION [with and without pce as seperate var]
+        % 2. [optional] min p-value during round-robin process
+    }.
+     data % TODO: cite it and what does it stand for?
+    % 2016 is base year for corrected real deduction limit
+
+    % other stuffs
     % \section{Reconciling selection and turnover effects in low-achievement schools}
     % \section{Reconciling selection and turnover effects in low-achievement schools}
     
