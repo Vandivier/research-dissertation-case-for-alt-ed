@@ -29,7 +29,7 @@ estimates store R1, title(Regression 1)
 reg totalen pce pce2 employer_assistance_1 real_m_both stategi3 visa_m* year year2
 estimates store R2, title(Regression 2)
 * // third long reg of interest
-reg totalen employer_assistance_2 employer_assistance_3 employer_x_h1b_1 visa_m_h1 visa_m_h1b_2 visa_m_non_h1 stategi3 year year2
+reg totalen employer_assistance_2 employer_assistance_3 employer_x_h1b_1 stategi3 visa_m_h1 visa_m_h1b_2 visa_m_non_h1 year year2
 estimates store R3, title(Regression 3)
 * // interpretation-friendly second short regression of interest transform is the third short regression of interest and preferred model
 reg totalen employer_assistance_1 employer_assistance_2 employer_assistance_3 stategi3 visa_m_h1b_1 visa_m_h1b_2 year year2

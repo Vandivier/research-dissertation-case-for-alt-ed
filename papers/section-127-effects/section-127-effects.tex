@@ -24,6 +24,15 @@
 % ref: https://tex.stackexchange.com/questions/19390/how-do-you-download-packages-for-texworks-on-windows-7
 % ref: https://tex.stackexchange.com/questions/47418/siunitx-specifying-custom-command-as-input-symbol
 \newcommand{\sym}[1]{\rlap{#1}}
+\usepackage{siunitx}
+\sisetup{ detect-mode, 
+          group-digits            = false ,
+          input-signs             = ,
+          input-symbols           = ()[]-+* , % specifying \sym here does not work
+          input-open-uncertainty  = ,
+          input-close-uncertainty = ,
+          table-align-text-post   = false 
+        }
 
 \begin{document}
 \begin{frontmatter}
@@ -358,11 +367,44 @@ education economics, section 127, educational assistance, veteran education, h-1
     Tuition is insignificant in model 1.
     Replacing tuition with PCE and education-deflated employer assistance in model 2 identifies the latter
     with significance at the 0.1 level and also improves the overall explanatory power of the model.
+    Real employer education assistance which is solely corrected for the price of education
+    is eventually preferred to the multiple-deflated measure.
+    This makes the education-deflated real employer assistance limit the preferred Section 127 variable.
+    After deciding on this variable as the preferred measure,
+    quadratic, cubic, and interaction transformations are investigated.
+    The interaction of Section 127 policy and visa effects turns out to be small in magnitude,
+    low in signficance,
+    and possessing a sign which is sensitive to specification.
 
+    Model 4 is preferred out of the models presented in Table \ref{tab:table_mols}.
+    While model 1 has the highest r-squared value,
+    model 4 has an adjusted r-squared equal to model 1.
+    Model 4 is the result of a thorough nonlinear investigation,
+    while models 1 and 2 are not.
+    Model 3 is technically stronger but difficult to interpret.
+    For example, interpreting the H-1B visa policy effect is not
+    straightforward, both because a linear effect is missing in the model
+    and also because other H-1 variables are present which make pure H-1B
+    effect attribution impossible.
 
-    H-1 visa effects, on the other hand, are highly significant and complex.
+    All four models are technically very strong,
+    but model 4 makes interpretation simple.
+    The linear effect of real Section 127 assistance is insignificant and negative with low confidence.
+    The marginal effect is highly significant and positive, but decreasingly positive.
+    The total effect in the relevant range is also positive.
+    This indicates that a real increase to Section 127 assistance would further boost enrollment,
+    but such increases would be decreasingly effective.
+
+    % TODO: pick up here.
+
+    H-1 visa effects are significant and complex across specification.
     All H-1 visa issuance factors are significant with p < .1.
     Somewhat surprisingly, the total number of visas issued within the H-1 family is more significant than the
+
+    Time is also highly significant across multiple regressive models.
+    The signficance of time motivates checking additional specifications
+    including a dynamic ordinary least squares
+    and a vector autoregressive model.
 
     Section 127 assistance limits which are deflated using education-specific prices were identified as less significant
     compared to PCE-deflated Section 127 assistance.
@@ -377,22 +419,6 @@ education economics, section 127, educational assistance, veteran education, h-1
     2. empassist has positive coefficient in the range of 150-850; preferred measure around 600
     3. visa effects are complex and important, but signing the effect is sensitive to specification
     4. stafford and gi bill effects are also significant in the prefered model.
-
-    % subsection: Factor analysis for education cost and inflation
-    I also tested PCE as a distinct independent variable.
-    In neither case did PCE present as a significant factor.
-    The second approach turned out to be more significant
-    \footnote{
-        % TODO: Footnote [or optional table] comparing p-values for:
-        % 1. reg VOI PCECORRECTION ALL_INSTITUTION_CORRECTION [with and without pce as seperate var]
-        % 2. [optional] min p-value during round-robin process
-    }.
-
-    % TODO: maybe discuss Is H1 Edge Case variable...but is it significant? if not then not worth mentioning
-    %   if it is significant then it means period of analysis loses 1990, so we need to mention it.
-
-    % other stuffs
-    % \section{Reconciling selection and turnover effects in low-achievement schools}
     
     % \begin{figure}[h!]
     %     \centering
@@ -410,6 +436,15 @@ education economics, section 127, educational assistance, veteran education, h-1
     %     \end{figure}
 
     \section{Conclusions}
+
+    % the total effect of assistance in the relevant range is positive, and additional real assistance would further boost attendance.
+    % however, it's not obvious that increased attendance is a good thing. credential inflation, experience inflation, debt crisis.
+    % i fail to find evidence supporting a significant interaction between section 127 and visa policy
+    % however visa policy in itself is extremely important in the conversation on enrollment, credential inflation, experience inflation, and debt crisis.
+    % there are important caveats in this visa analysis.
+    % employers have recently been removing the degree requirement
+    % the law should also remove that requirement and boost alternative education which doesn't require a formal degree and is highly effective
+    % this will reduce debt, improve diversity and economic efficiency and individual skill
 
     % maybe talk about stress and debt for why debt is important
     % important to look at wages not income (which would include investments, etc, see shrm's discussion: http://www.cpepea.com/wp-content/uploads/2017/05/10-0418-Coalition-Report-on-Public-Policy-Issue-E-P-E-A_FNL.pdf)
