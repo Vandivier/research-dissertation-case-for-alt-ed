@@ -36,5 +36,5 @@ reg totalen employer_assistance_1 employer_assistance_2 employer_assistance_3 st
 estimates store R4, title(Regression 4)
 
 * // ref estout in other *table*.do files
-esttab R1 R2 R3 R4, keep(stategi3 real_m_both employer_a* tuition_cpi visa_m_h1 visa_m_h1b_1 visa_m_h1b_2 visa_m_non_h1 year year2) label order(stategi3 real_m_both employer_* tuition_cpi visa_m* year year2) varwidth(25) stats(r2, fmt(4 0 1) label(R-sqr))
+esttab R1 R2 R3 R4 using temp.tex, booktabs keep(stategi3 real_m_both employer_a* tuition_cpi visa_m_h1 visa_m_h1b_1 visa_m_h1b_2 visa_m_non_h1 year year2) label replace order(stategi3 real_m_both employer_* tuition_cpi visa_m* year year2) se stats(r2, fmt(4 0 1) label(R-sqr)) varwidth(25)
 

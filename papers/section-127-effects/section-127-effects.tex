@@ -21,8 +21,11 @@
 \usepackage{tikz}
 \usetikzlibrary{calc,matrix}
 
-\begin{document}
+% ref: https://tex.stackexchange.com/questions/19390/how-do-you-download-packages-for-texworks-on-windows-7
+% ref: https://tex.stackexchange.com/questions/47418/siunitx-specifying-custom-command-as-input-symbol
+\newcommand{\sym}[1]{\rlap{#1}}
 
+\begin{document}
 \begin{frontmatter}
 
 \title{
@@ -340,45 +343,17 @@ education economics, section 127, educational assistance, veteran education, h-1
     The total number of visas issued across classification is not significant.
     The long regression of interest has higher unadjusted explanatory power compared to kitchen sink regression.
     Measures of tuition were identified as insignificant.
-    Figure \ref{table:table_mols} is a table of regressions which helps illustrate that, somewhat surprisingly,
+    Table \ref{tab:table_mols} is a table of regressions which helps illustrate that, somewhat surprisingly,
     real measures of employer assistance capture price and inflation effects in a preferred way
     compared to using a more direct measure of tuition.
-    
-    % below doesn't seem to work
-    % \input{../section-127-effects/figures-and-tables/table-1.tex}
 
-    \begin{table}[h!]
-        \centering
+    \begin{table}
         \caption{Regression Table, Selected Variables}
-    
-        \begin{tikzpicture}[element/.style={minimum width=1cm, minimum height=0.75cm}]
-        \node (n1) [above=0.25cm] {\includegraphics[width=1\textwidth]{../section-127-effects/figures-and-tables/table-1.png}};
-        \end{tikzpicture}
-
-        \label{table:table_mols}
+        \resizebox{\columnwidth}{!}{
+            \input{../section-127-effects/figures-and-tables/table-1.tex}
+        }
+        \label{tab:table_mols}
         \end{table}
-
-    % \begin{table}
-    %     \caption{Medium and Strong Models, Selected Variables}
-    %     \begin{tabular}{lllll}
-    %     Factor & 2018 Medium & 2018 Strong & 2019 Medium & 2019 Strong \\
-    %     \toprule
-    %     Male &  &  & -2.458* & -0.422** \\
-    %     Not STEM & -1.269* \\
-    %     X$_0$ & 1105.125 & .106 & -12345.347* & 3.289*** \\
-    %     \bottomrule
-    %     R-Squared & .597 & .504 & .526 & .319 %
-    
-    %     \end{tabular}
-    %     \begin{tablenotes}
-    %         \item{
-    %             * p $<$ .05
-    %             ** p $<$ .01
-    %             *** p $<$ .001
-    %         }
-    %     \end{tablenotes}
-    %     \label{tab:models}
-    %     \end{table}
 
     H-1 visa effects, on the other hand, are highly significant and complex.
     All H-1 visa issuance factors are significant with p < .1.
