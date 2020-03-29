@@ -104,8 +104,8 @@ reg totalen employer_assistance_2 employer_x_h1b_1 stategi3 visa_m_h1 visa_m_h1b
 * // power-reducing the medium reg of interest here drops r2 and nukes interaction effect significance
 reg totalen employer_assistance_1 employer_assistance_2 stategi3 visa_m_h1 visa_m_h1b_2 year year2
 
-* // continue reducing medium regression of interest
-* // get second short regression of interest.
+* // second short regression of interest.
+* // reduced from medium regression of interest
 * // all factors p-value < .03, r2 .9965, ar2 .9952
 * // pain in the ass nonlinear employer effect interpretation:
 * //    1. linear effect doesn't matter.

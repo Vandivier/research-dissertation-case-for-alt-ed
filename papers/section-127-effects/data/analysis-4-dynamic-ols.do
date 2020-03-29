@@ -2,12 +2,15 @@ clear
 
 do "D:\GitHub\research-dissertation-case-for-alt-ed\papers\section-127-effects\data\analysis-1-vars.do"
 
+* // first reg of interest
+* // anderson-hsiao transform of preferred multiple regression
 * // ref: youtube.com/watch?v=wqwDcY9pq5I
-* // anderson-hsiao adjustment using double lagged voi as instrument
-ivreg d.totalen d.new1 (l.d.totalen=l2.d.totalen)
+* // double lagged voi as instrument; breaks autocorrelation with first difference variable of interest
+ivreg d.totalen employer_a* stategi3 visa_m_h1b_1 visa_m_h1b_2 year year2 (l.d.totalen=l2.d.totalen)
 
-* // secondary reg of interest
-* // finally, full ivreg with all policy diffs
+* // second dols reg of interest
+* // expand first reg of interest with lags and first and second differences of interest
+* // begin old commentary based on running var first ---
 * // we should recall that ideal period fit is 3 lags per analysis-3
 * // here, we use one lag, but we still see much significance
 * // just keep in mind that each factor dynamic relation flips sign eventually
@@ -18,25 +21,18 @@ ivreg d.totalen d.new1 (l.d.totalen=l2.d.totalen)
 * // 3. empassist is positive as expected, though still weak (p=.169)
 * // 4. the interaction variable is the most significant in the model
 * // 5. direction of interaction is robust to lagging at different periods
-ivreg d.totalen d.new1 d.empassist d.exnew1 (l.d.totalen=l2.d.totalen)
+* // end old commentary based on running var first ---
+ivreg d.totalen employer_a* stategi3 visa_m_h1b* year year2 (l.d.totalen=l2.d.totalen) d.employer_assistance_1 d.d.employer_assistance_1 d.stategi3 d.visa_m_h1b_1 d.d.visa_m_h1b_1 l.employer_assistance_1 l.employer_assistance_2 l.employer_assistance_3 l.visa_m_h1b_1 l.visa_m_h1b_2 l.visa_m_h1b_3
 
-* // compare to secondary reg of interest
-* // below ivreg shows weak explanatory power without interaction effect
-* // without interaction effect, either factor is insignificant eg could be zero or wrong sign
-* // but empassist point estimate still in expected direction
-* // lagged visa difference is associated with decreased enrollment which seems weird
-* // but I feel fine ignoring it for extreme insignificance
-* // and because we know the multi-period lagged effect flips in sign
-* // so net visa effect long term can be increase, even if first lag is weakly a decline in enrollment
-ivreg d.totalen d.new1 d.empassist (l.d.totalen=l2.d.totalen)
+* // third dols regression of interest
+* // reduced second dols reg of interest
+* // strong but complex model
+ivreg d.totalen employer_assistance_2 employer_assistance_3 visa_m_h1b_2 visa_m_h1b_3 year2 (l.d.totalen=l2.d.totalen) d.employer_assistance_1 d.d.employer_assistance_1 d.visa_m_h1b_1 d.d.visa_m_h1b_1 l.visa_m_h1b_2 l.visa_m_h1b_3
 
-* // notice actual interaction matters more difference in interaction 
-* // this is our key reg
-* // negative visa effect is even weaker
-* // positive empassist is essentially significant (p=.104 and higher coefficient)
-* // policy effect is positive sp we are increasing enrollment (but apparently not benefit utilization?)
-* // thus, loan bloat explanation confirmed by VAR and DOLS as well as more trivial and earlier ols
-ivreg d.totalen d.new1 d.empassist exnew1 (l.d.totalen=l2.d.totalen)
+* // fourth dols reg of interest
+* // power-down employer assistance boosts model power and simplifies intuition
+* // pulling the same trick for visa doesn't work
+* // this is preferred DOLS with r2 .925 and ar2 .85.
+ivreg d.totalen employer_assistance_1 employer_assistance_2 visa_m_h1b_2 visa_m_h1b_3 year2 (l.d.totalen=l2.d.totalen) d.employer_assistance_1 d.d.employer_assistance_1 d.visa_m_h1b_1 d.d.visa_m_h1b_1 l.visa_m_h1b_2 l.visa_m_h1b_3
 
-* // notice lagged interaction is dumb and meaningless
-ivreg d.totalen d.new1 d.empassist l.exnew1 (l.d.totalen=l2.d.totalen)
+

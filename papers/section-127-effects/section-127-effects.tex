@@ -34,6 +34,8 @@
           table-align-text-post   = false 
         }
 
+\usepackage{tabularx}
+
 \begin{document}
 \begin{frontmatter}
 
@@ -358,7 +360,7 @@ education economics, section 127, educational assistance, veteran education, h-1
     compared to using a more direct measure of tuition.
 
     \begin{table}
-        \caption{Regression Table, Selected Variables}
+        \caption{Table of Multiple Regression on Total Enrollment, Selected Variables}
         \resizebox{\columnwidth}{!}{
             \input{../section-127-effects/figures-and-tables/table-1.tex}
         }
@@ -424,8 +426,89 @@ education economics, section 127, educational assistance, veteran education, h-1
     are explored.
 
     \subsection{Dynamic Ordinary Least Squares Results}
+    % note: for analysis related to this section, refer to analysis-4-dynamic-ols.do
+
+    % TODO: another empirical model?
+
+    Dynamic ordinary least squares (DOLS) models supplement multiple regressive analysis in at least two ways.
+    First, autocorrelation can be removed using lagged variables in an Anderson–Hsiao adjustment\cite{anderson1981estimation}.
+    Second, atemporal marginal effects can be tested against marginal effects in a dynamic context,
+    which improves model utility in an applied context.
+
+    Table \ref{tab:table_dols} compares selected variables from two models of interest.
+    Selected variables include any variable which appears in both models.
+    The first model of interest is the preferred multiple regression with an Anderson-Hsiao adjustment.
+    The Anderson-Hsiao adjustment involves three changes which allow an analyst to address an issue of actual or potential autocorrelation in the dependent variable.
+    The first step in the adjustment is to leverage an instrumental variable regression instead of an ordinary least squares regression.
+    The second step is to pick a particlar instrumental variable, often called the Anderson-Hsiao estimator.
+    The Anderson-Hsiao estimator is a twice lagged first difference of the dependent variable.
+    The third step is to replace the dependent variable with the first difference of itself.
+    After taking these three steps, the model is removed of overlapping periods which contribute to autocorrelation over time.
+    The second model of interest is the preferred DOLS model.
+    
+    \begin{table}
+        \caption{Table of DOLS Regression on Total Enrollment, Selected Variables}
+        \begin{tabularx}{\textwidth}{X}
+            \centering
+            \input{../section-127-effects/figures-and-tables/table-2.tex}
+        \end{tabularx}
+        \label{tab:table_dols}
+        \end{table}
+
+    The preferred dynamic OLS model obtains an adjusted r-squared of about 0.85.
+    In contrast, the simple adjustment to the preferred multiple regression
+    obtains an adjusted r-squared of about 0.26.
+    A surprising result is that the Anderson-Hsiao estimator is insignificant
+    across multiple specifications, including the preferred DOLS model (p = 0.51).
+    A significant marginal time effect is observed in the model.
+    This provides evidence that the apparent dynamic autocorrelation is
+    mainly due to an independent time effect and other stable independent effects.
+    
+    While the Anderson-Hsiao estimator is insignificant,
+    dropping that variable and running an ordinary regression reduces adjusted r-squared to 0.82,
+    but all independent factors retain significance.
+    This demonstrates comparative model robustness over the preferred multiple regression.
+    For this reason, the preferred DOLS model, with or without instrumentation,
+    is preferred to the preferred multiple regression identified as
+    model 4 in Table \ref{tab:table_mols}.
+
+    Lagged employer assistance effects are insignificant when explaining the first difference of total enrollment.
+    First and second differences are significant.
+    Current period linear and marginal effects are also significant.
+    The first difference and the current period marginal effect for
+    Section 127 assistance are both significant and positively signed.
+    This indicates that raising assistance,
+    whether in the current period or over time,
+    is expected to boost enrollment at the margin.
+    Both effects follow an Inada-like pattern, where the marginal effect is decreasingly positive.
+
+    First-difference, lagged, and current H-1B visa effects are all signficant.
+
+    % TODO: pick up here
+
+    % Instrumental variable regression using the Anderson–Hsiao adjustment revealed highly significant autocorrelation in enrollment.
+    % While lagged enrollment is highly significant (p < 0.001),
+    % it does not fully partial out the signficance of time effects.
+    % An independent and highly significant (p < 0.001) quadratic time effect.
+
+    % Model 2, the preferred model, consists of only lagged enrollment, time, and visa effects,
+    % but it explains current-period enrollment with an adjusted r-squared over 0.99.
+    % While visa effects are complex,
+    % they replicate and strengthen findings from multiple regressive analysis where applicable.
+    % For example, the preferred multiple regression identifies a significant linear H-1B effect
+    % and an insignificant marginal effect,
+    % but the preferred DOLS model identifies both effects with significance, and in the same directions.
+
+    In summary, dynamic ordinary least squares analysis weakly
+    % contrast DOLS and MOLS period of analysis; n=27 vs n=25
 
     \subsection{Vector Autoregression Results}
+
+    % TODO: another empirical model?
+
+    % TODO: var results and diagram
+
+    % TODO: var results summary paragraph
 
     \section{Conclusions}
 
