@@ -24,6 +24,9 @@ gen pce3 = annualaveragepce*annualaveragepce*annualaveragepce
 
 gen real_m_all_institution = realassistancelimitallinstitutio
 gen real_m_both = realassistancelimitallinstitut*basedpcedeflator
+gen multiple_deflated_1 = real_m_both
+gen multiple_deflated_2 = real_m_both*real_m_both
+gen multiple_deflated_3 = real_m_both*real_m_both*real_m_both
 drop realassistancelimitallinstitutio
 
 gen employer_assistance_1 = real_m_all_institution
