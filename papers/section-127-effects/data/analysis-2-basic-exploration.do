@@ -121,3 +121,9 @@ reg totalen employer_assistance_2 employer_assistance_3 stategi3 visa_m_h1 visa_
 * // TODO: calculate enrollment-maximizing assistance amount based on this preferred model
 * // visa linear effects are significantly negative, with weak positive marginal effect
 reg totalen employer_assistance_1 employer_assistance_2 employer_assistance_3 stategi3 visa_m_h1b_1 visa_m_h1b_2 year year2
+
+* // total effects regression, not presented in tables
+* // it is the preferred model without nonlinear effects of interest
+* // time is the only factor with nonlinear effects here.
+* // Model is non-robust to removing quadratic time.
+reg totalen employer_assistance_1 stategi3 visa_m_h1b_1 year year2

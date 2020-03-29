@@ -342,14 +342,15 @@ education economics, section 127, educational assistance, veteran education, h-1
 
     \section{Results}
 
+    \subsection{Multiple Regression Results}
     The key independent variable is H-1B visa issuance, but at the outset there are two potential left hand variables available.
-    % In simple regressions, H-1B effects are marginally more closely related to public enrollment compared to total enrollment.
     Ordinary least squares (OLS) multiple regression of visa effects, time, and tuition was run against both total enrollment and public university enrollment.
     Total enrollment was more predictable overall, so this was selected as the preferred enrollment variable.
 
     With total enrollment as the explained variable,
     a kitchen sink multiple regression was used to select the strongest factors among other factor groups.
     The total number of visas issued across classification is not significant.
+    Stafford loan limit variables were also identified as insignificant.
     The long regression of interest has higher unadjusted explanatory power compared to kitchen sink regression.
     Measures of tuition were identified as insignificant.
     Table \ref{tab:table_mols} is a table of regressions which helps illustrate that, somewhat surprisingly,
@@ -391,49 +392,40 @@ education economics, section 127, educational assistance, veteran education, h-1
     but model 4 makes interpretation simple.
     The linear effect of real Section 127 assistance is insignificant and negative with low confidence.
     The marginal effect is highly significant and positive, but decreasingly positive.
-    The total effect in the relevant range is also positive.
+    The total effect in the relevant range is also positive\footnote{
+        Elimination of non-linear effects from the preferred model acts as a robustness check,
+        identifies the direction of the total effect in the relevant range,
+        and maintains significance for all factors.
+        The real Section 127 assistance coefficient has a point estimate of 623 in such a model,
+        and the H-1B visa issuance coefficient takes a value of about -15.
+    }.
     This indicates that a real increase to Section 127 assistance would further boost enrollment,
     but such increases would be decreasingly effective.
 
-    % TODO: pick up here.
+    H-1 visa effects are complex and important across specification.
+    The preferred model identifies a significant negative linear effect on enrollment
+    from H-1B visa issuance.
+    There is an insignificant positive marginal effect and a negative total effect.
+    While the preferred model focuses on H-1B effects, analysis shows this is largely
+    generalizable to the H-1 family.
+    In fact, substituting H-1 total issuance for the linear H-1B variable improves
+    linear visa effect signifiance,
+    although it does not improve raw or adjusted explanatory power for the model overall.
+    That move also is not preferred because the linear effect and the marginal visa effects would then correspond to different measures.
 
-    H-1 visa effects are significant and complex across specification.
-    All H-1 visa issuance factors are significant with p < .1.
-    Somewhat surprisingly, the total number of visas issued within the H-1 family is more significant than the
+    Time is the most consistently significant variable across multiple regressive models.
+    Time, measured in years, intuitively possessess a positive linear effect and a negative marginal effect on total enrollment.
+    The total effect of time over the period of analysis is also strongly positive.
+    A simple regression of time on total enrollment has an adjusted r-squared of about .95.
+    Because time is so important in explaining enrollment,
+    in order to facilitate robust causal analysis,
+    and in order to improve applied predictive modeling,
+    additional specifications using dynamic least squares and vector autoregression
+    are explored.
 
-    Time is also highly significant across multiple regressive models.
-    The signficance of time motivates checking additional specifications
-    including a dynamic ordinary least squares
-    and a vector autoregressive model.
+    \subsection{Dynamic Ordinary Least Squares Results}
 
-    Section 127 assistance limits which are deflated using education-specific prices were identified as less significant
-    compared to PCE-deflated Section 127 assistance.
-    PCE remained important as a distinct variable.
-    
-    This makes some sense is in the context of a multiple regression.
-    PCE and other factors already represent effects from inflation.
-    While Section 127 asssistance deflated for education-specific inflation was identified as insignificant,
-    nominal tuition seems to represent the same education-specific price information.
-
-    1. > .995 adjusted r2 for preferred ols model
-    2. empassist has positive coefficient in the range of 150-850; preferred measure around 600
-    3. visa effects are complex and important, but signing the effect is sensitive to specification
-    4. stafford and gi bill effects are also significant in the prefered model.
-    
-    % \begin{figure}[h!]
-    %     \centering
-    %     \caption{Employer Driven Favorability}
-    
-    %     \begin{tikzpicture}[element/.style={minimum width=1cm, minimum height=0.75cm}]
-    
-    %     \node (n1) [above=0.25cm] {\includegraphics[width=0.5\textwidth]{../alt-ed-survey/figures-and-tables/figure-4.png}};
-    %     \node (n2) [above=0.25cm] at ($(n1)!0.5!(n1) - (4, 1)$) {\rotatebox{90}{\textbf{Suitability}}};
-    %     \node (n3) [above=0.25cm] at ($(n1)!0.5!(n1) - (0, 3)$) {\textbf{Time}};
-    
-    %     \end{tikzpicture}
-
-    %     \label{fig:employer_driven_favorability}
-    %     \end{figure}
+    \subsection{Vector Autoregression Results}
 
     \section{Conclusions}
 
