@@ -245,7 +245,7 @@ education economics, section 127, educational assistance, veteran education, h-1
     % Variable implemented as categorical
     % [state A] original bill was 1944-1984
     % [state B] VEAP established 1981 https://www.benefits.va.gov/gibill/veap.asp
-    % [state C] Montgommery GI went into effect 1984
+    % [state C] Montgomery GI went into effect 1984
     % [state D] Post-9/11 GI Bill went into effect for 2009 school year https://www.thebalancecareers.com/gi-bill-for-the-21st-century-3347143
     % [state E] Forever GI bill rolls out new benefits starting in 2018 https://rebootcamp.militarytimes.com/education-transition/education/2017/08/16/trump-signed-the-forever-gi-bill-here-are-11-things-you-should-know/
     %
@@ -322,7 +322,7 @@ education economics, section 127, educational assistance, veteran education, h-1
     This allows us to briefly review the relationship between Section 127 employer assistance
     and the student debt crisis, a potentially related topic of importance.
     The variable I use in this regard is total federal undergraduate loans,
-    which is extracted from a worksheet labeled "Table 2_UG" in a data set provided by College Board\cite{cb_excel_2019}.
+    which is extracted from a data set provided by College Board\cite{cb_excel_2019}.
     Given additional context provided by The College Board in a related report\cite{cb_trends_2019},
     it is plausible that a seperate analysis which decomposes decomposing aggregate total federal loans by type of loan may yield marginal statistical improvement.
     % actual undergrad loans awarded since 1990 in the excel at https://research.collegeboard.org/trends/student-aid
@@ -340,10 +340,24 @@ education economics, section 127, educational assistance, veteran education, h-1
     The total number of visas issued across classification is not significant.
     The long regression of interest has higher unadjusted explanatory power compared to kitchen sink regression.
     Measures of tuition were identified as insignificant.
-    Table 1 is a table of regressions which helps illustrate that, somewhat surprisingly,
+    Figure \ref{table:table_mols} is a table of regressions which helps illustrate that, somewhat surprisingly,
     real measures of employer assistance capture price and inflation effects in a preferred way
     compared to using a more direct measure of tuition.
     
+    % below doesn't seem to work
+    % \input{../section-127-effects/figures-and-tables/table-1.tex}
+
+    \begin{table}[h!]
+        \centering
+        \caption{Regression Table, Selected Variables}
+    
+        \begin{tikzpicture}[element/.style={minimum width=1cm, minimum height=0.75cm}]
+        \node (n1) [above=0.25cm] {\includegraphics[width=1\textwidth]{../section-127-effects/figures-and-tables/table-1.png}};
+        \end{tikzpicture}
+
+        \label{table:table_mols}
+        \end{table}
+
     % \begin{table}
     %     \caption{Medium and Strong Models, Selected Variables}
     %     \begin{tabular}{lllll}
@@ -366,8 +380,6 @@ education economics, section 127, educational assistance, veteran education, h-1
     %     \label{tab:models}
     %     \end{table}
 
-
-
     H-1 visa effects, on the other hand, are highly significant and complex.
     All H-1 visa issuance factors are significant with p < .1.
     Somewhat surprisingly, the total number of visas issued within the H-1 family is more significant than the
@@ -380,9 +392,6 @@ education economics, section 127, educational assistance, veteran education, h-1
     PCE and other factors already represent effects from inflation.
     While Section 127 asssistance deflated for education-specific inflation was identified as insignificant,
     nominal tuition seems to represent the same education-specific price information.
-
-
-
 
     1. > .995 adjusted r2 for preferred ols model
     2. empassist has positive coefficient in the range of 150-850; preferred measure around 600
@@ -432,7 +441,7 @@ education economics, section 127, educational assistance, veteran education, h-1
     % Other options like extending the benefit to repayment https://blog.shrm.org/blog/let-s-fight-the-skills-gap-by-expanding-tax-free-education-assistance
     % we can also consider extending the education benefit to unaccredited education and income share agreements not just loans
     
-    % https://www.nber.org/papers/w9225.pdf 
+    % https://www.nber.org/papers/w9225.pdf 
     % https://www.nber.org/digest/feb03/w9225.html
 
     \bibliography{./BibFile}
