@@ -104,6 +104,9 @@ education economics, section 127, educational assistance, veteran education, h-1
 
     \section{Introduction}
 
+    % TODO: basic descriptive time series line graphs.
+    % enrollment, loans, prices, and policy states over time are candidates.
+
     % background scratch notes in this comment block:
     % degree requirement as a strategy to import cheap, effective foreign labor (VISA)
     % this prevents high school graduates from directly entering roles that typically award section 127 (white color, major employer, corporate work)
@@ -426,8 +429,7 @@ education economics, section 127, educational assistance, veteran education, h-1
     are explored.
 
     \subsection{Dynamic Ordinary Least Squares Results}
-    % note: for analysis related to this section, refer to analysis-4-dynamic-ols.do
-
+    % ref: analysis-3-dynamic-ols.do
     % TODO: another empirical model?
 
     Dynamic ordinary least squares (DOLS) models supplement multiple regressive analysis in at least two ways.
@@ -482,31 +484,147 @@ education economics, section 127, educational assistance, veteran education, h-1
     is expected to boost enrollment at the margin.
     Both effects follow an Inada-like pattern, where the marginal effect is decreasingly positive.
 
-    First-difference, lagged, and current H-1B visa effects are all signficant.
+    First-difference, lagged, and current H-1B visa effects are all signficant,
+    but linear visa effects are not significant.
+    Lagged effects are foreign to the multiple regression specification.
+    DOLS specification reveals significant lagged marginal effects and positive
+    lagged cubic effects.
+    A lagged linear effect is isomorphic to a first difference in this specification,
+    so a direct measure is omitted for collinearity,
+    but the first difference is positive.
+    The total lagged effect indicates that as lagged period visa count increases,
+    the expected change in current period visa issuance is both positive and eventually increasingly positive.
 
-    % TODO: pick up here
+    Other than lagged effects, dynamic visa effects are consistent with an an insightful refinement of
+    visa effects identified under multiple regression analysis.
+    For example, an insignificant positive quadratic effect is identified in the preferred ordinary multiple regression.
+    In the preferred DOLS, a positive marginal effect is identified with significance.
+    Moreover, a negative first difference is also identified with signficance.
+    It makes sense that forcing these related and opposing marginal effects into a single variable would lead
+    to insignificance in a non-dynamic specification.
+    Using a dynamic specification we can see that marginal effects are stable,
+    but they move in different directions when issuance is increased with and without respect to time.
+    Moreover, both of these factors face marginal effects have an attenuating higher-order counterpart.
+    The positive static marginal effect is attenuated by a negative cubic effect.
+    The negative dynamic static marginal effect is attenuated by a positive and significant second-difference coefficient.
 
-    % Instrumental variable regression using the Anderson–Hsiao adjustment revealed highly significant autocorrelation in enrollment.
-    % While lagged enrollment is highly significant (p < 0.001),
-    % it does not fully partial out the signficance of time effects.
-    % An independent and highly significant (p < 0.001) quadratic time effect.
+    It is important to note that DOLS models explain a slightly smaller period of analysis because of the use of lagged variables.
+    While the preferred multiple regression covers 27 annual samples from 1990 to 2016,
+    the preferred DOLS model obtains a sample size of 25 over the period from 1992 to 2016.
 
-    % Model 2, the preferred model, consists of only lagged enrollment, time, and visa effects,
-    % but it explains current-period enrollment with an adjusted r-squared over 0.99.
-    % While visa effects are complex,
-    % they replicate and strengthen findings from multiple regressive analysis where applicable.
-    % For example, the preferred multiple regression identifies a significant linear H-1B effect
-    % and an insignificant marginal effect,
-    % but the preferred DOLS model identifies both effects with significance, and in the same directions.
-
-    In summary, dynamic ordinary least squares analysis weakly
-    % contrast DOLS and MOLS period of analysis; n=27 vs n=25
+    In summary, DOLS analysis demonstrates non-robustness in the preferred non-dynamic model,
+    then provides an alternative model that is significantly more robust, although it
+    achieves a slightly lower level of explanatory power.
+    DOLS analysis addresses concerns of potential autocorrelation,
+    finding that autocorrelation is not an important concern.
+    DOLS also provides rudimentary causal findings by identifying changes which are associated with results in the following period.
 
     \subsection{Vector Autoregression Results}
-
+    % ref: analysis-4-vector-auto-reg.do
     % TODO: another empirical model?
 
-    % TODO: var results and diagram
+    Dynamic ordinary least squares provides rudimentary causal findings,
+    but vector autoregression provides deeper analysis in this regard.
+    Vector autoregression (VAR) improves on DOLS for the specific purpose
+    of identifying potential natural or policy instruments.
+    While difference and lag effects of the first and second order were manually investigated using DOLS,
+    vector autoregressive techniques allow for non-manual, or unsupervised,
+    investigation of potentially many lags to select for the optimal period.
+    An analyst is then able to achieve some model confidence in both the total policy effect over time
+    and also the shape of how that effect will play out over time.
+    
+    Multiple regression ruled out the significance of an interaction variable between
+    visa issuance and employer assistance,
+    so this analysis does not suppose that those variables are endogenous.
+    Instead, each is addressed as a seperate potential stimulus to the response variable.
+    In the preferred dynamic model, visa and employer assistance effects
+    are the only effects that exist other than time.
+    As a result, each of the two VAR models are both simple, two-variable models.
+
+    For the the employer assistance model,
+    an extended sample of 43 observations
+    over the period from 1974 to 2016 is used.
+    For the H-1B model, 24 samples over the period from 1994 to 2017 are used.
+    Ivanov and Kilian find that the Schwarz Information Criterion,
+    also called Schwarz's Bayesian information criteria (SBIC),
+    is the most accurate selection criterion for sample sizes less than 120\cite{ivanov2005practitioner}.
+    For that reason, I prefer this criterion.
+    Fortunately, all significant selection criteria provided by STATA unanimously agreed in the case of lag selection for both models.
+    Such criteria included SBIC, the likelihood ratio (LR), the final prediction error (FPE),
+    Akaike Information Criterion (AIC), and Hannan-Quinn Information Criterion (HQIC).
+    For both models, the optimal lag length is identified at two periods.
+    The p-value for the optimal lag was less than 0.001 for both models.
+    
+    VAR results for employer assistance are directionally consistent with prior analysis.
+    A positive shock to employer assistance is associated with a downward parabola curve response.
+    The response, however, is not significant for any period, even when using a 60 percent confidence interval.
+
+    VAR results for an H-1B policy impulse are significant.
+    A positive shock to H-1B issuance is also associated with a downward parabola curve response.
+    The effect is insignificant at the 0.5 level for the first two periods,
+    but the reaches a significant positive effect in the third period.
+    The positive effect plateaus in the seventh period, then reverses,
+    reaching a permanent zero effect in the eleventh period.
+
+    Increased enrollment reflects an increase in demand which is associated with
+    increased tuition and debt both theoretically and in present data\footnote{
+        A simple regression of total enrollment on total federal loans yields a
+        positive coefficient with a p-value less than 0.001 and an adjusted r-squared
+        of 0.973.
+        A simple regression of total enrollment on CPI-adjusted real tuition yields a
+        positive coefficient with a p-value less than 0.001 and an adjusted r-squared
+        of 0.915.
+    }.
+    From a policy perspective, increasing enrollment is not obviously desirable.
+    From an individual perspective, college has a great return,
+    but from a social perspective,
+    concerns about grade inflation,
+    credential inflation,
+    experience inflation,
+    and the social return to education spending abound.
+    There are two related issues which are not considered controversial from a policy perspective.
+    The increasing total of higher education student loan debt is widely considered a crisis,
+    and concerns about the price of higher education is a staple in the modern news cycle.
+    For example, Forbes magazine recently pointed out that the price of college is increasing almost eight times faster than wages\cite{maldonado2018price}.
+    Edvisors notes that the average tuition inflation rate is double the average CPI-U\cite{edvisors_2019}.
+    Since we have identified H-1B policy as an enrollment instrument,
+    and enrollment is directly related to loans and real tuition,
+    VAR analysis allows investigation of whether those downstream variables will be significantly impacted.
+
+    A short linear regression explaining total enrollment
+    is reviewed to determine whether tuition and loans significantly interact.
+    The independent variables include total loans,
+    CPI-adjusted tuition,
+    and an interaction variable.
+    The result is that the interaction variable is positively signed and not quite significant (p < 0.2).
+    It's plausible that more sophisticated analysis may prove some kind of interaction exists,
+    but even supposing significance, the correct Cholesky ordering is non-obvious.
+    For these reasons, loans and tuition are seperately investigated using two distinct VAR models.
+
+    % TODO: use VAR in figure block below
+    \begin{figure}[h!]
+        \centering
+        \caption{Suitability by Expected Conventionality}
+        
+            \begin{tikzpicture}[element/.style={minimum width=1.75cm, minimum height=0.85cm}]
+    
+            \node (n1) {\includegraphics[width=0.7\textwidth]{./figures-and-tables/figure-3.png}};
+            \node (n2) [above=0.25cm] at ($(n1)!0.5!(n1) - (6.2, 0)$) {\textbf{Suitability}};
+            \node (n3) [above=0.25cm] at ($(n1)!0.5!(n1) - (0, 4)$) {\textbf{Expected Conventionality}};
+    
+            \end{tikzpicture}
+    
+        \label{fig:var_results}
+        \end{figure}
+
+    Figure \ref{fig:var_results} is a graphical representation of the VAR model results.
+    Each model is a three-variable model with an H-1B impulse generating a first-order enrollment response,
+    and both models leverage 23 observations over the period from 1994 to 2016.
+    The loan model is optimized for four lags, with unanimous selection criteria assent.
+    The CPI-adjusted tuition model presents mixed lag results.
+    As previously discussed, I prefer the Schwarz Information Criterion because these models involve small sample sizes.
+    SBIC indicates 3 lags as the optimal period for the CPI-adjusted tuition model.
+    
 
     % TODO: var results summary paragraph
 

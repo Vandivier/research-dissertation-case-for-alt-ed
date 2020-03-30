@@ -1,6 +1,6 @@
 clear
 
-* // Note: This table based on multiple OLS from ./analysis-4-dynamic-ols.do
+* // Note: This table based on multiple OLS from ./analysis-3-dynamic-ols.do
 do "D:\GitHub\research-dissertation-case-for-alt-ed\papers\section-127-effects\data\analysis-1-vars.do"
 
 * // simple iv transform of mols preferred regression

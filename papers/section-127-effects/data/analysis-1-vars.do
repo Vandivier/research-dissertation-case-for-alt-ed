@@ -37,6 +37,7 @@ gen employer_x_h1b_2 = employer_x_h1b_1*employer_x_h1b_1
 gen employer_x_h1b_3 = employer_x_h1b_1*employer_x_h1b_1*employer_x_h1b_1
 
 gen loans = totalfederal
+gen loans_x_tuition = loans*tuition_cpi
 
 tab gi, gen(stategi)
 tsset year
