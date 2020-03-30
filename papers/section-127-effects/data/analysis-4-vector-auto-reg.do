@@ -26,10 +26,10 @@ irf graph oirf, set(vardata) irf(vardata) impulse(visa_m_h1b_1) response(totalen
 
 *** // loans and tuition models below
 
-* // loans r-sq 0.9908
-* // visa_m_h1b_1 r-sq 0.9380
-* // totalenrollment r-sq 0.9972
-var visa_m_h1b_1 totalen loans, lags(1/3)
+* // loans r-sq 0.9891
+* // visa_m_h1b_1 r-sq 0.9137
+* // totalenrollment r-sq 0.9971
+var visa_m_h1b_1 totalen loans, lags(1/2)
 irf create vardata, set(vardata, replace) step(11)
 irf graph oirf, set(vardata) irf(vardata) impulse(visa_m_h1b_1) response(loans) xtitle(Years) ytitle(Lagged Loan Effect) ustep(11)
 

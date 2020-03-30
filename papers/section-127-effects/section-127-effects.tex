@@ -601,35 +601,57 @@ education economics, section 127, educational assistance, veteran education, h-1
     but even supposing significance, the correct Cholesky ordering is non-obvious.
     For these reasons, loans and tuition are seperately investigated using two distinct VAR models.
 
-    % TODO: use VAR in figure block below
     \begin{figure}[h!]
         \centering
-        \caption{Suitability by Expected Conventionality}
-        
+        \caption{H-1B VAR Results}
             \begin{tikzpicture}[element/.style={minimum width=1.75cm, minimum height=0.85cm}]
-    
-            \node (n1) {\includegraphics[width=0.7\textwidth]{./figures-and-tables/figure-3.png}};
-            \node (n2) [above=0.25cm] at ($(n1)!0.5!(n1) - (6.2, 0)$) {\textbf{Suitability}};
-            \node (n3) [above=0.25cm] at ($(n1)!0.5!(n1) - (0, 4)$) {\textbf{Expected Conventionality}};
-    
+            \node (n1) {\includegraphics[width=1\textwidth]{./figures-and-tables/fig-1-var-composite.png}};
             \end{tikzpicture}
-    
         \label{fig:var_results}
         \end{figure}
 
     Figure \ref{fig:var_results} is a graphical representation of the VAR model results.
-    Each model is a three-variable model with an H-1B impulse generating a first-order enrollment response,
-    and both models leverage 23 observations over the period from 1994 to 2016.
-    The loan model is optimized for four lags, with unanimous selection criteria assent.
-    The CPI-adjusted tuition model presents mixed lag results.
-    As previously discussed, I prefer the Schwarz Information Criterion because these models involve small sample sizes.
-    SBIC indicates 3 lags as the optimal period for the CPI-adjusted tuition model.
-    
+    The top row are the a three-variable models of interest.
+    In these models an H-1B impulse generates a first-order enrollment response.
+    The bottom row are two-variable specifications which omit the intermediary enrollment response.
+    On the left are the loan models and on the right are the tuition models.
 
-    % TODO: var results summary paragraph
+    The figure makes the three-variable model preference clear for tuition,
+    but some model statistics make the case stronger with respect to the loan models.
+    In the two-variable loan VAR, the r-squared for the visa variable is less than 0.89,
+    and the r-squared for the loan variable is less than 0.988.
+    In the three-variable specification, r-squared for the visa variable is greater than 0.913,
+    and the r-squared for the loan variable is greater than 0.989.
+    This confirms that the enrollment effect is model-improving rather than extraneous complexity.
+
+    Both three-variable models achieve significance at the 0.05 level.
+    Both three-variable models are optimized for two lags based on the SBIC selection criterion.
+    As previously discussed, I prefer the Schwarz Information Criterion because these models involve small sample sizes.
+    The loan model has a sample size of 25 over the years from 1993 to 2017.
+    The CPI-adjusted tuition model has a sample size of 25 over the years from 1992 to 2016.
+
+    The loan model anticipates a temporary increase in total loans,
+    followed by eventual return to zero.
+    The tuition model allows for the same,
+    but it also potentially indicates the establishment of a new normal
+    of higher real tuition prices as a result of a one-time H-1B impulse.
+    We earlier noted that the interaction seems weak, but it has a positive sign.
+    It does not seem to be the case that a real-world shock would result in one or the other effect.
+    Instead, a real-world H-1B shock would be expected to cause both effects,
+    and these models potentially understate their effects if interaction generates higher enrollment.
+
+    In summary, vector autoregressive analysis confirms H-1B visa issuance as a Granger-causal policy instrument.
+    Employer assistance has the expected dynamic effect pattern, but it is insignificant in the VAR specification.
+    Additional analysis indicates H-1B can be leveraged not only to directly impact enrollment,
+    but to further impact aggregate student loans and the real price of tuition.
 
     \section{Conclusions}
 
+    % we see increasing h-1b increases loans temporarily and tuition permanently, so it's bad right? not so fast!
+    % h-1b labor is specialized immigrant labor, so it's beneficial for the economy. Maybe even net of above negative impacts.
+    % what if we could get all of the benefit of immigration without the cost of loans and tuition, credential inflation, etc?
+    % potential solution: change H-1B to remove the degree as meaningful. Employers are already throwing it out!
+    % use alternative credentials. alternative learning is adaptive and effective, cheaper and super cool. even resistant to COVID!
     % the total effect of assistance in the relevant range is positive, and additional real assistance would further boost attendance.
     % however, it's not obvious that increased attendance is a good thing. credential inflation, experience inflation, debt crisis.
     % i fail to find evidence supporting a significant interaction between section 127 and visa policy
