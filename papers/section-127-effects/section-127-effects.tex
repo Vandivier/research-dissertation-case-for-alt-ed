@@ -2,6 +2,7 @@
 % model paper: Dynamic effects of teacher turnover on the quality of instruction (2016)
 %   Hanushek et al
 %   from Economics of Education Review
+% https://www.nber.org/papers/w22472
 
 % secondary model paper: The effects of economic policy and political uncertainties on economic activities
 % Gholipour, 2019
@@ -40,7 +41,7 @@
 \begin{frontmatter}
 
 \title{
-    Dynamic Effects of H-1B and Section 127 Policy Interaction on Higher Education
+    Dynamic Effects of H-1B and Section 127 Policy on Higher Education
     \tnoteref{titlenotes}
 }
 % \tnotetext[titlenotes]{
@@ -61,7 +62,7 @@
     % ---
     It is widely believed that employer educational assistance increases the quantity demanded for higher education,
     but the original passage of Section 127 which enables this tax-deduction for employers is associated with a reduction to the growth of higher education enrollment,
-    and a simple regression of the assistance limit on total enrollment indicates a significant negative correlation. % technically, `reg totalen emp' in my data set
+    and a simple regression of the assistance limit on total enrollment indicates a significant negative correlation. % technically, `reg totalen employer_assistance_1' in my data set
     This raises concerns that confounding factors bias estimates of the effectiveness of Section 127 assistance.
     After taking extensive steps to account for policy effects and other dynamic economic factors,
     I robustly identify a positive effect on enrollment from employer educational assistance
@@ -73,24 +74,6 @@
     an increase in tax-deductable employer educational assistance
     in the amount of one dollar is associated with
     an increase of about 600 to national total enrollment in institutions of higher education.
-
-    % Highlights
-    % 1. Section 127 Employer Assistance
-    % 2. 
-    % 3. 
-    % 4. 
-
-    % % alternate role model abstract based on Gholipour
-    % % model length = 129 words
-    % % this abstract length = 91 words
-    % % technical micropaper structure
-    % % ---
-    % This paper explores the dynamic effects of Section 127, veteran education benefits, Stafford loan, and H-1 Visa policy
-    % on total enrollment in the United States
-    % using annual data from degree-granting institutions in the United States during the 27-year period from 1990 to 2016.
-    % By applying panel vector autoregression (PVAR) and dynamic least squares (DOLS) methods,
-    % the results show that a positive shock to Section 127 assistance triggers a positive response from enrollment in the short-run.
-    % In addition, I find that higher levels of assistance do not significantly decrease enrollment in the long-run.
 \end{abstract}
 
 \begin{keyword}
@@ -115,6 +98,7 @@ education economics, section 127, educational assistance, veteran education, h-1
     % This caused more americans to pursue an undergraduate degree without section 127. we should see section 127 use decline after 1990.
     % Revisit in conclusion -> Recently, employers have begun giving the benefit anyway due to labor selection and internal ROI benefits
 
+    The passage of Public Law 95-600 in 1978 created Section 127\cite{plaw95_600_1978}.
     Basic supply and demand theory indicate that a reduction in price is associated with an increase to the quantity demanded.
     In 1978, a bill was passed allowing employer educational assistance to be tax-deductable in the United States up to a nominal limit of 5,000 dollars.
     It is surprising, therefore, that 1978 is associated with a local decrease in the growth rate on both total and public university enrollment.
@@ -175,7 +159,7 @@ education economics, section 127, educational assistance, veteran education, h-1
     Indeed, lack of market demand appears to be a good explanation for the consistent college-age enrollment percent
     which is observed at 25.7 percent in both 1970 and 1980.
     A demand-side explanation is consistent with the falling average tuition and fees observed for all institutions from 1972 to 1980.
-    After 1980 we see an upward trend in price and also an upward trend in college-age enrollment percentage, as well as simple total enrollment.
+    After 1980 we see an upward trend in price and also an upward trend in college-age enrollment percentage, as well as total enrollment.
 
     With an increase to the Stafford limit in the 1977 school year,
     a major change to veteran education benefits in the 1981 school year,
@@ -482,7 +466,8 @@ education economics, section 127, educational assistance, veteran education, h-1
     This indicates that raising assistance,
     whether in the current period or over time,
     is expected to boost enrollment at the margin.
-    Both effects follow an Inada-like pattern, where the marginal effect is decreasingly positive.
+    Both marginal effects follow an Inada-like pattern, where the marginal effect is decreasingly positive.
+    The linear effect is insignificant, sensitive to specification, and indeterminantly signed.
 
     First-difference, lagged, and current H-1B visa effects are all signficant,
     but linear visa effects are not significant.
