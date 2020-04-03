@@ -55,7 +55,7 @@
 \ead{jvandivi@masonlive.gmu.edu}
 
 \begin{abstract}
-    % word count: 183
+    % word count: 206
     % Hanushek model abstract word count: 151
     % ref: simple regression claim: `reg totalen employer_assistance_1'
     Section 127 of the United States Internal Revenue Code provides for a tax deduction to employers which provide employee educational assistance.
@@ -68,6 +68,7 @@
     The linear and total effects of interest remain negative over the main period of analysis from 1992 through 2017.
     In the preferred dynamic model, given a steady state,
     the period-over-period effect of interest from a one thousand dollar increase to real employer assistance would be an increase to total enrollment of about 7.45 million students.
+    H-1B inclusion was motivated as a control, but I discover it is a comparatively strong policy instrument for enrollment and other policy interests.
     Results are validated using vector autoregression (VAR), dynamic ordinary least squares (DOLS), and instrumental variable (IV) analysis.
 \end{abstract}
 
@@ -81,111 +82,66 @@ education economics, section 127, tuition assistance, veteran benefits, h-1b, de
 \linenumbers
 
     \section{Introduction}
-
-    % TODO: basic descriptive time series line graphs.
+    % TODO: basic time series graph.
     % enrollment, loans, prices, and policy states over time are candidates.
-
-    % background scratch notes in this comment block:
-    % degree requirement as a strategy to import cheap, effective foreign labor (VISA)
-    % this prevents high school graduates from directly entering roles that typically award section 127 (white color, major employer, corporate work)
-    % until recently, that is, with walmart, mcdonalds, starbucks giving section 127 i think even to part timers
-    % Theory: After 1990, companies began requiring a 4 year degree so they could have an H-1B justification.
-    % This caused more americans to pursue an undergraduate degree without section 127. we should see section 127 use decline after 1990.
-    % Revisit in conclusion -> Recently, employers have begun giving the benefit anyway due to labor selection and internal ROI benefits
-
     The passage of Public Law 95-600 in 1978 created Section 127\cite{plaw95_600_1978}.
-    Basic supply and demand theory indicate that a reduction in price is associated with an increase to the quantity demanded.
-    In 1978, a bill was passed allowing employer educational assistance to be tax-deductable in the United States up to a nominal limit of 5,000 dollars.
-    It is surprising, therefore, that 1978 is associated with a local decrease in the growth rate on both total and public university enrollment.
-    This study exploits real variation in the tax-deductable employer educational assistance limit to eventually identify the expected positive effect,
-    but not before identifying and correcting for several interesting things going on in the economy.
-    Specifically, an interaction between H-1B policy and Section 127 employer educational assistance is discovered and assessed.
+    Section 127 provides for a limited employer tax deduction for the transfer of financial educational assistance to an employee.
+    This paper tests the hypothesis that the causal effect of Section 127 employer assistance on total university enrollment is positive.
+    I control extensively for dynamic policy and economic variation, then assess robustness and Granger causality across multiple specifications.
+    I find that employer assistance has a positive marginal effect on enrollment,
+    negative linear and total effects,
+    and that H-1B visa policy is a comparatively strong policy instrument for enrollment,
+    national student loan debt, and the price of education.
+    The failure of several simple theories to succesfully explain the observation of enrollment slowdown in the late 1970s and 1980s further motivates the present study.
 
-    \subsection{Supply-Side Explanations}
-    Before forming more exotic theories, some simpler hypotheses should be checked.
-    One hypothesis is that there is an adjustment period after the passage of Section 127 and before widespread employer provision of the newly deductable benefit.
-    Allowing for a 3 or 5 year lag around the passage of Section 127 in 1978 does not resolve the issue.
-    Across the eight five-year periods from 1970 to 2010, the five-year public enrollment growth rate was above 9 percent as often as it was below.
-    Two of the four low-rate intervals occured immediately subsequent to the 1978 creation of Section 127.
-    The interval just prior, from 1970-1975, saw the highest growth in enrollment across the period.
-    It does not appear to be a one-year fluke that the employer educational assistance is associated with declined enrollment growth.
-    
-    Another important point is that Section 127 was passed in 1978, but it took effect in the 1979 tax year.
-    1979 saw modest growth in enrollment,
-    but given the pre-existing long-run context of positive trend in enrollment,
-    it is not clear that Section 127 can be attributed any causality.
+    \subsection{Simple Supply-Side Explanations}
+    One hypothesis is that there is an adjustment period between the creation of Section 127 and widespread employer provision of the newly deductable benefit.
+    Allowing for a 3 or 5 year lag around the passage of Public Law 95-600 fails to harmonize observed enrollment slowdown with the expected increase to demand.
+    Across the eight five-year periods from 1970 to 2010, the five-year public enrollment growth rate was above 9 percent half of the time.
+    Two of the four low-growth intervals occured immediately subsequent to the 1978 creation of Section 127.
+    The period just prior, from 1970-1975, saw the highest growth in enrollment across those eight periods.
 
-    An alternative to the 3 or 5 year lagged analysis is to directly refer to surveys of employers.
+    In addition to selecting arbitray 3 or 5 year lags to proxy employer adoption, I directly review surveys of employers.
     Cappelli\cite{cappelli2004employers} identifies 3 employer surveys from 1992 and 1993 which indicate that at least 86 percent of surveyed employers provided educational assistance.
-    These studies were samples of convenience with a focus on large employers,
-    but additional information leads Cappelli to claim that a substantial majority of employers offer such plans over his period of analysis from about 1990 to 2004.
-    Cappelli notes that employee utilization of the benefit favors graduate education
-    with about 20 percent of graduate students receiving employer assistance
-    and roughly 6 percent of undergraduates doing so.
-    Common provision of the benefit has remained true in later years.
+    These studies were samples of convenience,
+    but a thorough analysis leads Cappelli to claim that a substantial majority of employers offered such plans over his period of analysis from about 1990 to 2004.
+    Common provision of the benefit remained true in later years.
     In 2013, SHRM reported that 61 percent of employers offer tuition assistance\cite{cherry2014rejuvenating}.
     In 2017, World at Work found that 85 percent of employers offered such a benefit,
     with another 7 percent offering non-reimbursement tuition assistance, such as upfront tuition discounts\cite{talentculture_2018}.
 
-    \subsection{H-1B, Veteran Education Benefits, and Stafford Loan Interaction}
-    The idea that graduate students mainly use employer education benefits motivates hypotheses around undergraduate access.
-    Increasingly since the 1990s, developed economies have experienced degree inflation and experience inflation.
-    Entry level positions now require a degree when previously this was not necessary, even when technology has made the work easier.
-    It is possible that undergraduate access to employer benefits are reduced simply because employers increasingly hire individuals that already have the degree.
-    Employers are known to value the degree as a signal of labor quality, but these days there are plenty of other, richer data sources on quality for certain professions.
-    In computer programming we see some employers completely dropping the degree requirement and preferring technical interviews, digital portfolio evaluation, and other signals.
-    Why, then, do other leading employers continue to require the degree?
-    One answer is that the degree requirement forms an H-1B justification.
-    Since the passage of the Immigration Act of 1990\cite{law1990law}, a corporation must claim a shortage of qualified specialized labor to justify an H-1B.
-    The "attainment of a bachelor's or higher degree" is written into the law as a test of whether labor is qualified and specialized.
-    This would motivate employers to begin requiring the degree in order to obtain cheap immigrant labor, even while knowing the degree may not be necessary.
+    In summary, the simplistic hypothesis of lagged or bottlenecked employer support for Section 127 fails to solve the problem,
+    motivating more complex analysis carried out in this paper.
 
-    Zero employers offered Section 127 educational assistance in 1977, but the majority offered the benefit by 1993.
-    Immigration policy is a change which interrupts this period of analysis, but there are two other major policies to take note of.
-    Stafford loans were available before Section 127, but the limits and rules for these loans and other government assistance to higher education fluctuated over the period of analysis.
-    Government educational benefits for veterans is another major policy in the higher education assistance space.
-    It becomes difficult to imagine a proper Section 127 analysis which does not include dynamic correction for these potentially important factors,
-    as well as correction for general price changes and economic conditions in the economy over time.
-    Such a corrected analysis is exactly what this paper completes.
+    \subsection{Simple Demand-Side Explanations}
+    An alternative explanation for the enrollment slowdown observed around the time that Section 127 was created is that there simply wasn't much demand for college.
+    One might argue that decreased demand even motivated the creation of Section 127.
+    In fact, decreasing market demand is consistent with observation.
+    Falling average tuition and fees are observed for all institutions from 1972 to 1980.
+    The college-age enrollment percent does not increase substantially from 1970 to 1980.
+    After 1980 we see an upward trend in the price of higher education, the college-age enrollment percentage, and total enrollment.
 
-    \subsection{Demand-Side Explanations}
-    The prior explanations consistitute a supply-side exploration of the impotence of Section 127.
-    An alternative explanation is that there simply wasn't much demand for college in the early years of Section 127.
-    Indeed, lack of market demand appears to be a good explanation for the consistent college-age enrollment percent
-    which is observed at 25.7 percent in both 1970 and 1980.
-    A demand-side explanation is consistent with the falling average tuition and fees observed for all institutions from 1972 to 1980.
-    After 1980 we see an upward trend in price and also an upward trend in college-age enrollment percentage, as well as total enrollment.
-
-    With an increase to the Stafford limit in the 1977 school year,
-    a major change to veteran education benefits in the 1981 school year,
-    Section 127 beginning in the 1978 school year,
-    and price changes in higher education and for all other goods,
-    claims about a particular cause become dubious without full and corrective statistical treatment.
-    Even so,
-    there is some plausibility to the claim that Section 127 was passed during a time when demand was weak,
-    so that there may have been a positive effect on the part of Section 127 as early as the first year,
-    but it was overshadowed by general decline.
-    The main contribution of this line of thought to a more general analysis is that corrective statistics should include price data
-    for education in particular, and also for the general economy.
+    While a decrease in demand matches observation,
+    an omitted variable bias problem precludes drawing conclusions on the effect of Section 127.
+    Important omitted variables include controls for inflation, the price of education, and important policy changes.
+    Immigration, veteran education, and federal lending policy undergo important change in proximity to 1978 and in years later.
+    Identifying whether an enrollment slowdown is a demand change or a change to quantity demanded is also a problem for a simple demand-side explanation.
 
     \section{Empirical Model}
 
-    Equation \ref{eq1} is an ordinary least squares model of total enrollment higher education in the United States.
+    Equation \ref{eq1} is an ordinary least squares model of total postsecondary enrollment in the United States.
 
     \begin{equation}
         Y = \beta_1X_1+\beta_2X_2...+\beta_kX_k+e
         \label{eq1}
     \end{equation}
 
-    The Section 127 policy effect is the variable of interest.
+    The Section 127 policy effect is the parameter of interest.
     Three other policy variables are included for federal lending policy, veteran education benefits, and H-1 Visa policy.
-    In addition to the four policy variables, 
-    enrollment is modelled as a function of time,
-    and the price of tuition and fees.
-    A variable for personal consumption expenditures (PCE) as an measure of inflation is also included.
+    Two additional variables are controls for time and the real price of university tuition plus mandatory fees.
 
-    For robustness and analytical completeness, I test two other left hand variables using ordinary least squares,
-    then I also test the relation of interest with two other modelling approaches.
+    For robustness and analytical completeness, I test two other left hand variables using ordinary least squares.
+    I subsequently test the relation of interest with two other modelling approaches.
     Specifically, I explore vector autoregressive (VAR) models
     and an instrumental variable regression following the Anderson–Hsiao pattern\cite{anderson1981estimation} with the lagged variable of interest as an instrument.
 
@@ -671,6 +627,45 @@ education economics, section 127, tuition assistance, veteran benefits, h-1b, de
     but to further impact aggregate student loans and the real price of tuition.
 
     \section{Conclusions}
+
+    A surprising slowdown in enrollment is observed around the time Section 127 was created.
+    Cappelli constrains a simple slow employer adoption hypothesis by demonstrating widespread adoption as early as 1993.
+    Demand-side explanations do a fair job of explaining low enrollment until about 1980.
+    From about 1980 until about 1993, several important economic and policy variations are identified.
+
+    % Cappelli also provides evidence that employee utilization of educational benefits preferentially go to graduate students.
+    % This motivates hypotheses on undegraduate access.
+    % One reason undergraduates might lack access is because they are not being hired.
+    % Without a job, the undergraduate student is unable to obtain employer assistance.
+    % This hypothesis motivates theories about why employers began selecting for college graduates.
+
+    % The common story, with much evidence to prove it, is that the college degree is a signal of employee quality.
+    % but in modern times many employers are eliminating degree require
+
+    % useful lost bits.
+    % Employees who leverage this benefit by necessity enroll in a university.
+    % Willis Towers Watson estimates that fewer than 10 percent of eligible employees use tuition reimbursement benefits annually\cite{merrick_2019},
+    % but this remains a substantial change in demand.
+    %
+    % The original Section 127 nominal limit was \$5,000.
+    %
+    % It is surprising that 1978 is associated with a local decrease in the growth rate on both total and public university enrollment.
+
+    % \subsection{Integrating Simple Explanations}
+
+    % Cappelli provides evidence that most employers provide education benefits by 1993,
+    % The idea that graduate students mainly use employer education benefits motivates hypotheses around undergraduate access.
+    % Increasingly since the 1990s, developed economies have experienced degree inflation and experience inflation.
+    % Entry level positions now require a degree when previously this was not necessary, even when technology has made the work easier.
+    % It is possible that undergraduate access to employer benefits are reduced simply because employers increasingly hire individuals that already have the degree.
+    % Employers are known to value the degree as a signal of labor quality, but these days there are plenty of other, richer data sources on quality for certain professions.
+    % In computer programming we see some employers completely dropping the degree requirement and preferring technical interviews, digital portfolio evaluation, and other signals.
+    % Why, then, do other leading employers continue to require the degree?
+    % One answer is that the degree requirement forms an H-1B justification.
+    % Since the passage of the Immigration Act of 1990\cite{law1990law}, a corporation must claim a shortage of qualified specialized labor to justify an H-1B.
+    % The "attainment of a bachelor's or higher degree" is written into the law as a test of whether labor is qualified and specialized.
+    % This would motivate employers to begin requiring the degree in order to obtain cheap immigrant labor, even while knowing the degree may not be necessary.
+    % Such a corrected analysis is exactly what this paper completes.
 
     % we see increasing h-1b increases loans temporarily and tuition permanently, so it's bad right? not so fast!
     % h-1b labor is specialized immigrant labor, so it's beneficial for the economy. Maybe even net of above negative impacts.
