@@ -77,7 +77,7 @@
 \end{abstract}
 
 \begin{keyword}
-education economics, section 127, educational assistance, veteran education, h-1b, debt crisis, dols, vars
+education economics, section 127, tuition assistance, veteran benefits, h-1b, debt crisis, dols, visa, immigration, autoregression
 \MSC[2010] % TODO
 \end{keyword}
 \end{frontmatter}
@@ -467,7 +467,40 @@ education economics, section 127, educational assistance, veteran education, h-1
     whether in the current period or over time,
     is expected to boost enrollment at the margin.
     Both marginal effects follow an Inada-like pattern, where the marginal effect is decreasingly positive.
-    The linear effect is insignificant, sensitive to specification, and indeterminantly signed.
+
+    The linear effect on employer assistance is significant and negative.
+    I now calculate the total effect of employer assistance.
+    Model 6, the preferred model, is fit to the years 1992 through 2017.
+    The average values for the relevant independent variables over this period include
+    an average real assistance limit of 13942.22,
+    an average squared assistance limit of $2.56x10^8$,
+    an average first difference in assistance of -1228.18,
+    and an average second difference of 122.87.
+    Based on these values, the total effect of employer assistance over the model period is
+    a decrease in enrollment by about 3.34 million\footnote{
+        This is the rounded result of solving Y = $-220.1953*13942.22+(2.56*10^8)*.0054062-1314.489*1228.18-355.0654*122.87$
+    }.
+    % below stata command to get mean variables for preferred dols period of analysis (n=26, 1992-2017)
+    % sum year employer_assistance_1 employer_assistance_2 d.employer_assistance_1 d.d.employer_assistance_1 if !missing(totalenrollment)  & !missing(d2.visa_m_h1b_1)
+
+    % I now estimate the total effect of employer assistance in three contrived examples.
+    % Suppose there have been three years of constant employer assistance.
+    % The real tax-deductable limit is valued at \$5,250.
+    % Suppose that in a fourth period there is a change of \$0.
+    % The total effect of employer assistance in this fourth period would be
+    % to decrease enrollment by about 1.01 million\footnote{
+    %     This is the rounded result of solving Y = -220.2*5250+.0054*5250*5250.
+    % }.
+    % In a second scenario, suppose that in the fourth year the real tax-deductable limit is reduced to \$0.
+    % The total effect of employer assistance in this fourth period would be
+    % to decrease enrollment by about 5.04 million\footnote{
+    %     This is the rounded result of solving Y = 1314.489*-5250+-355.065*-5250.
+    % }.
+    % Finally, in a third scenario, suppose real employer assistance is increased by \$2,000.
+    % The total effect of interest in this case would be
+    % to increase enrollment by about 0.61 million\footnote{
+    %     This is the rounded result of solving Y = -220.2*7250+.0054*7250*7250+1314.489*2000+-355.065*2000.
+    % }.
 
     First-difference, lagged, and current H-1B visa effects are all signficant,
     but linear visa effects are not significant.
