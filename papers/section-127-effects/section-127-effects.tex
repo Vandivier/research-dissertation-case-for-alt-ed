@@ -55,25 +55,20 @@
 \ead{jvandivi@masonlive.gmu.edu}
 
 \begin{abstract}
-    % role model abstract based on Hanushek et al (2016)
-    % model length = 151 words
-    % this abstract length = 165 words
-    % narrative-problem-solution structure
-    % ---
-    It is widely believed that employer educational assistance increases the quantity demanded for higher education,
-    but the original passage of Section 127 which enables this tax-deduction for employers is associated with a reduction to the growth of higher education enrollment,
-    and a simple regression of the assistance limit on total enrollment indicates a significant negative correlation. % technically, `reg totalen employer_assistance_1' in my data set
-    This raises concerns that confounding factors bias estimates of the effectiveness of Section 127 assistance.
-    After taking extensive steps to account for policy effects and other dynamic economic factors,
-    I robustly identify a positive effect on enrollment from employer educational assistance
-    by exploiting real variation in employer educational assistance over the 27-year period from 1990 to 2016.
-    Results are validating using panel vector autoregression (PVAR),
-    dynamic least squares (DOLS) methods,
-    and instrumental variable (IV) approaches.
-    In the preferred model,
-    an increase in tax-deductable employer educational assistance
-    in the amount of one dollar is associated with
-    an increase of about 600 to national total enrollment in institutions of higher education.
+    % word count: 183
+    % Hanushek model abstract word count: 151
+    % ref: simple regression claim: `reg totalen employer_assistance_1'
+    Section 127 of the United States Internal Revenue Code provides for a tax deduction to employers which provide employee educational assistance.
+    Section 127 assistance creates an income effect, so, surprisingly,
+    historical passage is superficially associated with reduced growth in enrollment for higher education.
+    Further, a simple regression of the inflation-adjusted tax deductable limit of employer assistance on higher education enrollment indicates a significant negative correlation.
+    These counterintuitive findings raise concerns that omitted variables bias estimates of the effectiveness of Section 127 assistance.
+    After taking extensive steps to account for dynamic economic conditions and H-1B visa, veteran education, and federal loan policies,
+    I robustly identify positive marginal employer assistance effects on enrollment.
+    The linear and total effects of interest remain negative over the main period of analysis from 1992 through 2017.
+    In the preferred dynamic model, given a steady state,
+    the period-over-period effect of interest from a one thousand dollar increase to real employer assistance would be an increase to total enrollment of about 7.45 million students.
+    Results are validated using vector autoregression (VAR), dynamic ordinary least squares (DOLS), and instrumental variable (IV) analysis.
 \end{abstract}
 
 \begin{keyword}
@@ -467,8 +462,8 @@ education economics, section 127, tuition assistance, veteran benefits, h-1b, de
     whether in the current period or over time,
     is expected to boost enrollment at the margin.
     Both marginal effects follow an Inada-like pattern, where the marginal effect is decreasingly positive.
-
     The linear effect on employer assistance is significant and negative.
+
     I now calculate the total effect of employer assistance.
     Model 6, the preferred model, is fit to the years 1992 through 2017.
     The average values for the relevant independent variables over this period include
@@ -478,7 +473,19 @@ education economics, section 127, tuition assistance, veteran benefits, h-1b, de
     and an average second difference of 122.87.
     Based on these values, the total effect of employer assistance over the model period is
     a decrease in enrollment by about 3.34 million\footnote{
-        This is the rounded result of solving Y = $-220.1953*13942.22+(2.56*10^8)*.0054062-1314.489*1228.18-355.0654*122.87$
+        The total effect is the rounded result of solving $X=-220.1953*13942.22+(2.56*10^8)*.0054062+1314.489*-1228.18-355.0654*122.87$.
+    }.
+    % The time-invariant effect of a hypothetical \$1,000 real increase to employer assistance would be
+    % a decrease to enrollment of about 0.21 million.\footnote{
+        % The time-invariant effect is computed as $X=-220.1953*1000+.0054062*1000*1000$.
+    % }.
+    Suppose a steady state, where Section 127 assistance has been constant for more than three periods.
+    In this situation, a \$1,000 increase over the next period would result in
+    the first and second differences both taking a value of \$1,000.
+    Given such a situation,
+    the effect of a hypothetical dynamic \$1,000 real increase to employer assistance would be
+    an increase to enrollment of about 7.45 million\footnote{
+        The period-over-period effect from a steady state is computed as $X=-220.1953*1000+.0054062*1000*1000+1314.489*1000-355.0654*1000$.
     }.
     % below stata command to get mean variables for preferred dols period of analysis (n=26, 1992-2017)
     % sum year employer_assistance_1 employer_assistance_2 d.employer_assistance_1 d.d.employer_assistance_1 if !missing(totalenrollment)  & !missing(d2.visa_m_h1b_1)
