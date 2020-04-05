@@ -1,16 +1,26 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "allowJs": true,
+    "checkJs": true,
     "esModuleInterop": true,
-    "isolatedModules": true,
     "lib": ["esnext"],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
-    "plugins": [{ "name": "deno_ls_plugin" }],
     "pretty": true,
     "resolveJsonModule": true,
-    "target": "esnext"
+    "plugins": [
+      {
+        "name": "deno_ls_plugin"
+      }
+    ],
+    "target": "esnext",
+    "paths": {
+      "deno": ["C:/Users/John Vandivier/.deno/deno.d.ts"],
+      "https://*": ["C:/Users/John Vandivier/.deno/deps/https/*"],
+      "http://*": ["C:/Users/John Vandivier/.deno/deps/http/*"]
+    }
   },
   "include": ["./**/*.ts"]
 }
