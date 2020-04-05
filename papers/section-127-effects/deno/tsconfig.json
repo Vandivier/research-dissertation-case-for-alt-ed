@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "lib": ["esnext"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "plugins": [{ "name": "deno_ls_plugin" }],
+    "pretty": true,
+    "resolveJsonModule": true,
+    "target": "esnext"
+  },
+  "include": ["./**/*.ts"]
+}
