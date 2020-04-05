@@ -9,33 +9,34 @@
 % https://www.sciencedirect.com/science/article/pii/S0275531918306081
 \documentclass[review]{elsarticle}
 
+\usepackage{amsmath}
 \usepackage{lineno,hyperref}
-\modulolinenumbers[5]
-
-\journal{Journal of \LaTeX\ Templates}
-\bibliographystyle{elsarticle-num}
 \usepackage{booktabs}
 \usepackage{graphicx}
-\graphicspath{{../alt-ed-survey/figures-and-tables}}
 \usepackage{hyperref}
+\usepackage{siunitx}
+\usepackage{tabularx}
 \usepackage{threeparttable}  
 \usepackage{tikz}
-\usetikzlibrary{calc,matrix}
 
 % ref: https://tex.stackexchange.com/questions/19390/how-do-you-download-packages-for-texworks-on-windows-7
 % ref: https://tex.stackexchange.com/questions/47418/siunitx-specifying-custom-command-as-input-symbol
 \newcommand{\sym}[1]{\rlap{#1}}
-\usepackage{siunitx}
-\sisetup{ detect-mode, 
-          group-digits            = false ,     %%% not grammatical
-          input-signs             = ,           %%% not grammatical
-          input-symbols           = ()[]-+* ,   % specifying \sym here does not work  %%% not grammatical
-          input-open-uncertainty  = ,           %%% not grammatical
-          input-close-uncertainty = ,           %%% not grammatical
-          table-align-text-post   = false       %%% not grammatical
-        }
 
-\usepackage{tabularx}
+\bibliographystyle{elsarticle-num}
+\graphicspath{{../alt-ed-survey/figures-and-tables}}
+\journal{Journal of \LaTeX\ Templates}
+\modulolinenumbers[5]
+\sisetup{
+    detect-mode,
+    group-digits            = false ,     %%% not grammatical
+    input-signs             = ,           %%% not grammatical
+    input-symbols           = ()[]-+* ,   % specifying \sym here does not work  %%% not grammatical
+    input-open-uncertainty  = ,           %%% not grammatical
+    input-close-uncertainty = ,           %%% not grammatical
+    table-align-text-post   = false       %%% not grammatical
+}
+\usetikzlibrary{calc,matrix}
 
 \begin{document}
 \begin{frontmatter}
@@ -129,21 +130,87 @@ Sufficient identification of the effect of Section 127 must account for changes 
 
 \section{Empirical Model}
 
-Equation \ref{eq1} is an ordinary least squares model of total postsecondary enrollment in the United States.
+This paper takes multiple steps to ensure robustness and analytical completeness.
+The final results are consistent across three empirical specifications.
+In addition to the variable of interest, this paper tests two other left-hand variables.
+Testing these two secondary dependent variables of interest improves confidence in the theoretical and applied soundness of the conclusion.
 
+Total postsecondary enrollment in the United States is the dependent variable,
+and the Section 127 policy effect is the right-hand parameter of interest in the first two specifications.
+Equation \ref{eq1} is the first specification of interest. This model is an ordinary least squares model.
+Here, $\alpha$ is a $1*k$ vector of coefficients and $V$ is a $k*1$ vector of annually observed independent variables.
+
+% time-invarient coefficients.
+% all betas are linear coefficients of their respective independent variables
+% nonlinear effects are capture with exponential transforms as distinct independent variables.
+% OLS
 \begin{equation}
-    Y = \beta_1X_1+\beta_2X_2...+\beta_kX_k+e
+    % alternatively, longer-form:
+    % Y_t = \beta_1X_{1t}+\beta_2X_2...+\beta_kX_k+e
+    Y_t = \alpha{V_{t}}+u_t
     \label{eq1}
 \end{equation}
 
-The Section 127 policy effect is the parameter of interest.
-Other policy variables exist for federal lending policy, veteran education benefits, and H-1 Visa policy.
-Two additional non-policy variables are controls for time and the real price of university tuition plus mandatory fees.
+Policy variables exist for federal lending policy, veteran education benefits, and H-1 Visa policy.
+Two additional non-policy variables are controls for time, in years,
+and the real price of university tuition plus mandatory fees.
 
-For robustness and analytical completeness, I test two other left-hand variables using ordinary least squares.
-I subsequently test the relation of interest with two other modeling approaches.
+The second specification is given in Equation \ref{eq2}.
+This model follows the Anderson–Hsiao pattern\cite{anderson1981estimation} with the lagged variable of interest as an instrument.
+This model is intended to address concerns about endogeneity in the dependent variable.
+It is both an instrumental variable model and also a dynamic ordinary least squares (DOLS) model.
+
+% DOLS
+% ref: http://www3.grips.ac.jp/~yamanota/Lecture%20Note%208%20to%2010%202SLS%20&%20others.pdf
+% could be important to acknowledge that "you must be aware that the standard errors from the two-step procedure
+%   are incorrect, usually smaller than the correct ones" per supra
+%   but in our case beta of interest isn't importantly different between preferred DOLS and non-IV transform
+% ref: https://www-jstor-org.mutex.gmu.edu/stable/2287517?seq=2#metadata_info_tab_contents
+% ref: preferred dols model from analysis-9-dols-reg-table.do
+\begin{subequations}
+    \begin{equation}
+        \Delta{Y_t} = \beta{W_{t}}+B{z_t}+e_t
+        \label{eq2}
+    \end{equation}
+    \begin{equation}
+        z = \delta{W_{t}}+D{Y_{t-2}}+g_t
+        % I think this is a better derivation but I'm not sure if it's completely correct:
+        % z = \hat{Y}_{t-1} = \delta{W_{t}}+D{Y_{t-2}}+g_t
+        \label{eq3}
+    \end{equation}
+\end{subequations}
+
+Here, $\beta$ is a $1*l$ vector of coefficients and $W$ is an $l*1$ vector of annually observed independent variables.
+$z$ is the instrument, and it is a projection of lagged enrollment derived from twice-lagged enrollment.
+Equation \ref{eq3} explicitly derives $z$.
+% B is the particular explanatory coefficient for $z$.
+% lowkey B assumes invariance over time but let's not talk about it
+
+$l$ is a direct transformation of $k$ from Equation \ref{eq1}.
+$l$ contains five variations of each variable in $k$.
+The first variation is the non-transformed value.
+$l$ also contains the first and second lags,
+as well as the first and second differences of each variable in $k$.
+% In Equation \ref{eq3},
+% $\delta$, $D$, and $g$ fill modelling roles analgous to $\beta$,
+% $B$, and $e$ from Equation \ref{eq2}.
+
+%% TODO: VAR regression
+
+\begin{equation}
+    \Delta{Y_t} = \beta_1X_{t1}t+\beta_2X_2...+\beta_kX_k+u_t
+    \label{eq4}
+\end{equation}
+
+
 Specifically, I explore vector autoregressive (VAR) models
-and an instrumental variable regression following the Anderson–Hsiao pattern\cite{anderson1981estimation} with the lagged variable of interest as an instrument.
+and an instrumental variable regression following the
+
+% VAR
+% \begin{equation}
+%     \DeltaY_t = \beta_1X_t1t+\beta_2X_2...+\beta_kX_k+e
+%     \label{eq3}
+% \end{equation}
 
 \section{Data}
 
