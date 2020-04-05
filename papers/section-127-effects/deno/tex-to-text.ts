@@ -22,6 +22,7 @@ import { BufReader, ReadLineResult } from "https://deno.land/std/io/bufio.ts";
 
 const decoder = new TextDecoder();
 const encoder = new TextEncoder();
+const EOL = '\n';
 
 const handleLine = (sLine: string): string => {
     const isComment = sLine.trim()[0] === "%";
@@ -30,10 +31,10 @@ const handleLine = (sLine: string): string => {
     const regexMatchIsSectionHeading = sLine.match(/\\[a-z]*section{(?<headingText>[A-z- ]*)}/);
 
     if (!isComment && !isTechnical && !isOmittedFromTextVersion) {
-        return sLine.trim() + '\n';
+        return sLine.trim() + EOL;
     } else if(regexMatchIsSectionHeading) {
         const headingText = regexMatchIsSectionHeading.groups && regexMatchIsSectionHeading.groups.headingText;
-        if (headingText) return headingText.trim() + '\n';
+        if (headingText) return headingText.trim() + EOL;
     }
 
     return '';
@@ -42,12 +43,20 @@ const handleLine = (sLine: string): string => {
 export async function read_line(filename: string, lineCallback: (s: string)=>string): Promise<string> {
   const file = await Deno.open(filename);
   const bufReader = new BufReader(file);
+  let bCurrentLineIsEmpty = false;
+  let bPriorLineWasEmpty = false;
   let sAccumulator = '';
   let readlineResult: ReadLineResult | Deno.EOF;
 
   while ((readlineResult = await bufReader.readLine()) !== Deno.EOF) {
     const sCurrentLine = decoder.decode(readlineResult.line);
-    sAccumulator += lineCallback(sCurrentLine);
+    const sCurrentProcessedLine = lineCallback(sCurrentLine);
+
+    bCurrentLineIsEmpty = !sCurrentProcessedLine.trim().length;
+    if (!(bCurrentLineIsEmpty && bPriorLineWasEmpty)) {
+        sAccumulator += sCurrentProcessedLine;
+    }
+    bPriorLineWasEmpty = bCurrentLineIsEmpty;
   }
 
   file.close();

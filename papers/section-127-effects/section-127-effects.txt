@@ -1,13 +1,4 @@
-
-
-
-
-
-
-
 Dynamic Effects of H-1B and Section 127 Policy on Higher Education
-
-
 Section 127 of the United States Internal Revenue Code provides for a tax deduction to employers which provide employee educational assistance.
 Section 127 assistance creates an income effect, so, surprisingly,
 historical passage is superficially associated with reduced growth in enrollment for higher education.
@@ -20,9 +11,6 @@ In the preferred dynamic model, given a steady state,
 the period-over-period effect of interest from a one thousand dollar increase to real employer assistance would be an increase to total enrollment of about 7.45 million students.
 H-1B inclusion was motivated as a control, but I discover it is a comparatively strong policy instrument for enrollment and other policy interests.
 Results are validated using vector autoregression (VAR), dynamic ordinary least squares (DOLS), and instrumental variable (IV) analysis.
-
-
-
 Introduction
 The passage of Public Law 95-600 in 1978 created Section 127\cite{plaw95_600_1978}.
 Section 127 provides for a limited employer tax deduction for the transfer of financial educational assistance to an employee.
@@ -72,7 +60,6 @@ Empirical Model
 Equation \ref{eq1} is an ordinary least squares model of total postsecondary enrollment in the United States.
 
 Y = \beta_1X_1+\beta_2X_2...+\beta_kX_k+e
-
 The Section 127 policy effect is the parameter of interest.
 Three other policy variables are included for federal lending policy, veteran education benefits, and H-1 Visa policy.
 Two additional variables are controls for time and the real price of university tuition plus mandatory fees.
@@ -90,13 +77,11 @@ Enrollment figures are for the fall semester of the school year.
 Information on selected years from 1947 to 2028 is provided, where values for 2018 and later are projected.
 The present study does not use any of the projected values.
 Other data sources and policy considerations constrain the period of interest to the 27-year period from 1990 to 2016.
-
 Personal Consumption Expenditures (PCE) data is a measure of inflation provided by the U.S. Bureau of Economic Analysis (BEA)\cite{bea_2020}.
 Education-specific inflation is also calculated using NCES data\cite{nces_2017}.
 NCES data is the average tuition and required fees for full-time undergraduate students across all degree-granting postsecondary institutions.
 NCES provides nominal values and values adjusted for the consumer price index (CPI) for tuition.
 The price of room and board is ignored.
-
 Nominal Section 127 limits are a matter of public law.
 Section 127 took effect beginning after December 31, 1978 with a nominal assistance limit of 5,000 dollars\cite{plaw95_600_1978}.
 In October 1986, Pub. L. 99–514 increased the nominal assistance limit to 5,250 dollars\cite{plaw99_514_1986}.
@@ -126,7 +111,6 @@ Due to constraints on the availability of other right hand variable data,
 the main period of regression analysis ranges from 1990 to 2016.
 Veteran education benefits exhibit only one change during this period,
 but this factor proves to be significant in the preferred model.
-
 Stafford loan data is another key component of the analysis.
 Stafford loan data is directly relevant by itself,
 but it is further intended a proxy for broader non-military federal student aid policy.
@@ -136,7 +120,6 @@ The second is a dummy variable indicating whether the undergraduate loan limit
 is the combined limit for undergraduate and graduate loans.
 A policy change became effective in 1993 which grouped these limits together.
 Stafford loan data is sourced from FinAid\cite{finaid_2020}.
-
 Visa policy is a complex issue.
 Annual H-1B visa award is an important and simple variable used for the purposes of this study.
 The Immigration Act of 1990 decomposed the existing H-1 visa into distinct H-1A and H-1B categories.
@@ -160,7 +143,6 @@ One might also find small but significant effects by looking into visas outside 
 Besides the number of actual visa awards, an analyst could look for visa cap effects,
 or visa policy state effects.
 For example, Pew Research Center notes that the American Competitiveness in the 21st Century Act of 2000 exempts certain entities from the H-1B cap\cite{ruiz2017key}.
-
 The last data source of interest is on actual federal loans.
 Actual federal loans stand in contrast to loan limits which are represented by the Stafford loan limit variable.
 Loan limits are a policy choice, but after correcting for loan limits the actuals primarily represent a demand effect.
@@ -177,7 +159,6 @@ The variable I use in this regard is total federal undergraduate loans,
 which is extracted from a data set provided by College Board\cite{cb_excel_2019}.
 Given additional context provided by The College Board in a related report\cite{cb_trends_2019},
 it is plausible that a seperate analysis which decomposes aggregate total federal loans by type of loan would yield statistical improvement.
-
 Results
 
 Multiple Regression Results
@@ -194,7 +175,6 @@ Measures of tuition were identified as insignificant.
 Table \ref{tab:table_mols} is a table of regressions which helps illustrate that, somewhat surprisingly,
 real measures of employer assistance capture price and inflation effects in a preferred way
 compared to using a more direct measure of tuition.
-
 
 Tuition is insignificant in model 1.
 Replacing tuition with PCE and education-deflated employer assistance in model 2 identifies the latter
@@ -254,7 +234,6 @@ additional specifications using dynamic least squares and vector autoregression
 are explored.
 
 Dynamic Ordinary Least Squares Results
-
 Dynamic ordinary least squares (DOLS) models supplement multiple regressive analysis in at least two ways.
 First, autocorrelation can be removed using lagged variables in an Anderson–Hsiao adjustment\cite{anderson1981estimation}.
 Second, atemporal marginal effects can be tested against marginal effects in a dynamic context,
@@ -270,7 +249,6 @@ The Anderson-Hsiao estimator is a twice lagged first difference of the dependent
 The third step is to replace the dependent variable with the first difference of itself.
 After taking these three steps, the model is removed of overlapping periods which contribute to autocorrelation over time.
 The second model of interest is the preferred DOLS model.
-
 
 The preferred dynamic OLS model obtains an adjusted r-squared of about 0.85.
 In contrast, the simple adjustment to the preferred multiple regression
@@ -317,8 +295,6 @@ Given such a situation,
 the effect of a hypothetical dynamic \$1,000 real increase to employer assistance would be
 an increase to enrollment of about 7.45 million\footnote{
 The period-over-period effect from a steady state is computed as $X=-220.1953*1000+.0054062*1000*1000+1314.489*1000-355.0654*1000$.
-
-
 First-difference, lagged, and current H-1B visa effects are all signficant,
 but linear visa effects are not significant.
 Lagged effects are foreign to the multiple regression specification.
@@ -355,7 +331,6 @@ finding that autocorrelation is not an important concern.
 DOLS also provides rudimentary causal findings by identifying changes which are associated with results in the following period.
 
 Vector Autoregression Results
-
 Dynamic ordinary least squares provides rudimentary causal findings,
 but vector autoregression provides deeper analysis in this regard.
 Vector autoregression (VAR) improves on DOLS for the specific purpose
@@ -433,7 +408,6 @@ It's plausible that more sophisticated analysis may prove some kind of interacti
 but even supposing significance, the correct Cholesky ordering is non-obvious.
 For these reasons, loans and tuition are seperately investigated using two distinct VAR models.
 
-
 Figure \ref{fig:var_results} is a graphical representation of the VAR model results.
 The top row are the a three-variable models of interest.
 In these models an H-1B impulse generates a first-order enrollment response.
@@ -476,13 +450,5 @@ Cappelli constrains a simple slow employer adoption hypothesis by demonstrating 
 Demand-side explanations do a fair job of explaining low enrollment until about 1980.
 From about 1980 until about 1993, several important economic and policy variations are identified.
 
-
-
-
 Integrating Simple Explanations
-
-
-
-
-
 
