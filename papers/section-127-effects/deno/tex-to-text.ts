@@ -25,13 +25,14 @@ const encoder = new TextEncoder();
 const EOL = '\n';
 
 const handleLine = (sLine: string): string => {
-    const isComment = sLine.trim()[0] === "%";
-    const isOmittedFromTextVersion = sLine.includes('%%%'); // a convention
-    const isTechnical = sLine.trim()[0] === "\\" || sLine.trim()[0] === "}";
-    const regexMatchIsSectionHeading = sLine.match(/\\[a-z]*section{(?<headingText>[A-z- ]*)}/);
+    const sCleaned = [sLine].map(s => s.replace(/\\cite\{[\w]*}/g,''))[0];
+    const isComment = sCleaned.trim()[0] === "%";
+    const isOmittedFromTextVersion = sCleaned.includes('%%%'); // a convention
+    const isTechnical = sCleaned.trim()[0] === "\\" || sCleaned.trim()[0] === "}";
+    const regexMatchIsSectionHeading = sCleaned.match(/\\[a-z]*section{(?<headingText>[A-z- ]*)}/);
 
     if (!isComment && !isTechnical && !isOmittedFromTextVersion) {
-        return sLine.trim() + EOL;
+        return sCleaned.trim() + EOL;
     } else if(regexMatchIsSectionHeading) {
         const headingText = regexMatchIsSectionHeading.groups && regexMatchIsSectionHeading.groups.headingText;
         if (headingText) return headingText.trim() + EOL;
@@ -40,7 +41,7 @@ const handleLine = (sLine: string): string => {
     return '';
 }
 
-export async function read_line(filename: string, lineCallback: (s: string)=>string): Promise<string> {
+export async function read_line(filename: string, lineCallback: (Lin: string)=>string): Promise<string> {
   const file = await Deno.open(filename);
   const bufReader = new BufReader(file);
   let bCurrentLineIsEmpty = false;

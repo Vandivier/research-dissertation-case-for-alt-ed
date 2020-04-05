@@ -12,7 +12,7 @@ the period-over-period effect of interest from a one thousand dollar increase to
 H-1B inclusion was motivated as a control, but it turns out to be a comparatively preferred policy instrument for enrollment and other policy interests.
 Results are validated using vector autoregression (VAR), dynamic ordinary least squares (DOLS), and instrumental variable (IV) analysis.
 Introduction
-The passage of Public Law 95-600 in 1978 created Section 127\cite{plaw95_600_1978}.
+The passage of Public Law 95-600 in 1978 created Section 127.
 Section 127 provides for a limited employer tax deduction for the transfer of financial educational assistance to an employee.
 This paper tests the hypothesis that the causal effect of Section 127 employer assistance on total university enrollment is positive.
 I control extensively for dynamic policy and economic variation, then assess robustness and Granger causality across multiple specifications.
@@ -30,13 +30,13 @@ Two of the four low-growth intervals occured immediately subsequent to the 1978 
 The period just prior, from 1970-1975, saw the highest growth in enrollment across those eight periods.
 
 In addition to selecting arbitray 3 or 5 year lags to proxy employer adoption, I directly review surveys of employers.
-Cappelli\cite{cappelli2004employers} identifies 3 employer surveys from 1992 and 1993 which indicate that at least 86 percent of surveyed employers provided educational assistance.
+Cappelli identifies 3 employer surveys from 1992 and 1993 which indicate that at least 86 percent of surveyed employers provided educational assistance.
 These studies were samples of convenience,
 but a thorough analysis leads Cappelli to claim that a substantial majority of employers offered such plans over his period of analysis from about 1990 to 2004.
 Common provision of the benefit remained true in later years.
-In 2013, SHRM reported that 61 percent of employers offer tuition assistance\cite{cherry2014rejuvenating}.
+In 2013, SHRM reported that 61 percent of employers offer tuition assistance.
 In 2017, World at Work found that 85 percent of employers offered such a benefit,
-with another 7 percent offering non-reimbursement tuition assistance, such as upfront tuition discounts\cite{talentculture_2018}.
+with another 7 percent offering non-reimbursement tuition assistance, such as upfront tuition discounts.
 
 In summary, the simplistic hypothesis of lagged or bottlenecked employer support for Section 127 fails to solve the problem,
 motivating more complex analysis carried out in this paper.
@@ -67,24 +67,24 @@ Two additional variables are controls for time and the real price of university 
 For robustness and analytical completeness, I test two other left hand variables using ordinary least squares.
 I subsequently test the relation of interest with two other modelling approaches.
 Specifically, I explore vector autoregressive (VAR) models
-and an instrumental variable regression following the Anderson–Hsiao pattern\cite{anderson1981estimation} with the lagged variable of interest as an instrument.
+and an instrumental variable regression following the Anderson–Hsiao pattern with the lagged variable of interest as an instrument.
 
 Data
 
 Information on total enrollment for all degree-granting postsecondary institutions in the United States
-is provided by the National Center for Education Statistics (NCES)\cite{nces_2019}.
+is provided by the National Center for Education Statistics (NCES).
 Enrollment figures are for the fall semester of the school year.
 Information on selected years from 1947 to 2028 is provided, where values for 2018 and later are projected.
 The present study does not use any of the projected values.
 Other data sources and policy considerations constrain the period of interest to the 27-year period from 1990 to 2016.
-Personal Consumption Expenditures (PCE) data is a measure of inflation provided by the U.S. Bureau of Economic Analysis (BEA)\cite{bea_2020}.
-Education-specific inflation is also calculated using NCES data\cite{nces_2017}.
+Personal Consumption Expenditures (PCE) data is a measure of inflation provided by the U.S. Bureau of Economic Analysis (BEA).
+Education-specific inflation is also calculated using NCES data.
 NCES data is the average tuition and required fees for full-time undergraduate students across all degree-granting postsecondary institutions.
 NCES provides nominal values and values adjusted for the consumer price index (CPI) for tuition.
 The price of room and board is ignored.
 Nominal Section 127 limits are a matter of public law.
-Section 127 took effect beginning after December 31, 1978 with a nominal assistance limit of 5,000 dollars\cite{plaw95_600_1978}.
-In October 1986, Pub. L. 99–514 increased the nominal assistance limit to 5,250 dollars\cite{plaw99_514_1986}.
+Section 127 took effect beginning after December 31, 1978 with a nominal assistance limit of 5,000 dollars.
+In October 1986, Pub. L. 99–514 increased the nominal assistance limit to 5,250 dollars.
 Real Section 127 employer assistance limits are calculated two ways.
 One variable is constructed for each measure of inflation.
 Price deflators for each measure of inflation use 2016 as a base year.
@@ -96,14 +96,14 @@ also called the G.I. Bill,
 is the first interesting case of veteran benefits,
 but it precedes the period of interest for this study.
 
-The original bill expired in 1956\cite{glass_2010}.
+The original bill expired in 1956.
 This expired state is the first state represented by the veteran education state variable.
-The Veterans Educational Assistance Program (VEAP) was established in 1981\cite{veteransaffairs_2017}.
-A third period of interest begins in 1984 with the enactment of the Montgomery GI Bill\cite{powers_2018}.
+The Veterans Educational Assistance Program (VEAP) was established in 1981.
+A third period of interest begins in 1984 with the enactment of the Montgomery GI Bill.
 A fourth period of interest begins in 2009 with the Post-9/11 GI Bill.
 
 Finally, many benefits from the Forever GI Bill became effective in 2018,
-with additional provisions taking effect in 2020 and 2022\cite{veteransaffairs_2020}.
+with additional provisions taking effect in 2020 and 2022.
 This fifth policy state is too recent to be included in the period of interest.
 The recent changes in veteran education benefits are a critical caveat for any attempt at forecasting or prediction outside of the period of study.
 
@@ -119,7 +119,7 @@ The first is the nominal loan limit for undergraduates.
 The second is a dummy variable indicating whether the undergraduate loan limit
 is the combined limit for undergraduate and graduate loans.
 A policy change became effective in 1993 which grouped these limits together.
-Stafford loan data is sourced from FinAid\cite{finaid_2020}.
+Stafford loan data is sourced from FinAid.
 Visa policy is a complex issue.
 Annual H-1B visa award is an important and simple variable used for the purposes of this study.
 The Immigration Act of 1990 decomposed the existing H-1 visa into distinct H-1A and H-1B categories.
@@ -132,7 +132,7 @@ A specialty occupation is formally defined as "an occupation that requires...att
 
 H-1 visas are a subgroup of nonimmigrant visas.
 Nonimmigrant visa award data by classification from 1987 to 2019 is provided by
-the Bureau of Consular Affairs within the United States State Department\cite{bureauof_2020}.
+the Bureau of Consular Affairs within the United States State Department.
 This paper exclusively uses the most relevant H-1B visa award numbers,
 but reanalysis with other visa classifications could yield statistically significant findings.
 The prior H-1 visa was also a merit worker visa, but it had no formal definition of merit.
@@ -142,7 +142,7 @@ It's plausible that the college-educated effect informally existed prior to the 
 One might also find small but significant effects by looking into visas outside the H-1 family.
 Besides the number of actual visa awards, an analyst could look for visa cap effects,
 or visa policy state effects.
-For example, Pew Research Center notes that the American Competitiveness in the 21st Century Act of 2000 exempts certain entities from the H-1B cap\cite{ruiz2017key}.
+For example, Pew Research Center notes that the American Competitiveness in the 21st Century Act of 2000 exempts certain entities from the H-1B cap.
 The last data source of interest is on actual federal loans.
 Actual federal loans stand in contrast to loan limits which are represented by the Stafford loan limit variable.
 Loan limits are a policy choice, but after correcting for loan limits the actuals primarily represent a demand effect.
@@ -156,8 +156,8 @@ Section 127 is taken as a right hand variable in that brief investigation.
 This allows us to briefly review the relationship between Section 127 employer assistance
 and the student debt crisis, a potentially related topic of importance.
 The variable I use in this regard is total federal undergraduate loans,
-which is extracted from a data set provided by College Board\cite{cb_excel_2019}.
-Given additional context provided by The College Board in a related report\cite{cb_trends_2019},
+which is extracted from a data set provided by College Board.
+Given additional context provided by The College Board in a related report,
 it is plausible that a seperate analysis which decomposes aggregate total federal loans by type of loan would yield statistical improvement.
 Results
 
@@ -235,7 +235,7 @@ are explored.
 
 Dynamic Ordinary Least Squares Results
 Dynamic ordinary least squares (DOLS) models supplement multiple regressive analysis in at least two ways.
-First, autocorrelation can be removed using lagged variables in an Anderson–Hsiao adjustment\cite{anderson1981estimation}.
+First, autocorrelation can be removed using lagged variables in an Anderson–Hsiao adjustment.
 Second, atemporal marginal effects can be tested against marginal effects in a dynamic context,
 which improves model utility in an applied context.
 
@@ -355,7 +355,7 @@ over the period from 1974 to 2016 is used.
 For the H-1B model, 24 samples over the period from 1994 to 2017 are used.
 Ivanov and Kilian find that the Schwarz Information Criterion,
 also called Schwarz's Bayesian information criteria (SBIC),
-is the most accurate selection criterion for sample sizes less than 120\cite{ivanov2005practitioner}.
+is the most accurate selection criterion for sample sizes less than 120.
 For that reason, I prefer this criterion.
 Fortunately, all significant selection criteria provided by STATA unanimously agreed in the case of lag selection for both models.
 Such criteria included SBIC, the likelihood ratio (LR), the final prediction error (FPE),
@@ -392,8 +392,8 @@ and the social return to education spending abound.
 There are two related issues which are not considered controversial from a policy perspective.
 The increasing total of higher education student loan debt is widely considered a crisis,
 and concerns about the price of higher education is a staple in the modern news cycle.
-For example, Forbes magazine recently pointed out that the price of college is increasing almost eight times faster than wages\cite{maldonado2018price}.
-Edvisors notes that the average tuition inflation rate is double the average CPI-U\cite{edvisors_2019}.
+For example, Forbes magazine recently pointed out that the price of college is increasing almost eight times faster than wages.
+Edvisors notes that the average tuition inflation rate is double the average CPI-U.
 Since we have identified H-1B policy as an enrollment instrument,
 and enrollment is directly related to loans and real tuition,
 VAR analysis allows investigation of whether those downstream variables will be significantly impacted.
