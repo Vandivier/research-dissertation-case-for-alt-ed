@@ -30,14 +30,14 @@ Simple Supply-Side Explanations
 One hypothesis is that there is an adjustment period between the creation of Section 127 and widespread employer provision of the newly deductible benefit.
 Allowing for a 3 or 5 year lag around the passage of Public Law 95-600 fails to harmonize observed enrollment slowdown with the expected increase to demand.
 Across the eight five-year periods from 1970 to 2010, the five-year public enrollment growth rate was above 9 percent half of the time.
-Two of the four low-growth intervals occured immediately subsequent to the 1978 creation of Section 127.
+Two of the four low-growth intervals occurred immediately after the 1978 creation of Section 127.
 The period just prior, from 1970-1975, saw the highest growth in enrollment across those eight periods.
 
 Surveys of employers provide further data on employer provision of educational assistance over time.
-Cappelli identifies 3 employer surveys from 1992 and 1993 which indicate that at least 86 percent of surveyed employers provided educational assistance.
-These early surveys consist of samples of convenience,
-but further information and analysis eventually lead Cappelli to conclude that a substantial majority of employers offered such plans over his period of analysis from about 1990 to 2004.
-Provision of this kind of benefit remains common in later years.
+Cappelli identifies three employer surveys from 1992 and 1993, which indicate that at least 86 percent of surveyed employers provided educational assistance.
+These early surveys consist of samples of convenience.
+Nevertheless, further considerations lead Cappelli to conclude that a substantial majority of employers offered such plans over his period of analysis from about 1990 to 2004.
+The provision of this kind of benefit remains common in later years.
 In 2013, SHRM reported that 61 percent of employers offer tuition assistance.
 In 2017, World at Work found that 85 percent of employers offered such a benefit,
 with another 7 percent offering non-reimbursement tuition assistance, such as upfront tuition discounts.
@@ -46,18 +46,17 @@ In summary, the simplistic hypothesis of lagged or bottlenecked employer support
 motivating more complex analysis carried out in this paper.
 
 Simple Demand-Side Explanations
-An alternative explanation for the enrollment slowdown observed around the time that Section 127 was created is that there simply wasn't much demand for college.
-One might argue that decreased demand even motivated the creation of Section 127.
-In fact, decreasing market demand is consistent with observation.
+A simple regression of real employer assistance on enrollment may yield a significant negative correlation wholly due to consumer effects.
+The factual claim of decreasing market demand is consistent with observation, but it began before the passage of Section 127.
 Falling average tuition and fees are observed for all institutions from 1972 to 1980.
 The college-age enrollment percent does not increase substantially from 1970 to 1980.
-After 1980 we see an upward trend in the price of higher education, the college-age enrollment percentage, and total enrollment.
+Higher education prices increase after 1980, as do the college-age enrollment percentage and total enrollment.
 
-While a decrease in demand matches observation,
-an omitted variable bias problem precludes drawing conclusions on the effect of Section 127.
-Important omitted variables include controls for inflation, the price of education, and important policy changes.
-Immigration, veteran education, and federal lending policy undergo important change in proximity to 1978 and in years later.
-Identifying whether an enrollment slowdown is a demand change or a change to quantity demanded is also a problem for a simple demand-side explanation.
+Because the decline in demand predates the passage of Section 127, the cause of decline must be located elsewhere, at least in part.
+Simplistic demand-side identification of the effects of employer assistance fails due to omitted variable bias.
+Important omitted variables include controls for inflation, the price of education, and relevant policy changes.
+Immigration, veteran education, and federal lending policy undergo fundamental changes in proximity to 1978 and in years later.
+Sufficient identification of the effect of Section 127 must account for changes in these variables over time.
 
 Empirical Model
 Equation \ref{eq1} is an ordinary least squares model of total postsecondary enrollment in the United States.
@@ -65,11 +64,11 @@ Equation \ref{eq1} is an ordinary least squares model of total postsecondary enr
 Y = \beta_1X_1+\beta_2X_2...+\beta_kX_k+e
 
 The Section 127 policy effect is the parameter of interest.
-Three other policy variables are included for federal lending policy, veteran education benefits, and H-1 Visa policy.
-Two additional variables are controls for time and the real price of university tuition plus mandatory fees.
+Other policy variables exist for federal lending policy, veteran education benefits, and H-1 Visa policy.
+Two additional non-policy variables are controls for time and the real price of university tuition plus mandatory fees.
 
-For robustness and analytical completeness, I test two other left hand variables using ordinary least squares.
-I subsequently test the relation of interest with two other modelling approaches.
+For robustness and analytical completeness, I test two other left-hand variables using ordinary least squares.
+I subsequently test the relation of interest with two other modeling approaches.
 Specifically, I explore vector autoregressive (VAR) models
 and an instrumental variable regression following the Anderson–Hsiao pattern with the lagged variable of interest as an instrument.
 
