@@ -1,4 +1,6 @@
+
 Dynamic Effects of H-1B and Section 127 Policy on Higher Education
+
 Section 127 of the United States Internal Revenue Code provides for a tax deduction to employers that provide employee educational assistance.
 Section 127 assistance creates an income effect, so, surprisingly,
 the historical passage is superficially associated with reduced growth in enrollment for higher education.
@@ -11,6 +13,7 @@ In the preferred dynamic model, given a steady state,
 the period-over-period effect of interest from a one thousand dollar increase to real employer assistance would be to increase total enrollment by about 7.45 million students.
 H-1B inclusion was motivated as a control, but it turns out to be a comparatively preferred policy instrument for enrollment and other policy interests.
 Results are validated using vector autoregression (VAR), dynamic ordinary least squares (DOLS), and instrumental variable (IV) analysis.
+
 Introduction
 The passage of Public Law 95-600 in 1978 created Section 127.
 Section 127 provides for a limited employer tax deduction for the transfer of financial educational assistance to an employee.
@@ -56,10 +59,10 @@ Immigration, veteran education, and federal lending policy undergo important cha
 Identifying whether an enrollment slowdown is a demand change or a change to quantity demanded is also a problem for a simple demand-side explanation.
 
 Empirical Model
-
 Equation \ref{eq1} is an ordinary least squares model of total postsecondary enrollment in the United States.
 
 Y = \beta_1X_1+\beta_2X_2...+\beta_kX_k+e
+
 The Section 127 policy effect is the parameter of interest.
 Three other policy variables are included for federal lending policy, veteran education benefits, and H-1 Visa policy.
 Two additional variables are controls for time and the real price of university tuition plus mandatory fees.
@@ -70,18 +73,19 @@ Specifically, I explore vector autoregressive (VAR) models
 and an instrumental variable regression following the Anderson–Hsiao pattern with the lagged variable of interest as an instrument.
 
 Data
-
 Information on total enrollment for all degree-granting postsecondary institutions in the United States
 is provided by the National Center for Education Statistics (NCES).
 Enrollment figures are for the fall semester of the school year.
 Information on selected years from 1947 to 2028 is provided, where values for 2018 and later are projected.
 The present study does not use any of the projected values.
 Other data sources and policy considerations constrain the period of interest to the 27-year period from 1990 to 2016.
+
 Personal Consumption Expenditures (PCE) data is a measure of inflation provided by the U.S. Bureau of Economic Analysis (BEA).
 Education-specific inflation is also calculated using NCES data.
 NCES data is the average tuition and required fees for full-time undergraduate students across all degree-granting postsecondary institutions.
 NCES provides nominal values and values adjusted for the consumer price index (CPI) for tuition.
 The price of room and board is ignored.
+
 Nominal Section 127 limits are a matter of public law.
 Section 127 took effect beginning after December 31, 1978 with a nominal assistance limit of 5,000 dollars.
 In October 1986, Pub. L. 99–514 increased the nominal assistance limit to 5,250 dollars.
@@ -111,6 +115,7 @@ Due to constraints on the availability of other right hand variable data,
 the main period of regression analysis ranges from 1990 to 2016.
 Veteran education benefits exhibit only one change during this period,
 but this factor proves to be significant in the preferred model.
+
 Stafford loan data is another key component of the analysis.
 Stafford loan data is directly relevant by itself,
 but it is further intended a proxy for broader non-military federal student aid policy.
@@ -120,6 +125,7 @@ The second is a dummy variable indicating whether the undergraduate loan limit
 is the combined limit for undergraduate and graduate loans.
 A policy change became effective in 1993 which grouped these limits together.
 Stafford loan data is sourced from FinAid.
+
 Visa policy is a complex issue.
 Annual H-1B visa award is an important and simple variable used for the purposes of this study.
 The Immigration Act of 1990 decomposed the existing H-1 visa into distinct H-1A and H-1B categories.
@@ -143,6 +149,7 @@ One might also find small but significant effects by looking into visas outside 
 Besides the number of actual visa awards, an analyst could look for visa cap effects,
 or visa policy state effects.
 For example, Pew Research Center notes that the American Competitiveness in the 21st Century Act of 2000 exempts certain entities from the H-1B cap.
+
 The last data source of interest is on actual federal loans.
 Actual federal loans stand in contrast to loan limits which are represented by the Stafford loan limit variable.
 Loan limits are a policy choice, but after correcting for loan limits the actuals primarily represent a demand effect.
@@ -159,8 +166,8 @@ The variable I use in this regard is total federal undergraduate loans,
 which is extracted from a data set provided by College Board.
 Given additional context provided by The College Board in a related report,
 it is plausible that a seperate analysis which decomposes aggregate total federal loans by type of loan would yield statistical improvement.
-Results
 
+Results
 Multiple Regression Results
 The key independent variable is H-1B visa issuance, but at the outset there are two potential left hand variables available.
 Ordinary least squares (OLS) multiple regression of visa effects, time, and tuition was run against both total enrollment and public university enrollment.
@@ -295,6 +302,7 @@ Given such a situation,
 the effect of a hypothetical dynamic \$1,000 real increase to employer assistance would be
 an increase to enrollment of about 7.45 million\footnote{
 The period-over-period effect from a steady state is computed as $X=-220.1953*1000+.0054062*1000*1000+1314.489*1000-355.0654*1000$.
+
 First-difference, lagged, and current H-1B visa effects are all signficant,
 but linear visa effects are not significant.
 Lagged effects are foreign to the multiple regression specification.
@@ -444,11 +452,9 @@ Additional analysis indicates H-1B can be leveraged not only to directly impact 
 but to further impact aggregate student loans and the real price of tuition.
 
 Conclusions
-
 A surprising slowdown in enrollment is observed around the time Section 127 was created.
 Cappelli constrains a simple slow employer adoption hypothesis by demonstrating widespread adoption as early as 1993.
 Demand-side explanations do a fair job of explaining low enrollment until about 1980.
 From about 1980 until about 1993, several important economic and policy variations are identified.
 
 Integrating Simple Explanations
-

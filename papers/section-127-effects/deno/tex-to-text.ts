@@ -24,40 +24,38 @@ const decoder = new TextDecoder();
 const encoder = new TextEncoder();
 const EOL = '\n';
 
-const handleLine = (sLine: string): string => {
+const handleLine = (sLine: string, bPriorLineEmpty: boolean): [string, boolean] => {
     const sCleaned = [sLine].map(s => s.replace(/\\cite\{[\w]*}/g,''))[0];
     const isComment = sCleaned.trim()[0] === "%";
     const isOmittedFromTextVersion = sCleaned.includes('%%%'); // a convention
     const isTechnical = sCleaned.trim()[0] === "\\" || sCleaned.trim()[0] === "}";
     const regexMatchIsSectionHeading = sCleaned.match(/\\[a-z]*section{(?<headingText>[A-z- ]*)}/);
+    const bCurrentLineEmpty = !sCleaned.trim().length;
 
-    if (!isComment && !isTechnical && !isOmittedFromTextVersion) {
-        return sCleaned.trim() + EOL;
+    if (bCurrentLineEmpty && !bPriorLineEmpty) {
+        return [EOL, true];
+    } else if (!bCurrentLineEmpty && !isComment && !isTechnical && !isOmittedFromTextVersion) {
+        return [sCleaned.trim() + EOL, false];
     } else if(regexMatchIsSectionHeading) {
         const headingText = regexMatchIsSectionHeading.groups && regexMatchIsSectionHeading.groups.headingText;
-        if (headingText) return headingText.trim() + EOL;
+        if (headingText) return [bPriorLineEmpty ? headingText.trim() + EOL : EOL + headingText.trim() + EOL, true];
     }
 
-    return '';
+    return ['', bPriorLineEmpty];
 }
 
-export async function read_line(filename: string, lineCallback: (Lin: string)=>string): Promise<string> {
+export async function read_line(filename: string, lineCallback: (sCurrentLine: string, bPriorLineWasEmpty: boolean) => [string, boolean]): Promise<string> {
   const file = await Deno.open(filename);
   const bufReader = new BufReader(file);
-  let bCurrentLineIsEmpty = false;
-  let bPriorLineWasEmpty = false;
+  let bAllowLineBreak = false;
   let sAccumulator = '';
+  let sCurrentProcessedLine = '';
   let readlineResult: ReadLineResult | Deno.EOF;
 
   while ((readlineResult = await bufReader.readLine()) !== Deno.EOF) {
     const sCurrentLine = decoder.decode(readlineResult.line);
-    const sCurrentProcessedLine = lineCallback(sCurrentLine);
-
-    bCurrentLineIsEmpty = !sCurrentProcessedLine.trim().length;
-    if (!(bCurrentLineIsEmpty && bPriorLineWasEmpty)) {
-        sAccumulator += sCurrentProcessedLine;
-    }
-    bPriorLineWasEmpty = bCurrentLineIsEmpty;
+    [sCurrentProcessedLine, bAllowLineBreak] = lineCallback(sCurrentLine, bAllowLineBreak);
+    sAccumulator += sCurrentProcessedLine;
   }
 
   file.close();
