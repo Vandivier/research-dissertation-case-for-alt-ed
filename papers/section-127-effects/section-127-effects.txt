@@ -5,9 +5,9 @@ Section 127 of the United States Internal Revenue Code provides for a tax deduct
 Section 127 assistance creates an income effect, so, surprisingly, the historical passage is superficially associated with reduced growth in enrollment for higher education.
 Further, a simple regression of the inflation-adjusted tax-deductible limit of employer assistance on higher education enrollment indicates a significant negative correlation.
 These counterintuitive findings raise concerns that omitted variables bias estimates of the effectiveness of Section 127 assistance.
-After taking extensive steps to account for dynamic economic conditions and H-1B visa, veteran education, and federal loan policies, analysis robustly identifies positive marginal employer assistance effects on enrollment.
+After taking extensive steps to account for dynamic economic conditions and H-1B, veteran education, and federal loan policies, analysis robustly identifies positive marginal employer assistance effects on enrollment.
 The linear and total effects of interest remain negative over the main period of analysis from 1992 through 2017.
-In the preferred dynamic model, given a steady state, the period-over-period effect of interest from a one thousand dollar increase to real employer assistance would be to increase total enrollment by about 7.45 million students.
+In the preferred dynamic model, given a steady-state, the period-over-period effect of interest from a one thousand dollar increase to real employer assistance would be to increase total enrollment by about 7.45 million students.
 H-1B inclusion was motivated as a control, but it turns out to be a comparatively preferred policy instrument for enrollment and other policy interests.
 Results are validated using vector autoregression (VAR), dynamic ordinary least squares (DOLS), and instrumental variable (IV) analysis.
 
@@ -16,7 +16,8 @@ The passage of Public Law 95-600 in 1978 created Section 127.
 Section 127 provides for a limited employer tax deduction for the transfer of money to an employee for educational purposes.
 This paper tests the hypothesis that the causal effect of Section 127 employer assistance on total university enrollment is positive.
 Regression in this paper controls extensively for dynamic policy and economic variation, then investigates robustness and Granger causality across multiple specifications.
-Results show that employer assistance has a positive marginal effect on enrollment, negative linear and total effects, and that H-1B visa policy is a comparatively effective policy instrument for enrollment, national student loan debt, and the price of education.
+Results show that employer assistance has a positive marginal effect on enrollment and negative linear and total effects.
+H-1B visa policy is a comparatively effective policy instrument for enrollment, national student loan debt, and the price of education.
 The failure of several simple theories to successfully explain the observation of enrollment slowdown in the late 1970s and 1980s further motivates the present study.
 
 Simple Supply-Side Explanations
@@ -164,32 +165,34 @@ Combining nominal assistance over time with CPI and education-specific inflation
 
 Changes to veteran education benefits are also a matter of public law.
 A categorical variable is used to capture the state of veteran education benefits among five possible states over the period from 1970 to 2020.
-The Servicemen's Readjustment Act of 1944, also called the G.I. Bill, is the first interesting case of veteran benefits, but it precedes the period of interest for this study.
+The Servicemen's Readjustment Act of 1944 is also called the G.I. Bill.
+This bill is the first interesting case of veteran benefits, but it precedes the period of interest for this study.
 
 The original bill expired in 1956.
 This expired state is the first state represented by the veteran education state variable.
 The Veterans Educational Assistance Program (VEAP) was established in 1981.
-A third period of interest begins in 1984 with the enactment of the Montgomery GI Bill.
-A fourth period of interest begins in 2009 with the Post-9/11 GI Bill.
+The third period of interest begins in 1984 with the enactment of the Montgomery GI Bill.
+The fourth period of interest begins in 2009 with the Post-9/11 GI Bill.
 
 Finally, many benefits from the Forever GI Bill became effective in 2018, with additional provisions taking effect in 2020 and 2022.
 This fifth policy state is too recent to be included in the period of interest.
 The recent changes in veteran education benefits are a critical caveat for any attempt at forecasting or prediction outside of the period of study.
 
-Due to constraints on the availability of other right hand variable data, the main period of regression analysis ranges from 1990 to 2016.
+Due to constraints on the availability of other right-hand variable data, the main period of regression analysis ranges from 1990 to 2016.
 Veteran education benefits exhibit only one change during this period, but this factor proves to be significant in the preferred model.
 
 Stafford loan data is another key component of the analysis.
-Stafford loan data is directly relevant by itself, but it is further intended a proxy for broader non-military federal student aid policy.
+Stafford loan data is relevant per se.
+Moreover, Stafford loan data is a broad proxy for non-military federal student aid policy.
 There are two variables for Stafford loans.
-The first is the nominal loan limit for undergraduates.
-The second is a dummy variable indicating whether the undergraduate loan limit
-is the combined limit for undergraduate and graduate loans.
-A policy change became effective in 1993 which grouped these limits together.
+The first variable is the nominal loan limit for undergraduates.
+The second variable is a dummy variable.
+The dummy variable indicates whether the undergraduate loan limit is the combined limit for undergraduate and graduate loans.
+A policy change in 1993 grouped these limits together.
 Stafford loan data is sourced from FinAid.
 
 Visa policy is a complex issue.
-Annual H-1B visa award is an important and simple variable used for the purposes of this study.
+The number of H-1B visas issued each year is an important variable in this study.
 The Immigration Act of 1990 decomposed the existing H-1 visa into distinct H-1A and H-1B categories.
 Over time, H-1B1 and H-1C classifications were established, and many other important but less relevant classifications outside of the H-1 family exist as well.
 The H-1B visa is most relevant for this study because it specifically relates to the undergraduate degree.
@@ -205,27 +208,27 @@ In 1989, 48,820 H-1 visas were awarded.
 In 1991, 7,443 H-1A visas were awarded, and 51,882 H-1B visas were awarded.
 It's plausible that the college-educated effect informally existed prior to the 1990 legislation.
 One might also find small but significant effects by looking into visas outside the H-1 family.
-Besides the number of actual visa awards, an analyst could look for visa cap effects, or visa policy state effects.
-For example, Pew Research Center notes that the American Competitiveness in the 21st Century Act of 2000 exempts certain entities from the H-1B cap.
+Besides the number of actual visa awards, an analyst could look for visa cap effects or visa policy state effects.
+For example, the Pew Research Center notes that the American Competitiveness in the 21st Century Act of 2000 exempts certain entities from the H-1B cap.
 
 The last data source of interest is on actual federal loans.
-Actual federal loans stand in contrast to loan limits which are represented by the Stafford loan limit variable.
-Loan limits are a policy choice, but after correcting for loan limits the actuals primarily represent a demand effect.
+Actual federal loans stand in contrast to loan limits, which are represented by the Stafford loan limit variable.
+Loan limits are a policy choice, but after correcting for loan limits, the actual amount of loans made primarily represent a demand effect.
 As such, we would not want to correct for actual loans.
 That would wipe out the effect of interest, which is the demand effect attributable to various policies, and Section 127 employer educational assistance in particular.
 
-Instead, loan data is taken as a left hand variable of secondary interest.
-Section 127 is taken as a right hand variable in that brief investigation.
+Instead, loan data is taken as a left-hand variable of secondary interest.
+Section 127 is taken as a right-hand variable in that brief investigation.
 This allows us to briefly review the relationship between Section 127 employer assistance
 and the student debt crisis, a potentially related topic of importance.
-The variable I use in this regard is total federal undergraduate loans, which is extracted from a data set provided by College Board.
-Given additional context provided by The College Board in a related report, it is plausible that a seperate analysis which decomposes aggregate total federal loans by type of loan would yield statistical improvement.
+The variable I use in this regard is total federal undergraduate loans, which are extracted from a data set provided by the College Board.
+Given additional context provided by the College Board in a related report, an analysis that decomposes federal loans by type would plausibly yield statistical refinement.
 
 Results
 Multiple Regression Results
-The key independent variable is H-1B visa issuance, but at the outset there are two potential left hand variables available.
+The key independent variable is H-1B visa issuance, but at the outset, there are two potential left-hand variables available.
 Ordinary least squares (OLS) multiple regression of visa effects, time, and tuition was run against both total enrollment and public university enrollment.
-Total enrollment was more predictable overall, so this was selected as the preferred enrollment variable.
+Total enrollment was more predictable than public university enrollment, so this was selected as the preferred enrollment variable.
 
 With total enrollment as the explained variable, a kitchen sink multiple regression was used to select the strongest factors among other factor groups.
 The total number of visas issued across classification is not significant.
@@ -242,7 +245,7 @@ Real employer education assistance which is solely corrected for the price of ed
 is eventually preferred to the multiple-deflated measure.
 This makes the education-deflated real employer assistance limit the preferred Section 127 variable.
 After deciding on this variable as the preferred measure, quadratic, cubic, and interaction transformations are investigated.
-The interaction of Section 127 policy and visa effects turns out to be small in magnitude, low in signficance, and possessing a sign which is sensitive to specification.
+The interaction of Section 127 policy and visa effects turns out to be small in magnitude, low in significance, and in possession of a sign which is sensitive to specification.
 
 Model 4 is preferred out of the models presented in Table \ref{tab:table_mols}.
 While model 1 has the highest r-squared value, model 4 has an adjusted r-squared equal to model 1.
@@ -255,25 +258,25 @@ effect attribution impossible.
 
 All four models are technically very strong, but model 4 makes interpretation simple.
 The linear effect of real Section 127 assistance is insignificant and negative with low confidence.
-The marginal effect is highly significant and positive, but decreasingly positive.
+The marginal effect is highly significant and positive but decreasingly positive.
 The total effect in the relevant range is also positive\footnote{
-Elimination of non-linear effects from the preferred model acts as a robustness check, identifies the direction of the total effect in the relevant range, and maintains significance for all factors.
+Elimination of nonlinear effects from the preferred model acts as a robustness check, identifies the direction of the total effect in the relevant range, and maintains significance for all factors.
 The real Section 127 assistance coefficient has a point estimate of 623 in such a model, and the H-1B visa issuance coefficient takes a value of about -15.
 This indicates that a real increase to Section 127 assistance would further boost enrollment, but such increases would be decreasingly effective.
 
-H-1 visa effects are complex and important across specification.
+H-1 visa effects are complex and important across specifications.
 The preferred model identifies a significant negative linear effect on enrollment
 from H-1B visa issuance.
-There is an insignificant positive marginal effect and a negative total effect.
+There is an insignificant positive marginal effect and a total negative effect.
 While the preferred model focuses on H-1B effects, analysis shows this is largely
 generalizable to the H-1 family.
 In fact, substituting H-1 total issuance for the linear H-1B variable improves
-linear visa effect signifiance, although it does not improve raw or adjusted explanatory power for the model overall.
+linear visa effect significance, although it does not improve raw or adjusted explanatory power for the model overall.
 That move also is not preferred because the linear effect and the marginal visa effects would then correspond to different measures.
 
 Time is the most consistently significant variable across multiple regressive models.
-Time, measured in years, intuitively possessess a positive linear effect and a negative marginal effect on total enrollment.
-The total effect of time over the period of analysis is also strongly positive.
+Time, measured in years, intuitively possesses a positive linear effect and a negative marginal effect on total enrollment.
+The total effect of time over the period of the analysis is also strongly positive.
 A simple regression of time on total enrollment has an adjusted r-squared of about .95.
 Because time is so important in explaining enrollment, in order to facilitate robust causal analysis, and in order to improve applied predictive modeling, additional specifications using dynamic least squares and vector autoregression
 are explored.
@@ -286,7 +289,7 @@ Second, atemporal marginal effects can be tested against marginal effects in a d
 Table \ref{tab:table_dols} compares selected variables from two models of interest.
 Selected variables include any variable which appears in both models.
 The first model of interest is the preferred multiple regression with an Anderson-Hsiao adjustment.
-The Anderson-Hsiao adjustment involves three changes which allow an analyst to address an issue of actual or potential autocorrelation in the dependent variable.
+The Anderson-Hsiao adjustment involves three changes that allow an analyst to address an issue of actual or potential autocorrelation in the dependent variable.
 The first step in the adjustment is to leverage an instrumental variable regression instead of an ordinary least squares regression.
 The second step is to pick a particlar instrumental variable, often called the Anderson-Hsiao estimator.
 The Anderson-Hsiao estimator is a twice lagged first difference of the dependent variable.
