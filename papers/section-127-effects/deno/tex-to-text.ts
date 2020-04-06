@@ -35,7 +35,8 @@ const handleLine = (sLine: string, bPriorLineEmpty: boolean): [string, boolean] 
     if (bCurrentLineEmpty && !bPriorLineEmpty) {
         return [EOL, true];
     } else if (!bCurrentLineEmpty && !isComment && !isTechnical && !isOmittedFromTextVersion) {
-        return [sCleaned.trim() + EOL, false];
+        const bEndsWithComma = sCleaned[sCleaned.length-1] === ',';
+        return [bEndsWithComma ? sCleaned.trim() + ' ' : sCleaned.trim() + EOL, false];
     } else if(regexMatchIsSectionHeading) {
         const headingText = regexMatchIsSectionHeading.groups && regexMatchIsSectionHeading.groups.headingText;
         if (headingText) return [bPriorLineEmpty ? headingText.trim() + EOL : EOL + headingText.trim() + EOL, true];
