@@ -167,6 +167,8 @@ It is both an instrumental variable model and also a dynamic ordinary least squa
 %   but in our case beta of interest isn't importantly different between preferred DOLS and non-IV transform
 % ref: https://www-jstor-org.mutex.gmu.edu/stable/2287517?seq=2#metadata_info_tab_contents
 % ref: preferred dols model from analysis-9-dols-reg-table.do
+% note: Dickey-Fuller test for the presence of a unit root
+%   would be an alternative, or additional, way to check for dependent var endogeneity
 \begin{subequations}
     \begin{equation}
         \Delta{Y_t} = \beta{W_{t}}+B{z_t}+e_t
@@ -195,22 +197,122 @@ as well as the first and second differences of each variable in $k$.
 % $\delta$, $D$, and $g$ fill modelling roles analgous to $\beta$,
 % $B$, and $e$ from Equation \ref{eq2}.
 
-%% TODO: VAR regression
+The third specification is a vector autoregressive (VAR) model.
+This specification is actually a family of six similar models.
+Equation \ref{eq:applied_naiive_var} is the first model in this family.
+It is a two-variable case of that specification.
+This model is similar to the previous non-VAR
+specifications because it models the effect of
+real employer assistance on total enrollment.
+A second model follows the same form,
+but the independent variable is H-1B visa issuance,
+instead of Section 127 assistance.
 
-\begin{equation}
-    \Delta{Y_t} = \beta_1X_{t1}t+\beta_2X_2...+\beta_kX_k+u_t
-    \label{eq4}
-\end{equation}
+% are the VAR structural or just structural-like due to cholesky ordering?
+% I don't use `svar` command so I think just structural-like
+% articles below on var, svar, impulse-response and oirf using Cholesky decompositon
+%   I still think Cholesky decomp is structural-like, not structural, but it can get policy effect measure
+% ref:
+%   [if you are going to read one, make it this, my main equation source ->] https://blog.stata.com/2016/09/20/structural-vector-autoregression-models/
+%   https://www.youtube.com/watch?v=wqwDcY9pq5I&t=769s
+%   https://www.youtube.com/watch?v=PJp3317BdHo
+%   https://www.youtube.com/watch?v=iV8_nQoB9CU
+%   https://faculty.washington.edu/ezivot/econ584/notes/varModels.pdf
+%   https://online.stat.psu.edu/stat510/lesson/11/11.2#paragraph--329
+%   https://blog.stata.com/2016/02/18/vector-autoregressionsimulation-estimation-and-inference-in-stata/
+%   https://blog.stata.com/2016/08/09/vector-autoregressions-in-stata/
+%   https://cran.r-project.org/web/packages/vars/vignettes/vars.pdf
+%   https://fmwww.bc.edu/EC-C/S2013/823/EC823.S2013.nn10.slides.pdf
+\begin{subequations}
+    \begin{equation}
+        v_t = \alpha_0 + \alpha_1{v_{t-1}} + \alpha_2{v_{t-2}} + ... + \alpha_i{v_{t-i}} + u_t
+        \label{eq:univariate_var}
+    \end{equation}
+    \begin{equation}
+        V_t = \alpha_0 + \alpha_1{v_{1, t-1}} + \alpha_2{v_{2, t-1}} + ... + \alpha_{ik-1}{v_{k-1, t-i}} + \alpha_{ik}{v_{k, t-i}} + u_t
+        \label{eq:naiive_multi_var}
+    \end{equation}
+    \begin{equation}
+        Y_t = \sigma_k{V_{kt}}+e_t
+        \label{eq:applied_naiive_var}
+    \end{equation}
+\end{subequations}
+% TODO: maybe use stata built-in Granger causality Wald tests
 
+Equation \ref{eq:univariate_var} models any variable,
+whether dependent or independent,
+as an ordinary least squares function of own lags,
+up until the lag number denoted by $i$.
+This is a univariate autoregression.
+Equation \ref{eq:naiive_multi_var} extends this operation to $k$ variables.
+Notice that $V_t$ is not a $k*1$ vector of univariate $v_t$.
+Instead, it is a $k*k$ multivariate vector, plus a constant and an error term,
+which explains $V_t$ using $i$ lags from each variable in $k$.
 
-Specifically, I explore vector autoregressive (VAR) models
-and an instrumental variable regression following the
+Equation \ref{eq:applied_naiive_var}
+obtains $V_t$ as specified in Equation \ref{eq:univariate_var}
+for all variables in $k$,
+then fits an ordinary least squares model across $V_kt$ to explain the current-period dependent variable, $Y_t$.
+Section 127 effects turn out to be insignificant in the specification described by Equation \ref{eq:applied_naiive_var},
+but H-1B effects are signficant.
+As a result, all four remaining VAR equations use H-1B issuance as the independent variable.
 
-% VAR
-% \begin{equation}
-%     \DeltaY_t = \beta_1X_t1t+\beta_2X_2...+\beta_kX_k+e
-%     \label{eq3}
-% \end{equation}
+% cite for Cholesky ordering https://blog.stata.com/2016/09/20/structural-vector-autoregression-models/
+Two of the four remaining models are three-variable extensions of the prior specification.
+These two models extend Equation \ref{eq:applied_naiive_var} by adding a second stage response.
+In the first case, federal student loan debt is examined as a second-order response.
+In the second case, the price of higher education is examined as a second-order response.
+David Schenk suggests Cholesky identification as a method of generating an ordered impulse-response function from a VAR.
+Cholesky identification is described by the following system of equations.
+
+\begin{subequations}
+    % \begin{equation}
+    %     \sigma_k{V_{kt}} + e_t
+    %     = Cy_t + e_t
+    %     = Ay_t
+    %     % = C_1y_{t-1} + ... + C_iy_{t-i} + e_t
+    %     \label{eq:var_contemporaneous}
+    % \end{equation}
+    \begin{equation}
+        e_t = Bu_t
+        \label{eq:make_structural_shocks}
+    \end{equation}
+    % \begin{equation}
+    %     \Sigma = E(e_te_t')
+    %     = A^{-1} B B' {A^{-1}}'
+    %     = B B'
+    %     \label{eq:structural_}
+    % \end{equation}
+    % \begin{equation}
+    %     \Sigma = E(e_te_t')
+    %     = A^{-1} B B' {A^{-1}}'
+    %     = B B'
+    %     \label{eq:reduce_using_error_covariance}
+    % \end{equation}
+    \begin{equation}
+        \Sigma = E(e_t e_t')
+        = E(Bu_tu_t'B')
+        = B E(u_t u_t') B'
+        = B B'
+        \label{eq:link_covariance_error}
+    \end{equation}
+\end{subequations}
+
+% Equation \ref{eq:var_contemporaneous} simplifies \ref{eq:applied_naiive_var}
+% by abstracting $k$.
+% $C$ is a matrix of coefficients over time.
+% $A$ is a matrix of coefficients with embedded error.
+% Equation {eq:make_structural_shocks} is a definition,
+% and it allows
+
+The last two models in the six-model VAR family are also simple two-factor VAR models.
+These models test the hypothesis that enrollment effects are extraneous
+to the effects of H-1B policy on student loans and the price of higher education.
+These models return to the form from Equation \ref{eq:applied_naiive_var},
+but the independent and response variables are different.
+H-1B issuance is the independent variable.
+In one case the response variable is federal student loan debt.
+The price of higher education is the response variable in the other case.
 
 \section{Data}
 
