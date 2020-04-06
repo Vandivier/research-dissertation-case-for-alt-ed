@@ -208,21 +208,6 @@ A second model follows the same form,
 but the independent variable is H-1B visa issuance,
 instead of Section 127 assistance.
 
-% are the VAR structural or just structural-like due to cholesky ordering?
-% I don't use `svar` command so I think just structural-like
-% articles below on var, svar, impulse-response and oirf using Cholesky decompositon
-%   I still think Cholesky decomp is structural-like, not structural, but it can get policy effect measure
-% ref:
-%   [if you are going to read one, make it this, my main equation source ->] https://blog.stata.com/2016/09/20/structural-vector-autoregression-models/
-%   https://www.youtube.com/watch?v=wqwDcY9pq5I&t=769s
-%   https://www.youtube.com/watch?v=PJp3317BdHo
-%   https://www.youtube.com/watch?v=iV8_nQoB9CU
-%   https://faculty.washington.edu/ezivot/econ584/notes/varModels.pdf
-%   https://online.stat.psu.edu/stat510/lesson/11/11.2#paragraph--329
-%   https://blog.stata.com/2016/02/18/vector-autoregressionsimulation-estimation-and-inference-in-stata/
-%   https://blog.stata.com/2016/08/09/vector-autoregressions-in-stata/
-%   https://cran.r-project.org/web/packages/vars/vignettes/vars.pdf
-%   https://fmwww.bc.edu/EC-C/S2013/823/EC823.S2013.nn10.slides.pdf
 \begin{subequations}
     \begin{equation}
         v_t = \alpha_0 + \alpha_1{v_{t-1}} + \alpha_2{v_{t-2}} + ... + \alpha_i{v_{t-i}} + u_t
@@ -257,38 +242,20 @@ Section 127 effects turn out to be insignificant in the specification described 
 but H-1B effects are signficant.
 As a result, all four remaining VAR equations use H-1B issuance as the independent variable.
 
-% cite for Cholesky ordering https://blog.stata.com/2016/09/20/structural-vector-autoregression-models/
+% another good article from david, other than cited: https://blog.stata.com/2016/08/09/vector-autoregressions-in-stata/
+% Lucas critique of VAR https://ocw.mit.edu/courses/economics/14-384-time-series-analysis-fall-2013/lecture-notes/MIT14_384F13_lec12and13.pdf
 Two of the four remaining models are three-variable extensions of the prior specification.
 These two models extend Equation \ref{eq:applied_naiive_var} by adding a second stage response.
 In the first case, federal student loan debt is examined as a second-order response.
 In the second case, the price of higher education is examined as a second-order response.
-David Schenk suggests Cholesky identification as a method of generating an ordered impulse-response function from a VAR.
+David Schenk suggests Cholesky decomposition as a method of generating an ordered impulse-response function from a VAR\cite{schenck_2016}.
 Cholesky identification is described by the following system of equations.
 
 \begin{subequations}
-    % \begin{equation}
-    %     \sigma_k{V_{kt}} + e_t
-    %     = Cy_t + e_t
-    %     = Ay_t
-    %     % = C_1y_{t-1} + ... + C_iy_{t-i} + e_t
-    %     \label{eq:var_contemporaneous}
-    % \end{equation}
     \begin{equation}
         e_t = Bu_t
         \label{eq:make_structural_shocks}
     \end{equation}
-    % \begin{equation}
-    %     \Sigma = E(e_te_t')
-    %     = A^{-1} B B' {A^{-1}}'
-    %     = B B'
-    %     \label{eq:structural_}
-    % \end{equation}
-    % \begin{equation}
-    %     \Sigma = E(e_te_t')
-    %     = A^{-1} B B' {A^{-1}}'
-    %     = B B'
-    %     \label{eq:reduce_using_error_covariance}
-    % \end{equation}
     \begin{equation}
         \Sigma = E(e_t e_t')
         = E(Bu_tu_t'B')
@@ -298,17 +265,29 @@ Cholesky identification is described by the following system of equations.
     \end{equation}
 \end{subequations}
 
-% Equation \ref{eq:var_contemporaneous} simplifies \ref{eq:applied_naiive_var}
-% by abstracting $k$.
-% $C$ is a matrix of coefficients over time.
-% $A$ is a matrix of coefficients with embedded error.
-% Equation {eq:make_structural_shocks} is a definition,
-% and it allows
+% I think $u_t$ is a vector and not a matrix right...?
+The left-hand error term in Equation \ref{eq:make_structural_shocks}, $e_t$,
+is the same as in Equation \ref{eq:applied_naiive_var}.
+The right-hand of Equation \ref{eq:make_structural_shocks} defines $B$,
+which is a matrix
+Now $u_t$ is defined, which represent structural, or uncorrelated, error.
+Endogenous error in $B$ allows us to trace out the effects of arbitrary innovation
+in some variable in $V_k$.
+
+The reduced form $BB'$ in Equation \ref{eq:link_covariance_error} matches many
+matrices, but there is a unique lower-triangle matrix which satisfies the equality
+statement with $\Sigma$, the covariance matrix of the errors.
+Selecting this unique solution is done by stipulating a causal ordering on the variables in the VAR.
+This is called a Cholesky ordering.
+A Cholesky ordering allows assessment of fit regarding the causal stipulation,
+which amounts to evidence for or against causality.
+It ends up being an analytical tool in this paper.
+The variable orderings selected are theoretically grounded.
 
 The last two models in the six-model VAR family are also simple two-factor VAR models.
 These models test the hypothesis that enrollment effects are extraneous
 to the effects of H-1B policy on student loans and the price of higher education.
-These models return to the form from Equation \ref{eq:applied_naiive_var},
+The form of these models follows the specification in Equation \ref{eq:applied_naiive_var},
 but the independent and response variables are different.
 H-1B issuance is the independent variable.
 In one case the response variable is federal student loan debt.
