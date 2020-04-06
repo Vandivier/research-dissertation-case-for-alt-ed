@@ -135,10 +135,11 @@ The final results are consistent across three empirical specifications.
 In addition to the variable of interest, this paper tests two other left-hand variables.
 Testing these two secondary dependent variables of interest improves confidence in the theoretical and applied soundness of the conclusion.
 
-Total postsecondary enrollment in the United States is the dependent variable,
-and the Section 127 policy effect is the right-hand parameter of interest in the first two specifications.
+Total postsecondary enrollment in the United States is the dependent variable.
+The Section 127 policy effect is the right-hand parameter of interest in the first two specifications.
 Equation \ref{eq1} is the first specification of interest. This model is an ordinary least squares model.
-Here, $\alpha$ is a $1*k$ vector of coefficients and $V$ is a $k*1$ vector of annually observed independent variables.
+Here, $\alpha$ is a $1*k$ vector of coefficients,
+and $V$ is a $k*1$ vector of annually observed independent variables.
 
 % time-invarient coefficients.
 % all betas are linear coefficients of their respective independent variables
@@ -155,9 +156,9 @@ Policy variables exist for federal lending policy, veteran education benefits, a
 Two additional non-policy variables are controls for time, in years,
 and the real price of university tuition plus mandatory fees.
 
-The second specification is given in Equation \ref{eq2}.
+Equation \ref{eq2} describes the next specification.
 This model follows the Anderson–Hsiao pattern\cite{anderson1981estimation} with the lagged variable of interest as an instrument.
-This model is intended to address concerns about endogeneity in the dependent variable.
+This specification investigates concerns of potential endogeneity in the dependent variable.
 It is both an instrumental variable model and also a dynamic ordinary least squares (DOLS) model.
 
 % DOLS
@@ -182,7 +183,8 @@ It is both an instrumental variable model and also a dynamic ordinary least squa
     \end{equation}
 \end{subequations}
 
-Here, $\beta$ is a $1*l$ vector of coefficients and $W$ is an $l*1$ vector of annually observed independent variables.
+Here, $\beta$ is a $1*l$ vector of coefficients,
+and $W$ is an $l*1$ vector of annually observed independent variables.
 $z$ is the instrument, and it is a projection of lagged enrollment derived from twice-lagged enrollment.
 Equation \ref{eq3} explicitly derives $z$.
 % B is the particular explanatory coefficient for $z$.
@@ -191,14 +193,13 @@ Equation \ref{eq3} explicitly derives $z$.
 $l$ is a direct transformation of $k$ from Equation \ref{eq1}.
 $l$ contains five variations of each variable in $k$.
 The first variation is the non-transformed value.
-$l$ also contains the first and second lags,
-as well as the first and second differences of each variable in $k$.
+The other variations include the first and second lags and differences for each variable in $k$.
 % In Equation \ref{eq3},
 % $\delta$, $D$, and $g$ fill modelling roles analgous to $\beta$,
 % $B$, and $e$ from Equation \ref{eq2}.
 
 The third specification is a vector autoregressive (VAR) model.
-This specification is actually a family of six similar models.
+Six related models follow this general specification.
 Equation \ref{eq:applied_naiive_var} is the first model in this family.
 It is a two-variable case of that specification.
 This model is similar to the previous non-VAR
@@ -224,32 +225,29 @@ instead of Section 127 assistance.
 \end{subequations}
 % TODO: maybe use stata built-in Granger causality Wald tests
 
-Equation \ref{eq:univariate_var} models any variable,
-whether dependent or independent,
-as an ordinary least squares function of own lags,
-up until the lag number denoted by $i$.
-This is a univariate autoregression.
+Equation \ref{eq:univariate_var} is a univariate autoregression.
+Dependent and independent variables are uniformly represented by $v_t$.
+An ordinary least squares function of $i$ lags explains the current-period value of the variable in the univariate regression.
 Equation \ref{eq:naiive_multi_var} extends this operation to $k$ variables.
 Notice that $V_t$ is not a $k*1$ vector of univariate $v_t$.
-Instead, it is a $k*k$ multivariate vector, plus a constant and an error term,
-which explains $V_t$ using $i$ lags from each variable in $k$.
+Instead, it is a $k*k$ multivariate vector, plus a constant and an error term.
 
 Equation \ref{eq:applied_naiive_var}
 obtains $V_t$ as specified in Equation \ref{eq:univariate_var}
 for all variables in $k$,
 then fits an ordinary least squares model across $V_kt$ to explain the current-period dependent variable, $Y_t$.
 Section 127 effects turn out to be insignificant in the specification described by Equation \ref{eq:applied_naiive_var},
-but H-1B effects are signficant.
+but H-1B effects are significant.
 As a result, all four remaining VAR equations use H-1B issuance as the independent variable.
 
 % another good article from david, other than cited: https://blog.stata.com/2016/08/09/vector-autoregressions-in-stata/
 % Lucas critique of VAR https://ocw.mit.edu/courses/economics/14-384-time-series-analysis-fall-2013/lecture-notes/MIT14_384F13_lec12and13.pdf
 Two of the four remaining models are three-variable extensions of the prior specification.
 These two models extend Equation \ref{eq:applied_naiive_var} by adding a second stage response.
-In the first case, federal student loan debt is examined as a second-order response.
-In the second case, the price of higher education is examined as a second-order response.
+In the first case, the second-order response is federal student loan debt.
+In the second case, the second-order response is the price of higher education.
 David Schenk suggests Cholesky decomposition as a method of generating an ordered impulse-response function from a VAR\cite{schenck_2016}.
-Cholesky identification is described by the following system of equations.
+Equations \ref{eq:make_structural_shocks} and \ref{eq:link_covariance_error} describe Cholesky identification.
 
 \begin{subequations}
     \begin{equation}
@@ -274,12 +272,12 @@ Now $u_t$ is defined, which represent structural, or uncorrelated, error.
 Endogenous error in $B$ allows us to trace out the effects of arbitrary innovation
 in some variable in $V_k$.
 
-The reduced form $BB'$ in Equation \ref{eq:link_covariance_error} matches many
-matrices, but there is a unique lower-triangle matrix which satisfies the equality
-statement with $\Sigma$, the covariance matrix of the errors.
-Selecting this unique solution is done by stipulating a causal ordering on the variables in the VAR.
+The reduced form $BB'$ in Equation \ref{eq:link_covariance_error} matches many matrices.
+A unique solution is identified by selecting the lower-triangle matrix which satisfies
+the equality statement with $\Sigma$, the covariance matrix of the errors.
+This arbitrary selection is isomorphic to stipulating a causal direction of effect on the variables in the VAR.
 This is called a Cholesky ordering.
-A Cholesky ordering allows assessment of fit regarding the causal stipulation,
+Stipulating a Cholesky ordering allows assessment of fit regarding the causal stipulation,
 which amounts to evidence for or against causality.
 It ends up being an analytical tool in this paper.
 The variable orderings selected are theoretically grounded.
@@ -290,7 +288,7 @@ to the effects of H-1B policy on student loans and the price of higher education
 The form of these models follows the specification in Equation \ref{eq:applied_naiive_var},
 but the independent and response variables are different.
 H-1B issuance is the independent variable.
-In one case the response variable is federal student loan debt.
+The response variable is federal student loan debt in one case.
 The price of higher education is the response variable in the other case.
 
 \section{Data}
@@ -300,23 +298,22 @@ is provided by the National Center for Education Statistics (NCES)\cite{nces_201
 Enrollment figures are for the fall semester of the school year.
 Information on selected years from 1947 to 2028 is provided, where values for 2018 and later are projected.
 The present study does not use any of the projected values.
-Other data sources and policy considerations constrain the period of interest to the 27-year period from 1990 to 2016.
+Other data sources and policy considerations constrain the period of interest to the 27 years from 1990 to 2016.
 % total enrollment: https://nces.ed.gov/programs/digest/d18/tables/dt18_303.10.asp
 
 Personal Consumption Expenditures (PCE) data is a measure of inflation provided by the U.S. Bureau of Economic Analysis (BEA)\cite{bea_2020}.
-Education-specific inflation is also calculated using NCES data\cite{nces_2017}.
+NCES data allows the calculation of education-specific inflation\cite{nces_2017}.
 NCES data is the average tuition and required fees for full-time undergraduate students across all degree-granting postsecondary institutions.
 NCES provides nominal values and values adjusted for the consumer price index (CPI) for tuition.
-The price of room and board is ignored.
+Cost information does not include the price of room and board.
+2016 is the base year for each measure of inflation.
 % https://fred.stlouisfed.org/series/PCE
 % https://nces.ed.gov/programs/digest/d17/tables/dt17_330.10.asp
 
 Nominal Section 127 limits are a matter of public law.
-Section 127 took effect beginning after December 31, 1978 with a nominal assistance limit of 5,000 dollars\cite{plaw95_600_1978}.
+Section 127 took effect beginning after December 31, 1978, with a nominal assistance limit of 5,000 dollars\cite{plaw95_600_1978}.
 In October 1986, Pub. L. 99–514 increased the nominal assistance limit to 5,250 dollars\cite{plaw99_514_1986}.
-Real Section 127 employer assistance limits are calculated two ways.
-One variable is constructed for each measure of inflation.
-Price deflators for each measure of inflation use 2016 as a base year.
+Combining nominal assistance over time with CPI and education-specific inflation data yields two real measures of inflation.
 
 % begin discuss veteran benefits data
 Changes to veteran education benefits are also a matter of public law.
@@ -665,12 +662,12 @@ and also the shape of how that effect will play out over time.
 Multiple regression ruled out the significance of an interaction variable between
 visa issuance and employer assistance,
 so this analysis does not suppose that those variables are endogenous.
-Instead, each is addressed as a seperate potential stimulus to the response variable.
+Instead, each is addressed as a separate potential stimulus to the response variable.
 In the preferred dynamic model, visa and employer assistance effects
 are the only effects that exist other than time.
 As a result, each of the two VAR models are both simple, two-variable models.
 
-For the the employer assistance model,
+For the employer assistance model,
 an extended sample of 43 observations
 over the period from 1974 to 2016 is used.
 For the H-1B model, 24 samples over the period from 1994 to 2017 are used.
