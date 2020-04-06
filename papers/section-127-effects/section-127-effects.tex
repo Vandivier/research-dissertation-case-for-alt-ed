@@ -198,7 +198,7 @@ The other variations include the first and second lags and differences for each 
 % $\delta$, $D$, and $g$ fill modelling roles analgous to $\beta$,
 % $B$, and $e$ from Equation \ref{eq2}.
 
-The third specification is a vector autoregressive (VAR) model.
+The third specification is a vector autoregression (VAR) model.
 Six related models follow this general specification.
 Equation \ref{eq:applied_naiive_var} is the first model in this family.
 It is a two-variable case of that specification.
@@ -654,7 +654,7 @@ but vector autoregression provides deeper analysis in this regard.
 Vector autoregression (VAR) improves on DOLS for the specific purpose
 of identifying potential natural or policy instruments.
 While difference and lag effects of the first and second order were manually investigated using DOLS,
-vector autoregressive techniques allow for non-manual, or unsupervised,
+vector autoregression allows for non-manual, or unsupervised,
 investigation of potentially many lags to select for the optimal period.
 An analyst is then able to achieve some model confidence in both the total policy effect over time
 and also the shape of how that effect will play out over time.
@@ -693,7 +693,7 @@ The positive effect plateaus in the seventh period, then reverses,
 reaching a permanent zero effect in the eleventh period.
 
 Increased enrollment reflects an increase in demand which is associated with
-increased tuition and debt both theoretically and in present data\footnote{
+increased tuition and debt both theoretically and in the present data\footnote{
     A simple regression of total enrollment on total federal loans yields a
     positive coefficient with a p-value less than 0.001 and an adjusted r-squared
     of 0.973.
@@ -701,31 +701,25 @@ increased tuition and debt both theoretically and in present data\footnote{
     positive coefficient with a p-value less than 0.001 and an adjusted r-squared
     of 0.915.
 }.
-From a policy perspective, increasing enrollment is not obviously desirable.
-From an individual perspective, college has a great return,
-but from a social perspective,
-concerns about grade inflation,
-credential inflation,
-experience inflation,
+From a policy perspective, increasing enrollment may not be desirable.
+Higher education has a great return from an individual perspective, but there are several concerns from a social perspective.
+Examples include concerns about grade inflation, credential inflation, experience inflation,
 and the social return to education spending abound.
-There are two related issues which are not considered controversial from a policy perspective.
-The increasing total of higher education student loan debt is widely considered a crisis,
-and concerns about the price of higher education is a staple in the modern news cycle.
 For example, Forbes magazine recently pointed out that the price of college is increasing almost eight times faster than wages\cite{maldonado2018price}.
 Edvisors notes that the average tuition inflation rate is double the average CPI-U\cite{edvisors_2019}.
-Since we have identified H-1B policy as an enrollment instrument,
+Many in the media consider the size of federal student loan debt to be a crisis.
+Because H-1B policy is an enrollment instrument,
 and enrollment is directly related to loans and real tuition,
-VAR analysis allows investigation of whether those downstream variables will be significantly impacted.
+further analysis investigates a downstream effect of H-1B policy on loans or real tuition.
 
-A short linear regression explaining total enrollment
-is reviewed to determine whether tuition and loans significantly interact.
+A short regression of three variables on total enrollment
+identifies a positive but insignificant (p < 0.2)
+interaction between tuition and loans significantly interact.
 The independent variables include total loans,
 CPI-adjusted tuition,
 and an interaction variable.
-The result is that the interaction variable is positively signed and not quite significant (p < 0.2).
-It's plausible that more sophisticated analysis may prove some kind of interaction exists,
-but even supposing significance, the correct Cholesky ordering is non-obvious.
-For these reasons, loans and tuition are seperately investigated using two distinct VAR models.
+It is plausible that more sophisticated analysis may prove some kind of interaction exists, but even supposing significance, the correct Cholesky ordering is non-obvious.
+Based on the lack of interaction, further analysis scopes loans and tuition to separate models.
 
 \begin{figure}[h!]
     \centering
@@ -737,10 +731,10 @@ For these reasons, loans and tuition are seperately investigated using two disti
 \end{figure}
 
 Figure \ref{fig:var_results} is a graphical representation of the VAR model results.
-The top row are the a three-variable models of interest.
-In these models an H-1B impulse generates a first-order enrollment response.
-The bottom row are two-variable specifications which omit the intermediary enrollment response.
-On the left are the loan models and on the right are the tuition models.
+The top row contains three-variable models of interest.
+In these models, an H-1B impulse generates a first-order enrollment response.
+The bottom row contains two-variable specifications that omit the intermediary enrollment response.
+On the left are the loan models, and on the right are the tuition models.
 
 The figure makes the three-variable model preference clear for tuition,
 but some model statistics make the case stronger with respect to the loan models.
@@ -757,7 +751,7 @@ The loan model has a sample size of 25 over the years from 1993 to 2017.
 The CPI-adjusted tuition model has a sample size of 25 over the years from 1992 to 2016.
 
 The loan model anticipates a temporary increase in total loans,
-followed by eventual return to zero.
+followed by an eventual return to zero.
 The tuition model allows for the same,
 but it also potentially indicates the establishment of a new normal
 of higher real tuition prices as a result of a one-time H-1B impulse.
@@ -766,7 +760,7 @@ It does not seem to be the case that a real-world shock would result in one or t
 Instead, a real-world H-1B shock would be expected to cause both effects,
 and these models potentially understate their effects if interaction generates higher enrollment.
 
-In summary, vector autoregressive analysis confirms H-1B visa issuance as a Granger-causal policy instrument.
+In summary, vector autoregression confirms H-1B visa issuance as a Granger-causal policy instrument.
 Employer assistance has the expected dynamic effect pattern, but it is insignificant in the VAR specification.
 Additional analysis indicates H-1B can be leveraged not only to directly impact enrollment,
 but to further impact aggregate student loans and the real price of tuition.

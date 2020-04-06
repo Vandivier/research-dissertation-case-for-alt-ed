@@ -4,7 +4,7 @@ do "D:\GitHub\research-dissertation-case-for-alt-ed\papers\section-127-effects\d
 
 * // ref: https://www.youtube.com/watch?v=bF2Y0sHhd7w
 * // ref: https://www.youtube.com/watch?v=J_B51r2Y-N0
-* // begin vector autoregressive exploration
+* // begin vector autoregression exploration
 * // transform from preferred DOLS model
 * // 2-factor model lag is 2 lags
 varsoc totalen visa_m_h1b_1
