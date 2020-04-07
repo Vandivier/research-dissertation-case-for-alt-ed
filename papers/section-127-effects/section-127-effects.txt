@@ -7,16 +7,24 @@ Further, a simple regression of the inflation-adjusted tax-deductible limit on e
 These findings raise concerns about omitted variables bias.
 After taking extensive steps to account for dynamic economic conditions and various policy effects, analysis robustly identifies positive marginal employer assistance effects on enrollment.
 The linear and total effects of interest remain negative over the main period of analysis from 1992 through 2017.
-H-1B visa policy was initially included as a control, but it emerges as a comparatively preferred policy instrument.
+Controlling for H-1B policy effects leads unexpectedly to the identification of H-1B policy as a comparatively preferred policy tool.
 Results are validated using vector autoregression (VAR), dynamic ordinary least squares (DOLS), and instrumental variable (IV) analysis.
 
 Introduction
 The passage of Public Law 95-600 in 1978 created Section 127.
 Section 127 provides for a limited employer tax deduction for the transfer of money to an employee for educational purposes.
 This paper tests the hypothesis that the causal effect of Section 127 employer assistance on total university enrollment is positive.
-Regression in this paper controls extensively for dynamic policy and economic variation, then investigates robustness and Granger causality across multiple specifications.
 Results show that employer assistance has a positive marginal effect on enrollment and negative linear and total effects.
 H-1B visa policy is a comparatively effective policy instrument for enrollment, national student loan debt, and the price of education.
+
+Figure \ref{fig:intro_enroll_assistance} illustrates university enrollment over time
+and the real maximum deductible amount for Section 127 educational assistance.
+Here, education-specific inflation informs the real assistance limit.
+This paper hypothesizes that the apparent inverse relation is a superficial result of variable omission.
+Analysis in this paper controls extensively for dynamic policy and economic variation.
+The use of multiple specifications ensures the robustness of findings.
+In one specification, vector autoregression (VAR) provides evidence on Granger causality.
+
 The failure of several simple theories to successfully explain the observation of enrollment slowdown in the late 1970s and 1980s further motivates the present study.
 
 Simple Supply-Side Explanations

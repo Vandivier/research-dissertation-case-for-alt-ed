@@ -1,5 +1,5 @@
 clear
-import delimited D:\GitHub\research-dissertation-case-for-alt-ed\papers\section-127-effects\data\section-127-effects.csv
+import delimited D:\workspace\github\research-dissertation-case-for-alt-ed\papers\section-127-effects\data\section-127-effects.csv
 
 gen visa_total = totalvisaaward
 gen visa_m_h1 = totalh1familyvisaaward
