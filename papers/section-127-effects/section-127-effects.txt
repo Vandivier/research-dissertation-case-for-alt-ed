@@ -41,8 +41,7 @@ Nevertheless, further considerations lead Cappelli to conclude that a substantia
 The provision of this kind of benefit remains common in later years.
 In 2013, SHRM reported that 61 percent of employers offer tuition assistance.
 In 2017, World at Work found that 85 percent of employers offered such a benefit, with another 7 percent offering non-reimbursement tuition assistance, such as upfront tuition discounts.
-
-In summary, the simplistic hypothesis of lagged or bottlenecked employer support for Section 127 fails to solve the problem, motivating more complex analysis carried out in this paper.
+In summary, the simplistic hypothesis of lagged or bottlenecked employer support for Section 127 fails to solve the problem.
 
 Simple Demand-Side Explanations
 A simple regression of real employer assistance on enrollment may yield a significant negative correlation wholly due to consumer effects.
@@ -71,30 +70,30 @@ Here, $\alpha$ is a $1*k$ vector of coefficients, and $V$ is a $k*1$ vector of a
 Y_t = \alpha{V_{t}}+u_t
 
 Policy variables exist for federal lending policy, veteran education benefits, and H-1 Visa policy.
-Two additional non-policy variables are controls for time, in years, and the real price of university tuition plus mandatory fees.
+Two additional non-policy variables include time, in years, and the real price of university tuition plus mandatory fees.
 
 Equation \ref{eq2} describes the next specification.
 This model follows the Anderson–Hsiao pattern with the lagged variable of interest as an instrument.
 This specification investigates concerns of potential endogeneity in the dependent variable.
 It is both an instrumental variable model and also a dynamic ordinary least squares (DOLS) model.
 
-z = \delta{W_{t}}+D{Y_{t-2}}+g_t
+z_t = \delta{W_{t}}+D{Y_{t-2}}+g_t
 
 Here, $\beta$ is a $1*l$ vector of coefficients, and $W$ is an $l*1$ vector of annually observed independent variables.
 $z$ is the instrument, and it is a projection of lagged enrollment derived from twice-lagged enrollment.
 Equation \ref{eq3} explicitly derives $z$.
 
-$l$ is a direct transformation of $k$ from Equation \ref{eq1}.
+$l$ is a transformation of $k$ from Equation \ref{eq1}.
 $l$ contains five variations of each variable in $k$.
 The first variation is the non-transformed value.
 The other variations include the first and second lags and differences for each variable in $k$.
 
 The third specification is a vector autoregression (VAR) model.
-Six related models follow this general specification.
-Equation \ref{eq:applied_naiive_var} is the first model in this family.
-It is a two-variable case of that specification.
-This model is similar to the previous non-VAR
-specifications because it models the effect of
+Six related models follow the general reduced form
+described in Equation \ref{eq:applied_naiive_var}.
+This first model following this functional form is a two-variable case.
+This first model is similar to the previous non-VAR
+specifications because it identifies the effect of
 real employer assistance on total enrollment.
 A second model follows the same form, but the independent variable is H-1B visa issuance, instead of Section 127 assistance.
 
@@ -106,8 +105,8 @@ Equation \ref{eq:univariate_var} is a univariate autoregression.
 Dependent and independent variables are uniformly represented by $v_t$.
 An ordinary least squares function of $i$ lags explains the current-period value of the variable in the univariate regression.
 Equation \ref{eq:naiive_multi_var} extends this operation to $k$ variables.
-Notice that $V_t$ is not a $k*1$ vector of univariate $v_t$.
-Instead, it is a $k*k$ multivariate vector, plus a constant and an error term.
+Notice that $V_t$ is not a collection of univariate $v_t$.
+Instead, it is a $k*k$ vector, a constant, and an error term.
 
 Equation \ref{eq:applied_naiive_var}
 obtains $V_t$ as specified in Equation \ref{eq:univariate_var}
@@ -128,10 +127,9 @@ e_t = Bu_t
 = B B'
 
 The left-hand error term in Equation \ref{eq:make_structural_shocks}, $e_t$, is the same as in Equation \ref{eq:applied_naiive_var}.
-The right-hand of Equation \ref{eq:make_structural_shocks} defines $B$, which is a matrix
-Now $u_t$ is defined, which represent structural, or uncorrelated, error.
-Endogenous error in $B$ allows us to trace out the effects of arbitrary innovation
-in some variable in $V_k$.
+The right-hand of Equation \ref{eq:make_structural_shocks} defines $B$, which is the coefficient matrix for $u_t$.
+Structural, or uncorrelated, errors are defined as $u_t$.
+Endogenous error in $B$ allows us to estimate the effects of arbitrary innovation in some variable in $V_k$.
 
 The reduced form $BB'$ in Equation \ref{eq:link_covariance_error} matches many matrices.
 There does exist a unique lower-triangle matrix which satisfies
@@ -170,14 +168,9 @@ In October 1986, Pub. L. 99–514 increased the nominal assistance limit to 5,25
 Combining nominal assistance over time with CPI and education-specific inflation data yields two real measures of inflation.
 
 Changes to veteran education benefits are also a matter of public law.
-A state variable representing veteran education benefits from 1970 to 2020 allows for five different states.
+A categorical state variable represents veteran education benefits from 1970 to 2020 and allows for five different states.
 The Servicemen's Readjustment Act of 1944 is also called the G.I. Bill.
 This bill is the first relevant case of veteran benefits, but it precedes the period of interest for this study.
-
-Changes to veteran education benefits are also a matter of public law.
-A categorical variable is used to capture the state of veteran education benefits among five possible states over the period from 1970 to 2020.
-The Servicemen's Readjustment Act of 1944 is also called the G.I. Bill.
-This bill is the first interesting case of veteran benefits, but it precedes the period of interest for this study.
 
 The original bill expired in 1956.
 This expired state is the first state represented by the veteran education state variable.
@@ -215,9 +208,7 @@ Nonimmigrant visa award data by classification from 1987 to 2019 is provided by
 the Bureau of Consular Affairs within the United States State Department.
 This paper exclusively uses the most relevant H-1B visa award numbers, but reanalysis with other visa classifications could yield statistically significant findings.
 The prior H-1 visa was also a merit worker visa, but it had no formal definition of merit.
-In 1989, 48,820 H-1 visas were awarded.
-In 1991, 7,443 H-1A visas were awarded, and 51,882 H-1B visas were awarded.
-It's plausible that the college-educated effect informally existed prior to the 1990 legislation.
+It is plausible that the college-educated effect informally existed before the 1990 legislation.
 One might also find small but significant effects by looking into visas outside the H-1 family.
 Besides the number of actual visa awards, an analyst could look for visa cap effects or visa policy state effects.
 For example, the Pew Research Center notes that the American Competitiveness in the 21st Century Act of 2000 exempts certain entities from the H-1B cap.
@@ -228,12 +219,11 @@ Loan limits are a policy choice, but after correcting for loan limits, the actua
 As such, we would not want to correct for actual loans.
 That would wipe out the effect of interest, which is the demand effect attributable to various policies, and Section 127 employer educational assistance in particular.
 
-Instead, loan data is taken as a left-hand variable of secondary interest.
-Section 127 is taken as a right-hand variable in that brief investigation.
-This allows us to briefly review the relationship between Section 127 employer assistance
-and the student debt crisis, a potentially related topic of importance.
-The variable I use in this regard is total federal undergraduate loans, which are extracted from a data set provided by the College Board.
-Given additional context provided by the College Board in a related report, an analysis that decomposes federal loans by type would plausibly yield statistical refinement.
+Loan data generates results as a left-hand variable of secondary interest, rather than as an independent variable.
+The variable I use in this regard is total federal undergraduate loans.
+College Board provides loan data.
+College Board also gives the additional context in a report which is related to the loan data.
+The additional context suggests that an analysis that decomposes federal loans by type could yield preferred statistical results.
 
 Results
 Multiple Regression Results
@@ -241,7 +231,7 @@ The key independent variable is H-1B visa issuance, but at the outset, there are
 Ordinary least squares (OLS) multiple regression of visa effects, time, and tuition was run against both total enrollment and public university enrollment.
 Total enrollment was more predictable than public university enrollment, so this was selected as the preferred enrollment variable.
 
-With total enrollment as the explained variable, a kitchen sink multiple regression was used to select the strongest factors among other factor groups.
+With total enrollment as the explained variable, a kitchen sink multiple regression was used to select the most influential factor from among each factor group.
 The total number of visas issued across classification is not significant.
 Stafford loan limit variables were also identified as insignificant.
 The long regression of interest has higher unadjusted explanatory power compared to kitchen sink regression.
@@ -373,8 +363,8 @@ Dynamic ordinary least squares provide rudimentary causal findings, but vector a
 Vector autoregression (VAR) improves on DOLS for the specific purpose
 of identifying potential natural or policy instruments.
 Difference and lag effects of the first and second orders were arbitrarily selected for investigated using DOLS.
-In contrast, VAR lag selection techniques involve rigorous selection criteria
-and vector autoregression is relatively straightforward with many periods of interest.
+In contrast, VAR lag selection techniques involve rigorous selection criteria.
+Vector autoregression is also relatively straightforward with many periods of interest.
 
 Employer assistance, visa, and time effects are the only factors in the preferred dynamic model.
 Prior analysis ruled out the significance of an interaction variable between
