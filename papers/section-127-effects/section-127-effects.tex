@@ -428,19 +428,17 @@ The additional context suggests that an analysis that decomposes federal loans b
 \section{Results}
 
 \subsection{Multiple Regression Results}
-The key independent variable is H-1B visa issuance, but at the outset,
-there are two potential left-hand variables available.
-Ordinary least squares (OLS) multiple regression of visa effects, time,
-and tuition was run against both total enrollment and public university enrollment.
+The key independent variable is the real value of Section 127 assistance.
+Two potential left-hand variables exist at the outset.
+Ordinary least squares (OLS) multiple regressions of visa effects, time,
+and tuition were run against both total enrollment and public university enrollment.
 Total enrollment was more predictable than public university enrollment,
-so this was selected as the preferred enrollment variable.
+so it was selected as the preferred enrollment variable.
 
 With total enrollment as the explained variable,
 a kitchen sink multiple regression was used to select the most influential factor from among each factor group.
-The total number of visas issued across classification is not significant.
-Stafford loan limit variables were also identified as insignificant.
-The long regression of interest has higher unadjusted explanatory power compared to kitchen sink regression.
-Measures of tuition were identified as insignificant.
+The total number of visas issued across classification,
+the Stafford loan limit, and measures of tuition were identified as insignificant.
 Table \ref{tab:table_mols} is a table of regressions which helps illustrate that, somewhat surprisingly,
 real measures of employer assistance capture price and inflation effects in a preferred way
 compared to using a more direct measure of tuition.
@@ -542,7 +540,8 @@ obtains an adjusted r-squared of about 0.26.
 A surprising result is that the Anderson-Hsiao estimator is insignificant
 across various specifications, including the preferred DOLS model (p = 0.51).
 Time effects are independently significant in the model.
-These results indicate that the apparent autocorrelation is due to independent effects which are effectively proxied with the measure of time included in the data set.
+These results indicate that the apparent autocorrelation is due to independent effects,
+including unobserved effects, which are effectively proxied by time.
 
 While the Anderson-Hsiao estimator is insignificant,
 dropping that variable and running an ordinary regression reduces adjusted r-squared to 0.82,
@@ -613,13 +612,13 @@ Other than lagged effects, dynamic visa effects are consistent with an insightfu
 visa effects identified under multiple regression analysis.
 For example, an insignificant positive quadratic effect is identified in the preferred ordinary multiple regression.
 In the preferred DOLS, a positive marginal effect is identified with significance.
-Moreover, a negative first difference is also identified with significance.
+A negative first difference is also identified with significance.
 It makes sense that forcing these related and opposing marginal effects into a single variable would lead
 to insignificance in a non-dynamic specification.
 
-Using a dynamic specification, we can see that marginal effects are stable,
-but they move in different directions when issuance is increased with and without respect to time.
-Moreover, both of these factors face marginal effects that have an attenuating higher-order counterpart.
+Using a dynamic specification, we can see that marginal effects within and between periods are stable,
+but they move in different directions.
+Moreover, both of these marginal effects have an attenuating higher-order counterpart.
 The positive static marginal effect is attenuated by a negative cubic effect.
 The negative dynamic static marginal effect is attenuated by a positive and significant second-difference coefficient.
 
@@ -628,21 +627,16 @@ While the preferred multiple regression covers 27 annual samples from 1990 to 20
 the preferred DOLS model obtains a sample size of 25 over the period from 1992 to 2016.
 
 In summary, DOLS analysis demonstrates non-robustness in the preferred non-dynamic model,
-then provides an alternative model that is significantly more robust, although it
-achieves a slightly lower level of explanatory power.
-DOLS analysis addresses concerns of potential autocorrelation,
-finding that autocorrelation is not an important concern.
-DOLS also provides rudimentary causal findings by identifying changes that are associated with results in the following period.
+then provides a preferred alternative model.
+DOLS analysis demonstrates that autocorrelation is not an important concern.
+DOLS also provides rudimentary causal evidence by identifying significant lag effects.
 
 \subsection{Vector Autoregression Results}
 % ref: analysis-4-vector-auto-reg.do
-Dynamic ordinary least squares provide rudimentary causal findings,
-but vector autoregression provides deeper analysis in this regard.
-Vector autoregression (VAR) improves on DOLS for the specific purpose
-of identifying potential natural or policy instruments.
-Difference and lag effects of the first and second orders were arbitrarily selected for investigated using DOLS.
-In contrast, VAR lag selection techniques involve rigorous selection criteria.
-Vector autoregression is also relatively straightforward with many periods of interest.
+Vector autoregression (VAR) improves on DOLS specifically for the purpose
+of identifying causal effects, policy instruments, and effects over many periods.
+The difference and lag effects of the first and second orders were arbitrarily selected DOLS analysis.
+In contrast, VAR lag selection techniques involve non-arbitrary selection criteria.
 
 Employer assistance, visa, and time effects are the only factors in the preferred dynamic model.
 Prior analysis ruled out the significance of an interaction variable between
@@ -668,11 +662,11 @@ A positive shock to employer assistance is associated with a downward parabola c
 The response, however, is not significant for any period, even when using a 60 percent confidence interval.
 
 VAR results for an H-1B policy impulse are significant.
-A positive shock to H-1B issuance is also associated with a downward parabola curve response.
-The effect is insignificant at the 0.5 level for the first two periods,
+A positive shock to H-1B issuance is also associated with a downward parabolic response.
+The H-1B policy effect is insignificant for the first two periods,
 but it reaches a significant positive effect in the third period.
 The positive effect plateaus in the seventh period,
-then it reverses and reaches a permanent zero effect in the eleventh period.
+then it reverses and reaches permanent insignificance in the eleventh period.
 
 Increased enrollment reflects an increase in demand which is associated with
 increased tuition and debt both theoretically and in the present data\footnote{
@@ -694,14 +688,13 @@ Because H-1B policy is an enrollment instrument,
 and enrollment is directly related to loans and real tuition,
 further analysis investigates a downstream effect of H-1B policy on loans or real tuition.
 
-A short regression of three variables on total enrollment
-identifies a positive but insignificant (p < 0.2)
-interaction between tuition and loans significantly interact.
-The independent variables include total loans,
+A short regression of total loans,
 CPI-adjusted tuition,
-and an interaction variable.
-It is plausible that more sophisticated analysis may prove some kind of interaction exists, but even supposing significance, the correct Cholesky ordering is non-obvious.
-Based on the lack of interaction, further analysis scopes loans and tuition to separate models.
+and an interaction variable on total enrollment
+identifies a positive but insignificant (p < 0.2)
+interaction between tuition and loans.
+A more sophisticated analysis might prove that the interaction does exist, but even supposing significance, the correct Cholesky ordering is non-obvious.
+Based on this information, further analysis scopes loans and tuition to separate models.
 
 \begin{figure}[h!]
     \centering
