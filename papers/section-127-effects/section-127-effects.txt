@@ -437,9 +437,39 @@ H-1B policy stimulus directly impacts enrollment and has further indirect effect
 The dynamic response of enrollment and other dependent variables to employer assistance impulse is insignificant.
 
 Conclusions
-A surprising slowdown in enrollment is observed around the time Section 127 was created.
-Cappelli constrains a simple slow employer adoption hypothesis by demonstrating widespread adoption as early as 1993.
-Demand-side explanations do a fair job of explaining low enrollment until about 1980.
-From about 1980 until about 1993, several important economic and policy variations are identified.
+A slowdown in enrollment occurred around the time Section 127 was created.
+After correcting for a wide set of relevant data, the effect of Section 127 does appear to be negative on total enrollment over the period from 1992 to 2016.
+The within-period marginal effect of increasing Section 127 assistance is positive.
+Vector autoregression indicates that using this kind of assistance as a policy tool is relatively unlikely to impact enrollment in a meaningful way.
 
-Integrating Simple Explanations
+Analysis indicates that the H-1B policy is a relatively strong policy tool.
+A positive shock to the count of H-1B visas issued is associated with increases in enrollment, total loans, and the price of education.
+H-1B policy modification in any direction is not obviously beneficial based on these criteria alone.
+Legal immigration has several additional benefits that exceed the scope of this study.
+The literature generally suggests that an increase in H-1B immigration would benefit the economy.
+There are important distributional effects, but they appear to be desirable overall.
+The main effects of increased H-1B labor involve a transfer of wealth from native computer scientists to all other people.
+
+One hypothesis in this paper was that there might be some interaction between H-1B policy and Section 127 assistance.
+H-1B policy specifies a college-level education as a qualifier for specialized labor.
+Theoretically, this could incentivize higher college participation by natives due to competitive effects.
+Statistical evidence in this study does not identify an important effect of this kind, but the removal of the college-level qualifier may still prove beneficial.
+Such a move would open the door to a wider pool of talented foreign labor.
+
+Two changes to Section 127 are also worth consideration.
+First, allow for the deduction of alternative education costs instead of requiring such funds to be used for college.
+Many employers have ceased requiring the degree in recent years.
+Removing the requirement that funds go toward college would reduce upward price pressure on college, and it could incentivize demand for alternative credentials.
+Employers prefer alternative credentials for specific roles.
+In many cases, obtaining an alternative credential involves a focus on obtaining a specific skill.
+These credentials are often more affordable than traditional education and
+are utilized by a relatively diverse labor pool.
+
+The second change would be a modification of the employer requirement.
+The modification would allow an individual to take a deduction for themselves or a dependent.
+Willis Towers Watson estimates that fewer than 10 percent of eligible employees use tuition reimbursement benefits annually.
+Many students work full time while attending college, but many do not.
+Allowing an individual to take a deduction for themselves or their dependent would encourage increased education among impoverished groups
+relative to those individuals who are already employed.
+Evidence indicates there exists significant social value due to crime reduction when relatively impoverished individuals obtain a college degree.
+
