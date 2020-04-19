@@ -1,0 +1,4 @@
+1 - From SurveyMonkey, save all response data as csv, original view, condensed, numerical value.
+    i. Named soac (survey on alternative credentials) YYYYMMDD by modified date
+2 - remove extraneous second row
+3 - remove columns: first name, last name, email address
