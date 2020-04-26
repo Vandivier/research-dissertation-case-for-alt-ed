@@ -1,6 +1,6 @@
 clear
 
-do "D:\GitHub\research-dissertation-case-for-alt-ed\papers\alt-ed-survey\190201-feb-survey-monkey\data\stata\analysis-1-vars.do"
+do "D:\workspace\github\research-dissertation-case-for-alt-ed\papers\alt-ed-survey\data\190201-feb-survey-monkey\data\stata\analysis-1-vars.do"
 
 * // summarize all variables, providing data for summary-data.csv
 ssc install fsum, replace

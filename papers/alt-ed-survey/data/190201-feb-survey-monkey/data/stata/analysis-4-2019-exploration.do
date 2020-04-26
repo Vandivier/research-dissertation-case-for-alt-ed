@@ -1,6 +1,6 @@
 *// Does not clear memory so that we can produce table-3 from analysis-5-table-3.do
 
-do "D:\GitHub\research-dissertation-case-for-alt-ed\papers\alt-ed-survey\190201-feb-survey-monkey\data\stata\analysis-3-2018-replication.do"
+do "D:\workspace\github\research-dissertation-case-for-alt-ed\papers\alt-ed-survey\data\190201-feb-survey-monkey\data\stata\analysis-3-2018-replication.do"
 
 * // model name:        voilong2019
 * // r2:                .5635

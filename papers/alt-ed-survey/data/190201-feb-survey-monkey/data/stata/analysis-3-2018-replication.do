@@ -2,7 +2,7 @@
 
 clear
 
-do "D:\GitHub\research-dissertation-case-for-alt-ed\papers\alt-ed-survey\190201-feb-survey-monkey\data\stata\analysis-1-vars.do"
+do "D:\workspace\github\research-dissertation-case-for-alt-ed\papers\alt-ed-survey\data\190201-feb-survey-monkey\data\stata\analysis-1-vars.do"
 
 * // model name:      voilong2018
 * // r2:              .6187

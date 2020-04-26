@@ -63,7 +63,5 @@ typings/
 # github credentials
 creds.js
 
-# obfuscate scrape results
 cache*.json
-output.csv
 ordered-output.csv

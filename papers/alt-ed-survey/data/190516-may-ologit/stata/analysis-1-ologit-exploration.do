@@ -1,6 +1,6 @@
 clear
 
-do "D:\GitHub\research-dissertation-case-for-alt-ed\papers\alt-ed-survey\190201-feb-survey-monkey\data\stata\analysis-1-vars.do"
+do "D:\workspace\github\research-dissertation-case-for-alt-ed\papers\alt-ed-survey\data\190201-feb-survey-monkey\data\stata\analysis-1-vars.do"
 * // 2019 variables long reg
 * // per appendix b, omits crypto, us centrism, stem, religiousness, christianity
 * // r2 = .3982, adjr2 = .3100, n = 431

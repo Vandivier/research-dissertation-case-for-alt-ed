@@ -4,7 +4,7 @@
 
 clear
 
-import delimited D:\GitHub\research-dissertation-case-for-alt-ed\papers\alt-ed-survey\190201-feb-survey-monkey\data\wrangle\output.csv
+import delimited D:\workspace\github\research-dissertation-case-for-alt-ed\papers\alt-ed-survey\data\190201-feb-survey-monkey\data\wrangle\output.csv
 
 * // is variables are boolean...and categoricals are split into many booleans
 tab collector, gen(iscollector)
