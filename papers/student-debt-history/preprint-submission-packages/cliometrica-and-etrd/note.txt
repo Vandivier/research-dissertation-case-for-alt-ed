@@ -1,0 +1,6 @@
+This package was originally submitted to Cliometrica as CLIO-D-20-00004
+and rejected for lack of journal fit.
+
+This package was then more recently internally transfered and submitted as ETRD-D-20-00095
+to Educational Technology Research & Development (ETRD)
+also for lack of journal fit.
