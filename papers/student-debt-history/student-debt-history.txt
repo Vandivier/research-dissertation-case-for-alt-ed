@@ -1,8 +1,8 @@
 
 New Digital Education as the Market Solution to the Student Debt Crisis
 
-See \url{https://github.com/Vandivier/research-dissertation-case-for-alt-ed/tree/master/papers/student-debt-history}
-for source data and other research materials.
+See \url{https://osf.io/sbt7m/?view_only=808ef02d99024d9ab86b84db359abf06}
+for data used in this study.
 
 I investigate social interest, or hype, in online learning.
 The two datasets of interest are derived from public search engine data for the United States over the period 2000-2020.
