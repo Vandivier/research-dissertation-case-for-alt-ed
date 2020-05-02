@@ -58,22 +58,21 @@
     % TODO: highlights https://www.elsevier.com/authors/journal-authors/highlights
 
     \begin{abstract}
-        % word count: 90
+        % word count: 97
         % Hanushek model abstract word count: 151
         % BHR maximum 100
         % ref: simple regression claim: `reg totalen employer_assistance_1'
-        Section 127 of the United States Internal Revenue Code provides a tax deduction to employers that provide financial assistance for employee education.
-        This policy was intended as a positive incentive on enrollment in higher education.
-        This paper finds that before and after taking extensive steps to account for important dynamic factors,
-        the policy fails to meaningfully increase enrollment.
+        Policymakers intended to incentivize higher education enrollment through the creation of Section 127 of the United States Internal Revenue Code.
+        This policy provides a tax deduction to employers that provide financial assistance for employee education.
+        This paper finds that before and after extensive correction, the policy fails to increase enrollment meaningfully.
         % Further, a simple regression of the inflation-adjusted tax-deductible limit on education enrollment indicates a significant negative correlation.
         % These findings raise concerns about omitted variables bias.
         % After taking extensive steps to account for dynamic economic conditions and various policy effects, analysis robustly identifies positive marginal employer assistance effects on enrollment.
-        Negative linear and total effects are observed over the period of analysis from 1992 through 2017.
+        Evidence from 1992 through 2017 indicates adverse linear and total effects of interest.
         % The linear and total effects of interest remain negative over the main period of analysis from 1992 through 2017.
         % In the preferred dynamic model, given a steady-state,
         % the period-over-period effect of interest from a one thousand dollar increase to real employer assistance would be to increase total enrollment by about 7.45 million students.
-        H-1B policy is explored as a correction variable, but emerges as a comparatively preferred policy tool.
+        H-1B policy is explored as a correction variable and emerges as a comparatively preferred policy tool.
         % Controlling for H-1B policy effects leads unexpectedly to the identification of H-1B policy as a comparatively preferred policy tool.
         Results are validated using vector autoregression (VAR), dynamic ordinary least squares (DOLS), and instrumental variable (IV) analysis.
     \end{abstract}
@@ -287,7 +286,7 @@ Structural, or uncorrelated, errors are defined as $u_t$.
 Endogenous error in $B$ allows us to estimate the effects of arbitrary innovation in some variable in $V_k$.
 
 The reduced form $BB'$ in Equation \ref{eq:link_covariance_error} matches many matrices.
-There does exist a unique lower-triangle matrix which satisfies
+There does exist a unique lower-triangle matrix that satisfies
 the equality statement with $\Sigma$, the covariance matrix of the errors.
 Selecting the lower-triangle solution is isomorphic to stipulating a causal direction of effect on the variables in the VAR.
 The order imposed during the VAR calculation process is called a Cholesky ordering.
@@ -378,8 +377,8 @@ The Immigration Act of 1990 makes available the H-1B classification for speciali
 That legislation formally defines a specialty occupation as "an occupation that requires...attainment of a bachelor's or higher degree..."
 
 H-1 visas are a subgroup of nonimmigrant visas.
-Nonimmigrant visa award data by classification from 1987 to 2019 is provided by
-the Bureau of Consular Affairs within the United States State Department\cite{bureauof_2020}.
+The Bureau of Consular Affairs provides nonimmigrant visa award data by classification
+from 1987 to 2019\cite{bureauof_2020}.
 This paper exclusively uses the most relevant H-1B visa award numbers,
 but reanalysis with other visa classifications could yield statistically significant findings.
 The prior H-1 visa was also a merit worker visa, but it had no formal definition of merit.
@@ -443,7 +442,7 @@ With total enrollment as the explained variable,
 a kitchen sink multiple regression was used to select the most influential factor from among each factor group.
 The total number of visas issued across classification,
 the Stafford loan limit, and measures of tuition were identified as insignificant.
-Table \ref{tab:table_mols} is a table of regressions which helps illustrate that, somewhat surprisingly,
+Table \ref{tab:table_mols} is a table of regressions that helps illustrate that, somewhat surprisingly,
 real measures of employer assistance capture price and inflation effects in a preferred way
 compared to using a more direct measure of tuition.
 
@@ -458,7 +457,7 @@ compared to using a more direct measure of tuition.
 Tuition is insignificant in model 1.
 Replacing tuition with PCE and education-deflated employer assistance in model 2 identifies the latter
 with significance at the 0.1 level and also improves the overall explanatory power of the model.
-Real employer education assistance which is solely corrected for the price of education
+Real employer education assistance, which is solely corrected for the price of education,
 is eventually preferred to the multiple-deflated measure.
 This makes the education-deflated real employer assistance limit the preferred Section 127 variable.
 After deciding on this variable as the preferred measure,
@@ -471,13 +470,13 @@ While model 1 has the highest r-squared value,
 model 4 has an adjusted r-squared equal to model 1.
 Model 4 is the result of a thorough nonlinear investigation,
 while models 1 and 2 are not.
-Model 3 is technically stronger but difficult to interpret.
+Model 3 is challenging to interpret.
 For example, interpreting the H-1B visa policy effect is not
 straightforward, both because a linear effect is missing in the model
 and also because other H-1 variables are present which make pure H-1B
 effect attribution impossible.
 
-All four models are technically very strong,
+All four models exhibit high explanatory power,
 but model 4 makes interpretation simple.
 The linear effect of real Section 127 assistance is insignificant and negative with low confidence.
 The marginal effect is highly significant and positive but decreasingly positive.
@@ -491,13 +490,13 @@ The total effect in the relevant range is also positive\footnote{
 This indicates that a real increase to Section 127 assistance would further boost enrollment,
 but such increases would be decreasingly effective.
 
-H-1 visa effects are complex and important across specifications.
+H-1 visa effects are complex and meaningful across specifications.
 The preferred model identifies a significant negative linear effect on enrollment
 from H-1B visa issuance.
 There is an insignificant positive marginal effect and a total negative effect.
-While the preferred model focuses on H-1B effects, analysis shows this is largely
-generalizable to the H-1 family.
-In fact, substituting H-1 total issuance for the linear H-1B variable improves
+While the preferred model focuses on H-1B effects,
+the results are generalizable to the H-1 family.
+Substituting H-1 total issuance for the linear H-1B variable improves
 linear visa effect significance,
 although it does not improve raw or adjusted explanatory power for the model overall.
 That move also is not preferred because the linear effect and the marginal visa effects would then correspond to different measures.
@@ -506,8 +505,7 @@ Time is the most consistently significant variable across multiple regressive mo
 Time, measured in years, intuitively possesses a positive linear effect and a negative marginal effect on total enrollment.
 The total effect of time over the period of the analysis is also strongly positive.
 A simple regression of time on total enrollment has an adjusted r-squared of about .95.
-Analysis using specifications that are explicitly dynamic is motivated in part by
-early identification of such important time effects.
+Simple identification of time effects motivates further analysis using specifications that are explicitly dynamic.
 
 \subsection{Dynamic Ordinary Least Squares Results}
 % ref: analysis-3-dynamic-ols.do
@@ -563,8 +561,8 @@ This indicates that raising assistance within-period and between periods are bot
 Both marginal effects follow an Inada-like pattern, where the marginal effect is decreasingly positive.
 The linear effect on employer assistance is significant and negative.
 
-I now calculate the total effect of employer assistance.
 Model 6, the preferred model, is fit to the years 1992 through 2017.
+The total effect of employer assistance over that period is now calculated using that model.
 The average values for the relevant independent variables over this period include
 an average real assistance limit of 13942.22,
 an average squared assistance limit of $2.56x10^8$,
@@ -632,7 +630,7 @@ the preferred DOLS model obtains a sample size of 25 over the period from 1992 t
 
 In summary, DOLS analysis demonstrates non-robustness in the preferred non-dynamic model,
 then provides a preferred alternative model.
-DOLS analysis demonstrates that autocorrelation is not an important concern.
+This paper fails to uncover evidence of autocorrelation.
 DOLS also provides rudimentary causal evidence by identifying significant lag effects.
 
 \subsection{Vector Autoregression Results}
@@ -654,10 +652,10 @@ For the H-1B model, 24 samples over the period from 1994 to 2017 are used.
 Ivanov and Kilian find that the Schwarz Information Criterion,
 also called Schwarz's Bayesian information criteria (SBIC),
 is the most accurate selection criterion for sample sizes less than 120\cite{ivanov2005practitioner}.
-For that reason, I prefer this criterion.
-Fortunately, all significant selection criteria provided by STATA unanimously agreed in the case of lag selection for both models.
-Such criteria included SBIC, the likelihood ratio (LR), the final prediction error (FPE),
-Akaike Information Criterion (AIC), and Hannan-Quinn Information Criterion (HQIC).
+
+Because this analysis uses fewer than 120 samples, the selection is determined by SBIC.
+In addition to SBIC, unanimous agreement on lag selection for both models is achieved using the likelihood ratio (LR),
+the final prediction error (FPE), Akaike Information Criterion (AIC), and Hannan-Quinn Information Criterion (HQIC).
 For both models, the optimal lag length is identified at two periods.
 The p-value for the optimal lag was less than 0.001 for both models.
 
@@ -719,13 +717,12 @@ The figure makes the three-variable model preference clear for tuition,
 but some model statistics make the case stronger with respect to the loan models.
 In the two-variable loan VAR, the r-squared for the visa variable is less than 0.89,
 and the r-squared for the loan variable is less than 0.988.
-In the three-variable specification, the r-squared for the visa variable is greater than 0.913,
-and the r-squared for the loan variable is greater than 0.989.
+In the three-variable specification, the r-squared for the visa variable exceeds 0.913.
+The r-squared for the loan variable exceeds 0.989.
 This confirms that the enrollment effect is model-improving rather than extraneous complexity.
 
 Both three-variable models achieve significance at the 0.05 level.
-Both three-variable models are optimized for two lags based on the SBIC selection criterion.
-As previously discussed, I prefer the Schwarz Information Criterion because these models involve small sample sizes.
+SBIC indicates two lag optimization for these models.
 The loan model has a sample size of 25 over the years from 1993 to 2017.
 The CPI-adjusted tuition model has a sample size of 25 over the years from 1992 to 2016.
 
@@ -744,24 +741,25 @@ The dynamic response of enrollment and other dependent variables to employer ass
 \section{Conclusions}
 
 A slowdown in enrollment occurred around the time Section 127 was created.
-After correcting for a wide set of relevant factors, the effect of Section 127 remains negative on total enrollment over the period from 1992 to 2016.
+After thorough correction, the effect of Section 127 remains negative on total enrollment over the period from 1992 to 2016.
 The within-period marginal effect of increasing Section 127 assistance is positive.
-Vector autoregression does not indicate that this kind of assistance is a meaningful policy tool.
+Vector autoregression does not indicate that this kind of assistance is useful as a policy tool.
 
 This analysis does indicate that the H-1B policy is an important policy tool.
 An increase to the count of H-1B visas issued within-period and between periods is associated with increases in enrollment, total loans, and the price of education.
 H-1B policy modification in any direction is not obviously beneficial based on these criteria alone.
 Legal immigration has several additional benefits that exceed the scope of this study.
 The literature generally suggests that an increase in H-1B immigration would benefit the economy\cite{bound2017understanding}.
-There are important distributional effects, but the net distributional effect appears to be desirable.
+There are substantial distributional effects, but the net distributional effect appears to be desirable.
 The main effects of increased H-1B labor involve a transfer of wealth from native computer scientists to other people,
 and other people exhibit significantly higher need on average.
 
 One hypothesis in this paper was that there might be some interaction between H-1B policy and Section 127 assistance.
 H-1B policy specifies a college-level education as a qualifier for specialized labor.
 Theoretically, this could incentivize higher college participation by natives due to competitive effects.
-Statistical evidence in this study does not identify an important effect of this kind, but the removal of the college-level qualifier may still prove beneficial.
-Such a move would open the door to a wider pool of talented foreign labor.
+This study observes no evidence on this kind of effect,
+but the removal of the college-level qualifier may still prove beneficial.
+Such a move would open the door to a broader pool of talented foreign labor.
 
 Two changes to Section 127 are also worth consideration.
 The first change addresses access issues to this deduction.
@@ -771,7 +769,7 @@ Additional utilization is expected to improve the significance of the policy eff
 
 This paper recommends removing the requirement that Section 127 benefit flows through an employer.
 A modified Section 127 allows an individual to take a Section 127 deduction for themselves or a dependent.
-It is important to allow a deduction for a dependent in order to reduce the incentive to work full-time.
+Allowing dependents to take the deduction reduces the incentive for students to work full-time.
 Academic performance suffers for most students that study while working full-time\cite{stamour_2019}.
 Allowing an individual to take a deduction without employment would most directly benefit the unemployed.
 It would also benefit other groups who tend to be impoverished compared to those currently able to utilize Section 127.
@@ -781,13 +779,13 @@ Evidence indicates there exists significant social value due to crime reduction 
 % but a detailed comparison of these approaches would justify a seperate paper.
 % This paper finds no reason to consolidate these policies at this time.
 
-The second change to Section 127 would be to allow for the deduction of alternative education costs instead of requiring such funds to be used for college.
+The second recommended change is to allow for the deduction of alternative education costs.
 Many employers have ceased requiring the degree in recent years.
 Removing the requirement that funds go toward college would reduce upward price pressure on college, and it could incentivize demand for alternative credentials.
 Employers prefer alternative credentials for specific roles.
 In many cases, obtaining an alternative credential involves a focus on obtaining a specific skill.
-These credentials are often more affordable than traditional education and
-are utilized by a relatively diverse labor pool.
+A relatively diverse labor pool utilizes these credentials.
+Often, these credentials are also more affordable than traditional education.
 
 % Cappelli also provides evidence that employee utilization of educational benefits preferentially go to graduate students.
 % This motivates hypotheses on undegraduate access.
