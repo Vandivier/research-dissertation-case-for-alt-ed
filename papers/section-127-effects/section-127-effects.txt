@@ -1,13 +1,11 @@
 
 Dynamic Effects of H-1B and Section 127 Policy on Higher Education
 
-Section 127 of the United States Internal Revenue Code provides for a tax deduction to employers that provide financial assistance to help employees pay for education.
-Counterintuitively, enrollment in higher education slowed around the creation of Section 127.
-Further, a simple regression of the inflation-adjusted tax-deductible limit on education enrollment indicates a significant negative correlation.
-These findings raise concerns about omitted variables bias.
-After taking extensive steps to account for dynamic economic conditions and various policy effects, analysis robustly identifies positive marginal employer assistance effects on enrollment.
-The linear and total effects of interest remain negative over the main period of analysis from 1992 through 2017.
-Controlling for H-1B policy effects leads unexpectedly to the identification of H-1B policy as a comparatively preferred policy tool.
+Section 127 of the United States Internal Revenue Code provides a tax deduction to employers that provide financial assistance for employee education.
+This policy was intended as a positive incentive on enrollment in higher education.
+This paper finds that before and after taking extensive steps to account for important dynamic factors, the policy fails to meaningfully increase enrollment.
+Negative linear and total effects are observed over the period of analysis from 1992 through 2017.
+H-1B policy is explored as a correction variable, but emerges as a comparatively preferred policy tool.
 Results are validated using vector autoregression (VAR), dynamic ordinary least squares (DOLS), and instrumental variable (IV) analysis.
 
 Introduction
@@ -293,7 +291,7 @@ The first step in the adjustment is to leverage an instrumental variable regress
 The second step is to pick a particular instrumental variable, often called the Anderson-Hsiao estimator.
 The Anderson-Hsiao estimator is a twice lagged first difference of the dependent variable.
 The third step is to replace the dependent variable with the first difference of itself.
-After taking these three steps, the model is removed from overlapping periods, which contribute to autocorrelation over time.
+After taking these three steps, overlapping periods are removed from the model, addressing potential autocorrelation over time.
 The second model of interest is the preferred DOLS model.
 
 The preferred dynamic OLS model obtains an adjusted r-squared of about 0.85.
@@ -302,7 +300,8 @@ obtains an adjusted r-squared of about 0.26.
 A surprising result is that the Anderson-Hsiao estimator is insignificant
 across various specifications, including the preferred DOLS model (p = 0.51).
 Time effects are independently significant in the model.
-These results indicate that the apparent autocorrelation is due to independent effects, including unobserved effects, which are effectively proxied by time.
+These results indicate the absence of autocorrelation.
+Instead, time efficiently proxies unobserved independent effects.
 
 While the Anderson-Hsiao estimator is insignificant, dropping that variable and running an ordinary regression reduces adjusted r-squared to 0.82, but all independent factors retain significance.
 This demonstrates comparative model robustness over the preferred multiple regression.
