@@ -89,7 +89,7 @@
 \section{Introduction}
 The passage of Public Law 95-600 in 1978 created Section 127\cite{plaw95_600_1978}.
 Section 127 provides for a limited employer tax deduction for the transfer of money to an employee for educational purposes.
-This paper tests the hypothesis that the causal effect of Section 127 employer assistance on total university enrollment is positive.
+This paper tests the hypothesis that the effect of Section 127 employer assistance on total university enrollment is positive.
 Results show that employer assistance has a positive marginal effect on enrollment and negative linear and total effects.
 H-1B visa policy is a comparatively effective policy instrument for enrollment, national student loan debt, and the price of education.
 
@@ -99,7 +99,7 @@ Here, education-specific inflation informs the real assistance limit.
 This paper hypothesizes that the apparent inverse relation is a superficial result of variable omission.
 Analysis in this paper controls extensively for dynamic policy and economic variation.
 The use of multiple specifications ensures the robustness of findings.
-In one specification, vector autoregression (VAR) provides evidence on Granger causality.
+In one specification, vector autoregression (VAR) provides evidence on utility as a policy instrument.
 
 \begin{figure}[h!]
     \centering
@@ -288,10 +288,11 @@ Endogenous error in $B$ allows us to estimate the effects of arbitrary innovatio
 The reduced form $BB'$ in Equation \ref{eq:link_covariance_error} matches many matrices.
 There does exist a unique lower-triangle matrix that satisfies
 the equality statement with $\Sigma$, the covariance matrix of the errors.
-Selecting the lower-triangle solution is isomorphic to stipulating a causal direction of effect on the variables in the VAR.
-The order imposed during the VAR calculation process is called a Cholesky ordering.
+% Selecting the lower-triangle solution is isomorphic to stipulating a causal direction of effect on the variables in the VAR.
+Selecting the lower-triangle represents analyst stipulation of the order in which effects are realized.
+The order imposed is called a Cholesky ordering.
 This paper selects theoretically-grounded Cholesky orderings.
-Measures of the fitness of the resulting models are considered evidence about Granger causality.
+% Measures of the fitness of the resulting models are considered evidence about Granger causality.
 
 The last two models in the six-model VAR family are also simple two-factor VAR models.
 These models test the hypothesis that enrollment effects are extraneous
@@ -366,7 +367,6 @@ The second variable is a dummy variable.
 The dummy variable indicates whether the undergraduate loan limit is the combined limit for undergraduate and graduate loans.
 A policy change in 1993 grouped these limits.
 FinAid provides the Stafford loan data used in this study\cite{finaid_2020}.
-% TODO: should I dive into an explanation for focus on undergraduate education? not doing for now.
 
 Visa policy is a complex issue.
 The number of H-1B visas issued each year is an essential variable in this study.
@@ -431,6 +431,7 @@ The additional context suggests that an analysis that decomposes federal loans b
 \section{Results}
 
 \subsection{Multiple Regression Results}
+% Perhaps undergraduate enrollment is more relevant than total enrollment, but that is out of scope of this paper.
 The key independent variable is the real value of Section 127 assistance.
 Two potential left-hand variables exist at the outset.
 Ordinary least squares (OLS) multiple regressions of visa effects, time,
@@ -631,12 +632,13 @@ the preferred DOLS model obtains a sample size of 25 over the period from 1992 t
 In summary, DOLS analysis demonstrates non-robustness in the preferred non-dynamic model,
 then provides a preferred alternative model.
 This paper fails to uncover evidence of autocorrelation.
-DOLS also provides rudimentary causal evidence by identifying significant lag effects.
+% Identification of significant lag effects are compatible with certain causal claims.
 
 \subsection{Vector Autoregression Results}
 % ref: analysis-4-vector-auto-reg.do
 Vector autoregression (VAR) improves on DOLS specifically for the purpose
-of identifying causal effects, policy instruments, and effects over many periods.
+of identifying policy instruments and effects over many periods.
+% of identifying causal effects, policy instruments, and effects over many periods.
 The difference and lag effects of the first and second orders were arbitrarily selected DOLS analysis.
 In contrast, VAR lag selection techniques involve non-arbitrary selection criteria.
 
@@ -734,8 +736,9 @@ Instead, a real-world H-1B shock would be expected to cause both effects.
 The interaction between loans and higher tuition effects is weak, as previously noted, but it is positively signed.
 These models understate the effects of interest if some positive interaction does obtain.
 
-In summary, vector autoregression confirms H-1B visa issuance as a Granger-causal policy instrument.
-H-1B policy stimulus directly impacts enrollment and has further indirect effects on aggregate student loans and the real price of tuition.
+% VAR evidence indicates causality, and granger causality in particular, but I'm not supposed to say that ig...
+In summary, vector autoregression provides evidence on H-1B visa issuance as a policy instrument.
+H-1B policy stimulus impacts enrollment and has further indirect effects on aggregate student loans and the real price of tuition.
 The dynamic response of enrollment and other dependent variables to employer assistance impulse is insignificant.
 
 \section{Conclusions}

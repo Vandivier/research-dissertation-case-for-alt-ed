@@ -6,15 +6,21 @@ The good news is that the rejection indicated the subject matter is interesting.
 
 Problem - the identification assumptions necessary to interpret results as causal are questionable
 
-Solution: I have censored any claims of causality. Instead, I now argue that 
+Solution:
+I have censored any claims of causality.
+I now argue that H-1B policy is a comparatively preferred policy tool without claiming causality.
 
 Problem - subjective selection and de-selection of explanatory variables based on their importance in a kitchen sink regression
 
-Solution: I have removed the kitchen sink analysis, selected variables for alternate reasons, and re-run the analysis.
+Solution:
+
+I have removed the kitchen sink analysis, selected variables for alternate reasons, and re-run the analysis.
 
 Problem - the choice of one measure of the dependent variable based on its predictability rather than its economic or policy relevance
 
-Solution: I have removed commentary about predictability and selected the dependent variable based on policy intent, with reference
+Solution:
+
+I have removed commentary about predictability and selected the dependent variable based on policy intent, with reference
 SHRM-identified policy goals of original passage: http://www.cpepea.com/wp-content/uploads/2017/05/10-0418-Coalition-Report-on-Public-Policy-Issue-E-P-E-A_FNL.pdf
 
 Problem - the paper needs to have a clearer presentation of the research question
@@ -36,7 +42,7 @@ Solution: I have re-written the conclusion section to deal more clearly with imp
 Attendent to all of the above presentational issues, I have also utilized Grammarly Pro software to achieve the following quality profile:
 - Grammarly Score: 99
 - 5/5 goals set
-- 38 issues (previously, 69) now with 0 correctness, delivery, or engagement issues
+- 34 issues (previously, 69) now with 0 correctness, delivery, or engagement issues
 - Audience - Knowledgeable
 - Formality - Neutral
 - Domain - Academic
@@ -45,19 +51,18 @@ Attendent to all of the above presentational issues, I have also utilized Gramma
 
 ---
 
+Other changes, in addition to addressing those concerns:
+
+
 other new info:
 1. https://www.forbes.com/sites/baldwin/2013/02/28/section-127-tuition-aid/#4b071f9b71ff
   - we should remove age 21 minimum (harms benefit to undergrads)
   - we should drop employer requirement (folks that own their own businesses are at an advantage)
-  - "Section 127 is usually applied to graduate level or night school study" - was that intended?
-
-2.
-  - new variable: permanently extends employer-provided education assistance
+  - "Section 127 is usually applied to graduate level or night school study" - was that intended? no.
+  - new variable: permanently extends employer-provided education assistance since 2013
 
 3. https://www.jdsupra.com/legalnews/cares-act-offers-opportunity-for-tax-76795/
   - CARES act allows employers to pay down old debt in addition to deducting new expenses (it's temporary)
-
-
 
 
 "Reduce administrative inequities arising from uncertainties" - arguably achieved in 2013 with non-temporary legislation,
