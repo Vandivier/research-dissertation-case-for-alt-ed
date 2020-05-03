@@ -10,18 +10,18 @@ Solution:
 I have censored any claims of causality.
 I now argue that H-1B policy is a comparatively preferred policy tool without claiming causality.
 
+Problem - the choice of one measure of the dependent variable based on its predictability rather than its economic or policy relevance
+
+Solution:
+
+I have removed commentary about predictability and selected the dependent variable based on policy intent,
+with references describing policy intent.
+
 Problem - subjective selection and de-selection of explanatory variables based on their importance in a kitchen sink regression
 
 Solution:
 
 I have removed the kitchen sink analysis and conducted a re-analysis re-run the analysis.
-
-Problem - the choice of one measure of the dependent variable based on its predictability rather than its economic or policy relevance
-
-Solution:
-
-I have removed commentary about predictability and selected the dependent variable based on policy intent, with reference
-SHRM-identified policy goals of original passage: http://www.cpepea.com/wp-content/uploads/2017/05/10-0418-Coalition-Report-on-Public-Policy-Issue-E-P-E-A_FNL.pdf
 
 Problem - the paper needs to have a clearer presentation of the research question
 

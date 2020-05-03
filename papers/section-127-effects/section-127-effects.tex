@@ -42,38 +42,21 @@
 \begin{frontmatter}
 
     \title{
-        Dynamic Effects of H-1B and Section 127 Policy on Higher Education
-        % \tnoteref{titlenotes}
+        The Impact of Employer Education Assistance on Enrollment
     }
-    % \tnotetext[titlenotes]{
-    %     Go to \url{https://github.com/Vandivier/research-dissertation-case-for-alt-ed/tree/master/papers/}
-    %     for additional materials including the online appendix,
-    %     survey data, and data analysis source code.
-    % }
 
     \author[mymainaddress]{John Vandivier} % \fnref{authorlinefootnote}}
     \address[mymainaddress]{4400 University Dr, Fairfax, VA 22030}
     \ead{jvandivi@masonlive.gmu.edu}
 
-    % TODO: highlights https://www.elsevier.com/authors/journal-authors/highlights
-
     \begin{abstract}
-        % word count: 97
-        % Hanushek model abstract word count: 151
+        % word count: 95
         % BHR maximum 100
-        % ref: simple regression claim: `reg totalen employer_assistance_1'
-        Policymakers intended to incentivize higher education enrollment through the creation of Section 127 of the United States Internal Revenue Code.
+        Policymakers incentivized higher education enrollment through the creation of Section 127 of the United States Internal Revenue Code.
         This policy provides a tax deduction to employers that provide financial assistance for employee education.
         This paper finds that before and after extensive correction, the policy fails to increase enrollment meaningfully.
-        % Further, a simple regression of the inflation-adjusted tax-deductible limit on education enrollment indicates a significant negative correlation.
-        % These findings raise concerns about omitted variables bias.
-        % After taking extensive steps to account for dynamic economic conditions and various policy effects, analysis robustly identifies positive marginal employer assistance effects on enrollment.
         Evidence from 1992 through 2017 indicates adverse linear and total effects of interest.
-        % The linear and total effects of interest remain negative over the main period of analysis from 1992 through 2017.
-        % In the preferred dynamic model, given a steady-state,
-        % the period-over-period effect of interest from a one thousand dollar increase to real employer assistance would be to increase total enrollment by about 7.45 million students.
         H-1B policy is explored as a correction variable and emerges as a comparatively preferred policy tool.
-        % Controlling for H-1B policy effects leads unexpectedly to the identification of H-1B policy as a comparatively preferred policy tool.
         Results are validated using vector autoregression (VAR), dynamic ordinary least squares (DOLS), and instrumental variable (IV) analysis.
     \end{abstract}
 
@@ -91,7 +74,6 @@ The passage of Public Law 95-600 in 1978 created Section 127\cite{plaw95_600_197
 Section 127 provides for a limited employer tax deduction for the transfer of money to an employee for educational purposes.
 This paper tests the hypothesis that the effect of Section 127 employer assistance on total university enrollment is positive.
 Results show that employer assistance has a positive marginal effect on enrollment and negative linear and total effects.
-H-1B policy is explored as a correction variable and emerges as a comparatively preferred policy tool.
 Evidence indicates that H-1B visa policy is a comparatively effective policy instrument for enrollment,
 national student loan debt, and the price of education.
 
@@ -99,12 +81,11 @@ national student loan debt, and the price of education.
 % but I already had a hypothesis is it not weird to have both?
 % use hanushek trick to add the question in a summary line
 % ref: https://pubs.aeaweb.org/doi/pdfplus/10.1257/jel.46.3.607
-% TODO: cite baldwin_2013
-After the section on results,
-the paper notes that increasing total enrollment is only one of several policy goals related to Section 127 over time.
-Of note, the CARES act amends Section 127 to temporarily allow the employer tax deduction to apply for the purposes of paying down existing student loan debts.
-The paper concludes by asking whether observation is consistent with intent.
+Total enrollment is one of a few policy concerns related to Section 127.
+The paper concludes by asking whether the results observed represent policy success.
 In summary, how do Section 127 results over time relate to its policy goals?
+This paper finds that Section 127 has achieved partial success,
+but several changes are advisable.
 
 Figure \ref{fig:intro_enroll_assistance} illustrates university enrollment over time
 and the real maximum deductible amount for Section 127 educational assistance.
@@ -122,6 +103,26 @@ In one specification, vector autoregression (VAR) provides evidence on utility a
     \end{tikzpicture}
     \label{fig:intro_enroll_assistance}
 \end{figure}
+
+\section{Methodology}
+
+This paper broadly explores Section 127 effects in comparison to its policy goals.
+The focus of this broad conversation is the identification of the policy effect on total enrollment.
+This identification proceeds from statistical analysis across multiple specifications.
+This paper operationalizes total enrollment as a representation of one of the original Section 127 policy goals.
+
+% SHRM assessed only a single year, 2008. Shows Section 127 is mostly a Master's degree tool rn.
+The Society for Human Resource Management (SHRM) \cite{jones_2010} identifies three original policy goals for the passage of Section 127.
+% Operationalization of total enrollment as a success measure is derived from the third policy goal.
+The third policy goal is to incentivize upward mobility by providing funds for higher education.
+As a result, this paper takes total enrollment as the dependent variable.
+
+Specifications begin with an ordinary least squares (OLS) investigation.
+Finding significant time effects justifies and motivates further analysis.
+Dynamic ordinary least squares replicates the importance of time effects,
+and also addresses concerns on potential autocorrelation.
+Finally, a vector autoregression indicates that certain policy changes
+are candidate policy instruments.
 
 % The failure of several simple theories to successfully explain the observation of enrollment slowdown in the late 1970s and 1980s further motivates the present study.
 
@@ -316,62 +317,39 @@ H-1B issuance is the independent variable.
 The response variable is federal student loan debt in one case.
 The price of higher education is the response variable in the other case.
 
-\section{Data}
+\section{Description of Data}
 
-Information on total enrollment for all degree-granting postsecondary institutions in the United States
-is provided by the National Center for Education Statistics (NCES)\cite{nces_2019}.
+% Ordinary least squares analysis begins with eight independent variables.
+Models in this paper use a subset of seven high-level variables.
+Enrollment figures for all degree-granting postsecondary institutions in the United States
+are provided by the National Center for Education Statistics (NCES)\cite{nces_2019}.
 Enrollment figures are for the fall semester of the school year.
-The values that NCES provides for years after 2018 are projections.
-The present study does not use any of the projected values.
-Other data sources and policy considerations constrain the period of interest to the 27 years from 1990 to 2016.
+% The values that NCES provides for years after 2018 are projections.
+% This study does not use those projected values.
 % total enrollment: https://nces.ed.gov/programs/digest/d18/tables/dt18_303.10.asp
 
-Personal Consumption Expenditures (PCE) data is a measure of inflation provided by the U.S. Bureau of Economic Analysis (BEA)\cite{bea_2020}.
-NCES data allows the calculation of education-specific inflation\cite{nces_2017}.
-NCES data is the average tuition and required fees for full-time undergraduate students across all degree-granting postsecondary institutions.
-NCES provides nominal values and values adjusted for the consumer price index (CPI) for tuition.
-Cost information does not include the price of room and board.
-2016 is the base year for each measure of inflation.
-% https://fred.stlouisfed.org/series/PCE
+For the same group of institutions,
+NCES elsewhere provides data about average tuition and required fees\cite{nces_2017}.
+This study uses price information for full-time undergraduate students.
+% why? 1) most students are full-time undergrads, and,
+% 2) we already know how the policy affects grad students. we want to know how it effects undergrads
+Prices do not include the cost of room and board.
+Cost information exists through the year 2016
+% Personal Consumption Expenditures (PCE) data is a measure of inflation provided by the U.S. Bureau of Economic Analysis (BEA)\cite{bea_2020}.
+% NCES provides nominal values and values adjusted for the consumer price index (CPI) for tuition.
+Cost information reflects real prices.
+2016 is the base year for Consumer Price Index (CPI) adjustment.
 % https://nces.ed.gov/programs/digest/d17/tables/dt17_330.10.asp
 
-Nominal Section 127 limits are a matter of public law.
-Section 127 took effect beginning after December 31, 1978, with a nominal assistance limit of 5,000 dollars\cite{plaw95_600_1978}.
+% Nominal Section 127 limits are a matter of public law.
+Section 127 took effect on January 1, 1979, with a nominal assistance limit of 5,000 dollars\cite{plaw95_600_1978}.
 In October 1986, Pub. L. 99–514 increased the nominal assistance limit to 5,250 dollars\cite{plaw99_514_1986}.
 Combining nominal assistance over time with CPI and education-specific inflation data yields two real measures of inflation.
+Section 127 was renewed several times over the years.
+A dummy variable exists for a partilularly important change realized in 2013.
+In that year, the employer assistance deduction became permanent.
 
-% begin discuss veteran benefits data
-Changes to veteran education benefits are also a matter of public law.
-A categorical state variable represents veteran education benefits from 1970 to 2020 and allows for five different states.
-The Servicemen's Readjustment Act of 1944 is also called the G.I. Bill.
-This bill is the first relevant case of veteran benefits, but it precedes the period of interest for this study.
-
-The original bill expired in 1956\cite{glass_2010}.
-This expired state is the first state represented by the veteran education state variable.
-The Veterans Educational Assistance Program (VEAP) passed in 1981\cite{veteransaffairs_2017}.
-The third period of interest begins in 1984 with the enactment of the Montgomery GI Bill\cite{powers_2018}.
-The fourth period of interest begins in 2009 with the Post-9/11 GI Bill.
-
-Finally, many benefits from the Forever GI Bill became effective in 2018,
-with additional provisions taking effect in 2020 and 2022\cite{veteransaffairs_2020}.
-This fifth policy state is too recent to be included in the period of interest.
-The recent changes in veteran education benefits are a critical caveat for any attempt at forecasting or prediction outside of the period of study.
-
-Due to constraints on the availability of other right-hand variable data,
-the main period of regression analysis ranges from 1990 to 2016.
-Veteran education benefits exhibit only one change during this period,
-but this factor proves to be significant in the preferred model.
-% GI Bill accounting https://en.wikipedia.org/wiki/G.I._Bill#Chapter_30_(Montgomery_GI_Bill)
-% Variable implemented as categorical
-% [state A] original bill was 1944-1984
-% [state B] VEAP established 1981 https://www.benefits.va.gov/gibill/veap.asp
-% [state C] Montgomery GI went into effect 1984
-% [state D] Post-9/11 GI Bill went into effect for 2009 school year https://www.thebalancecareers.com/gi-bill-for-the-21st-century-3347143
-% [state E] Forever GI bill rolls out new benefits starting in 2018 https://rebootcamp.militarytimes.com/education-transition/education/2017/08/16/trump-signed-the-forever-gi-bill-here-are-11-things-you-should-know/
-%
-% end discuss veteran benefits data
-
-Stafford loan data is another critical component of the analysis.
+% Stafford loan data is another critical component of the analysis.
 Stafford loan limits impact the supply of loanable funds, which indirectly modifies demand for education.
 Stafford data also broadly proxies non-military federal student aid policy.
 There are two variables for Stafford loans.
@@ -381,13 +359,16 @@ The dummy variable indicates whether the undergraduate loan limit is the combine
 A policy change in 1993 grouped these limits.
 FinAid provides the Stafford loan data used in this study\cite{finaid_2020}.
 
-Visa policy is a complex issue.
+% H-1 family of factors are collectively variable #5
+Visa policy is the fifth high-level variable.
 The number of H-1B visas issued each year is an essential variable in this study.
 The Immigration Act of 1990 decomposed the existing H-1 visa into distinct H-1A and H-1B categories.
 Later legislation established the H-1B1, H-1C, and many other visa classifications, but these are mostly inapplicable to the present research.
 The H-1B visa is most relevant for this study because it relates explicitly to the undergraduate degree.
 The Immigration Act of 1990 makes available the H-1B classification for specialized workers, or workers in a specialty occupation.
 That legislation formally defines a specialty occupation as "an occupation that requires...attainment of a bachelor's or higher degree..."
+The period of analysis for this study is constrained to begin with the advent of H-1B data in 1990.
+As earlier mentioned, tuition data constraints the end of the analysis to 2016.
 
 H-1 visas are a subgroup of nonimmigrant visas.
 The Bureau of Consular Affairs provides nonimmigrant visa award data by classification
@@ -424,7 +405,6 @@ For example, the Pew Research Center notes that the American Competitiveness in 
 %   the State Department appears to confirm tha pre-1987 data is currently digitally unavailable,
 %   and perhaps permentantly unrecorded even offline."
 
-The last data source of interest is on actual federal loans.
 Actual federal loans stand in contrast to loan limits, which are represented by the Stafford loan limit variable.
 Loan limits are a policy choice, but after correcting for loan limits,
 the actual amount of loans made primarily represents a demand effect.
@@ -441,12 +421,49 @@ The additional context suggests that an analysis that decomposes federal loans b
 % actual undergrad loans awarded since 1990 in the excel at https://research.collegeboard.org/trends/student-aid
 % My variable `Total UG Federal Loans` adapted from CB xlsx worksheet `Table 2_UG`
 
+% Changes to veteran education benefits are also a matter of public law.
+The final subset of data desrcibes veteran education benefits policy.
+Each year in the data set is associated with some veteran education policy.
+Veteran policy effects are a high-level variable which technically decompose into seven dummy variables.
+A series of seven dummy variables capture veteran education policy effects.
+The seven variables cover the period from 1944 to 2022.
+The Servicemen's Readjustment Act of 1944 is also called the G.I. Bill.
+The original bill expired in 1956\cite{glass_2010}.
+The period from 1944 to 1956 is positively associated with the first dummy variable.
+
+The Veterans Educational Assistance Program (VEAP) passed in 1981\cite{veteransaffairs_2017}.
+The third period of interest ends in 1984 with the enactment of the Montgomery GI Bill\cite{powers_2018}.
+The fourth period of interest ends in 2009 with the Post-9/11 GI Bill.
+Finally, many benefits from the Forever GI Bill became effective in 2018,
+with additional provisions taking effect in 2020 and 2022\cite{veteransaffairs_2020}.
+
+Because of time sample constraints on other variables,
+there is only a single variation in veteran education benefits during the period of analysis.
+This is the enactment of the Post-9/11 GI Bill in 2009.
+This factor does prove to be significant in the preferred model.
+
+Recent changes in veteran education benefits and in Section 127
+represent critical caveats for any attempt at forecasting outside of the period of study.
+As mentioned, the Forever GI Bill lays out several important changes in veteran benefits in the years to come.
+Under the CARES Act, Section 127 was amended to provide a new benefit on a temporary basis\cite{schiavo_2020}.
+The new benefit is that employers may assist employees in paying down existing student loan debt,
+rather than only paying for new expenses, in a tax deductable way.
+Under current law, the CARES Act changes to employer assistance will apply only during the year 2020.
+
+% GI Bill accounting https://en.wikipedia.org/wiki/G.I._Bill#Chapter_30_(Montgomery_GI_Bill)
+% Variable implemented as categorical
+% [state A] original bill was 1944-1984
+% [state B] VEAP established 1981 https://www.benefits.va.gov/gibill/veap.asp
+% [state C] Montgomery GI went into effect 1984
+% [state D] Post-9/11 GI Bill went into effect for 2009 school year https://www.thebalancecareers.com/gi-bill-for-the-21st-century-3347143
+% [state E] Forever GI bill rolls out new benefits starting in 2018 https://rebootcamp.militarytimes.com/education-transition/education/2017/08/16/trump-signed-the-forever-gi-bill-here-are-11-things-you-should-know/
+
 \section{Results}
 
 \subsection{Multiple Regression Results}
 % Perhaps undergraduate enrollment is more relevant than total enrollment, but that is out of scope of this paper.
 The key independent variable is the real value of Section 127 assistance.
-Two potential left-hand variables exist at the outset.
+% Two potential left-hand variables exist at the outset.
 Ordinary least squares (OLS) multiple regressions of visa effects, time,
 and tuition were run against both total enrollment and public university enrollment.
 Total enrollment was more predictable than public university enrollment,
@@ -523,7 +540,6 @@ Simple identification of time effects motivates further analysis using specifica
 
 \subsection{Dynamic Ordinary Least Squares Results}
 % ref: analysis-3-dynamic-ols.do
-% TODO: another empirical model?
 
 Dynamic ordinary least squares (DOLS) models supplement multiple regressive analysis in at least two ways.
 First, autocorrelation can be removed using lagged variables in an Anderson–Hsiao adjustment\cite{anderson1981estimation}.
@@ -756,6 +772,56 @@ The dynamic response of enrollment and other dependent variables to employer ass
 
 \section{Conclusions}
 
+% TODO: cleanup begin here
+
+The first goal is to reduce administrative inequities arising from uncertainties.
+The second goal is to reduce the complexity
+The third policy goal is.
+
+Of note, the CARES act amends Section 127 to temporarily allow the employer tax deduction to apply for the purposes of paying down existing student loan debts.
+
+Logically, critical access issues appear to exist with this implementation.
+Solving upward mobility only for those persons who are already employed seems to be a non-starter.
+A comparatively better access approach would be to allow anyone to take the deduction.
+
+Two additional access problems exist with those who are employed and have benefit access.
+The SHRM report finds that employer assistance is increasingly being used to obtain a graduate degree.
+
+
+Finally, Lumina Foundation finds that
+"only 2-5 percent of eligible employees use tuition assistance programs,
+and 43 percent of working adults are unaware if their employer offers such a program."
+Finally,
+
+While access problems attenuate the policy effect,
+the net effect may be powerful enough to result in a meaningful increase to total enrollment.
+
+Despite logical access problems,
+it may be the case that the policy incentive is strong enough to generate a meaningful increase to
+In practice, however, many logical effects can add to a negligible practical effect,
+motivating the statistical analysis in this paper.
+
+
+SHRM considers this goal met because Section 127 clarified which expenses can be considered job-related expenses.
+SHRM also notes that a prior issue under this policy goal was that
+"Entry-level employees, for example, rarely had...legitimate educational assistance paid for by an employer."
+The analysis in this paper agrees that Section 127 achieved adminsitrative clarity.
+This paper suggests, however, that the clarification created an access issue by restricting legitimate education to accredited education.
+This access issue precludes the achievement of certain aspects of the top-level policy goal,
+and results in further disadvantage to groups which are already at a disadvantage.
+
+There is another aspect of uncertainty that Section 127 fails to address, which is uncertainty over time.
+The initial bill provided for a temporary deduction.
+In 2013, an amended bill created a permanent deduction\cite{baldwin_2013}.
+This solved the temporal uncertainty problem for a while.
+Under the CARES Act, Section 127 was amended to provide a new benefit on a temporary basis\cite{schiavo_2020}.
+The new benefit is that employers may assist employees in paying down existing student loan debt,
+rather than only paying for new expenses, in a tax deductable way.
+It is reasonable to expect such a measure will improve the student loan debt crisis in the United States.
+Even so, the measure would be improved according to own policy goals by making the change permanent.
+
+% TODO: cleanup end here
+
 A slowdown in enrollment occurred around the time Section 127 was created.
 After thorough correction, the effect of Section 127 remains negative on total enrollment over the period from 1992 to 2016.
 The within-period marginal effect of increasing Section 127 assistance is positive.
@@ -837,9 +903,6 @@ Often, these credentials are also more affordable than traditional education.
 % the law should also remove that requirement and boost alternative education which doesn't require a formal degree and is highly effective
 % this will reduce debt, improve diversity and economic efficiency and individual skill
 
-% maybe talk about stress and debt for why debt is important
-% important to look at wages not income (which would include investments, etc, see shrm's discussion: http://www.cpepea.com/wp-content/uploads/2017/05/10-0418-Coalition-Report-on-Public-Policy-Issue-E-P-E-A_FNL.pdf)
-% SHRM assessed only a single year, 2008. Shows Section 127 is mostly a Master's degree tool rn.
 % 75 percentile for salaries in 2017 was 54250 https://bizfluent.com/info-10032733-percentile-salary.html
 % define middle class as 50-75 percentile, lower class as under 50 percentile. break down effect by salary classification and see if it helps lower/middle
 % if so, it should improve diversity of education leading to a more diverse workforce which employers crave (TM) and politicians, etc...
