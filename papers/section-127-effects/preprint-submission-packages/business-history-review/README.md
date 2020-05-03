@@ -14,7 +14,7 @@ Problem - subjective selection and de-selection of explanatory variables based o
 
 Solution:
 
-I have removed the kitchen sink analysis, selected variables for alternate reasons, and re-run the analysis.
+I have removed the kitchen sink analysis and conducted a re-analysis re-run the analysis.
 
 Problem - the choice of one measure of the dependent variable based on its predictability rather than its economic or policy relevance
 
@@ -61,7 +61,7 @@ other new info:
   - "Section 127 is usually applied to graduate level or night school study" - was that intended? no.
   - new variable: permanently extends employer-provided education assistance since 2013
 
-3. https://www.jdsupra.com/legalnews/cares-act-offers-opportunity-for-tax-76795/
+2. https://www.jdsupra.com/legalnews/cares-act-offers-opportunity-for-tax-76795/
   - CARES act allows employers to pay down old debt in addition to deducting new expenses (it's temporary)
 
 
