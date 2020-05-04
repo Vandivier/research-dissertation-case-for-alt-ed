@@ -1,6 +1,6 @@
 clear
 
-do "D:\GitHub\research-dissertation-case-for-alt-ed\papers\section-127-effects\data\analysis-1-vars.do"
+do "D:\workspace\github\research-dissertation-case-for-alt-ed\papers\section-127-effects\data\analysis-1-vars.do"
 
 * // reg shows if more visas awarded, more people go to college
 * // this is consistent with theory that employers implement degree requirements as an h1b justification
@@ -20,13 +20,10 @@ reg totalen visa_* tuition* year*
 * // stategi3 flag captures all veteran benefit variation
 reg totalen base* stafford* nominalassistance pce* real* state* tuition* visa_* year*
 
-* // more rounds of kitchen sink
-* // drops in order by round:
-* // staffordlimitforundergraduates, visa_total, pce3, tuition_nom, staffordlimitiscombinedsubsidize, realassistancelimitpcecorrection
-reg totalen staffordlimitiscombinedsubsidize pce* real* stategi3 tuition* visa_* year*
-reg totalen staffordlimitiscombinedsubsidize pce* real* stategi3 tuition* visa_m* year*
-reg totalen staffordlimitiscombinedsubsidize pce pce2 real* stategi3 tuition_cpi visa_m* year*
-reg totalen pce pce2 real_m* stategi3 tuition_cpi visa_m* year*
+* // reducing kitchen sink to medium (p < 0.5)
+reg totalen stafford* nominalassistance pce* real* stategi3 stateperm1 tuition* visa_m* year*
+
+* // TODO: update below
 
 * // dropping year3 simplifies technically and theoretically, plus r2 goes up
 * // dropping tuition_cpi would be next normal round-robin / kitchen sink move

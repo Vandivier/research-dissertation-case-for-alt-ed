@@ -136,7 +136,7 @@ The response variable is federal student loan debt in one case.
 The price of higher education is the response variable in the other case.
 
 Description of Data
-Models in this paper use a subset of seven high-level variables.
+Models in this paper use a subset of eight high-level variables.
 Enrollment figures for all degree-granting postsecondary institutions in the United States
 are provided by the National Center for Education Statistics (NCES).
 Enrollment figures are for the fall semester of the school year.
@@ -150,21 +150,26 @@ Cost information reflects real prices.
 
 Section 127 took effect on January 1, 1979, with a nominal assistance limit of 5,000 dollars.
 In October 1986, Pub. L. 99–514 increased the nominal assistance limit to 5,250 dollars.
-Combining nominal assistance over time with CPI and education-specific inflation data yields two real measures of inflation.
-Section 127 was renewed several times over the years.
-A dummy variable exists for a partilularly important change realized in 2013.
-In that year, the employer assistance deduction became permanent.
+Nominal limits are adjusted for education-specific inflation using NCES price data.
+The real employer assistance limit is the primary explanatory variable of interest to this study.
 
+Section 127 was renewed several times over the years.
+A dummy variable exists for a considerable change realized in 2013.
+In that year, the employer assistance deduction became permanent.
+Personal Consumption Expenditures (PCE) data is a measure of inflation provided by the U.S. Bureau of Economic Analysis (BEA).
+PCE is a fourth independent variable.
+
+Stafford loan data is another critical high-level component of the analysis.
 Stafford loan limits impact the supply of loanable funds, which indirectly modifies demand for education.
 Stafford data also broadly proxies non-military federal student aid policy.
-There are two variables for Stafford loans.
-The first variable is the nominal loan limit for undergraduates.
+Stafford loans technically decompose into two lower-level factors.
+The first is the nominal loan limit for undergraduates.
 The second variable is a dummy variable.
 The dummy variable indicates whether the undergraduate loan limit is the combined limit for undergraduate and graduate loans.
 A policy change in 1993 grouped these limits.
 FinAid provides the Stafford loan data used in this study.
 
-Visa policy is the fifth high-level variable.
+Visa policy is the sixth high-level variable.
 The number of H-1B visas issued each year is an essential variable in this study.
 The Immigration Act of 1990 decomposed the existing H-1 visa into distinct H-1A and H-1B categories.
 Later legislation established the H-1B1, H-1C, and many other visa classifications, but these are mostly inapplicable to the present research.
@@ -199,7 +204,7 @@ The final subset of data desrcibes veteran education benefits policy.
 Each year in the data set is associated with some veteran education policy.
 Veteran policy effects are a high-level variable which technically decompose into seven dummy variables.
 A series of seven dummy variables capture veteran education policy effects.
-The seven variables cover the period from 1944 to 2022.
+The seven variables cover the period from 1944 to 2021.
 The Servicemen's Readjustment Act of 1944 is also called the G.I. Bill.
 The original bill expired in 1956.
 The period from 1944 to 1956 is positively associated with the first dummy variable.
@@ -222,21 +227,18 @@ Under current law, the CARES Act changes to employer assistance will apply only 
 
 Results
 Multiple Regression Results
-The key independent variable is the real value of Section 127 assistance.
-Ordinary least squares (OLS) multiple regressions of visa effects, time, and tuition were run against both total enrollment and public university enrollment.
-Total enrollment was more predictable than public university enrollment, so it was selected as the preferred enrollment variable.
+The prior description of data notes six indepenent variables and two dependent variables.
+Total university enrollment is the primary dependent variable.
+Initial regression analysis involves ordinary least squares regression of all six independent variables
+on the primary dependent variable.
 
-With total enrollment as the explained variable, a kitchen sink multiple regression was used to select the most influential factor from among each factor group.
 The total number of visas issued across classification, the Stafford loan limit, and measures of tuition were identified as insignificant.
 Table \ref{tab:table_mols} is a table of regressions that helps illustrate that, somewhat surprisingly, real measures of employer assistance capture price and inflation effects in a preferred way
 compared to using a more direct measure of tuition.
 
 Tuition is insignificant in model 1.
-Replacing tuition with PCE and education-deflated employer assistance in model 2 identifies the latter
-with significance at the 0.1 level and also improves the overall explanatory power of the model.
-Real employer education assistance, which is solely corrected for the price of education, is eventually preferred to the multiple-deflated measure.
-This makes the education-deflated real employer assistance limit the preferred Section 127 variable.
-After deciding on this variable as the preferred measure, quadratic, cubic, and interaction transformations are investigated.
+Linear, quadratic, and cubic e
+quadratic, cubic, and interaction transformations are investigated.
 The interaction of Section 127 policy and visa effects turns out to be small in magnitude, low significance, and in possession of a sign which is sensitive to specification.
 
 Model 4 is preferred out of the models presented in Table \ref{tab:table_mols}.

@@ -320,7 +320,7 @@ The price of higher education is the response variable in the other case.
 \section{Description of Data}
 
 % Ordinary least squares analysis begins with eight independent variables.
-Models in this paper use a subset of seven high-level variables.
+Models in this paper use a subset of eight high-level variables.
 Enrollment figures for all degree-granting postsecondary institutions in the United States
 are provided by the National Center for Education Statistics (NCES)\cite{nces_2019}.
 Enrollment figures are for the fall semester of the school year.
@@ -335,7 +335,6 @@ This study uses price information for full-time undergraduate students.
 % 2) we already know how the policy affects grad students. we want to know how it effects undergrads
 Prices do not include the cost of room and board.
 Cost information exists through the year 2016
-% Personal Consumption Expenditures (PCE) data is a measure of inflation provided by the U.S. Bureau of Economic Analysis (BEA)\cite{bea_2020}.
 % NCES provides nominal values and values adjusted for the consumer price index (CPI) for tuition.
 Cost information reflects real prices.
 2016 is the base year for Consumer Price Index (CPI) adjustment.
@@ -344,23 +343,31 @@ Cost information reflects real prices.
 % Nominal Section 127 limits are a matter of public law.
 Section 127 took effect on January 1, 1979, with a nominal assistance limit of 5,000 dollars\cite{plaw95_600_1978}.
 In October 1986, Pub. L. 99–514 increased the nominal assistance limit to 5,250 dollars\cite{plaw99_514_1986}.
-Combining nominal assistance over time with CPI and education-specific inflation data yields two real measures of inflation.
-Section 127 was renewed several times over the years.
-A dummy variable exists for a partilularly important change realized in 2013.
-In that year, the employer assistance deduction became permanent.
+Nominal limits are adjusted for education-specific inflation using NCES price data.
+The real employer assistance limit is the primary explanatory variable of interest to this study.
 
-% Stafford loan data is another critical component of the analysis.
+Section 127 was renewed several times over the years.
+A dummy variable exists for a considerable change realized in 2013.
+In that year, the employer assistance deduction became permanent.
+Personal Consumption Expenditures (PCE) data is a measure of inflation provided by the U.S. Bureau of Economic Analysis (BEA)\cite{bea_2020}.
+PCE is a fourth independent variable.
+% Broad representation of dynamic price effects in the economy is achieved
+% by having seperate variables for general inflation and education-specific inflation.
+% Combining nominal assistance over time with CPI and education-specific inflation data yields two real measures of inflation.
+
+% Why nominal loan limit? well, real is worth testing but we already have inflation variables
+Stafford loan data is another critical high-level component of the analysis.
 Stafford loan limits impact the supply of loanable funds, which indirectly modifies demand for education.
 Stafford data also broadly proxies non-military federal student aid policy.
-There are two variables for Stafford loans.
-The first variable is the nominal loan limit for undergraduates.
+Stafford loans technically decompose into two lower-level factors.
+The first is the nominal loan limit for undergraduates.
 The second variable is a dummy variable.
 The dummy variable indicates whether the undergraduate loan limit is the combined limit for undergraduate and graduate loans.
 A policy change in 1993 grouped these limits.
 FinAid provides the Stafford loan data used in this study\cite{finaid_2020}.
 
 % H-1 family of factors are collectively variable #5
-Visa policy is the fifth high-level variable.
+Visa policy is the sixth high-level variable.
 The number of H-1B visas issued each year is an essential variable in this study.
 The Immigration Act of 1990 decomposed the existing H-1 visa into distinct H-1A and H-1B categories.
 Later legislation established the H-1B1, H-1C, and many other visa classifications, but these are mostly inapplicable to the present research.
@@ -462,15 +469,13 @@ Under current law, the CARES Act changes to employer assistance will apply only 
 
 \subsection{Multiple Regression Results}
 % Perhaps undergraduate enrollment is more relevant than total enrollment, but that is out of scope of this paper.
-The key independent variable is the real value of Section 127 assistance.
-% Two potential left-hand variables exist at the outset.
-Ordinary least squares (OLS) multiple regressions of visa effects, time,
-and tuition were run against both total enrollment and public university enrollment.
-Total enrollment was more predictable than public university enrollment,
-so it was selected as the preferred enrollment variable.
+% The key independent variable is the real value of Section 127 assistance.
+The prior description of data notes six indepenent variables and two dependent variables.
+Total university enrollment is the primary dependent variable.
+Initial regression analysis involves ordinary least squares regression of all six independent variables
+on the primary dependent variable.
 
-With total enrollment as the explained variable,
-a kitchen sink multiple regression was used to select the most influential factor from among each factor group.
+% TODO: update results below***
 The total number of visas issued across classification,
 the Stafford loan limit, and measures of tuition were identified as insignificant.
 Table \ref{tab:table_mols} is a table of regressions that helps illustrate that, somewhat surprisingly,
@@ -486,12 +491,15 @@ compared to using a more direct measure of tuition.
 \end{table}
 
 Tuition is insignificant in model 1.
-Replacing tuition with PCE and education-deflated employer assistance in model 2 identifies the latter
-with significance at the 0.1 level and also improves the overall explanatory power of the model.
-Real employer education assistance, which is solely corrected for the price of education,
-is eventually preferred to the multiple-deflated measure.
-This makes the education-deflated real employer assistance limit the preferred Section 127 variable.
-After deciding on this variable as the preferred measure,
+% note: per editor feedback, don't admit that selected tuition measure is based on horse racing
+% I stand by the fact that horse racing is the good, honest, and objective selection process
+% Replacing tuition with PCE and education-deflated employer assistance in model 2 identifies the latter
+% with significance at the 0.1 level and also improves the overall explanatory power of the model.
+% Real employer education assistance, which is solely corrected for the price of education,
+% is eventually preferred to the multiple-deflated measure.
+% This makes the education-deflated real employer assistance limit the preferred Section 127 variable.
+% After deciding on this variable as the preferred measure,
+Linear, quadratic, and cubic e
 quadratic, cubic, and interaction transformations are investigated.
 The interaction of Section 127 policy and visa effects turns out to be small in magnitude,
 low significance, and in possession of a sign which is sensitive to specification.

@@ -1,7 +1,7 @@
 clear
 import delimited D:\workspace\github\research-dissertation-case-for-alt-ed\papers\section-127-effects\data\section-127-effects.csv
 
-gen visa_total = totalvisaaward
+gen visa_m_total = totalvisaaward
 gen visa_m_h1 = totalh1familyvisaaward
 gen visa_m_h1b_1 = newh1
 gen visa_m_h1b_2 = newh1*newh1
@@ -40,6 +40,7 @@ gen loans = totalfederal
 gen loans_x_tuition = loans*tuition_cpi
 
 tab gi, gen(stategi)
+tab permanent, gen(stateperm)
 tsset year
 
 drop realassistanceratio*
