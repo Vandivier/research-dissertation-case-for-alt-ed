@@ -29,6 +29,7 @@ reg totalen emp* pce* real* staffordlimitiscombined stategi3 stateperm1 tuition*
 * // swap year3 -> year from prior model without loss of explanatory power and gain simplicity
 * // Note: Anderson-Hsiao adjustment of this model preserves model r-squared while adjustment of roi2 yields an insignificant model
 * // compare to so-called roi2.5 in the same source commit as this comment
+* // also ref EDIT: 5/4/2020 at: https://www.afterecon.com/economics-and-finance/kitchen-sink-regression-and-horse-racing/
 reg totalen emp* pce* real* staffordlimitiscombined stategi3 stateperm1 tuition* visa_m* year
 
 * // roi1: initial stipulated model
