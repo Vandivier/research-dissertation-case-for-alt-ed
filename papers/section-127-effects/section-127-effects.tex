@@ -320,7 +320,7 @@ The price of higher education is the response variable in the other case.
 \section{Description of Data}
 
 % Ordinary least squares analysis begins with eight independent variables.
-Models in this paper use a subset of eight high-level variables.
+Models in this paper use a subset of nine high-level variables.
 Enrollment figures for all degree-granting postsecondary institutions in the United States
 are provided by the National Center for Education Statistics (NCES)\cite{nces_2019}.
 Enrollment figures are for the fall semester of the school year.
@@ -428,8 +428,9 @@ The additional context suggests that an analysis that decomposes federal loans b
 % actual undergrad loans awarded since 1990 in the excel at https://research.collegeboard.org/trends/student-aid
 % My variable `Total UG Federal Loans` adapted from CB xlsx worksheet `Table 2_UG`
 
+% Note: arguably, we don't need to discuss veteran education benefits at all bc they aren't significant in the new analysis.
 % Changes to veteran education benefits are also a matter of public law.
-The final subset of data desrcibes veteran education benefits policy.
+The final subset of data describes veteran education benefits policy.
 Each year in the data set is associated with some veteran education policy.
 Veteran policy effects are a high-level variable which technically decompose into seven dummy variables.
 A series of seven dummy variables capture veteran education policy effects.
@@ -447,7 +448,7 @@ with additional provisions taking effect in 2020 and 2022\cite{veteransaffairs_2
 Because of time sample constraints on other variables,
 there is only a single variation in veteran education benefits during the period of analysis.
 This is the enactment of the Post-9/11 GI Bill in 2009.
-This factor does prove to be significant in the preferred model.
+% This factor does prove to be significant in the preferred model.
 
 Recent changes in veteran education benefits and in Section 127
 represent critical caveats for any attempt at forecasting outside of the period of study.
@@ -467,30 +468,6 @@ Under current law, the CARES Act changes to employer assistance will apply only 
 
 \section{Results}
 
-\subsection{Multiple Regression Results}
-% Perhaps undergraduate enrollment is more relevant than total enrollment, but that is out of scope of this paper.
-% The key independent variable is the real value of Section 127 assistance.
-The prior description of data notes six indepenent variables and two dependent variables.
-Total university enrollment is the primary dependent variable.
-Initial regression analysis involves ordinary least squares regression of all six independent variables
-on the primary dependent variable.
-
-% TODO: update results below***
-The total number of visas issued across classification,
-the Stafford loan limit, and measures of tuition were identified as insignificant.
-Table \ref{tab:table_mols} is a table of regressions that helps illustrate that, somewhat surprisingly,
-real measures of employer assistance capture price and inflation effects in a preferred way
-compared to using a more direct measure of tuition.
-
-\begin{table}
-    \caption{Table of Multiple Regression on Total Enrollment, Selected Variables}
-    \resizebox{\columnwidth}{!}{
-        \input{../section-127-effects/figures-and-tables/table-1.tex}
-    }
-    \label{tab:table_mols}
-\end{table}
-
-Tuition is insignificant in model 1.
 % note: per editor feedback, don't admit that selected tuition measure is based on horse racing
 % I stand by the fact that horse racing is the good, honest, and objective selection process
 % Replacing tuition with PCE and education-deflated employer assistance in model 2 identifies the latter
@@ -499,60 +476,51 @@ Tuition is insignificant in model 1.
 % is eventually preferred to the multiple-deflated measure.
 % This makes the education-deflated real employer assistance limit the preferred Section 127 variable.
 % After deciding on this variable as the preferred measure,
-Linear, quadratic, and cubic e
-quadratic, cubic, and interaction transformations are investigated.
-The interaction of Section 127 policy and visa effects turns out to be small in magnitude,
-low significance, and in possession of a sign which is sensitive to specification.
 
-Model 4 is preferred out of the models presented in Table \ref{tab:table_mols}.
-While model 1 has the highest r-squared value,
-model 4 has an adjusted r-squared equal to model 1.
-Model 4 is the result of a thorough nonlinear investigation,
-while models 1 and 2 are not.
-Model 3 is challenging to interpret.
-For example, interpreting the H-1B visa policy effect is not
-straightforward, both because a linear effect is missing in the model
-and also because other H-1 variables are present which make pure H-1B
-effect attribution impossible.
+\subsection{Multiple Regression Results}
+% Perhaps undergraduate enrollment is more relevant than total enrollment, but that is out of scope of this paper.
+% The key independent variable is the real value of Section 127 assistance.
+The prior description of data notes seven indepenent variables and two dependent variables.
+Total university enrollment is the primary dependent variable.
+Initial regression analysis involves ordinary least squares regression of all seven independent variables
+on the primary dependent variable,
+plus a variable for time.
 
-All four models exhibit high explanatory power,
-but model 4 makes interpretation simple.
-The linear effect of real Section 127 assistance is insignificant and negative with low confidence.
-The marginal effect is highly significant and positive but decreasingly positive.
-The total effect in the relevant range is also positive\footnote{
-    Elimination of nonlinear effects from the preferred model acts as a robustness check,
-    identifies the direction of the total effect in the relevant range,
-    and maintains significance for all factors.
-    The real Section 127 assistance coefficient has a point estimate of 623 in such a model,
-    and the H-1B visa issuance coefficient takes a value of about -15.
-}.
-This indicates that a real increase to Section 127 assistance would further boost enrollment,
-but such increases would be decreasingly effective.
+Results for the initial regression model are described as Model 1 within Table \ref{tab:table_mols}.
+This table presents selected variables, where selected variables are significant in at least two specifications.
+Section 127, inflation, and time effects were the most important variables in Model 1 (p < 0.000).
+Linear and nonlinear employer assistance effects were significant.
+A dummy variable which represented whether the employer deduction was temporary or permanent was also significant.
 
-H-1 visa effects are complex and meaningful across specifications.
-The preferred model identifies a significant negative linear effect on enrollment
-from H-1B visa issuance.
-There is an insignificant positive marginal effect and a total negative effect.
-While the preferred model focuses on H-1B effects,
-the results are generalizable to the H-1 family.
-Substituting H-1 total issuance for the linear H-1B variable improves
-linear visa effect significance,
-although it does not improve raw or adjusted explanatory power for the model overall.
-That move also is not preferred because the linear effect and the marginal visa effects would then correspond to different measures.
+Linear and nonlinear visa policy effects were also highly significant (0.001 < p < 0.05).
+Tuition and the interaction between Section 127 and visa policy were notably insignificant.
+Veteran education benefits and Stafford variables were also insignificant.
 
-Time is the most consistently significant variable across multiple regressive models.
-Time, measured in years, intuitively possesses a positive linear effect and a negative marginal effect on total enrollment.
-The total effect of time over the period of the analysis is also strongly positive.
-A simple regression of time on total enrollment has an adjusted r-squared of about .95.
-Simple identification of time effects motivates further analysis using specifications that are explicitly dynamic.
+\begin{table}
+    \caption{Table of Multiple Regression on Enrollment, Selected Variables}
+    \resizebox{\columnwidth}{!}{
+        \input{../section-127-effects/figures-and-tables/table-1.tex}
+    }
+    \label{tab:table_mols}
+\end{table}
+
+Model 2 is obtained by removing insignificant variables from Model 1.
+The importance of time in this analysis motivates further analysis using specifications that are explicitly dynamic.
 
 \subsection{Dynamic Ordinary Least Squares Results}
 % ref: analysis-3-dynamic-ols.do
 
-Dynamic ordinary least squares (DOLS) models supplement multiple regressive analysis in at least two ways.
-First, autocorrelation can be removed using lagged variables in an Anderson–Hsiao adjustment\cite{anderson1981estimation}.
-Second, atemporal marginal effects can be tested against marginal effects in a dynamic context,
-which improves model utility in an applied context.
+Models 3 and 4 from Table \ref{tab:table_mols} are dynamic ordinary least squares (DOLS) models.
+These models are specially created to address concerns about potential autocorrelation using an Anderson-Hsiao adjustment\cite{anderson1981estimation}.
+DOLS models also benefit marginal analysis by decomposing within-period and between-period marginal effects.
+
+Model 3 is generated by applying an Anderson-Hsiao adjustment to Model 2.
+In addition, first and second lags and differences were checked for each significant variable in Model 2.
+Model 4 is the result of trimming insignificant variables from Model 3.
+
+% below only true if factors are robust across specifications, else need a model 5.
+Model 4 is the preferred least squares model.
+
 
 Table \ref{tab:table_dols} compares selected variables from two models of interest.
 Selected variables include any variable which appears in both models.

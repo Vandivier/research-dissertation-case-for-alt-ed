@@ -1,5 +1,6 @@
 clear
 
+* // Note: deprecated file in V2 of paper...collapsed into analysis-8-regression-table.do
 * // Note: This table based on multiple OLS from ./analysis-3-dynamic-ols.do
 do "D:\workspace\github\research-dissertation-case-for-alt-ed\papers\section-127-effects\data\analysis-1-vars.do"
 
