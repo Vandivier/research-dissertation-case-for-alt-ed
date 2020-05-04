@@ -27,6 +27,8 @@ reg totalen emp* pce* real* staffordlimitiscombined stategi3 stateperm1 tuition*
 * // I think it's a good robustness check to compare with stipulated models but i won't bc i don't want to annoy editor
 * // so, not included in 4 rsoi, so i call it roi-1
 * // swap year3 -> year from prior model without loss of explanatory power and gain simplicity
+* // Note: Anderson-Hsiao adjustment of this model preserves model r-squared while adjustment of roi2 yields an insignificant model
+* // compare to so-called roi2.5 in the same source commit as this comment
 reg totalen emp* pce* real* staffordlimitiscombined stategi3 stateperm1 tuition* visa_m* year
 
 * // roi1: initial stipulated model

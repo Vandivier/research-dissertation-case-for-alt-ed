@@ -21,7 +21,7 @@ estimates store R1, title(Regression 1)
 * // dols preferred regression
 * // period from 1992 - 2016
 sum year if  !(missing(d.d.employer_assistance_1)) & !(missing(d.d.visa_m_h1b_1))
-ivreg d.totalen employer_assistance_1 employer_assistance_2 visa_m_h1b_2 visa_m_h1b_3 year2 (l.d.totalen=l2.d.totalen) d.employer_assistance_1 d.d.employer_assistance_1 d.visa_m_h1b_1 d.d.visa_m_h1b_1 l.visa_m_h1b_2 l.visa_m_h1b_3
+ivreg d.totalen employer_a*1 employer_a*2 pce2 pce3 stateperm1 visa_m_h1 visa_m_h1b_3 visa_m_non_h1 visa_m_total year  (l.d.totalen=l2.d.totalen)
 estimates store R2, title(Regression 2)
 
 esttab R1 R2 using temp.tex, booktabs keep(employer_assistance_1 employer_assistance_2 visa_m_h1b_2 visa_m_h1b_3 year2) label order(visa_m_h1b_2 visa_m_h1b_3 employer_assistance_1 employer_assistance_2 year2) replace se star(+ 0.10 ++ 0.05 * .01 ** .001) stats(r2, fmt(4 0 1) label(R-sqr)) varwidth(25) b(%10.7e) mtitles(5 6) nonumbers
