@@ -45,5 +45,11 @@ reg totalen emp* pce* staffordlimitiscombined stategi3 stateperm1 tuition_cpi vi
 reg totalen employer_a* pce* stategi3 stateperm1 tuition_cpi visa_m* year
 reg totalen employer_a* pce2 pce3 stategi3 stateperm1 tuition_cpi visa_m_h1 visa_m_h1b_3 visa_m_non_h1 visa_m_total year
 reg totalen employer_a* pce2 pce3 stateperm1 tuition_cpi visa_m_h1 visa_m_h1b_3 visa_m_non_h1 visa_m_total year
-* // roi2: reduced strong stipulated model
 reg totalen employer_a*1 employer_a*2 pce2 pce3 stateperm1 visa_m_h1 visa_m_h1b_3 visa_m_non_h1 visa_m_total year
+
+* // roi2: reduced stipulated model with two unimportant (wrt p, r2, ar2...) analytical transforms.
+* // 1) visa_m_h1b_3 -> visa_m_h1b_2 unimportantly changes model
+* // 2) collapse pce2 + pce3 -> pce2
+* // analytical transforms allow cross-specification comparison of effects
+* // analytical transforms also function as robustness checks; if a minor factor transform breaks u, u are bad
+reg totalen employer_a*1 employer_a*2 pce2 stateperm1 visa_m_h1 visa_m_h1b_2 visa_m_non_h1 visa_m_total year
