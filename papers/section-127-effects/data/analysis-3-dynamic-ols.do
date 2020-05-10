@@ -52,4 +52,17 @@ ivreg d.totalen employer_a*3 pce*2 pce*3 d.pce d.d.pce l.l.pce visa_m_h1b_*2 yea
 * // 2) collapse pce2+pce3 -> pce2
 * // #2 is bc they are both significant but sign flips; collapse them to compare total marginal effect
 * // marginal effect robustly + and comparable to other models.
+* // this model is for the period from 1973 to 2016
+sum year if !missing(employer_assistance_1) & !missing(visa_m_h1b_1) & !missing(pce) & !missing(l2.d.totalen)
 ivreg d.totalen employer_a*2 pce*2 d.pce d.d.pce l.l.pce visa_m_h1b_*2 year2 (l.d.totalen=l2.d.totalen)
+
+* // model 4 + linear variable
+* // used to calculate total effect
+* // linear coeff ~ 6.39292 (p < 0.31)
+* // quadratic coeff ~ -0.00003 (p < 0.53)
+* // largest effect is also stoch-disc change from 1978 to 1979 of 0 -> 135149.3845
+* // at that level of real assistance, total effect = 135149.3845*6.39292 + -0.00003*135149.3845*135149.3845
+* // ~ 316040
+ivreg d.totalen employer_a*1 employer_a*2 pce*2 d.pce d.d.pce l.l.pce visa_m_h1b_*2 year2 (l.d.totalen=l2.d.totalen)
+disp 135149.3845*6.39292 + -0.00003*135149.3845*135149.3845
+* // result: 316038.52, or 316040 after significant figures
