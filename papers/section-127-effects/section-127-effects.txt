@@ -3,7 +3,7 @@ The Impact of Employer Education Assistance on Enrollment
 
 Policymakers incentivized university enrollment through the creation of Section 127 of the United States Internal Revenue Code.
 This policy provides a tax deduction to employers that provide financial assistance for employee education.
-This paper finds that before and after extensive correction, the policy fails to meaningfully increase enrollment.
+This paper finds that before and after extensive correction, the policy fails to increase enrollment meaningfully.
 Evidence from 1992 through 2017 indicates adverse linear and total effects of interest.
 H-1B policy is explored as a correction variable and emerges as a comparatively preferred policy tool.
 Results are validated using vector autoregression (VAR), dynamic ordinary least squares (DOLS), and instrumental variable (IV) analysis.
@@ -13,7 +13,7 @@ The passage of Public Law 95-600 in 1978 created Section 127.
 Section 127 provides for a limited employer tax deduction for the transfer of money to an employee for educational purposes.
 This paper tests the hypothesis that the effect of Section 127 employer assistance on total university enrollment is positive.
 Results show that employer assistance has a positive marginal effect on enrollment and negative linear and total effects.
-Evidence indicates that H-1B visa policy is a comparatively effective policy instrument for enrollment, national student loan debt, and the price of education.
+Evidence indicates that the H-1B visa policy is a comparatively effective policy instrument for enrollment, national student loan debt, and the price of education.
 
 Total enrollment is one of a few policy concerns related to Section 127.
 The paper concludes by asking whether the results observed represent policy success.
@@ -30,7 +30,7 @@ In one specification, vector autoregression (VAR) provides evidence on utility a
 Methodology
 This paper broadly explores Section 127 effects in comparison to its policy goals.
 The focus of this broad conversation is the identification of the policy effect on total enrollment.
-This identification proceeds from statistical analysis across multiple specifications.
+Identification is robust across multiple specifications.
 This paper operationalizes total enrollment as a representation of one of the original Section 127 policy goals.
 
 The Society for Human Resource Management (SHRM)  identifies three original policy goals for the passage of Section 127.
@@ -39,9 +39,8 @@ As a result, this paper takes total enrollment as the dependent variable.
 
 Specifications begin with an ordinary least squares (OLS) investigation.
 Finding significant time effects justifies and motivates further analysis.
-Dynamic ordinary least squares replicates the importance of time effects, and also addresses concerns on potential autocorrelation.
-Finally, a vector autoregression indicates that certain policy changes
-are candidate policy instruments.
+Dynamic ordinary least squares (DOLS) analysis replicates the importance of time effects and also addresses concerns on potential autocorrelation.
+Finally, a vector autoregression indicates that specific policy changes are candidate policy instruments.
 
 Simple Supply-Side Explanations
 Simple Demand-Side Explanations
@@ -53,7 +52,8 @@ Testing these two secondary dependent variables of interest improves confidence 
 
 Total postsecondary enrollment in the United States is the dependent variable.
 The Section 127 policy effect is the right-hand parameter of interest in the first two specifications.
-Equation \ref{eq1} is the first specification of interest. This model is an ordinary least squares model.
+Equation \ref{eq1} is the first specification of interest.
+This model is an OLS model.
 Here, $\alpha$ is a $1*k$ vector of coefficients, and $V$ is a $k*1$ vector of annually observed independent variables.
 
 Y_t = \alpha{V_{t}}+u_t
@@ -63,7 +63,7 @@ Two additional non-policy variables include time, in years, and the real price o
 
 Equation \ref{eq2} describes the next specification.
 This model follows Anderson and Hsiao.
-This specification investigates concerns of potential autocorrelation.
+This specification investigates concerns about possible autocorrelation.
 It is both an instrumental variable model and also a dynamic ordinary least squares (DOLS) model.
 
 z_t = \delta{W_{t}}+D{Y_{t-2}}+g_t
@@ -78,7 +78,7 @@ The first model of this form is a two-variable case.
 This first model is similar to earlier non-VAR
 specifications because it identifies the effect of
 employer assistance on enrollment.
-A second model follows the same form, but the independent variable is H-1B policy.
+A second model follows the same form, but the independent variable is the H-1B policy.
 
 v_t = \alpha_0 + \alpha_1{v_{t-1}} + \alpha_2{v_{t-2}} + ... + \alpha_i{v_{t-i}} + u_t
 V_t = \alpha_0 + \alpha_1{v_{1, t-1}} + \alpha_2{v_{2, t-1}} + ... + \alpha_{ik-1}{v_{k-1, t-i}} + \alpha_{ik}{v_{k, t-i}} + u_t
@@ -86,7 +86,7 @@ Y_t = \sigma_k{V_{kt}}+e_t
 
 Equation \ref{eq:univariate_var} is a univariate autoregression.
 Dependent and independent variables are uniformly represented by $v_t$.
-An ordinary least squares function of $i$ lags explains the current-period value of the variable in the univariate regression.
+An OLS model of $i$ lags explains the current-period value of the variable in the univariate regression.
 Equation \ref{eq:naiive_multi_var} extends this operation to $k$ variables.
 Notice that $V_t$ is not a collection of univariate $v_t$.
 Instead, it is a $k*k$ vector, a constant, and an error term.
@@ -117,7 +117,7 @@ Endogenous error in $B$ allows us to estimate the effects of arbitrary innovatio
 The reduced form $BB'$ in Equation \ref{eq:link_covariance_error} matches many matrices.
 There does exist a unique lower-triangle matrix that satisfies
 the equality statement with $\Sigma$, the covariance matrix of the errors.
-Selecting the lower-triangle represents analyst stipulation of the order in which effects are realized.
+Selecting the lower-triangle represents analyst stipulation of the order of effects.
 The order imposed is called a Cholesky ordering.
 This paper selects theoretically-grounded Cholesky orderings.
 
@@ -140,18 +140,19 @@ This study uses price information for full-time undergraduate students.
 Prices do not include the cost of room and board.
 Cost information exists through the year 2016
 Cost information reflects real prices.
-2016 is the base year for Consumer Price Index (CPI) adjustment.
+2016 is the base year for the Consumer Price Index (CPI) adjustment.
 
 Section 127 took effect on January 1, 1979, with a nominal assistance limit of 5,000 dollars.
 In October 1986, Pub. L. 99–514 increased the nominal assistance limit to 5,250 dollars.
-Nominal limits are adjusted for education-specific inflation using NCES price data.
-The real employer assistance limit is the primary explanatory variable of interest to this study.
+NCES price data allows the calculation of education-specific inflation.
+That measure of inflation corrects nominal assistance to produce the real employer assistance limit.
+The real employer assistance limit is the primary explanatory variable of interest in this study.
 
 Section 127 was renewed several times over the years.
 A dummy variable exists for a considerable change realized in 2013.
 In that year, the employer assistance deduction became permanent.
 Personal Consumption Expenditures (PCE) data is a measure of inflation provided by the U.S. Bureau of Economic Analysis (BEA).
-PCE is a fourth independent variable.
+PCE is the fourth independent variable.
 
 Stafford loan data is another critical high-level component of the analysis.
 Stafford loan limits impact the supply of loanable funds, which indirectly modifies demand for education.
@@ -194,9 +195,9 @@ College Board provides loan data.
 College Board also gives the additional context in a report which is related to the loan data.
 The additional context suggests that an analysis that decomposes federal loans by type could yield preferred statistical results.
 
-The final subset of data describes veteran education benefits policy.
+The final subset of data describes veteran education benefits.
 Each year in the data set is associated with some veteran education policy.
-Veteran policy effects are a high-level variable which technically decompose into seven dummy variables.
+The measure of veteran policy is a categorical variable that decomposes into seven dummy variables.
 A series of seven dummy variables capture veteran education policy effects.
 The seven variables cover the period from 1944 to 2021.
 The Servicemen's Readjustment Act of 1944 is also called the G.I. Bill.
@@ -209,25 +210,25 @@ The fourth period of interest ends in 2009 with the Post-9/11 GI Bill.
 Finally, many benefits from the Forever GI Bill became effective in 2018, with additional provisions taking effect in 2020 and 2022.
 
 Because of time sample constraints on other variables, there is only a single variation in veteran education benefits during the period of analysis.
-This is the enactment of the Post-9/11 GI Bill in 2009.
+The variation is the enactment of the Post-9/11 GI Bill in 2009.
 
-Recent changes in veteran education benefits and in Section 127
+Recent changes in veteran education benefits and Section 127
 represent critical caveats for any attempt at forecasting outside of the period of study.
-As mentioned, the Forever GI Bill lays out several important changes in veteran benefits in the years to come.
-Under the CARES Act, Section 127 was amended to provide a new benefit on a temporary basis.
-The new benefit is that employers may assist employees in paying down existing student loan debt, rather than only paying for new expenses, in a tax deductable way.
+The Forever GI Bill makes noteworthy changes in veteran benefits in the years to come.
+The CARES Act amends Section 127 to temporarily provide a new benefit.
+The new benefit is that employers may assist employees in paying down existing student loan debt, rather than only paying for new expenses, in a tax-deductible way.
 Under current law, the CARES Act changes to employer assistance will apply only during the year 2020.
 
 Results
 Multiple Regression Results
 The prior description of data notes seven independent variables and two dependent variables.
-Analysis begins with ordinary least squares regression of all seven independent variables, plus a variable for time, on enrollment.
+Multiple regression analysis begins with OLS regression of all seven independent variables, plus time, on enrollment.
 
-Results for the first model are described as Model 1 within Table \ref{tab:table_multiple}.
+Model 1 in Table \ref{tab:table_multiple} describes the results for the initial multiple regression.
 The selected variables in this table are significant in at least two specifications.
 Section 127, inflation, and time effects were the most important variables in Model 1 ($p < 0.0005$).
 Linear and nonlinear employer assistance effects were significant.
-A dummy variable which represented whether the employer deduction was temporary or permanent was also significant.
+A dummy variable that represents whether the employer deduction is temporary or permanent is also significant.
 
 Linear and nonlinear visa policy effects were also highly significant ($0.001 < p < 0.05$).
 Tuition and the interaction between Section 127 and visa policy were notably insignificant.
@@ -246,24 +247,25 @@ Model 4 is the result of trimming insignificant variables from Model 3.
 
 The Anderson-Hsiao adjustment involves three changes that allow an analyst to address actual or potential autocorrelation in the dependent variable.
 The first step is to replace the dependent variable with its first difference.
-The second change is a refinement in specification.
-Models 3 and 4 are a special case of DOLS multiple regression because they are also instrumental variable models.
+The second change is a refinement in the specification.
+Models 3 and 4 are a unique case of DOLS multiple regression because they are also instrumental variable models.
 The third step in the Anderson-Hsiao adjustment is to pick a particular instrumental variable.
 This particular instrument is often called the Anderson-Hsiao estimator.
 The Anderson-Hsiao estimator is the twice lagged first difference of the dependent variable.
 
 When insignificant factors are eliminated from DOLS analysis, a broader set of samples is applicable from 1973 through 2016.
-This means Model 4 is in some sense an out-of-sample test of prior specifications.
-PCE and H-1B marginal effects were robust across specification.
+This makes Model 4 an out-of-sample test for prior specifications.
+PCE and H-1B marginal effects were robust to specification.
 Employer assistance was non-robust and insignificant DOLS analysis.
 
-If Model 4 is re-written to include linear and marginal employer effects, the coefficients are positive and negative, respectively, although insignificant.
+Modifying Model 4 to include linear and marginal employer effects
+results in insignificant positive and negative coefficients, respectively.
 These signs are consistent with the assertion that Section 127 is an enrollment incentive.
-insignificance of the effects is consistent with access issues.
+The insignificance of these effects is consistent with access issues.
 The marginal effect does not dominate for any period across the period of interest, so the total effect is also positive.
 The maximum single-period effect of assistance is obtained in the first year of the policy.
-The point estimate of the maximum effect is an increase to enrollment of about 316040 students\footnote{
-From 1978 to 1979, the change in the maximum tax-deductable employer assistance amount increased from
+The point estimate of the maximum effect is an increase of about 316040 students to enrollment\footnote{
+From 1978 to 1979, the change in the maximum tax-deductible employer assistance amount increased from
 0 to $13,5149.38$ dollars in real terms.
 Real terms reflect constant 2016 dollars.
 The linear coefficient is $6.39292$ ($p > 0.3$).
@@ -272,13 +274,13 @@ $135149.3845*6.39292 - 0.00003*135149.3845^2 = 316038.52$.
 
 The additional years included in Model 4 make another variable relevant.
 Some years in the period of analysis for Model 4 are prior to the existence of Section 127.
-Adding a dummy variable for the existance of any employer assistance at all
+Adding a dummy variable for the existence of any employer assistance at all
 identifies an insignificant ($p < 0.21$) but positive association with enrollment.
 
-The Anderson-Hsiao estiator was not significant.
-This provides evidence that autocorrelation is not an important concern.
+The Anderson-Hsiao estimator was not significant.
+This provides evidence against autocorrelation.
 Time was significant in all models, but not in the same way.
-Marginal time was significant in Model 4, but not in prior models.
+Nonlinear time effects were significant in Model 4, but not in prior models.
 Linear time effects were insignificant in Model 4.
 Some lags and differences were significant in Model 4, but DOLS analysis generally leaves room for improvement regarding confident
 claims about factor behavior over time.
@@ -290,7 +292,7 @@ The difference and lag effects of the first and second orders were arbitrarily s
 In contrast, VAR lag selection techniques involve non-arbitrary selection criteria.
 
 Employer assistance was not significant in the preferred DOLS model, but ruling out significance in a VAR specification adds confidence to policy conclusions.
-Visa policy is investigated as a potential policy instrument due to robust effects in earlier analysis.
+Visa policy is investigated as a potential policy instrument due to robust effects in the earlier analysis.
 Prior analysis ruled out the significance of an interaction variable between
 visa and employer assistance effects.
 As a result, the two initial VAR models are both simple, two-variable models.
@@ -366,7 +368,7 @@ H-1B policy stimulus impacts enrollment and has further indirect effects on aggr
 The dynamic response of enrollment and other dependent variables to employer assistance impulse is insignificant.
 
 Conclusion
-Employer assistance effects are in the direction of the main hypothesis, but the effects are statistically insignificant and non-robust.
+Employer assistance effects are in the direction of the central hypothesis, but the effects are statistically insignificant and non-robust.
 The present study interprets insignificance mainly as an access issue.
 Access and other policy objectives are better achieved by making two adjustments to Section 127.
 The first change is to remove the employment requirement.
@@ -376,7 +378,7 @@ According to SHRM, the third policy goal motivating passage of Section 127 was t
 In the same report, SHRM notes that Section 127 benefits are increasingly being used to pursue graduate degrees.
 Upward mobility goals were intended to target lower-paid and lower-skilled workers.
 Graduate student utilization should indicate policy failure in this regard.
-To improve benefit uptake among the least skiled and least paid, the employed are not the correct target group.
+To improve benefit uptake among the least skilled and least paid, the employed are not the correct target group.
 
 In a 2013 report, SHRM finds about 61 percent of employers offer tuition assistance.
 Lumina Foundation finds that two to five percent of eligible employees use tuition assistance benefits, and 43 percent of employees do not know whether their employer offers such a program.
@@ -385,7 +387,7 @@ Removal of the employment requirement would plausibly increase utilization four-
 A utilization multiple of 4.07 results from the calculation $(1*0.035*0.715*1) / (0.61*0.035*0.43*0.67)$.
 Suppose a positive awareness effect of unknown magnitude.
 The point estimate on a uniform distribution from $0.43$ and $1$ would be the average at $0.715$.
-This calculation assumes constant 3.5 percent utilization among the newly eligible population, but the true utilization would plausibly be higher.
+This calculation assumes a constant 3.5 percent utilization among the newly eligible population, but actual utilization is plausibly higher.
 SHRM finds that the average recipient of employer educational assistance is employed, but earns below average.
 Extrapolating the inverse correlation of income and utilization to the unemployed would result in
 higher utilization among the newly eligible population.
@@ -407,10 +409,11 @@ Often, these credentials are also more affordable than traditional education.
 The deduction of unaccredited education also solves an existing determination problem.
 Prior learning assessments allows an individual to receive college credit for prior work or unaccredited learning.
 Educational tax benefits do not apply retroactively in many cases.
-As a result, there is a undesirable inability to deduct expenses incurred in the course of quality learning.
+As a result, there is an unintended inability to deduct expenses incurred in the course of quality learning.
 
-Finally, this study identified H-1B policy as an important policy tool for postsecondary education.
-The mechanism is not entirely clear and further research is encouraged, but competitive effects may be one explanatory mechanism.
+Finally, this study finds H-1B policy is a potentially effective policy tool for postsecondary enrollment.
+Further research to clarify the mechanism by which H-1B policy influences enrollment is encouraged.
+Competitive effects are one possible explanation.
 An increase to the count of H-1B visas issued within-period and between periods is associated with increases in enrollment, total loans, and the price of education.
 H-1B policy modification in any direction is not obviously beneficial based on these criteria alone.
 
