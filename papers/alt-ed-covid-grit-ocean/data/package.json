@@ -1,0 +1,25 @@
+{
+  "name": "alt-ed-covid-grit-ocean-wrangle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "wrangler.js",
+  "scripts": {
+    "aspirational-build": "node wrangler && node unwrite-csv --InputRegex=soac --UniqueKey=sRespondentID && node write-csv --InputRegex=soac --UniqueKey=sRespondentID",
+    "build": "ts-node wrangler",
+    "tsc": "tsc"
+  },
+  "keywords": [
+    "wrangle",
+    "data",
+    "massage"
+  ],
+  "author": "John vandivier",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^14.0.4",
+    "ella-utils": "1.0.7",
+    "js-beautify": "1.9.0",
+    "ts-node": "^8.10.1",
+    "typescript": "~3.9.3"
+  }
+}
