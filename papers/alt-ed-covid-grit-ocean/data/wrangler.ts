@@ -9,6 +9,8 @@ import { CSVToArray } from "./wrangle-lib";
 const fpReadFile = util.promisify(fs.readFile);
 const fpWriteFile = util.promisify(fs.writeFile);
 
+const wranglerPrefix = "wrangled-";
+
 // TODO: script input arg regex to make this more flexible
 function fGetInputFileLocations() {
   const sDataFolderPath = path.join(__dirname, ".");
@@ -22,7 +24,7 @@ function fGetInputFileLocations() {
         return sFilePath;
       }
     })
-    .filter((s) => s);
+    .filter((s) => s && !s.includes(wranglerPrefix));
 }
 
 function fGetTransformersWithIndex(arrarrsCsvCells) {
@@ -101,7 +103,7 @@ const fpWrangleSurveyMonkeyFile = async (sLocation) => {
   const arrsPath = sLocation.split(path.sep);
   const sOutputFileLocation = path.join(
     __dirname,
-    "wrangled-" + arrsPath[arrsPath.length - 1]
+    wranglerPrefix + arrsPath[arrsPath.length - 1]
   );
 
   return fpWriteFile(sOutputFileLocation, sOutputFileContent, "utf8");

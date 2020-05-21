@@ -5,7 +5,7 @@
   "main": "wrangler.js",
   "scripts": {
     "aspirational-build": "node wrangler && node unwrite-csv --InputRegex=soac --UniqueKey=sRespondentID && node write-csv --InputRegex=soac --UniqueKey=sRespondentID",
-    "build": "ts-node wrangler",
+    "build": "ts-node wrangler && ts-node unwrite-csv wrangled-soac-2018-10-10.csv",
     "tsc": "tsc"
   },
   "keywords": [

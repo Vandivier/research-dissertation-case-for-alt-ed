@@ -31,10 +31,14 @@ async function main() {
 
   try {
     // TODO: fix below
-    const arrpReadFiles = arrsOutputFiles.map(async (sFile) => {
-      const sCacheFile = await fpReadFile(sFile + ".csv", "utf8");
-      return foParseCsvToJson(sCacheFile);
-    });
+    const arrpReadFiles = arrsOutputFiles
+      .map(async (sFile) => {
+        if (sFile.includes(".csv")) {
+          const sCacheFile = await fpReadFile(sFile, "utf8");
+          return foParseCsvToJson(sCacheFile);
+        }
+      })
+      .filter((o) => o);
 
     setCaches(await Promise.all(arrpReadFiles));
   } catch (e) {
@@ -45,7 +49,7 @@ async function main() {
     process.exit();
   }
 
-  if (oOptions.mergeFiles) fMergeCaches();
+  if (oOptions.mergeFiles) fMergeCaches(oOptions);
 
   // write json file outputs
   const arrp = getCaches().map(async (oCache, i) => {

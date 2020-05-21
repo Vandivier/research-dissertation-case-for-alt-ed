@@ -77,7 +77,7 @@ export function fNormalizeVariableName(sOldName: string, oOptions?: any) {
     .join("");
 }
 
-export function fMergeCaches() {
+export function fMergeCaches(options) {
   let oColumns = {};
 
   const oMergedCache = arroCaches.reduce(
@@ -85,13 +85,13 @@ export function fMergeCaches() {
       return Object.keys(oCurrentCache).reduce(
         (oCurrentCacheAcc, sOriginalRecordKey, ii) => {
           const oCurrentRecord = oCurrentCache[sOriginalRecordKey];
-          const sNewRecordKey = oOptions.uniquifyDuplicates
+          const sNewRecordKey = options.uniquifyDuplicates
             ? sOriginalRecordKey + "-" + i + "-" + ii
             : sOriginalRecordKey;
           const oExistingRecord = oCurrentCacheAcc[sNewRecordKey];
 
           if (oExistingRecord) {
-            if (oOptions.mergeDuplicates) {
+            if (options.mergeDuplicates) {
               // existing column values survive; only overwrite unpopulated columns
               oCurrentCacheAcc[sNewRecordKey] = Object.assign(
                 {},
