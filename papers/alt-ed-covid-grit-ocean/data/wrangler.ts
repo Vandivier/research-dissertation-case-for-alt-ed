@@ -4,6 +4,7 @@ import * as path from "path";
 import * as util from "util";
 
 import { arroColumnTransforms } from "./column-transforms";
+import { CSVToArray } from "./wrangle-lib";
 
 const fpReadFile = util.promisify(fs.readFile);
 const fpWriteFile = util.promisify(fs.writeFile);
@@ -168,47 +169,6 @@ async function main() {
     fpWrangleSurveyMonkeyFile
   );
   await Promise.all(arrpFileOperations);
-}
-
-// ref: https://stackoverflow.com/questions/1293147/javascript-code-to-parse-csv-data
-function CSVToArray(strData: string, strDelimiter?: string) {
-  strDelimiter = strDelimiter || ",";
-
-  var objPattern = new RegExp(
-    // Delimiters.
-    "(\\" +
-      strDelimiter +
-      "|\\r?\\n|\\r|^)" +
-      // Quoted fields.
-      '(?:"([^"]*(?:""[^"]*)*)"|' +
-      // Standard fields.
-      '([^"\\' +
-      strDelimiter +
-      "\\r\\n]*))",
-    "gi"
-  );
-
-  var arrData = [[]];
-  var arrMatches = null;
-
-  while ((arrMatches = objPattern.exec(strData))) {
-    var strMatchedValue;
-    var strMatchedDelimiter = arrMatches[1];
-
-    if (strMatchedDelimiter.length && strMatchedDelimiter !== strDelimiter) {
-      arrData.push([]);
-    }
-
-    if (arrMatches[2]) {
-      strMatchedValue = arrMatches[2].replace(new RegExp('""', "g"), '"');
-    } else {
-      strMatchedValue = arrMatches[3];
-    }
-
-    arrData[arrData.length - 1].push(strMatchedValue);
-  }
-
-  return arrData;
 }
 
 main();
