@@ -474,25 +474,32 @@ export const columnDefinitions: ColumnDefinition[] = [
       );
 
       const parsedPersonality = sCellValue?.split(",").map((s) => s?.trim());
-      const isInvalid =
-        parsedPersonality &&
-        (parsedPersonality.length < 5 || isNaN(parseInt(parsedPersonality[0])));
+      let isInvalid =
+        !Array.isArray(parsedPersonality) || parsedPersonality.length !== 5;
+
+      if (!isInvalid) {
+        parsedPersonality.forEach((s) => {
+          if (isNaN(parseFloat(s))) {
+            isInvalid = true;
+          }
+        });
+      }
 
       return [
         Object.assign({}, oTransformerOpenness, {
-          value: !isInvalid && parsedPersonality[0],
+          value: (!isInvalid && parsedPersonality[0]) || "",
         }),
         Object.assign({}, oTransformerConscientiousness, {
-          value: !isInvalid && parsedPersonality[1],
+          value: (!isInvalid && parsedPersonality[1]) || "",
         }),
         Object.assign({}, oTransformerExtraversion, {
-          value: !isInvalid && parsedPersonality[2],
+          value: (!isInvalid && parsedPersonality[2]) || "",
         }),
         Object.assign({}, oTransformerAgreeableness, {
-          value: !isInvalid && parsedPersonality[3],
+          value: (!isInvalid && parsedPersonality[3]) || "",
         }),
         Object.assign({}, oTransformerNeuroticism, {
-          value: !isInvalid && parsedPersonality[4],
+          value: (!isInvalid && parsedPersonality[4]) || "",
         }),
         booleanizeCell(isInvalid, oTransformerIsInvalid),
       ];

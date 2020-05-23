@@ -19,6 +19,8 @@
         "sReportedExactAge": "26",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.8",
+        "sCovid": "0",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -27,7 +29,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "85",
+        "sPersonality_Conscientiousness": "54",
+        "sPersonality_Extraversion": "33",
+        "sPersonality_Agreeableness": "33",
+        "sPersonality_Neuroticism": "44",
+        "sPersonality_IsInvalid": "0"
     },
     "11561192766": {
         "sRespondentID": "11561192766",
@@ -49,6 +57,8 @@
         "sReportedExactAge": "21",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.8",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -57,7 +67,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "90",
+        "sPersonality_Conscientiousness": "90",
+        "sPersonality_Extraversion": "58",
+        "sPersonality_Agreeableness": "92",
+        "sPersonality_Neuroticism": "15",
+        "sPersonality_IsInvalid": "0"
     },
     "11561184444": {
         "sRespondentID": "11561184444",
@@ -79,6 +95,8 @@
         "sReportedExactAge": "26",
         "sEducation": "8",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.8",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -87,7 +105,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "98",
+        "sPersonality_Conscientiousness": "94",
+        "sPersonality_Extraversion": "10",
+        "sPersonality_Agreeableness": "90",
+        "sPersonality_Neuroticism": "63",
+        "sPersonality_IsInvalid": "0"
     },
     "11561178390": {
         "sRespondentID": "11561178390",
@@ -109,6 +133,8 @@
         "sReportedExactAge": "23",
         "sEducation": "5",
         "sEthnicity": "2",
+        "sPersonality_Grit": "3.62",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -117,7 +143,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "52",
+        "sPersonality_Conscientiousness": "56",
+        "sPersonality_Extraversion": "79",
+        "sPersonality_Agreeableness": "70",
+        "sPersonality_Neuroticism": "59",
+        "sPersonality_IsInvalid": "0"
     },
     "11561175677": {
         "sRespondentID": "11561175677",
@@ -139,6 +171,8 @@
         "sReportedExactAge": "21",
         "sEducation": "7",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.18",
+        "sCovid": "4",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -147,7 +181,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "48",
+        "sPersonality_Conscientiousness": "35",
+        "sPersonality_Extraversion": "48",
+        "sPersonality_Agreeableness": "50",
+        "sPersonality_Neuroticism": "60",
+        "sPersonality_IsInvalid": "0"
     },
     "11561173617": {
         "sRespondentID": "11561173617",
@@ -169,6 +209,8 @@
         "sReportedExactAge": "25",
         "sEducation": "6",
         "sEthnicity": "3",
+        "sPersonality_Grit": "3.8",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -177,7 +219,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "65",
+        "sPersonality_Conscientiousness": "73",
+        "sPersonality_Extraversion": "38",
+        "sPersonality_Agreeableness": "81",
+        "sPersonality_Neuroticism": "69",
+        "sPersonality_IsInvalid": "0"
     },
     "11561150239": {
         "sRespondentID": "11561150239",
@@ -199,6 +247,8 @@
         "sReportedExactAge": "27",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.2",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -207,7 +257,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "1",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "58",
+        "sPersonality_Conscientiousness": "58",
+        "sPersonality_Extraversion": "40",
+        "sPersonality_Agreeableness": "69",
+        "sPersonality_Neuroticism": "10",
+        "sPersonality_IsInvalid": "0"
     },
     "11561149877": {
         "sRespondentID": "11561149877",
@@ -229,6 +285,8 @@
         "sReportedExactAge": "25",
         "sEducation": "4",
         "sEthnicity": "4",
+        "sPersonality_Grit": "3.3",
+        "sCovid": "4",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -237,7 +295,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "52",
+        "sPersonality_Conscientiousness": "58",
+        "sPersonality_Extraversion": "50",
+        "sPersonality_Agreeableness": "52",
+        "sPersonality_Neuroticism": "54",
+        "sPersonality_IsInvalid": "0"
     },
     "11561145942": {
         "sRespondentID": "11561145942",
@@ -259,6 +323,8 @@
         "sReportedExactAge": "23",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.7",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -267,7 +333,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "73",
+        "sPersonality_Conscientiousness": "67",
+        "sPersonality_Extraversion": "44",
+        "sPersonality_Agreeableness": "73",
+        "sPersonality_Neuroticism": "52",
+        "sPersonality_IsInvalid": "0"
     },
     "11561145681": {
         "sRespondentID": "11561145681",
@@ -289,6 +361,8 @@
         "sReportedExactAge": "25",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.4",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -297,7 +371,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "",
+        "sPersonality_Conscientiousness": "",
+        "sPersonality_Extraversion": "",
+        "sPersonality_Agreeableness": "",
+        "sPersonality_Neuroticism": "",
+        "sPersonality_IsInvalid": "1"
     },
     "11561145345": {
         "sRespondentID": "11561145345",
@@ -319,6 +399,8 @@
         "sReportedExactAge": "25",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.3",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -327,7 +409,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "87",
+        "sPersonality_Conscientiousness": "71",
+        "sPersonality_Extraversion": "42",
+        "sPersonality_Agreeableness": "50",
+        "sPersonality_Neuroticism": "57",
+        "sPersonality_IsInvalid": "0"
     },
     "11561139478": {
         "sRespondentID": "11561139478",
@@ -349,6 +437,8 @@
         "sReportedExactAge": "24",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3",
+        "sCovid": "3",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -357,7 +447,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "75",
+        "sPersonality_Conscientiousness": "67",
+        "sPersonality_Extraversion": "58",
+        "sPersonality_Agreeableness": "75",
+        "sPersonality_Neuroticism": "83",
+        "sPersonality_IsInvalid": "0"
     },
     "11561136243": {
         "sRespondentID": "11561136243",
@@ -379,6 +475,8 @@
         "sReportedExactAge": "25",
         "sEducation": "7",
         "sEthnicity": "2",
+        "sPersonality_Grit": "2.56",
+        "sCovid": "4",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -387,7 +485,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "54",
+        "sPersonality_Conscientiousness": "50",
+        "sPersonality_Extraversion": "46",
+        "sPersonality_Agreeableness": "48",
+        "sPersonality_Neuroticism": "58",
+        "sPersonality_IsInvalid": "0"
     },
     "11561134796": {
         "sRespondentID": "11561134796",
@@ -409,6 +513,8 @@
         "sReportedExactAge": "22",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.5",
+        "sCovid": "1",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -417,7 +523,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "71",
+        "sPersonality_Conscientiousness": "65",
+        "sPersonality_Extraversion": "56",
+        "sPersonality_Agreeableness": "69",
+        "sPersonality_Neuroticism": "62.5",
+        "sPersonality_IsInvalid": "0"
     },
     "11561134029": {
         "sRespondentID": "11561134029",
@@ -439,6 +551,8 @@
         "sReportedExactAge": "25",
         "sEducation": "7",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.8",
+        "sCovid": "5",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -447,7 +561,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "85",
+        "sPersonality_Conscientiousness": "62.5",
+        "sPersonality_Extraversion": "69",
+        "sPersonality_Agreeableness": "62.5",
+        "sPersonality_Neuroticism": "27",
+        "sPersonality_IsInvalid": "0"
     },
     "11561133827": {
         "sRespondentID": "11561133827",
@@ -469,6 +589,8 @@
         "sReportedExactAge": "25",
         "sEducation": "4",
         "sEthnicity": "4",
+        "sPersonality_Grit": "4.8",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -477,7 +599,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "79",
+        "sPersonality_Conscientiousness": "88",
+        "sPersonality_Extraversion": "56",
+        "sPersonality_Agreeableness": "73",
+        "sPersonality_Neuroticism": "2",
+        "sPersonality_IsInvalid": "0"
     },
     "11561126357": {
         "sRespondentID": "11561126357",
@@ -499,6 +627,8 @@
         "sReportedExactAge": "27",
         "sEducation": "5",
         "sEthnicity": "3",
+        "sPersonality_Grit": "3.9",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -507,7 +637,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "79",
+        "sPersonality_Conscientiousness": "69",
+        "sPersonality_Extraversion": "29",
+        "sPersonality_Agreeableness": "56",
+        "sPersonality_Neuroticism": "27",
+        "sPersonality_IsInvalid": "0"
     },
     "11561122682": {
         "sRespondentID": "11561122682",
@@ -529,6 +665,8 @@
         "sReportedExactAge": "27",
         "sEducation": "7",
         "sEthnicity": "2",
+        "sPersonality_Grit": "4.89",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -537,7 +675,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "44",
+        "sPersonality_Conscientiousness": "44",
+        "sPersonality_Extraversion": "54",
+        "sPersonality_Agreeableness": "48",
+        "sPersonality_Neuroticism": "48",
+        "sPersonality_IsInvalid": "0"
     },
     "11561121929": {
         "sRespondentID": "11561121929",
@@ -559,6 +703,8 @@
         "sReportedExactAge": "27",
         "sEducation": "5",
         "sEthnicity": "6",
+        "sPersonality_Grit": "3.2",
+        "sCovid": "3",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -567,7 +713,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "81",
+        "sPersonality_Conscientiousness": "54",
+        "sPersonality_Extraversion": "67",
+        "sPersonality_Agreeableness": "71",
+        "sPersonality_Neuroticism": "33",
+        "sPersonality_IsInvalid": "0"
     },
     "11561118641": {
         "sRespondentID": "11561118641",
@@ -589,6 +741,8 @@
         "sReportedExactAge": "23",
         "sEducation": "2",
         "sEthnicity": "3",
+        "sPersonality_Grit": "5",
+        "sCovid": "5",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -597,7 +751,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "69",
+        "sPersonality_Conscientiousness": "69",
+        "sPersonality_Extraversion": "71",
+        "sPersonality_Agreeableness": "58",
+        "sPersonality_Neuroticism": "19",
+        "sPersonality_IsInvalid": "0"
     },
     "11561115353": {
         "sRespondentID": "11561115353",
@@ -619,6 +779,8 @@
         "sReportedExactAge": "25",
         "sEducation": "4",
         "sEthnicity": "4",
+        "sPersonality_Grit": "2.8",
+        "sCovid": "3",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -627,7 +789,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "62",
+        "sPersonality_Conscientiousness": "58",
+        "sPersonality_Extraversion": "56",
+        "sPersonality_Agreeableness": "67",
+        "sPersonality_Neuroticism": "70",
+        "sPersonality_IsInvalid": "0"
     },
     "11561114472": {
         "sRespondentID": "11561114472",
@@ -649,6 +817,8 @@
         "sReportedExactAge": "27",
         "sEducation": "4",
         "sEthnicity": "4",
+        "sPersonality_Grit": "3.5",
+        "sCovid": "0",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -657,7 +827,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "77",
+        "sPersonality_Conscientiousness": "69",
+        "sPersonality_Extraversion": "62.5",
+        "sPersonality_Agreeableness": "42",
+        "sPersonality_Neuroticism": "25",
+        "sPersonality_IsInvalid": "0"
     },
     "11561113513": {
         "sRespondentID": "11561113513",
@@ -679,6 +855,8 @@
         "sReportedExactAge": "25",
         "sEducation": "7",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.54",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -687,7 +865,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "80",
+        "sPersonality_Conscientiousness": "93",
+        "sPersonality_Extraversion": "56",
+        "sPersonality_Agreeableness": "44",
+        "sPersonality_Neuroticism": "72",
+        "sPersonality_IsInvalid": "0"
     },
     "11561111991": {
         "sRespondentID": "11561111991",
@@ -709,6 +893,8 @@
         "sReportedExactAge": "25",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.16",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -717,7 +903,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "95",
+        "sPersonality_Conscientiousness": "84",
+        "sPersonality_Extraversion": "76",
+        "sPersonality_Agreeableness": "71",
+        "sPersonality_Neuroticism": "86",
+        "sPersonality_IsInvalid": "0"
     },
     "11561110838": {
         "sRespondentID": "11561110838",
@@ -739,6 +931,8 @@
         "sReportedExactAge": "26",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.09",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -747,7 +941,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "1",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "81",
+        "sPersonality_Conscientiousness": "77",
+        "sPersonality_Extraversion": "77",
+        "sPersonality_Agreeableness": "83",
+        "sPersonality_Neuroticism": "31",
+        "sPersonality_IsInvalid": "0"
     },
     "11561108796": {
         "sRespondentID": "11561108796",
@@ -769,6 +969,8 @@
         "sReportedExactAge": "25",
         "sEducation": "4",
         "sEthnicity": "4",
+        "sPersonality_Grit": "3.7",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -777,7 +979,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "85",
+        "sPersonality_Conscientiousness": "71",
+        "sPersonality_Extraversion": "42",
+        "sPersonality_Agreeableness": "85",
+        "sPersonality_Neuroticism": "2",
+        "sPersonality_IsInvalid": "0"
     },
     "11561106543": {
         "sRespondentID": "11561106543",
@@ -799,6 +1007,8 @@
         "sReportedExactAge": "25",
         "sEducation": "5",
         "sEthnicity": "3",
+        "sPersonality_Grit": "2",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -807,7 +1017,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "58",
+        "sPersonality_Conscientiousness": "33",
+        "sPersonality_Extraversion": "0",
+        "sPersonality_Agreeableness": "63",
+        "sPersonality_Neuroticism": "75",
+        "sPersonality_IsInvalid": "0"
     },
     "11561106048": {
         "sRespondentID": "11561106048",
@@ -829,6 +1045,8 @@
         "sReportedExactAge": "21",
         "sEducation": "4",
         "sEthnicity": "6",
+        "sPersonality_Grit": "3.01",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -837,7 +1055,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "1",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "46",
+        "sPersonality_Conscientiousness": "40",
+        "sPersonality_Extraversion": "60",
+        "sPersonality_Agreeableness": "48",
+        "sPersonality_Neuroticism": "48",
+        "sPersonality_IsInvalid": "0"
     },
     "11561105623": {
         "sRespondentID": "11561105623",
@@ -859,6 +1083,8 @@
         "sReportedExactAge": "25",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.3",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -867,7 +1093,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "65",
+        "sPersonality_Conscientiousness": "77",
+        "sPersonality_Extraversion": "42",
+        "sPersonality_Agreeableness": "94",
+        "sPersonality_Neuroticism": "12",
+        "sPersonality_IsInvalid": "0"
     },
     "11561105317": {
         "sRespondentID": "11561105317",
@@ -889,6 +1121,8 @@
         "sReportedExactAge": "23",
         "sEducation": "4",
         "sEthnicity": "4",
+        "sPersonality_Grit": "4",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -897,7 +1131,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "1",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "92",
+        "sPersonality_Conscientiousness": "73",
+        "sPersonality_Extraversion": "21",
+        "sPersonality_Agreeableness": "27",
+        "sPersonality_Neuroticism": "31",
+        "sPersonality_IsInvalid": "0"
     },
     "11561102398": {
         "sRespondentID": "11561102398",
@@ -919,6 +1159,8 @@
         "sReportedExactAge": "23",
         "sEducation": "2",
         "sEthnicity": "5",
+        "sPersonality_Grit": "1.8",
+        "sCovid": "1",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -927,7 +1169,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "96",
+        "sPersonality_Conscientiousness": "15",
+        "sPersonality_Extraversion": "21",
+        "sPersonality_Agreeableness": "69",
+        "sPersonality_Neuroticism": "92",
+        "sPersonality_IsInvalid": "0"
     },
     "11561100889": {
         "sRespondentID": "11561100889",
@@ -949,6 +1197,8 @@
         "sReportedExactAge": "26",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4",
+        "sCovid": "5",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -957,7 +1207,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "96",
+        "sPersonality_Conscientiousness": "79",
+        "sPersonality_Extraversion": "23",
+        "sPersonality_Agreeableness": "44",
+        "sPersonality_Neuroticism": "67",
+        "sPersonality_IsInvalid": "0"
     },
     "11561099342": {
         "sRespondentID": "11561099342",
@@ -979,6 +1235,8 @@
         "sReportedExactAge": "24",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.4",
+        "sCovid": "3",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -987,7 +1245,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "1",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "69",
+        "sPersonality_Conscientiousness": "48",
+        "sPersonality_Extraversion": "44",
+        "sPersonality_Agreeableness": "71",
+        "sPersonality_Neuroticism": "58",
+        "sPersonality_IsInvalid": "0"
     },
     "11561098424": {
         "sRespondentID": "11561098424",
@@ -1009,6 +1273,8 @@
         "sReportedExactAge": "26",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.7",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -1017,7 +1283,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "81",
+        "sPersonality_Conscientiousness": "29",
+        "sPersonality_Extraversion": "85",
+        "sPersonality_Agreeableness": "69",
+        "sPersonality_Neuroticism": "35",
+        "sPersonality_IsInvalid": "0"
     },
     "11561097780": {
         "sRespondentID": "11561097780",
@@ -1039,6 +1311,8 @@
         "sReportedExactAge": "22",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.8",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -1047,7 +1321,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "81",
+        "sPersonality_Conscientiousness": "50",
+        "sPersonality_Extraversion": "23",
+        "sPersonality_Agreeableness": "87.5",
+        "sPersonality_Neuroticism": "71",
+        "sPersonality_IsInvalid": "0"
     },
     "11561095609": {
         "sRespondentID": "11561095609",
@@ -1069,6 +1349,8 @@
         "sReportedExactAge": "25",
         "sEducation": "5",
         "sEthnicity": "2",
+        "sPersonality_Grit": "2.9",
+        "sCovid": "3",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -1077,7 +1359,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "94",
+        "sPersonality_Conscientiousness": "42",
+        "sPersonality_Extraversion": "23",
+        "sPersonality_Agreeableness": "65",
+        "sPersonality_Neuroticism": "62.5",
+        "sPersonality_IsInvalid": "0"
     },
     "11561094716": {
         "sRespondentID": "11561094716",
@@ -1099,6 +1387,8 @@
         "sReportedExactAge": "27",
         "sEducation": "7",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.89",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -1107,7 +1397,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "45",
+        "sPersonality_Conscientiousness": "70",
+        "sPersonality_Extraversion": "62",
+        "sPersonality_Agreeableness": "67",
+        "sPersonality_Neuroticism": "42",
+        "sPersonality_IsInvalid": "0"
     },
     "11561094668": {
         "sRespondentID": "11561094668",
@@ -1129,6 +1425,8 @@
         "sReportedExactAge": "23",
         "sEducation": "5",
         "sEthnicity": "2",
+        "sPersonality_Grit": "1.4",
+        "sCovid": "4",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -1137,7 +1435,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "96",
+        "sPersonality_Conscientiousness": "25",
+        "sPersonality_Extraversion": "17",
+        "sPersonality_Agreeableness": "8",
+        "sPersonality_Neuroticism": "100",
+        "sPersonality_IsInvalid": "0"
     },
     "11561093447": {
         "sRespondentID": "11561093447",
@@ -1159,6 +1463,8 @@
         "sReportedExactAge": "27",
         "sEducation": "5",
         "sEthnicity": "2",
+        "sPersonality_Grit": "3.08",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -1167,7 +1473,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "56",
+        "sPersonality_Conscientiousness": "46",
+        "sPersonality_Extraversion": "58",
+        "sPersonality_Agreeableness": "46",
+        "sPersonality_Neuroticism": "56",
+        "sPersonality_IsInvalid": "0"
     },
     "11533117033": {
         "sRespondentID": "11533117033",
@@ -1189,6 +1501,8 @@
         "sReportedExactAge": "100",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "5.09",
+        "sCovid": "0",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -1197,7 +1511,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "",
+        "sPersonality_Conscientiousness": "",
+        "sPersonality_Extraversion": "",
+        "sPersonality_Agreeableness": "",
+        "sPersonality_Neuroticism": "",
+        "sPersonality_IsInvalid": "1"
     },
     "11532097898": {
         "sRespondentID": "11532097898",
@@ -1219,6 +1539,8 @@
         "sReportedExactAge": "34",
         "sEducation": "6",
         "sEthnicity": "2",
+        "sPersonality_Grit": "4.8",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -1227,7 +1549,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "81",
+        "sPersonality_Conscientiousness": "88",
+        "sPersonality_Extraversion": "52",
+        "sPersonality_Agreeableness": "38",
+        "sPersonality_Neuroticism": "57",
+        "sPersonality_IsInvalid": "0"
     },
     "11531885997": {
         "sRespondentID": "11531885997",
@@ -1249,6 +1577,8 @@
         "sReportedExactAge": "30",
         "sEducation": "6",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.5",
+        "sCovid": "3",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -1257,7 +1587,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "92",
+        "sPersonality_Conscientiousness": "60",
+        "sPersonality_Extraversion": "71",
+        "sPersonality_Agreeableness": "62.5",
+        "sPersonality_Neuroticism": "40",
+        "sPersonality_IsInvalid": "0"
     },
     "11531541310": {
         "sRespondentID": "11531541310",
@@ -1279,6 +1615,8 @@
         "sReportedExactAge": "24",
         "sEducation": "6",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.8",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -1287,7 +1625,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "71",
+        "sPersonality_Conscientiousness": "83",
+        "sPersonality_Extraversion": "69",
+        "sPersonality_Agreeableness": "46",
+        "sPersonality_Neuroticism": "54",
+        "sPersonality_IsInvalid": "0"
     },
     "11531444651": {
         "sRespondentID": "11531444651",
@@ -1309,6 +1653,8 @@
         "sReportedExactAge": "26",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.6",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -1317,7 +1663,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "50",
+        "sPersonality_Conscientiousness": "58",
+        "sPersonality_Extraversion": "62",
+        "sPersonality_Agreeableness": "69",
+        "sPersonality_Neuroticism": "46",
+        "sPersonality_IsInvalid": "0"
     },
     "11525731276": {
         "sRespondentID": "11525731276",
@@ -1339,6 +1691,8 @@
         "sReportedExactAge": "26",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -1347,7 +1701,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "",
+        "sPersonality_Conscientiousness": "",
+        "sPersonality_Extraversion": "",
+        "sPersonality_Agreeableness": "",
+        "sPersonality_Neuroticism": "",
+        "sPersonality_IsInvalid": "1"
     },
     "11524029184": {
         "sRespondentID": "11524029184",
@@ -1369,6 +1729,8 @@
         "sReportedExactAge": "23",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "No",
+        "sCovid": "0",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -1377,7 +1739,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "",
+        "sPersonality_Conscientiousness": "",
+        "sPersonality_Extraversion": "",
+        "sPersonality_Agreeableness": "",
+        "sPersonality_Neuroticism": "",
+        "sPersonality_IsInvalid": "1"
     },
     "11523998789": {
         "sRespondentID": "11523998789",
@@ -1399,6 +1767,8 @@
         "sReportedExactAge": "28",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.8",
+        "sCovid": "5",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -1407,7 +1777,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "",
+        "sPersonality_Conscientiousness": "",
+        "sPersonality_Extraversion": "",
+        "sPersonality_Agreeableness": "",
+        "sPersonality_Neuroticism": "",
+        "sPersonality_IsInvalid": "1"
     },
     "11517959626": {
         "sRespondentID": "11517959626",
@@ -1429,6 +1805,8 @@
         "sReportedExactAge": "47",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.28",
+        "sCovid": "3",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -1437,7 +1815,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "",
+        "sPersonality_Conscientiousness": "",
+        "sPersonality_Extraversion": "",
+        "sPersonality_Agreeableness": "",
+        "sPersonality_Neuroticism": "",
+        "sPersonality_IsInvalid": "1"
     },
     "11517924127": {
         "sRespondentID": "11517924127",
@@ -1459,6 +1843,8 @@
         "sReportedExactAge": "24",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.8",
+        "sCovid": "3",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -1467,7 +1853,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "44",
+        "sPersonality_Conscientiousness": "58",
+        "sPersonality_Extraversion": "77",
+        "sPersonality_Agreeableness": "79",
+        "sPersonality_Neuroticism": "90",
+        "sPersonality_IsInvalid": "0"
     },
     "11517883740": {
         "sRespondentID": "11517883740",
@@ -1489,6 +1881,8 @@
         "sReportedExactAge": "27",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.9",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -1497,7 +1891,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "79",
+        "sPersonality_Conscientiousness": "44",
+        "sPersonality_Extraversion": "38",
+        "sPersonality_Agreeableness": "65",
+        "sPersonality_Neuroticism": "56",
+        "sPersonality_IsInvalid": "0"
     },
     "11517883021": {
         "sRespondentID": "11517883021",
@@ -1519,6 +1919,8 @@
         "sReportedExactAge": "23",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "1.7",
+        "sCovid": "0",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "1",
@@ -1527,7 +1929,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "92",
+        "sPersonality_Conscientiousness": "15",
+        "sPersonality_Extraversion": "2",
+        "sPersonality_Agreeableness": "69",
+        "sPersonality_Neuroticism": "94",
+        "sPersonality_IsInvalid": "0"
     },
     "11517882992": {
         "sRespondentID": "11517882992",
@@ -1549,6 +1957,8 @@
         "sReportedExactAge": "25",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -1557,7 +1967,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "",
+        "sPersonality_Conscientiousness": "",
+        "sPersonality_Extraversion": "",
+        "sPersonality_Agreeableness": "",
+        "sPersonality_Neuroticism": "",
+        "sPersonality_IsInvalid": "1"
     },
     "11517878233": {
         "sRespondentID": "11517878233",
@@ -1579,6 +1995,8 @@
         "sReportedExactAge": "24",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.4",
+        "sCovid": "4",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -1587,7 +2005,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "90",
+        "sPersonality_Conscientiousness": "25",
+        "sPersonality_Extraversion": "25",
+        "sPersonality_Agreeableness": "73",
+        "sPersonality_Neuroticism": "96",
+        "sPersonality_IsInvalid": "0"
     },
     "11517871924": {
         "sRespondentID": "11517871924",
@@ -1609,6 +2033,8 @@
         "sReportedExactAge": "27",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.5",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -1617,7 +2043,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "90",
+        "sPersonality_Conscientiousness": "81",
+        "sPersonality_Extraversion": "50",
+        "sPersonality_Agreeableness": "37.5",
+        "sPersonality_Neuroticism": "6",
+        "sPersonality_IsInvalid": "0"
     },
     "11517869461": {
         "sRespondentID": "11517869461",
@@ -1639,6 +2071,8 @@
         "sReportedExactAge": "21",
         "sEducation": "3",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.7",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -1647,7 +2081,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "98",
+        "sPersonality_Conscientiousness": "33",
+        "sPersonality_Extraversion": "79",
+        "sPersonality_Agreeableness": "27",
+        "sPersonality_Neuroticism": "25",
+        "sPersonality_IsInvalid": "0"
     },
     "11517867991": {
         "sRespondentID": "11517867991",
@@ -1669,6 +2109,8 @@
         "sReportedExactAge": "22",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.1",
+        "sCovid": "5",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -1677,7 +2119,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "56",
+        "sPersonality_Conscientiousness": "50",
+        "sPersonality_Extraversion": "50",
+        "sPersonality_Agreeableness": "54",
+        "sPersonality_Neuroticism": "44",
+        "sPersonality_IsInvalid": "0"
     },
     "11517866825": {
         "sRespondentID": "11517866825",
@@ -1699,6 +2147,8 @@
         "sReportedExactAge": "21",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.1",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -1707,7 +2157,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "88",
+        "sPersonality_Conscientiousness": "46",
+        "sPersonality_Extraversion": "50",
+        "sPersonality_Agreeableness": "40",
+        "sPersonality_Neuroticism": "60",
+        "sPersonality_IsInvalid": "0"
     },
     "11517866327": {
         "sRespondentID": "11517866327",
@@ -1729,6 +2185,8 @@
         "sReportedExactAge": "25",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.4",
+        "sCovid": "1",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -1737,7 +2195,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "81",
+        "sPersonality_Conscientiousness": "54",
+        "sPersonality_Extraversion": "33",
+        "sPersonality_Agreeableness": "81",
+        "sPersonality_Neuroticism": "44",
+        "sPersonality_IsInvalid": "0"
     },
     "11517866323": {
         "sRespondentID": "11517866323",
@@ -1759,6 +2223,8 @@
         "sReportedExactAge": "25",
         "sEducation": "5",
         "sEthnicity": "3",
+        "sPersonality_Grit": "2.1",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -1767,7 +2233,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "54",
+        "sPersonality_Conscientiousness": "40",
+        "sPersonality_Extraversion": "4",
+        "sPersonality_Agreeableness": "83",
+        "sPersonality_Neuroticism": "69",
+        "sPersonality_IsInvalid": "0"
     },
     "11517866181": {
         "sRespondentID": "11517866181",
@@ -1789,6 +2261,8 @@
         "sReportedExactAge": "21",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.5",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -1797,7 +2271,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "81",
+        "sPersonality_Conscientiousness": "73",
+        "sPersonality_Extraversion": "81",
+        "sPersonality_Agreeableness": "79",
+        "sPersonality_Neuroticism": "38",
+        "sPersonality_IsInvalid": "0"
     },
     "11517865567": {
         "sRespondentID": "11517865567",
@@ -1819,6 +2299,8 @@
         "sReportedExactAge": "23",
         "sEducation": "5",
         "sEthnicity": "2",
+        "sPersonality_Grit": "3.1",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -1827,7 +2309,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "60",
+        "sPersonality_Conscientiousness": "54",
+        "sPersonality_Extraversion": "52",
+        "sPersonality_Agreeableness": "54",
+        "sPersonality_Neuroticism": "60",
+        "sPersonality_IsInvalid": "0"
     },
     "11517864940": {
         "sRespondentID": "11517864940",
@@ -1849,6 +2337,8 @@
         "sReportedExactAge": "26",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.9",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -1857,7 +2347,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "77",
+        "sPersonality_Conscientiousness": "56",
+        "sPersonality_Extraversion": "13",
+        "sPersonality_Agreeableness": "73",
+        "sPersonality_Neuroticism": "60",
+        "sPersonality_IsInvalid": "0"
     },
     "11517864408": {
         "sRespondentID": "11517864408",
@@ -1879,6 +2375,8 @@
         "sReportedExactAge": "26",
         "sEducation": "5",
         "sEthnicity": "2",
+        "sPersonality_Grit": "2.2",
+        "sCovid": "3",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -1887,7 +2385,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "90",
+        "sPersonality_Conscientiousness": "58",
+        "sPersonality_Extraversion": "19",
+        "sPersonality_Agreeableness": "90",
+        "sPersonality_Neuroticism": "65",
+        "sPersonality_IsInvalid": "0"
     },
     "11517863625": {
         "sRespondentID": "11517863625",
@@ -1909,6 +2413,8 @@
         "sReportedExactAge": "21",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.3",
+        "sCovid": "3",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -1917,7 +2423,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "98",
+        "sPersonality_Conscientiousness": "31",
+        "sPersonality_Extraversion": "0",
+        "sPersonality_Agreeableness": "74",
+        "sPersonality_Neuroticism": "75",
+        "sPersonality_IsInvalid": "0"
     },
     "11517863245": {
         "sRespondentID": "11517863245",
@@ -1939,6 +2451,8 @@
         "sReportedExactAge": "24",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.9",
+        "sCovid": "5",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -1947,7 +2461,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "85",
+        "sPersonality_Conscientiousness": "94",
+        "sPersonality_Extraversion": "77",
+        "sPersonality_Agreeableness": "79",
+        "sPersonality_Neuroticism": "15",
+        "sPersonality_IsInvalid": "0"
     },
     "11517862342": {
         "sRespondentID": "11517862342",
@@ -1969,6 +2489,8 @@
         "sReportedExactAge": "25",
         "sEducation": "7",
         "sEthnicity": "5",
+        "sPersonality_Grit": "8.98",
+        "sCovid": "5",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -1977,7 +2499,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "",
+        "sPersonality_Conscientiousness": "",
+        "sPersonality_Extraversion": "",
+        "sPersonality_Agreeableness": "",
+        "sPersonality_Neuroticism": "",
+        "sPersonality_IsInvalid": "1"
     },
     "11517860648": {
         "sRespondentID": "11517860648",
@@ -1999,6 +2527,8 @@
         "sReportedExactAge": "24",
         "sEducation": "5",
         "sEthnicity": "3",
+        "sPersonality_Grit": "3.2",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -2007,7 +2537,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "100",
+        "sPersonality_Conscientiousness": "46",
+        "sPersonality_Extraversion": "12.5",
+        "sPersonality_Agreeableness": "92",
+        "sPersonality_Neuroticism": "54",
+        "sPersonality_IsInvalid": "0"
     },
     "11517860495": {
         "sRespondentID": "11517860495",
@@ -2029,6 +2565,8 @@
         "sReportedExactAge": "24",
         "sEducation": "4",
         "sEthnicity": "4",
+        "sPersonality_Grit": "3.3",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -2037,7 +2575,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "",
+        "sPersonality_Conscientiousness": "",
+        "sPersonality_Extraversion": "",
+        "sPersonality_Agreeableness": "",
+        "sPersonality_Neuroticism": "",
+        "sPersonality_IsInvalid": "1"
     },
     "11517859813": {
         "sRespondentID": "11517859813",
@@ -2059,6 +2603,8 @@
         "sReportedExactAge": "24",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.5",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -2067,7 +2613,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "60",
+        "sPersonality_Conscientiousness": "77",
+        "sPersonality_Extraversion": "19",
+        "sPersonality_Agreeableness": "75",
+        "sPersonality_Neuroticism": "21",
+        "sPersonality_IsInvalid": "0"
     },
     "11517858683": {
         "sRespondentID": "11517858683",
@@ -2089,6 +2641,8 @@
         "sReportedExactAge": "27",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.9",
+        "sCovid": "1",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -2097,7 +2651,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "1",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "90",
+        "sPersonality_Conscientiousness": "46",
+        "sPersonality_Extraversion": "37.5",
+        "sPersonality_Agreeableness": "75",
+        "sPersonality_Neuroticism": "96",
+        "sPersonality_IsInvalid": "0"
     },
     "11517857885": {
         "sRespondentID": "11517857885",
@@ -2119,6 +2679,8 @@
         "sReportedExactAge": "23",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -2127,7 +2689,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "1",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "75",
+        "sPersonality_Conscientiousness": "48",
+        "sPersonality_Extraversion": "31",
+        "sPersonality_Agreeableness": "71",
+        "sPersonality_Neuroticism": "60",
+        "sPersonality_IsInvalid": "0"
     },
     "11517849760": {
         "sRespondentID": "11517849760",
@@ -2149,6 +2717,8 @@
         "sReportedExactAge": "26",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.59",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -2157,7 +2727,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "90",
+        "sPersonality_Conscientiousness": "96",
+        "sPersonality_Extraversion": "71",
+        "sPersonality_Agreeableness": "65",
+        "sPersonality_Neuroticism": "0",
+        "sPersonality_IsInvalid": "0"
     },
     "11517849399": {
         "sRespondentID": "11517849399",
@@ -2179,6 +2755,8 @@
         "sReportedExactAge": "22",
         "sEducation": "5",
         "sEthnicity": "2",
+        "sPersonality_Grit": "4.09",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -2187,7 +2765,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "65",
+        "sPersonality_Conscientiousness": "81",
+        "sPersonality_Extraversion": "25",
+        "sPersonality_Agreeableness": "92",
+        "sPersonality_Neuroticism": "35",
+        "sPersonality_IsInvalid": "0"
     },
     "11517847295": {
         "sRespondentID": "11517847295",
@@ -2209,6 +2793,8 @@
         "sReportedExactAge": "25",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.8",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -2217,7 +2803,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "92",
+        "sPersonality_Conscientiousness": "65",
+        "sPersonality_Extraversion": "33",
+        "sPersonality_Agreeableness": "50",
+        "sPersonality_Neuroticism": "56",
+        "sPersonality_IsInvalid": "0"
     },
     "11517847157": {
         "sRespondentID": "11517847157",
@@ -2239,6 +2831,8 @@
         "sReportedExactAge": "25",
         "sEducation": "6",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.1",
+        "sCovid": "5",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -2247,7 +2841,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "",
+        "sPersonality_Conscientiousness": "",
+        "sPersonality_Extraversion": "",
+        "sPersonality_Agreeableness": "",
+        "sPersonality_Neuroticism": "",
+        "sPersonality_IsInvalid": "1"
     },
     "11517847140": {
         "sRespondentID": "11517847140",
@@ -2269,6 +2869,8 @@
         "sReportedExactAge": "26",
         "sEducation": "5",
         "sEthnicity": "2",
+        "sPersonality_Grit": "3.7",
+        "sCovid": "3",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -2277,7 +2879,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "60",
+        "sPersonality_Conscientiousness": "73",
+        "sPersonality_Extraversion": "75",
+        "sPersonality_Agreeableness": "75",
+        "sPersonality_Neuroticism": "31",
+        "sPersonality_IsInvalid": "0"
     },
     "11517846565": {
         "sRespondentID": "11517846565",
@@ -2299,6 +2907,8 @@
         "sReportedExactAge": "26",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3",
+        "sCovid": "3",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -2307,7 +2917,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "71",
+        "sPersonality_Conscientiousness": "52",
+        "sPersonality_Extraversion": "42",
+        "sPersonality_Agreeableness": "67",
+        "sPersonality_Neuroticism": "56",
+        "sPersonality_IsInvalid": "0"
     },
     "11517845771": {
         "sRespondentID": "11517845771",
@@ -2329,6 +2945,8 @@
         "sReportedExactAge": "21",
         "sEducation": "3",
         "sEthnicity": "4",
+        "sPersonality_Grit": "4.2",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -2337,7 +2955,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "85",
+        "sPersonality_Conscientiousness": "79",
+        "sPersonality_Extraversion": "50",
+        "sPersonality_Agreeableness": "73",
+        "sPersonality_Neuroticism": "62.5",
+        "sPersonality_IsInvalid": "0"
     },
     "11517845753": {
         "sRespondentID": "11517845753",
@@ -2359,6 +2983,8 @@
         "sReportedExactAge": "28",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.2",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -2367,7 +2993,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "96",
+        "sPersonality_Conscientiousness": "69",
+        "sPersonality_Extraversion": "81",
+        "sPersonality_Agreeableness": "71",
+        "sPersonality_Neuroticism": "37.5",
+        "sPersonality_IsInvalid": "0"
     },
     "11517842729": {
         "sRespondentID": "11517842729",
@@ -2389,6 +3021,8 @@
         "sReportedExactAge": "25",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.9",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -2397,7 +3031,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "71",
+        "sPersonality_Conscientiousness": "71",
+        "sPersonality_Extraversion": "33",
+        "sPersonality_Agreeableness": "92",
+        "sPersonality_Neuroticism": "23",
+        "sPersonality_IsInvalid": "0"
     },
     "11517841575": {
         "sRespondentID": "11517841575",
@@ -2419,6 +3059,8 @@
         "sReportedExactAge": "32",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.24",
+        "sCovid": "5",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -2427,7 +3069,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "90",
+        "sPersonality_Conscientiousness": "71",
+        "sPersonality_Extraversion": "71",
+        "sPersonality_Agreeableness": "65",
+        "sPersonality_Neuroticism": "35",
+        "sPersonality_IsInvalid": "0"
     },
     "11517841303": {
         "sRespondentID": "11517841303",
@@ -2449,6 +3097,8 @@
         "sReportedExactAge": "23",
         "sEducation": "3",
         "sEthnicity": "3",
+        "sPersonality_Grit": "4.8",
+        "sCovid": "0",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -2457,7 +3107,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "81",
+        "sPersonality_Conscientiousness": "81",
+        "sPersonality_Extraversion": "83",
+        "sPersonality_Agreeableness": "85",
+        "sPersonality_Neuroticism": "8",
+        "sPersonality_IsInvalid": "0"
     },
     "11517840833": {
         "sRespondentID": "11517840833",
@@ -2479,6 +3135,8 @@
         "sReportedExactAge": "23",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -2487,7 +3145,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "81",
+        "sPersonality_Conscientiousness": "58",
+        "sPersonality_Extraversion": "37.5",
+        "sPersonality_Agreeableness": "67",
+        "sPersonality_Neuroticism": "69",
+        "sPersonality_IsInvalid": "0"
     },
     "11517839302": {
         "sRespondentID": "11517839302",
@@ -2509,6 +3173,8 @@
         "sReportedExactAge": "19",
         "sEducation": "5",
         "sEthnicity": "2",
+        "sPersonality_Grit": "2.1",
+        "sCovid": "0",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -2517,7 +3183,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "44",
+        "sPersonality_Conscientiousness": "21",
+        "sPersonality_Extraversion": "25",
+        "sPersonality_Agreeableness": "52",
+        "sPersonality_Neuroticism": "85",
+        "sPersonality_IsInvalid": "0"
     },
     "11517838308": {
         "sRespondentID": "11517838308",
@@ -2539,6 +3211,8 @@
         "sReportedExactAge": "25",
         "sEducation": "7",
         "sEthnicity": "5",
+        "sPersonality_Grit": "8.98",
+        "sCovid": "5",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -2547,7 +3221,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "",
+        "sPersonality_Conscientiousness": "",
+        "sPersonality_Extraversion": "",
+        "sPersonality_Agreeableness": "",
+        "sPersonality_Neuroticism": "",
+        "sPersonality_IsInvalid": "1"
     },
     "11517837593": {
         "sRespondentID": "11517837593",
@@ -2569,6 +3249,8 @@
         "sReportedExactAge": "23",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.9",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -2577,7 +3259,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "52",
+        "sPersonality_Conscientiousness": "71",
+        "sPersonality_Extraversion": "60",
+        "sPersonality_Agreeableness": "58",
+        "sPersonality_Neuroticism": "27",
+        "sPersonality_IsInvalid": "0"
     },
     "11517836807": {
         "sRespondentID": "11517836807",
@@ -2599,6 +3287,8 @@
         "sReportedExactAge": "23",
         "sEducation": "5",
         "sEthnicity": "2",
+        "sPersonality_Grit": "3.4",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -2607,7 +3297,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "54",
+        "sPersonality_Conscientiousness": "75",
+        "sPersonality_Extraversion": "17",
+        "sPersonality_Agreeableness": "58",
+        "sPersonality_Neuroticism": "56",
+        "sPersonality_IsInvalid": "0"
     },
     "11517836735": {
         "sRespondentID": "11517836735",
@@ -2629,6 +3325,8 @@
         "sReportedExactAge": "24",
         "sEducation": "3",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.3",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -2637,7 +3335,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "1",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "88",
+        "sPersonality_Conscientiousness": "85",
+        "sPersonality_Extraversion": "35",
+        "sPersonality_Agreeableness": "85",
+        "sPersonality_Neuroticism": "58",
+        "sPersonality_IsInvalid": "0"
     },
     "11517836278": {
         "sRespondentID": "11517836278",
@@ -2659,6 +3363,8 @@
         "sReportedExactAge": "24",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.8",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -2667,7 +3373,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "85",
+        "sPersonality_Conscientiousness": "96",
+        "sPersonality_Extraversion": "42",
+        "sPersonality_Agreeableness": "92",
+        "sPersonality_Neuroticism": "0",
+        "sPersonality_IsInvalid": "0"
     },
     "11517835704": {
         "sRespondentID": "11517835704",
@@ -2689,6 +3401,8 @@
         "sReportedExactAge": "24",
         "sEducation": "5",
         "sEthnicity": "6",
+        "sPersonality_Grit": "3.8",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -2697,7 +3411,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "75",
+        "sPersonality_Conscientiousness": "83",
+        "sPersonality_Extraversion": "21",
+        "sPersonality_Agreeableness": "67",
+        "sPersonality_Neuroticism": "65",
+        "sPersonality_IsInvalid": "0"
     },
     "11517835672": {
         "sRespondentID": "11517835672",
@@ -2719,6 +3439,8 @@
         "sReportedExactAge": "23",
         "sEducation": "3",
         "sEthnicity": "3",
+        "sPersonality_Grit": "4.9",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -2727,7 +3449,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "65",
+        "sPersonality_Conscientiousness": "94",
+        "sPersonality_Extraversion": "46",
+        "sPersonality_Agreeableness": "85",
+        "sPersonality_Neuroticism": "6",
+        "sPersonality_IsInvalid": "0"
     },
     "11517835374": {
         "sRespondentID": "11517835374",
@@ -2749,6 +3477,8 @@
         "sReportedExactAge": "23",
         "sEducation": "3",
         "sEthnicity": "2",
+        "sPersonality_Grit": "2.9",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -2757,7 +3487,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "1",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "73",
+        "sPersonality_Conscientiousness": "50",
+        "sPersonality_Extraversion": "42",
+        "sPersonality_Agreeableness": "56",
+        "sPersonality_Neuroticism": "83",
+        "sPersonality_IsInvalid": "0"
     },
     "11517834797": {
         "sRespondentID": "11517834797",
@@ -2779,6 +3515,8 @@
         "sReportedExactAge": "26",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.5",
+        "sCovid": "1",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -2787,7 +3525,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "69",
+        "sPersonality_Conscientiousness": "75",
+        "sPersonality_Extraversion": "71",
+        "sPersonality_Agreeableness": "54",
+        "sPersonality_Neuroticism": "52",
+        "sPersonality_IsInvalid": "0"
     },
     "11517832678": {
         "sRespondentID": "11517832678",
@@ -2809,6 +3553,8 @@
         "sReportedExactAge": "19",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.8",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -2817,7 +3563,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "29",
+        "sPersonality_Conscientiousness": "88",
+        "sPersonality_Extraversion": "38",
+        "sPersonality_Agreeableness": "75",
+        "sPersonality_Neuroticism": "60",
+        "sPersonality_IsInvalid": "0"
     },
     "11517832587": {
         "sRespondentID": "11517832587",
@@ -2839,6 +3591,8 @@
         "sReportedExactAge": "24",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.4",
+        "sCovid": "3",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -2847,7 +3601,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "92",
+        "sPersonality_Conscientiousness": "56",
+        "sPersonality_Extraversion": "19",
+        "sPersonality_Agreeableness": "75",
+        "sPersonality_Neuroticism": "33",
+        "sPersonality_IsInvalid": "0"
     },
     "11517832541": {
         "sRespondentID": "11517832541",
@@ -2869,6 +3629,8 @@
         "sReportedExactAge": "35",
         "sEducation": "7",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.3",
+        "sCovid": "3",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -2877,7 +3639,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "90",
+        "sPersonality_Conscientiousness": "83",
+        "sPersonality_Extraversion": "0",
+        "sPersonality_Agreeableness": "96",
+        "sPersonality_Neuroticism": "44",
+        "sPersonality_IsInvalid": "0"
     },
     "11517831879": {
         "sRespondentID": "11517831879",
@@ -2899,6 +3667,8 @@
         "sReportedExactAge": "26",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.9",
+        "sCovid": "0",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -2907,7 +3677,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "52",
+        "sPersonality_Conscientiousness": "46",
+        "sPersonality_Extraversion": "12",
+        "sPersonality_Agreeableness": "44",
+        "sPersonality_Neuroticism": "10",
+        "sPersonality_IsInvalid": "0"
     },
     "11517831022": {
         "sRespondentID": "11517831022",
@@ -2929,6 +3705,8 @@
         "sReportedExactAge": "23",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.8",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -2937,7 +3715,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "52",
+        "sPersonality_Conscientiousness": "83",
+        "sPersonality_Extraversion": "48",
+        "sPersonality_Agreeableness": "65",
+        "sPersonality_Neuroticism": "58",
+        "sPersonality_IsInvalid": "0"
     },
     "11517830765": {
         "sRespondentID": "11517830765",
@@ -2959,6 +3743,8 @@
         "sReportedExactAge": "24",
         "sEducation": "4",
         "sEthnicity": "3",
+        "sPersonality_Grit": "3",
+        "sCovid": "0",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -2967,7 +3753,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "1",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "63",
+        "sPersonality_Conscientiousness": "56",
+        "sPersonality_Extraversion": "6",
+        "sPersonality_Agreeableness": "52",
+        "sPersonality_Neuroticism": "83",
+        "sPersonality_IsInvalid": "0"
     },
     "11517830331": {
         "sRespondentID": "11517830331",
@@ -2989,6 +3781,8 @@
         "sReportedExactAge": "26",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.2",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -2997,7 +3791,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "98",
+        "sPersonality_Conscientiousness": "62",
+        "sPersonality_Extraversion": "56",
+        "sPersonality_Agreeableness": "71",
+        "sPersonality_Neuroticism": "37",
+        "sPersonality_IsInvalid": "0"
     },
     "11517830265": {
         "sRespondentID": "11517830265",
@@ -3019,6 +3819,8 @@
         "sReportedExactAge": "26",
         "sEducation": "4",
         "sEthnicity": "2",
+        "sPersonality_Grit": "5",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -3027,7 +3829,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "96",
+        "sPersonality_Conscientiousness": "98",
+        "sPersonality_Extraversion": "79",
+        "sPersonality_Agreeableness": "90",
+        "sPersonality_Neuroticism": "2",
+        "sPersonality_IsInvalid": "0"
     },
     "11517829897": {
         "sRespondentID": "11517829897",
@@ -3049,6 +3857,8 @@
         "sReportedExactAge": "23",
         "sEducation": "5",
         "sEthnicity": "2",
+        "sPersonality_Grit": "3.7",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -3057,7 +3867,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "56",
+        "sPersonality_Conscientiousness": "69",
+        "sPersonality_Extraversion": "35",
+        "sPersonality_Agreeableness": "63",
+        "sPersonality_Neuroticism": "44",
+        "sPersonality_IsInvalid": "0"
     },
     "11517829361": {
         "sRespondentID": "11517829361",
@@ -3079,6 +3895,8 @@
         "sReportedExactAge": "22",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.8",
+        "sCovid": "3",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -3087,7 +3905,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "73",
+        "sPersonality_Conscientiousness": "85",
+        "sPersonality_Extraversion": "60",
+        "sPersonality_Agreeableness": "54",
+        "sPersonality_Neuroticism": "50",
+        "sPersonality_IsInvalid": "0"
     },
     "11517827809": {
         "sRespondentID": "11517827809",
@@ -3109,6 +3933,8 @@
         "sReportedExactAge": "20",
         "sEducation": "5",
         "sEthnicity": "3",
+        "sPersonality_Grit": "4.3",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -3117,7 +3943,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "1",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "77",
+        "sPersonality_Conscientiousness": "71",
+        "sPersonality_Extraversion": "81",
+        "sPersonality_Agreeableness": "81",
+        "sPersonality_Neuroticism": "29",
+        "sPersonality_IsInvalid": "0"
     },
     "11517827234": {
         "sRespondentID": "11517827234",
@@ -3139,6 +3971,8 @@
         "sReportedExactAge": "26",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.5",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -3147,7 +3981,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "73",
+        "sPersonality_Conscientiousness": "71",
+        "sPersonality_Extraversion": "17",
+        "sPersonality_Agreeableness": "77",
+        "sPersonality_Neuroticism": "27",
+        "sPersonality_IsInvalid": "0"
     },
     "11517826622": {
         "sRespondentID": "11517826622",
@@ -3169,6 +4009,8 @@
         "sReportedExactAge": "25",
         "sEducation": "3",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.2",
+        "sCovid": "0",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -3177,7 +4019,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "48",
+        "sPersonality_Conscientiousness": "46",
+        "sPersonality_Extraversion": "35",
+        "sPersonality_Agreeableness": "50",
+        "sPersonality_Neuroticism": "65",
+        "sPersonality_IsInvalid": "0"
     },
     "11517824720": {
         "sRespondentID": "11517824720",
@@ -3199,6 +4047,8 @@
         "sReportedExactAge": "24",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.1",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -3207,7 +4057,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "50",
+        "sPersonality_Conscientiousness": "54",
+        "sPersonality_Extraversion": "35",
+        "sPersonality_Agreeableness": "56",
+        "sPersonality_Neuroticism": "53",
+        "sPersonality_IsInvalid": "0"
     },
     "11517824587": {
         "sRespondentID": "11517824587",
@@ -3229,6 +4085,8 @@
         "sReportedExactAge": "25",
         "sEducation": "7",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.9",
+        "sCovid": "1",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -3237,7 +4095,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "96",
+        "sPersonality_Conscientiousness": "69",
+        "sPersonality_Extraversion": "37.5",
+        "sPersonality_Agreeableness": "73",
+        "sPersonality_Neuroticism": "58",
+        "sPersonality_IsInvalid": "0"
     },
     "11517824106": {
         "sRespondentID": "11517824106",
@@ -3259,6 +4123,8 @@
         "sReportedExactAge": "26",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.1",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -3267,7 +4133,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "75",
+        "sPersonality_Conscientiousness": "69",
+        "sPersonality_Extraversion": "29",
+        "sPersonality_Agreeableness": "56",
+        "sPersonality_Neuroticism": "74",
+        "sPersonality_IsInvalid": "0"
     },
     "11517823147": {
         "sRespondentID": "11517823147",
@@ -3289,6 +4161,8 @@
         "sReportedExactAge": "22",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.2",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -3297,7 +4171,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "65",
+        "sPersonality_Conscientiousness": "44",
+        "sPersonality_Extraversion": "42",
+        "sPersonality_Agreeableness": "62.5",
+        "sPersonality_Neuroticism": "58",
+        "sPersonality_IsInvalid": "0"
     },
     "11517822949": {
         "sRespondentID": "11517822949",
@@ -3319,6 +4199,8 @@
         "sReportedExactAge": "25",
         "sEducation": "4",
         "sEthnicity": "2",
+        "sPersonality_Grit": "2.2",
+        "sCovid": "0",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -3327,7 +4209,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "42",
+        "sPersonality_Conscientiousness": "60",
+        "sPersonality_Extraversion": "6",
+        "sPersonality_Agreeableness": "58",
+        "sPersonality_Neuroticism": "58",
+        "sPersonality_IsInvalid": "0"
     },
     "11517822062": {
         "sRespondentID": "11517822062",
@@ -3349,6 +4237,8 @@
         "sReportedExactAge": "25",
         "sEducation": "7",
         "sEthnicity": "2",
+        "sPersonality_Grit": "4.09",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -3357,7 +4247,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "65",
+        "sPersonality_Conscientiousness": "71",
+        "sPersonality_Extraversion": "44",
+        "sPersonality_Agreeableness": "65",
+        "sPersonality_Neuroticism": "29",
+        "sPersonality_IsInvalid": "0"
     },
     "11517724952": {
         "sRespondentID": "11517724952",
@@ -3379,6 +4275,8 @@
         "sReportedExactAge": "25",
         "sEducation": "5",
         "sEthnicity": "2",
+        "sPersonality_Grit": "4.5",
+        "sCovid": "3",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -3387,7 +4285,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "69",
+        "sPersonality_Conscientiousness": "73",
+        "sPersonality_Extraversion": "69",
+        "sPersonality_Agreeableness": "56",
+        "sPersonality_Neuroticism": "35",
+        "sPersonality_IsInvalid": "0"
     },
     "11516751847": {
         "sRespondentID": "11516751847",
@@ -3409,6 +4313,8 @@
         "sReportedExactAge": "28",
         "sEducation": "3",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.8",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -3417,7 +4323,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "87",
+        "sPersonality_Conscientiousness": "56",
+        "sPersonality_Extraversion": "19",
+        "sPersonality_Agreeableness": "81",
+        "sPersonality_Neuroticism": "48",
+        "sPersonality_IsInvalid": "0"
     },
     "11516614588": {
         "sRespondentID": "11516614588",
@@ -3439,6 +4351,8 @@
         "sReportedExactAge": "29",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.1",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -3447,7 +4361,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "56",
+        "sPersonality_Conscientiousness": "75",
+        "sPersonality_Extraversion": "17",
+        "sPersonality_Agreeableness": "79",
+        "sPersonality_Neuroticism": "42",
+        "sPersonality_IsInvalid": "0"
     },
     "11516601294": {
         "sRespondentID": "11516601294",
@@ -3469,6 +4389,8 @@
         "sReportedExactAge": "26",
         "sEducation": "5",
         "sEthnicity": "2",
+        "sPersonality_Grit": "3.1",
+        "sCovid": "5",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -3477,7 +4399,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "27",
+        "sPersonality_Conscientiousness": "23",
+        "sPersonality_Extraversion": "31",
+        "sPersonality_Agreeableness": "29",
+        "sPersonality_Neuroticism": "71",
+        "sPersonality_IsInvalid": "0"
     },
     "11516585571": {
         "sRespondentID": "11516585571",
@@ -3499,6 +4427,8 @@
         "sReportedExactAge": "32",
         "sEducation": "4",
         "sEthnicity": "4",
+        "sPersonality_Grit": "3.2",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -3507,7 +4437,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "38",
+        "sPersonality_Conscientiousness": "63",
+        "sPersonality_Extraversion": "4",
+        "sPersonality_Agreeableness": "60",
+        "sPersonality_Neuroticism": "52",
+        "sPersonality_IsInvalid": "0"
     },
     "11516578900": {
         "sRespondentID": "11516578900",
@@ -3529,6 +4465,8 @@
         "sReportedExactAge": "43",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.29",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -3537,7 +4475,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "1",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "90",
+        "sPersonality_Conscientiousness": "33",
+        "sPersonality_Extraversion": "8",
+        "sPersonality_Agreeableness": "71",
+        "sPersonality_Neuroticism": "79",
+        "sPersonality_IsInvalid": "0"
     },
     "11516573039": {
         "sRespondentID": "11516573039",
@@ -3559,6 +4503,8 @@
         "sReportedExactAge": "35",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.2",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -3567,7 +4513,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "35",
+        "sPersonality_Conscientiousness": "83",
+        "sPersonality_Extraversion": "27",
+        "sPersonality_Agreeableness": "67",
+        "sPersonality_Neuroticism": "46",
+        "sPersonality_IsInvalid": "0"
     },
     "11516570501": {
         "sRespondentID": "11516570501",
@@ -3589,6 +4541,8 @@
         "sReportedExactAge": "34",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.7",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "1",
@@ -3597,7 +4551,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "96",
+        "sPersonality_Conscientiousness": "79",
+        "sPersonality_Extraversion": "58",
+        "sPersonality_Agreeableness": "77",
+        "sPersonality_Neuroticism": "23",
+        "sPersonality_IsInvalid": "0"
     },
     "11516563908": {
         "sRespondentID": "11516563908",
@@ -3619,6 +4579,8 @@
         "sReportedExactAge": "56",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.4",
+        "sCovid": "5",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -3627,7 +4589,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "75",
+        "sPersonality_Conscientiousness": "48",
+        "sPersonality_Extraversion": "10",
+        "sPersonality_Agreeableness": "62.5",
+        "sPersonality_Neuroticism": "10",
+        "sPersonality_IsInvalid": "0"
     },
     "11516563864": {
         "sRespondentID": "11516563864",
@@ -3649,6 +4617,8 @@
         "sReportedExactAge": "26",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.4",
+        "sCovid": "3",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -3657,7 +4627,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "88",
+        "sPersonality_Conscientiousness": "50",
+        "sPersonality_Extraversion": "88",
+        "sPersonality_Agreeableness": "46",
+        "sPersonality_Neuroticism": "67",
+        "sPersonality_IsInvalid": "0"
     },
     "11516560079": {
         "sRespondentID": "11516560079",
@@ -3679,6 +4655,8 @@
         "sReportedExactAge": "37",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.7",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -3687,7 +4665,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "79",
+        "sPersonality_Conscientiousness": "94",
+        "sPersonality_Extraversion": "42",
+        "sPersonality_Agreeableness": "21",
+        "sPersonality_Neuroticism": "31",
+        "sPersonality_IsInvalid": "0"
     },
     "11516558572": {
         "sRespondentID": "11516558572",
@@ -3709,6 +4693,8 @@
         "sReportedExactAge": "18",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "1.9",
+        "sCovid": "1",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -3717,7 +4703,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "73",
+        "sPersonality_Conscientiousness": "19",
+        "sPersonality_Extraversion": "87",
+        "sPersonality_Agreeableness": "60",
+        "sPersonality_Neuroticism": "67",
+        "sPersonality_IsInvalid": "0"
     },
     "11516556671": {
         "sRespondentID": "11516556671",
@@ -3739,6 +4731,8 @@
         "sReportedExactAge": "38",
         "sEducation": "5",
         "sEthnicity": "4",
+        "sPersonality_Grit": "2.9",
+        "sCovid": "4",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -3747,7 +4741,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "50",
+        "sPersonality_Conscientiousness": "58",
+        "sPersonality_Extraversion": "58",
+        "sPersonality_Agreeableness": "52",
+        "sPersonality_Neuroticism": "46",
+        "sPersonality_IsInvalid": "0"
     },
     "11516552178": {
         "sRespondentID": "11516552178",
@@ -3769,6 +4769,8 @@
         "sReportedExactAge": "31",
         "sEducation": "3",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.8",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -3777,7 +4779,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "87.5",
+        "sPersonality_Conscientiousness": "67",
+        "sPersonality_Extraversion": "48",
+        "sPersonality_Agreeableness": "62.5",
+        "sPersonality_Neuroticism": "42",
+        "sPersonality_IsInvalid": "0"
     },
     "11516549013": {
         "sRespondentID": "11516549013",
@@ -3799,6 +4807,8 @@
         "sReportedExactAge": "51",
         "sEducation": "5",
         "sEthnicity": "4",
+        "sPersonality_Grit": "3.9",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -3807,7 +4817,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "73",
+        "sPersonality_Conscientiousness": "75",
+        "sPersonality_Extraversion": "44",
+        "sPersonality_Agreeableness": "60",
+        "sPersonality_Neuroticism": "50",
+        "sPersonality_IsInvalid": "0"
     },
     "11516546740": {
         "sRespondentID": "11516546740",
@@ -3829,6 +4845,8 @@
         "sReportedExactAge": "48",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "5",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -3837,7 +4855,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "",
+        "sPersonality_Conscientiousness": "",
+        "sPersonality_Extraversion": "",
+        "sPersonality_Agreeableness": "",
+        "sPersonality_Neuroticism": "",
+        "sPersonality_IsInvalid": "1"
     },
     "11516545939": {
         "sRespondentID": "11516545939",
@@ -3859,6 +4883,8 @@
         "sReportedExactAge": "28",
         "sEducation": "3",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.5",
+        "sCovid": "1",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -3867,7 +4893,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "42",
+        "sPersonality_Conscientiousness": "67",
+        "sPersonality_Extraversion": "29",
+        "sPersonality_Agreeableness": "87.5",
+        "sPersonality_Neuroticism": "42",
+        "sPersonality_IsInvalid": "0"
     },
     "11516543668": {
         "sRespondentID": "11516543668",
@@ -3889,15 +4921,24 @@
         "sReportedExactAge": "56",
         "sEducation": "5",
         "sEthnicity": "5",
-        "sIsReportedMale": "0",
-        "sIsReportedFemale": "1",
-        "sIsReportedNonbinary": "0",
+        "sPersonality_Grit": "4",
+        "sCovid": "40",
+        "sIsReportedMale": "3",
+        "sIsReportedFemale": "0",
+        "sIsReportedNonbinary": "1",
         "sIsUnreportedGender": "0",
         "sIsReportedIncomePreferNotDisclose": "0",
-        "sIsManager": "1",
-        "sIsUnemployed": "0",
+        "sIsManager": "0",
+        "sIsUnemployed": "1",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "1",
+        "sPersonality_Conscientiousness": "96",
+        "sPersonality_Extraversion": "75",
+        "sPersonality_Agreeableness": "54",
+        "sPersonality_Neuroticism": "90",
+        "sPersonality_IsInvalid": "25",
+        "undefined": "0"
     },
     "11516542696": {
         "sRespondentID": "11516542696",
@@ -3919,6 +4960,8 @@
         "sReportedExactAge": "56",
         "sEducation": "6",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.7",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -3927,7 +4970,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "",
+        "sPersonality_Conscientiousness": "",
+        "sPersonality_Extraversion": "",
+        "sPersonality_Agreeableness": "",
+        "sPersonality_Neuroticism": "",
+        "sPersonality_IsInvalid": "1"
     },
     "11516541737": {
         "sRespondentID": "11516541737",
@@ -3949,6 +4998,8 @@
         "sReportedExactAge": "56",
         "sEducation": "3",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.5",
+        "sCovid": "4",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -3957,7 +5008,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "65",
+        "sPersonality_Conscientiousness": "77",
+        "sPersonality_Extraversion": "56",
+        "sPersonality_Agreeableness": "75",
+        "sPersonality_Neuroticism": "35",
+        "sPersonality_IsInvalid": "0"
     },
     "11516539919": {
         "sRespondentID": "11516539919",
@@ -3979,6 +5036,8 @@
         "sReportedExactAge": "29",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.6",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -3987,7 +5046,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "50",
+        "sPersonality_Conscientiousness": "37.5",
+        "sPersonality_Extraversion": "35",
+        "sPersonality_Agreeableness": "75",
+        "sPersonality_Neuroticism": "75",
+        "sPersonality_IsInvalid": "0"
     },
     "11516535618": {
         "sRespondentID": "11516535618",
@@ -4009,6 +5074,8 @@
         "sReportedExactAge": "34",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.2",
+        "sCovid": "1",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -4017,7 +5084,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "50",
+        "sPersonality_Conscientiousness": "69",
+        "sPersonality_Extraversion": "79",
+        "sPersonality_Agreeableness": "83",
+        "sPersonality_Neuroticism": "6",
+        "sPersonality_IsInvalid": "0"
     },
     "11516533308": {
         "sRespondentID": "11516533308",
@@ -4039,6 +5112,8 @@
         "sReportedExactAge": "59",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.5",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -4047,7 +5122,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "1",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "96",
+        "sPersonality_Conscientiousness": "92",
+        "sPersonality_Extraversion": "27",
+        "sPersonality_Agreeableness": "87.5",
+        "sPersonality_Neuroticism": "44",
+        "sPersonality_IsInvalid": "0"
     },
     "11516533154": {
         "sRespondentID": "11516533154",
@@ -4069,6 +5150,8 @@
         "sReportedExactAge": "33",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.7",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -4077,7 +5160,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "100",
+        "sPersonality_Conscientiousness": "58",
+        "sPersonality_Extraversion": "73",
+        "sPersonality_Agreeableness": "71",
+        "sPersonality_Neuroticism": "23",
+        "sPersonality_IsInvalid": "0"
     },
     "11516533098": {
         "sRespondentID": "11516533098",
@@ -4099,6 +5188,8 @@
         "sReportedExactAge": "39",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "5",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -4107,7 +5198,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "69",
+        "sPersonality_Conscientiousness": "100",
+        "sPersonality_Extraversion": "25",
+        "sPersonality_Agreeableness": "90",
+        "sPersonality_Neuroticism": "0",
+        "sPersonality_IsInvalid": "0"
     },
     "11516531796": {
         "sRespondentID": "11516531796",
@@ -4129,6 +5226,8 @@
         "sReportedExactAge": "39",
         "sEducation": "5",
         "sEthnicity": "4",
+        "sPersonality_Grit": "3.3",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -4137,7 +5236,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "25",
+        "sPersonality_Conscientiousness": "75",
+        "sPersonality_Extraversion": "12",
+        "sPersonality_Agreeableness": "44",
+        "sPersonality_Neuroticism": "29",
+        "sPersonality_IsInvalid": "0"
     },
     "11516531005": {
         "sRespondentID": "11516531005",
@@ -4159,6 +5264,8 @@
         "sReportedExactAge": "33",
         "sEducation": "3",
         "sEthnicity": "3",
+        "sPersonality_Grit": "2.8",
+        "sCovid": "0",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -4167,7 +5274,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "60",
+        "sPersonality_Conscientiousness": "52",
+        "sPersonality_Extraversion": "0",
+        "sPersonality_Agreeableness": "36",
+        "sPersonality_Neuroticism": "79",
+        "sPersonality_IsInvalid": "0"
     },
     "11516530910": {
         "sRespondentID": "11516530910",
@@ -4189,6 +5302,8 @@
         "sReportedExactAge": "62",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.2",
+        "sCovid": "0",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -4197,7 +5312,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "75",
+        "sPersonality_Conscientiousness": "73",
+        "sPersonality_Extraversion": "48",
+        "sPersonality_Agreeableness": "81",
+        "sPersonality_Neuroticism": "12.5",
+        "sPersonality_IsInvalid": "0"
     },
     "11516528767": {
         "sRespondentID": "11516528767",
@@ -4219,6 +5340,8 @@
         "sReportedExactAge": "47",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.2",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -4227,7 +5350,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "19",
+        "sPersonality_Conscientiousness": "90",
+        "sPersonality_Extraversion": "27",
+        "sPersonality_Agreeableness": "81",
+        "sPersonality_Neuroticism": "10",
+        "sPersonality_IsInvalid": "0"
     },
     "11516527150": {
         "sRespondentID": "11516527150",
@@ -4249,6 +5378,8 @@
         "sReportedExactAge": "41",
         "sEducation": "5",
         "sEthnicity": "6",
+        "sPersonality_Grit": "3.7",
+        "sCovid": "1",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -4257,7 +5388,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "88",
+        "sPersonality_Conscientiousness": "65",
+        "sPersonality_Extraversion": "19",
+        "sPersonality_Agreeableness": "69",
+        "sPersonality_Neuroticism": "69",
+        "sPersonality_IsInvalid": "0"
     },
     "11516526995": {
         "sRespondentID": "11516526995",
@@ -4279,6 +5416,8 @@
         "sReportedExactAge": "31",
         "sEducation": "5",
         "sEthnicity": "2",
+        "sPersonality_Grit": "3.8",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -4287,7 +5426,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "56",
+        "sPersonality_Conscientiousness": "77",
+        "sPersonality_Extraversion": "4",
+        "sPersonality_Agreeableness": "88",
+        "sPersonality_Neuroticism": "65",
+        "sPersonality_IsInvalid": "0"
     },
     "11516526937": {
         "sRespondentID": "11516526937",
@@ -4309,6 +5454,8 @@
         "sReportedExactAge": "52",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.4",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -4317,7 +5464,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "73",
+        "sPersonality_Conscientiousness": "67",
+        "sPersonality_Extraversion": "10",
+        "sPersonality_Agreeableness": "69",
+        "sPersonality_Neuroticism": "44",
+        "sPersonality_IsInvalid": "0"
     },
     "11516526514": {
         "sRespondentID": "11516526514",
@@ -4339,6 +5492,8 @@
         "sReportedExactAge": "30",
         "sEducation": "7",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.5",
+        "sCovid": "3",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -4347,7 +5502,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "98",
+        "sPersonality_Conscientiousness": "87.5",
+        "sPersonality_Extraversion": "65",
+        "sPersonality_Agreeableness": "69",
+        "sPersonality_Neuroticism": "8",
+        "sPersonality_IsInvalid": "0"
     },
     "11516525525": {
         "sRespondentID": "11516525525",
@@ -4369,6 +5530,8 @@
         "sReportedExactAge": "27",
         "sEducation": "2",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.5",
+        "sCovid": "0",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -4377,7 +5540,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "58",
+        "sPersonality_Conscientiousness": "44",
+        "sPersonality_Extraversion": "40",
+        "sPersonality_Agreeableness": "31",
+        "sPersonality_Neuroticism": "58",
+        "sPersonality_IsInvalid": "0"
     },
     "11516525378": {
         "sRespondentID": "11516525378",
@@ -4399,6 +5568,8 @@
         "sReportedExactAge": "39",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.8",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -4407,7 +5578,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "46",
+        "sPersonality_Conscientiousness": "65",
+        "sPersonality_Extraversion": "52",
+        "sPersonality_Agreeableness": "44",
+        "sPersonality_Neuroticism": "56",
+        "sPersonality_IsInvalid": "0"
     },
     "11516523828": {
         "sRespondentID": "11516523828",
@@ -4429,6 +5606,8 @@
         "sReportedExactAge": "32",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.4",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -4437,7 +5616,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "83",
+        "sPersonality_Conscientiousness": "48",
+        "sPersonality_Extraversion": "4",
+        "sPersonality_Agreeableness": "62",
+        "sPersonality_Neuroticism": "62",
+        "sPersonality_IsInvalid": "0"
     },
     "11516523477": {
         "sRespondentID": "11516523477",
@@ -4459,6 +5644,8 @@
         "sReportedExactAge": "33",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.9",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -4467,7 +5654,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "13",
+        "sPersonality_Conscientiousness": "92",
+        "sPersonality_Extraversion": "10",
+        "sPersonality_Agreeableness": "65",
+        "sPersonality_Neuroticism": "79",
+        "sPersonality_IsInvalid": "0"
     },
     "11516514324": {
         "sRespondentID": "11516514324",
@@ -4489,6 +5682,8 @@
         "sReportedExactAge": "37",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.3",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -4497,7 +5692,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "98",
+        "sPersonality_Conscientiousness": "92",
+        "sPersonality_Extraversion": "33",
+        "sPersonality_Agreeableness": "65",
+        "sPersonality_Neuroticism": "42",
+        "sPersonality_IsInvalid": "0"
     },
     "11516506413": {
         "sRespondentID": "11516506413",
@@ -4519,6 +5720,8 @@
         "sReportedExactAge": "35",
         "sEducation": "7",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.12",
+        "sCovid": "1",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -4527,7 +5730,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "73",
+        "sPersonality_Conscientiousness": "83",
+        "sPersonality_Extraversion": "79",
+        "sPersonality_Agreeableness": "73",
+        "sPersonality_Neuroticism": "8",
+        "sPersonality_IsInvalid": "0"
     },
     "11516502720": {
         "sRespondentID": "11516502720",
@@ -4549,6 +5758,8 @@
         "sReportedExactAge": "25",
         "sEducation": "5",
         "sEthnicity": "6",
+        "sPersonality_Grit": "2.83",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -4557,7 +5768,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "73",
+        "sPersonality_Conscientiousness": "53",
+        "sPersonality_Extraversion": "52",
+        "sPersonality_Agreeableness": "69",
+        "sPersonality_Neuroticism": "55",
+        "sPersonality_IsInvalid": "0"
     },
     "11516502118": {
         "sRespondentID": "11516502118",
@@ -4579,6 +5796,8 @@
         "sReportedExactAge": "39",
         "sEducation": "4",
         "sEthnicity": "4",
+        "sPersonality_Grit": "3.6",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -4587,7 +5806,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "67",
+        "sPersonality_Conscientiousness": "54",
+        "sPersonality_Extraversion": "54",
+        "sPersonality_Agreeableness": "52",
+        "sPersonality_Neuroticism": "56",
+        "sPersonality_IsInvalid": "0"
     },
     "11516500599": {
         "sRespondentID": "11516500599",
@@ -4609,6 +5834,8 @@
         "sReportedExactAge": "51",
         "sEducation": "7",
         "sEthnicity": "5",
+        "sPersonality_Grit": "1.9",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -4617,7 +5844,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "33",
+        "sPersonality_Conscientiousness": "46",
+        "sPersonality_Extraversion": "0",
+        "sPersonality_Agreeableness": "44",
+        "sPersonality_Neuroticism": "79",
+        "sPersonality_IsInvalid": "0"
     },
     "11516498388": {
         "sRespondentID": "11516498388",
@@ -4639,6 +5872,8 @@
         "sReportedExactAge": "46",
         "sEducation": "4",
         "sEthnicity": "3",
+        "sPersonality_Grit": "5",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -4647,7 +5882,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "100",
+        "sPersonality_Conscientiousness": "98",
+        "sPersonality_Extraversion": "87.5",
+        "sPersonality_Agreeableness": "77",
+        "sPersonality_Neuroticism": "4",
+        "sPersonality_IsInvalid": "0"
     },
     "11516497220": {
         "sRespondentID": "11516497220",
@@ -4669,6 +5910,8 @@
         "sReportedExactAge": "51",
         "sEducation": "8",
         "sEthnicity": "3",
+        "sPersonality_Grit": "4.59",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -4677,7 +5920,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "96",
+        "sPersonality_Conscientiousness": "100",
+        "sPersonality_Extraversion": "58",
+        "sPersonality_Agreeableness": "94",
+        "sPersonality_Neuroticism": "2",
+        "sPersonality_IsInvalid": "0"
     },
     "11516492891": {
         "sRespondentID": "11516492891",
@@ -4699,6 +5948,8 @@
         "sReportedExactAge": "35",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4",
+        "sCovid": "3",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -4707,7 +5958,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "1",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "44",
+        "sPersonality_Conscientiousness": "83",
+        "sPersonality_Extraversion": "67",
+        "sPersonality_Agreeableness": "73",
+        "sPersonality_Neuroticism": "12.5",
+        "sPersonality_IsInvalid": "0"
     },
     "11516491453": {
         "sRespondentID": "11516491453",
@@ -4729,6 +5986,8 @@
         "sReportedExactAge": "39",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.7",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -4737,7 +5996,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "54",
+        "sPersonality_Conscientiousness": "60",
+        "sPersonality_Extraversion": "31",
+        "sPersonality_Agreeableness": "75",
+        "sPersonality_Neuroticism": "42",
+        "sPersonality_IsInvalid": "0"
     },
     "11516489898": {
         "sRespondentID": "11516489898",
@@ -4759,6 +6024,8 @@
         "sReportedExactAge": "32",
         "sEducation": "3",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.09",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -4767,7 +6034,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "88",
+        "sPersonality_Conscientiousness": "75",
+        "sPersonality_Extraversion": "25",
+        "sPersonality_Agreeableness": "77",
+        "sPersonality_Neuroticism": "40",
+        "sPersonality_IsInvalid": "0"
     },
     "11516489430": {
         "sRespondentID": "11516489430",
@@ -4789,6 +6062,8 @@
         "sReportedExactAge": "31",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.4",
+        "sCovid": "1",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -4797,7 +6072,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "83",
+        "sPersonality_Conscientiousness": "90",
+        "sPersonality_Extraversion": "85",
+        "sPersonality_Agreeableness": "65",
+        "sPersonality_Neuroticism": "0",
+        "sPersonality_IsInvalid": "0"
     },
     "11516488236": {
         "sRespondentID": "11516488236",
@@ -4819,6 +6100,8 @@
         "sReportedExactAge": "39",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "5",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -4827,7 +6110,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "77",
+        "sPersonality_Conscientiousness": "85",
+        "sPersonality_Extraversion": "77",
+        "sPersonality_Agreeableness": "94",
+        "sPersonality_Neuroticism": "0",
+        "sPersonality_IsInvalid": "0"
     },
     "11516486576": {
         "sRespondentID": "11516486576",
@@ -4849,6 +6138,8 @@
         "sReportedExactAge": "71",
         "sEducation": "2",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.4",
+        "sCovid": "1",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -4857,7 +6148,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "1",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "17",
+        "sPersonality_Conscientiousness": "60",
+        "sPersonality_Extraversion": "62",
+        "sPersonality_Agreeableness": "81",
+        "sPersonality_Neuroticism": "15",
+        "sPersonality_IsInvalid": "0"
     },
     "11516486356": {
         "sRespondentID": "11516486356",
@@ -4879,6 +6176,8 @@
         "sReportedExactAge": "44",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.8",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -4887,7 +6186,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "100",
+        "sPersonality_Conscientiousness": "92",
+        "sPersonality_Extraversion": "79",
+        "sPersonality_Agreeableness": "92",
+        "sPersonality_Neuroticism": "23",
+        "sPersonality_IsInvalid": "0"
     },
     "11516485887": {
         "sRespondentID": "11516485887",
@@ -4909,6 +6214,8 @@
         "sReportedExactAge": "31",
         "sEducation": "5",
         "sEthnicity": "4",
+        "sPersonality_Grit": "4.09",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -4917,7 +6224,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "92",
+        "sPersonality_Conscientiousness": "77",
+        "sPersonality_Extraversion": "31",
+        "sPersonality_Agreeableness": "92",
+        "sPersonality_Neuroticism": "35",
+        "sPersonality_IsInvalid": "0"
     },
     "11516485417": {
         "sRespondentID": "11516485417",
@@ -4939,6 +6252,8 @@
         "sReportedExactAge": "36",
         "sEducation": "4",
         "sEthnicity": "2",
+        "sPersonality_Grit": "2.29",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -4947,7 +6262,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "60",
+        "sPersonality_Conscientiousness": "42",
+        "sPersonality_Extraversion": "2",
+        "sPersonality_Agreeableness": "60",
+        "sPersonality_Neuroticism": "90",
+        "sPersonality_IsInvalid": "0"
     },
     "11516482020": {
         "sRespondentID": "11516482020",
@@ -4969,6 +6290,8 @@
         "sReportedExactAge": "38",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.7",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -4977,7 +6300,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "77",
+        "sPersonality_Conscientiousness": "75",
+        "sPersonality_Extraversion": "42",
+        "sPersonality_Agreeableness": "67",
+        "sPersonality_Neuroticism": "6",
+        "sPersonality_IsInvalid": "0"
     },
     "11516481439": {
         "sRespondentID": "11516481439",
@@ -4999,6 +6328,8 @@
         "sReportedExactAge": "57",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.8",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -5007,7 +6338,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "65",
+        "sPersonality_Conscientiousness": "85",
+        "sPersonality_Extraversion": "85",
+        "sPersonality_Agreeableness": "73",
+        "sPersonality_Neuroticism": "12",
+        "sPersonality_IsInvalid": "0"
     },
     "11516480386": {
         "sRespondentID": "11516480386",
@@ -5029,6 +6366,8 @@
         "sReportedExactAge": "59",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.7",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -5037,7 +6376,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "62.5",
+        "sPersonality_Conscientiousness": "96",
+        "sPersonality_Extraversion": "42",
+        "sPersonality_Agreeableness": "90",
+        "sPersonality_Neuroticism": "23",
+        "sPersonality_IsInvalid": "0"
     },
     "11516479611": {
         "sRespondentID": "11516479611",
@@ -5059,6 +6404,8 @@
         "sReportedExactAge": "39",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.7",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -5067,7 +6414,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "81",
+        "sPersonality_Conscientiousness": "88",
+        "sPersonality_Extraversion": "54",
+        "sPersonality_Agreeableness": "73",
+        "sPersonality_Neuroticism": "6",
+        "sPersonality_IsInvalid": "0"
     },
     "11516479568": {
         "sRespondentID": "11516479568",
@@ -5089,6 +6442,8 @@
         "sReportedExactAge": "56",
         "sEducation": "6",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.5",
+        "sCovid": "3",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -5097,7 +6452,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "90",
+        "sPersonality_Conscientiousness": "81",
+        "sPersonality_Extraversion": "42",
+        "sPersonality_Agreeableness": "94",
+        "sPersonality_Neuroticism": "27",
+        "sPersonality_IsInvalid": "0"
     },
     "11516479343": {
         "sRespondentID": "11516479343",
@@ -5119,6 +6480,8 @@
         "sReportedExactAge": "48",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.9",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -5127,7 +6490,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "73",
+        "sPersonality_Conscientiousness": "42",
+        "sPersonality_Extraversion": "10",
+        "sPersonality_Agreeableness": "71",
+        "sPersonality_Neuroticism": "44",
+        "sPersonality_IsInvalid": "0"
     },
     "11516476074": {
         "sRespondentID": "11516476074",
@@ -5149,6 +6518,8 @@
         "sReportedExactAge": "38",
         "sEducation": "3",
         "sEthnicity": "5",
+        "sPersonality_Grit": "5",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -5157,7 +6528,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "44",
+        "sPersonality_Conscientiousness": "100",
+        "sPersonality_Extraversion": "15",
+        "sPersonality_Agreeableness": "44",
+        "sPersonality_Neuroticism": "6",
+        "sPersonality_IsInvalid": "0"
     },
     "11516476025": {
         "sRespondentID": "11516476025",
@@ -5179,6 +6556,8 @@
         "sReportedExactAge": "51",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.9",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -5187,7 +6566,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "81",
+        "sPersonality_Conscientiousness": "58",
+        "sPersonality_Extraversion": "27",
+        "sPersonality_Agreeableness": "46",
+        "sPersonality_Neuroticism": "71",
+        "sPersonality_IsInvalid": "0"
     },
     "11516475536": {
         "sRespondentID": "11516475536",
@@ -5209,6 +6594,8 @@
         "sReportedExactAge": "33",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.7",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -5217,7 +6604,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "",
+        "sPersonality_Conscientiousness": "",
+        "sPersonality_Extraversion": "",
+        "sPersonality_Agreeableness": "",
+        "sPersonality_Neuroticism": "",
+        "sPersonality_IsInvalid": "1"
     },
     "11516474538": {
         "sRespondentID": "11516474538",
@@ -5239,6 +6632,8 @@
         "sReportedExactAge": "37",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.9",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -5247,7 +6642,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "96",
+        "sPersonality_Conscientiousness": "56",
+        "sPersonality_Extraversion": "94",
+        "sPersonality_Agreeableness": "33",
+        "sPersonality_Neuroticism": "15",
+        "sPersonality_IsInvalid": "0"
     },
     "11516472895": {
         "sRespondentID": "11516472895",
@@ -5269,6 +6670,8 @@
         "sReportedExactAge": "34",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.4",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -5277,7 +6680,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "85",
+        "sPersonality_Conscientiousness": "60",
+        "sPersonality_Extraversion": "12.5",
+        "sPersonality_Agreeableness": "73",
+        "sPersonality_Neuroticism": "71",
+        "sPersonality_IsInvalid": "0"
     },
     "11516470349": {
         "sRespondentID": "11516470349",
@@ -5299,6 +6708,8 @@
         "sReportedExactAge": "27",
         "sEducation": "5",
         "sEthnicity": "2",
+        "sPersonality_Grit": "3",
+        "sCovid": "5",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -5307,7 +6718,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "52",
+        "sPersonality_Conscientiousness": "65",
+        "sPersonality_Extraversion": "60",
+        "sPersonality_Agreeableness": "60",
+        "sPersonality_Neuroticism": "54",
+        "sPersonality_IsInvalid": "0"
     },
     "11516468790": {
         "sRespondentID": "11516468790",
@@ -5329,6 +6746,8 @@
         "sReportedExactAge": "39",
         "sEducation": "4",
         "sEthnicity": "3",
+        "sPersonality_Grit": "4",
+        "sCovid": "3",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -5337,7 +6756,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "83",
+        "sPersonality_Conscientiousness": "69",
+        "sPersonality_Extraversion": "42",
+        "sPersonality_Agreeableness": "87.5",
+        "sPersonality_Neuroticism": "19",
+        "sPersonality_IsInvalid": "0"
     },
     "11516468772": {
         "sRespondentID": "11516468772",
@@ -5359,6 +6784,8 @@
         "sReportedExactAge": "59",
         "sEducation": "5",
         "sEthnicity": "2",
+        "sPersonality_Grit": "4.7",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -5367,7 +6794,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "",
+        "sPersonality_Conscientiousness": "",
+        "sPersonality_Extraversion": "",
+        "sPersonality_Agreeableness": "",
+        "sPersonality_Neuroticism": "",
+        "sPersonality_IsInvalid": "1"
     },
     "11516466184": {
         "sRespondentID": "11516466184",
@@ -5389,6 +6822,8 @@
         "sReportedExactAge": "69",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.9",
+        "sCovid": "3",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -5397,7 +6832,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "1",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "92",
+        "sPersonality_Conscientiousness": "81",
+        "sPersonality_Extraversion": "62.5",
+        "sPersonality_Agreeableness": "87.5",
+        "sPersonality_Neuroticism": "12.5",
+        "sPersonality_IsInvalid": "0"
     },
     "11516464767": {
         "sRespondentID": "11516464767",
@@ -5419,6 +6860,8 @@
         "sReportedExactAge": "36",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.8",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -5427,7 +6870,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "100",
+        "sPersonality_Conscientiousness": "81",
+        "sPersonality_Extraversion": "10",
+        "sPersonality_Agreeableness": "96",
+        "sPersonality_Neuroticism": "75",
+        "sPersonality_IsInvalid": "0"
     },
     "11516463537": {
         "sRespondentID": "11516463537",
@@ -5449,6 +6898,8 @@
         "sReportedExactAge": "40",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.5",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -5457,7 +6908,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "79",
+        "sPersonality_Conscientiousness": "56",
+        "sPersonality_Extraversion": "69",
+        "sPersonality_Agreeableness": "65",
+        "sPersonality_Neuroticism": "29",
+        "sPersonality_IsInvalid": "0"
     },
     "11516462558": {
         "sRespondentID": "11516462558",
@@ -5479,6 +6936,8 @@
         "sReportedExactAge": "39",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.9",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -5487,7 +6946,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "69",
+        "sPersonality_Conscientiousness": "65",
+        "sPersonality_Extraversion": "6",
+        "sPersonality_Agreeableness": "81",
+        "sPersonality_Neuroticism": "62.5",
+        "sPersonality_IsInvalid": "0"
     },
     "11516462270": {
         "sRespondentID": "11516462270",
@@ -5509,6 +6974,8 @@
         "sReportedExactAge": "39",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.9",
+        "sCovid": "4",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -5517,7 +6984,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "77",
+        "sPersonality_Conscientiousness": "83",
+        "sPersonality_Extraversion": "35",
+        "sPersonality_Agreeableness": "90",
+        "sPersonality_Neuroticism": "27",
+        "sPersonality_IsInvalid": "0"
     },
     "11516462234": {
         "sRespondentID": "11516462234",
@@ -5539,6 +7012,8 @@
         "sReportedExactAge": "52",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.4",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -5547,7 +7022,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "96",
+        "sPersonality_Conscientiousness": "98",
+        "sPersonality_Extraversion": "67",
+        "sPersonality_Agreeableness": "83",
+        "sPersonality_Neuroticism": "2",
+        "sPersonality_IsInvalid": "0"
     },
     "11516462159": {
         "sRespondentID": "11516462159",
@@ -5569,6 +7050,8 @@
         "sReportedExactAge": "38",
         "sEducation": "7",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.54",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -5577,7 +7060,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "85",
+        "sPersonality_Conscientiousness": "67",
+        "sPersonality_Extraversion": "72",
+        "sPersonality_Agreeableness": "76",
+        "sPersonality_Neuroticism": "46",
+        "sPersonality_IsInvalid": "0"
     },
     "11516461507": {
         "sRespondentID": "11516461507",
@@ -5599,6 +7088,8 @@
         "sReportedExactAge": "33",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "1.8",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -5607,7 +7098,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "63",
+        "sPersonality_Conscientiousness": "46",
+        "sPersonality_Extraversion": "15",
+        "sPersonality_Agreeableness": "35",
+        "sPersonality_Neuroticism": "85",
+        "sPersonality_IsInvalid": "0"
     },
     "11516460624": {
         "sRespondentID": "11516460624",
@@ -5629,6 +7126,8 @@
         "sReportedExactAge": "61",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.2",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -5637,7 +7136,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "81",
+        "sPersonality_Conscientiousness": "71",
+        "sPersonality_Extraversion": "35",
+        "sPersonality_Agreeableness": "65",
+        "sPersonality_Neuroticism": "23",
+        "sPersonality_IsInvalid": "0"
     },
     "11516459965": {
         "sRespondentID": "11516459965",
@@ -5659,6 +7164,8 @@
         "sReportedExactAge": "38",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.4",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -5667,7 +7174,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "94",
+        "sPersonality_Conscientiousness": "65",
+        "sPersonality_Extraversion": "10",
+        "sPersonality_Agreeableness": "98",
+        "sPersonality_Neuroticism": "8",
+        "sPersonality_IsInvalid": "0"
     },
     "11516459826": {
         "sRespondentID": "11516459826",
@@ -5689,6 +7202,8 @@
         "sReportedExactAge": "30",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.2",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -5697,7 +7212,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "77",
+        "sPersonality_Conscientiousness": "44",
+        "sPersonality_Extraversion": "31",
+        "sPersonality_Agreeableness": "15",
+        "sPersonality_Neuroticism": "60",
+        "sPersonality_IsInvalid": "0"
     },
     "11516459519": {
         "sRespondentID": "11516459519",
@@ -5719,6 +7240,8 @@
         "sReportedExactAge": "50",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.7",
+        "sCovid": "3",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -5727,7 +7250,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "79",
+        "sPersonality_Conscientiousness": "81",
+        "sPersonality_Extraversion": "73",
+        "sPersonality_Agreeableness": "81",
+        "sPersonality_Neuroticism": "17",
+        "sPersonality_IsInvalid": "0"
     },
     "11516458532": {
         "sRespondentID": "11516458532",
@@ -5749,6 +7278,8 @@
         "sReportedExactAge": "41",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.1",
+        "sCovid": "1",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -5757,7 +7288,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "56",
+        "sPersonality_Conscientiousness": "90",
+        "sPersonality_Extraversion": "69",
+        "sPersonality_Agreeableness": "35",
+        "sPersonality_Neuroticism": "71",
+        "sPersonality_IsInvalid": "0"
     },
     "11516458247": {
         "sRespondentID": "11516458247",
@@ -5779,6 +7316,8 @@
         "sReportedExactAge": "52",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.4",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -5787,7 +7326,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "62",
+        "sPersonality_Conscientiousness": "79",
+        "sPersonality_Extraversion": "85",
+        "sPersonality_Agreeableness": "77",
+        "sPersonality_Neuroticism": "2",
+        "sPersonality_IsInvalid": "0"
     },
     "11516458154": {
         "sRespondentID": "11516458154",
@@ -5809,6 +7354,8 @@
         "sReportedExactAge": "37",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -5817,7 +7364,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "29",
+        "sPersonality_Conscientiousness": "46",
+        "sPersonality_Extraversion": "0",
+        "sPersonality_Agreeableness": "54",
+        "sPersonality_Neuroticism": "94",
+        "sPersonality_IsInvalid": "0"
     },
     "11516456673": {
         "sRespondentID": "11516456673",
@@ -5839,6 +7392,8 @@
         "sReportedExactAge": "36",
         "sEducation": "7",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.7",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -5847,7 +7402,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "90",
+        "sPersonality_Conscientiousness": "96",
+        "sPersonality_Extraversion": "100",
+        "sPersonality_Agreeableness": "90",
+        "sPersonality_Neuroticism": "0",
+        "sPersonality_IsInvalid": "0"
     },
     "11516456203": {
         "sRespondentID": "11516456203",
@@ -5869,6 +7430,8 @@
         "sReportedExactAge": "35",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.6",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -5877,7 +7440,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "69",
+        "sPersonality_Conscientiousness": "67",
+        "sPersonality_Extraversion": "2",
+        "sPersonality_Agreeableness": "75",
+        "sPersonality_Neuroticism": "88",
+        "sPersonality_IsInvalid": "0"
     },
     "11516454845": {
         "sRespondentID": "11516454845",
@@ -5899,6 +7468,8 @@
         "sReportedExactAge": "27",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.3",
+        "sCovid": "0",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -5907,7 +7478,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "77",
+        "sPersonality_Conscientiousness": "87.5",
+        "sPersonality_Extraversion": "15",
+        "sPersonality_Agreeableness": "69",
+        "sPersonality_Neuroticism": "10",
+        "sPersonality_IsInvalid": "0"
     },
     "11516452925": {
         "sRespondentID": "11516452925",
@@ -5929,6 +7506,8 @@
         "sReportedExactAge": "53",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.1",
+        "sCovid": "5",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -5937,7 +7516,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "",
+        "sPersonality_Conscientiousness": "",
+        "sPersonality_Extraversion": "",
+        "sPersonality_Agreeableness": "",
+        "sPersonality_Neuroticism": "",
+        "sPersonality_IsInvalid": "1"
     },
     "11516451693": {
         "sRespondentID": "11516451693",
@@ -5959,6 +7544,8 @@
         "sReportedExactAge": "33",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.9",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -5967,7 +7554,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "75",
+        "sPersonality_Conscientiousness": "46",
+        "sPersonality_Extraversion": "4",
+        "sPersonality_Agreeableness": "87.5",
+        "sPersonality_Neuroticism": "40",
+        "sPersonality_IsInvalid": "0"
     },
     "11516451676": {
         "sRespondentID": "11516451676",
@@ -5989,6 +7582,8 @@
         "sReportedExactAge": "55",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.1",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -5997,7 +7592,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "56",
+        "sPersonality_Conscientiousness": "77",
+        "sPersonality_Extraversion": "37.5",
+        "sPersonality_Agreeableness": "71",
+        "sPersonality_Neuroticism": "69",
+        "sPersonality_IsInvalid": "0"
     },
     "11516451547": {
         "sRespondentID": "11516451547",
@@ -6019,6 +7620,8 @@
         "sReportedExactAge": "47",
         "sEducation": "7",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -6027,7 +7630,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "71",
+        "sPersonality_Conscientiousness": "71",
+        "sPersonality_Extraversion": "25",
+        "sPersonality_Agreeableness": "67",
+        "sPersonality_Neuroticism": "67",
+        "sPersonality_IsInvalid": "0"
     },
     "11516448644": {
         "sRespondentID": "11516448644",
@@ -6049,6 +7658,8 @@
         "sReportedExactAge": "60",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.6",
+        "sCovid": "3",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -6057,7 +7668,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "79",
+        "sPersonality_Conscientiousness": "69",
+        "sPersonality_Extraversion": "56",
+        "sPersonality_Agreeableness": "79",
+        "sPersonality_Neuroticism": "17",
+        "sPersonality_IsInvalid": "0"
     },
     "11516448562": {
         "sRespondentID": "11516448562",
@@ -6079,6 +7696,8 @@
         "sReportedExactAge": "48",
         "sEducation": "7",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.8",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -6087,7 +7706,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "60",
+        "sPersonality_Conscientiousness": "83",
+        "sPersonality_Extraversion": "77",
+        "sPersonality_Agreeableness": "67",
+        "sPersonality_Neuroticism": "27",
+        "sPersonality_IsInvalid": "0"
     },
     "11516448291": {
         "sRespondentID": "11516448291",
@@ -6109,6 +7734,8 @@
         "sReportedExactAge": "43",
         "sEducation": "3",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3",
+        "sCovid": "3",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -6117,7 +7744,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "81",
+        "sPersonality_Conscientiousness": "85",
+        "sPersonality_Extraversion": "52",
+        "sPersonality_Agreeableness": "56",
+        "sPersonality_Neuroticism": "56",
+        "sPersonality_IsInvalid": "0"
     },
     "11516447019": {
         "sRespondentID": "11516447019",
@@ -6139,6 +7772,8 @@
         "sReportedExactAge": "36",
         "sEducation": "5",
         "sEthnicity": "2",
+        "sPersonality_Grit": "4.4",
+        "sCovid": "1",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -6147,7 +7782,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "73",
+        "sPersonality_Conscientiousness": "60",
+        "sPersonality_Extraversion": "48",
+        "sPersonality_Agreeableness": "52",
+        "sPersonality_Neuroticism": "8",
+        "sPersonality_IsInvalid": "0"
     },
     "11516446680": {
         "sRespondentID": "11516446680",
@@ -6169,6 +7810,8 @@
         "sReportedExactAge": "39",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.7",
+        "sCovid": "4",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -6177,7 +7820,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "1",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "71",
+        "sPersonality_Conscientiousness": "73",
+        "sPersonality_Extraversion": "0",
+        "sPersonality_Agreeableness": "79",
+        "sPersonality_Neuroticism": "46",
+        "sPersonality_IsInvalid": "0"
     },
     "11516446527": {
         "sRespondentID": "11516446527",
@@ -6199,6 +7848,8 @@
         "sReportedExactAge": "54",
         "sEducation": "1",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4",
+        "sCovid": "1",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -6207,7 +7858,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "69",
+        "sPersonality_Conscientiousness": "40",
+        "sPersonality_Extraversion": "8",
+        "sPersonality_Agreeableness": "83",
+        "sPersonality_Neuroticism": "12.5",
+        "sPersonality_IsInvalid": "0"
     },
     "11516445762": {
         "sRespondentID": "11516445762",
@@ -6229,6 +7886,8 @@
         "sReportedExactAge": "45",
         "sEducation": "3",
         "sEthnicity": "5",
+        "sPersonality_Grit": "5",
+        "sCovid": "1",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -6237,7 +7896,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "1",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "67",
+        "sPersonality_Conscientiousness": "100",
+        "sPersonality_Extraversion": "60",
+        "sPersonality_Agreeableness": "65",
+        "sPersonality_Neuroticism": "0",
+        "sPersonality_IsInvalid": "0"
     },
     "11516445109": {
         "sRespondentID": "11516445109",
@@ -6259,6 +7924,8 @@
         "sReportedExactAge": "27",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.4",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -6267,7 +7934,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "100",
+        "sPersonality_Conscientiousness": "67",
+        "sPersonality_Extraversion": "50",
+        "sPersonality_Agreeableness": "50",
+        "sPersonality_Neuroticism": "12.5",
+        "sPersonality_IsInvalid": "0"
     },
     "11516445039": {
         "sRespondentID": "11516445039",
@@ -6289,6 +7962,8 @@
         "sReportedExactAge": "50",
         "sEducation": "3",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.7",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -6297,7 +7972,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "85",
+        "sPersonality_Conscientiousness": "75",
+        "sPersonality_Extraversion": "50",
+        "sPersonality_Agreeableness": "73",
+        "sPersonality_Neuroticism": "21",
+        "sPersonality_IsInvalid": "0"
     },
     "11516444909": {
         "sRespondentID": "11516444909",
@@ -6319,6 +8000,8 @@
         "sReportedExactAge": "36",
         "sEducation": "4",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.9",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -6327,7 +8010,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "67",
+        "sPersonality_Conscientiousness": "83",
+        "sPersonality_Extraversion": "92",
+        "sPersonality_Agreeableness": "67",
+        "sPersonality_Neuroticism": "27",
+        "sPersonality_IsInvalid": "0"
     },
     "11516443686": {
         "sRespondentID": "11516443686",
@@ -6349,6 +8038,8 @@
         "sReportedExactAge": "36",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.3",
+        "sCovid": "2",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -6357,7 +8048,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "81",
+        "sPersonality_Conscientiousness": "73",
+        "sPersonality_Extraversion": "4",
+        "sPersonality_Agreeableness": "77",
+        "sPersonality_Neuroticism": "98",
+        "sPersonality_IsInvalid": "0"
     },
     "11516443372": {
         "sRespondentID": "11516443372",
@@ -6379,6 +8076,8 @@
         "sReportedExactAge": "43",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "4.8",
+        "sCovid": "4",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -6387,7 +8086,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "71",
+        "sPersonality_Conscientiousness": "100",
+        "sPersonality_Extraversion": "75",
+        "sPersonality_Agreeableness": "92",
+        "sPersonality_Neuroticism": "8",
+        "sPersonality_IsInvalid": "0"
     },
     "11516443227": {
         "sRespondentID": "11516443227",
@@ -6409,6 +8114,8 @@
         "sReportedExactAge": "36",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3",
+        "sCovid": "2",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -6417,7 +8124,13 @@
         "sIsManager": "1",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "79",
+        "sPersonality_Conscientiousness": "52",
+        "sPersonality_Extraversion": "65",
+        "sPersonality_Agreeableness": "67",
+        "sPersonality_Neuroticism": "44",
+        "sPersonality_IsInvalid": "0"
     },
     "11516442981": {
         "sRespondentID": "11516442981",
@@ -6439,6 +8152,8 @@
         "sReportedExactAge": "31",
         "sEducation": "3",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.1",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -6447,7 +8162,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "69",
+        "sPersonality_Conscientiousness": "77",
+        "sPersonality_Extraversion": "33",
+        "sPersonality_Agreeableness": "58",
+        "sPersonality_Neuroticism": "31",
+        "sPersonality_IsInvalid": "0"
     },
     "11516442683": {
         "sRespondentID": "11516442683",
@@ -6469,6 +8190,8 @@
         "sReportedExactAge": "35",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "3.9",
+        "sCovid": "3",
         "sIsReportedMale": "0",
         "sIsReportedFemale": "1",
         "sIsReportedNonbinary": "0",
@@ -6477,7 +8200,13 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "0",
-        "sIsFemale": "1"
+        "sIsFemale": "1",
+        "sPersonality_Openness": "44",
+        "sPersonality_Conscientiousness": "87",
+        "sPersonality_Extraversion": "4",
+        "sPersonality_Agreeableness": "73",
+        "sPersonality_Neuroticism": "75",
+        "sPersonality_IsInvalid": "0"
     },
     "11516442389": {
         "sRespondentID": "11516442389",
@@ -6499,6 +8228,8 @@
         "sReportedExactAge": "41",
         "sEducation": "5",
         "sEthnicity": "5",
+        "sPersonality_Grit": "2.2",
+        "sCovid": "3",
         "sIsReportedMale": "1",
         "sIsReportedFemale": "0",
         "sIsReportedNonbinary": "0",
@@ -6507,6 +8238,12 @@
         "sIsManager": "0",
         "sIsUnemployed": "0",
         "sIsMale": "1",
-        "sIsFemale": "0"
+        "sIsFemale": "0",
+        "sPersonality_Openness": "29",
+        "sPersonality_Conscientiousness": "46",
+        "sPersonality_Extraversion": "54",
+        "sPersonality_Agreeableness": "79",
+        "sPersonality_Neuroticism": "46",
+        "sPersonality_IsInvalid": "0"
     }
 }
