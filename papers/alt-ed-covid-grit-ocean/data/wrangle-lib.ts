@@ -3,7 +3,7 @@
 export let arroCaches = [];
 
 // ref: https://stackoverflow.com/questions/1293147/javascript-code-to-parse-csv-data
-export function CSVToArray(strData: string, strDelimiter?: string) {
+export function CSVToArray(strData: string, strDelimiter?: string): string[][] {
   strDelimiter = strDelimiter || ",";
 
   var objPattern = new RegExp(
