@@ -1,4 +1,8 @@
-import { ColumnDefinition, fBooleanize } from "./wrangle-lib";
+import {
+  booleanizeCell,
+  booleanizeColumn,
+  ColumnDefinition,
+} from "./wrangle-lib";
 
 export const columnDefinitions: ColumnDefinition[] = [
   {
@@ -110,27 +114,27 @@ export const columnDefinitions: ColumnDefinition[] = [
   {
     bExactMatch: true,
     sMatcher: "Have you heard of any of the following online course providers?",
-    farroTransformer: fBooleanize,
+    farroTransformer: booleanizeColumn,
     sOutputColumnName: "HeardOfUdacity",
   },
   {
     sMatcher: "course providers?-2",
-    farroTransformer: fBooleanize,
+    farroTransformer: booleanizeColumn,
     sOutputColumnName: "HeardOfUdemy",
   },
   {
     sMatcher: "course providers?-3",
-    farroTransformer: fBooleanize,
+    farroTransformer: booleanizeColumn,
     sOutputColumnName: "HeardOfCoursera",
   },
   {
     sMatcher: "course providers?-4",
-    farroTransformer: fBooleanize,
+    farroTransformer: booleanizeColumn,
     sOutputColumnName: "HeardOfPluralsight",
   },
   {
     sMatcher: "course providers?-5",
-    farroTransformer: fBooleanize,
+    farroTransformer: booleanizeColumn,
     sOutputColumnName: "HeardOfLynda",
   },
   {
@@ -432,5 +436,101 @@ export const columnDefinitions: ColumnDefinition[] = [
   {
     bGeneratedColumn: true,
     sOutputColumnName: "IsFemale",
+  },
+  {
+    arrsGeneratedChildMatchers: [
+      "Personality_Openness",
+      "Personality_Conscientiousness",
+      "Personality_Extraversion",
+      "Personality_Agreeableness",
+      "Personality_Neuroticism",
+      "Personality_IsInvalid",
+    ],
+    bTransientColumn: true,
+    farroTransformer: function (sCellValue, oTransformer, columnDefinitions) {
+      const oTransformerOpenness = columnDefinitions.find(
+        (oTransformer) =>
+          oTransformer.sOutputColumnName === "Personality_Openness"
+      );
+      const oTransformerConscientiousness = columnDefinitions.find(
+        (oTransformer) =>
+          oTransformer.sOutputColumnName === "Personality_Conscientiousness"
+      );
+      const oTransformerExtraversion = columnDefinitions.find(
+        (oTransformer) =>
+          oTransformer.sOutputColumnName === "Personality_Extraversion"
+      );
+      const oTransformerAgreeableness = columnDefinitions.find(
+        (oTransformer) =>
+          oTransformer.sOutputColumnName === "Personality_Agreeableness"
+      );
+      const oTransformerNeuroticism = columnDefinitions.find(
+        (oTransformer) =>
+          oTransformer.sOutputColumnName === "Personality_Neuroticism"
+      );
+      const oTransformerIsInvalid = columnDefinitions.find(
+        (oTransformer) =>
+          oTransformer.sOutputColumnName === "Personality_IsInvalid"
+      );
+
+      const parsedPersonality = sCellValue?.split(",").map((s) => s?.trim());
+      const isInvalid =
+        parsedPersonality &&
+        (parsedPersonality.length < 5 || isNaN(parseInt(parsedPersonality[0])));
+
+      return [
+        Object.assign({}, oTransformerOpenness, {
+          value: !isInvalid && parsedPersonality[0],
+        }),
+        Object.assign({}, oTransformerConscientiousness, {
+          value: !isInvalid && parsedPersonality[1],
+        }),
+        Object.assign({}, oTransformerExtraversion, {
+          value: !isInvalid && parsedPersonality[2],
+        }),
+        Object.assign({}, oTransformerAgreeableness, {
+          value: !isInvalid && parsedPersonality[3],
+        }),
+        Object.assign({}, oTransformerNeuroticism, {
+          value: !isInvalid && parsedPersonality[4],
+        }),
+        booleanizeCell(isInvalid, oTransformerIsInvalid),
+      ];
+    },
+    sMatcher:
+      "free personality survey and enter your percentage results as a rounded number in a comma",
+  },
+  {
+    bGeneratedColumn: true,
+    sOutputColumnName: "Personality_Openness",
+  },
+  {
+    bGeneratedColumn: true,
+    sOutputColumnName: "Personality_Conscientiousness",
+  },
+  {
+    bGeneratedColumn: true,
+    sOutputColumnName: "Personality_Extraversion",
+  },
+  {
+    bGeneratedColumn: true,
+    sOutputColumnName: "Personality_Agreeableness",
+  },
+  {
+    bGeneratedColumn: true,
+    sOutputColumnName: "Personality_Neuroticism",
+  },
+  {
+    bGeneratedColumn: true,
+    sOutputColumnName: "Personality_IsInvalid",
+  },
+  {
+    sMatcher: "free survey on grit and enter your result to two decimal places",
+    sOutputColumnName: "Personality_Grit",
+  },
+  {
+    bExactMatch: true,
+    sMatcher: "To what degree has coronavirus impacted your life?",
+    sOutputColumnName: "Covid",
   },
 ];

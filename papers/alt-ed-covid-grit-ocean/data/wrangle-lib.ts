@@ -150,12 +150,12 @@ function getAllIndexes(arr, f) {
 // TODO: for a particular project, return ProjectObservationSchema[] not any[]
 export interface ColumnTransformerFunction {
   (
-    sCellValue,
-    oTransformer,
-    arroTransformersWithIndex,
-    arrsSurveyResponse,
-    arroAcc
-  ): any[];
+    sCellValue: string,
+    oTransformer: ColumnTransformer,
+    arroTransformersWithIndex: ColumnTransformer[],
+    arrsSurveyResponse: string[],
+    arroAcc: TransformedCell[]
+  ): TransformedCell[];
 }
 
 // TODO: columndefinitions can be string JSON if farroTransformer is extracted seperately.
@@ -173,11 +173,25 @@ export interface ColumnDefinition {
 
 // if a cell value is empty transform it to 0
 // if a cell value is non-empty, transform it to 1
-export function fBooleanize(sCellValue: string, oTransformer: any) {
-  return [Object.assign({}, oTransformer, { value: sCellValue ? 1 : 0 })];
+export function booleanizeColumn(
+  booleanish: string | number | boolean,
+  ct: ColumnTransformer
+): TransformedCell[] {
+  return [booleanizeCell(booleanish, ct)];
+}
+
+export function booleanizeCell(
+  booleanish: string | number | boolean,
+  ct: ColumnTransformer
+): TransformedCell {
+  return Object.assign({}, ct, { value: booleanish ? 1 : 0 });
 }
 
 export interface ColumnTransformer extends ColumnDefinition {
   bMarkedForDeletion?: boolean;
   iColumn: number;
+}
+
+export interface TransformedCell extends ColumnTransformer {
+  value: number | string;
 }

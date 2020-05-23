@@ -4,7 +4,12 @@ import * as path from "path";
 import * as util from "util";
 
 import { columnDefinitions } from "./column-transforms";
-import { CSVToArray, ColumnTransformer, ColumnDefinition } from "./wrangle-lib";
+import {
+  CSVToArray,
+  ColumnTransformer,
+  ColumnDefinition,
+  TransformedCell,
+} from "./wrangle-lib";
 
 const fpReadFile = util.promisify(fs.readFile);
 const fpWriteFile = util.promisify(fs.writeFile);
@@ -120,20 +125,23 @@ const fpWrangleCsv = async (sLocation) => {
   return fpWriteFile(sOutputFileLocation, sOutputFileContent, "utf8");
 };
 
-function fsObservationRowsContent(arrarrsCsvCells, arroTransformersWithIndex) {
+function fsObservationRowsContent(
+  arrarrsCsvCells: string[][],
+  columnTransformers: ColumnTransformer[]
+) {
   return arrarrsCsvCells
     .slice(2, arrarrsCsvCells.length)
     .map((arrsSurveyResponse) => {
-      const arroTransformedCells = arroTransformersWithIndex.reduce(
-        (arroAcc, oTransformer) => {
-          let arroNewDataForThisCell = [];
+      const arroTransformedCells = columnTransformers.reduce(
+        (arroAcc: TransformedCell[], oTransformer) => {
+          let arroNewDataForThisCell: TransformedCell[] = [];
           const sCellValue = arrsSurveyResponse[oTransformer.iColumn];
 
           if (oTransformer.farroTransformer) {
             arroNewDataForThisCell = oTransformer.farroTransformer(
               sCellValue,
               oTransformer,
-              arroTransformersWithIndex,
+              columnTransformers,
               arrsSurveyResponse,
               arroAcc
             );
@@ -157,8 +165,8 @@ function fsObservationRowsContent(arrarrsCsvCells, arroTransformersWithIndex) {
     .join(EOL);
 }
 
-function fsTitleLineContent(arroTransformersWithIndex) {
-  return arroTransformersWithIndex
+function fsTitleLineContent(columnTransformers: ColumnTransformer[]) {
+  return columnTransformers
     .sort((oa, ob) => (oa.iColumn > ob.iColumn ? 1 : -1))
     .filter((oTransformer) => !oTransformer.bTransientColumn)
     .map(
@@ -169,13 +177,11 @@ function fsTitleLineContent(arroTransformersWithIndex) {
 function fsTransformCsvContent(sOriginalFileContent) {
   const arrarrsCsvCells = CSVToArray(sOriginalFileContent);
   const csvWithUpdatedTitleRow = handleBlankTitleCells(arrarrsCsvCells);
-  const arroTransformersWithIndex = fGetColumnTransformers(
-    csvWithUpdatedTitleRow
-  );
+  const columnTransformers = fGetColumnTransformers(csvWithUpdatedTitleRow);
   const sNewFileContent =
-    fsTitleLineContent(arroTransformersWithIndex) +
+    fsTitleLineContent(columnTransformers) +
     EOL +
-    fsObservationRowsContent(arrarrsCsvCells, arroTransformersWithIndex);
+    fsObservationRowsContent(arrarrsCsvCells, columnTransformers);
 
   return sNewFileContent;
 }
