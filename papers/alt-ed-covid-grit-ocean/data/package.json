@@ -5,7 +5,7 @@
   "main": "wrangler.js",
   "scripts": {
     "aspirational-build": "node wrangler && node unwrite-csv --InputRegex=soac --UniqueKey=sRespondentID && node write-csv --InputRegex=soac --UniqueKey=sRespondentID",
-    "build": "ts-node wrangler && ts-node unwrite-csv wrangled-soac-2018-10-10.csv",
+    "build": "ts-node wrangler && ts-node unwrite-csv wrangled-soac-2018-10-10.csv --UniqueKey=sRespondentID",
     "tsc": "tsc"
   },
   "keywords": [
@@ -18,7 +18,7 @@
   "dependencies": {
     "@types/node": "^14.0.4",
     "ella-utils": "1.0.7",
-    "js-beautify": "1.9.0",
+    "js-beautify": "1.11.0",
     "ts-node": "^8.10.1",
     "typescript": "~3.9.3"
   }

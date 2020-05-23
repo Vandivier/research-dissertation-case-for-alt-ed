@@ -1,5 +1,5 @@
 import * as fs from "fs";
-import js_beautify from "js-beautify";
+import { js as beautify } from "js-beautify";
 import * as util from "util";
 
 import {
@@ -11,7 +11,6 @@ import {
 } from "./wrangle-lib";
 
 const arrsOutputFiles = []; // TODO: move to wrangle-lib...currently only 1 at a time is supported
-const beautify = js_beautify.beautify; // TODO: should beautify be included in wrangle lib?
 
 const fpReadFile = util.promisify(fs.readFile);
 const fpWriteFile = util.promisify(fs.writeFile);
@@ -74,7 +73,7 @@ function fpWriteCache(sOutputFileName, oCache) {
 }
 
 function foParseCsvToJson(sUnparsedCsvFile) {
-  const arrarrsParsed = CSVToArray(sUnparsedCsvFile);
+  const arrarrsParsed: string[][] = CSVToArray(sUnparsedCsvFile);
   const arrsTitleLine = arrarrsParsed[0];
   const arrsHungarianizedTitleLine = arrsTitleLine.map(
     fsCreateHungarianNameFromColumnTitleString
