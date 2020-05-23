@@ -160,7 +160,7 @@ export interface ColumnTransformerFunction {
 
 // TODO: columndefinitions can be string JSON if farroTransformer is extracted seperately.
 // TODO: maybe distinctly type transient column definitions (extends ColumnTransformDefinition)
-// eg, sMatcher is required except not for transient column outputs
+// eg, sMatcher is required except not for transient column outputs (bGeneratedColumn)
 export interface ColumnDefinition {
   arrsGeneratedChildMatchers?: string[];
   bExactMatch?: boolean;
@@ -179,5 +179,5 @@ export function fBooleanize(sCellValue: string, oTransformer: any) {
 
 export interface ColumnTransformer extends ColumnDefinition {
   bMarkedForDeletion?: boolean;
-  iColumn?: number;
+  iColumn: number;
 }

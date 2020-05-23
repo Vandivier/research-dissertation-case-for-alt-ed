@@ -6,7 +6,9 @@
   "scripts": {
     "aspirational-build": "node wrangler && node unwrite-csv --InputRegex=soac --UniqueKey=sRespondentID && node write-csv --InputRegex=soac --UniqueKey=sRespondentID",
     "build": "ts-node wrangler && ts-node unwrite-csv       wrangled-soac-2018-10-10.csv       wrangled-soac-2019-03-02.csv       wrangled-soac-2019-11-11.csv       wrangled-soac-2019-11-17.csv       wrangled-soac-2020-01-19.csv       wrangled-soac-2020-05-02-ocean-covid.csv --UniqueKey=sRespondentID",
-    "tsc": "tsc"
+    "debug": "node --inspect-brk server",
+    "tsc": "tsc",
+    "test": "ts-node wrangler && ts-node unwrite-csv       wrangled-soac-2018-10-10.csv --UniqueKey=sRespondentID"
   },
   "keywords": [
     "wrangle",

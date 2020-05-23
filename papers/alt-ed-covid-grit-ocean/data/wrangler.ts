@@ -4,7 +4,7 @@ import * as path from "path";
 import * as util from "util";
 
 import { columnDefinitions } from "./column-transforms";
-import { CSVToArray, ColumnTransformer } from "./wrangle-lib";
+import { CSVToArray, ColumnTransformer, ColumnDefinition } from "./wrangle-lib";
 
 const fpReadFile = util.promisify(fs.readFile);
 const fpWriteFile = util.promisify(fs.writeFile);
@@ -27,44 +27,60 @@ function fGetInputFileLocations() {
     .filter((s) => s && !s.includes(wranglerPrefix));
 }
 
-function fGetColumnTransformers(arrarrsCsvCells): ColumnTransformer[] {
+function fGetColumnTransformers(
+  arrarrsCsvCells: string[][]
+): ColumnTransformer[] {
   let iLargestColumnIndex = 0;
   const arrsFirstRow = arrarrsCsvCells[0];
   // currently arroTransformers is mutated byRef bc bMarkedForDeletion children can come before or after their parent
-  const arroTransformers = JSON.parse(JSON.stringify(columnDefinitions));
+  const arroTransformers: ColumnTransformer[] = JSON.parse(
+    JSON.stringify(columnDefinitions)
+  );
 
   return arroTransformers
-    .reduce((acc, columnDefinition) => {
-      let iColumn = arrsFirstRow.findIndex((sColumnText) =>
-        fiGetMatchingColumn(oTransformer, sColumnText)
-      );
-      const oTransformer: ColumnTransformer = { ...columnDefinition };
+    .reduce(
+      (
+        acc: ColumnTransformer[],
+        columnDefinition: ColumnDefinition,
+        iTransformerIndex
+      ) => {
+        const oTransformer: ColumnTransformer = {
+          ...columnDefinition,
+          iColumn: arrsFirstRow.findIndex((sColumnText) =>
+            fiGetMatchingColumn(columnDefinition, sColumnText)
+          ),
+        };
 
-      if (iColumn !== -1) {
-        oTransformer.iColumn = iColumn;
-        iLargestColumnIndex = Math.max(iLargestColumnIndex, iColumn);
-      }
+        // reinstall farroTransformer dropped during arroTransformers deep clone
+        oTransformer.farroTransformer =
+          columnDefinitions[iTransformerIndex].farroTransformer;
 
-      const bKeepColumn =
-        (Number.isInteger(oTransformer.iColumn) && oTransformer.iColumn > -1) ||
-        oTransformer.bGeneratedColumn;
+        iLargestColumnIndex = Math.max(
+          iLargestColumnIndex,
+          oTransformer.iColumn
+        );
 
-      // if we don't keep a column, don't keep it's generated children either
-      if (oTransformer.arrsGeneratedChildMatchers && !bKeepColumn) {
-        oTransformer.arrsGeneratedChildMatchers.forEach((sMatcher) => {
-          const oRelevantTransformer = arroTransformers.find(
-            (oTransformer) => oTransformer.sOutputColumnName === sMatcher
-          );
-          oRelevantTransformer.bMarkedForDeletion = true;
-        });
-      }
+        const bKeepColumn =
+          oTransformer.iColumn > -1 || oTransformer.bGeneratedColumn;
 
-      if (bKeepColumn && !oTransformer.bMarkedForDeletion) {
-        acc.push(oTransformer);
-      }
+        // if we don't keep a column, don't keep it's generated children either
+        if (oTransformer.arrsGeneratedChildMatchers && !bKeepColumn) {
+          oTransformer.arrsGeneratedChildMatchers.forEach((sMatcher) => {
+            const oRelevantTransformer = arroTransformers.find(
+              (o) => o?.sOutputColumnName === sMatcher
+            );
+            oRelevantTransformer.bMarkedForDeletion = true;
+          });
+        }
 
-      return acc;
-    }, [])
+        if (bKeepColumn && !oTransformer.bMarkedForDeletion) {
+          acc.push(oTransformer);
+        }
+
+        return acc;
+      },
+      []
+    )
     .filter((o) => !o.bMarkedForDeletion)
     .map((oTransformer) => {
       if (oTransformer.bGeneratedColumn) {
@@ -76,7 +92,11 @@ function fGetColumnTransformers(arrarrsCsvCells): ColumnTransformer[] {
     });
 }
 
-function fiGetMatchingColumn(oTransformer, sColumnText) {
+// TODO: maybe allow array of matchers or regex
+function fiGetMatchingColumn(
+  oTransformer: ColumnDefinition,
+  sColumnText: string
+) {
   if (!sColumnText || oTransformer.bGeneratedColumn) return;
 
   if (oTransformer.bExactMatch) {
@@ -177,6 +197,8 @@ function handleBlankTitleCells(csv: string[][]) {
         );
       }
 
+      // TODO: ensure `...statements are true for you?-2`
+      //    has the same meaning across administrations (region, etc, too)
       acc.push(`${lastValidColumnText}-${lastFilledCellIndex}`);
       lastFilledCellIndex++;
     }

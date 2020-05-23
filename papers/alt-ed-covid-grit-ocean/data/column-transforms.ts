@@ -11,7 +11,7 @@ export const columnDefinitions: ColumnDefinition[] = [
     sMatcher: "End Date",
   },
   {
-    arrsGeneratedChildMatchers: ["IsManager", "IsManager"],
+    arrsGeneratedChildMatchers: ["IsManager", "IsUnemployed"],
     bTransientColumn: true,
     sMatcher:
       "Do you contribute to hiring and firing decisions at your company?",
@@ -104,32 +104,32 @@ export const columnDefinitions: ColumnDefinition[] = [
     sOutputColumnName: "FavorAI",
   },
   {
-    sMatcher:
-      "is important to check whether the degree was awarded from a US institution",
+    sMatcher: "was awarded from a US institution",
     sOutputColumnName: "FavorAmerican",
   },
   {
-    sMatcher: "Udacity",
+    bExactMatch: true,
+    sMatcher: "Have you heard of any of the following online course providers?",
     farroTransformer: fBooleanize,
     sOutputColumnName: "HeardOfUdacity",
   },
   {
-    sMatcher: "Udemy",
+    sMatcher: "course providers?-2",
     farroTransformer: fBooleanize,
     sOutputColumnName: "HeardOfUdemy",
   },
   {
-    sMatcher: "Coursera",
+    sMatcher: "course providers?-3",
     farroTransformer: fBooleanize,
     sOutputColumnName: "HeardOfCoursera",
   },
   {
-    sMatcher: "Pluralsight",
+    sMatcher: "course providers?-4",
     farroTransformer: fBooleanize,
     sOutputColumnName: "HeardOfPluralsight",
   },
   {
-    sMatcher: "Lynda.com",
+    sMatcher: "course providers?-5",
     farroTransformer: fBooleanize,
     sOutputColumnName: "HeardOfLynda",
   },
