@@ -3,8 +3,8 @@ import { EOL } from "os";
 import * as path from "path";
 import * as util from "util";
 
-import { arroColumnTransforms } from "./column-transforms";
-import { CSVToArray } from "./wrangle-lib";
+import { columnDefinitions } from "./column-transforms";
+import { CSVToArray, ColumnTransformer } from "./wrangle-lib";
 
 const fpReadFile = util.promisify(fs.readFile);
 const fpWriteFile = util.promisify(fs.writeFile);
@@ -27,33 +27,22 @@ function fGetInputFileLocations() {
     .filter((s) => s && !s.includes(wranglerPrefix));
 }
 
-function fGetTransformersWithIndex(arrarrsCsvCells) {
+function fGetColumnTransformers(arrarrsCsvCells): ColumnTransformer[] {
   let iLargestColumnIndex = 0;
   const arrsFirstRow = arrarrsCsvCells[0];
-  const arrsSecondRow = arrarrsCsvCells[1]; // survey monkey does this thing where the second row is also basically a title row
-  const arroColumnTransformsClone = JSON.parse(
-    JSON.stringify(arroColumnTransforms)
-  ); // clone it so column numbers and other info for one spreadsheet don't propagate across sheets.
+  // currently arroTransformers is mutated byRef bc bMarkedForDeletion children can come before or after their parent
+  const arroTransformers = JSON.parse(JSON.stringify(columnDefinitions));
 
-  return arroColumnTransformsClone
-    .filter((oTransformer, iTransformerIndex) => {
+  return arroTransformers
+    .reduce((acc, columnDefinition) => {
       let iColumn = arrsFirstRow.findIndex((sColumnText) =>
         fiGetMatchingColumn(oTransformer, sColumnText)
       );
-      if (iColumn === -1)
-        iColumn = arrsSecondRow.findIndex((sColumnText) =>
-          fiGetMatchingColumn(oTransformer, sColumnText)
-        );
+      const oTransformer: ColumnTransformer = { ...columnDefinition };
+
       if (iColumn !== -1) {
         oTransformer.iColumn = iColumn;
         iLargestColumnIndex = Math.max(iLargestColumnIndex, iColumn);
-      }
-
-      // reference the transformer function if it exists
-      // this is lost during clone step
-      if (arroColumnTransforms[iTransformerIndex].farroTransformer) {
-        oTransformer.farroTransformer =
-          arroColumnTransforms[iTransformerIndex].farroTransformer;
       }
 
       const bKeepColumn =
@@ -63,16 +52,20 @@ function fGetTransformersWithIndex(arrarrsCsvCells) {
       // if we don't keep a column, don't keep it's generated children either
       if (oTransformer.arrsGeneratedChildMatchers && !bKeepColumn) {
         oTransformer.arrsGeneratedChildMatchers.forEach((sMatcher) => {
-          const oRelevantTransformer = arroColumnTransformsClone.find(
+          const oRelevantTransformer = arroTransformers.find(
             (oTransformer) => oTransformer.sOutputColumnName === sMatcher
           );
           oRelevantTransformer.bMarkedForDeletion = true;
         });
       }
 
-      return bKeepColumn;
-    })
-    .filter((oTransformer) => !oTransformer.bMarkedForDeletion)
+      if (bKeepColumn && !oTransformer.bMarkedForDeletion) {
+        acc.push(oTransformer);
+      }
+
+      return acc;
+    }, [])
+    .filter((o) => !o.bMarkedForDeletion)
     .map((oTransformer) => {
       if (oTransformer.bGeneratedColumn) {
         iLargestColumnIndex++;
@@ -95,11 +88,9 @@ function fiGetMatchingColumn(oTransformer, sColumnText) {
     .includes(oTransformer.sMatcher.toLowerCase());
 }
 
-const fpWrangleSurveyMonkeyFile = async (sLocation) => {
+const fpWrangleCsv = async (sLocation) => {
   const sOriginalFileContent = await fpReadFile(sLocation);
-  const sOutputFileContent = fsTransformSurveyMonkeyCsvContent(
-    sOriginalFileContent
-  );
+  const sOutputFileContent = fsTransformCsvContent(sOriginalFileContent);
   const arrsPath = sLocation.split(path.sep);
   const sOutputFileLocation = path.join(
     __dirname,
@@ -155,9 +146,12 @@ function fsTitleLineContent(arroTransformersWithIndex) {
     );
 }
 
-function fsTransformSurveyMonkeyCsvContent(sOriginalFileContent) {
+function fsTransformCsvContent(sOriginalFileContent) {
   const arrarrsCsvCells = CSVToArray(sOriginalFileContent);
-  const arroTransformersWithIndex = fGetTransformersWithIndex(arrarrsCsvCells);
+  const csvWithUpdatedTitleRow = handleBlankTitleCells(arrarrsCsvCells);
+  const arroTransformersWithIndex = fGetColumnTransformers(
+    csvWithUpdatedTitleRow
+  );
   const sNewFileContent =
     fsTitleLineContent(arroTransformersWithIndex) +
     EOL +
@@ -166,10 +160,35 @@ function fsTransformSurveyMonkeyCsvContent(sOriginalFileContent) {
   return sNewFileContent;
 }
 
+function handleBlankTitleCells(csv: string[][]) {
+  const initialLastFilledCellIndex = 2;
+  let lastValidColumnText = "";
+  let lastFilledCellIndex = initialLastFilledCellIndex;
+
+  const updatedTitleRow = csv[0].reduce((acc, sCellValue) => {
+    if (sCellValue) {
+      acc.push(sCellValue);
+      lastValidColumnText = sCellValue;
+      lastFilledCellIndex = initialLastFilledCellIndex;
+    } else {
+      if (!lastValidColumnText) {
+        throw new Error(
+          "it appears the first column of your spreadsheet has not title. This is not chill."
+        );
+      }
+
+      acc.push(`${lastValidColumnText}-${lastFilledCellIndex}`);
+      lastFilledCellIndex++;
+    }
+
+    return acc;
+  }, []);
+
+  return [updatedTitleRow].concat(csv.slice(1, csv.length));
+}
+
 async function main() {
-  const arrpFileOperations = fGetInputFileLocations().map(
-    fpWrangleSurveyMonkeyFile
-  );
+  const arrpFileOperations = fGetInputFileLocations().map(fpWrangleCsv);
   await Promise.all(arrpFileOperations);
 }
 

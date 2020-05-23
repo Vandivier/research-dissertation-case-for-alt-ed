@@ -1,33 +1,6 @@
-// TODO: for a particular project, return ProjectObservationSchema[] not any[]
-interface ColumnTransformerFunction {
-  (
-    sCellValue,
-    oTransformer,
-    arroTransformersWithIndex,
-    arrsSurveyResponse,
-    arroAcc
-  ): any[];
-}
+import { ColumnDefinition, fBooleanize } from "./wrangle-lib";
 
-// TODO: maybe distinctly type transient column definitions (extends ColumnTransformDefinition)
-// eg, sMatcher is required except not for transient column outputs
-interface ColumnDefinition {
-  arrsGeneratedChildMatchers?: string[];
-  bExactMatch?: boolean;
-  bGeneratedColumn?: boolean;
-  bTransientColumn?: boolean;
-  farroTransformer?: ColumnTransformerFunction;
-  sMatcher?: string;
-  sOutputColumnName?: string;
-}
-
-// if a cell value is empty transform it to 0
-// if a cell value is non-empty, transform it to 1
-function fBooleanize(sCellValue: string, oTransformer: any) {
-  return [Object.assign({}, oTransformer, { value: sCellValue ? 1 : 0 })];
-}
-
-export const arroColumnTransforms: ColumnDefinition[] = [
+export const columnDefinitions: ColumnDefinition[] = [
   {
     sMatcher: "Respondent ID",
   },

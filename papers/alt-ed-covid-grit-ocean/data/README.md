@@ -21,3 +21,8 @@ Steps to produce output from input files:
 ## Miscellaneous
 
 1. ref: https://medium.com/javascript-in-plain-english/typescript-with-node-and-express-js-why-when-and-how-eb6bc73edd5d
+
+## TODO:
+
+1. pre-wrangler script which is specific to surveymonkey. It would:
+   1. collapse first and second rows in surveymonkey-specific way, and maybe prep some of column-transforms.ts
