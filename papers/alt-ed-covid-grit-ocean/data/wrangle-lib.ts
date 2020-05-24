@@ -1,5 +1,9 @@
 // TODO: publish this package & maybe denofy
 
+import fs from "fs";
+import path from "path";
+
+export const wranglerPrefix = "wrangled-";
 export let arroCaches = [];
 
 // ref: https://stackoverflow.com/questions/1293147/javascript-code-to-parse-csv-data
@@ -194,4 +198,24 @@ export interface ColumnTransformer extends ColumnDefinition {
 
 export interface TransformedCell extends ColumnTransformer {
   value: number | string;
+}
+
+// TODO: parameterize data folder so it's not assuming current working dir
+// TODO: script input arg regex to make this more flexible
+export function fGetInputFileLocations(fileTypeSuffix: string) {
+  const sDataFolderPath = path.join(__dirname, ".");
+
+  return fs
+    .readdirSync(sDataFolderPath)
+    .map((sFileName: string) => {
+      const sFilePath = path.join(sDataFolderPath, sFileName);
+
+      if (
+        sFileName.endsWith(fileTypeSuffix) &&
+        sFileName.includes(wranglerPrefix)
+      ) {
+        return sFilePath;
+      }
+    })
+    .filter((s) => s);
 }

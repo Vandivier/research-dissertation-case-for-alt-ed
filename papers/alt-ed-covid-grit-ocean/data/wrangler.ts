@@ -1,36 +1,20 @@
-import * as fs from "fs";
+import fs from "fs";
 import { EOL } from "os";
-import * as path from "path";
-import * as util from "util";
+import path from "path";
+import util from "util";
 
 import { columnDefinitions } from "./column-transforms";
 import {
-  CSVToArray,
-  ColumnTransformer,
   ColumnDefinition,
+  ColumnTransformer,
+  CSVToArray,
+  fGetInputFileLocations,
   TransformedCell,
+  wranglerPrefix,
 } from "./wrangle-lib";
 
 const fpReadFile = util.promisify(fs.readFile);
 const fpWriteFile = util.promisify(fs.writeFile);
-
-const wranglerPrefix = "wrangled-";
-
-// TODO: script input arg regex to make this more flexible
-function fGetInputFileLocations() {
-  const sDataFolderPath = path.join(__dirname, ".");
-
-  return fs
-    .readdirSync(sDataFolderPath)
-    .map((sFileName: string) => {
-      const sFilePath = path.join(sDataFolderPath, sFileName);
-
-      if (sFileName.includes(".csv")) {
-        return sFilePath;
-      }
-    })
-    .filter((s) => s && !s.includes(wranglerPrefix));
-}
 
 function fGetColumnTransformers(
   arrarrsCsvCells: string[][]
@@ -216,7 +200,7 @@ function handleBlankTitleCells(csv: string[][]) {
 }
 
 async function main() {
-  const arrpFileOperations = fGetInputFileLocations().map(fpWrangleCsv);
+  const arrpFileOperations = fGetInputFileLocations(".csv").map(fpWrangleCsv);
   await Promise.all(arrpFileOperations);
 }
 

@@ -1,17 +1,30 @@
-import * as fs from "fs";
+// TODO: output.csv is broken during `npm run build` today
+// TODO: make ordered-output.csv to reduce git noise and gitignore the unordered version.
+
+import utils from "ella-utils";
+import fs from "fs";
 import { EOL } from "os";
-import * as util from "util";
-import * as utils from "ella-utils";
+import util from "util";
 
-import { fNormalizeVariableName, setCaches, fMergeCaches } from "./wrangle-lib";
+import {
+  fGetInputFileLocations,
+  fMergeCaches,
+  fNormalizeVariableName,
+  setCaches,
+} from "./wrangle-lib";
 
-const arrsOutputCsvs = []; // TODO: move to wrangle-lib
+// TODO: move to wrangle-lib
+// TODO: if we want to support csv-to-csv merging and stuff, scope that in another script...this will assume json to csv only
+// TODO: seperate concerns between arrsOutputCsvs and arrsInputCsvs
+const arrsOutputCsvs = [];
+const DEFAULT_OUTPUT_FILE_NAME = "output.csv";
 
 const fpAppendFile = util.promisify(fs.appendFile);
 const fpReadFile = util.promisify(fs.readFile);
 const fpWriteFile = util.promisify(fs.writeFile);
 
 const oOptions = {
+  assumeFileNames: false,
   mergeFiles: false,
   mergeDuplicates: false,
   uniquifyDuplicates: false,
@@ -23,10 +36,20 @@ async function main() {
   fParseOptions();
 
   try {
-    const arrpReadFiles = arrsOutputCsvs.map(async (sFile) => {
-      const sCacheFile = await fpReadFile(sFile + ".json", "utf8");
-      return JSON.parse(sCacheFile);
-    });
+    let arrpReadFiles = [];
+
+    if (oOptions.assumeFileNames) {
+      arrpReadFiles = fGetInputFileLocations(".json").map(async (sFile) => {
+        const sCacheFile = await fpReadFile(sFile, "utf8");
+        return JSON.parse(sCacheFile);
+      });
+    } else {
+      // TODO: ensure one or more explicit input & output files or throw
+      const arrpReadFiles = arrsOutputCsvs.map(async (sFile) => {
+        const sCacheFile = await fpReadFile(sFile + ".json", "utf8");
+        return JSON.parse(sCacheFile);
+      });
+    }
 
     caches = setCaches(await Promise.all(arrpReadFiles));
   } catch (e) {
@@ -37,14 +60,15 @@ async function main() {
     process.exit();
   }
 
-  if (oOptions.mergeFiles) fMergeCaches();
+  if (oOptions.mergeFiles) fMergeCaches(oOptions);
 
   // write caches to csvs
   // TODO: regex to skip some records
   const arrp = caches.map(async (oCache, i) => {
     const oRepresentative = fGetRepresentativeRecord(oCache);
-    const sOutputFileName =
-      caches.length > 1 ? arrsOutputCsvs[i] + ".csv" : "output.csv";
+    let sOutputFileName = oOptions.assumeFileNames
+      ? DEFAULT_OUTPUT_FILE_NAME
+      : arrsOutputCsvs[i] + ".csv";
     const arrTableColumnKeys = Object.keys(oRepresentative);
     const oTitleLine =
       oCache[oOptions.sUniqueKey] || foGetImpliedTitleRecord(oRepresentative);
@@ -108,7 +132,7 @@ function fParseOptions() {
     process.exit();
   }
 
-  if (!arrsOutputCsvs.length) arrsOutputCsvs.push("cache");
+  if (!arrsOutputCsvs.length) oOptions.assumeFileNames = true;
 }
 
 function fGetRepresentativeRecord(oCache) {
