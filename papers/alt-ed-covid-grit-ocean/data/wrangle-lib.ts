@@ -202,7 +202,10 @@ export interface TransformedCell extends ColumnTransformer {
 
 // TODO: parameterize data folder so it's not assuming current working dir
 // TODO: script input arg regex to make this more flexible
-export function fGetInputFileLocations(fileTypeSuffix: string) {
+export function fGetInputFileLocations(
+  fileTypeSuffix: string,
+  useWrangled = true
+) {
   const sDataFolderPath = path.join(__dirname, ".");
 
   return fs
@@ -212,7 +215,8 @@ export function fGetInputFileLocations(fileTypeSuffix: string) {
 
       if (
         sFileName.endsWith(fileTypeSuffix) &&
-        sFileName.includes(wranglerPrefix)
+        ((useWrangled && sFileName.includes(wranglerPrefix)) ||
+          (!useWrangled && !sFileName.includes(wranglerPrefix)))
       ) {
         return sFilePath;
       }

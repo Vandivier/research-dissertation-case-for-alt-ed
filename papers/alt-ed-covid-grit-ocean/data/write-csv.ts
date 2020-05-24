@@ -1,4 +1,3 @@
-// TODO: output.csv is broken during `npm run build` today
 // TODO: make ordered-output.csv to reduce git noise and gitignore the unordered version.
 
 import utils from "ella-utils";
@@ -10,14 +9,15 @@ import {
   fGetInputFileLocations,
   fMergeCaches,
   fNormalizeVariableName,
+  getCaches,
   setCaches,
+  wranglerPrefix,
 } from "./wrangle-lib";
 
-// TODO: move to wrangle-lib
 // TODO: if we want to support csv-to-csv merging and stuff, scope that in another script...this will assume json to csv only
-// TODO: seperate concerns between arrsOutputCsvs and arrsInputCsvs
+// TODO: move to wrangle-lib
 const arrsOutputCsvs = [];
-const DEFAULT_OUTPUT_FILE_NAME = "output.csv";
+const DEFAULT_OUTPUT_FILE_NAME = wranglerPrefix + "write-csv-output.csv";
 
 const fpAppendFile = util.promisify(fs.appendFile);
 const fpReadFile = util.promisify(fs.readFile);
@@ -44,8 +44,7 @@ async function main() {
         return JSON.parse(sCacheFile);
       });
     } else {
-      // TODO: ensure one or more explicit input & output files or throw
-      const arrpReadFiles = arrsOutputCsvs.map(async (sFile) => {
+      arrpReadFiles = arrsOutputCsvs.map(async (sFile) => {
         const sCacheFile = await fpReadFile(sFile + ".json", "utf8");
         return JSON.parse(sCacheFile);
       });
@@ -61,47 +60,7 @@ async function main() {
   }
 
   if (oOptions.mergeFiles) fMergeCaches(oOptions);
-
-  // write caches to csvs
-  // TODO: regex to skip some records
-  const arrp = caches.map(async (oCache, i) => {
-    const oRepresentative = fGetRepresentativeRecord(oCache);
-    let sOutputFileName = oOptions.assumeFileNames
-      ? DEFAULT_OUTPUT_FILE_NAME
-      : arrsOutputCsvs[i] + ".csv";
-    const arrTableColumnKeys = Object.keys(oRepresentative);
-    const oTitleLine =
-      oCache[oOptions.sUniqueKey] || foGetImpliedTitleRecord(oRepresentative);
-    const arroSortedRecords = Object.values(oCache)
-      .filter((o) => fUseRecord(o))
-      .sort((oA, oB) =>
-        oA[oOptions.sUniqueKey] > oB[oOptions.sUniqueKey] ? 1 : -1
-      );
-
-    // wipe output file
-    await fpWriteFile(sOutputFileName, "", "utf8");
-
-    // write title line first
-    return [oTitleLine].concat(arroSortedRecords).map(async (oRecord, i) => {
-      // only write title line as first line (don't write twice)
-      if (oRecord[oOptions.sUniqueKey] === oTitleLine[oOptions.sUniqueKey] && i)
-        return Promise.resolve();
-
-      try {
-        const sCsvRecord = utils.fsRecordToCsvLine(oRecord, arrTableColumnKeys);
-        const oWriteResult = await fpAppendFile(
-          sOutputFileName,
-          sCsvRecord + EOL,
-          "utf8"
-        );
-        return Promise.resolve(oWriteResult);
-      } catch (error) {
-        console.log("error writing record: ", error);
-      }
-    });
-  });
-
-  await Promise.all(arrp);
+  await writeCsv();
 }
 
 // yargs === overengineering
@@ -161,6 +120,46 @@ function foGetImpliedTitleRecord(oRepresentative) {
 // for now we just ensure written records include unique key
 function fUseRecord(o) {
   return o[oOptions.sUniqueKey];
+}
+
+// TODO: regex to skip some records
+function writeCsv(): Promise<any>[] {
+  return getCaches().map(async (oCache, i) => {
+    const oRepresentative = fGetRepresentativeRecord(oCache);
+    let sOutputFileName = oOptions.assumeFileNames
+      ? DEFAULT_OUTPUT_FILE_NAME
+      : arrsOutputCsvs[i] + ".csv";
+    const arrTableColumnKeys = Object.keys(oRepresentative);
+    const oTitleLine =
+      oCache[oOptions.sUniqueKey] || foGetImpliedTitleRecord(oRepresentative);
+    const arroSortedRecords = Object.values(oCache)
+      .filter((o) => fUseRecord(o))
+      .sort((oA, oB) =>
+        oA[oOptions.sUniqueKey] > oB[oOptions.sUniqueKey] ? 1 : -1
+      );
+
+    // wipe output file
+    await fpWriteFile(sOutputFileName, "", "utf8");
+
+    // write title line first
+    return [oTitleLine].concat(arroSortedRecords).map(async (oRecord, i) => {
+      // only write title line as first line (don't write twice)
+      if (oRecord[oOptions.sUniqueKey] === oTitleLine[oOptions.sUniqueKey] && i)
+        return Promise.resolve();
+
+      try {
+        const sCsvRecord = utils.fsRecordToCsvLine(oRecord, arrTableColumnKeys);
+        const oWriteResult = await fpAppendFile(
+          sOutputFileName,
+          sCsvRecord + EOL,
+          "utf8"
+        );
+        return Promise.resolve(oWriteResult);
+      } catch (error) {
+        console.log("error writing record: ", error);
+      }
+    });
+  });
 }
 
 main();

@@ -200,7 +200,9 @@ function handleBlankTitleCells(csv: string[][]) {
 }
 
 async function main() {
-  const arrpFileOperations = fGetInputFileLocations(".csv").map(fpWrangleCsv);
+  const arrpFileOperations = fGetInputFileLocations(".csv", false).map(
+    fpWrangleCsv
+  );
   await Promise.all(arrpFileOperations);
 }
 
