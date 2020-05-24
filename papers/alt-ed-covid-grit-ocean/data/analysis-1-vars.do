@@ -112,7 +112,8 @@ gen ctime1 = date(enddatestatafriendly, "MDY")
 gen ctime2 = ctime1*ctime1
 gen ctime3 = ctime1*ctime1*ctime1
 
-gen completion_x_collector = iscollector*completion
+gen is2018sample = 0
+replace is2018sample = 1 if !missing(nvoifchristianity1) & !missing(csmincome1)
 
 gen logconventionalsoon1 = log(nvoifconventionalsoon1)
 gen logtime = log(ctime1)
@@ -121,8 +122,47 @@ gen logvoi = log(voi)
 gen managertime1 = ismanager*ctime1
 gen managertime2 = managertime1*managertime1
 
-gen is2018sample = 0
-replace is2018sample = 1 if !missing(nvoifchristianity1) & !missing(csmincome1)
+gen personality_open1 = personality_open
+drop personality_openness
+gen personality_open2 = personality_open1*personality_open1
+gen personality_open3 = personality_open1*personality_open1*personality_open1
+
+gen personality_conscientiousness1 = personality_conscientiousness
+drop personality_conscientiousness
+gen personality_conscientiousness2 = personality_conscientiousness1*personality_conscientiousness1
+gen personality_conscientiousness3 = personality_conscientiousness1*personality_conscientiousness1*personality_conscientiousness1
+
+gen personality_extraversion1 = personality_extraversion
+drop personality_extraversion
+gen personality_extraversion2 = personality_extraversion1*personality_extraversion1
+gen personality_extraversion3 = personality_extraversion1*personality_extraversion1*personality_extraversion1
+
+gen personality_agreeableness1 = personality_agreeableness
+drop personality_agreeableness
+gen personality_agreeableness2 = personality_agreeableness1*personality_agreeableness1
+gen personality_agreeableness3 = personality_agreeableness1*personality_agreeableness1*personality_agreeableness1
+
+gen personality_neuroticism1 = personality_neuroticism
+drop personality_neuroticism
+gen personality_neuroticism2 = personality_neuroticism1*personality_neuroticism1
+gen personality_neuroticism3 = personality_neuroticism1*personality_neuroticism1*personality_neuroticism1
+
+gen personality_grit1 = personality_grit
+drop personality_grit
+gen personality_grit2 = personality_grit1*personality_grit1
+gen personality_grit3 = personality_grit1*personality_grit1*personality_grit1
+
+gen completiontimeminutes1 = completiontimeminutes
+drop completiontimeminutes
+gen completiontimeminutes2 = completiontimeminutes1*completiontimeminutes1
+gen completiontimeminutes3 = completiontimeminutes1*completiontimeminutes1*completiontimeminutes1
+gen completiontimeminutes4 = completiontimeminutes1*completiontimeminutes1*completiontimeminutes1*completiontimeminutes1
+
+* // TODO: interact administration with completion
+* // collectors and time may proxy administration
+* // below comment is pseudo code which should be abstract re-implemented in js/ts
+* // gen completion_x_collector = (FOR EACH iscollector)*completion
+* // below is ad-hoc administration detection which can be interacted w
 
 drop collector
 drop educ

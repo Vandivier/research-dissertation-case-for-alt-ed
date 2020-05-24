@@ -1,0 +1,126 @@
+% using Elseveir template per https://www.elsevier.com/authors/author-schemas/latex-instructions
+\documentclass[review]{elsarticle}
+\usepackage{lineno,hyperref}
+\modulolinenumbers[5]
+\journal{Journal of \LaTeX\ Templates}
+\bibliographystyle{elsarticle-num}
+
+\usepackage{booktabs}
+\usepackage{graphicx}
+\graphicspath{{../alt-ed-survey/figures-and-tables}}
+\usepackage{hyperref}
+\usepackage{threeparttable}  
+\usepackage{tikz}
+\usetikzlibrary{calc,matrix}
+
+\begin{document}
+\begin{frontmatter}
+
+    \title{
+        % COVID-19 Effects on Interest in Alternative Postsecondary Learning
+        % calls for papers: Policy Analysis and Management
+        % https://www.journals.elsevier.com/journal-of-public-economics/call-for-papers/call-for-papers-the-public-economics-of-covid-19
+        % https://www.journals.elsevier.com/social-sciences-and-humanities-open/call-for-papers/coronavirus-society-call-for-papers
+        Personality and Ideological Factors of Alternative Learning Favorability
+        % \tnoteref{titlenotes}
+    }
+    % \tnotetext[titlenotes]{
+    %     Go to \url{https://github.com/Vandivier/research-dissertation-case-for-alt-ed/tree/master/papers/alt-ed-survey}
+    %     for additional materials including the online appendix,
+    %     survey data, and data analysis source code.
+    % }
+
+    %% Group authors per affiliation:
+    \author[mymainaddress]{John Vandivier} % \fnref{authorlinefootnote}}
+    \address[mymainaddress]{4400 University Dr, Fairfax, VA 22030}
+    \ead{jvandivi@masonlive.gmu.edu}
+    % \fntext[authorlinefootnote]{
+    %     Vandivier: George Mason University,
+    %     4400 University Dr, Fairfax, VA 22030,
+    %     jvandivi@masonlive.gmu.edu.
+    %     The author acknowledges valuable input from Bryan Caplan at George Mason University.
+    % }
+
+    \begin{abstract}
+        This paper investigates an original data set (n = 217) to understand public
+        and employer disposition toward alternative postsecondary learning.
+        This study builds on the literatures of alternative learning and personality
+        to solve an apparent contradiction where conservatives reject alternative learning.
+        This paper specifically tests whether personality is a solving mechanism.
+        % eg ideologically they support, but when reacting quickly in a survey,
+        % anti-innocation conservative bias dominates
+    \end{abstract}
+
+    \begin{keyword}
+        education economics, alternative education, debt crisis, big 5
+        \MSC[2010] I21, I22, J20 % Unused at AEL: D12, J23, I24, I25, I26
+    \end{keyword}
+
+\end{frontmatter}
+
+\pagebreak
+\linenumbers
+
+\section{Introduction and Description of Data}
+
+% TODO: cite old paper and make the problem to be solved clear
+% excerpt from prior paper commented below:
+% ***
+% Innovation proxies include favorability to artificial
+% intelligence, cryptocurrency, and online education. These factors are
+% cross-correlated with a p-value of less than .001.
+% Respondent favorability to government regulation moves positively with
+% innovation, while religiosity is associated with reduced
+% innovation favorability.
+
+% Status quo bias among conservatives is a common theme in the literature\cite{eidelman2012bias},
+% but it is paradoxical in this situation.
+% Markets facilitate innovation\cite{baumol2002free},
+% so individuals seeking to maintain the status quo ought to disfavor it.
+% Traditional education is heavily regulated,
+% so individuals committed to high levels of regulation ought to disfavor
+% alternatives.
+
+% A Kahneman-like explanation is one resolution.
+% Survey respondents may be thinking fast\cite{kahneman2011thinking}.
+% The preference of some conservatives for the status quo in education becomes explained by
+% risk aversion, lack of openness, and related factors.
+% It may be the case that many of these same individuals would favor alternative
+% credentials when a logical mode of thought is activated.
+% *** end excerpt
+
+\section{Methodology and Model}
+
+We assume indepdence of personality and ideology, along with stability of both over time.
+These assumptions are necessary because multiple regression of both sets of effects cannot be accomplished with the present data set.
+
+We have ideological effects, which I am distinguishing from cultural effects.
+Cultural effects include regional and ethnic effects.
+
+Non-cultural ideological effects include religiosity,
+christianity,
+favorability to regulation,
+favorability to AI (conservatism and anti-innovation bias proxy),
+STEM employment measure (scientism proxy),
+and whether American education is important (nationalist / anti-foreign prox)
+
+then there are personality effects (OCEAN, grit)
+
+then there are standard sociological controls (age, gender, education, income)
+
+\section{Results}
+
+how does this relate to hiring and firing or industry growth trends?
+answer: personality answer: managers tend to have certain personality traits
+do they also tend to have a certain ideology...? idk
+industry growth isn't really effected bc personality is taken as socially stable,
+this info could be relevant for product marketing; some personalities being more friendly to alt education
+however, preliminary analysis indicates these effects are small
+
+\section{Conclusions}
+
+% TODO
+
+\bibliography{./BibFile}
+
+\end{document}

@@ -568,6 +568,15 @@ export const columnDefinitions: ColumnDefinition[] = [
   {
     sMatcher: "free survey on grit and enter your result to two decimal places",
     sOutputColumnName: "Personality_Grit",
+    farroTransformer: function (sCellValue, oTransformer) {
+      const asFloat = parseFloat(sCellValue);
+
+      return [
+        Object.assign({}, oTransformer, {
+          value: asFloat ? asFloat * 100 : "",
+        }),
+      ];
+    },
   },
   {
     bExactMatch: true,

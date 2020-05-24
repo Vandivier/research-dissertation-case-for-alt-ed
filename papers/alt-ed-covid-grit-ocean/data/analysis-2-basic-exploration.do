@@ -1,55 +1,76 @@
-clear
+do "D:\workspace\github\research-dissertation-case-for-alt-ed\papers\alt-ed-covid-grit-ocean\data\analysis-1-vars.do"
 
-do "D:\workspace\github\research-dissertation-case-for-alt-ed\papers\section-127-effects\data\analysis-1-vars.do"
+* // summarize all variables, providing data for summary-data.csv
+* // ssc install fsum, replace */
+* // fsum, stats(n mean sd min p25 p50 p75 max)
 
-* // reg shows if more visas awarded, more people go to college
-* // this is consistent with theory that employers implement degree requirements as an h1b justification
-* // the simple enrollment effect is preferential to public enrollment
-* // totalen is overall more predictable though, which makes sense because tuition info is across all institutions
-* // prefer totalen for enrollment variable
-reg public visa_m_h1b_1
-reg totalen visa_m_h1b_1
-reg public visa_* tuition* year*
-reg totalen visa_* tuition* year*
+* // voi explains about 63% of the general index.
+* // special regression 1
+reg ioi voi
 
-* // kitchen sink regression minus interaction vars that would partial out importance
-* // TODO: maybe revisit kitchen sink approach later with new variables
-reg totalen base* stafford* nominalassistance pce* real* state* tuition* visa_* year*
+* // demonstrate strong cross-correlation within technologies (innovation bias)
+* // prima facie other technologies are weak predictors; we'll see if they are better in the long reg
+reg nvoifonline1 nvoifai1 nvoifcrypto1
 
-* // constrained / v2 analysis kitchen sink below
-reg totalen emp* pce* real* stafford* state* tuition* visa_* year*
-* // below max r2 and ar2
-reg totalen emp* pce* real* stafford* stategi3 stateperm1 tuition* visa_m* year*
-reg totalen emp* pce* real* staffordlimitiscombined stategi3 stateperm1 tuition* visa_m* year*
+* // right wing multiple regression reveals positive, weak association
+* // nationalism is weakly and weirdly associated with pro-alt education; maybe it's conservatism or chance?
+reg voi nvoifamerican1 nvoifchristianity1
 
-* // roi-1
-* // below strong model. It's non-robust though bc removing nom tuition breaks alot.
-* // I think it's a good robustness check to compare with stipulated models but i won't bc i don't want to annoy editor
-* // so, not included in 4 rsoi, so i call it roi-1
-* // swap year3 -> year from prior model without loss of explanatory power and gain simplicity
-* // Note: Anderson-Hsiao adjustment of this model preserves model r-squared while adjustment of roi2 yields an insignificant model
-* // compare to so-called roi2.5 in the same source commit as this comment
-* // also ref EDIT: 5/4/2020 at: https://www.afterecon.com/economics-and-finance/kitchen-sink-regression-and-horse-racing/
-reg totalen emp* pce* real* staffordlimitiscombined stategi3 stateperm1 tuition* visa_m* year
+* // higher economic progressivism / statism / regulatory favorability; low is fiscal conservatism
+* // strong positive correlation exists. why would statists support this? maybe is a personality thing like openness
+* // intial result: counterintuitively, conservatives seem more opposed to alternative credentials; maybe an attitudinal opposition
+* //   theory: conservatives are more pro-free market, but this is outpaced by progressive's pro-innovation
+* //   above theory can be somewhat tested using nationalism and innovation proxies
+reg voi nvoifregulation1
+reg voi nvoifamerican1 nvoifchristianity1 nvoifregulation1
 
-* // roi1: initial stipulated model
-* // changes by analytical stipulation
-* // note: the editors made me do it. I would leave both in by statistical justification
-* // 1) drop tuition_nom and keep tuition_cpi
-* // 2) drop real* and keep employer_a* (equivalent to real_m_all_institution)
-* // 3) only look at h-1b for visa effects
-* // now, employer_x* is insignificant (and a bunch of other factors...)
-reg totalen emp* pce* staffordlimitiscombined stategi3 stateperm1 tuition_cpi visa_m* year
+* // some individuals identified an nonbinary
+* // TODO: a different paper, but it might relate to personality or ideology...
+* // it's like an interestingly powerful negative uncorrected effect...
+count if isreportednonbinary == 1
+reg voi isreportednonbinary
 
-* // new reduction
-reg totalen employer_a* pce* stategi3 stateperm1 tuition_cpi visa_m* year
-reg totalen employer_a* pce2 pce3 stategi3 stateperm1 tuition_cpi visa_m_h1 visa_m_h1b_3 visa_m_non_h1 visa_m_total year
-reg totalen employer_a* pce2 pce3 stateperm1 tuition_cpi visa_m_h1 visa_m_h1b_3 visa_m_non_h1 visa_m_total year
-reg totalen employer_a*1 employer_a*2 pce2 pce3 stateperm1 visa_m_h1 visa_m_h1b_3 visa_m_non_h1 visa_m_total year
+* // TODO: personality check
+* // TODO: standard controls
 
-* // roi2: reduced stipulated model with two unimportant (wrt p, r2, ar2...) analytical transforms.
-* // 1) visa_m_h1b_3 -> visa_m_h1b_2 unimportantly changes model
-* // 2) collapse pce2 + pce3 -> pce2
-* // analytical transforms allow cross-specification comparison of effects
-* // analytical transforms also function as robustness checks; if a minor factor transform breaks u, u are bad
-reg totalen employer_a*1 employer_a*2 pce2 stateperm1 visa_m_h1 visa_m_h1b_2 visa_m_non_h1 visa_m_total year
+* // personality multiple reg
+* // with quadratics and cubics, r2 .0886, ar2 = -.0016
+* // dropping cubics: r2: 0.069 ar2: 0.0105
+* // kinda weird personality_extraversion1 is strong positive association
+reg voi personality*
+reg voi personality*1 personality*2 personality_isinvalid
+
+* // wtf...OCEAN noncompletion is strongly positive w grit!?
+* // we cannot rule out either in a structural reg... adding grit to invalid alone drops total r2
+* // so, git confounds the invalid thing
+reg personality_grit1 personality_isinvalid
+
+* // personality less grit reduces r2 total and adjusted,
+* //   so we keep it for further research
+* // also, linear oppenness is weaker than marginal openness,
+* //   so we need marginal personality effects, cubics optional
+reg voi personality_agreeableness1 personality_conscientiousness1 personality_extraversion1 personality_grit1 personality_isinvalid personality_neuroticism1 personality_open1 personality_open2 personality_open3
+reg voi personality_agreeableness1 personality_conscientiousness1 personality_extraversion1 personality_grit1 personality_isinvalid personality_neuroticism1 personality_open1 personality_open2
+reg voi personality_agreeableness1 personality_conscientiousness1 personality_extraversion1 personality_grit1 personality_isinvalid personality_neuroticism1 personality_open1
+reg voi personality_agreeableness1 personality_conscientiousness1 personality_extraversion1 personality_isinvalid personality_neuroticism1 personality_open1
+
+* // personality + ideology multiple reg
+* // commented reg is desirable, but no samples
+* // reg voi personality* *american* *christianity* *regulation* *religio* nvoifai* is*stem*
+* // ideological effects -> r2 .1457, ar2 0.08
+* // this does not include ethnicity and regional cultural effects
+reg voi *american* *christianity* *regulation* *religio* nvoifai* is*stem*
+
+* // do time effects dominate personality?
+* // answer: linear time doesn't matter
+* // linear plus nonlinear time is stronger than some personality effects, but weak (p < 0.5)
+* // overall, time effects are not interesting, potentially due to sample variation constraint (few samples at difference times)
+reg voi personality*1 personality*2 personality_isinvalid ctime1
+reg voi personality*1 personality*2 personality_isinvalid ctime*
+reg voi personality*1 personality*2 personality_isinvalid ctime* completion* iscollector*
+
+* // completion time was hypothesized as an intelligence proxy
+* // the effect may exist but it's super negligible with respect to approval
+* // perhaps the completion time -> intelligence proxy is weak and/or
+* // perhaps intelligence doesn't relate strongly with approval...both plausible
+reg voi completiontimeminutes1 completiontimeminutes2
