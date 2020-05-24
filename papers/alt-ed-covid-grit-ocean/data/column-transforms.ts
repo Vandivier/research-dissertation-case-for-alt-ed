@@ -12,6 +12,40 @@ export const columnDefinitions: ColumnDefinition[] = [
     sMatcher: "Collector ID",
   },
   {
+    sMatcher: "Start Date",
+    farroTransformer: function (
+      sCellValue,
+      oTransformer,
+      arroTransformersWithIndex,
+      arrsSurveyResponse
+    ) {
+      let timeDiff = 0;
+      const oTransformerEndDate = arroTransformersWithIndex.find(
+        (oTransformer) => oTransformer.sMatcher === "End Date"
+      );
+
+      try {
+        const iStartTime = new Date(sCellValue).getTime();
+        const iEndTime = new Date(
+          arrsSurveyResponse[oTransformerEndDate.iColumn]
+        ).getTime();
+        timeDiff = iEndTime - iStartTime;
+      } catch (e) {
+        timeDiff = 0;
+      }
+
+      const timeDiffMinutes =
+        (typeof timeDiff === "number" && timeDiff / (1000 * 60)) || "";
+
+      return [
+        Object.assign({}, oTransformer, {
+          value: timeDiffMinutes || "",
+        }),
+      ];
+    },
+    sOutputColumnName: "CompletionTimeMinutes",
+  },
+  {
     sMatcher: "End Date",
   },
   {
