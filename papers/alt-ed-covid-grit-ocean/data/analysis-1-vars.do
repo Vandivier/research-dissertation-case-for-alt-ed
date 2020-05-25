@@ -72,7 +72,7 @@ gen voi = favorentrylevel
 * // it is interesting alongside voi in that q1 cares about a specific use case, the index is more a general attitude
 gen ioi = favorentrylevel + favorconventionalsoon + favoronline
 
-* // generate continuous survey-reported age
+* // generate continuous survey-reported age (age group)
 gen crage1 = reportedage
 gen crage2 = reportedage*reportedage
 gen crage3 = reportedage*reportedage*reportedage
@@ -163,6 +163,8 @@ gen completiontimeminutes4 = completiontimeminutes1*completiontimeminutes1*compl
 * // below comment is pseudo code which should be abstract re-implemented in js/ts
 * // gen completion_x_collector = (FOR EACH iscollector)*completion
 * // below is ad-hoc administration detection which can be interacted w
+
+gen regulation_x_ai = nvoifregulation1*nvoifai1
 
 drop collector
 drop educ

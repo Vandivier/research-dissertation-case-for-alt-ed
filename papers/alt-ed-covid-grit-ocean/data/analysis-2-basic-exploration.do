@@ -59,7 +59,8 @@ reg voi personality_agreeableness1 personality_conscientiousness1 personality_ex
 * // reg voi personality* *american* *christianity* *regulation* *religio* nvoifai* is*stem*
 * // ideological effects -> r2 .1457, ar2 0.08
 * // this does not include ethnicity and regional cultural effects
-reg voi *american* *christianity* *regulation* *religio* nvoifai* is*stem*
+* // regulation_x is logically interesting but empirically reduces ar2, so super unimportant
+reg voi *american* *christianity* nvoifregulation* *religio* nvoifai* is*stem*
 
 * // do time effects dominate personality?
 * // answer: linear time doesn't matter
@@ -73,4 +74,18 @@ reg voi personality*1 personality*2 personality_isinvalid ctime* completion* isc
 * // the effect may exist but it's super negligible with respect to approval
 * // perhaps the completion time -> intelligence proxy is weak and/or
 * // perhaps intelligence doesn't relate strongly with approval...both plausible
+* // positive effect robust to collectors, but low significance
+* // final nail in coffin...personality_isinvalid can also proxy iq and is more significant
 reg voi completiontimeminutes1 completiontimeminutes2
+reg voi completiontimeminutes1 completiontimeminutes2 iscollector*
+reg voi completiontimeminutes1 completiontimeminutes2 personality_isinvalid
+
+* // ai favorability is lower among low regulation supporters
+* // highly significant and positive relation found, but total r2 is low
+* // this is counterintuitive because intellectual conservatives should embrace technological advancement and the free market
+* // potential solution: as a matter of personality, or Kahneman's System 1 response, conservatives may exhibit anti-innovation bias
+* // raising more regulation and ai (eg techno-liberal or scientistic progressive) is associated with a reduction in alt ed cred support
+* // reducing ai and reducing regulation (eg anti-innovation conservative) is associated with more support for alt ed cred (indicates ideological dominance over personality at survey time)
+* // but, both of these effects are weak
+reg nvoifregulation*1 nvoifai*1
+reg voi regulation_x nvoifregulation* nvoifai*
