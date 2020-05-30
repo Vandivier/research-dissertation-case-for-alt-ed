@@ -89,3 +89,32 @@ reg voi completiontimeminutes1 completiontimeminutes2 personality_isinvalid
 * // but, both of these effects are weak
 reg nvoifregulation*1 nvoifai*1
 reg voi regulation_x nvoifregulation* nvoifai*
+
+* // contra equivocation between grit and concientiousness
+* // if they are simply different measures, then they are different enough measures that it's important to include both (as if independence)
+* // if grit and concientiousness are the same, why does concientiousness only have an r2 ~ 0.5, not very different from openness?
+* // in fact, given OCEAN we still see more than a third of grit unexplained (this is better than the inner-difference between most OCEAN factors)
+reg personality_grit1 personality_conscientiousness1
+reg personality_grit1 personality_open*1
+reg personality_grit1 personality_n*1
+reg personality_grit1 personality_open*1 personality_conscientiousness1 personality_e*1 personality_a*1 personality_n*1
+
+* // conclusion food
+* // contra: https://digest.bps.org.uk/2018/09/25/the-in-vogue-psychological-construct-grit-is-an-example-of-redundant-labelling-in-personality-psychology-claims-new-paper/
+* // of note, a typical grit output variable is success, but for me it is attitude; so grit may be more similar to concientiousness when the output is result rather than attitude
+* // the 0.000 high signifiance of concientiousness and grit doesn't show they are substitutes bc:
+* // 1. there is plenty of expoitable variation left over
+* // 2. concientiousness has the same pattern with inverse neuroticism; but we don't treat those as synonyms
+* // in fact, it is about as accurate to call grit "inverse neuroticism" as it is to call grit "a synonym for concientiousness" according to present data
+* // moreover, grit has the same relation with neuroticism
+* // describing grit as negative neuroticism is nearly as correct as describing grit as concientiousness if we just care about stats
+* // in the end, the economic approach is more rigorous and less subjective than a pure psychometric approach relying on conventional p-value analysis
+* // the economic approach would say the variable is independently important if mode inclusion yields more value than it costs, which it does.
+* // given that a survey taker has already answered the OCEAN battery and all the other model factors, having them fill out the short grit scale is relatively cheap and easy,
+* // and provides a better model which businesses would prefer. In fact, one might consider OCEAN inclusion as more expensive to implement with less model yield,
+* // since grit is the single best factor here.
+reg personality_g*1 personality_neuroticism1
+reg personality_c*1 personality_neuroticism1
+
+* // grit moves strongly with openness, but concientiousness does not, so they are structurally different
+reg personality_open*1 personality_conscientiousness1
