@@ -102,6 +102,7 @@ reg personality_grit1 personality_open*1 personality_conscientiousness1 personal
 * // conclusion food
 * // contra: https://digest.bps.org.uk/2018/09/25/the-in-vogue-psychological-construct-grit-is-an-example-of-redundant-labelling-in-personality-psychology-claims-new-paper/
 * // of note, a typical grit output variable is success, but for me it is attitude; so grit may be more similar to concientiousness when the output is result rather than attitude
+* // one can imagine that favorability imperfectly translates to initial action and even less to outcome, so my result need not contradict research focused on activity completion
 * // the 0.000 high signifiance of concientiousness and grit doesn't show they are substitutes bc:
 * // 1. there is plenty of expoitable variation left over
 * // 2. concientiousness has the same pattern with inverse neuroticism; but we don't treat those as synonyms

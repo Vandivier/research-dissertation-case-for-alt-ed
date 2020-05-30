@@ -3,10 +3,9 @@ clear
 do "D:\workspace\github\research-dissertation-case-for-alt-ed\papers\section-127-effects\data\analysis-1-vars.do"
 
 * // TODO: 4 rsoi:
-* // R1 - initial-stipulated ols
-* // R2 - reduced-stipulated ols
-* // R3 - initial-stipulated dols
-* // R4 - reduced-stipulated dols
+* // R1 - voimaxar2018
+* // R2 - voimaxar2019
+* // R4 - reg14, maxar v3, preferred
 
 reg totalen emp* pce* staffordlimitiscombined stategi3 stateperm1 tuition_cpi visa_m* year
 estimates store R1, title(Model 1)

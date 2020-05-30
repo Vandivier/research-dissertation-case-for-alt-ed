@@ -165,6 +165,14 @@ gen completiontimeminutes4 = completiontimeminutes1*completiontimeminutes1*compl
 * // below is ad-hoc administration detection which can be interacted w
 
 gen regulation_x_ai = nvoifregulation1*nvoifai1
+gen regulation_x_grit = nvoifregulation1*personality_grit1
+gen provider_x_open = cprovider1*personality_open1
+gen provider_x_conscientiousness = cprovider1*personality_conscientiousness1
+gen provider_x_extraversion = cprovider1*personality_extraversion1
+gen provider_x_agreeableness = cprovider1*personality_agreeableness1
+gen provider_x_neuroticism = cprovider1*personality_neuroticism1
+gen provider_x_grit = cprovider1*personality_grit1
+gen grit_x_conscientiousness = personality_grit1*personality_conscientiousness1
 
 drop collector
 drop educ
