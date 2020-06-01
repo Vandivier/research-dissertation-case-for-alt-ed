@@ -34,5 +34,6 @@ reg voi isfemale personality_conscientiousness1 personality_open1 personality_op
 * // transform reg14 to facilitate backwards-comparison
 * // isfemale -> ismale
 * // add ismanager
+* // n = 201, r2 = 0.4480, ar2 = 0.3655
 reg voi ismale ismanager personality_conscientiousness1 personality_open1 personality_open2 nvoifai*1 nvoifai*2 nvoifconventional*2 nvoifonline* nvoifregulation*1 nvoifregulation*2 crage* crincome*3 cprovider3 isethnicity2 ishighered isindustry1 isindustry10 isindustry11 isindustry4 isindustry6 provider_x_grit
 estimates store voimaxar2020, title(M-2020)
