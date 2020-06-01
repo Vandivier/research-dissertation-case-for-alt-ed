@@ -11,6 +11,7 @@ tab industry, gen(isindustry)
 tab surveymonkeyregion, gen(isregion)
 tab ethnicity, gen(isethnicity)
 
+* // ishighered = obtained undergraduate degree
 gen ishighered = 0 if !missing(educ)
 replace ishighered = 1 if educ >= 5
 
@@ -186,3 +187,24 @@ drop reportedexactage
 drop reportedincome
 drop respondentid
 drop surveymonk*
+
+label variable ishighered "Is College Graduate"
+label variable ismale "Is Male"
+label variable ismanager "Is Manager"
+label variable isstem "Is STEM"
+label variable isindustry6 "IT Industry"
+label variable isregion7 "West South Central Region"
+label variable nvoifai1 "AI"
+label variable nvoifai2 "AI^2"
+label variable nvoifamerican2 "Nationalism^2"
+label variable ctime1 "Time"
+label variable ctime2 "Time^2"
+label variable ctime3 "Time^3"
+label variable nvoifconventionalsoon1 "Expectation"
+label variable nvoifconventionalsoon2 "Expectation^2"
+label variable nvoifconventionalsoon3 "Expectation^3"
+label variable nvoifregulation1 "Pro Regulation"
+label variable nvoifreligion1 "Religiosity"
+label variable cprovider3 "Familiarity^3"
+label variable provider_x_grit "Familiarity-Grit"
+label variable crincome3 "Income^3"

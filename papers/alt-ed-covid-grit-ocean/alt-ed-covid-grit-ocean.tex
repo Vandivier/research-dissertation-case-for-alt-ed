@@ -112,7 +112,56 @@ then there are standard sociological controls (age, gender, education, income)
 
 \section{Results}
 
+% in prior paper a medium model was preferred (2019), and so here
 % start w replication section, then new OLS results, then implied OLS results (regional effects), then special checks (interactions)
+
+% 2018 Model is perfectly replicated; no delta in n; so column is exempt
+% ref: tab:models in postprint-alt-ed-survey-short.tex
+% \begin{table}
+%     \caption{Replication of Prior Models, Selected Variables}
+%     \begin{tabular}{lllll}
+%         %                       voimaxar2018                    voimaxar2019
+%         Factor                  & 2018 Model & 2019 Model & 2019 Replication             \\
+%         \toprule
+%         Male                    &            &            & -2.458*          & -0.422**  \\
+%         Not STEM                & -1.269*                                                \\ % isnotstem
+%         % isindustry1 & 1.797 \\
+%         % isindustry4 & 0.960 \\
+%         % isindustry6 & TODO & TODO & TODO & TODO \\
+%         % isindustry10 & TODO & TODO & TODO & TODO \\
+%         % isindustry11 & 1.203 \\
+%         Pro AI                  & 0.700*     & 0.776**                                   \\ % nvoifai1
+%         Pro AI$^2$              & -0.065*    & -0.069**                                  \\ % nvoifai2
+%         Pro American            & 0.011*     & 0.011*                                    \\ % nvoifamerican2
+%         Expectation$^2$         &            &            & 0.113**          & 0.081**   \\ % nvoifconventionalsoon2
+%         Expectation$^3$         & 0.003**    & 0.003**    & -0.007*          & -0.005*** \\ % nvoifconventionalsoon3
+%         Pro Online Learning$^2$ & 0.067      & 0.016*     & 0.240            & 0.013***  \\ % nvoifonline2
+%         Pro Regulation          & 1.161      & 0.110*     & 0.268***         & 0.110***  \\ % nvoifregulation1
+%         Religiosity             & 0.120*     & 0.105*                                    \\ % nvoifreligion1
+%         Income                  & 0.770**    & 0.192*                                    \\ % csmincome1
+%         Income$^2$              & -0.056*    &            & 0.046            &           \\ % csmincome2
+%         % ismanager & TODO & TODO & TODO & TODO \\
+%         Unemployed              &            &            & 1.118*           &           \\ % isunemployed
+%         Other Ethnicity         &            &            & 1.682*           &           \\ % isethnicity6
+%         % ishighered & TODO & TODO & TODO & TODO \\
+%         % ceduc1 & TODO & TODO & TODO & TODO \\
+%         % ceduc2 & TODO & TODO & TODO & TODO \\
+%         X$_0$                   & 1105.125   & 0.106      & -12345.347*      & 3.289***  \\
+%         \bottomrule
+%         R-Squared               & 0.597      & 0.504      & 0.526            & 0.319
+%         n                       & 168        & 168        & 111              & 111
+%     \end{tabular}
+%     \begin{tablenotes}
+%         \item{
+%                     * p $<$ .05
+%                     ** p $<$ .01
+%                     *** p $<$ .001
+%               }
+%     \end{tablenotes}
+%     \label{tab:table_replicate_old_ols}
+% \end{table}
+
+% two tables: new vs old results, 3 new data max ar models
 
 how does this relate to hiring and firing or industry growth trends?
 answer: personality answer: managers tend to have certain personality traits
@@ -122,6 +171,14 @@ this info could be relevant for product marketing; some personalities being more
 however, preliminary analysis indicates these effects are small
 
 %
+
+\begin{table}
+    \caption{Table of Multiple Regression on Enrollment, Selected Variables}
+    \resizebox{\columnwidth}{!}{
+        \input{./figures-and-tables/table-1-massaged.tex}
+    }
+    \label{tab:table_new_ols}
+\end{table}
 
 ai favorability is lower among low regulation supporters
 highly significant and positive relation found, but total r2 is low

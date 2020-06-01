@@ -1,6 +1,5 @@
 do "D:\workspace\github\research-dissertation-case-for-alt-ed\papers\alt-ed-covid-grit-ocean\data\analysis-1-vars.do"
 
-
 * // initial fxn = voiweak2018 + voimaxar2019
 * // no observations. 
 * // next reg1: voistr2018 + voistr2019
