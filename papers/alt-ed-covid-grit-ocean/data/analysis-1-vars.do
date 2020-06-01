@@ -112,6 +112,7 @@ gen enddatestatafriendly = subinstr(enddate1, "/", "-", .)
 gen ctime1 = date(enddatestatafriendly, "MDY")
 gen ctime2 = ctime1*ctime1
 gen ctime3 = ctime1*ctime1*ctime1
+gen ctime1zeroed = ctime1 - 21241
 
 gen is2018sample = 0
 replace is2018sample = 1 if !missing(nvoifchristianity1) & !missing(csmincome1)

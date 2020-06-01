@@ -10,6 +10,7 @@ do "D:\workspace\github\research-dissertation-case-for-alt-ed\papers\alt-ed-covi
 * // v-complexity:      30
 * // q-complexity:      12
 * // drops reported gender, reported age group, reported exact age, reported income
+* // append `if ctime1zeroed<500' to repro preliminary
 reg voi issurveymonkeymale ismanager isunemployed ismale isindustry7 isindustry10 isindustry12 isregion2 isregion3 isregion4 isethnicity4 isethnicity6 ishighered nvoifai3 nvoifconventionalsoon2 nvoifconventionalsoon3 nvoifonline1 nvoifonline2 nvoifonline3 nvoifregulation1 csmage1 csmage2 csmage3 csmincome2 csmincome3 cprovider1 cprovider2 ceduc1 ceduc2 ctime3
 estimates store voimaxar2019, title(M-2019)
 
