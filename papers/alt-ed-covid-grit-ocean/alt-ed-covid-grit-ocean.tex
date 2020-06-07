@@ -61,88 +61,115 @@
 \pagebreak
 \linenumbers
 
-\section{Introduction and Description of Data}
+\section{Introduction}
 
-Prior literature has sought to explain favorability
-to alternative modes of postsecondary learning
-including unaccredited education and online learning.
-One paradoxical result is that individuals that tend to favor regulation
-also tend to favor unaccredited education\cite{vandivier2020preliminary}.
-This paper hypothesizes that personality differences are a solution to the paradox.
+Education economics has sought to explain favorability to alternative education.
+One paradoxical result is that conservatives favor accredited education\cite{vandivier2020preliminary}.
+The result holds after correcting for a variety factors including status quo bias, religiosity, and standard controls.
+% That is in addition to standard controls for age, income, ethnicity, gender, and more.
+This paper hypothesizes that the paradox is a case of non-logical survey response and omitted variable bias.
+This paper seeks to resolve the paradox by introducing new controls.
+Specifically, this paper hypothesizes that after correcting for personality and mental effort,
+conservatism will not be negatively related to support for alternative education.
+    [ONE LINER ON RESULTS]
 
-To expound on the problem,
-consider that principaled conservatives oppose regulation\cite{teghtsoonian1993neo}.
-% neocons are left of other conservatives, and even neocons oppose regulation in the above
-Support for alternative credentials is consistent with opposition to regulation.
-Decreased support for regulation, then, seems contradictory with support for alternative education.
+This paper follows prior survey method closely, then adds new controls.
+Controls are added for personality and mental effort.
+Grit and Big Five personality traits are captured as measures of personality.
+Survey completion time is used as a proxy of mental effort and intelligence.
+% survey completion time could reflect time value or intelligence, but it can simultaneously proxy mental effort too.
+% Survey respondents have unobserved opportunity costs of time.
 
-One way to solve the issue is to appeal to status quo bias.
-Conservative bias towards the status quo is documented in the literature\cite{eidelman2012bias}.
-With respect to alternative credentials, status quo bias opposes deregulation.
-This is not inconsistent with an explanation from personality.
-Status quo bias appears similar to a low degree of oppenness.
-Similarly, progressive support for alternative credentials may be explained by high openness.
-If personality effects dominate ideological effects, the contradiction is resolved in Kahnamen-like fashion\cite{kahneman2011thinking}.
-Taking a survey is a fast-paced activity which is likely to activate system 1 rather than system 2.
-Personality effects are already known to relate importantly to political ideology\cite{chirumbolo2010personality}.
+In a behavioral approach, constraints to mental effort are associated with classically inefficient results.
+With respect to such results, this paper prefers the label of non-logical to irrational.
+This amounts to a boundedly rational explanation\cite{candela2016vilfredo}.
 
-This paper uses multiple regression to analyze the results of a survey.
-The survey includes a measure of status quo bias, aka anti-innovation bias, by asking about AI.
-We then ask about personality, favorabilty to alternative education, and add standard socialogical controls for age, income, gender, and more.
+Risk aversion is a key theoretical reason to control for personality and mental effort.
+Conservatism is an aggregate symbol reflecting many factors\cite{hill1997liberal}.
+High levels of risk aversion among conservatives is one such concern of economic importance\cite{perhac1996does}.
+Personality relates directly conservative identification\cite{chirumbolo2010personality} and also to risk tolerance.
+% Risk aversion presents a plausible claim to omitted variable bias in prior analysis.
+
+Conservatives oppose regulation as a matter of ideological principle\cite{teghtsoonian1993neo}.
+Decisioning on ideological principle, however, may tend to occur with high mental effort.
+Under conditions of low mental effort, risk aversion may dominate in conservative thought process.
+These hypothetical conditions explain the response in favor of accreditation on the part of a conservative.
+This paper seeks to test whether such hypothetical conditions exist in the real world.
+% From a psychological perspective, conservatives exhibit high levels of risk aversion.
+% From an economic-cognitive perspective, conservatives exhibit high risk aversion and also favorability to market solutions.
+% Risk aversion may dominate when a conservative exerts low mental effort, while market preference may dominate with high mental effort.
+
+% One way to solve the issue is to appeal to status quo bias.
+% Conservative bias towards the status quo is documented in the literature\cite{eidelman2012bias}.
+% With respect to alternative credentials, status quo bias opposes deregulation.
+% This is not inconsistent with an explanation from personality.
+% Status quo bias appears similar to a low degree of oppenness.
+% Similarly, progressive support for alternative credentials may be explained by high openness.
+% If personality effects dominate ideological effects, the contradiction is resolved in Kahnamen-like fashion\cite{kahneman2011thinking}.
+% Taking a survey is a fast-paced activity which is likely to activate system 1 rather than system 2.
+% Personality effects are already known to relate importantly to political ideology.
+
+% \section{Data and Methodology}
+\section{Description of Data}
+
+This paper uses a combination of existing and original survey data.
+The survey for this paper is based on the Attitudinal Survey on Alternative Credentials\cite{dataset_vandivier}.
+Original observations were obtained through a new administration of that survey with two new questions.
+Respondents were instructed to take online versions of the Big Five personality assessment and the Short Grit Scale and report their results.
+See Appendix A for survey question wording.
+    [ADD APPENDIX A]
+% The data set is an unbalanced panel, although time effects were insignificant in this analysis.
+% Maybe AI is an inefficient measure of status quo bias
+% that would indicate that AI is more conventional than alternative education
+% this seems hard to defend
+
+Survey data is investigated using multiple regression.
+The dataset includes 2175 observations, but 201 samples are relevant in the preferred model.
+Personality effects turn out to be important, and only 201 samples include such information.
+
+The dependent variable is favorability to alternative credentials.
+This study defines alternative credentials as those issued by a non-governmental body.
+Respondents are primed with the definition of alternative credentials.
+Appendix A contains the wording of the priming message.
+
+The first independent variable of interest is favorability to regulation.
+The inverse of this variable is taken as a measure of conservative economic preference.
+Favorability questions are rated from 1 to 10.
+The second independent variable of interest is survey completion time in minutes.
+
+Other variables include standard controls for age,
+gender, ethnicity, income, and level of education.
+Employment status including whether an employed respondent is a manager is reported.
+If employed, the industry of employment is recorded for the respondent.
+
+% prior work shows this is a comparatively good innovation bias proxy
+Favorability to artificial intelligence technology is observed.
+This is interpreted as a measure of innovation bias.
+Innovation bias is interpreted as isomorphic to inverse status quo bias.
+
+Two other important right-hand variables exist.
+Respondents are asked whether they have heard of five popular alternative learning providers.
+Familiarity is the count of confirmed known providers.
+Expectation is a response from 1 to 10 to the question
+"It will soon become fairly conventional for high school graduates to obtain alternative credentials instead of going to college."
+
+% The analytical strategy of this analysis is to address the hypothesis through the partialling out of certain effects.
+%
+% We know that personality and political ideology explain each other,
+% so including for personality should partial out some or all of the political ideological effect.
+% A surprising result is that the coefficient on regulatory favorability increases when we do this,
+% and this is consistent with early regressions that corrected for more ideological variables and found an even
+% higher coefficient. It seems the effect is neither a matter of reactionary response, personality, nor political ideology.
+% What we seem to be left with is either:
+% 1) It's a non-political ideological response,
+% or 2) It's a rational response, even if the rationale follows some unobserved logical structure
+
+\section{Results}
+
 The paper replicates prior findings that manager preferences are insignificantly different from the population at large.
 Ideological effects appear robust to inclusion of personality.
 This indicates the popular correlation between regulation an alternative education is not rooted in personality,
 and therefore appears to be ideological, if incoherently so.
-
-
-% TODO: cite old paper and make the problem to be solved clear
-% excerpt from prior paper commented below:
-% ***
-% Respondent favorability to government regulation moves positively with innovation
-% while religiosity is associated with reduced innovation favorability.
-% (ie religiosity as conservative proxy)...
-% but really it's social conservatism which is a distinct sub-branch of conservatism and only weakly tied to free market principles.
-
-% Status quo bias among conservatives is a common theme in the literature\cite{eidelman2012bias},
-% but it is paradoxical in this situation.
-% Markets facilitate innovation\cite{baumol2002free},
-% so individuals seeking to maintain the status quo ought to disfavor it.
-% Traditional education is heavily regulated,
-% so individuals committed to high levels of regulation ought to disfavor
-% alternatives.
-
-% so the paradox arises from our concept of conservatism which is mixing two very different subtypes
-% religious conservatives may oppose innovation, but among conservatives in general there isn't opposition to alt education
-% low AI would be a status quo bias independent of religiosity
-
-% A Kahneman-like explanation is one resolution.
-% Survey respondents may be thinking fast\cite{kahneman2011thinking}.
-% The preference of some conservatives for the status quo in education becomes explained by
-% risk aversion, lack of openness, and related factors.
-% It may be the case that many of these same individuals would favor alternative
-% credentials when a logical mode of thought is activated.
-% *** end excerpt
-
-\section{Methodology and Model}
-
-We assume independence of personality and ideology, along with stability of both over time.
-These assumptions are necessary because multiple regression of both sets of effects cannot be accomplished with the present data set.
-
-We have ideological effects, which I am distinguishing from cultural effects.
-Cultural effects include regional and ethnic effects.
-
-Non-cultural ideological effects include religiosity,
-christianity,
-favorability to regulation,
-favorability to AI (conservatism and anti-innovation bias proxy),
-STEM employment measure (scientism proxy),
-and whether American education is important (nationalist / anti-foreign prox)
-
-then there are personality effects (OCEAN, grit)
-
-then there are standard sociological controls (age, gender, education, income)
-
-\section{Results}
 
 % in prior paper a medium model was preferred (2019), and so here
 % start w replication section, then new OLS results, then implied OLS results (regional effects), then special checks (interactions)
@@ -180,6 +207,19 @@ ideological dominance over personality is consistent with results in this paper:
 % in preferred model a reason not to think grit attenuates concientiousness: eliminating the latter does not reverse the sign of the former
 
 \section{Conclusions}
+
+We assume independence of personality and ideology, along with stability of both over time.
+These assumptions are necessary because multiple regression of both sets of effects cannot be accomplished with the present data set.
+
+We have ideological effects, which I am distinguishing from cultural effects.
+Cultural effects include regional and ethnic effects.
+
+Non-cultural ideological effects include religiosity,
+christianity,
+favorability to regulation,
+favorability to AI (conservatism and anti-innovation bias proxy),
+STEM employment measure (scientism proxy),
+and whether American education is important (nationalist / anti-foreign prox)
 
 % 1. Personality matters more than a bunch of other things (time, ethnicity, industrial effects, familiarity/provider effects)
 % 2. Personality matters less than ideology (regulation favorability)

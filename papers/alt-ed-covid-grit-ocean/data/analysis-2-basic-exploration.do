@@ -76,9 +76,19 @@ reg voi personality*1 personality*2 personality_isinvalid ctime* completion* isc
 * // perhaps intelligence doesn't relate strongly with approval...both plausible
 * // positive effect robust to collectors, but low significance
 * // final nail in coffin...personality_isinvalid can also proxy iq and is more significant
+* // interpret effect after including personality_isinvalid as system 2 activation (slow not due to intelligence)
+* // positive with decreasing marginal effect robust to multiple regression, but very weak and unimportant
 reg voi completiontimeminutes1 completiontimeminutes2
 reg voi completiontimeminutes1 completiontimeminutes2 iscollector*
 reg voi completiontimeminutes1 completiontimeminutes2 personality_isinvalid
+
+* // regoi1
+* // conservatives (anti-regulation) allowed more time become more anti-alternative education
+* // ar2 = .06, which is not nothing. all vars significant p<.05 with interaction most significant at .001
+* // compatible with evidence on intensifying conservative contradiction
+reg voi completiontimeminutes1 completiontimeminutes2 personality_isinvalid completiontime_x_conservative1 completiontime_x_conservative2
+reg voi completiontimeminutes1 completiontimeminutes2 personality_isinvalid completiontime_x_conservative1
+reg voi completiontimeminutes1 personality_isinvalid completiontime_x_conservative1
 
 * // ai favorability is lower among low regulation supporters
 * // highly significant and positive relation found, but total r2 is low
@@ -119,3 +129,5 @@ reg personality_c*1 personality_neuroticism1
 
 * // grit moves strongly with openness, but concientiousness does not, so they are structurally different
 reg personality_open*1 personality_conscientiousness1
+
+

@@ -160,6 +160,8 @@ gen completiontimeminutes2 = completiontimeminutes1*completiontimeminutes1
 gen completiontimeminutes3 = completiontimeminutes1*completiontimeminutes1*completiontimeminutes1
 gen completiontimeminutes4 = completiontimeminutes1*completiontimeminutes1*completiontimeminutes1*completiontimeminutes1
 
+gen conservatism1 = (1/nvoifregulation1)
+
 * // TODO: interact administration with completion
 * // collectors and time may proxy administration
 * // below comment is pseudo code which should be abstract re-implemented in js/ts
@@ -175,6 +177,9 @@ gen provider_x_agreeableness = cprovider1*personality_agreeableness1
 gen provider_x_neuroticism = cprovider1*personality_neuroticism1
 gen provider_x_grit = cprovider1*personality_grit1
 gen grit_x_conscientiousness = personality_grit1*personality_conscientiousness1
+gen completiontime_x_conservative1 = completiontimeminutes1*conservatism1
+gen completiontime_x_conservative2 = completiontime_x_conservative1*completiontime_x_conservative1
+gen completiontime_x_conservative3 = completiontime_x_conservative1*completiontime_x_conservative1*completiontime_x_conservative1
 
 drop collector
 drop educ
