@@ -23,9 +23,11 @@ reg voi isfemale personality_open1 personality_open2 nvoifai*1 nvoifai*2 nvoifco
 * // reg14, maxar v3, preferred
 * // note: ismale was more significant in older models
 * // cprovider3 -> cprovider2 simplicity transform w no loss of p, r2, nor ar2.
-* // n = 201, r2 = 0.4476, ar2 = 0.3687
+* // removing online ed cubic (p=0.25) unravels online ed effect; total elimination increases ar2
+* // n = 201, r2 = 0.4427, ar2 = 0.3739
 reg voi isfemale personality_conscientiousness1 personality_open1 personality_open2 nvoifai*1 nvoifai*2 nvoifconventional*2 nvoifonline* nvoifregulation*1 nvoifregulation*2 crage* crincome*3 cprovider3 isethnicity2 ishighered isindustry1 isindustry10 isindustry11 isindustry4 isindustry6 provider_x_grit
 reg voi isfemale personality_conscientiousness1 personality_open1 personality_open2 nvoifai*1 nvoifai*2 nvoifconventional*2 nvoifonline* nvoifregulation*1 nvoifregulation*2 crage* crincome*3 cprovider2 isethnicity2 ishighered isindustry1 isindustry10 isindustry11 isindustry4 isindustry6 provider_x_grit
+reg voi isfemale personality_conscientiousness1 personality_open1 personality_open2 nvoifai*1 nvoifai*2 nvoifconventional*2 nvoifregulation*1 nvoifregulation*2 crage* crincome*3 cprovider2 isethnicity2 ishighered isindustry1 isindustry10 isindustry11 isindustry4 isindustry6 provider_x_grit
 
 * // reg15
 * // reg14+grit_x_conscientiousness
