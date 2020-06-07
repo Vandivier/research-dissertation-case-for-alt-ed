@@ -130,4 +130,5 @@ reg personality_c*1 personality_neuroticism1
 * // grit moves strongly with openness, but concientiousness does not, so they are structurally different
 reg personality_open*1 personality_conscientiousness1
 
-
+* // get Pearson's correlation coefficient
+correlate personality_grit1 personality_conscientiousness1 personality_neuroticism1 personality_open1

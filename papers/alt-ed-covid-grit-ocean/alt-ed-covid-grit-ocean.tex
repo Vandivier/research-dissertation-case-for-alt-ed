@@ -42,7 +42,7 @@
     % }
 
     \begin{abstract}
-        This paper investigates an original data set (n = 2175) to understand public
+        This paper investigates an original data set to understand public
         and employer disposition toward alternative postsecondary learning.
         This study builds on the literatures of alternative learning and personality
         to solve an apparent contradiction where conservatives reject alternative learning.
@@ -116,7 +116,8 @@ This paper uses a combination of existing and original survey data.
 The survey for this paper is based on the Attitudinal Survey on Alternative Credentials\cite{dataset_vandivier}.
 Original observations were obtained through a new administration of that survey with two new questions.
 Respondents were instructed to take online versions of the Big Five personality assessment and the Short Grit Scale and report their results.
-See Appendix A for survey question wording.
+Grit is scored from 1 to 5 and Big Five traits are scored from 0 to 100.
+See Appendix A for wording of these questions.
     [ADD APPENDIX A]
 % The data set is an unbalanced panel, although time effects were insignificant in this analysis.
 % Maybe AI is an inefficient measure of status quo bias
@@ -166,6 +167,67 @@ Expectation is a response from 1 to 10 to the question
 
 \section{Results}
 
+The first main result involves replication of prior work.
+Table \ref{tab:table_new_ols} provides selected coefficients across four models of interest.
+Selected variables emphasize representation of each category of effect,
+significant effects,
+and variables shared across models.
+M-2018 and M-2019 are preferred models from a prior paper which used the public Attitudinal Survey on Alternative Credentials dataset\cite{vandivier2020preliminary}.
+M-2019-2 is a replication of M-2019 using new data obtained for the present research.
+
+M-2019-2 involves a larger sample size compared to M-2019.
+Coefficient significance and direction of effect is replicated.
+Coefficient magnitude varies with a general lack of importance.
+The coefficient on being a college graduate changes notably, but it is not a significant factor.
+
+M-2020 introduces factors of personality.
+Being a college graduate is a significant and important factor in this specification.
+Including factors of personality improves total and adjusted explanatory power by about 5 percent.
+Grit, conscientiousness, and openness were important in the model.
+These factors were significant at the $p<.18$ level.
+
+The most significant personality factor is an interaction between grit and familiarity ($p<0.005$).
+If this factor is replaced with simple grit,
+the negative direction of effect is maintained but significance is reduced ($p<0.17$).
+Marginal familiarity effects also become insignificant and exhibit an unexpected negative sign in that case.
+Notice that the negative direction of effect is opposite in sign when compared with conscientiousness.
+
+Familiarity bias is associated with a positive favorability response.
+This bias is reproduced in the work on alternative credentials,
+but in the present data we see that the favorability response is heterogeneous by personality.
+Specifically, concurrently higher grit and familiarity yield lower favorability to alternative credentials.
+This effect is not reproduced when conscientiousness is interacted with familiarity.
+
+% Duckworth notes that grit includes a facet involving passion towards a long term goal and a facet involving reseliancy\cite{perkins2013significance}.
+A well-cited meta-study in 2017 concluded that grit is essentially repackaged conscientiousness\cite{schmidt2018same}.
+The meta-study found that grit, measured without scale normalization, was strongly related to conscientiousness ($\rho = 0.84$).
+The consistency facet of grit showed greater independence ($\rho = 0.61$).
+The strong correlation between conscientiousness and grit is replicated in the present data set ($\rho = 0.73$).
+The present data also shows a strong correlation between grit and neuroticism ($\rho = -0.66$).
+This paper does not dispute that grit may be considered a facet of conscientiousness.
+That facet, however, does not yet exist in standard long Big Five scales, let along the short scales.
+For modern applied purposes, and for economic survey administration, grit appears as if it has independent economic importance.
+
+% Despite overlap, the substantial remaining variance may prove economically important.
+% The meta-study failed to comment on multiple regression involving both conscientiousness and grit.
+% As this study demonstrates, for applied purposes it may be useful to include both measures.
+
+% The results of this paper inflate the distinction between grit and conscientiousness.
+% Regression of conscientiousness alone on grit is about as powerful as regression of neuroticism alone on grit.
+% Either approach shows an overlap in this data near 50 percent.
+% A regression of all big five factors on grit at the individual level achieves an r-squared of 0.65.
+% Despite significant overlap, this study
+% This paper suggests that it is often
+% There is strong overlap clear overlap and also clear added value from utilization of grit in this study.
+
+% I believe the relative power of grit in the present study is explained by an anchoring effect.
+% Grit appears to be more meaningful when a particular long term objective exists.
+% In the case of the present study, respondents are anchored to the idea of education and career success.
+% One would expect even higher distinction in the so-called
+
+% Because grit and conscientiousness overlap in their subscales on work ethic,
+% this difference seems attributable to the presence of passion toward long term goals, which is a unique aspect of grit.
+
 The paper replicates prior findings that manager preferences are insignificantly different from the population at large.
 Ideological effects appear robust to inclusion of personality.
 This indicates the popular correlation between regulation an alternative education is not rooted in personality,
@@ -204,7 +266,7 @@ reducing ai and reducing regulation (eg anti-innovation conservative) is associa
 but, both of these effects are weak.
 ideological dominance over personality is consistent with results in this paper: weak personality effects relative to ideology (2:1, without multiple regression).
 
-% in preferred model a reason not to think grit attenuates concientiousness: eliminating the latter does not reverse the sign of the former
+% in preferred model a reason not to think grit attenuates conscientiousness: eliminating the latter does not reverse the sign of the former
 
 \section{Conclusions}
 
@@ -223,12 +285,12 @@ and whether American education is important (nationalist / anti-foreign prox)
 
 % 1. Personality matters more than a bunch of other things (time, ethnicity, industrial effects, familiarity/provider effects)
 % 2. Personality matters less than ideology (regulation favorability)
-% 3. For the purposes of this paper, grit > OCEAN and is not a synonym of concientiousness. read conclusion food comment in basic exploration
+% 3. For the purposes of this paper, grit > OCEAN and is not a synonym of conscientiousness. read conclusion food comment in basic exploration
 % personality not strong in the sense that p < 0.1, but additional sampling would likely resolve this
 % if we believe we can improve alternative education favorability through exposure, we need to attenuate those expectations due to personality interaction
 % 4. support for regulation retains positive assocation after personality correction
 % 5. is personality even related to regulation positivity? (not significantly)
-% 6. is personality interacted with familiarity? specifically, grit, concientiousness, or openness (neuroticism irrational pessimism)
+% 6. is personality interacted with familiarity? specifically, grit, conscientiousness, or openness (neuroticism irrational pessimism)
 %   grit-provider interaction is the only one that is significant, and it's negative
 %   stronger than ideological (even AI) or other personality effects
 %   the reasoning behind this isn't obvious but it may be that gritty folks are losers in the alternative education system

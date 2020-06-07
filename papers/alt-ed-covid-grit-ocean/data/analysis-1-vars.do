@@ -149,7 +149,7 @@ drop personality_neuroticism
 gen personality_neuroticism2 = personality_neuroticism1*personality_neuroticism1
 gen personality_neuroticism3 = personality_neuroticism1*personality_neuroticism1*personality_neuroticism1
 
-gen personality_grit1 = personality_grit
+gen personality_grit1 = personality_grit/100
 drop personality_grit
 gen personality_grit2 = personality_grit1*personality_grit1
 gen personality_grit3 = personality_grit1*personality_grit1*personality_grit1
