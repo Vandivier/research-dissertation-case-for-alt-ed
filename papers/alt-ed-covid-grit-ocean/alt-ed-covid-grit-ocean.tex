@@ -184,23 +184,43 @@ Coefficient magnitude varies with a general lack of importance.
 The coefficient on being a college graduate changes notably, but it is not a significant factor.
 
 M-2020 introduces factors of personality.
+Mental effort was not a significant factor.
 Being a college graduate is a significant and important factor in this specification.
 Including factors of personality improves total and adjusted explanatory power by about 5 percent.
 Grit, conscientiousness, and openness were important in the model.
 These factors were significant at the $p<.18$ level.
 
+% in prior paper a medium model was preferred (2019), and so here
+% start w replication section, then new OLS results, then implied OLS results (regional effects), then special checks (interactions)
+% 2018 Model is perfectly replicated; no delta in n; so column is exempt
+% ref: tab:models in postprint-alt-ed-survey-short.tex
+% income and regional effects also important
+% time effects not important in 2020 model
+\begin{table}
+    \caption{Table of Multiple Regression on Enrollment, Selected Variables}
+    \resizebox{\columnwidth}{!}{
+        \input{./figures-and-tables/table-1-massaged.tex}
+    }
+    \label{tab:table_new_ols}
+\end{table}
+
 The most significant personality factor is an interaction between grit and familiarity ($p<0.005$).
 If this factor is replaced with simple grit,
 the negative direction of effect is maintained but significance is reduced ($p<0.17$).
-Marginal familiarity effects also become insignificant and exhibit an unexpected negative sign in that case.
+% Marginal familiarity effects also become insignificant and exhibit an unexpected negative sign in that case.
 Notice that the negative direction of effect is opposite in sign when compared with conscientiousness.
 
 Familiarity bias is associated with a positive favorability response.
 This bias is reproduced in the work on alternative credentials,
 but in the present data we see that the favorability response is heterogeneous by personality.
 Specifically, concurrently higher grit and familiarity yield lower favorability to alternative credentials.
-This effect is not reproduced when conscientiousness is interacted with familiarity.
+% I really don't have any good intuition about why the interaction is so effective
+% my guesses seem invalidated; that this could reflect lower IQ, online educ preference,
+% or higher traditional ability eg less need of alternatives
+% those are invalidated by testing inclusion of:
+% p*invalid, n*online*1, ceduc*1, 
 
+The grit-familiarity interaction effect is not reproduced when conscientiousness is interacted with familiarity.
 % Duckworth notes that grit includes a facet involving passion towards a long term goal and a facet involving reseliancy\cite{perkins2013significance}.
 A well-cited meta-study in 2017 concluded that grit is essentially repackaged conscientiousness\cite{schmidt2018same}.
 The meta-study found that grit, measured without scale normalization, was strongly related to conscientiousness ($\rho = 0.84$).
@@ -231,54 +251,30 @@ For modern applied purposes, and for economic survey administration, grit appear
 % Because grit and conscientiousness overlap in their subscales on work ethic,
 % this difference seems attributable to the presence of passion toward long term goals, which is a unique aspect of grit.
 
-Mental effort was not significant in the multiple regression.
-Adding four mental effort variables to the preferred model yields insignificant coefficients in the expected directions.
-One variable is mental effort.
-The second variable is an inter
-    [UPDATE PREFERRED MODEL]
+% The paper replicates prior findings that manager preferences are insignificantly different from the population at large.
+% Industrial effects, age, income, ethnicity, status quo bias,
 
-The paper replicates prior findings that manager preferences are insignificantly different from the population at large.
-Industrial effects, age, income, ethnicity, status quo bias,
-Ideological effects appear robust to inclusion of personality.
-This indicates the popular correlation between regulation an alternative education is not rooted in personality,
-and therefore appears to be ideological, if incoherently so.
-
-% in prior paper a medium model was preferred (2019), and so here
-% start w replication section, then new OLS results, then implied OLS results (regional effects), then special checks (interactions)
-
-% 2018 Model is perfectly replicated; no delta in n; so column is exempt
-% ref: tab:models in postprint-alt-ed-survey-short.tex
-% income and regional effects also important
-% time effects not important in 2020 model
-\begin{table}
-    \caption{Table of Multiple Regression on Enrollment, Selected Variables}
-    \resizebox{\columnwidth}{!}{
-        \input{./figures-and-tables/table-1-massaged.tex}
-    }
-    \label{tab:table_new_ols}
-\end{table}
-
-how does this relate to hiring and firing or industry growth trends?
-answer: personality answer: managers tend to have certain personality traits
-do they also tend to have a certain ideology...? idk
-industry growth isn't really effected bc personality is taken as socially stable,
-this info could be relevant for product marketing; some personalities being more friendly to alt education
-however, preliminary analysis indicates these effects are small
+% Ideological effects appear robust to inclusion of personality.
+% This indicates the popular correlation between regulation an alternative education is not rooted in personality,
+% and therefore appears to be ideological, if incoherently so.
 
 %
 
-ai favorability is lower among low regulation supporters
-highly significant and positive relation found, but total r2 is low
-this is counterintuitive because intellectual conservatives should embrace technological advancement and the free market
-potential solution: as a matter of personality, or Kahneman's System 1 response, conservatives may exhibit anti-innovation bias
-raising more regulation and ai (eg techno-liberal or scientistic progressive) is associated with a reduction in alt ed cred support
-reducing ai and reducing regulation (eg anti-innovation conservative) is associated with more support for alt ed cred (indicates ideological dominance over personality at survey time)
-but, both of these effects are weak.
-ideological dominance over personality is consistent with results in this paper: weak personality effects relative to ideology (2:1, without multiple regression).
+% ai favorability is lower among low regulation supporters
+% highly significant and positive relation found, but total r2 is low
+% this is counterintuitive because intellectual conservatives should embrace technological advancement and the free market
+% potential solution: as a matter of personality, or Kahneman's System 1 response, conservatives may exhibit anti-innovation bias
+% raising more regulation and ai (eg techno-liberal or scientistic progressive) is associated with a reduction in alt ed cred support
+% reducing ai and reducing regulation (eg anti-innovation conservative) is associated with more support for alt ed cred (indicates ideological dominance over personality at survey time)
+% but, both of these effects are weak.
+% ideological dominance over personality is consistent with results in this paper: weak personality effects relative to ideology (2:1, without multiple regression).
 
 % in preferred model a reason not to think grit attenuates conscientiousness: eliminating the latter does not reverse the sign of the former
 
 \section{Conclusions}
+
+how does this relate to hiring and firing or industry growth trends?
+answer: personality answer: managers tend to have certain personality traits
 
 We assume independence of personality and ideology, along with stability of both over time.
 These assumptions are necessary because multiple regression of both sets of effects cannot be accomplished with the present data set.

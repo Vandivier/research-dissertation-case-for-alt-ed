@@ -48,4 +48,7 @@ estimates store voimaxar2020, title(M-2020)
 * // completiontime_x_conservative1 positive and marginally negative.
 * // given presence of completiontime_x_conservative and other ideological proxies, we expect ideology and system 2 effects are well-extracted
 * // what remains is completiontimeminutes to stand for IQ. again insignificant, but negative as expected.
-reg voi isfemale personality_conscientiousness1 personality_open1 personality_open2 nvoifai*1 nvoifai*2 nvoifconventional*2 nvoifonline* nvoifregulation*1 nvoifregulation*2 crage* crincome*3 cprovider3 isethnicity2 ishighered isindustry1 isindustry10 isindustry11 isindustry4 isindustry6 provider_x_grit completiontimeminutes1 completiontimeminutes2 completiontime_x_conservative1 completiontime_x_conservative2
+reg voi isfemale personality_conscientiousness1 personality_open1 personality_open2 nvoifai*1 nvoifai*2 nvoifconventional*2 nvoifregulation*1 nvoifregulation*2 crage* crincome*3 cprovider2 isethnicity2 ishighered isindustry1 isindustry10 isindustry11 isindustry4 isindustry6 provider_x_grit completiontimeminutes1 completiontimeminutes2 completiontime_x_conservative1 completiontime_x_conservative2
+
+* // significant variables but unimportant r2
+reg voi completiontime*cons*

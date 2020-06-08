@@ -98,6 +98,7 @@ reg voi completiontimeminutes1 personality_isinvalid completiontime_x_conservati
 * // reducing ai and reducing regulation (eg anti-innovation conservative) is associated with more support for alt ed cred (indicates ideological dominance over personality at survey time)
 * // but, both of these effects are weak
 reg nvoifregulation*1 nvoifai*1
+reg nvoifai*1 nvoifregulation*1 personality*
 reg voi regulation_x nvoifregulation* nvoifai*
 
 * // contra equivocation between grit and concientiousness
