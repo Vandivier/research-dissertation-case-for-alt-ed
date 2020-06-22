@@ -28,6 +28,7 @@ reg voi isfemale personality_open1 personality_open2 nvoifai*1 nvoifai*2 nvoifco
 reg voi isfemale personality_conscientiousness1 personality_open1 personality_open2 nvoifai*1 nvoifai*2 nvoifconventional*2 nvoifonline* nvoifregulation*1 nvoifregulation*2 crage* crincome*3 cprovider3 isethnicity2 ishighered isindustry1 isindustry10 isindustry11 isindustry4 isindustry6 provider_x_grit
 reg voi isfemale personality_conscientiousness1 personality_open1 personality_open2 nvoifai*1 nvoifai*2 nvoifconventional*2 nvoifonline* nvoifregulation*1 nvoifregulation*2 crage* crincome*3 cprovider2 isethnicity2 ishighered isindustry1 isindustry10 isindustry11 isindustry4 isindustry6 provider_x_grit
 reg voi isfemale personality_conscientiousness1 personality_open1 personality_open2 nvoifai*1 nvoifai*2 nvoifconventional*2 nvoifregulation*1 nvoifregulation*2 crage* crincome*3 cprovider2 isethnicity2 ishighered isindustry1 isindustry10 isindustry11 isindustry4 isindustry6 provider_x_grit
+estimates store voimaxar20202, title(M-2020-2)
 
 * // reg15
 * // reg14+grit_x_conscientiousness

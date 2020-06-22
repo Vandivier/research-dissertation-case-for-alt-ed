@@ -387,6 +387,11 @@ export const columnDefinitions: ColumnDefinition[] = [
   },
   {
     bExactMatch: true,
+    sMatcher: "What state do you reside in?",
+    sOutputColumnName: "State",
+  },
+  {
+    bExactMatch: true,
     sMatcher: "Region",
     sOutputColumnName: "SurveyMonkeyRegion",
   },

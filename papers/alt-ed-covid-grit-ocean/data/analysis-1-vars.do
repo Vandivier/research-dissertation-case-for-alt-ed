@@ -10,6 +10,17 @@ tab collector, gen(iscollector)
 tab industry, gen(isindustry)
 tab surveymonkeyregion, gen(isregion)
 tab ethnicity, gen(isethnicity)
+tab state, gen(isstate)
+
+clear
+
+import delimited D:\workspace\github\research-dissertation-case-for-alt-ed\papers\alt-ed-covid-grit-ocean\data\wrangled-write-csv-output.csv
+
+tab collector, gen(iscollector)
+tab industry, gen(isindustry)
+tab surveymonkeyregion, gen(isregion)
+tab ethnicity, gen(isethnicity)
+tab state, gen(isstate)
 
 * // ishighered = obtained undergraduate degree
 gen ishighered = 0 if !missing(educ)
@@ -67,6 +78,9 @@ gen nvoifregulation3 = favorregulation*favorregulation*favorregulation
 gen nvoifreligion1 = favorreligion
 gen nvoifreligion2 = favorreligion*favorreligion
 gen nvoifreligion3 = favorreligion*favorreligion*favorreligion
+gen nvoifcovid1 = covid
+gen nvoifcovid2 = covid*covid
+gen nvoifcovid3 = covid*covid*covid
 gen voi = favorentrylevel
 
 * // ioi is a general index of pro-alternative-credentialness
@@ -181,7 +195,17 @@ gen completiontime_x_conservative1 = completiontimeminutes1*conservatism1
 gen completiontime_x_conservative2 = completiontime_x_conservative1*completiontime_x_conservative1
 gen completiontime_x_conservative3 = completiontime_x_conservative1*completiontime_x_conservative1*completiontime_x_conservative1
 
+* // note: state numbers will shift by administration until all states sample!!
+* // gen iseastcoast = 0
+* // replace iseastcoast = 1 if educ >= 5
+* // gen issouthern = 0
+* // replace issouthern = 1 if educ >= 5
+* // washington, oregon, CA
+gen iswestcoast = 0
+replace iswestcoast = 1 if isstate5 == 1 | isstate30 == 1 | isstate37 == 1
+
 drop collector
+drop covid
 drop educ
 drop eth
 drop heard*
@@ -192,6 +216,7 @@ drop reportedage
 drop reportedexactage
 drop reportedincome
 drop respondentid
+drop state
 drop surveymonk*
 
 label variable ishighered "Is College Graduate"
