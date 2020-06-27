@@ -1,0 +1,133 @@
+% using Elseveir template per https://www.elsevier.com/authors/author-schemas/latex-instructions
+\documentclass[review]{elsarticle}
+
+\usepackage{lineno,hyperref}
+\modulolinenumbers[5]
+\journal{Journal of \LaTeX\ Templates}
+\bibliographystyle{elsarticle-num}
+
+\usepackage{booktabs}
+% allowing images as figures
+% ref: https://tex.stackexchange.com/questions/19176/how-to-insert-an-image-into-latex-document
+\usepackage{graphicx}
+\graphicspath{{../alt-ed-survey/figures-and-tables}}
+\usepackage{hyperref}
+\usepackage{threeparttable}  
+\usepackage{tikz}
+\usetikzlibrary{calc,matrix}
+
+\begin{document}
+
+\begin{frontmatter}
+
+    \title{
+        Alternative Postsecondary Education and Perception Gaps as Determinants of Hireability
+        \tnoteref{titlenotes}
+    }
+    \tnotetext[titlenotes]{
+        Go to \url{https://github.com/Vandivier/research-dissertation-case-for-alt-ed/tree/master/papers/alt-ed-survey}
+        for additional materials including the online appendix,
+        survey data, and data analysis source code.
+    }
+
+    \author[mymainaddress]{John Vandivier}
+    \address[mymainaddress]{4400 University Dr, Fairfax, VA 22030}
+    \ead{jvandivi@masonlive.gmu.edu}
+
+    \begin{abstract}
+        This paper explores X to understand Y
+        This paper explores a novel data set (n = 1190) to understand trends in public
+        disposition toward alternative postsecondary learning, with a focus on employers.
+        Results indicate that public favorability is positive and will remain flat over the next year.
+        Employer attitudes are not meaningfully different from the general public.
+
+        % in a trivial economic model, employers pay for employee productivity
+        % a slightly more complicated story acknowledges that measuring productivity is accomplished through a finite set of processes with heterogeneous cost, error, and bias.
+        % an even more complicated story says that companies will only pay to reduce the error or bias they observe, and that is itself a subset of total error or bias.
+        % organizations with relatively long authority chains for hiring decisions face multi-layered principal-agent concerns which further decouple productivity from firm willingness to pay [large corporation effect]
+        % hiring error awareness increases in a few ways
+        %  1. [passive search] participant observation. As an interviewer, interviewee, hiring manager, or other professional involved in the process, I simply notice a problem
+        %  2. [passive search] passive company and individual level search into HR best practices; an industry newsletter says hey Griggs v Duke happened so don't use IQ tests anymore.
+        %  3. [passive search]: audit compliance (legal+required, or optional audits from firms that certify quality, for example)
+        %       example: Supreme Court case Griggs v Duke had an industry-wide effect thru this means
+        %  3. [active search] intrapraneurship / policy change championing begins with an individual saying hey let's investigate this thing. what would motivate such individual? (maybe due to 1 or 2).
+        %
+        % because the above means are imperfect, some share of both random error and also systematic bias are expected to exist
+        % such error and bias are expected to manifest in a way that is heterogenous and multi-specific by employer
+        % this means that even if there is some general alternative education stigma, it is expected to vary in magnitude by employer, and might even turn negative for some employers.
+        % this altogether yields hope to the alternatively educated candidate; it is likely that some employer will hire them (perhaps, ironically, even if the candidate is unskilled)
+        %
+        % my prior work has shown that we can predict (r2 0.5 - 0.7 and ar2 0.3 - 0.6) alternative education favorability from employer factors alone - without concern to matching
+        % how much does matching explain (caveat: not multiply regressed, so matching effect is likely overstated in this paper, and possibly partially partialled-in to prior work)
+        %
+        % this paper investigates the share of explanatory power in hireability among a few effects:
+        % 1. demand for technical skills
+        % 2. demand for heterogenous (5-8) non-technical skills and qualities
+        % 3. firm size effects (principal-agent)
+        % 4. job title / industry
+        % 5. wages (and replacement cost assumed to be some monotonically increasing function thereof)
+        %
+        %
+        % in addition to the above, here are some other things that matter:
+        % 1. aggregate social, legal, political, and economic movements (aggregate study is wanting, we know states, time, industry all matter)
+        % 2. applicant personal effects, and interviewer-interviewee interaction effects
+        %
+        %
+        % despite those caveats, we can reasonably explain employer willingness to hire their imagined candidate based on matching effects
+
+        % related papers on hireability are legion:
+        % https://scholar.google.com/scholar?start=0&q=hireability&hl=en&as_sdt=0,47
+        % disability stigma and how to combat it: https://onlinelibrary.wiley.com/doi/full/10.1111/epi.13619
+        % agentic behavioral stigma: https://psycnet.apa.org/record/2009-06359-002
+        % interview non-verbal behaviors and communication style effects: https://eric.ed.gov/?id=ED238071
+        % attractiveness effect (complicated): https://qz.com/work/1115220/are-attractive-people-more-likely-to-get-hired-not-always-says-new-london-school-of-business-study/
+        % attractiveness effect (simple, weak): https://www.researchgate.net/figure/Means-and-Standard-Deviations-of-Ratings-for-Managerial-Nonmanagerial-Male-and-Female_tbl1_232442840
+
+        % perhaps attractiveness is more important in marketing roles
+
+        % communication is valued and intermingled with that are stigma around non-native english speakers and anti-foreign bias
+
+        % matching effects as gender norm compliance: https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1471-6402.1981.tb01098.x
+        % meta-accuracy is a kind of matching measure and it is positive with hireability: https://journals.aom.org/doi/abs/10.5465/AMBPP.2018.13955abstract
+    \end{abstract}
+
+    \begin{keyword}
+        education economics, alternative education, debt crisis     %%% not grammatical
+        \MSC[2010] I21, I22, J20                                    %%% not grammatical
+    \end{keyword}
+
+\end{frontmatter}
+
+\pagebreak
+\linenumbers
+
+\section{Introduction and Description of Data}
+
+% totally unrelated, but feels true: academics may exhibit pro-complexity bias which makes them overestimate plausibility of implausible explanations
+%               could vary by field.
+%
+% what are my questions?
+% 1. demand for technical skills
+%     1. rate for: level I desire, level I expect from a college grad (who may or may not have a degree in the subject), level I expect from a bootcamp grad (who may or may not have a college degree)
+% 2. demand for heterogenous (5-8) non-technical skills and qualities
+%     1. attractiveness (look for marketing industry effect)
+% 3. firm size effects (principal-agent)
+% 4. job title / industry
+% 5. wages (and replacement cost assumed to be some monotonically increasing function thereof)
+% 6. favorability toward alternative education: asked first or last effect; two sample populations
+% 7. about employer's gender
+%       a. one of the most stable effects which is important and significant
+%       b. allows us to compare matching effects to others in a limitted multi-regressy ish meh kinda way
+%       c. (could ask a `check all of these true for you' to get more cheap info...up to 10 check boxes here...is college educated, is minority, is an immigrant or child thereof)
+
+\section{Results}
+
+
+
+\section{Conclusions}
+
+
+
+\bibliography{./BibFile}
+
+\end{document}
