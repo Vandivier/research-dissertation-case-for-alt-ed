@@ -135,37 +135,66 @@ Meta-accuracy is a kind of matching measure, and it has been shown to move posit
 
 \section{Description of Data}
 
-% perhaps attractiveness is more important in marketing roles ?
-% totally unrelated, but feels true: academics may exhibit pro-complexity bias which makes them overestimate plausibility of implausible explanations
-%               could vary by field.
-%
-% what are my questions?
-% 1. demand for technical skills
-% certification or degree required by law, required by corporate policy, not required
-%     1. rate for: level I desire, level I expect from a college grad (who may or may not have a degree in the subject), level I expect from a bootcamp grad (who may or may not have a college degree)
-% 2. demand for heterogenous (5-8) non-technical skills and qualities
-%     1. attractiveness (look for marketing industry effect)
-% 3. firm size effects (principal-agent)
-% 4. job title / industry
-% 5. wages (and replacement cost assumed to be some monotonically increasing function thereof)
-% 6. favorability toward alternative education: asked first or last effect; two sample populations
-% 7. about employer's gender
+% objective of analysis
+% how much does matching explain (caveat: not multiply regressed, so matching effect is likely overstated in this paper, and possibly partially partialled-in to prior work)
+% does noncollege stigma exist
+% "alternative education is different how?"
+% 'explaining favorability'
+
+% simple match effect: those that prefer technical talent will tend to support alternative credentials.
+% complex match effect: a match profile will have significantly and importantly more explanatory power compared to but consistent with a simple match effect.
+
+% general questions?
+% ---
+% 1. favorability toward alternative education
+%      a. could randomize whether this question appears first or last to test for framing, cognitive engagement, or cognitive exhaustion.
+% 2. normal salary for a new hire
+% 3. job title
+% 4. Are you aware of any alternative credentials for this job title?
+% 5. industry / STEM question
+% 6. firm size effects (principal-agent)
+% 7. certification or degree required by law, required by corporate policy, not required
+% 8. gender
 %       a. one of the most stable effects which is important and significant
 %       b. allows us to compare matching effects to others in a limitted multi-regressy ish meh kinda way
 %       c. (could ask a `check all of these true for you' to get more cheap info...up to 10 check boxes here...is college educated, is minority, is an immigrant or child thereof)
-% how long do you think it takes to get an alternative credential?
+% 9. how long do you think it takes to get an alternative credential?
+% 10. organizational constraint / hireability concern / organizational agility - I may like these candidates but i can't hire them due to inflexibly company or legal policy.
+% 11. broad hiring: I hire for a particular role vs I hire for many roles
+% 12. state of residence
+% 13. I find it hard to find a good employee
+%       a. employers with high need should be willing to accept lower quality.
+%       b. however, I expect need is largely captured in wages + industrial + state effects
 
+% quality question meta: 1 to 10: disagree to agree
+% ---
+% An ideal candidate would have this quality...
+% A typical employee would have this quality...
+% A college graduate would have this quality...
+% A credentialed or certified non-college graduate would have this quality...
+% [later] Someone who is self-taught (without a credential or portfolio) would have this quality...
+% [later] A typical junior-level high school student would have this quality...
 
-% there can be a large set of particular candidate types that may fit a job,
-% and in such case the assessed value of candidate properties which are acceptibly subject to variation should be considered less important.
-% proper low importance survey response might fail to obtain if survey respondents are improperly anchoring.
-% That is, they have a single candidate type in mind, although many types might fit the job.
-% questions: an ideal candidate, myself, someone with a college degree, someone without a college degree but with an alternative credential
+% quality question prompts
+% ---
+% 1. technical skills
+% 2. conformity
+%    a. nonconformity as anti-social behavior, soft skill deficit, and/or productivity risk.
+%    b. nonconformity as an awesomeness signal. duel-weirdness theory.
+%    c. nonconformity as culture add, creativity, or innovation.
+% 3. attractiveness (marketing industry effect?)
+% 4. concientiousness (or could be more direct "show up to meetings on time")
+% 5. anti-social: gets along well with others (or more concrete)
+% 6. written communication skill
+% 7. verbal communication skill
+% 8. informal communication skill (ie body language, intonation, and subtext/connotation apprehension; nonwritten and nonverbal)
+% 9. requires flex hours / on call at any time. schedule-constrained.
+% 10. lower wages
+% 12. will have issues with commuting to work or for work (ie, poor fit for food delivery or commercial trucking job).
+% 13. emotional intelligence
 
-% in a trivial economic model, employers pay for employee productivity
-% a slightly more complicated story acknowledges that measuring productivity is accomplished through a finite set of processes with heterogeneous cost, error, and bias.
-% an even more complicated story says that companies will only pay to reduce the error or bias they observe, and that is itself a subset of total error or bias.
-% organizations with relatively long authority chains for hiring decisions face multi-layered principal-agent concerns which further decouple productivity from firm willingness to pay [large corporation effect]
+% some notes, mainly out of scope
+% ---
 % hiring error awareness increases in a few ways
 %  1. [passive search] participant observation. As an interviewer, interviewee, hiring manager, or other professional involved in the process, I simply notice a problem
 %  2. [passive search] passive company and individual level search into HR best practices; an industry newsletter says hey Griggs v Duke happened so don't use IQ tests anymore.
@@ -173,34 +202,33 @@ Meta-accuracy is a kind of matching measure, and it has been shown to move posit
 %       example: Supreme Court case Griggs v Duke had an industry-wide effect thru this means
 %  3. [active search] intrapraneurship / policy change championing begins with an individual saying hey let's investigate this thing. what would motivate such individual? (maybe due to 1 or 2).
 %
-% because the above means are imperfect, some share of both random error and also systematic bias are expected to exist
-% such error and bias are expected to manifest in a way that is heterogenous and multi-specific by employer
-% this means that even if there is some general alternative education stigma, it is expected to vary in magnitude by employer, and might even turn negative for some employers.
-% this altogether yields hope to the alternatively educated candidate; it is likely that some employer will hire them (perhaps, ironically, even if the candidate is unskilled)
-%
 % my prior work has shown that we can predict (r2 0.5 - 0.7 and ar2 0.3 - 0.6) alternative education favorability from employer factors alone - without concern to matching
-% how much does matching explain (caveat: not multiply regressed, so matching effect is likely overstated in this paper, and possibly partially partialled-in to prior work)
-%
-% this paper investigates the share of explanatory power in hireability among a few effects:
-% 1. demand for technical skills
-% 2. demand for heterogenous (5-8) non-technical skills and qualities
-% 3. firm size effects (principal-agent)
-% 4. job title / industry
-% 5. wages (and replacement cost assumed to be some monotonically increasing function thereof)
-%
-%
-% in addition to the above, here are some other things that matter:
-% 1. aggregate social, legal, political, and economic movements (aggregate study is wanting, we know states, time, industry all matter)
-% 2. applicant personal effects, and interviewer-interviewee interaction effects
-%
-%
-% despite those caveats, we can reasonably explain employer willingness to hire their imagined candidate based on matching effects
 
 \section{Results}
 
+This paper acknowledges that own analysis proceeds through a technocentric lens.
+This is an important anchoring point for the analysis, and it may skew application of results in low-technology or low-skill sectors.
+The technocentric lens is an important caveat and anchoring point, but I argue that it is about as proper as any anchoring point.
+In economics, after all, technology operationalizes the theory of innovation per se.
+All skills can be viewed as point-in-time innovations, so that if there was no innovation then neither would there be a need for any skill.
+By the same token, a technocentric lens at the present seems close to a cross-industry lens at a future time.
+Anchoring to any other industry would be both asymmetric and unusuful in the future.
+Perhaps this analysis is slightly skewed, but at least it is skewed only against the past, and will be increasingly useful in the future without partiality to any particular industry.
+In addition, we did check for industrial effects, but the analytical skew may persist pass the data.
 
+This orientation occurs because New Alternative Education first flourished for roles in the information technology sector, and only later did roles like sales, business, art, nursing, and more join in.
+    [can refer to my New Digital Education] - https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3530647
+
+Compare directly to bootcamp results from Indeed: https://www.indeed.com/lead/what-employers-think-about-coding-bootcamp
+
+% ?
 
 \section{Conclusions}
+
+% Out of scope for this paper, but important:
+% 1. aggregate social, legal, political, and economic movements (aggregate study is wanting, we know states, time, industry all matter)
+% 2. applicant personal effects, and interviewer-applicant interaction effects
+% despite those caveats, we can reasonably explain employer willingness to hire their imagined candidate based on matching effects
 
 Notice that the alternatively credentialed individual doesn't need the average employer to value him or her.
 He or she simply needs some significant chance of being hired, and that certainly exists.
@@ -209,8 +237,6 @@ As more alternatively credentialed individuals are highered and promoted through
 there is reason to think the number of opportunities afforded to alternatively educated individuals may grow.
 The problem doesn't seem to be about whether alternative credentials work, but whether they exist in a given industrial context,
 and whether an individual would like to pay the college premium for better favorability when both options are feasible.
-
-
 
 \bibliography{./BibFile}
 
