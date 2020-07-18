@@ -2,6 +2,27 @@ clear
 
 import delimited D:\workspace\github\research-dissertation-case-for-alt-ed\papers\alt-ed-matching-effects\data\soac-matching-2020-07.csv
 
+tab doyoucontributetohiring, gen(_ismanager)
+tab doyouworkinastem, gen(_isstem)
+tab gender, gen(_isgender)
+tab howlongdoyoubelieve, gen(_isduration)
+tab roughlyhowmany, gen(_iscompanysize)
+tab thinkingaboutthejobtitle, gen(_isawareofrelevantcredentials)
+tab whichoftheseindustries, gen(_isindustry)
+tab whatstate, gen(_isstate)
+
+gen cawareofrelevantcredentials1 = thinkingaboutthejobtitle if thinkingaboutthejobtitle != 5
+gen cawareofrelevantcredentials2 = cawareofrelevantcredentials1*cawareofrelevantcredentials1
+gen cawareofrelevantcredentials3 = cawareofrelevantcredentials1*cawareofrelevantcredentials1*cawareofrelevantcredentials1
+gen ccompanysize1 = roughlyhowmany if roughlyhowmany != 9
+gen ccompanysize2 = ccompanysize1*ccompanysize1
+gen ccompanysize3 = ccompanysize1*ccompanysize1*ccompanysize1
+gen cduration1 = howlongdoyoubelieve
+gen cduration2 = cduration1*cduration1
+gen cduration3 = cduration1*cduration1*cduration1
+
+gen favorability = formanyprofessionsalternativecre
+
 gen aetiwo_attractiveness = attractiveness_ideal - attractiveness_ngwac
 gen aetiwo_eq = eq_ideal - eq_ngwac
 gen aetiwo_salary = salary_ideal - salary_ngwac
@@ -15,3 +36,11 @@ gen aetiwo_customerserviceskill = customerserviceskill_ideal - customerservicesk
 gen aetiwo_teamwork = teamwork_ideal - teamwork_ngwac
 gen aetiwo_commute = willingtocommute_ideal - willingtocommute_ngwac
 gen aetiwo_oddhours = willingtoworkoddhours_ideal - willingtoworkoddhours_ngwac
+
+drop formanyprofessionsalternativecre
+drop howlongdoyoubelieveitusually
+drop ifyoudocontributetohiringandfiri
+drop roughlyhowmany
+drop thinkingaboutthejobtitle
+drop whichoftheseindustries
+drop whatstate
