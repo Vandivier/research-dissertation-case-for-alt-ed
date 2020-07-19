@@ -33,7 +33,42 @@ reg favorability _iscompanysize4 _iscompanysize8 _isduration1 _isduration2 _isdu
 reg favorability _iscompanysize4 _iscompanysize8 _isduration1 _isduration2 _isduration3 _isduration4 _isduration5 _isindustry1 _isindustry10 _isindustry11 _isindustry2 _isindustry4 _isindustry6 _isindustry8 _ismanager1 _ismanager2 _isstate1 _isstate11 _isstate12 _isstate13 _isstate14 _isstate16 _isstate18 _isstate19 _isstate20 _isstate21 _isstate22 _isstate23 _isstate24 _isstate25 _isstate26 _isstate27 _isstate28 _isstate29 _isstate3 _isstate30 _isstate34 _isstate35 _isstate36 _isstate37 _isstate38 _isstate39 _isstate4 _isstate5 _isstate6 _isstate8 _isstate9 aetiwo_bodylanguage aetiwo_concientiousness aetiwo_customerserviceskill aetiwo_eq aetiwo_rulebreaker aetiwo_technicaljobskills aetiwo_verbal aetiwo_written rulebreakers*
 reg favorability _iscompanysize4 _iscompanysize8 _isduration1 _isduration2 _isduration3 _isduration4 _isduration5 _isindustry1 _isindustry10 _isindustry11 _isindustry2 _isindustry4 _isindustry6 _isindustry8 _ismanager1 _ismanager2 _isstate1 _isstate11 _isstate12 _isstate13 _isstate14 _isstate16 _isstate19 _isstate20 _isstate21 _isstate23 _isstate25 _isstate26 _isstate28 _isstate29 _isstate30 _isstate34 _isstate36 _isstate37 _isstate38 _isstate39 _isstate4 _isstate6 _isstate8 aetiwo_bodylanguage aetiwo_concientiousness aetiwo_customerserviceskill aetiwo_eq aetiwo_rulebreaker aetiwo_technicaljobskills aetiwo_written rulebreakers*
 
-* // ar2 maximizing model
+* // ar2 maximizing model (ar2=0.3036)
 reg favorability _iscompanysize4 _iscompanysize8 _isduration1 _isduration2 _isduration3 _isduration4 _isduration5 _isindustry1 _isindustry10 _isindustry11 _isindustry2 _isindustry4 _isindustry6 _isindustry8 _ismanager1 _ismanager2 _isstate11 _isstate12 _isstate13 _isstate14 _isstate16 _isstate20 _isstate21 _isstate25 _isstate26 _isstate28 _isstate34 _isstate36 _isstate37 _isstate39 _isstate6 _isstate8 aetiwo_bodylanguage aetiwo_concientiousness aetiwo_customerserviceskill aetiwo_rulebreaker aetiwo_technicaljobskills rulebreakers*
+reg favorability _iscompanysize4 _iscompanysize8 _isduration1 _isduration2 _isduration4 _isduration5 _isindustry1 _isindustry10 _isindustry11 _isindustry2 _isindustry4 _isindustry6 _isindustry8 _ismanager1 _ismanager2 _isstate12 _isstate13 _isstate14 _isstate16 _isstate20 _isstate21 _isstate26 _isstate34 _isstate36 _isstate37 _isstate6 _isstate8 aetiwo_bodylanguage aetiwo_concientiousness aetiwo_customerserviceskill aetiwo_rulebreaker aetiwo_technicaljobskills rulebreakers*
 
 * // i wonder if aetiwo_bodylanguage interacts with IT industry?
+* // reanalysis from maxar2, with aetiwo_body_x_it inserted, maxar increased, aetiwo_rulebreaker (rule breaker skill gap) pops p ~= 0.495
+* // because the rulebreaker skill gap was partialled out, this implies the effect is embedded / captured (in part) in other factors, particularly in the new interaction?
+* // (the other factors basically imply whether you're a rule breaker...eqsp1 check)
+* // the rule breaker sign is robust to various specifications, it's just hella weak
+* // aetiwo_body_x_it is positive which is consistent with 'anti-social geek' stereotype; lack of social skills are not penalized as strongly in IT.
+* // ar2 maximizing, ar2=0.3100)
+reg favorability _iscompanysize4 _iscompanysize8 _isduration1 _isduration2 _isduration3 _isduration4 _isduration5 _isindustry1 _isindustry10 _isindustry11 _isindustry2 _isindustry4 _isindustry6 _isindustry8 _ismanager1 _ismanager2 _isstate11 _isstate12 _isstate13 _isstate14 _isstate16 _isstate20 _isstate21 _isstate25 _isstate26 _isstate28 _isstate34 _isstate36 _isstate37 _isstate39 _isstate6 _isstate8 aetiwo_bodylanguage aetiwo_concientiousness aetiwo_customerserviceskill aetiwo_rulebreaker aetiwo_technicaljobskills rulebreakers* aetiwo_body_x_it
+reg favorability _iscompanysize4 _iscompanysize8 _isduration1 _isduration2 _isduration3 _isduration4 _isduration5 _isindustry1 _isindustry10 _isindustry11 _isindustry2 _isindustry4 _isindustry6 _isindustry8 _ismanager1 _ismanager2 _isstate11 _isstate12 _isstate13 _isstate14 _isstate16 _isstate20 _isstate21 _isstate25 _isstate26 _isstate28 _isstate34 _isstate36 _isstate37 _isstate39 _isstate6 _isstate8 aetiwo_bodylanguage aetiwo_concientiousness aetiwo_customerserviceskill aetiwo_technicaljobskills rulebreakers* aetiwo_body_x_it
+
+* // eqsp1
+* // do other factors imply rulebreaker skill gap?
+* // confirmed that other factors, particularly body language and minor fx from state and company size, explain / co-explain / partial out the rule breaker skill gap
+* // this seems to indicate an insightful interpretation of the rule breaker skill gap
+* // the indication is that the skill gap is not a willingness to break legal, social norms and rules, etc, but is simply a social obliviousness to such things
+* // re-insert eq gap to check this interpretation
+* // eq factor p < 0.33, i'm calling that a win although it could use more samples
+* // negative coefficient on eq indicates that low eq persons (resulting in large positive eq skill gap) tend to break rules near the ideal level
+* //    (which is to say, more than recent college grads or typical actual employees)
+* //    this is consistent with the 'rule breakers as social skill oblivious, not malicious/rebellious, theory'
+reg aetiwo_rulebreaker _iscompanysize4 _iscompanysize8 _isduration1 _isduration2 _isduration3 _isduration4 _isduration5 _isindustry1 _isindustry10 _isindustry11 _isindustry2 _isindustry4 _isindustry6 _isindustry8 _ismanager1 _ismanager2 _isstate11 _isstate12 _isstate13 _isstate14 _isstate16 _isstate20 _isstate21 _isstate25 _isstate26 _isstate28 _isstate34 _isstate36 _isstate37 _isstate39 _isstate6 _isstate8 aetiwo_bodylanguage aetiwo_concientiousness aetiwo_customerserviceskill aetiwo_technicaljobskills rulebreakers* aetiwo_body_x_it
+reg aetiwo_rulebreaker _iscompanysize4 _iscompanysize8 _isduration1 _isduration2 _isduration3 _isduration4 _isduration5 _isindustry1 _isindustry10 _isindustry11 _isindustry2 _isindustry4 _isindustry6 _isindustry8 _ismanager1 _ismanager2 _isstate11 _isstate12 _isstate13 _isstate14 _isstate16 _isstate20 _isstate21 _isstate25 _isstate26 _isstate28 _isstate34 _isstate36 _isstate37 _isstate39 _isstate6 _isstate8 aetiwo_bodylanguage aetiwo_concientiousness aetiwo_customerserviceskill aetiwo_technicaljobskills rulebreakers* aetiwo_body_x_it aetiwo_eq
+
+* // check is sign negative as theoretically expected, and as presented in basically ever specification among this analysis
+* // concientiousness and customerserviceskill gaps most important; both gaps are positive on average
+* //    concientiousness gap is positive with favorability which is counterintuitive
+* //    customer service gap is negative with favorability which is intuitive
+* // r2=0.2716, ar2=0.2276
+reg favorability _iscompanysize4 _iscompanysize8 _isduration1 _isduration2 _isduration4 _isduration5 _isindustry1 _isindustry10 _isindustry11 _isindustry2 _isindustry4 _isindustry6 _isindustry8 _ismanager1 _ismanager2 _isstate13 _isstate14 _isstate16 _isstate20 _isstate21 _isstate26 _isstate34 _isstate36 _isstate37 _isstate6 _isstate8 aetiwo_bodylanguage aetiwo_concientiousness aetiwo_customerserviceskill aetiwo_technicaljobskills rulebreakers* aetiwo_body_x_it
+reg favorability _ismanager1 _ismanager2 _isstate13 _isstate21 _isstate34 _isstate36 _isstate8 aetiwo_concientiousness aetiwo_customerserviceskill rulebreakers*
+
+* // re-insert aetiwo_rulebreaker to strong model, in order to tell a story (even though this effect is weak)
+* // sign is negative and p < 0.25
+* // so, it's robustly negatively signed but we don't very well know the coefficient; probably less than 2.
+reg favorability _ismanager1 _ismanager2 _isstate13 _isstate21 _isstate34 _isstate36 _isstate8 aetiwo_concientiousness aetiwo_customerserviceskill rulebreakers* aetiwo_rulebreaker

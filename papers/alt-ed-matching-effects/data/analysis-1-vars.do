@@ -37,6 +37,9 @@ gen aetiwo_teamwork = teamwork_ideal - teamwork_ngwac
 gen aetiwo_commute = willingtocommute_ideal - willingtocommute_ngwac
 gen aetiwo_oddhours = willingtoworkoddhours_ideal - willingtoworkoddhours_ngwac
 
+* // gen aetiwo_bodylanguage_x_it_industry = 1*2
+gen aetiwo_body_x_it = aetiwo_bodylanguage*_isindustry6
+
 drop formanyprofessionsalternativecre
 drop howlongdoyoubelieveitusually
 drop ifyoudocontributetohiringandfiri
