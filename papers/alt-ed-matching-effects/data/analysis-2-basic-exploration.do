@@ -1,18 +1,18 @@
 do "D:\workspace\github\research-dissertation-case-for-alt-ed\papers\alt-ed-matching-effects\data\analysis-1-vars.do"
 
 * // n = 212
-sum aet*
+sum aetiwo*
 
 * // rulebreakers* are pre-19 continuous linear effects
-* // TODO: do this again without overqualification and rename variable; currently overqualification is allowed
+* // r2=0.5541
 * // allowing for overqualification, aetiwo_oddhours doesn't effect favorability
 * // aetiwo_salary was second least important
 * // attractiveness was third least important
 * // teamwork was fourth least important
 * // next is verbal communication skill then written, then eq!!!
-reg favorability _is* is* c* aet* rulebreakers*
-reg favorability _is* isnarrowmanager aet* rulebreakers*
-reg favorability _isawareofrelevantcredentials1 _isawareofrelevantcredentials2 _isawareofrelevantcredentials3 _isawareofrelevantcredentials4 _isawareofrelevantcredentials5 _iscompanysize1 _iscompanysize2 _iscompanysize3 _iscompanysize4 _iscompanysize5 _iscompanysize6 _iscompanysize7 _iscompanysize8 _iscompanysize9 _isduration1 _isduration2 _isduration3 _isduration4 _isduration5 _isduration6 _isgender1 _isgender2 _isindustry1 _isindustry10 _isindustry11 _isindustry12 _isindustry2 _isindustry3 _isindustry4 _isindustry5 _isindustry6 _isindustry7 _isindustry8 _isindustry9 _ismanager1 _ismanager2 _ismanager3 _isstate1 _isstate10 _isstate11 _isstate12 _isstate13 _isstate14 _isstate15 _isstate16 _isstate17 _isstate18 _isstate19 _isstate2 _isstate20 _isstate21 _isstate22 _isstate23 _isstate24 _isstate25 _isstate26 _isstate27 _isstate28 _isstate29 _isstate3 _isstate30 _isstate31 _isstate32 _isstate33 _isstate34 _isstate35 _isstate36 _isstate37 _isstate38 _isstate39 _isstate4 _isstate5 _isstate6 _isstate7 _isstate8 _isstate9 _isstem1 _isstem2 _isstem3 isnarrowmanager aet* rulebreakers*
+reg favorability _is* is* c* aetiwo* rulebreakers*
+reg favorability _is* isnarrowmanager aetiwo* rulebreakers*
+reg favorability _isawareofrelevantcredentials1 _isawareofrelevantcredentials2 _isawareofrelevantcredentials3 _isawareofrelevantcredentials4 _isawareofrelevantcredentials5 _iscompanysize1 _iscompanysize2 _iscompanysize3 _iscompanysize4 _iscompanysize5 _iscompanysize6 _iscompanysize7 _iscompanysize8 _iscompanysize9 _isduration1 _isduration2 _isduration3 _isduration4 _isduration5 _isduration6 _isgender1 _isgender2 _isindustry1 _isindustry10 _isindustry11 _isindustry12 _isindustry2 _isindustry3 _isindustry4 _isindustry5 _isindustry6 _isindustry7 _isindustry8 _isindustry9 _ismanager1 _ismanager2 _ismanager3 _isstate1 _isstate10 _isstate11 _isstate12 _isstate13 _isstate14 _isstate15 _isstate16 _isstate17 _isstate18 _isstate19 _isstate2 _isstate20 _isstate21 _isstate22 _isstate23 _isstate24 _isstate25 _isstate26 _isstate27 _isstate28 _isstate29 _isstate3 _isstate30 _isstate31 _isstate32 _isstate33 _isstate34 _isstate35 _isstate36 _isstate37 _isstate38 _isstate39 _isstate4 _isstate5 _isstate6 _isstate7 _isstate8 _isstate9 _isstem1 _isstem2 _isstem3 isnarrowmanager aetiwo* rulebreakers*
 reg favorability _isawareofrelevantcredentials1 _isawareofrelevantcredentials4 _iscompanysize1 _iscompanysize4 _iscompanysize8 _isduration1 _isduration2 _isduration3 _isduration4 _isduration5 _isgender1 _isindustry1 _isindustry10 _isindustry11 _isindustry2 _isindustry4 _isindustry6 _isindustry7 _isindustry8 _ismanager1 _ismanager2 _isstate1 _isstate10 _isstate11 _isstate12 _isstate13 _isstate14 _isstate15 _isstate16 _isstate17 _isstate18 _isstate19 _isstate20 _isstate21 _isstate22 _isstate23 _isstate24 _isstate25 _isstate26 _isstate27 _isstate28 _isstate29 _isstate3 _isstate30 _isstate31 _isstate32 _isstate33 _isstate34 _isstate35 _isstate36 _isstate37 _isstate38 _isstate39 _isstate4 _isstate5 _isstate6 _isstate7 _isstate8 _isstate9 _isstem2 isnarrowmanager aetiwo_attractiveness aetiwo_bodylanguage aetiwo_commute aetiwo_concientiousness aetiwo_customerserviceskill aetiwo_eq aetiwo_rulebreaker aetiwo_teamwork aetiwo_technicaljobskills aetiwo_verbal aetiwo_written rulebreakers*
 reg favorability _isawareofrelevantcredentials1 _isawareofrelevantcredentials4 _iscompanysize1 _iscompanysize4 _iscompanysize8 _isduration1 _isduration2 _isduration3 _isduration4 _isduration5 _isgender1 _isindustry1 _isindustry10 _isindustry11 _isindustry2 _isindustry4 _isindustry6 _isindustry8 _ismanager1 _ismanager2 _isstate1 _isstate10 _isstate11 _isstate12 _isstate13 _isstate14 _isstate15 _isstate16 _isstate18 _isstate19 _isstate20 _isstate21 _isstate22 _isstate23 _isstate24 _isstate25 _isstate26 _isstate27 _isstate28 _isstate29 _isstate3 _isstate30 _isstate32 _isstate33 _isstate34 _isstate35 _isstate36 _isstate37 _isstate38 _isstate39 _isstate4 _isstate5 _isstate6 _isstate7 _isstate8 _isstate9 _isstem2 isnarrowmanager aetiwo_attractiveness aetiwo_bodylanguage aetiwo_commute aetiwo_concientiousness aetiwo_customerserviceskill aetiwo_eq aetiwo_rulebreaker aetiwo_teamwork aetiwo_technicaljobskills aetiwo_verbal aetiwo_written rulebreakers*
 
@@ -43,8 +43,11 @@ reg favorability _iscompanysize4 _iscompanysize8 _isduration1 _isduration2 _isdu
 * // (the other factors basically imply whether you're a rule breaker...eqsp1 check)
 * // the rule breaker sign is robust to various specifications, it's just hella weak
 * // aetiwo_body_x_it is positive which is consistent with 'anti-social geek' stereotype; lack of social skills are not penalized as strongly in IT.
-* // ar2 maximizing, ar2=0.3100)
 reg favorability _iscompanysize4 _iscompanysize8 _isduration1 _isduration2 _isduration3 _isduration4 _isduration5 _isindustry1 _isindustry10 _isindustry11 _isindustry2 _isindustry4 _isindustry6 _isindustry8 _ismanager1 _ismanager2 _isstate11 _isstate12 _isstate13 _isstate14 _isstate16 _isstate20 _isstate21 _isstate25 _isstate26 _isstate28 _isstate34 _isstate36 _isstate37 _isstate39 _isstate6 _isstate8 aetiwo_bodylanguage aetiwo_concientiousness aetiwo_customerserviceskill aetiwo_rulebreaker aetiwo_technicaljobskills rulebreakers* aetiwo_body_x_it
+
+* // reduced from above
+* // ar2 maximizing, ar2=0.3100
+* // R1 - modified maxar2 without overqualification
 reg favorability _iscompanysize4 _iscompanysize8 _isduration1 _isduration2 _isduration3 _isduration4 _isduration5 _isindustry1 _isindustry10 _isindustry11 _isindustry2 _isindustry4 _isindustry6 _isindustry8 _ismanager1 _ismanager2 _isstate11 _isstate12 _isstate13 _isstate14 _isstate16 _isstate20 _isstate21 _isstate25 _isstate26 _isstate28 _isstate34 _isstate36 _isstate37 _isstate39 _isstate6 _isstate8 aetiwo_bodylanguage aetiwo_concientiousness aetiwo_customerserviceskill aetiwo_technicaljobskills rulebreakers* aetiwo_body_x_it
 
 * // eqsp1

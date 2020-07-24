@@ -37,8 +37,36 @@ gen aetiwo_teamwork = teamwork_ideal - teamwork_ngwac
 gen aetiwo_commute = willingtocommute_ideal - willingtocommute_ngwac
 gen aetiwo_oddhours = willingtoworkoddhours_ideal - willingtoworkoddhours_ngwac
 
+gen aetiwno_attractiveness = attractiveness_ideal - attractiveness_ngwac
+replace aetiwno_attractiveness = 0 if aetiwno_attractiveness < 0
+gen aetiwno_eq = eq_ideal - eq_ngwac
+replace aetiwno_eq = 0 if aetiwno_eq < 0
+gen aetiwno_salary = salary_ideal - salary_ngwac
+replace aetiwno_salary = 0 if aetiwno_salary < 0
+gen aetiwno_written = written_ideal - written_ngwac
+replace aetiwno_written = 0 if aetiwno_written < 0
+gen aetiwno_verbal = verbal_ideal - verbal_ngwac
+replace aetiwno_verbal = 0 if aetiwno_verbal < 0
+gen aetiwno_bodylanguage = bodylanguage_ideal - bodylanguage_ngwac
+replace aetiwno_bodylanguage = 0 if aetiwno_bodylanguage < 0
+gen aetiwno_technicaljobskills = technicaljobskills_ideal - technicaljobskills_ngwac
+replace aetiwno_technicaljobskills = 0 if aetiwno_technicaljobskills < 0
+gen aetiwno_concientiousness = concientiousness_ideal - concientiousness_ngwac
+replace aetiwno_concientiousness = 0 if aetiwno_concientiousness < 0
+gen aetiwno_rulebreaker = rulebreaker_ideal - rulebreaker_ngwac
+replace aetiwno_rulebreaker = 0 if aetiwno_rulebreaker < 0
+gen aetiwno_customerserviceskill = customerserviceskill_ideal - customerserviceskill_ngwac
+replace aetiwno_customerserviceskill = 0 if aetiwno_customerserviceskill < 0
+gen aetiwno_teamwork = teamwork_ideal - teamwork_ngwac
+replace aetiwno_teamwork = 0 if aetiwno_teamwork < 0
+gen aetiwno_commute = willingtocommute_ideal - willingtocommute_ngwac
+replace aetiwno_commute = 0 if aetiwno_commute < 0
+gen aetiwno_oddhours = willingtoworkoddhours_ideal - willingtoworkoddhours_ngwac
+replace aetiwno_oddhours = 0 if aetiwno_oddhours < 0
+
 * // gen aetiwo_bodylanguage_x_it_industry = 1*2
 gen aetiwo_body_x_it = aetiwo_bodylanguage*_isindustry6
+gen aetiwno_body_x_it = aetiwno_bodylanguage*_isindustry6
 
 drop formanyprofessionsalternativecre
 drop howlongdoyoubelieveitusually
