@@ -9,10 +9,10 @@ do "D:\workspace\github\research-dissertation-case-for-alt-ed\papers\alt-ed-matc
 * // industry effects; all highly robust (both maxar2 multiple regs and simple effects reg)
 * // n=212, r2=0.0510, ar2=0.0185, maxp=0.288
 reg fav _isindustry1 _isindustry10 _isindustry11 _isindustry2 _isindustry4 _isindustry6 _isindustry8
-* // semi-robust state effects
+* // semi-robust states
+* // significant in multiple regression but not in a simple regression of state effects on favorability
 * // n=212, r2=0.0648, ar2=0.0034, maxp=0.831
 reg fav _isstate13 _isstate14 _isstate16 _isstate20 _isstate21 _isstate25 _isstate26 _isstate34 _isstate36 _isstate37 _isstate39 _isstate6 _isstate8
-* // semi-robust states; significant in multiple regression but not in a simple regression of state effects on favorability
 * // highly robust state effects; maxar2 among state effect simple regression
 * // state effects are about as important as industry effects
 * // n=212, r2=0.0503, ar2=0.0177, maxp=0.227
