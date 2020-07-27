@@ -1,61 +1,22 @@
 {
 \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
-\begin{tabular}{l*{4}{c}}
-\toprule
-                         &      M-2018         &      M-2019         &    M-2019-2         &      M-2020         \\
-\midrule
-AI                       &       0.700\sym{*}  &                     &                     &      -0.708\sym{*}  \\
-                         &      (2.39)         &                     &                     &     (-2.43)         \\
-\addlinespace
-AI^2                     &      -0.065\sym{*}  &                     &                     &       0.061\sym{**} \\
-                         &     (-2.49)         &                     &                     &      (2.66)         \\
-\addlinespace
-Conscientiousness        &                     &                     &                     &       0.014\sym{*}  \\
-                         &                     &                     &                     &      (1.74)         \\
-\addlinespace
-Expectation^2            &                     &       0.113\sym{**} &       0.106\sym{***}&       0.038\sym{***}\\
-                         &                     &      (3.03)         &      (3.65)         &      (8.21)         \\
-\addlinespace
-Expectation^3            &       0.003\sym{***}&      -0.007\sym{*}  &      -0.007\sym{*}  &                     \\
-                         &      (6.22)         &     (-2.09)         &     (-2.54)         &                     \\
-\addlinespace
-Familiarity^3            &                     &                     &                     &                     \\
-                         &                     &                     &                     &                     \\
-\addlinespace
-Familiarity-Grit         &                     &                     &                     &      -0.192\sym{**} \\
-                         &                     &                     &                     &     (-3.15)         \\
-\addlinespace
-Income^3                 &                     &                     &                     &      -0.002\sym{*}  \\
-                         &                     &                     &                     &     (-2.24)         \\
-\addlinespace
-Is College Graduate      &                     &       0.933         &       0.493         &       1.059\sym{***}\\
-                         &                     &      (1.64)         &      (1.08)         &      (3.36)         \\
-\addlinespace
-Is Male                  &                     &      -2.458\sym{*}  &      -1.579\sym{*}  &       0.388         \\
-                         &                     &     (-2.35)         &     (-1.90)         &      (1.30)         \\
-\addlinespace
-Is Manager               &                     &      -0.475         &      -0.424         &       0.251         \\
-                         &                     &     (-1.25)         &     (-1.41)         &      (0.86)         \\
-\addlinespace
-Is STEM                  &      -1.212\sym{*}  &                     &                     &                     \\
-                         &     (-1.87)         &                     &                     &                     \\
-\addlinespace
-IT Industry              &       1.830\sym{**} &                     &                     &       0.859\sym{*}  \\
-                         &      (2.85)         &                     &                     &      (2.34)         \\
-\addlinespace
-Nationalism^2            &       0.011\sym{*}  &                     &                     &                     \\
-                         &      (2.00)         &                     &                     &                     \\
-\addlinespace
-Pro Regulation           &       1.161\sym{*}  &       0.268\sym{***}&       0.244\sym{***}&       0.659\sym{*}  \\
-                         &      (1.72)         &      (3.77)         &      (4.61)         &      (1.86)         \\
-\addlinespace
-Religiosity              &       0.120\sym{*}  &                     &                     &                     \\
-                         &      (2.35)         &                     &                     &                     \\
-\midrule
-R-sqr                    &      0.5971         &      0.5257         &      0.4182         &      0.4427         \\
-N                        &         168         &         192         &         298         &         201         \\
-\bottomrule
-\multicolumn{5}{l}{\footnotesize \textit{t} statistics in parentheses}\\
-\multicolumn{5}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<.01\), \sym{***} \(p<.001\)}\\
+\begin{tabular}{l*{5}{c}}
+    \toprule
+    \multicolumn{1}{c}{Effect Group Name} & \multicolumn{1}{c}{Adj R-Sqr} & \multicolumn{1}{c}{R-Sqr} & \multicolumn{1}{c}{Max p-value} \\
+    Industry                              & -2.240e-01\sym{*}             & -3.831e-01\sym{**}        & -1.507e-01\sym{+}               \\
+    \addlinespace
+    Rulebreaker                           & 2.416e-01\sym{*}              & 3.223e-01\sym{*}          & 1.387e-01                       \\
+    \addlinespace
+    Skill Gaps                            & -1.259e-01\sym{+}             & -1.512e-01                & -1.253e-01\sym{+}               \\
+    with Overqualification                &                               &                           &                                 \\
+    \addlinespace
+    Skill Gaps                            &                               & -6.336e-02                & -3.896e-02                      \\
+    without Overqualification             &                               &                           &                                 \\
+    \addlinespace
+    State, Robust                         & 2.199e-01\sym{+}              & 2.298e-01                 & 1.837e-01                       \\
+    \addlinespace
+    State, Semi-Robust                    &                               & -2.320e-01\sym{++}        & -4.953e-02                      \\
+    \addlinespace
+    \bottomrule
 \end{tabular}
 }

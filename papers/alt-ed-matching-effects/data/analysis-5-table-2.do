@@ -2,6 +2,8 @@ clear
 
 do "D:\workspace\github\research-dissertation-case-for-alt-ed\papers\alt-ed-matching-effects\data\analysis-1-vars.do"
 
+* // output ref: table-1-massaged.tex
+
 * // regs of interest
 * // R1 - modified maxar2 without overqualification
 * // R2 - modified maxar2 with overqualification
