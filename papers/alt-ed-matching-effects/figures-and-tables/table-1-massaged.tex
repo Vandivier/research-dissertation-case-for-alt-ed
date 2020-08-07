@@ -1,6 +1,6 @@
 {
 \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
-\begin{tabular}{l*{5}{c}}
+\begin{tabular}{l*{4}{c}}
     \toprule
     \multicolumn{1}{c}{Effect Group Name} & \multicolumn{1}{c}{Adj R-Sqr} & \multicolumn{1}{c}{R-Sqr} & \multicolumn{1}{c}{Max p-value} \\
     Industry                              & -2.240e-01\sym{*}             & -3.831e-01\sym{**}        & -1.507e-01\sym{+}               \\
@@ -16,7 +16,7 @@
     State, Robust                         & 2.199e-01\sym{+}              & 2.298e-01                 & 1.837e-01                       \\
     \addlinespace
     State, Semi-Robust                    &                               & -2.320e-01\sym{++}        & -4.953e-02                      \\
-    \addlinespace
     \bottomrule
+    \multicolumn{4}{l}{\footnotesize \sym{+} \(p<0.10\), \sym{++} \(p<0.05\), \sym{*} \(p<.01\), \sym{**} \(p<.001\)}                   \\
 \end{tabular}
 }
