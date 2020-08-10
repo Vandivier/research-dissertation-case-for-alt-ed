@@ -22,12 +22,6 @@
 
     \title{
         Perceived Skills Gaps in Alternative Postsecondary Education as Determinants of Hireability
-        % \tnoteref{titlenotes}
-    }
-    \tnotetext[titlenotes]{
-        % Go to \url{https://github.com/Vandivier/research-dissertation-case-for-alt-ed/tree/master/papers/alt-ed-survey}
-        % for additional materials including the online appendix,
-        % survey data, and data analysis source code.
     }
 
     \author[mymainaddress]{John Vandivier}
@@ -47,7 +41,7 @@
         % while perceived technical skill gap is a thing, it's relatively weak compared to soft-skill gaps. therefore i find support for a soft-skill bias
         % further support to soft-skill bias, or relative technical favor for alternative education, is the finding that skill gaps importantly vary by industry, esp IT.
 
-        This paper explores an original data set % (n = 212)
+        This paper explores an original data set
         to understand the influence of perceived skill gaps on hiring.
         Results show that employers expect low skill from non-college graduates,
         even when the candidate is technically certified.
@@ -69,6 +63,7 @@
 \pagebreak
 \linenumbers
 
+% could be \section{Introduction and Description of Data}
 \section{Introduction}
 
 A substantial gap exists between the skills expected by employers and those possessed by college graduates\cite{mcgarry2016examination, malik2017great, abbasi2018analysis, gingras2000there}.
@@ -233,19 +228,48 @@ This paper focuses on alternatively credentialed non-college graduates in order 
 % missing industrial variables: hospitality (restaurant/hotels) and entertainment / media, and sales!
 
 % Responses were remitted through SurveyMonkey web application.
-The method of this study involves a cross-sectional survey at the individual level.
-Paid respondents were obtained through the Amazon Mechanical Turk crowdsourcing service in July of 2020.
+This study uses an ordinary least squares approach to identify the effect of perceived skill gaps on willingness to hire.
+Perceived skill gaps and willingness to hire are included in original response data collected by online survey ($n = 212$).
+Observations are cross-sectional and taken at the individual level.
+The data is available for replication or any other use\footnote{
+    See \url{https://osf.io/8qtxf/?view_only=95b0c0b0c65e4b7983198cc87c2ab733}
+    for data used in this study.
+}.
+
+% This study uses an original cross-sectional survey at the individual level.
+Respondents were obtained through the Amazon Mechanical Turk crowdsourcing service.
 Respondents were United States citizens at or over the age of eighteen.
-Response data is assessed using an ordinary least squares regression analysis.
-The dependent variable of interest is favorability to the hiring of an alternatively educated non-college graduate.
+Respondents were paid for participation.
+The survey administration took place in July of 2020.
 
 Respondents were asked 65 questions in two sections.
-In order to normalize framing and anchoring effects,
-each section was preppended with a contextual message.
-Questions were provided in nonrandom order for the same reason.
-The contextual message of the first section provides a definition of alternative credentials for use in this study.
-The first section gathers respondent data.
+The first section of responses describe the respondent.
+There are 13 questions in this section.
+The second section identifies perceived skill gaps for 13 skills.
+Each section beings with a contextual message to normalize response anchoring.
+Questions are provided in nonrandom order for the same reason.
 Appendix A includes a sample of the survey that includes the contextual messages.
+
+% more on section 1 questions
+
+Data from the second section is used to calculate perceived skill gaps.
+For each of 13 skills, the respondent is asked to imagine four types of candidates.
+One type of candidiate is an ideal candidate.
+At a high level, skill gaps are calculated by differencing job candidate skill and this ideal.
+
+Perceived skill levels are reported for the ideal candidate,
+the average actual employee,
+the average recent college graduate,
+and the average alternatively credentialed non-college graduate.
+Skill gaps are technically computed in two ways.
+One method allows for overqualification of job candidates and the other does not.
+Overqualification effects have been identified as important\cite{green2007there, raybould2005over}, but these effects are often ignored during skill gap analysis\cite{blake_2018}.
+
+When overqualification is allowed, the skill gap is measured as a raw skill gap.
+The raw skill gap is the skill level of the ideal candidate less the skill level of the actual candidate.
+The skill gap without overqualification is calculated as the raw skill gap or zero if the raw skill gap value is negative.
+
+% The dependent variable of interest is favorability to the hiring of an alternatively educated non-college graduate.
 
 The second section asks the respondent to imagine a hypothetical job candidate.
 The section section gathers perception data on this hypothetical candidate from the respondent point of view.
