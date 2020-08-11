@@ -225,10 +225,8 @@ This paper focuses on alternatively credentialed non-college graduates in order 
 
 \section{Methodology}
 
-% missing industrial variables: hospitality (restaurant/hotels) and entertainment / media, and sales!
-
-% Responses were remitted through SurveyMonkey web application.
-This study uses an ordinary least squares approach to identify the effect of perceived skill gaps on willingness to hire.
+% Responses were submitted using the SurveyMonkey web application.
+This study uses ordinary least squares regression analysis to estimate the effect of perceived skill gaps on willingness to hire.
 Perceived skill gaps and willingness to hire are included in original response data collected by online survey ($n = 212$).
 Observations are cross-sectional and taken at the individual level.
 The data is available for replication or any other use\footnote{
@@ -236,7 +234,6 @@ The data is available for replication or any other use\footnote{
     for data used in this study.
 }.
 
-% This study uses an original cross-sectional survey at the individual level.
 Respondents were obtained through the Amazon Mechanical Turk crowdsourcing service.
 Respondents were United States citizens at or over the age of eighteen.
 Respondents were paid for participation.
@@ -248,16 +245,20 @@ There are 13 questions in this section.
 The second section identifies perceived skill gaps for 13 skills.
 Each section beings with a contextual message to normalize response anchoring.
 Questions are provided in nonrandom order for the same reason.
-Appendix A includes a sample of the survey that includes the contextual messages.
+Appendix A provides a copy of the survey.
 
-% more on section 1 questions
+% TODO: should we give more description to section 1 questions? do we need to go through each factor...?
+% for now I punt this to results section, so I only actually describe factors that have a substantial result.
+% The dependent variable of interest is favorability to the hiring of an alternatively educated non-college graduate.
+% missing industrial variables: hospitality (restaurant/hotels) and entertainment / media, and sales!
 
 Data from the second section is used to calculate perceived skill gaps.
 For each of 13 skills, the respondent is asked to imagine four types of candidates.
-One type of candidiate is an ideal candidate.
-At a high level, skill gaps are calculated by differencing job candidate skill and this ideal.
+One type of candidate is an ideal candidate.
+At a high level, skill gaps are calculated by differencing skill levels of the ideal candidate with others.
 
-Perceived skill levels are reported for the ideal candidate,
+Perceived skill is reported on a scale from 1 to 10.
+Perceived skill is reported for the ideal candidate,
 the average actual employee,
 the average recent college graduate,
 and the average alternatively credentialed non-college graduate.
@@ -269,26 +270,8 @@ When overqualification is allowed, the skill gap is measured as a raw skill gap.
 The raw skill gap is the skill level of the ideal candidate less the skill level of the actual candidate.
 The skill gap without overqualification is calculated as the raw skill gap or zero if the raw skill gap value is negative.
 
-% The dependent variable of interest is favorability to the hiring of an alternatively educated non-college graduate.
-
-The second section asks the respondent to imagine a hypothetical job candidate.
-The section section gathers perception data on this hypothetical candidate from the respondent point of view.
-The second section contains responses on a scale from 1 to 10.
-Each of these questions describes a skill and a kind of candidate.
-The response indicates the degree of skill expected by the respondent for such a candidate.
-The contextual message of the second section gives the same information just given to the present reader.
-That is, it describes how to answer questions in that section.
-The message also advises that each question is meant to take only a few seconds.
-
-In total, the cross-sectional data allows an analyst to describe a type of indi
-
-how is skill gap measured? typically, skill of candidate compared to ideal; but this produces on overestimate of the skill gap imo.
-The typical employee also has a skill gap compared to ideal, so:
-1. if the candidate is as skilled as an actual employee, they should be hireable (well, maybe not if org wants to upskill or correct for onboarding costs)
-2. if the organization routinely hires recent college graduates, an alt ed candidate should be higherable if their gaps are similar to a college grad.
-
-% (horse racing): https://www.afterecon.com/economics-and-finance/kitchen-sink-regression-and-horse-racing/
-% should probably randomly split sample and out-of-sample test with factors to combat overfit
+% begin low importance comment...
+% this paper compares alt ed to ideal, but other papers could compare other sets:
 % 3 different explanatory constructs are explored, but only the winner is reported in the paper:
 % 1. alt ed to ideal
 % 2. alt ed to typical [not interesting for this paper]
@@ -296,14 +279,12 @@ The typical employee also has a skill gap compared to ideal, so:
 % 4. alt ed to ideal without overqualification
 % 5. alt ed to typical without overqualification [not interesting for this paper]
 % 6. alt ed to college grad
-overqualification concern?
-aggregate excess attractiveness by recent college grads against ideal.
-aggregate excess willingness to break rules by alt ed noncollege grads.
-many non-aggregate, or respondent-level, cases of alt ed overqualification; in fact, some such responses for every question kind (the 13 types)
-
-Only unassailable approach is to compare alt ed to ideal; bc typical employees and recent grads are not always theoretically hireable.
-Left hand param is favorability.
-Optional but interesting: college grad to ideal or college grad to alt ed; so that we can indirectly associate favorability to actual propensity to hire. (which we have for college grads)
+% (horse racing): https://www.afterecon.com/economics-and-finance/kitchen-sink-regression-and-horse-racing/
+% should probably randomly split sample and out-of-sample test with factors to combat overfit
+% aggregate excess attractiveness by recent college grads against ideal.
+% aggregate excess willingness to break rules by alt ed noncollege grads.
+% many non-aggregate, or respondent-level, cases of alt ed overqualification; in fact, some such responses for every question kind (the 13 types)
+% Optional but interesting: college grad to ideal or college grad to alt ed; so that we can indirectly associate favorability to actual propensity to hire. (which we have for college grads)
 
 % objective of analysis
 % how much does matching explain (caveat: not multiply regressed, so matching effect is likely overstated in this paper, and possibly partially partialled-in to prior work)
