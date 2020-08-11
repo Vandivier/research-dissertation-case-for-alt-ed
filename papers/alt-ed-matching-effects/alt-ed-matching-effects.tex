@@ -378,7 +378,47 @@ This is not taken to be a general lesson about skill gaps.
 Willingness to break rules is a special case of a behavior which is valuable under certain parameters.
 This contrasts with something like poor communication skill which is generally detrimental.
 
-Table \ref{tab:table_new_ols} provides several model results.
+Table \ref{tab:table_new_ols} reports selected factor statistics across five least squares multiple regressions.
+The selected factors which are reported include any perceived skill gap which is important in any specification.
+Factor importance is determined by the ability of a factor to improve model adjusted explanatory power.
+Model 1 is a multiple regression using skill gaps that allow for overqualification.
+Model 2 is a multiple regression without overqualification.
+
+Models 3 and 4 are equivalent to models 1 and 2, respectively, after normalizing for certain effects.
+Industry, state, and company size effects are the specific effects which are normalized.
+These effects are normalized for robustness by cross-referencing the subfactors from models 1 and 2.
+Robust effects are retained.
+For example, some state effects are important in one specification and not in the other.
+Such state effects are dropped in Models 3 and 4.
+
+Model 5 is specified as Model 4 plus two adjustments.
+First, the factor for salary is dropped.
+The salary factor improved adjusted explanatory power in Model 2, but it provided no such benefit in any other model.
+Moreover, the p-value of this factor was unacceptably low in Model 4 ($p > 0.9$).
+The second adjustment is to add a duration factor.
+
+The duration factor is a measure of the length of time a respondent believes it takes to earn an alternative credential.
+Duration is a categorical variable which was important in both Models 1 and 2.
+As a categorical variable, it was decomposed into a boolean series for factor analysis.
+Models 1 and 2 retained one or more duration dummies, but none overlapped.
+As a result, duration was dropped from Models 3 and 4.
+
+After dropping the salary factor, duration was reanalyzed in the new multiple regressive context.
+A single duration factor proved important in this reanalysis.
+The duration factor which indicates that a respondent believes it takes more than a year to obtain an alternative credential
+is significantly and importantly associated with improved willingness to hire ($\beta = 0.875, p < 0.01$).
+
+The preferred model is able to explain roughly one third of the willingness to hire.
+7 of 13 skill gaps investigated contribute to this model, and two stand out as the most significant.
+Technical skill gaps are insignificant but they are robust across specifications and possess the expected negative sign.
+Other than technical skill, the remaining gaps are soft skills.
+Body language skill gaps and skill gaps in work ethic are the two most significant factors in this model.
+The relative importance of soft skill gaps, and work ethic in particular, adds weight to a revision of the usual signalling explanation as the most plausible story.
+
+% but it's a problem that there's a negative coefficient on work ethic
+% also discuss the interaction effects and firm size effects...
+
+
 
 % TODO:
 % 1. what is the preferred model and why?
