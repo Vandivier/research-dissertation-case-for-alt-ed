@@ -317,7 +317,40 @@ The skill gap without overqualification is calculated as the raw skill gap or ze
 
 \section{Results}
 
-TODO: Table 1 should have skill gaps from preferred model, model 5. so-called semi-robust skill gaps.
+% This paper acknowledges that own analysis proceeds through a technocentric lens.
+% This is an important anchoring point for the analysis, and it may skew application of results in low-technology or low-skill sectors.
+% The technocentric lens is an important caveat and anchoring point, but I argue that it is about as proper as any anchoring point.
+% In economics, after all, technology operationalizes the theory of innovation per se.
+% All skills can be viewed as point-in-time innovations, so that if there was no innovation then neither would there be a need for any skill.
+% By the same token, a technocentric lens at the present seems close to a cross-industry lens at a future time.
+% Anchoring to any other industry would be both asymmetric and unusuful in the future.
+% Perhaps this analysis is slightly skewed, but at least it is skewed only against the past, and will be increasingly useful in the future without partiality to any particular industry.
+% In addition, we did check for industrial effects, but the analytical skew may persist pass the data.
+
+% This orientation occurs because New Alternative Education first flourished for roles in the information technology sector, and only later did roles like sales, business, art, nursing, and more join in.
+%     [can refer to my New Digital Education] - https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3530647
+
+% Compare directly to bootcamp results from Indeed: https://www.indeed.com/lead/what-employers-think-about-coding-bootcamp
+
+Alternatively credentialed non-college graduate (ACNG) hireability was generally positive.
+The mean response was 7.5 on a scale from one to ten ($\sigma = 1.80$).
+Employers status was not associated with a significant response effect.
+Perceived skill gaps explained a significant and important portion of hireability variance.
+
+Table \ref{tab:explantory_power} compares perceived skill gap explanatory power in a simple regression
+to explanatory power of other simple regressions involving factors of known relevance to hireability.
+Allowing for overqualification seems to weaken explanatory power.
+Overqualification effects seem to be heterogeneously signed per skill, so generalizing weakens overall explanatory power relative to ignoring these effects.
+With overqualification, perceived skill gaps explain about fifty percent more than industrial effects or robust state effects.
+Without overqualification, the adjusted explanatory power of perceived skill gaps is about three times the adjusted explanatory power of industry or state effects.
+Semi-robust state factors are dummy variables by state which are significant in a multiple regression.
+Robust state factors are subset of semi-robust state factors which are additionally significant in a simple regression.
+
+Table \ref{tab:explantory_power} also describes the explanatory power of so-called rulebreaker effects.
+Whether the candidate is perceived as a rule breaker is a perceived skill gap, but employers evaluate this gap in a heterogenous and multispecific way.
+In the first place, this heterogenous evaluation has sign and magnitude implications for the dependent variable of interest.
+Secondarily, heterogenous evaluation implies a qualitatively different evaluation.
+These differences are captured using three questions in the first section of the survey.
 
 % TODO: should this table include k, the number of independent factors per factor group?
 \begin{table}
@@ -328,25 +361,35 @@ TODO: Table 1 should have skill gaps from preferred model, model 5. so-called se
     \label{tab:explantory_power}
 \end{table}
 
-% do matching effects work?
-% do ideal match gaps or normative match gaps have more explanatory power?
-% is there a significant expected wage differential?
-% college skill gaps are things; how big are they and how are they qualitatively different compared to alternative credential skill gaps?
+The three rulebreaker questions measure respondent agreement on a scale from 1 to 10 with statements about rule breakers, or "People who are willing to break formal or informal rules and norms."
+The first statement indicates that rule breakers present a risk to the reputation, productivity, or value of a company.
+This statement received the least agreement and greatest response variance among three qualitatively different descriptions of people that are willing to break rules ($\mu = 6.40, \sigma = 2.55$).
 
-This paper acknowledges that own analysis proceeds through a technocentric lens.
-This is an important anchoring point for the analysis, and it may skew application of results in low-technology or low-skill sectors.
-The technocentric lens is an important caveat and anchoring point, but I argue that it is about as proper as any anchoring point.
-In economics, after all, technology operationalizes the theory of innovation per se.
-All skills can be viewed as point-in-time innovations, so that if there was no innovation then neither would there be a need for any skill.
-By the same token, a technocentric lens at the present seems close to a cross-industry lens at a future time.
-Anchoring to any other industry would be both asymmetric and unusuful in the future.
-Perhaps this analysis is slightly skewed, but at least it is skewed only against the past, and will be increasingly useful in the future without partiality to any particular industry.
-In addition, we did check for industrial effects, but the analytical skew may persist pass the data.
+The second statement states that people break rules which hold them back, and that rule breakers "could just as easily be high performers as low performers."
+This statement received the most agreement and least comparative response variance as a rule breaker description ($\mu = 7.42, \sigma = 1.91$).
+The agreement with this statement provides evidence against the thesis that employers value conformity for its own sake.
+In turn, this adds weight to the theory that employers value conformity as a risk aversion tactic, but they actually believe nonconformity may signal positive outlier potential.
+The third description of rule breakers states that they tend to be gifted in the areas of innovation or creativity, and that such people may benefit the company of a culture ($\mu = 7.25, \sigma = 2.03$).
 
-% This orientation occurs because New Alternative Education first flourished for roles in the information technology sector, and only later did roles like sales, business, art, nursing, and more join in.
-%     [can refer to my New Digital Education] - https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3530647
+Each of the three rulebreaker effects turns out to be independently important.
+These effects collectively explain more than three times as much response variance as do industrial or state effects.
+Rulebreaker effects are about twice as important as perceived skill gaps.
+This is not taken to be a general lesson about skill gaps.
+Willingness to break rules is a special case of a behavior which is valuable under certain parameters.
+This contrasts with something like poor communication skill which is generally detrimental.
 
-% Compare directly to bootcamp results from Indeed: https://www.indeed.com/lead/what-employers-think-about-coding-bootcamp
+Table \ref{tab:table_new_ols} provides several model results.
+
+% TODO:
+% 1. what is the preferred model and why?
+% 2. employer size also matters, adding more to the risk theory
+% 3. this implies skills matter, but which ones?
+% 4. one of them is concientiousness, so we see the signal theorist hypothesis isn't totally invalidated, only partially; concientiousness is generally good while conformity is only contextually good.
+% 5. industrial effects and state effects matter; policy may be a thing here; further research needed
+% 6. conclusion:
+%    a. repeat: industrial effects and state effects matter; policy may be a thing here; further research needed
+%    b. point out that a bunch of the variance still isn't explained; refer to my other paper perhaps for other factors that matter
+%    c. point out that employer perception is often wrong, eg w respect to technical skill: next steps to rectify?
 
 % n=212
 \begin{table}
