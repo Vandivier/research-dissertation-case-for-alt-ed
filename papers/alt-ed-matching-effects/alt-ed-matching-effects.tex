@@ -384,6 +384,15 @@ Factor importance is determined by the ability of a factor to improve model adju
 Model 1 is a multiple regression using skill gaps that allow for overqualification.
 Model 2 is a multiple regression without overqualification.
 
+% n=212
+\begin{table}
+    \caption{Table of Multiple Regression on Favorability, Selected Variables}
+    \resizebox{\columnwidth}{!}{
+        \input{./figures-and-tables/table-2-massaged.tex}
+    }
+    \label{tab:table_new_ols}
+\end{table}
+
 Models 3 and 4 are equivalent to models 1 and 2, respectively, after normalizing for certain effects.
 Industry, state, and company size effects are the specific effects which are normalized.
 These effects are normalized for robustness by cross-referencing the subfactors from models 1 and 2.
@@ -419,79 +428,118 @@ Other than technical skill, the remaining gaps are soft skills.
 Body language skill gaps and skill gaps in work ethic are the two most significant factors in this model.
 The relative importance of soft skill gaps, and work ethic in particular, adds weight to a revision of the usual signalling explanation as the most plausible story.
 
-% why positive coefficient on work ethic? 3 theories:
-% 1. it's an attenuation for a negative halo effect which obtains when respondent proposes a large gap
-%    a. that is, the respondent disproportionately penalizes all other skills when concientiousness is low, but still is favorable to hiring.
-%    b. supporting evidence: coefficient in simple regression is negative (but also insignificant 0.5 < p < 0.55)
-%    c. more supporting evidence: coefficient is negative and of nontrivial signifiance if all other skill gaps are dropped (p < 0.31)
-%    d. specific attenuation for a subset of rulebreakers* plus a specific set of skills: aetiwno_bodylanguage aetiwno_commute aetiwno_concientiousness aetiwno_customerserviceskill aetiwno_technicaljobskills
-% note: work ethic gap is usually less than three
-% note: doesn't explain college hireability differential very much bc new college grads are taken to have about the same level of concientiousness (7.14 vs 7.11 mean response; sigma 1.87 vs 1.85)
-% 2. i measured that gap wrong; false - verified computation is as expected in do file
-% 3. it's part of a desirable bundle; they really are viewed as lower work ethic but they have offsetting benefits elsewhere, eg creativity
-%   a. not really plausible bc every other study says work ethic is of general importance; no cases of "it's good to be low in work ethic" are known
-%   b. maybe offsetting good is salary?
-% also discuss the interaction effects and firm size effects...
+An important and complicated finding involves concientiousness.
+Notice that the effect is robustly positive across specifications.
+Simple intuition would indicate that a large concientiousness gap is associated with improved hireability.
+This is an oversimplification which results from linear analysis.
 
-TODO: it's a problem that there's a negative coefficient on work ethic
+A simple regression of concientiousness on favorability produces an expected negative sign.
+That supports the intuitive notion that a lack of concientiousness is associated with reduced hireability.
+That result is also an oversimplification.
+A synthesis of both results and outside research indicates there is some bliss point for work ethic.
+The change in the model constant from the simple regression to the multiple regression explains the robust sign inversion.
+In the multiple regression, the model constant is near $0.5$, while in the simple regression it is about $7.5$.
 
-https://onlinelibrary.wiley.com/doi/10.1002/ijop.12511
-"conscientiousness have inverted U‐shaped relationships with contributions to teamwork"
+In one study, conscientiousness exhibited a parabolic relationship with peer-rated team contribution\cite{curcseu2019personality}.
+Adding a quadratic term to Model 5 replicates a negative marginal relation between concientiousness and teamwork skill.
+In addition, concientiousness exhibits a negative marginal relation with hireability overall.
+% I don't do causal analysis of team dynamics on hireability but it's intuitive.
 
-1. attenuate negative halo
-2. low concientiousness could indicate good social skills / culture fit (don't be a workaholic type of thing)
-3. table of cross correlation for model 5; also note that college grads have insignificantly different, so importance of concientiousness doesn't feed signal theory
+% much of the below could be heavily edited or deleted pending hanson's feedback.
+Complementary to the bliss point explanation is an explanation from attenuation.
+In the current data set, concientiousness exhibits an important cross-correlation with several factors including willingness to commute and customer service skill.
+Concientiousness also structurally interacts with independent rulebreaker effects.
+Theoretically, concientiousness is related to rule breaking behavior, but the effect on hireability is interacted with employer perceptions of those who break rules.
+Because these factors are entered independently in the multiple regression, the underlying component of concientiousness is entered in redunantly.
+Because concientiousness gaps have a negative effect, the overall negative effect is overstated.
+The direct factor of concientiousness corrects, or attenuates, the the overstated effect which is partialled in, or captured in, the correlated independent factors.
+Removal of other skill gap factors and rulebreaker factors from Model 5 validates this explanation by yielding a negative coefficient ($\beta = -0.084, p < 0.31$).
 
-% TODO:
-% 1. what is the preferred model and why?
-% 2. employer size also matters, adding more to the risk theory
-% 3. this implies skills matter, but which ones?
-% 4. one of them is concientiousness, so we see the signal theorist hypothesis isn't totally invalidated, only partially; concientiousness is generally good while conformity is only contextually good.
-% 5. industrial effects and state effects matter; policy may be a thing here; further research needed
-% 6. conclusion:
-%    a. repeat: industrial effects and state effects matter; policy may be a thing here; further research needed
-%    b. point out that a bunch of the variance still isn't explained; refer to my other paper perhaps for other factors that matter
-%    c. point out that employer perception is often wrong, eg w respect to technical skill: next steps to rectify?
+The importance of concientiousness does not add weight to the classic signaling explanation.
+The concientiousness gap is not a comparative gap between a recent college graduate and a non-college graduate.
+It is a gap between an ideal job candidate and an ACNG.
+An important note is that the concientiousness gap among recent college graduates is statitistically no different from an ACNG.
+Unsurprisingly, the candidate perceived to have a minimal concientiousness gap is the typical employee already working in the labor force.
+A comparative gap of note would be that college graduates were perceived to have better technical skills compared to the average ACNG.
 
-% n=212
-\begin{table}
-    \caption{Table of Multiple Regression on Favorability, Selected Variables}
-    \resizebox{\columnwidth}{!}{
-        \input{./figures-and-tables/table-2-massaged.tex}
-    }
-    \label{tab:table_new_ols}
-\end{table}
+Employer size was an important factor in the preferred model.
+The largest category of employer is positively associated with willingness to hire an ACNG.
+This matches the risk aversion model.
+The largest category of employer has lower risk, and in fact generates comparative advantage, when hiring from a high-variance pool of candidate quality.
 
-\section{Conclusions}
+Some state and industrial effects are identified.
+No particular relation among state effects was found, but further comparative policy research is encouraged.
+With respect to industry, an interesting interaction between body language skill and employment in the information technology is identified.
+The interacted variable has a positive association with willingness to hire.
+Body language skill gaps on their own are associated with reduced willingness to hire.
+This specifically indicates a reduced penalty for lacking body language communication skills in the information technology industry.
+With less strength and more breadth, a positive coefficient to the interaction variable indicates a reduced penalty for generalized soft skill deficiency in the information technology industry.
 
-dynamic reanalysis is important as these perceptions by skill may change over time; specifically, the normative status of education changes over time; accredited system once was abnormal (but good-weird, indicative of high performers)
+A reduced penalty for soft skill deficit helps explain the particular flourishing of alternative credentials in the information technology industry.
+The reduced penalty in this particular industry might be related to a relative lack of deregulation in the industry.
+Alternatively, it might be related to cultural norms around the acceptability of an anti-social geek in a technology field.
+The cultural norm itself might be derived from deeper collective personality organization.
+That is, there is less technical need for social skills in programming and related discplines, so introverts may naturally obtain a comparative advantage in this field.
 
-It's not a nerd / geek stereotype wherein a technical individual lacks social skill
-rather, it's a general devaluation of vocational schooling as devoid of soft skill improvement
-the notion being that college to some degree endows social skill, or at least filters for or signals it.
+\section{Conclusion}
 
-In David Blake's approach / Degreed's Approach skills are 1-8 and there is no notion of 'overqualification' (for better or worse)
-https://degreed.com/skill-certification
-(in this idea, overqualified candidates are qualified; discounts overqualification as detrimental,
-ie hiring manager doesn't want to hire a report with many years of mgr experience)
-...
-The Expertise Economy
-measure skill gap as skills quotient: https://www.expertiseeconomy.com/speaking
+This study demonstrates that perceived skill gap variance is qualitatively different for alternatively educated non-college graduates.
+Perceived skill gaps do a better job of explaining willingness to hire than do other widely recognized effects including industry and state effects.
+Employer factors better explain candidate hireability than do the perceived skill gaps themselves.
+This paper finds multiple facts in support of employer risk aversion over conformity selection when considering job candidates that lack a college degree.
+Technical skill gaps were identified with less relevance to the hiring decision when compared with soft skill gaps for the ACNG job candidate.
 
-...
+Some evidence on the role of misinformation is demonstrated in a survey on trade schooling taken in 2019\cite{arabia_2019}.
+Only 27 percent of respondents correctly responded that lower debt is an advantage of enrolling in trade school relative to college.
+Additionally, over 75 percent of respondents failed to notice that trade school graduates receive industry employment sooner
+and receive specialized training when compared to a four-year college.
+% The news that employers are generally favorable to alternative credentials should be shared far and wide.
+% The current education system should be reformed to better inform students about non-college career entry.
+Obtaining a college degree after obtaining some work experience will allow students to leverage employer tuition benefits.
+% Government should emphasize job skills over the formal degree.
+% Recent moves have begun such emphasis\cite{https://www.usatoday.com/story/news/politics/2020/06/26/trump-executive-order-stresses-skill-over-college-degree-hiring/3263074001/}
 
 % Out of scope for this paper, but important:
 % 1. aggregate social, legal, political, and economic movements (aggregate study is wanting, we know states, time, industry all matter)
 % 2. applicant personal effects, and interviewer-applicant interaction effects
 % despite those caveats, we can reasonably explain employer willingness to hire their imagined candidate based on matching effects
 
-Notice that the alternatively credentialed individual doesn't need the average employer to value him or her.
-He or she simply needs some significant chance of being hired, and that certainly exists.
-Moreover, the average employer is already favorable to alternative credentials.
-As more alternatively credentialed individuals are highered and promoted through society,
-there is reason to think the number of opportunities afforded to alternatively educated individuals may grow.
-The problem doesn't seem to be about whether alternative credentials work, but whether they exist in a given industrial context,
-and whether an individual would like to pay the college premium for better favorability when both options are feasible.
+% Studying skill gaps provides an explanation with several gaps.
+In addition to the noted applications of the results of this study, there are several ways in which results could be technically improved.
+The preferred model explains about one third of willingness to hire.
+This study uses a cross-sectional analysis to investigate a subject that varies over time.
+The traditional system of accredited undergraduate education was itself at one time an innovation.
+Abnormal job candidates differentiated themselves using novel credentials, and broad employer adoption was achieved over time.
+This paper concludes that the alternative credentials of today will follow a similar pattern.
+% also, role, firm, and industry-level supply, demand, employment, and so on...
+
+Dynamic technical analysis would yield deeper understanding of such trends and achieve greater overall explanatory power.
+Dynamic analysis would also generate better opportunity for causal understanding.
+Other research has conducted some dynamic analysis of the same dependent variable
+with differing independent inputs\cite{vandivier2020preliminary}.
+Integrated modelling of those effects with skill gap analysis could replicate results and generate new models of better explanatory power.
+Specifications that allow for overqualification effects and heterogeneous curved relations between skill gaps and hireability would improve not only the present paper,
+but the state of the art in skill gap analysis.
+
+If perceived skill is representative of actual skill,
+then the current study concludes that employers should be more willing to hire alternatively educated non-college graduates.
+At the same time, this paper demonstrates plausible misalignment of perceived and actual skill in some cases.
+Last mile training is a type of alternative education which has been specifically recommended as a remedy for technical skill gaps among recent college graduates.
+It is surprising that the average recent college graduate in the sample of analysis is perceived to have better technical skill compared to the average ACNG.
+
+Employers seem to be favorable to individuals with alternative credentials.
+In many cases, employer-perceived skill gaps are not statistically different when comparing recent college gradutes with ACNG candidates.
+The relative social preference for the college degree may be better explained by a lack of relevant credentials for some occupations,
+government subsidy of the legacy system,
+and ignorance about available alternative opportunities on the part of students and those influencing student enrollment choices.
+
+% Notice that the alternatively credentialed individual doesn't need the average employer to value him or her.
+% He or she simply needs some significant chance of being hired, and that certainly exists.
+% Moreover, the average employer is already favorable to alternative credentials.
+% As more alternatively credentialed individuals are highered and promoted through society,
+% there is reason to think the number of opportunities afforded to alternatively educated individuals may grow.
+% The problem doesn't seem to be about whether alternative credentials work, but whether they exist in a given industrial context,
+% and whether an individual would like to pay the college premium for better favorability when both options are feasible.
 
 \bibliography{./BibFile}
 

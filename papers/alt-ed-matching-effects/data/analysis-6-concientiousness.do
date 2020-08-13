@@ -9,6 +9,9 @@ reg fav aetiwno_concientiousness _is*
 * // negative linear positive marginal; not surprising; feeds attenuation theory (concientiousness is redundant under multiple other factors, so pure var corrects it)
 reg fav c_*
 
+* // negative marginal relation to teamwork explains hireability problem
+reg aetiwno_team c_1 c_2
+
 * // preferred reg model 5 without rulebreakers* and other skills negative beta as expected
 reg favorability _iscompanysize4 _iscompanysize8 _isduration6 _ismanager1 _ismanager2 _isindustry1 _isindustry10 _isindustry11 _isindustry2 _isindustry4 _isindustry6 _isindustry8 _isstate13 _isstate16 _isstate26 _isstate34 _isstate37 _isstate39 _isstate8 aetiwno_concientiousness
 
