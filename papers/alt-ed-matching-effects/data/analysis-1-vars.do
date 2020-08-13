@@ -68,6 +68,21 @@ replace aetiwno_oddhours = 0 if aetiwno_oddhours < 0
 gen aetiwo_body_x_it = aetiwo_bodylanguage*_isindustry6
 gen aetiwno_body_x_it = aetiwno_bodylanguage*_isindustry6
 
+gen c_1 = aetiwno_concientiousness
+gen c_2 = c_1*c_1
+gen c_x_bodylanguage = c_1*aetiwno_bodylanguage
+gen c_x_commute = c_1*aetiwno_commute
+gen c_x_cust = c_1*aetiwno_cust
+gen c_x_team = c_1*aetiwno_team
+gen c_x_tech = c_1*aetiwno_tech
+gen c_x_rulebreaker_risky = c_1*rulebreakersnormsprobablyhaveaha
+gen c_x_rulebreaker_rockstars = c_1*rulebreakersnormsmightbedoingsob
+gen c_x_rulebreaker_culture_add = c_1*rulebreakersnormstendtobegiftedi
+
+gen r_x_rulebreaker_risky = aetiwno_rulebreaker*rulebreakersnormsprobablyhaveaha
+gen r_x_rulebreaker_rockstars = aetiwno_rulebreaker*rulebreakersnormsmightbedoingsob
+gen r_x_rulebreaker_culture_add = aetiwno_rulebreaker*rulebreakersnormstendtobegiftedi
+
 drop formanyprofessionsalternativecre
 drop howlongdoyoubelieveitusually
 drop ifyoudocontributetohiringandfiri

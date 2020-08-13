@@ -408,6 +408,10 @@ A single duration factor proved important in this reanalysis.
 The duration factor which indicates that a respondent believes it takes more than a year to obtain an alternative credential
 is significantly and importantly associated with improved willingness to hire ($\beta = 0.875, p < 0.01$).
 
+An individual is considered an employer if they state that they contribute to hiring and firing decisions.
+Employer effects are positively signed in all five models, but the significance is lost after normalizing effects.
+This suggests that employer favorability to alternative credentials is sensitive to industry and state of residence.
+
 The preferred model is able to explain roughly one third of the willingness to hire.
 7 of 13 skill gaps investigated contribute to this model, and two stand out as the most significant.
 Technical skill gaps are insignificant but they are robust across specifications and possess the expected negative sign.
@@ -415,10 +419,28 @@ Other than technical skill, the remaining gaps are soft skills.
 Body language skill gaps and skill gaps in work ethic are the two most significant factors in this model.
 The relative importance of soft skill gaps, and work ethic in particular, adds weight to a revision of the usual signalling explanation as the most plausible story.
 
-% but it's a problem that there's a negative coefficient on work ethic
+% why positive coefficient on work ethic? 3 theories:
+% 1. it's an attenuation for a negative halo effect which obtains when respondent proposes a large gap
+%    a. that is, the respondent disproportionately penalizes all other skills when concientiousness is low, but still is favorable to hiring.
+%    b. supporting evidence: coefficient in simple regression is negative (but also insignificant 0.5 < p < 0.55)
+%    c. more supporting evidence: coefficient is negative and of nontrivial signifiance if all other skill gaps are dropped (p < 0.31)
+%    d. specific attenuation for a subset of rulebreakers* plus a specific set of skills: aetiwno_bodylanguage aetiwno_commute aetiwno_concientiousness aetiwno_customerserviceskill aetiwno_technicaljobskills
+% note: work ethic gap is usually less than three
+% note: doesn't explain college hireability differential very much bc new college grads are taken to have about the same level of concientiousness (7.14 vs 7.11 mean response; sigma 1.87 vs 1.85)
+% 2. i measured that gap wrong; false - verified computation is as expected in do file
+% 3. it's part of a desirable bundle; they really are viewed as lower work ethic but they have offsetting benefits elsewhere, eg creativity
+%   a. not really plausible bc every other study says work ethic is of general importance; no cases of "it's good to be low in work ethic" are known
+%   b. maybe offsetting good is salary?
 % also discuss the interaction effects and firm size effects...
 
+TODO: it's a problem that there's a negative coefficient on work ethic
 
+https://onlinelibrary.wiley.com/doi/10.1002/ijop.12511
+"conscientiousness have inverted U‐shaped relationships with contributions to teamwork"
+
+1. attenuate negative halo
+2. low concientiousness could indicate good social skills / culture fit (don't be a workaholic type of thing)
+3. table of cross correlation for model 5; also note that college grads have insignificantly different, so importance of concientiousness doesn't feed signal theory
 
 % TODO:
 % 1. what is the preferred model and why?
@@ -441,6 +463,8 @@ The relative importance of soft skill gaps, and work ethic in particular, adds w
 \end{table}
 
 \section{Conclusions}
+
+dynamic reanalysis is important as these perceptions by skill may change over time; specifically, the normative status of education changes over time; accredited system once was abnormal (but good-weird, indicative of high performers)
 
 It's not a nerd / geek stereotype wherein a technical individual lacks social skill
 rather, it's a general devaluation of vocational schooling as devoid of soft skill improvement

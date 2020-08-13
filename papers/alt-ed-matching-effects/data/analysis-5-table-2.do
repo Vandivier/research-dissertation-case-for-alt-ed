@@ -35,10 +35,17 @@ estimates store R3, title(Model 3)
 reg favorability _iscompanysize4 _iscompanysize8 _ismanager1 _ismanager2 _isindustry1 _isindustry10 _isindustry11 _isindustry2 _isindustry4 _isindustry6 _isindustry8 rulebreakers* aetiwno_bodylanguage aetiwno_commute aetiwno_concientiousness aetiwno_customerserviceskill aetiwno_technicaljobskills aetiwno_salary aetiwno_teamwork aetiwno_rulebreaker aetiwno_body_x_it _isstate13 _isstate16 _isstate26 _isstate34 _isstate37 _isstate39 _isstate8
 estimates store R4, title(Model 4)
 
-* // preferred R5 is R4 minus salary gap and plus _isduration6; worth talking about
-* // ar2 ~0.29; halfway between 1/4 and 1/3...added robustness of later models without giving up too much r2
+* // R5 is R4 minus salary gap and plus _isduration6; worth talking about
+* // ar2 = .2866; halfway between 1/4 and 1/3...added robustness of later models without giving up too much r2
 reg favorability _iscompanysize4 _iscompanysize8 _isduration6 _ismanager1 _ismanager2 _isindustry1 _isindustry10 _isindustry11 _isindustry2 _isindustry4 _isindustry6 _isindustry8 rulebreakers* aetiwno_bodylanguage aetiwno_commute aetiwno_concientiousness aetiwno_customerserviceskill aetiwno_technicaljobskills aetiwno_teamwork aetiwno_rulebreaker aetiwno_body_x_it _isstate13 _isstate16 _isstate26 _isstate34 _isstate37 _isstate39 _isstate8
 estimates store R5, title(Model 5)
+
+* // R6 is R5 pl
+* // ref analysis-6-concientiousness.do
+* // ar2 = .2874
+reg favorability _iscompanysize4 _iscompanysize8 _isduration6 _ismanager1 _ismanager2 _isindustry1 _isindustry10 _isindustry11 _isindustry2 _isindustry4 _isindustry6 _isindustry8 rulebreakers* aetiwno_bodylanguage aetiwno_commute aetiwno_customerserviceskill aetiwno_technicaljobskills aetiwno_teamwork aetiwno_rulebreaker aetiwno_body_x_it _isstate13 _isstate16 _isstate26 _isstate34 _isstate37 _isstate39 _isstate8 c_2
+
+* // TODO: rulebreaker interaction, concientiousness interactions
 
 * // using temp.tex, booktabs
 esttab R1 R2 R3 R4 R5, keep(_isduration6 _iscompanysize* _ismanager* rulebreakers* aetiwo* aetiwno*) label order(_isduration6 _iscompanysize* _ismanager* rulebreakers* aetiwo* aetiwno*) replace se star(+ 0.10 ++ 0.05 * .01 ** .001) stats(r2 N, fmt(4 0 1) label(R-sqr)) varwidth(25) b(%10.7e)  mtitles(1 2 3 4) nonumbers
