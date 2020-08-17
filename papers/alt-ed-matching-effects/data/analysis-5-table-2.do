@@ -5,10 +5,11 @@ do "D:\workspace\github\research-dissertation-case-for-alt-ed\papers\alt-ed-matc
 * // output ref: table-1-massaged.tex
 
 * // regs of interest
-* // R1 - modified maxar2 without overqualification
-* // R2 - modified maxar2 with overqualification
-* // R3 - modified maxar2 without overqualification, with normalized effects
-* // R4 - modified maxar2 with overqualification, with normalized effects
+* // R1 - modified maxar2 with overqualification
+* // R2 - modified maxar2 without overqualification
+* // R3 - modified maxar2 with overqualification, with normalized effects
+* // R4 - modified maxar2 without overqualification, with normalized effects
+* // R5 - preferred without overqualification
 
 * // on normalized effects:
 * // state normalized to robust state effects. these states are robust across specification and independently important

@@ -72,6 +72,6 @@ reg favorability _iscompanysize4 _iscompanysize8 _isduration1 _isduration2 _isdu
 reg favorability _ismanager1 _ismanager2 _isstate13 _isstate21 _isstate34 _isstate36 _isstate8 aetiwo_concientiousness aetiwo_customerserviceskill rulebreakers*
 
 * // re-insert aetiwo_rulebreaker to strong model, in order to tell a story (even though this effect is weak)
-* // sign is negative and p < 0.25
+* // sign is negative and p < 0.025
 * // so, it's robustly negatively signed but we don't very well know the coefficient; probably less than 2.
 reg favorability _ismanager1 _ismanager2 _isstate13 _isstate21 _isstate34 _isstate36 _isstate8 aetiwo_concientiousness aetiwo_customerserviceskill rulebreakers* aetiwo_rulebreaker
