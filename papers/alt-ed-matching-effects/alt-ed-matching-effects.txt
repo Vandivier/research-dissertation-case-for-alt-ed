@@ -3,25 +3,25 @@ Perceived Skills Gaps in Alternative Postsecondary Education as Determinants of 
 
 This paper explores an original data set
 to understand the influence of perceived skill gaps on hiring.
-Results show that employers expect low skill from non-college graduates, even when the candidate is technically certified.
+Results show that employers expect low skill from non-college graduates.
+This result holds for technically certified individuals.
 Respondents expect non-college graduates to break formal and informal rules.
 Interestingly, this is considered a valuable behavior.
-State and industry effects each explain about 5 percent of outcomes, skill gaps explain about 10 percent, and interviewer perspectives on rule breakers explains about 15 percent.
+State and industry effects explain about 5 percent of outcomes, skill gaps explain about 10 percent, and interviewer perspectives on rulebreakers explain about 15 percent.
 Perceived soft skill gaps are particularly important.
 
-Introduction and Description of Data
 Introduction
 A substantial gap exists between the skills expected by employers and those possessed by college graduates\cite{mcgarry2016examination, malik2017great, abbasi2018analysis, gingras2000there}.
-Vocational school and other non-college means of higher education are seen to endow technical skill, but the traditional degree remains associated with higher wages.
+Experts view vocational school and alternative postsecondary education as effective for technical training, but the traditional degree remains associated with higher wages.
 This paper tests the hypothesis that perceived skill gaps explain the salary variance.
 In particular, this paper hypothesizes a perceived soft skills gap among non-college graduates.
 
 The signaling model has become a standard explanation of the value of the degree.
 Following this model, scholars claim that the college degree signals intelligence, work ethic, and conformity.
-Alternatives to college signal intelligence and technical skill.
-This paper tests the hypothesis that employers assume a deficit in the differential candidate properties of conformity and concientiousness.
+Alternative credentials do not signal work ethic or conformity, but they do indicate intelligence and technical skill.
+This paper tests the hypothesis that employers assume a deficit in the differential properties of conformity and conscientiousness.
 
-Concientiousness is associated with a variety of positive outcomes, but there is reason for employers to value imperfect conformity.
+Conscientiousness is associated with a variety of positive outcomes, but there is reason for employers to value imperfect conformity.
 Firm innovation is attributable to underlying employee innovation, but conformity is antithetical to innovation.
 Leaders and high performers also behave abnormally, but in a way that is seen as desirable.
 
@@ -97,15 +97,15 @@ In the first place, this heterogenous evaluation has sign and magnitude implicat
 Secondarily, heterogenous evaluation implies a qualitatively different evaluation.
 These differences are captured using three questions in the first section of the survey.
 
-The three rulebreaker questions measure respondent agreement on a scale from 1 to 10 with statements about rule breakers, or "People who are willing to break formal or informal rules and norms."
-The first statement indicates that rule breakers present a risk to the reputation, productivity, or value of a company.
+The three rulebreaker questions measure respondent agreement on a scale from 1 to 10 with statements about rulebreakers, or "People who are willing to break formal or informal rules and norms."
+The first statement indicates that rulebreakers present a risk to the reputation, productivity, or value of a company.
 This statement received the least agreement and greatest response variance among three qualitatively different descriptions of people that are willing to break rules ($\mu = 6.40, \sigma = 2.55$).
 
-The second statement states that people break rules which hold them back, and that rule breakers "could just as easily be high performers as low performers."
+The second statement states that people break rules which hold them back, and that rulebreakers "could just as easily be high performers as low performers."
 This statement received the most agreement and least comparative response variance as a rule breaker description ($\mu = 7.42, \sigma = 1.91$).
 The agreement with this statement provides evidence against the thesis that employers value conformity for its own sake.
 In turn, this adds weight to the theory that employers value conformity as a risk aversion tactic, but they actually believe nonconformity may signal positive outlier potential.
-The third description of rule breakers states that they tend to be gifted in the areas of innovation or creativity, and that such people may benefit the company of a culture ($\mu = 7.25, \sigma = 2.03$).
+The third description of rulebreakers states that they tend to be gifted in the areas of innovation or creativity, and that such people may benefit the company of a culture ($\mu = 7.25, \sigma = 2.03$).
 
 Each of the three rulebreaker effects turns out to be independently important.
 These effects collectively explain more than three times as much response variance as do industrial or state effects.
@@ -127,7 +127,7 @@ Robust effects are retained.
 For example, some state effects are important in one specification and not in the other.
 Such state effects are dropped in Models 3 and 4.
 
-Model 5 is specified as Model 4 plus two adjustments. % TODO: i think it's actually 3
+Model 5 is specified as Model 4 plus two adjustments.
 First, the factor for salary is dropped.
 The salary factor improved adjusted explanatory power in Model 2, but it provided no such benefit in any other model.
 Moreover, the p-value of this factor was unacceptably low in Model 4 ($p > 0.9$).
@@ -155,36 +155,36 @@ Other than technical skill, the remaining gaps are soft skills.
 Body language skill gaps and skill gaps in work ethic are the two most significant factors in this model.
 The relative importance of soft skill gaps, and work ethic in particular, adds weight to a revision of the usual signalling explanation as the most plausible story.
 
-An important and complicated finding involves concientiousness.
+An important and complicated finding involves conscientiousness.
 Notice that the effect is robustly positive across specifications.
-Simple intuition would indicate that a large concientiousness gap is associated with improved hireability.
+Simple intuition would indicate that a large conscientiousness gap is associated with improved hireability.
 This is an oversimplification which results from linear analysis.
 
-A simple regression of concientiousness on favorability produces an expected negative sign.
-That supports the intuitive notion that a lack of concientiousness is associated with reduced hireability.
+A simple regression of conscientiousness on favorability produces an expected negative sign.
+That supports the intuitive notion that a lack of conscientiousness is associated with reduced hireability.
 That result is also an oversimplification.
 A synthesis of both results and outside research indicates there is some bliss point for work ethic.
 The change in the model constant from the simple regression to the multiple regression explains the robust sign inversion.
 In the multiple regression, the model constant is near $0.5$, while in the simple regression it is about $7.5$.
 
 In one study, conscientiousness exhibited a parabolic relationship with peer-rated team contribution.
-Adding a quadratic term to Model 5 replicates a negative marginal relation between concientiousness and teamwork skill.
-In addition, concientiousness exhibits a negative marginal relation with hireability overall.
+Adding a quadratic term to Model 5 replicates a negative marginal relation between conscientiousness and teamwork skill.
+In addition, conscientiousness exhibits a negative marginal relation with hireability overall.
 
 Complementary to the bliss point explanation is an explanation from attenuation.
-In the current data set, concientiousness exhibits an important cross-correlation with several factors including willingness to commute and customer service skill.
-Concientiousness also structurally interacts with independent rulebreaker effects.
-Theoretically, concientiousness is related to rule breaking behavior, but the effect on hireability is interacted with employer perceptions of those who break rules.
-Because these factors are entered independently in the multiple regression, the underlying component of concientiousness is entered in redunantly.
-Because concientiousness gaps have a negative effect, the overall negative effect is overstated.
-The direct factor of concientiousness corrects, or attenuates, the the overstated effect which is partialled in, or captured in, the correlated independent factors.
+In the current data set, conscientiousness exhibits an important cross-correlation with several factors including willingness to commute and customer service skill.
+Conscientiousness also structurally interacts with independent rulebreaker effects.
+Theoretically, conscientiousness is related to rule breaking behavior, but the effect on hireability is interacted with employer perceptions of those who break rules.
+Because these factors are entered independently in the multiple regression, the underlying component of conscientiousness is entered in redunantly.
+Because conscientiousness gaps have a negative effect, the overall negative effect is overstated.
+The direct factor of conscientiousness corrects, or attenuates, the the overstated effect which is partialled in, or captured in, the correlated independent factors.
 Removal of other skill gap factors and rulebreaker factors from Model 5 validates this explanation by yielding a negative coefficient ($\beta = -0.084, p < 0.31$).
 
-The importance of concientiousness does not add weight to the classic signaling explanation.
-The concientiousness gap is not a comparative gap between a recent college graduate and a non-college graduate.
+The importance of conscientiousness does not add weight to the classic signaling explanation.
+The conscientiousness gap is not a comparative gap between a recent college graduate and a non-college graduate.
 It is a gap between an ideal job candidate and an ACNG.
-An important note is that the concientiousness gap among recent college graduates is statitistically no different from an ACNG.
-Unsurprisingly, the candidate perceived to have a minimal concientiousness gap is the typical employee already working in the labor force.
+An important note is that the conscientiousness gap among recent college graduates is statitistically no different from an ACNG.
+Unsurprisingly, the candidate perceived to have a minimal conscientiousness gap is the typical employee already working in the labor force.
 A comparative gap of note would be that college graduates were perceived to have better technical skills compared to the average ACNG.
 
 Employer size was an important factor in the preferred model.
