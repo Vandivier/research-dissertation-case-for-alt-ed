@@ -1,0 +1,21 @@
+gap of gaps: is a college degree worth the vocational cost differential?
+
+---
+
+build on letters-size gap analysis (less than 3000 words) to fit Higher Education, Skills and Work-based Learning (3000-5000 words)
+
+grow analysis with:
+1. using job name
+2. comprehensize marginal and cubic effect analysis
+3. actually comparing ACNG to recent college grad.
+
+related: https://www.afterecon.com/education/updating-a-paper-on-perceived-skill-gaps/
+
+
+---
+
+previous literature provides a model of hireability using perceived skill gaps.
+
+this paper looks at the gap of gaps between alt ed and college grads
+
+how much of the salary gap is explained? is the college grad perceived as significantly better?
