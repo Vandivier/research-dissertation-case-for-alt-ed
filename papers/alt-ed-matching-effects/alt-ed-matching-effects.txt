@@ -40,9 +40,10 @@ Non-traditional education, in contrast, is hypothesized to signal nonconformity.
 Non-traditional courses can also be completed in a shorter span of time and with reduced entry qualifications relative to the traditional degree.
 For this reason, alternative credentials are thought not to signal concientiousness, or work ethic.
 
-Conscientiousness is associated with a variety of positive outcomes, but there is reason for employers to value imperfect conformity.
-Firm innovation is attributable to underlying employee innovation, but conformity is antithetical to innovation. % TODO: cite John Nye on the advantages and disadvantages of conformity.
-Leaders and high performers also behave abnormally, but in a way that is seen as desirable.
+Research indicates a goldilocks level or bliss point for both concientiousness and conformity is likely to exist.
+Excess individual concientiousness can disturb team performance.
+Conformity can lead to a lack of innovation and suboptimal organizational practices.
+Psychologists also state that conformity selection may occur through heuristic decisioning rather than conscious choice.
 
 Risk aversion represents a seperate reason to select for conformity.
 A risk averse employer with low ability to distinguish high performing outliers from low performing outliers may prefer not to hire an outlier at all.
@@ -186,8 +187,8 @@ A synthesis of both results and outside research indicates there is some bliss p
 The change in the model constant from the simple regression to the multiple regression explains the robust sign inversion.
 In the multiple regression, the model constant is near $0.5$, while in the simple regression it is about $7.5$.
 
-In one study, conscientiousness exhibited a parabolic relationship with peer-rated team contribution.
-Adding a quadratic term to Model 5 replicates a negative marginal relation between conscientiousness and teamwork skill.
+Adding a quadratic term to Model 5 identifies a negative marginal relation between conscientiousness and teamwork skill.
+This replicates the other research which found a parabolic relationship between peer-rated team contribution and conscientiousness.
 In addition, conscientiousness exhibits a negative marginal relation with hireability overall.
 
 Complementary to the bliss point explanation is an explanation from attenuation.
@@ -229,8 +230,18 @@ Conclusion
 This study demonstrates that perceived skill gap variance is qualitatively different for alternatively educated non-college graduates.
 Perceived skill gaps do a better job of explaining willingness to hire than do other widely recognized effects including industry and state effects.
 Employer factors better explain candidate hireability than do the perceived skill gaps themselves.
-This paper finds multiple facts in support of employer risk aversion over conformity selection when considering job candidates that lack a college degree.
 Technical skill gaps were identified with less relevance to the hiring decision when compared with soft skill gaps for the ACNG job candidate.
+
+This paper provides evidence that some employers engage in conformity selection as a means of avoiding risk to the reputation, productivity, or value of a company.
+An explanation from risk aversion fully this kind of conformity selection and also explains other behavior.
+Respondents were most favorable to the description of rulebreakers as individuals that could just as easily be high performers as low performers.
+Aversion to this kind of labor is better explained as risk aversion rather than positive selection for conformity.
+
+Risk aversion and conformity selection are both partially unconcious biases which lead to suboptimal organizational operation.
+A practical recommendation is for organizations to implement bias controls with respect to ACNG evaluation.
+An example control would be to provide human resource procedures for formal evaluation of particular credentials which are relevant to specified job families.
+These procedures can be immediately executed among known credentials and job families.
+These procedures should be retained for ongoing application as new credentials are developed and encountered over time.
 
 Some evidence on the role of misinformation is demonstrated in a survey on trade schooling taken in 2019.
 Only 27 percent of respondents correctly responded that lower debt is an advantage of enrolling in trade school relative to college.
