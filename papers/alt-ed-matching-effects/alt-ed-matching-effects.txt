@@ -1,28 +1,47 @@
 
-Perceived Skills Gaps in Alternative Postsecondary Education as Determinants of Hireability
+Conformity and Soft Skills as Determinants of Alternatively Credentialed Non-College Graduate Hireability
 
-This paper explores an original data set
-to understand the influence of perceived skill gaps on hiring.
-Results show that employers expect low skill from non-college graduates.
-This result holds for technically certified individuals.
-Respondents expect non-college graduates to break formal and informal rules.
-Interestingly, this is considered a valuable behavior.
-State and industry effects explain about 5 percent of outcomes, skill gaps explain about 10 percent, and interviewer perspectives on rulebreakers explain about 15 percent.
-Perceived soft skill gaps are particularly important.
+Despite targeting technical skills, vocational school graduates are paid less than college graduates.
+This paper hypothesizes that nonconformity stigma and a perceived deficit in soft skills substantially explain reduced alternatively credentialed non-college graduate (ACNG) hireability.
+Results from an original survey in the United States indicates that willingness to break rules is a key factor of hireability, but the direction of effect is heterogenous by employer type.
+ACNG job candidates tend to be perceived favorably as creatives or as possible high performers.
+Selection of traditional candidates is better explained as an employer risk aversion behavior, rather than selection for conformity as a direct property of quality labor.
+Perceived skill gaps are more important than widely recognized factors of hireability including industrial and state effects.
+Soft skills are particularly important.
+Recent college graduates and ACNGs are seen as similarly lacking in soft skills including work ethic.
+The population of the United States systematically comparatively devalues alternative postsecondary education.
+Results collectively indicate that nontraditional postsecondary education is undervalued.
 
 Introduction
 A substantial gap exists between the skills expected by employers and those possessed by college graduates\cite{mcgarry2016examination, malik2017great, abbasi2018analysis, gingras2000there}.
-Experts view vocational school and alternative postsecondary education as effective for technical training, but the traditional degree remains associated with higher wages.
-This paper tests the hypothesis that perceived skill gaps explain the salary variance.
-In particular, this paper hypothesizes a perceived soft skills gap among non-college graduates.
+Experts view college alternatives including vocational school as useful for technical training, but the traditional college degree retains a wage premium over vocational education.
+Unemployment, underemployment, and other negative labor outcomes follow a similar pattern.
+This paper maintains the orthodox view that employers pay for perceived job candidate skill.
+To explain inferior labor outcomes, this paper hypothesizes that employers expect an offsetting non-technical skill deficit when considering an alternatively credentialed non-college graduate (ACNG).
 
-The signaling model has become a standard explanation of the value of the degree.
+The signalling model has become one of the two standard explanations of the value of the college degree.
+Signalling theory provides three advantages over human capital theory for the purposes of the present study.
+First, signalling theory is able to explain labor outcome variance when human capital is held constant.
+
+Second the signalling model empowers a survey research design.
+In an idealized human capital model, the measures of human capital would correspond to production process inputs.
+To establish a wide array of skill measures would be complicated and prone to measurement sensitivies, assumptions, and errors of various and potentially subtle kinds.
+Survey measures could be used as a second-best proxy, but they would never be an ideal measure of human capital.
+Signaling theory takes the reverse approach.
+According to the signalling model, labor demand is formed on the basis of job candidate value as perceived by an employer.
+Whether this corresponds to any concrete ability is secondary.
+Employer perception can be assessed through a simple survey.
+An additional benefit of using a questionnaire is the ability to ask hypothetical questions.
+In pondering hypotheticals, employer evaluation of a credential or signal can be isolated from job candidate human capital variance.
+
+Third, signalling theorists have already laid out a testable hypothesis for weak labor outcomes among non-college graduates.
 Following this model, scholars claim that the college degree signals intelligence, work ethic, and conformity.
-Alternative credentials do not signal work ethic or conformity, but they do indicate intelligence and technical skill.
-This paper tests the hypothesis that employers assume a deficit in the differential properties of conformity and conscientiousness.
+Non-traditional education, in contrast, is hypothesized to signal nonconformity.
+Non-traditional courses can also be completed in a shorter span of time and with reduced entry qualifications relative to the traditional degree.
+For this reason, alternative credentials are thought not to signal concientiousness, or work ethic.
 
 Conscientiousness is associated with a variety of positive outcomes, but there is reason for employers to value imperfect conformity.
-Firm innovation is attributable to underlying employee innovation, but conformity is antithetical to innovation.
+Firm innovation is attributable to underlying employee innovation, but conformity is antithetical to innovation. % TODO: cite John Nye on the advantages and disadvantages of conformity.
 Leaders and high performers also behave abnormally, but in a way that is seen as desirable.
 
 Risk aversion represents a seperate reason to select for conformity.
@@ -180,7 +199,7 @@ Because conscientiousness gaps have a negative effect, the overall negative effe
 The direct factor of conscientiousness corrects, or attenuates, the the overstated effect which is partialled in, or captured in, the correlated independent factors.
 Removal of other skill gap factors and rulebreaker factors from Model 5 validates this explanation by yielding a negative coefficient ($\beta = -0.084, p < 0.31$).
 
-The importance of conscientiousness does not add weight to the classic signaling explanation.
+The importance of conscientiousness does not add weight to the classic signalling explanation.
 The conscientiousness gap is not a comparative gap between a recent college graduate and a non-college graduate.
 It is a gap between an ideal job candidate and an ACNG.
 An important note is that the conscientiousness gap among recent college graduates is statitistically no different from an ACNG.
