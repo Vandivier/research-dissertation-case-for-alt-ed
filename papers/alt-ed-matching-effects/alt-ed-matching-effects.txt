@@ -17,7 +17,16 @@ A substantial gap exists between the skills expected by employers and those poss
 Experts view college alternatives including vocational school as useful for technical training, but the traditional college degree retains a wage premium over vocational education.
 Unemployment, underemployment, and other negative labor outcomes follow a similar pattern.
 This paper maintains the orthodox view that employers pay for perceived job candidate skill.
-To explain inferior labor outcomes, this paper hypothesizes that employers expect an offsetting non-technical skill deficit when considering an alternatively credentialed non-college graduate (ACNG).
+To explain inferior labor outcomes, this paper tests the hypothesis that employers expect an offsetting non-technical skill deficit when considering an alternatively credentialed non-college graduate (ACNG).
+
+Alternative credentials refer to credentials other than the undergraduate degree.
+The category includes, for example, industry certifications, portfolios of work, digital badges, and other records of unaccredited learning and achievement.
+Individuals pursuing alternative credentials typically intend to leverage the credential toward better employment.
+That is, they typically have the same goals as a college student.
+Many individuals obtain alternative credentials as a supplement to the college degree.
+Such a situation is pareto-superior to degree attainment alone and is therefore intentionally excluded from analysis.
+This paper focuses on factors of ACNG hireability in order to validate whether ACNG labor outcomes are a general problem, or perhaps a problem limitted in scope to a specific set of skills.
+If the gap is limitted to a particular set of skills, such as soft skills, then alternative credential suppliers could modify their credentialling requirements to overcome the outcome deficit.
 
 The signalling model has become one of the two standard explanations of the value of the college degree.
 Signalling theory provides three advantages over human capital theory for the purposes of the present study.
@@ -45,19 +54,11 @@ Excess individual concientiousness can disturb team performance.
 Conformity can lead to a lack of innovation and suboptimal organizational practices.
 Psychologists also state that conformity selection may occur through heuristic decisioning rather than conscious choice.
 
-Risk aversion represents a seperate reason to select for conformity.
-A risk averse employer with low ability to distinguish high performing outliers from low performing outliers may prefer not to hire an outlier at all.
-The gamble is particularly expensive for small employers that are unable to spread risk across many hires.
-A secondary investigation in this paper will be to look for employer size effects.
-If large employers are favorable to alternatively educated individuals, this will add weight to an explanation based on risk aversion.
-
-Alternative credentials refer to credentials other than the undergraduate degree.
-The category includes, for example, industry certifications, portfolios of work, and transcript, badges, or other records of unaccredited learning and achievement.
-Individuals pursuing alternative credentials typically intend to leverage the credential toward better employment.
-That is, they have the same ends as college students.
-Many individuals obtain alternative credentials as a supplement to the degree.
-Such a situation is pareto-superior to degree attainment alone and is therefore intentionally excluded from analysis.
-This paper focuses on alternatively credentialed non-college graduates in order to better identify stigmata of interest.
+Risk aversion is another explanation for conformity selection.
+An employer may not be able to value an alternative credential.
+From the point of view of such an employer, an ACNG may range in value from a positive outlier to a negative outlier.
+The employer may not prefer to hire such a candidate on the basis of risk aversion, even if their point estimate for ACNG labor value is higher than their point estimate for a recent college graduate.
+If employers with many employees are positively associated with ACNG hireability, this will add weight to an explanation based on risk aversion.
 
 Process Explanations of Suboptimal Wages
 Methodology
@@ -70,14 +71,14 @@ for data used in this study.
 
 Respondents were obtained through the Amazon Mechanical Turk crowdsourcing service.
 Respondents were United States citizens at or over the age of eighteen.
-Respondents were paid for participation.
+Opt-in respondents were paid for participation and selected on a first-come, first-serve basis up to a quota of $200$.
 The survey administration took place in July of 2020.
 
-Respondents were asked 65 questions in two sections.
+The survey includes 65 questions in two sections.
 The first section of responses describe the respondent.
 There are 13 questions in this section.
 The second section identifies perceived skill gaps for 13 skills.
-Each section beings with a contextual message to normalize response anchoring.
+Each section begins with a contextual message to normalize response anchoring.
 Questions are provided in nonrandom order for the same reason.
 Appendix A provides a copy of the survey.
 
@@ -87,19 +88,19 @@ One type of candidate is an ideal candidate.
 At a high level, skill gaps are calculated by differencing skill levels of the ideal candidate with others.
 
 Perceived skill is reported on a scale from 1 to 10.
-Perceived skill is reported for the ideal candidate, the average actual employee, the average recent college graduate, and the average alternatively credentialed non-college graduate.
-Skill gaps are technically computed in two ways.
-One method allows for overqualification of job candidates and the other does not.
-Overqualification effects have been identified as important\cite{green2007there, raybould2005over}, but these effects are often ignored during skill gap analysis.
+Perceived skill is reported for the ideal candidate, the average actual employee, the average recent college graduate, and the average ACNG.
+Each skill gap has two associated measures.
+One measure allows for overqualification in a skill and the other does not.
+Overqualification effects have been identified as important\cite{green2007there, raybould2005over}, but these effects are sometimes ignored during skill gap analysis.
 
 When overqualification is allowed, the skill gap is measured as a raw skill gap.
 The raw skill gap is the skill level of the ideal candidate less the skill level of the actual candidate.
 The skill gap without overqualification is calculated as the raw skill gap or zero if the raw skill gap value is negative.
 
 Results
-Alternatively credentialed non-college graduate (ACNG) hireability was generally positive.
+ACNG (ACNG) hireability was generally positive.
 The mean response was 7.5 on a scale from one to ten ($\sigma = 1.80$).
-Employers status was not associated with a significant response effect.
+Employer status was not associated with a significant response effect.
 Perceived skill gaps explained a significant and important portion of hireability variance.
 
 Table \ref{tab:explantory_power} compares perceived skill gap explanatory power in a simple regression
@@ -125,9 +126,9 @@ The second statement states that people break rules which hold them back, and th
 This statement received the most agreement and least comparative response variance as a rule breaker description ($\mu = 7.42, \sigma = 1.91$).
 The agreement with this statement provides evidence against the thesis that employers value conformity for its own sake.
 In turn, this adds weight to the theory that employers value conformity as a risk aversion tactic, but they actually believe nonconformity may signal positive outlier potential.
-The third description of rulebreakers states that they tend to be gifted in the areas of innovation or creativity, and that such people may benefit the company of a culture ($\mu = 7.25, \sigma = 2.03$).
+The third description of rulebreakers states that they tend to be gifted in the areas of innovation or creativity, and that such people may benefit the culture of a company ($\mu = 7.25, \sigma = 2.03$).
 
-Each of the three rulebreaker effects turns out to be independently important.
+Each of the three rulebreaker effects turn out to be independently important.
 These effects collectively explain more than three times as much response variance as do industrial or state effects.
 Rulebreaker effects are about twice as important as perceived skill gaps.
 This is not taken to be a general lesson about skill gaps.
@@ -140,65 +141,59 @@ Factor importance is determined by the ability of a factor to improve model adju
 Model 1 is a multiple regression using skill gaps that allow for overqualification.
 Model 2 is a multiple regression without overqualification.
 
-Models 3 and 4 are equivalent to models 1 and 2, respectively, after normalizing for certain effects.
-Industry, state, and company size effects are the specific effects which are normalized.
-These effects are normalized for robustness by cross-referencing the subfactors from models 1 and 2.
-Robust effects are retained.
+Models 3 and 4 are equivalent to models 1 and 2, respectively, after normalizing for industry, state, and company size effects.
+These effects are normalized for robustness by retaining those factors which appear in both model 1 and model 2.
 For example, some state effects are important in one specification and not in the other.
-Such state effects are dropped in Models 3 and 4.
+Such state effects are dropped in models 3 and 4.
 
 Model 5 is specified as Model 4 plus two adjustments.
 First, the factor for salary is dropped.
 The salary factor improved adjusted explanatory power in Model 2, but it provided no such benefit in any other model.
 Moreover, the p-value of this factor was unacceptably low in Model 4 ($p > 0.9$).
-The second adjustment is to add a duration factor.
 
-The duration factor is a measure of the length of time a respondent believes it takes to earn an alternative credential.
+The second adjustment is to add a duration factor.
+The duration factor is a measure of the length of time a respondent believes it takes to earn an alternative credential\footnote{
 Duration is a categorical variable which was important in both Models 1 and 2.
 As a categorical variable, it was decomposed into a boolean series for factor analysis.
 Models 1 and 2 retained one or more duration dummies, but none overlapped.
 As a result, duration was dropped from Models 3 and 4.
-
-After dropping the salary factor, duration was reanalyzed in the new multiple regressive context.
-A single duration factor proved important in this reanalysis.
-The duration factor which indicates that a respondent believes it takes more than a year to obtain an alternative credential
+The duration factor which indicates that the respondent believes it takes more than a year to obtain an alternative credential
 is significantly and importantly associated with improved willingness to hire ($\beta = 0.875, p < 0.01$).
 
 An individual is considered an employer if they state that they contribute to hiring and firing decisions.
 Employer effects are positively signed in all five models, but the significance is lost after normalizing effects.
-This suggests that employer favorability to alternative credentials is sensitive to industry and state of residence.
+This suggests that employer favorability to alternative credentials is sensitive to industry, state of residence, and firm size, which are the normalized effects.
 
 The preferred model is able to explain roughly one third of the willingness to hire.
-7 of 13 skill gaps investigated contribute to this model, and two stand out as the most significant.
-Technical skill gaps are insignificant but they are robust across specifications and possess the expected negative sign.
-Other than technical skill, the remaining gaps are soft skills.
-Body language skill gaps and skill gaps in work ethic are the two most significant factors in this model.
+Thirteen skill gaps were investigated, and seven contribute to the preferred model.
+One of the skill gaps in the final model is technical skill.
+The technical skill gap is statistically insignificant, but it is robust in sign across models and it does possess the expected negative sign.
+The other six important factors are soft skills.
+Perceived skill gaps in body language and work ethic are the most important factors in the model.
 The relative importance of soft skill gaps, and work ethic in particular, adds weight to a revision of the usual signalling explanation as the most plausible story.
 
 An important and complicated finding involves conscientiousness.
-Notice that the effect is robustly positive across specifications.
-Simple intuition would indicate that a large conscientiousness gap is associated with improved hireability.
-This is an oversimplification which results from linear analysis.
+The effect is robustly positive in multiple specifications.
+Simple intuition would indicate that a large conscientiousness gap is associated with reduced hireability.
+A simple regression of conscientiousness on favorability does produce the expected negative coefficient.
+There are two reasons for the sign change on work ethic in the multiple regression.
+The first reason is bliss point seeking and the second is an explanation from attenuation.
 
-A simple regression of conscientiousness on favorability produces an expected negative sign.
-That supports the intuitive notion that a lack of conscientiousness is associated with reduced hireability.
-That result is also an oversimplification.
-A synthesis of both results and outside research indicates there is some bliss point for work ethic.
-The change in the model constant from the simple regression to the multiple regression explains the robust sign inversion.
-In the multiple regression, the model constant is near $0.5$, while in the simple regression it is about $7.5$.
+As previously discussed, excess individual concientiousness can disturb team performance.
+It follows that there is some bliss point level of concientiousness.
+As a result, the sign of the coefficient on concientiousness is sensitive to the relationship between the model constant and the bliss point.
+If the model constant is above the bliss point, concientiousness is expected to be positively signed.
+The current data is consistent with this explanation from bliss point seeking.
+In a simple regression of work ethic in hireability, the model constant is about $7.5$, and the coefficient on work ethic is negative.
+In the multiple regression, the model constant is near $0.5$, and the coefficient on work ethic is positive.
 
-Adding a quadratic term to Model 5 identifies a negative marginal relation between conscientiousness and teamwork skill.
-This replicates the other research which found a parabolic relationship between peer-rated team contribution and conscientiousness.
-In addition, conscientiousness exhibits a negative marginal relation with hireability overall.
-
-Complementary to the bliss point explanation is an explanation from attenuation.
-In the current data set, conscientiousness exhibits an important cross-correlation with several factors including willingness to commute and customer service skill.
-Conscientiousness also structurally interacts with independent rulebreaker effects.
-Theoretically, conscientiousness is related to rule breaking behavior, but the effect on hireability is interacted with employer perceptions of those who break rules.
-Because these factors are entered independently in the multiple regression, the underlying component of conscientiousness is entered in redunantly.
-Because conscientiousness gaps have a negative effect, the overall negative effect is overstated.
-The direct factor of conscientiousness corrects, or attenuates, the the overstated effect which is partialled in, or captured in, the correlated independent factors.
-Removal of other skill gap factors and rulebreaker factors from Model 5 validates this explanation by yielding a negative coefficient ($\beta = -0.084, p < 0.31$).
+The second explanation is that the direct measure of work ethic is attenuating an overstatement of the effect in the multiple regression.
+Conscientiousness is importantly cross-correlated with several factors including willingness to commute and customer service skill.
+Conscientiousness also structurally interacts with rulebreaker effects.
+In theory, a person that is high in concientiousness will tend not to break rules.
+These factors are entered independently in the multiple regression, so a partial measure of conscientiousness is entered in redunantly.
+The direct factor for conscientiousness corrects, or attenuates, the overstated effect which is represented in those the correlated independent factors.
+Removal of other skill gap factors and rulebreaker factors from Model 5 demonstrates this by yielding a negative concientiousness coefficient ($\beta = -0.084, p < 0.31$).
 
 The importance of conscientiousness does not add weight to the classic signalling explanation.
 The conscientiousness gap is not a comparative gap between a recent college graduate and a non-college graduate.
@@ -214,20 +209,18 @@ The largest category of employer has lower risk, and in fact generates comparati
 
 Some state and industrial effects are identified.
 No particular relation among state effects was found, but further comparative policy research is encouraged.
-With respect to industry, an interesting interaction between body language skill and employment in the information technology is identified.
-The interacted variable has a positive association with willingness to hire.
+With respect to industry, an interesting interaction between body language skill and employment in the information technology industry yields a positive coefficient.
 Body language skill gaps on their own are associated with reduced willingness to hire.
 This specifically indicates a reduced penalty for lacking body language communication skills in the information technology industry.
 With less strength and more breadth, a positive coefficient to the interaction variable indicates a reduced penalty for generalized soft skill deficiency in the information technology industry.
 
 A reduced penalty for soft skill deficit helps explain the particular flourishing of alternative credentials in the information technology industry.
 The reduced penalty in this particular industry might be related to a relative lack of deregulation in the industry.
-Alternatively, it might be related to cultural norms around the acceptability of an anti-social geek in a technology field.
-The cultural norm itself might be derived from deeper collective personality organization.
-That is, there is less technical need for social skills in programming and related discplines, so introverts may naturally obtain a comparative advantage in this field.
+Another explanation is that the reduced penalty may be related to cultural norms in the industry.
+There is less technical need for social skill in programming, so introverts may naturally obtain a comparative advantage in this field.
 
 Conclusion
-This study demonstrates that perceived skill gap variance is qualitatively different for alternatively educated non-college graduates.
+This study provides evidence that skill signals are an important factor of hireability and are unique for the ACNG.
 Perceived skill gaps do a better job of explaining willingness to hire than do other widely recognized effects including industry and state effects.
 Employer factors better explain candidate hireability than do the perceived skill gaps themselves.
 Technical skill gaps were identified with less relevance to the hiring decision when compared with soft skill gaps for the ACNG job candidate.
@@ -249,26 +242,22 @@ Additionally, over 75 percent of respondents failed to notice that trade school 
 and receive specialized training when compared to a four-year college.
 Obtaining a college degree after obtaining some work experience will allow students to leverage employer tuition benefits.
 
-In addition to the noted applications of the results of this study, there are several ways in which results could be technically improved.
 The preferred model explains about one third of willingness to hire.
+Perceived skill gaps and rulebreaker effects account for most of the explanatory power in the model.
+The explanatory power of this study can be meaningfully improved in a few ways.
 This study uses a cross-sectional analysis to investigate a subject that varies over time.
 The traditional system of accredited undergraduate education was itself at one time an innovation.
-Abnormal job candidates differentiated themselves using novel credentials, and broad employer adoption was achieved over time.
-This paper concludes that the alternative credentials of today will follow a similar pattern.
+Dynamic analysis would yield deeper understanding of such trends, achieve greater explanatory power, and provide better casual understanding.
+Other research has conducted some dynamic analysis of the same dependent variable with different regressors.
+Integrated analysis would be useful for replication and the generation of new models of better explanatory power.
+Specifications that allow for overqualification effects and heterogeneous nonlinear relations between skill gaps and hireability would improve not only the present paper, but the state of the art in skill gap analysis.
 
-Dynamic technical analysis would yield deeper understanding of such trends and achieve greater overall explanatory power.
-Dynamic analysis would also generate better opportunity for causal understanding.
-Other research has conducted some dynamic analysis of the same dependent variable
-with differing independent inputs.
-Integrated modelling of those effects with skill gap analysis could replicate results and generate new models of better explanatory power.
-Specifications that allow for overqualification effects and heterogeneous curved relations between skill gaps and hireability would improve not only the present paper, but the state of the art in skill gap analysis.
-
-If perceived skill is representative of actual skill, then the current study concludes that employers should be more willing to hire alternatively educated non-college graduates.
+If perceived skill is representative of actual skill, then the current study concludes that employers should be more willing to hire an ACNG.
 At the same time, this paper demonstrates plausible misalignment of perceived and actual skill in some cases.
 Last mile training is a type of alternative education which has been specifically recommended as a remedy for technical skill gaps among recent college graduates.
-It is surprising that the average recent college graduate in the sample of analysis is perceived to have better technical skill compared to the average ACNG.
+It is surprising that the average recent college graduate in the sample is perceived to have better technical skill compared to the average ACNG.
 
 Employers seem to be favorable to individuals with alternative credentials.
 In many cases, employer-perceived skill gaps are not statistically different when comparing recent college gradutes with ACNG candidates.
-The relative social preference for the college degree may be better explained by a lack of relevant credentials for some occupations, government subsidy of the legacy system, and ignorance about available alternative opportunities on the part of students and those influencing student enrollment choices.
+Social preference for the college degree may be better explained by public ignorance about appropriate alternative programs, a lack of appropriate programs for certain occupations, and government financial and other policy which gives preference to accredited education.
 
