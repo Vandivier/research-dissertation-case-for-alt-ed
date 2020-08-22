@@ -1,5 +1,8 @@
 gap of gaps: is a college degree worth the vocational cost differential?
 
+in preliminary paper, re-read comments. in particular, look for:
+TODO: long paper food
+
 ---
 
 build on letters-size gap analysis (less than 3000 words) to fit Higher Education, Skills and Work-based Learning (3000-5000 words)
