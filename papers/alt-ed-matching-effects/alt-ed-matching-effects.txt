@@ -8,7 +8,7 @@ ACNG job candidates tend to be perceived favorably as creatives or as possible h
 Selection of traditional candidates is better explained as an employer risk aversion behavior, rather than selection for conformity as a direct property of quality labor.
 Perceived skill gaps are more important than widely recognized factors of hireability including industrial and state effects.
 Soft skills are particularly important.
-Recent college graduates and ACNGs are seen as similarly lacking in soft skills including work ethic.
+Recent college graduates and ACNGs are seen as similarly lacking in soft skills including conscientiousness.
 The population of the United States systematically comparatively devalues alternative postsecondary education.
 Results collectively indicate that nontraditional postsecondary education is undervalued.
 
@@ -44,10 +44,10 @@ An additional benefit of using a questionnaire is the ability to ask hypothetica
 In pondering hypotheticals, employer evaluation of a credential or signal can be isolated from job candidate human capital variance.
 
 Third, signalling theorists have already laid out a testable hypothesis for weak labor outcomes among non-college graduates.
-Following this model, scholars claim that the college degree signals intelligence, work ethic, and conformity.
+Following this model, scholars claim that the college degree signals intelligence, conscientiousness, and conformity.
 Non-traditional education, in contrast, is hypothesized to signal nonconformity.
 Non-traditional courses can also be completed in a shorter span of time and with reduced entry qualifications relative to the traditional degree.
-For this reason, alternative credentials are thought not to signal concientiousness, or work ethic.
+For this reason, alternative credentials are thought not to signal concientiousness, or conscientiousness.
 
 Research indicates a goldilocks level or bliss point for both concientiousness and conformity is likely to exist.
 Excess individual concientiousness can disturb team performance.
@@ -162,21 +162,21 @@ is significantly and importantly associated with improved willingness to hire ($
 
 An individual is considered an employer if they state that they contribute to hiring and firing decisions.
 Employer effects are positively signed in all five models, but the significance is lost after normalizing effects.
-This suggests that employer favorability to alternative credentials is sensitive to industry, state of residence, and firm size, which are the normalized effects.
+This suggests that ACNG hireability is sensitive to industry, state of residence, and firm size, which are the normalized effects.
 
 The preferred model is able to explain roughly one third of the willingness to hire.
 Thirteen skill gaps were investigated, and seven contribute to the preferred model.
 One of the skill gaps in the final model is technical skill.
 The technical skill gap is statistically insignificant, but it is robust in sign across models and it does possess the expected negative sign.
 The other six important factors are soft skills.
-Perceived skill gaps in body language and work ethic are the most important factors in the model.
-The relative importance of soft skill gaps, and work ethic in particular, adds weight to a revision of the usual signalling explanation as the most plausible story.
+Perceived skill gaps in body language and conscientiousness are the most important factors in the model.
+The relative importance of soft skill gaps, and conscientiousness in particular, adds weight to a revision of the usual signalling explanation as the most plausible story.
 
 An important and complicated finding involves conscientiousness.
 The effect is robustly positive in multiple specifications.
 Simple intuition would indicate that a large conscientiousness gap is associated with reduced hireability.
-A simple regression of conscientiousness on favorability does produce the expected negative coefficient.
-There are two reasons for the sign change on work ethic in the multiple regression.
+A simple regression of conscientiousness on hireability does produce the expected negative coefficient.
+There are two reasons for the sign change on conscientiousness in the multiple regression.
 The first reason is bliss point seeking and the second is an explanation from attenuation.
 
 As previously discussed, excess individual concientiousness can disturb team performance.
@@ -184,10 +184,10 @@ It follows that there is some bliss point level of concientiousness.
 As a result, the sign of the coefficient on concientiousness is sensitive to the relationship between the model constant and the bliss point.
 If the model constant is above the bliss point, concientiousness is expected to be positively signed.
 The current data is consistent with this explanation from bliss point seeking.
-In a simple regression of work ethic in hireability, the model constant is about $7.5$, and the coefficient on work ethic is negative.
-In the multiple regression, the model constant is near $0.5$, and the coefficient on work ethic is positive.
+In a simple regression of conscientiousness in hireability, the model constant is about $7.5$, and the coefficient on conscientiousness is negative.
+In the multiple regression, the model constant is near $0.5$, and the coefficient on conscientiousness is positive.
 
-The second explanation is that the direct measure of work ethic is attenuating an overstatement of the effect in the multiple regression.
+The second explanation is that the direct measure of conscientiousness is attenuating an overstatement of the effect in the multiple regression.
 Conscientiousness is importantly cross-correlated with several factors including willingness to commute and customer service skill.
 Conscientiousness also structurally interacts with rulebreaker effects.
 In theory, a person that is high in concientiousness will tend not to break rules.
