@@ -67,13 +67,26 @@
 
 \section{Introduction}
 
+% Some optional TODO:
+% . talk a bit more about state and industry and see if we can draw a pattern out (STEM industry? high-pop / Democrat states?)
+% . `...and employment in the information technology industry yields a positive coefficient`: give beta and sd
+% . use table since there are 3 cases of beta and sd (potential long paper food...2 additional tables; also a summary stats table; perhaps also a diagram)
+% . if allowed, another diagram to aid the model section and make the theory clear;
+
+% MB protip: intro outline follows:
+% --hook or tension
+% --where we are now
+% --the importance of your question
+% --preview of results
+
 A substantial gap exists between the skills expected by employers and those possessed by college graduates\cite{mcgarry2016examination, malik2017great, abbasi2018analysis, gingras2000there}.
 Experts view college alternatives including vocational school as useful for technical training, but the traditional college degree retains a wage premium over vocational education.
 Unemployment, underemployment, and other negative labor outcomes follow a similar pattern\cite{smith_2011}.
-This paper maintains the orthodox view that employers pay for perceived job candidate skill.
+This paper seeks to resolve the apparent descrepancy between these outcomes while preserving the mainline view that employers pay for perceived job candidate skill.
 % or expected marginal revenue product of labor
-To explain inferior labor outcomes,
+To explain the apparent descrepancy,
 this paper tests the hypothesis that employers expect an offsetting non-technical skill deficit when considering an alternatively credentialed non-college graduate (ACNG).
+I find evidence that the general population of the United States, including employers, does apply a stigma to the ACNG in which soft skills are assumed to be deficient.
 
 Alternative credentials refer to credentials other than the undergraduate degree\cite{brown2017complex}.
 The category includes, for example,
@@ -88,8 +101,6 @@ Such a situation is pareto-superior to degree attainment alone and is therefore 
 This paper focuses on factors of ACNG hireability in order to validate whether ACNG labor outcomes are a general problem,
 or perhaps a problem limitted in scope to a specific set of skills.
 If the gap is limitted to a particular set of skills, such as soft skills, then alternative credential suppliers could modify their credentialling requirements to overcome the outcome deficit.
-
-% MAYBE TODO: could summarize results here. zb: IDK if it's a good habit or not, by I like to sprinkle my conclusions throughout the intro - this ain't a mystery novel.
 
 % Alternative credentials can be obtained quickly and cheaply relative to college.
 % Obtaining a college degree signals intelligence, conscientiousness, and conformity,
@@ -303,6 +314,34 @@ If employers with many employees are positively associated with ACNG hireability
 % Prior work demonstrates the important of matching effects in the form of norm compliance\cite{francesco1981gender}.
 % Meta-accuracy is a kind of matching measure, and it has been shown to move positively with hireability\cite{renier2018no}.
 
+\section{Description of Data}
+
+discussion of likert-type units. In this paper, all Likert-type scales are 10-point scales.
+The unit of factor coefficients for rulebreakers and skill gaps is hireability per Likert-type unit, where hireability is also a Likert-type unit.
+
+plenty of research treats likert-type units as continuous, and there is also structural justification in this case.
+
+Likert-type responses can be interpreted cardinally if certain assumptions hold, which I am happy to posit as constraints in this paper (even spacing of units).
+Even if the assumptions fail, and I don't think they do, research indicates that results seem to be generally robust to breaking such assumptions, and the practice is widespread
+a. footnote and paper reference allowing this likert-type scale continuous treatment: http://www.dissertationrecipes.com/wp-content/uploads/2011/04/Measurement-and-Likert-Scales.pdf
+additionally, in this case of this paper we have a structural justification in marginal effects (computed only for concientiousness but it works...)
+d. in my case i have structural justification in marginal effects.
+you can't have a marginal effect on a non-continuous measure; you can't take an ordinal derivative
+but i have marginal effects, they are stastistically valid, and they are theoretically meaningful and similar measures are used all over the place.
+i would be happy to use a categorical-like treatment if not for this, and the latter might even have better fit but it could be overfit.
+finally, an alternative approach would be to treat likert responses as categorical, but the continuous treatment has less fit and more structural justification
+categorical treatment is a relative overfit
+likert-type units can be considered direct psychological measures or economic proxies.
+The likert-type response curve can be thought of as a function of
+
+b. decent paper on ordinal independent variables: https://www3.nd.edu/~rwilliam/stats3/OrdinalIndependent.pdf
+c. more on this: https://www.researchgate.net/post/Is_a_Likert-type_scale_ordinal_or_interval_data
+
+TODO:
+a. hireability, employer status, and every other var that will be referenced. clarify that state is a US state or DC, etc.
+b. also discuss effect group names. include summary statistics.
+c. show the regression model
+
 \section{Methodology}
 
 % The method of this study begins with a decomposition of the main hypothesis into three simple statistical tests.
@@ -362,6 +401,10 @@ Overqualification effects have been identified as important\cite{green2007there,
 When overqualification is allowed, the skill gap is measured as a raw skill gap.
 The raw skill gap is the skill level of the ideal candidate less the skill level of the actual candidate.
 The skill gap without overqualification is calculated as the raw skill gap or zero if the raw skill gap value is negative.
+These methods allow identification of a model that explains hireability using perceived skill gaps.
+This will support the hypothesis if non-technical skills are more important than technical skills in the preferred model of hireability.
+% MAYBE TODO: I also expect signs to be generally negative and soft skills should be statistically significantly less for ACNG compared to recent college graduate
+% MAYBE TODO: rulebreaker effects and firm size effects also contribute to solutioning the risk aversion hypothesis
 
 % begin low importance comment...
 % this paper compares alt ed to ideal, but other papers could compare other sets:
@@ -411,9 +454,6 @@ The skill gap without overqualification is calculated as the raw skill gap or ze
 \section{Results}
 
 % TODO: long paper food...
-% Big size TODO:
-% 1. use ordinal regression, not ordinary least squares regression (which would use cardinal values)
-%   a. decent paper on ordinal independent variables: https://www3.nd.edu/~rwilliam/stats3/OrdinalIndependent.pdf
 % 2. for all skills, study marginal effects and K*K skill interactions (including rulebreaker questions)
 
 % This paper acknowledges that own analysis proceeds through a technocentric lens.
@@ -436,14 +476,18 @@ The mean response was 7.5 on a scale from one to ten ($\sigma = 1.80$).
 Employer status was not associated with a significant response effect.
 Perceived skill gaps explained a significant and important portion of hireability variance.
 
-Table \ref{tab:explantory_power} compares perceived skill gap explanatory power in a simple regression
-to explanatory power of other simple regressions involving factors of known relevance to hireability.
+Table \ref{tab:explantory_power} provides evidence on the importance of perceived skill gaps and rulebreaker effects.
+This table compares the explanatory power of selected factor groups.
+Industry and state effects are widely regarded as important in explaining labor outcomes.
+The table shows that perceived skill gaps and rulebreaker effects are even more important in explaining hireability.
+
 Allowing for overqualification seems to weaken explanatory power.
 Overqualification effects seem to be heterogeneously signed per skill, so generalizing weakens overall explanatory power relative to ignoring these effects.
 With overqualification, perceived skill gaps explain about fifty percent more than industrial effects or robust state effects.
 Without overqualification, the adjusted explanatory power of perceived skill gaps is about three times the adjusted explanatory power of industry or state effects.
-Semi-robust state factors are dummy variables by state which are significant in a multiple regression.
-Robust state factors are subset of semi-robust state factors which are additionally significant in a simple regression.
+Semi-robust state effects are state effects which are significant in any multiple regression described in Table \ref{tab:table_new_ols}.
+Robust state effects are the significant factors in a simple regression of semi-robust state effects on hireability.
+An example of a state which appears in a multiple regression from Table \ref{tab:table_new_ols} but is not significant in a simple regression of semi-robust state effects on hireability would be [TODO].
 
 Table \ref{tab:explantory_power} also describes the explanatory power of so-called rulebreaker effects.
 Whether the candidate is perceived as a rule breaker is a perceived skill gap, but employers evaluate this gap in a heterogenous and multispecific way.
@@ -503,11 +547,11 @@ First, the factor for salary is dropped.
 The salary factor improved adjusted explanatory power in Model 2, but it provided no such benefit in any other model.
 Moreover, the p-value of this factor was unacceptably low in Model 4 ($p > 0.9$).
 
-The second adjustment is to add a duration factor.
+The second adjustment is to a factor of duration.
 The duration factor is a measure of the length of time a respondent believes it takes to earn an alternative credential\footnote{
     Duration is a categorical variable which was important in both Models 1 and 2.
     As a categorical variable, it was decomposed into a boolean series for factor analysis.
-    Models 1 and 2 retained one or more duration dummies, but none overlapped.
+    Models 1 and 2 retained one or more duration boolean factors, but none overlapped.
     As a result, duration was dropped from Models 3 and 4.
 }.
 The duration factor which indicates that the respondent believes it takes more than a year to obtain an alternative credential
@@ -618,23 +662,23 @@ Obtaining a college degree after obtaining some work experience will allow stude
 The preferred model explains about one third of willingness to hire.
 Perceived skill gaps and rulebreaker effects account for most of the explanatory power in the model.
 The explanatory power of this study can be meaningfully improved in a few ways.
-This study uses a cross-sectional analysis to investigate a subject that varies over time.
-The traditional system of accredited undergraduate education was itself at one time an innovation.
+% This study uses a cross-sectional analysis to investigate a subject that varies over time.
+% The traditional system of accredited undergraduate education was itself at one time an innovation.
 % Abnormal job candidates differentiated themselves using novel credentials, and broad employer adoption was achieved over time.
 % This paper suggests that the alternative credentials of today will follow a similar pattern.
 % also, role, firm, and industry-level supply, demand, employment, and so on...
-Dynamic analysis would yield deeper understanding of such trends, achieve greater explanatory power, and provide better casual understanding.
-% Dynamic analysis would also generate better opportunity for causal understanding.
+% Dynamic analysis would improve on the cross-sectional analysis in this paper.
+Longitudinal study would allow for causal analysis and improve forecasting of ACNG hireability in the future.
 Other research has conducted some dynamic analysis of the same dependent variable with different regressors\cite{vandivier2020preliminary}.
 Integrated analysis would be useful for replication and the generation of new models of better explanatory power.
-Specifications that allow for overqualification effects and heterogeneous nonlinear relations between skill gaps and hireability would improve not only the present paper,
-but the state of the art in skill gap analysis.
+Analysis that includes overqualification effects and heterogeneous nonlinear relations between skill gaps and hireability would improve estimates of hireability for a candidate of a particular skill profile.
 
 If perceived skill is representative of actual skill,
 then the current study concludes that employers should be more willing to hire an ACNG.
-At the same time, this paper demonstrates plausible misalignment of perceived and actual skill in some cases.
-Last mile training is a type of alternative education which has been specifically recommended as a remedy for technical skill gaps among recent college graduates.
-It is surprising that the average recent college graduate in the sample is perceived to have better technical skill compared to the average ACNG.
+At the same time, this paper provides evidence that perceived and actual skill levels sometimes do not align.
+For example, the average recent college graduate in the sample is perceived to have better technical skill compared to the average ACNG.
+This is surprising because last mile training, a kind of alternative education, has been specifically recommended in popular literature as a remedy for the technical skill gaps that exist among recent college graduates.
+% Further study of the differences between perceived and actual skill would be valuable.
 
 Employers seem to be favorable to individuals with alternative credentials.
 In many cases, employer-perceived skill gaps are not statistically different when comparing recent college gradutes with ACNG candidates.
