@@ -83,6 +83,10 @@ gen r_x_rulebreaker_risky = aetiwno_rulebreaker*rulebreakersnormsprobablyhaveaha
 gen r_x_rulebreaker_rockstars = aetiwno_rulebreaker*rulebreakersnormsmightbedoingsob
 gen r_x_rulebreaker_culture_add = aetiwno_rulebreaker*rulebreakersnormstendtobegiftedi
 
+gen rcgtiwno_bodylanguage = bodylanguage_ideal - bodylanguage_recentcollegegrad
+replace rcgtiwno_bodylanguage = 0 if rcgtiwno_bodylanguage < 0
+gen diff_bodylanguage = aetiwno_bodylanguage-rcgtiwno_bodylanguage
+
 drop formanyprofessionsalternativecre
 drop howlongdoyoubelieveitusually
 drop ifyoudocontributetohiringandfiri
