@@ -35,6 +35,7 @@ reg fav diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness
 * // plug in average values to get net total diff effect...expect negative (lower ACNG hireability)
 * // this would provide evidence that ACNGs would be more hireable if their skills were more grad-like...specifically body language skill
 * // result coeff, respectively: -.3394951, .1573848, .1508238
+* // concientiousness diff factor w positive coefficient is not intuitive...when regressed alone it is insignificant...may be a spurious sample artifact
 sum diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness
 * // resulting means, respectively: .1415094, -.0943396, .0330189
 * // display / compute total effect from sig different factors
