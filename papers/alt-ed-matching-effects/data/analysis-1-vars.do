@@ -83,11 +83,47 @@ gen r_x_rulebreaker_risky = aetiwno_rulebreaker*rulebreakersnormsprobablyhaveaha
 gen r_x_rulebreaker_rockstars = aetiwno_rulebreaker*rulebreakersnormsmightbedoingsob
 gen r_x_rulebreaker_culture_add = aetiwno_rulebreaker*rulebreakersnormstendtobegiftedi
 
-gen rcgtiwno_bodylanguage = bodylanguage_ideal - bodylanguage_recentcollegegrad
-gen rcgtiwo_bodylanguage = bodylanguage_ideal - bodylanguage_recentcollegegrad
+gen rcgtiwno_bodylanguage = bodylanguage_ideal - bodylanguage_recentc
+gen rcgtiwo_bodylanguage = bodylanguage_ideal - bodylanguage_recentc
 replace rcgtiwno_bodylanguage = 0 if rcgtiwno_bodylanguage < 0
 gen diff_wno_bodylanguage = aetiwno_bodylanguage-rcgtiwno_bodylanguage
 gen diff_wo_bodylanguage = aetiwo_bodylanguage-rcgtiwo_bodylanguage
+
+gen rcgtiwno_commute = willingtocommute_ideal - willingtocommute_recentc
+gen rcgtiwo_commute = willingtocommute_ideal - willingtocommute_recentc
+replace rcgtiwno_commute = 0 if rcgtiwno_commute < 0
+gen diff_wno_commute = aetiwno_commute-rcgtiwno_commute
+gen diff_wo_commute = aetiwo_commute-rcgtiwo_commute
+
+gen rcgtiwno_concientiousness = concientiousness_ideal - concientiousness_recentc
+gen rcgtiwo_concientiousness = concientiousness_ideal - concientiousness_recentc
+replace rcgtiwno_concientiousness = 0 if rcgtiwno_concientiousness < 0
+gen diff_wno_concientiousness = aetiwno_concientiousness-rcgtiwno_concientiousness
+gen diff_wo_concientiousness = aetiwo_concientiousness-rcgtiwo_concientiousness
+
+gen rcgtiwno_customerserviceskill = customerserviceskill_ideal - customerserviceskill_recentc
+gen rcgtiwo_customerserviceskill = customerserviceskill_ideal - customerserviceskill_recentc
+replace rcgtiwno_customerserviceskill = 0 if rcgtiwno_customerserviceskill < 0
+gen diff_wno_customerserviceskill = aetiwno_customerserviceskill-rcgtiwno_customerserviceskill
+gen diff_wo_customerserviceskill = aetiwo_customerserviceskill-rcgtiwo_customerserviceskill
+
+gen rcgtiwno_technicaljobskills = technicaljobskills_ideal - technicaljobskills_recentc
+gen rcgtiwo_technicaljobskills = technicaljobskills_ideal - technicaljobskills_recentc
+replace rcgtiwno_technicaljobskills = 0 if rcgtiwno_technicaljobskills < 0
+gen diff_wno_technicaljobskills = aetiwno_technicaljobskills-rcgtiwno_technicaljobskills
+gen diff_wo_technicaljobskills = aetiwo_technicaljobskills-rcgtiwo_technicaljobskills
+
+gen rcgtiwno_teamwork = teamwork_ideal - teamwork_recentc
+gen rcgtiwo_teamwork = teamwork_ideal - teamwork_recentc
+replace rcgtiwno_teamwork = 0 if rcgtiwno_teamwork < 0
+gen diff_wno_teamwork = aetiwno_teamwork-rcgtiwno_teamwork
+gen diff_wo_teamwork = aetiwo_teamwork-rcgtiwo_teamwork
+
+gen rcgtiwno_rulebreaker = rulebreaker_ideal - rulebreaker_recentc
+gen rcgtiwo_rulebreaker = rulebreaker_ideal - rulebreaker_recentc
+replace rcgtiwno_rulebreaker = 0 if rcgtiwno_rulebreaker < 0
+gen diff_wno_rulebreaker = aetiwno_rulebreaker-rcgtiwno_rulebreaker
+gen diff_wo_rulebreaker = aetiwo_rulebreaker-rcgtiwo_rulebreaker
 
 drop formanyprofessionsalternativecre
 drop howlongdoyoubelieveitusually
