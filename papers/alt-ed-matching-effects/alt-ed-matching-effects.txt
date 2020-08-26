@@ -210,47 +210,43 @@ The average for a recent college graduate is 6.29 with a standard deviation of 2
 Informally, a lack of significant difference is apparant in that the means differ by less than one quarter of a standard deviation.
 Formally, the F-statistic from an analysis of variance ($F = 19.25$) and Pearson's chi-squared test ($\chi = 298.80$) both indicate a probability of independence which is less than 0.0001.
 
-An important and complicated finding involves conscientiousness.
-The effect is robustly positive in multiple specifications.
-Simple intuition would indicate that a large conscientiousness gap is associated with reduced hirability.
-A simple regression of conscientiousness on hirability does produce the expected negative coefficient.
+The coefficient on conscientiousness is significant and positive across specifications.
+Intuition would dictate that a large gap in conscientiousness would be associated with reduced hirability.
+Regression of the perceived gap in conscientiousness alone on hirability does produce the expected negative coefficient.
 There are two reasons for the sign change on conscientiousness in the multiple regression.
-The first reason is bliss point seeking and the second is an explanation from attenuation.
+The first explanation is bliss point seeking and the second is an explanation from attenuation.
 
-As previously discussed, excess individual concientiousness can disturb team performance.
-It follows that there is some bliss point level of concientiousness.
-As a result, the sign of the coefficient on concientiousness is sensitive to the relationship between the model constant and the bliss point.
-If the model constant is above the bliss point, concientiousness is expected to be positively signed.
-The current data is consistent with this explanation from bliss point seeking.
-In a simple regression of conscientiousness in hirability, the model constant is about $7.5$, and the coefficient on conscientiousness is negative.
+As previously discussed, external research indicates a bliss point for concientiousness.
+As a result, the sign of the coefficient on concientiousness is sensitive to the position of the model constant relative to the bliss point.
+In a simple regression of conscientiousness on hirability, the model constant is about $7.5$, and the coefficient on conscientiousness is negative.
 In the multiple regression, the model constant is near $0.5$, and the coefficient on conscientiousness is positive.
+The sample data is consistent with an explanation from bliss point seeking where the bliss point value is between 0.5 and 7.5.
 
-The second explanation is that the direct measure of conscientiousness is attenuating an overstatement of the effect in the multiple regression.
-Conscientiousness is importantly cross-correlated with several factors including willingness to commute and customer service skill.
-Conscientiousness also structurally interacts with rulebreaker effects.
-In theory, a person that is high in concientiousness will tend not to break rules.
-These factors are entered independently in the multiple regression, so a partial measure of conscientiousness is entered in redunantly.
-The direct factor for conscientiousness corrects, or attenuates, the overstated effect which is represented in those the correlated independent factors.
-Removal of other skill gap factors and rulebreaker factors from Model 5 demonstrates this by yielding a negative concientiousness coefficient ($\beta = -0.084, p < 0.31$).
-
-The importance of conscientiousness does not add weight to the classic signalling explanation.
-The ACNG concientiousness gap and the recent college graduate concientiousness gap are not significantly different.
+The second explanation is that the direct measure of conscientiousness is attenuating an overstatement of the conscientiousness effect in the multiple regression.
+Conscientiousness is cross-correlated with several factors in all models from Table \ref{tab:table_new_ols}.
+The total effect of conscientiousness is spread across the direct measure and cross-correlated factors.
+This explanation is tested by removing other skill gap factors and the rulebreaker effects from Model 5.
+Other factors such as state, industry, duration, and other effects are retained.
+When specified as such, the factor for the perceived concientiousness skill gap yields the expected negative coefficient ($\beta = -0.084, p < 0.31$).
 
 Employer size is an important factor in the preferred model.
-The largest category of employer is positively associated with hirability an ACNG.
-This matches the risk aversion explanation of ACNG hirability.
+The largest category of employer is positively associated with hirability.
+This finding supports the explanation of hirability from risk aversion over positive conformity selection.
 
 Some state and industrial effects are identified.
 No particular relation among state effects was found, but further comparative policy research is encouraged.
 With respect to industry, an interesting interaction between body language skill and employment in the information technology industry yields a positive coefficient.
-Body language skill gaps on their own are associated with reduced hirability.
-This specifically indicates a reduced penalty for lacking body language communication skills in the information technology industry.
-With less confidence and more generality, a positive coefficient to this interaction variable indicates a reduced penalty for generalized soft skill deficiency in the information technology industry.
+Body language skill gaps on their are associated with reduced hirability.
+The interaction indicates a reduced penalty for a lack of body language communication skill
+in the information technology industry.
+With less confidence and more generality, the interaction indicates a reduced penalty for generalized soft skill deficiency in the information technology industry.
 
 A reduced penalty for soft skill deficit helps explain the particular flourishing of alternative credentials in the information technology industry.
 The reduced penalty in this particular industry might be related to a relative lack of deregulation in the industry.
 Another explanation is that the reduced penalty may be related to cultural norms in the industry.
 There is less technical need for social skill in programming, so introverts may obtain a comparative advantage in this field.
+These effects are not confirmed in the current study.
+Further study which includes job candidate personality data could test this hypothesis.
 
 Explanatory Share of Perceived Gaps
 The preferred model explains about one third of hirability variance, but how much of the explanatory power is attributable to perceived skill gaps?
@@ -285,6 +281,15 @@ Model 7 consolidates factors in order to optimize adjusted explanatory power.
 The four factors that were eliminated in the consolidation had a p-value greater than 0.55.
 This indicates all four eliminated factors were more likely not to have a relation than to have a relation.
 The maximum p-value in Model 7 is less than 0.16.
+
+The findings of this study on conscientiousness neither refute nor support the conscientiousness component of the classic signalling explanation.
+Concientiousness is identified with some significance as a comparative skill gap, but it favors the ACNG in hirability.
+This appears at first to be a case similar to the counterintuitve result found in Model 5.
+Further analysis shows critical differences between the comparative gap specification and Model 5.
+When the comparative gap factor for concientiousness is regressed alone on hirability, the positive coefficient persists.
+The coefficient is also insignificant.
+As such, the explanation from attenuation fails for the comparative gap in concientiousness.
+Secondly, it is not obvious whether there should be any bliss point value for the comparative gap.
 
 The preferred model demonstrates that a perceived soft skill deficit explains ACNG hireability, but it does show that the soft skill deficit is a comparative difference between ACNG labor and the recent college graduate.
 Models 6 and 7 demonstrate that a few soft skills do constitute a significant difference between groups.
