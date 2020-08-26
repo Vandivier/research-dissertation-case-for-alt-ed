@@ -1,0 +1,41 @@
+% ref: analysis-7-diff-of-gaps.do
+
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{2}{c}}
+    \toprule
+                     & \multicolumn{1}{c}{Model 6} & \multicolumn{1}{c}{Model 7} \\
+    \midrule
+    Body Language    & -3.295e-01\sym{*}           & -3.395e-01\sym{*}           \\
+                     & (1.138e-01)                 & (1.049e-01)                 \\
+    \addlinespace
+    Commute          & 1.498e-01                   & 1.574e-01                   \\
+                     & (1.101e-01)                 & (1.069e-01)                 \\
+    \addlinespace
+    Concientiousness & 1.416e-01                   & 1.508e-01                   \\
+                     & (1.119e-01)                 & (1.061e-01)                 \\
+    \addlinespace
+    Customer Service & -1.493e-02                  &                             \\
+                     & (1.143e-01)                 &                             \\
+    \addlinespace
+    Technical        & 4.955e-02                   &                             \\
+                     & (1.164e-01)                 &                             \\
+    \addlinespace
+    Teamwork         & 1.552e-02                   &                             \\
+                     & (1.008e-01)                 &                             \\
+    \addlinespace
+    Rulebreaker      & -5.822e-02                  &                             \\
+                     & (1.108e-01)                 &                             \\
+    % \addlinespace
+    % \_cons                          & 7.613e+00\sym{**}     & 7.629e+00\sym{**}     \\
+    %                                 & (1.264e-01)           & (1.221e-01)           \\
+    \midrule
+    Adj R-sqr        & 0.0311                      & 0.0474                      \\
+    R-sqr            & 0.0633                      & 0.0609                      \\
+    p(F)             & 0.0610                      & 0.0044                      \\
+    % N                               & 212                   & 212                   \\
+    \bottomrule
+    \multicolumn{3}{l}{\footnotesize Standard errors in parentheses}             \\
+    \multicolumn{3}{l}{\footnotesize \sym{*} \(p<.01\), \sym{**} \(p<.001\)}     \\
+\end{tabular}
+}

@@ -30,7 +30,15 @@ reg fav aetiwno_rulebreaker
 * // reduce to each factor p<0.5; coincidentally, each factor p<0.16; p(0.0044); r2=0.0609
 * // it's all about the body language! big significant negative coefficient; other two are smaller, less sig, positive coefficients.
 reg fav diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness diff_wno_customerserviceskill diff_wno_technicaljobskills diff_wno_teamwork diff_wno_rulebreaker
+estimates store R6, title(Model 6)
+qui testparm*
+estadd scalar f_p_value = r(p)
 reg fav diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness
+estimates store R7, title(Model 7)
+qui testparm*
+estadd scalar f_p_value = r(p)
+* // using temp.tex, booktabs
+esttab R6 R7 using temp.tex, booktabs replace se star(* .01 ** .001) stats(r2 f_p_value N, fmt(4 4 0) label(R-sqr p(F))) varwidth(25) b(%10.7e)  mtitles(1 2 3 4) nonumbers
 
 * // plug in average values to get net total diff effect...expect negative (lower ACNG hireability)
 * // this would provide evidence that ACNGs would be more hireable if their skills were more grad-like...specifically body language skill
@@ -43,3 +51,7 @@ display -.3394951*.1415094 - .1573848*.0943396 + .1508238*.0330189
 * // total effect result = -.05790933
 * // confirm total effect is negative on average
 * // distributional, median, modal effects much more complicated...
+
+* // rounded for the paper
+di -0.3395*0.1415 - 0.1575*0.0943 + 0.1508*0.0330
+* // rounded total effect = -0.0579
