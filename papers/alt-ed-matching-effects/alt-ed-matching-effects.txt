@@ -196,15 +196,14 @@ First, rulebreaker effects are positively related to hirability.
 Secondly, a gap in perceived nonconformity skill yields a negative coefficient on hirability.
 This gap effect is equivalent to an association of low hirability and high conformity.
 
-The gap issue applies across multiple models, but reference to a single model facilitates further explanation.
 Overqualification is ignored in Model 5, so a gap indicates that the job candidate has a low level of skill compared to an ideal candidate.
-In this model, an increase to gap size is strictly equal to a reduction in the underlying skill.
+In this model, an increase to gap size is equal to a reduction in the perceived level of skill possessed by a job candidate.
 The negative coefficient for nonconformity therefore indicates that a reduction to nonconformity is associated with reduced hirability.
 Similarly, an increase to the level of perceived nonconformity shrinks the gap size and produces a positive change in hirability.
 The positive relation between nonconformity and hirability is reinforced by a summary statistic, which is that the average actual employee is perceived to have a higher level of nonconformity than both the ACNG and the recent college graduate.
 
 The third reason that an ACNG nonconformity signal does not explain reduced hirability is that the ACNG and recent college graduate do not significantly differ in perceived levels of conformity.
-This is presently demonstrated using summary statistics, but Table \ref{tab:gap_of_gaps} also provides regression analysis for comparative skill gaps in a later section.
+This is presently demonstrated using summary statistics, but Table \ref{tab:gap_of_gaps} also provides regression analysis for comparative skill gaps.
 The average level of perceived nonconformity for the ACNG is 6.43 with a standard deviation of 2.25.
 The average for a recent college graduate is 6.29 with a standard deviation of 2.36.
 Informally, a lack of significant difference is apparant in that the means differ by less than one quarter of a standard deviation.
@@ -222,11 +221,11 @@ In a simple regression of conscientiousness on hirability, the model constant is
 In the multiple regression, the model constant is near $0.5$, and the coefficient on conscientiousness is positive.
 The sample data is consistent with an explanation from bliss point seeking where the bliss point value is between 0.5 and 7.5.
 
-The second explanation is that the direct measure of conscientiousness is attenuating an overstatement of the conscientiousness effect in the multiple regression.
+The second explanation is that the direct measure of conscientiousness is an attenuating effect within certain specifications.
 Conscientiousness is cross-correlated with several factors in all models from Table \ref{tab:table_new_ols}.
-The total effect of conscientiousness is spread across the direct measure and cross-correlated factors.
-This explanation is tested by removing other skill gap factors and the rulebreaker effects from Model 5.
-Other factors such as state, industry, duration, and other effects are retained.
+It could be the case that negative variation in conscientiousness is partialled out into these cross-correlates.
+This hypothesis is tested by removing other skill gap factors and the rulebreaker effects from Model 5.
+The other factors for state, industry, duration, and employer status are retained.
 When specified as such, the factor for the perceived concientiousness skill gap yields the expected negative coefficient ($\beta = -0.084, p < 0.31$).
 
 Employer size is an important factor in the preferred model.
@@ -250,29 +249,30 @@ Further study which includes job candidate personality data could test this hypo
 
 Explanatory Share of Perceived Gaps
 The preferred model explains about one third of hirability variance, but how much of the explanatory power is attributable to perceived skill gaps?
-Table \ref{tab:explantory_power} provides evidence on the importance of perceived skill gaps and rulebreaker effects.
-This table compares the explanatory power of selected factor groups.
-Industry and state effects are widely regarded as important in explaining labor outcomes.
-The table shows that perceived skill gaps and rulebreaker effects are even more important in explaining hirability.
+Table \ref{tab:explantory_power} provides evidence on the importance of perceived skill gaps and rulebreaker effects relative to other factor groups.
+Industry and state effects are factor groups that are widely regarded in the external literature as important for models in the labor market.
+Table \ref{tab:explantory_power} shows that perceived skill gaps and rulebreaker effects explain more variance in hirability than do the widely utilized variables for industry and state.
 Rulebreaker effects collectively explain more than three times as much response variance as do industrial or state effects.
 
-Allowing for overqualification seems to weaken explanatory power.
-Overqualification effects seem to be heterogeneously signed per skill, so generalizing weakens overall explanatory power relative to ignoring these effects.
-With overqualification, perceived skill gaps explain about fifty percent more than industrial effects or robust state effects.
-Without overqualification, the adjusted explanatory power of perceived skill gaps is about three times the adjusted explanatory power of industry or state effects.
+A comparison of simple regressions of perceived skill gaps on hirability reproduces the finding from multiple regression analysis that overqualification effects reduce explanatory power.
+Overqualification effects are heterogenously signed and curved by skill, so nonlinear analysis where the overqualification effects are isolated in distinct factors is likely to improve explanatory power.
+Such analysis would also require a larger sample in order to compensate for the loss of degrees of freedom.
+
 Semi-robust state effects are state effects which are significant in any multiple regression described in Table \ref{tab:table_new_ols}.
 Robust state effects are the significant factors in a simple regression of semi-robust state effects on hirability.
-An example of a state which appears in a multiple regression from Table \ref{tab:table_new_ols} but is not significant in a simple regression of semi-robust state effects on hirability would be [TODO].
+Illinois is an example of a state effect that appears in models 1 and 2 from Table \ref{tab:table_new_ols} but is not significant in a simple regression of semi-robust state effects on hirability.
 
-Table \ref{tab:explantory_power} also describes the explanatory power of so-called rulebreaker effects.
-Whether the candidate is perceived as a rulebreaker is a perceived skill gap, but employers evaluate this gap in a heterogenous and multispecific way.
-In the first place, this heterogenous evaluation has sign and magnitude implications for the dependent variable of interest.
-Secondarily, heterogenous evaluation implies a qualitatively different evaluation.
-These differences are captured using three questions in the first section of the survey.
+Because semi-robust state effects are nonrobust, the r-squared value associated a simple regression of these effects is an overestimate of the explanatory power of state effects.
+Analysis has shown that perceived skill gaps that include overqualification effects are comparatively weak representations of perceived skill gaps for models of hirability.
+A conservative lower-bound on the explanatory ratio of perceived skill gaps to state effects can be constructed by using these two measures.
+Perceived skill gaps conservatively explain about 14 percent more variance in hirability than do state effects\footnote{
+This is computed as $(0.0737 / 0.0648) - 1 = .1373$ and rounded to 0.14.
 
-Employer status is significantly and positively related to each of the rulebreaker effects.
+With overqualification, perceived skill gaps explain about fifty percent more than industrial effects or robust state effects.
+Without overqualification, the adjusted explanatory power of perceived skill gaps is about three times the adjusted explanatory power of industry or state effects.
 Rulebreaker effects are about twice as important as perceived skill gaps.
 These results provide evidence that ACNG hirability depends importantly on the way a particular employer views nonconformists.
+These findings collectively provide evidence that perceived skill gaps and rulebreaker effects are factors of high importance for models of hirability.
 
 Perceived Gaps Compared to the Recent College Graduate
 Table \ref{tab:gap_of_gaps} provides two models of hirability based only on comparative skill gaps.
