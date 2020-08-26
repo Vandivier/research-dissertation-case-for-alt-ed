@@ -2,15 +2,15 @@
 Conformity and Soft Skills as Determinants of Alternatively Credentialed Non-College Graduate Hireability
 
 Despite targeting technical skills, vocational school graduates are paid less than college graduates.
-This paper hypothesizes that nonconformity stigma and a perceived deficit in soft skills substantially explain reduced alternatively credentialed non-college graduate (ACNG) hireability.
-Results from an original survey in the United States indicates that willingness to break rules is a key factor of hireability, but the direction of effect is heterogenous by employer type.
-ACNG job candidates tend to be perceived favorably as creatives or as possible high performers.
-Selection of traditional candidates is better explained as an employer risk aversion behavior, rather than selection for conformity as a direct property of quality labor.
-Perceived skill gaps are more important than widely recognized factors of hireability including industrial and state effects.
-Soft skills are particularly important.
-Recent college graduates and ACNGs are seen as similarly lacking in soft skills including conscientiousness.
-The population of the United States systematically comparatively devalues alternative postsecondary education.
-Results collectively indicate that nontraditional postsecondary education is undervalued.
+This paper hypothesizes that conformity selection and a perceived deficit in soft skills substantially explain reduced alternatively credentialed non-college graduate (ACNG) hireability.
+Microdata from the United States confirm a perceived soft skill deficit for ACNG labor.
+Results also indicate that conformity is a key factor of hireability, but the direction of effect is heterogenous by employer type.
+Conformity and perceived skill gaps explain about one third of hireability variance.
+Perceived soft skill gaps explain about as much as the sum of the effects from state of residence and industry of occupation.
+Opposite a conventional explanation, the results of this study suggest that hireability is negatively correlated to conformity on average.
+ACNG job candidates tend to be perceived as creative types and an even mix of high and low performers.
+Evidence of risk aversion from employers with respect to labor productivity is found, which contributes to lower ACNG demand.
+The conclusion incorporates discussion of public misperception on the cost of vocational school and suggests that nontraditional postsecondary education is undervalued in the United States.
 
 Introduction
 A substantial gap exists between the skills expected by employers and those possessed by college graduates\cite{mcgarry2016examination, malik2017great, abbasi2018analysis, gingras2000there}.
@@ -130,9 +130,16 @@ The willingness to break formal and informal norms is a soft skill and responden
 Structurally, the gap in the rulebreaking skill interacts with employer perception on rulebreaking.
 For this reason, discussions on the importance of skill gaps will consider the importance of rulebreaker effects as well.
 
-These methods allow for identification of a model that explains hireability using perceived ACNG skill gaps.
+These methods allow for identification of a preferred model that explains hireability using perceived ACNG skill gaps.
 The identified model will support the hypothesis if soft skills are more important than technical skill gaps. % and negatively affect ACNG hireability.
 The model will support the risk aversion explanation of ACNG hireability over an explanation from conformity selection if large employer size is positively associated with hireability.
+
+Comparative analysis provides additional confidence in the data by replicating a hireability gap between ACNG labor and recent college graduates.
+A comparative skill gap variable is constructed for each perceived skill gap that is important in the preferred hireability model.
+Comparative skill gap variables are constructed by subtracting perceived recent college graduate skill from perceived ACNG skill.
+Multiple regression of these comparison factors on hireability demonstrates which, if any, perceived skill gaps are important distinguishers of the ACNG from the college graduate.
+Identification of significant differences with a negative total effect on hireability will replicate external data on the lower job market value of ACNG labor
+and provide a diagnostic on which skill or skills must be better addressed through alternative learning programs.
 
 Results
 Results confirm that employers, and the population in general, associate a soft skill deficit with ACNG candidates.
