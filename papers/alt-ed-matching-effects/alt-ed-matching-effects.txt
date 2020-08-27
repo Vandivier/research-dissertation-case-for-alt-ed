@@ -92,7 +92,13 @@ The survey includes 65 questions in two sections\footnote{See Appendix A for a f
 The first section captures respondent characteristics and the second section captures perceived skill relative to hypothetical job applicants.
 Employer responses did not significantly differ from the general population, so respondent characteristics are also interpreted as employer characteristics.
 
-Regression variables in this study are categorical or Likert-type responses based on a scale from 1 to 10.
+Regression variables in this study are categorical or Likert-type responses based on a scale from 1 to 10
+Likert-type responses can be treated as categorical or continuous for the purposes of regression analysis.
+Jaccard and Wan provide support for continuous analysis of Likert-type data.
+They note that severe departures from the assumptions on cardinality "do not seem to affect Type I and Type II errors dramatically,"
+particularly when the Likert scale is 5 or more points.
+This paper uses a 10-point scale and treats these data as continuous.
+A 10-point scale is equivalent to a continous response from 1 to 10 with rounding.
 Higher Likert-type values indicate greater agreement with a statement that varies by variable.
 Categorical variables include state of residence, industry of occupation, employer status, firm size, and a measure called duration.
 

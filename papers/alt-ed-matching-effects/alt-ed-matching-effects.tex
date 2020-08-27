@@ -425,36 +425,37 @@ The first section captures respondent characteristics and the second section cap
 Employer responses did not significantly differ from the general population,
 so respondent characteristics are also interpreted as employer characteristics.
 
-Regression variables in this study are categorical or Likert-type responses based on a scale from 1 to 10.
-% \footnote{
-%     OLS classically supposes cardinal, interval, or continuous data.
-%     Likert-type responses are generally considered ordinal data, but they can be interpreted as cardinal for a few reasons.
-%     First, rounding is an inevitable measurement constraint.
-%     A continuous response from 0 to 1 which rounds to the first decimal is technically statistically and mathematically isomorphic to,
-%     or indistinguible from,
-%     a 10 point Likert-type response.
-%     Jaccard and Wan\cite{jaccard1996lisrel} note that severe departures from the assumptions on cardinality "do not seem to affect Type I and Type II errors dramatically."
-%     They find departures are particularly nonproblematic for Likert scales with 5 or more points.
-%     Finally, treating Likert-type responses as continuous is structurally defensible in this particular study.
-%     The notion that Likert-type responses are purely ordinal would make the notion of marginal effect absurd and incalculable,
-%     but willingness to pay for labor, concientiousness, and other factors used in this study are known to exhibit marginal effects in the literature. % TODO: I could cite but it's pretty obv
-%     See the results section where a marginal effect from concientiousness is identified and interpreted in a meaningful way.
-%
-%     % plenty of research treats likert-type units as continuous, and there is also structural justification in this case.
-%     % Likert-type responses can be interpreted cardinally if certain assumptions hold, which I am happy to posit as constraints in this paper (even spacing of units).
-%     % Even if the assumptions fail, and I don't think they do, research indicates that results seem to be generally robust to breaking such assumptions, and the practice is widespread
-%     % additionally, in this case of this paper we have a structural justification in marginal effects (computed only for concientiousness but it works...)
-%     % d. in my case i have structural justification in marginal effects.
-%     % you can't have a marginal effect on a non-continuous measure; you can't take an ordinal derivative
-%     % but i have marginal effects, they are stastistically valid, and they are theoretically meaningful and similar measures are used all over the place.
-%     % i would be happy to use a categorical-like treatment if not for this, and the latter might even have better fit but it could be overfit.
-%     % finally, an alternative approach would be to treat likert responses as categorical, but the continuous treatment has less fit and more structural justification
-%     % categorical treatment is a relative overfit
-%     % likert-type units can be considered direct psychological measures or economic proxies.
-%     % The likert-type response curve can be thought of as a function of actual skill;
-%     % b. decent paper on ordinal independent variables: https://www3.nd.edu/~rwilliam/stats3/OrdinalIndependent.pdf
-%     % c. more on this: https://www.researchgate.net/post/Is_a_Likert-type_scale_ordinal_or_interval_data
-% }.
+Regression variables in this study are categorical or Likert-type responses based on a scale from 1 to 10
+\footnote{
+    Likert-type responses can be treated as categorical or continuous for the purposes of regression analysis.
+    % This paper treats such variables as continuous, which is consistent with the theoretical structure of the demand curve and the other variables of analysis.
+    % it's also consistent with normalized reporting of real skill measurement; even percentiles themselves are continuous entities.
+    % ie, I could do marginal analysis; and i did a little but i'm not talking about it lol.
+    Jaccard and Wan provide support for continuous analysis of Likert-type data.
+    They note that severe departures from the assumptions on cardinality "do not seem to affect Type I and Type II errors dramatically,"
+    particularly when the Likert scale is 5 or more points\cite{jaccard1996lisrel}.
+    This paper uses a 10-point scale and treats these data as continuous.
+    A 10-point scale is equivalent to a continous response from 1 to 10 with rounding.
+    %
+    % In the current data set, continous treatment provides a consistent and conservative fit of the data with high confidence.
+    % Categorical decomposition yields higher fit with less significance in each category of Likert response.
+    % This indicates categorical decomposition may represent a case of overfit and is therefore an additional reason not to prefer that analytical approach.
+    %
+    % % TODO: long paper food...add marginal fx and u get a third reason Likert as continuous is gtg
+    % Finally, treating Likert-type responses as continuous is structurally defensible in this particular study.
+    % The notion that Likert-type responses are purely ordinal would make the notion of marginal effect absurd and incalculable,
+    % but willingness to pay for labor, concientiousness, and other factors used in this study are known to exhibit marginal effects in the literature. % TODO: I could cite but it's pretty obv
+    % See the results section where a marginal effect from concientiousness is identified and interpreted in a meaningful way.
+    %
+    % TODO: but probably not...I could also cite a paper where an economist uses Likert questionnaire data as cardinal
+    % i would be happy to use a categorical-like treatment if not for this, and the latter might even have better fit but it could be overfit.
+    % finally, an alternative approach would be to treat likert responses as categorical, but the continuous treatment has less fit and more structural justification
+    % categorical treatment is a relative overfit
+    % likert-type units can be considered direct psychological measures or economic proxies.
+    % The likert-type response curve can be thought of as a function of actual skill;
+    % b. decent paper on ordinal independent variables: https://www3.nd.edu/~rwilliam/stats3/OrdinalIndependent.pdf
+    % c. more on this: https://www.researchgate.net/post/Is_a_Likert-type_scale_ordinal_or_interval_data
+}.
 Higher Likert-type values indicate greater agreement with a statement that varies by variable.
 Categorical variables include state of residence,
 industry of occupation,
