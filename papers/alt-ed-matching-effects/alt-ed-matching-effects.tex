@@ -808,17 +808,22 @@ Semi-robust state effects are state effects which are significant in any multipl
 Robust state effects are the significant factors in a simple regression of semi-robust state effects on hirability.
 Illinois is an example of a state effect that appears in models 1 and 2 from Table \ref{tab:table_new_ols} but is not significant in a simple regression of semi-robust state effects on hirability.
 
-Because semi-robust state effects are nonrobust, the r-squared value associated a simple regression of these effects is an overestimate of the explanatory power of state effects.
+% TODO: long paper food...figure out how to explain this false positive identification risk and get some more word count.
+% Because semi-robust state effects are a combination of robust and sensitive state effects which are sensitive to specification and some that are not,
+% Semi-robust state effects are the set of robust effects plus effects which are sensitive to specification,
+% so there is a strictly greater chance of false positive factor identification compared to the set of robust state effects.
+% The simple regression that uses semi-robust state effects has a better chance of overfitting sample data.
+The r-squared associated with a simple regression of semi-robust state effects is greater than the r-squared associated with robust state effects.
 Analysis has shown that perceived skill gaps that include overqualification effects are comparatively weak representations of perceived skill gaps for models of hirability.
 A conservative lower-bound on the explanatory ratio of perceived skill gaps to state effects can be constructed by using these two measures.
 Perceived skill gaps conservatively explain about 14 percent more variance in hirability than do state effects\footnote{
     This is computed as $(0.0737 / 0.0648) - 1 = .1373$ and rounded to 0.14.
 }.
 
-With overqualification, perceived skill gaps explain about fifty percent more than industrial effects or robust state effects.
+With overqualification, perceived skill gaps explain about fifty percent more of the variance in hirability compared to industry or robust state effects.
 Without overqualification, the adjusted explanatory power of perceived skill gaps is about three times the adjusted explanatory power of industry or state effects.
 Rulebreaker effects are about twice as important as perceived skill gaps.
-These results provide evidence that ACNG hirability depends importantly on the way a particular employer views nonconformists.
+% These results provide evidence that ACNG hirability depends importantly on the way a particular employer views nonconformists.
 % indicates that the skill gap in willingness to break rules is highly sensitive to the particular employer
 % TODO: long paper food...it also indicates we should be testing interaction variables but meh and sample size etc
 % This is not taken to be a general lesson about skill gaps.
