@@ -212,16 +212,7 @@ Formally, the F-statistic from an analysis of variance ($F = 19.25$) and Pearson
 The coefficient on conscientiousness is significant and positive across specifications.
 Intuition would dictate that a large gap in conscientiousness would be associated with reduced hirability.
 Regression of the perceived gap in conscientiousness alone on hirability does produce the expected negative coefficient.
-There are two reasons for the sign change on conscientiousness in the multiple regression.
-The first explanation is bliss point seeking and the second is an explanation from attenuation.
-
-As previously discussed, external research indicates a bliss point for concientiousness.
-As a result, the sign of the coefficient on concientiousness is sensitive to the position of the model constant relative to the bliss point.
-In a simple regression of conscientiousness on hirability, the model constant is about $7.5$, and the coefficient on conscientiousness is negative.
-In the multiple regression, the model constant is near $0.5$, and the coefficient on conscientiousness is positive.
-The sample data is consistent with an explanation from bliss point seeking where the bliss point value is between 0.5 and 7.5.
-
-The second explanation is that the direct measure of conscientiousness is an attenuating effect within certain specifications.
+The explanation for the sign change is that the direct measure of conscientiousness is an attenuating effect within certain specifications.
 Conscientiousness is cross-correlated with several factors in all models from Table \ref{tab:table_new_ols}.
 It could be the case that negative variation in conscientiousness is partialled out into these cross-correlates.
 This hypothesis is tested by removing other skill gap factors and the rulebreaker effects from Model 5.
@@ -262,47 +253,40 @@ Semi-robust state effects are state effects which are significant in any multipl
 Robust state effects are the significant factors in a simple regression of semi-robust state effects on hirability.
 Illinois is an example of a state effect that appears in models 1 and 2 from Table \ref{tab:table_new_ols} but is not significant in a simple regression of semi-robust state effects on hirability.
 
-Because semi-robust state effects are nonrobust, the r-squared value associated a simple regression of these effects is an overestimate of the explanatory power of state effects.
+The r-squared associated with a simple regression of semi-robust state effects is greater than the r-squared associated with robust state effects.
 Analysis has shown that perceived skill gaps that include overqualification effects are comparatively weak representations of perceived skill gaps for models of hirability.
 A conservative lower-bound on the explanatory ratio of perceived skill gaps to state effects can be constructed by using these two measures.
 Perceived skill gaps conservatively explain about 14 percent more variance in hirability than do state effects\footnote{
 This is computed as $(0.0737 / 0.0648) - 1 = .1373$ and rounded to 0.14.
 
-With overqualification, perceived skill gaps explain about fifty percent more than industrial effects or robust state effects.
+With overqualification, perceived skill gaps explain about fifty percent more of the variance in hirability compared to industry or robust state effects.
 Without overqualification, the adjusted explanatory power of perceived skill gaps is about three times the adjusted explanatory power of industry or state effects.
 Rulebreaker effects are about twice as important as perceived skill gaps.
-These results provide evidence that ACNG hirability depends importantly on the way a particular employer views nonconformists.
 These findings collectively provide evidence that perceived skill gaps and rulebreaker effects are factors of high importance for models of hirability.
 
 Perceived Gaps Compared to the Recent College Graduate
-Table \ref{tab:gap_of_gaps} provides two models of hirability based only on comparative skill gaps.
-Model 6 is specified with differences in each perceived skill gap that was identified as important in Model 5.
-Model 7 consolidates factors in order to optimize adjusted explanatory power.
-The four factors that were eliminated in the consolidation had a p-value greater than 0.55.
-This indicates all four eliminated factors were more likely not to have a relation than to have a relation.
+Table \ref{tab:gap_of_gaps} provides two models of hirability where comparative skill gaps are the independent factors.
+Model 6 is an adjustment of Model 5, where perceived skill gaps are transformed into comparative skill gaps and all other factors are dropped.
+Model 7 is derived from Model 6 by consolidating factors in order to maximize adjusted explanatory power.
+The four factors that were eliminated in the consolidation from Model 6 to Model 7 had a p-value greater than 0.55.
 The maximum p-value in Model 7 is less than 0.16.
 
-The findings of this study on conscientiousness neither refute nor support the conscientiousness component of the classic signalling explanation.
-Concientiousness is identified with some significance as a comparative skill gap, but it favors the ACNG in hirability.
-This appears at first to be a case similar to the counterintuitve result found in Model 5.
-Further analysis shows critical differences between the comparative gap specification and Model 5.
-When the comparative gap factor for concientiousness is regressed alone on hirability, the positive coefficient persists.
-The coefficient is also insignificant.
-As such, the explanation from attenuation fails for the comparative gap in concientiousness.
-Secondly, it is not obvious whether there should be any bliss point value for the comparative gap.
-
-The preferred model demonstrates that a perceived soft skill deficit explains ACNG hireability, but it does show that the soft skill deficit is a comparative difference between ACNG labor and the recent college graduate.
 Models 6 and 7 demonstrate that a few soft skills do constitute a significant difference between groups.
-Model 7 in combination with summary statistics on the average value of each factor also demonstrates that
-the total hireability effect for the collection of these three factors is negative on average\footnote{
+The main differentiator between ACNG labor and the recent college graduate is body language communication skill.
+ACNG labor is perceived as comparatively deficient in this skill, and the comparative deficiency is associated with reduced ACNG hirability.
+
+Concientiousness and willingness to commute are the other two comparative skill gaps in Model 7.
+These two factors are positively signed, smaller in magnitude, and lower in significance when compared to the factor for body language communication skill.
+Model 7 plus summary statistics on the average value for each independent variable demonstrates that
+the average total effect of comparative skill gaps on hireability is negative\footnote{
 The respective mean values for the comparative gaps in perceived body language skill, willingness to commute, and conscientiousness
-are -0.3395, 0.1574, and 0.1508.
-The total avarage hireability effect attributable to these effects is described by the equation:
-$Y = -0.3395*0.1415 - 0.1575*0.0943 + 0.1508*0.0330 = -0.0579$.
+are -0.1415, 0.0943, and 0.0330.
+The average total effect on hireability attributable to these effects is computed as:
+$-0.0579 = -0.3395*0.1415 - 0.1574*0.0943 + 0.1508*0.0330$.
 This replicates external research which shows lower demand for ACNG labor.
 
 Model 7 also provides a skill-level diagnostic in service of closing the demand gap.
-This model indicates that the soft skill of communication using body language is the only skill difference associated with reduced hireability.
+This model indicates that the soft skill of communication through body language is the only skill difference associated with reduced hireability.
 It is also the most significant and largest in magnitude of such differences.
 This result should not be interpreted as a hireability difference due to generalized communication skill.
 Perceived skill gaps for verbal and written communication are insignificant.

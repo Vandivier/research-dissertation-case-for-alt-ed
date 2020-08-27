@@ -714,25 +714,33 @@ Formally, the F-statistic from an analysis of variance ($F = 19.25$) and Pearson
 The coefficient on conscientiousness is significant and positive across specifications.
 Intuition would dictate that a large gap in conscientiousness would be associated with reduced hirability.
 Regression of the perceived gap in conscientiousness alone on hirability does produce the expected negative coefficient.
-There are two reasons for the sign change on conscientiousness in the multiple regression.
-The first explanation is bliss point seeking and the second is an explanation from attenuation.
-
-% As previously discussed, excess individual concientiousness can disturb team performance\cite{curcseu2019personality}.
-% It follows that there is some bliss point level of concientiousness.
-As previously discussed, external research indicates a bliss point for concientiousness.
-As a result, the sign of the coefficient on concientiousness is sensitive to the position of the model constant relative to the bliss point.
-% If the model constant is above the bliss point, concientiousness is expected to be positively signed.
-% The sample data is consistent with this explanation from bliss point seeking.
-In a simple regression of conscientiousness on hirability, the model constant is about $7.5$, and the coefficient on conscientiousness is negative.
-In the multiple regression, the model constant is near $0.5$, and the coefficient on conscientiousness is positive.
-The sample data is consistent with an explanation from bliss point seeking where the bliss point value is between 0.5 and 7.5.
-
+% There are two reasons for the sign change on conscientiousness in the multiple regression.
+% The first explanation is bliss point seeking and the second is an explanation from attenuation.
+%
+% TODO: long paper food...replace below and above bliss seeking convo with marginal analysis and uncomment
+% % As previously discussed, excess individual concientiousness can disturb team performance\cite{curcseu2019personality}.
+% % It follows that there is some bliss point level of concientiousness.
+% As previously discussed, external research indicates a bliss point for concientiousness.
+% As a result, the sign of the coefficient on concientiousness is sensitive to the position of the model constant relative to the bliss point.
+% % If the model constant is above the bliss point, concientiousness is expected to be positively signed.
+% % The sample data is consistent with this explanation from bliss point seeking.
+% In a simple regression of conscientiousness on hirability, the model constant is about $7.5$, and the coefficient on conscientiousness is negative.
+% In the multiple regression, the model constant is near $0.5$, and the coefficient on conscientiousness is positive.
+% The sample data is consistent with an explanation from bliss point seeking where the bliss point value is between 0.5 and 7.5.
+% % TODO: long paper food...replace bliss seeking convo with marginal analysis and uncomment
+% % TODO: reconcile bliss point seeking w fact that `sum concientiousness_ideal' yields ($\mu = 8.1, \sigma = 1.65$)...
+% % ...>i think it's meanseeking not bliss seeking...
+% % - 0.5 < y < 7.5 is an output constraint; independent effect is meanseeking not bliss seeking; bliss point would be 0 by construction
+% % - meanseeking implies marginal effects; otherwise perfect meanseeking would be insignicance of the factor
+% % - we can replace bliss point seeking analysis with marginal (decreasing return in either direction) but then it's like hey lazy analyst why not do all the marginal analysis?
+%
 % Adding a quadratic term to Model 5 identifies a negative marginal relation between conscientiousness and teamwork skill.
 % This replicates the other research which found a parabolic relationship between peer-rated team contribution and conscientiousness.
 % In addition, conscientiousness exhibits a negative marginal relation with hirability overall.
-
-% much of the below could be heavily edited or deleted pending hanson's feedback.
-The second explanation is that the direct measure of conscientiousness is an attenuating effect within certain specifications.
+%
+% The second explanation is that the direct measure of conscientiousness is an attenuating effect within certain specifications.
+The explanation for the sign change is that the direct measure of conscientiousness is an attenuating effect within certain specifications.
+% The explanation for the sign change during specification change is that the direct measure of conscientiousness is an attenuating effect within certain specifications.
 % The second explanation is that the direct measure of conscientiousness is an attenuating effect in the context of particular model specifications.
 % The second explanation is that the direct measure of conscientiousness is an attenuating effect in particular specifications. % an overstatement of the conscientiousness effect in the multiple regression.
 Conscientiousness is cross-correlated with several factors in all models from Table \ref{tab:table_new_ols}.
@@ -833,11 +841,13 @@ These findings collectively provide evidence that perceived skill gaps and ruleb
 
 \subsection{Perceived Gaps Compared to the Recent College Graduate}
 
-Table \ref{tab:gap_of_gaps} provides two models of hirability based only on comparative skill gaps.
-Model 6 is specified with differences in each perceived skill gap that was identified as important in Model 5.
-Model 7 consolidates factors in order to optimize adjusted explanatory power.
-The four factors that were eliminated in the consolidation had a p-value greater than 0.55.
-This indicates all four eliminated factors were more likely not to have a relation than to have a relation.
+Table \ref{tab:gap_of_gaps} provides two models of hirability where comparative skill gaps are the independent factors.
+Model 6 is an adjustment of Model 5, where perceived skill gaps are transformed into comparative skill gaps and all other factors are dropped.
+Model 7 is derived from Model 6 by consolidating factors in order to maximize adjusted explanatory power.
+The four factors that were eliminated in the consolidation from Model 6 to Model 7 had a p-value greater than 0.55.
+% Because the p-value is greater than 0.5, these coefficients can be interpreted as more likely not to represent a real relation than to represent a real relation.
+% This indicates all four eliminated factors were more likely not to have a relation than to have a relation.
+% Model 7 is the preferred comparative gap model.
 The maximum p-value in Model 7 is less than 0.16.
 
 \begin{table}
@@ -848,41 +858,83 @@ The maximum p-value in Model 7 is less than 0.16.
     \label{tab:gap_of_gaps}
 \end{table}
 
-The findings of this study on conscientiousness neither refute nor support the conscientiousness component of the classic signalling explanation.
-Concientiousness is identified with some significance as a comparative skill gap, but it favors the ACNG in hirability.
-This appears at first to be a case similar to the counterintuitve result found in Model 5.
-Further analysis shows critical differences between the comparative gap specification and Model 5.
-When the comparative gap factor for concientiousness is regressed alone on hirability, the positive coefficient persists.
-The coefficient is also insignificant.
-As such, the explanation from attenuation fails for the comparative gap in concientiousness.
-Secondly, it is not obvious whether there should be any bliss point value for the comparative gap.
-% this would probably get sorted out with a larger sample size and/or nonlinear analysis
-
-The preferred model demonstrates that a perceived soft skill deficit explains ACNG hireability,
-but it does show that the soft skill deficit is a comparative difference between ACNG labor and the recent college graduate.
-% Neither of these models is preferred, and comparative analysis per se is not the main intent of this paper.
-% Instead, these models are useful to demonstrate
 Models 6 and 7 demonstrate that a few soft skills do constitute a significant difference between groups.
-Model 7 in combination with summary statistics on the average value of each factor also demonstrates that
-the total hireability effect for the collection of these three factors is negative on average\footnote{
+The main differentiator between ACNG labor and the recent college graduate is body language communication skill.
+% Recent college graduates are perceived as skilled in this area,
+ACNG labor is perceived as comparatively deficient in this skill,
+and the comparative deficiency is associated with reduced ACNG hirability.
+
+Concientiousness and willingness to commute are the other two comparative skill gaps in Model 7.
+These two factors are positively signed, smaller in magnitude, and lower in significance when compared to the factor for body language communication skill.
+Model 7 plus summary statistics on the average value for each independent variable demonstrates that
+the average total effect of comparative skill gaps on hireability is negative\footnote{
     % per analysis-7-diff-of-gaps.do
     The respective mean values for the comparative gaps in perceived body language skill,
     willingness to commute,
     and conscientiousness
-    are -0.3395, 0.1574, and 0.1508.
-    The total avarage hireability effect attributable to these effects is described by the equation:
-    $Y = -0.3395*0.1415 - 0.1575*0.0943 + 0.1508*0.0330 = -0.0579$.
+    are -0.1415, 0.0943, and 0.0330.
+    The average total effect on hireability attributable to these effects is computed as:
+    % $Y = -0.3395*0.1415 - 0.1575*0.0943 + 0.1508*0.0330 = -0.0579$.
+    $-0.0579 = -0.3395*0.1415 - 0.1574*0.0943 + 0.1508*0.0330$.
 }.
 This replicates external research which shows lower demand for ACNG labor.
-% but notice that replication failure wouldn't invalidate other findings bc hireability is just for ACNG; it isn't really ACNG vs college grad hireability
+
+% % TODO: long paper food...talk about how the conscientiousness differential gap may be a spurious result per analysis-7-diff-of-gaps.do
+% % TODO: long paper food...try to explain positive coefficient on comparative concientiousness
+% % TODO: long paper food...more samples could resolve this.
+% explanations:
+% 1. accept it on its face; it indicates that recent college grad is overconcientious!
+%       nah...it's again meanseeking not bliss point; linear meanseeking implies unobserved nonlinear, esp marginal, fx...ref: above comment saying "lazy analyst"
+% 2. from attenuation
+%       fail to confirm or reject bc insignificant simple reg B...attenuation can be related to nonlinear fx too...
+% %
+% 3. bliss point seeking; fail to confirm or reject bc insignificant simple reg B
+%       this explanation is wrong.
+% %
+% 4. from pass-through recent college grad gap (ie gap is close to 0 on average)
+%       fail to confirm or reject bc it's true but it's also true for ACNG gap and like evrygap...more samples would help.
+% %
+% 5. from equality bias; respondents give ACNG offsetting benefits bc the respondent feels like everyone should be equal overall, but perhaps through different skills
+%       this is pure speculation but could be an interesting other paper
+% 6. from distributional truncation (due to no overqualification effect)
+%       this is to say that ACNG overqualified vis a vis skill is not the same as overqualified vis a vis ideal
+%       they are fundamentally different kinds of overqualification and should not be intermingled
+%       the statistical effect is that the minimum value of (acng - recent grad) skill is higher than it otherwise would be
+%       this pushes up the average value in turn.
+%       meh not super convincing bc it would push coefficient towards zero but not flip the sign...i think that could be wrong tho...
+% %
+% % or the positive B on willingness to commute for that matter
+% % The positive coefficient on the factors for comparative perceived skill in concientiousness and willingness to commute
+% The positive coefficients on factors of concientiousness and willingness to commute are unexpected.
+
+% The findings of this study on comparative conscientiousness neither refute nor support the conscientiousness component of the classic signalling explanation.
+% Model 7 identifies three comparative gaps as important in a multiple regression on hirability.
+% Concientiousness is one of those gaps, and it possessess an unexpected positive coefficient.
+% The positive comparative gap coefficient indicates that an ACNG candidate with a large perceived skill deficit is hirable compared to a recent college graduate with a small perceived deficit in concientiousness.
+% This result is unexpected, and it is also reminiscent of the unexpected positive coefficient on the noncomparative perceived concientiousness factor in Model 5.
+
+% % ref: reg fav diff_wno_concien
+% The noncomparative perceived concientiousness factor in Model 5 was explained using bliss point seeking and attenuation.
+% In the case of this comparative gap, the explanation from attenuation fails.
+% The factor for the comparative perceived concientiousness skill gap retains a positive coefficient in a simple regression on hirability, although the coefficient is also insignificant ($p > 0.55$).
+% % A simple regression of the  on hirability retains a positive coefficient.
+% % The coefficient in the simple regression, however, is statistically insignificant ($p > 0.55$).
+% % Significance is likely to improve with further sampling. Further sampling might also entirely eliminate the identification of a positive comparative coefficient.
+
+% Concientiousness is identified with some significance as a comparative skill gap, but it favors the ACNG in hirability.
+% This appears at first to be a case similar to the counterintuitve result found in Model 5.
+% Further analysis shows critical differences between the comparative gap specification and Model 5.
+% When the comparative gap factor for concientiousness is regressed alone on hirability, the positive coefficient persists.
+% The coefficient is also insignificant.
+% As such, the explanation from attenuation fails for the comparative gap in concientiousness.
+% Secondly, it is not obvious whether there should be any bliss point value for the comparative gap.
+% % this would probably get sorted out with a larger sample size and/or nonlinear analysis
 
 Model 7 also provides a skill-level diagnostic in service of closing the demand gap.
-This model indicates that the soft skill of communication using body language is the only skill difference associated with reduced hireability.
+This model indicates that the soft skill of communication through body language is the only skill difference associated with reduced hireability.
 It is also the most significant and largest in magnitude of such differences.
 This result should not be interpreted as a hireability difference due to generalized communication skill.
 Perceived skill gaps for verbal and written communication are insignificant.
-
-% TODO: long paper food...talk about how the conscientiousness differential gap may be a spurious result per analysis-7-diff-of-gaps.do
 
 \section{Conclusion}
 

@@ -53,5 +53,5 @@ display -.3394951*.1415094 - .1573848*.0943396 + .1508238*.0330189
 * // distributional, median, modal effects much more complicated...
 
 * // rounded for the paper
-di -0.3395*0.1415 - 0.1575*0.0943 + 0.1508*0.0330
+di -0.3395*0.1415 - 0.1574*0.0943 + 0.1508*0.0330
 * // rounded total effect = -0.0579
