@@ -143,7 +143,7 @@ reg fav diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness is*
 * // M9
 reg fav diff_alt2_wno_bodylanguage diff_alt2_wno_commute diff_alt2_wno_concientiousness
 estimates store R9, title(Model 9)
-qui testparm*
+qui testparm*z
 estadd scalar f_p_value = r(p)
 
 esttab R6 R7 R8 R9 using temp.tex, booktabs replace se star(* .01 ** .001) stats(r2 f_p_value N, fmt(4 4 0) label(R-sqr p(F))) varwidth(25) b(%10.7e)  mtitles(1 2 3 4) nonumbers
@@ -154,3 +154,31 @@ reg fav diff_alt2_wno_bodylanguage if diff_alt2_wno_body < 0, noconstant
 reg fav diff_alt2_wno_bodylanguage, noconstant
 reg fav diff2_wno_bodylanguage, noconstant
 reg fav diff2_wo_bodylanguage, noconstant
+
+* // looks like unexpected bodylang result can be attributed to a single outlier
+* // i'm comfortable trimming it bc 1) no explanatory hypothesis for it's nonerroneous status can be defended in the data bc it's a single point
+* // 2) structurally unexpected
+* // and 3) you're just going to have some bad data with big data.
+* // with or without that guy trimmed, it appears the quadratic line has a curved residual so cubic term should be entered in
+* // TODO: long paper food...
+* // there just aren't enough samples and degrees of freedom to give confidence to an analysis which systematically and simulataneouly investigates linear, quadratic,
+* // and cubic fx for all skills plus higher power interactions.
+* // maybe with a sample 2-10x current sample size we would be gtg.
+twoway scatter fav diff2_wno_bodylanguage || lfit fav diff2_wno_bodylanguage
+twoway scatter fav diff2_wno_bodylanguage if diff2_wno_bodylanguage < 40 || lfit fav diff2_wno_bodylanguage if diff2_wno_bodylanguage < 40
+
+* // diff3_wno_bodylanguage
+* // I get expected coeff with or without sample truncaction, but sig is major impacted
+* // negative linear and cubic but there's a pausing area where insignificant quad makes it temporarily comparatively better or at least not that bad...
+* // i prefer not to use truncated if possible
+* // are residuals gtg...? https://campusguides.lib.utah.edu/c.php?g=160853&p=1054157
+* // normality is violated, but per above article this means we have to throw out p-value and F-test but it doesn't undermine coefficients
+* // res has slightly better normality but it doesn't matter...and i mean slightlyyyyyy.... ie p(z) < 0.00002 vs p(z) < 0.00001
+twoway scatter fav diff3_wno_bodylanguage if diff2_wno_bodylanguage < 40 || lfit fav diff3_wno_bodylanguage if diff2_wno_bodylanguage < 40
+reg fav diff_wno_body diff2_wno_body diff3_wno_body if diff2_wno_bodylanguage < 40
+predict res40, resid
+reg fav diff_wno_body diff2_wno_body diff3_wno_body
+rvfplot
+predict res, resid
+swilk res
+qnorm res

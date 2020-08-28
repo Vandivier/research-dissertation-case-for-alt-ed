@@ -89,6 +89,7 @@ replace rcgtiwno_bodylanguage = 0 if rcgtiwno_bodylanguage < 0
 gen diff_wno_bodylanguage = aetiwno_bodylanguage-rcgtiwno_bodylanguage
 gen diff_wo_bodylanguage = aetiwo_bodylanguage-rcgtiwo_bodylanguage
 gen diff2_wno_bodylanguage = diff_wno_bodylanguage*diff_wno_bodylanguage
+gen diff3_wno_bodylanguage = diff_wno_bodylanguage*diff_wno_bodylanguage*diff_wno_bodylanguage
 gen diff2_wo_bodylanguage = diff_wo_bodylanguage*diff_wo_bodylanguage
 gen diff_alt2_wno_bodylanguage = rcgtiwno_bodylanguage*rcgtiwno_bodylanguage - aetiwno_bodylanguage*aetiwno_bodylanguage
 gen diff_alt3_wno_bodylanguage = rcgtiwno_bodylanguage*rcgtiwno_bodylanguage*rcgtiwno_bodylanguage - aetiwno_bodylanguage*aetiwno_bodylanguage*aetiwno_bodylanguage
