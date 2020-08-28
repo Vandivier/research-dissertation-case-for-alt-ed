@@ -37,8 +37,6 @@ reg fav diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness
 estimates store R7, title(Model 7)
 qui testparm*
 estadd scalar f_p_value = r(p)
-* // using temp.tex, booktabs
-esttab R6 R7 using temp.tex, booktabs replace se star(* .01 ** .001) stats(r2 f_p_value N, fmt(4 4 0) label(R-sqr p(F))) varwidth(25) b(%10.7e)  mtitles(1 2 3 4) nonumbers
 
 * // plug in average values to get net total diff effect...expect negative (lower ACNG hireability)
 * // this would provide evidence that ACNGs would be more hireable if their skills were more grad-like...specifically body language skill
@@ -82,6 +80,11 @@ reg fav diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness diff2_w
 reg fav diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness if rcgtiwno_concientiousness > aetiwno_concientiousness
 reg fav diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness if rcgtiwno_concientiousness < aetiwno_concientiousness
 reg fav diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness if aetiwno_concientiousness == 0
+reg fav diff_alt2* diff_alt3_wno_bodylanguage
+
+* // it heteroscedastic, but glm/robust std err don't change coefficient
+* // https://rstudio-pubs-static.s3.amazonaws.com/187387_3ca34c107405427db0e0f01252b3fbdb.html
+scatter fav diff_alt2_wno_bodylanguage
 
 * // distinct truncation flags...positive coefficient persists
 * // minor good news - isideal is positively signed
@@ -128,3 +131,24 @@ reg fav diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness diff_wn
 * // this model is technically better on model metrics but is fkin complex to explain and arguably contrived and/or wrong...maybe don't talk about it...
 reg fav diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness diff2_wno_concientiousness diff_alt2_wno_concientiousness
 reg fav diff_wno_bodylanguage diff_wno_commute diff_alt2_wno_concientiousness
+
+* // M8
+* // notice outlier at diff_alt2_wno_bodylanguage < -30
+reg fav diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness diff_alt2*
+estimates store R8, title(Model 8)
+qui testparm*
+estadd scalar f_p_value = r(p)
+reg fav diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness is*
+
+* // M9
+reg fav diff_alt2_wno_bodylanguage diff_alt2_wno_commute diff_alt2_wno_concientiousness
+estimates store R9, title(Model 9)
+qui testparm*
+estadd scalar f_p_value = r(p)
+
+esttab R6 R7 R8 R9 using temp.tex, booktabs replace se star(* .01 ** .001) stats(r2 f_p_value N, fmt(4 4 0) label(R-sqr p(F))) varwidth(25) b(%10.7e)  mtitles(1 2 3 4) nonumbers
+
+
+* // wow. compare the two below and don't forget `noconstant' in future:
+reg fav diff_alt2_wno_bodylanguage if diff_alt2_wno_body < 0
+reg fav diff_alt2_wno_bodylanguage if diff_alt2_wno_body < 0, noconstant

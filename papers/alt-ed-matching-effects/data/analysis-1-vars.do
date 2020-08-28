@@ -90,6 +90,8 @@ gen diff_wno_bodylanguage = aetiwno_bodylanguage-rcgtiwno_bodylanguage
 gen diff_wo_bodylanguage = aetiwo_bodylanguage-rcgtiwo_bodylanguage
 gen diff2_wno_bodylanguage = diff_wno_bodylanguage*diff_wno_bodylanguage
 gen diff2_wo_bodylanguage = diff_wo_bodylanguage*diff_wo_bodylanguage
+gen diff_alt2_wno_bodylanguage = rcgtiwno_bodylanguage*rcgtiwno_bodylanguage - aetiwno_bodylanguage*aetiwno_bodylanguage
+gen diff_alt3_wno_bodylanguage = rcgtiwno_bodylanguage*rcgtiwno_bodylanguage*rcgtiwno_bodylanguage - aetiwno_bodylanguage*aetiwno_bodylanguage*aetiwno_bodylanguage
 
 gen rcgtiwno_commute = willingtocommute_ideal - willingtocommute_recentc
 gen rcgtiwo_commute = willingtocommute_ideal - willingtocommute_recentc
@@ -98,6 +100,7 @@ gen diff_wno_commute = aetiwno_commute-rcgtiwno_commute
 gen diff_wo_commute = aetiwo_commute-rcgtiwo_commute
 gen diff2_wno_commute = diff_wno_commute*diff_wno_commute
 gen diff2_wo_commute = diff_wo_commute*diff_wo_commute
+gen diff_alt2_wno_commute = rcgtiwno_commute*rcgtiwno_commute - aetiwno_commute*aetiwno_commute
 
 gen rcgtiwno_concientiousness = concientiousness_ideal - concientiousness_recentc
 gen rcgtiwo_concientiousness = concientiousness_ideal - concientiousness_recentc

@@ -272,7 +272,7 @@ These findings collectively provide evidence that perceived skill gaps and ruleb
 
 Perceived Gaps Compared to the Recent College Graduate
 Table \ref{tab:gap_of_gaps} provides two models of hirability where comparative skill gaps are the independent factors.
-Model 6 is an adjustment of Model 5, where perceived skill gaps are transformed into comparative skill gaps and all other factors are dropped.
+Model 6 is derived from Model 5 by replacing perceived skill gap factors with comparative perceived skill gap factors and dropping other factors.
 Model 7 is derived from Model 6 by consolidating factors in order to maximize adjusted explanatory power.
 The four factors that were eliminated in the consolidation from Model 6 to Model 7 had a p-value greater than 0.55.
 The maximum p-value in Model 7 is less than 0.16.
@@ -291,11 +291,35 @@ The average total effect on hireability attributable to these effects is compute
 $-0.0579 = -0.3395*0.1415 - 0.1574*0.0943 + 0.1508*0.0330$.
 This replicates external research which shows lower demand for ACNG labor.
 
-Model 7 also provides a skill-level diagnostic in service of closing the demand gap.
-This model indicates that the soft skill of communication through body language is the only skill difference associated with reduced hireability.
-It is also the most significant and largest in magnitude of such differences.
+The positive coefficient on willingness to commute and conscientiousness in Model 7 are unexpected.
+A simple interpretation of these coefficients is that when a recent college graduate possesses an ideal level of these skills, relative ACNG deficiency is valuable.
+Model 8 expands these linear factors with marginal effects.
+Linear body language effects were the most significant effect in Model 7, but they are the least significant in Model 8.
+The quadratic factor for body language is the only significant factor in this model.
+More importantly, all quadratic effects are more significant than their linear counterparts in this model.
+There is not a single linear factor with a p-value less than 0.6 in Model 8.
+Model 9 reconsolidates factors by significance and retains only quadratic factors.
+
+Model 9 is the preferred comparative gap regression because the factors in the model are each strong and the overall model also maximizes adjusted explanatory power.
+Quadratic factor coefficients from Model 9 can be interpreted as marginal effects.
+The negative marginal effects on willingness to commute and concientiousness are particularly intuitive when combined with summary statistics.
+The average perceived level of concientiousness for the ACNG is 7.11 ($\sigma = 1.85$), for the recent college graduate it is 7.14 ($\sigma = 1.87$), and for the ideal candidate it is 8.10 ($\sigma = 1.65$).
+Willingness to commute follows a similar pattern. % of dispersion
+These summary statistics clarify that small comparative gaps generally occur when both forms of labor are close to the ideal level of perceived skill.
+Negative comparative marginal effects indicate that hirability increases as comparative gaps decrease.
+
+The converse is that as comparative gaps increase, hirability decreases.
+This is also made intuitive by the summary statistics on average perceived skill levels.
+For both willingness to commute and concientiousness, the average recent college graduate has higher perceived skill than the average ACNG.
+This means that large skill gaps tend to be cases where the ACNG is disproportionately deficient, so reduced hirability is expected.
+
+Model 9 provides a skill-level diagnostic in service of closing the demand gap.
+Training for body language communication skill can be incorporated into alternative learning provider products, or alternative learning provider consumers can append additional training and credentials to their skill profile which target this skill.
 This result should not be interpreted as a hireability difference due to generalized communication skill.
-Perceived skill gaps for verbal and written communication are insignificant.
+Perceived skill gaps for emotional intelligence, verbal communication, and written communication are insignificant.
+
+Alternatively educated individuals can offset perceived concientiousness deficit by provisioning work history or results of a personality test.
+External research indicates that psychological therapy and other interventions can boost concientiousness in some cases.
 
 Conclusion
 This study provides evidence that skill signals are an important factor of hirability and are unique for the ACNG.

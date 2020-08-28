@@ -2,40 +2,50 @@
 
 {
 \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
-\begin{tabular}{l*{2}{c}}
+\begin{tabular}{l*{4}{c}}
     \toprule
-                     & \multicolumn{1}{c}{Model 6} & \multicolumn{1}{c}{Model 7} \\
+                          & \multicolumn{1}{c}{Model 6} & \multicolumn{1}{c}{Model 7} & \multicolumn{1}{c}{Model 8} & \multicolumn{1}{c}{Model 9} \\
     \midrule
-    Body Language    & -3.295e-01\sym{*}           & -3.395e-01\sym{*}           \\
-                     & (1.138e-01)                 & (1.049e-01)                 \\
+    Body Language         & -3.295e-01\sym{*}           & -3.395e-01\sym{*}           & 4.656e-02                   &                             \\
+                          & (1.138e-01)                 & (1.049e-01)                 & (2.091e-01)                 &                             \\
     \addlinespace
-    Commute          & 1.498e-01                   & 1.574e-01                   \\
-                     & (1.101e-01)                 & (1.069e-01)                 \\
+    Commute               & 1.498e-01                   & 1.574e-01                   & 6.999e-02                   &                             \\
+                          & (1.101e-01)                 & (1.069e-01)                 & (1.789e-01)                 &                             \\
     \addlinespace
-    Concientiousness & 1.416e-01                   & 1.508e-01                   \\
-                     & (1.119e-01)                 & (1.061e-01)                 \\
+    Conscientiousness     & 1.416e-01                   & 1.508e-01                   & 9.795e-02                   &                             \\
+                          & (1.119e-01)                 & (1.061e-01)                 & (1.955e-01)                 &                             \\
     \addlinespace
-    Customer Service & -1.493e-02                  &                             \\
-                     & (1.143e-01)                 &                             \\
+    Customer Service      & -1.493e-02                  &                             &                             &                             \\
+                          & (1.143e-01)                 &                             &                             &                             \\
     \addlinespace
-    Technical        & 4.955e-02                   &                             \\
-                     & (1.164e-01)                 &                             \\
+    Technical             & 4.955e-02                   &                             &                             &                             \\
+                          & (1.164e-01)                 &                             &                             &                             \\
     \addlinespace
-    Teamwork         & 1.552e-02                   &                             \\
-                     & (1.008e-01)                 &                             \\
+    Teamwork              & 1.552e-02                   &                             &                             &                             \\
+                          & (1.008e-01)                 &                             &                             &                             \\
     \addlinespace
-    Nonconformity    & -5.822e-02                  &                             \\
-                     & (1.108e-01)                 &                             \\
+    Nonconformity         & -5.822e-02                  &                             &                             &                             \\
+                          & (1.108e-01)                 &                             &                             &                             \\
+    \addlinespace
+    Body Language$^2$     &                             &                             & 9.276e-02                   & 8.301e-02\sym{**}           \\
+                          &                             &                             & (4.268e-02)                 & (2.108e-02)                 \\
+    \addlinespace
+    Commute$^2$           &                             &                             & -2.075e-02                  & -3.213e-02                  \\
+                          &                             &                             & (3.644e-02)                 & (2.151e-02)                 \\
+    \addlinespace
+    Conscientiousness$^2$ &                             &                             & -2.525e-02                  & -4.187e-02                  \\
+                          &                             &                             & (4.063e-02)                 & (2.227e-02)                 \\
     % \addlinespace
-    % \_cons                          & 7.613e+00\sym{**}     & 7.629e+00\sym{**}     \\
-    %                                 & (1.264e-01)           & (1.221e-01)           \\
+    % \_cons                            & 7.613e+00\sym{**}     & 7.629e+00\sym{**}     & 7.658e+00\sym{**}     & 7.661e+00\sym{**}     \\
+    %                                   & (1.264e-01)           & (1.221e-01)           & (1.221e-01)           & (1.211e-01)           \\
     \midrule
-    Adj R-sqr        & 0.0311                      & 0.0474                      \\
-    R-sqr            & 0.0633                      & 0.0609                      \\
-    p(F)             & 0.0610                      & 0.0044                      \\
-    % N                               & 212                   & 212                   \\
+    Adj R-sqr             & 0.0311                      & 0.0474                      & 0.0499                      & 0.0715                      \\
+    R-sqr                 & 0.0633                      & 0.0609                      & 0.0867                      & 0.0847                      \\
+    p(F)                  & 0.0610                      & 0.0044                      & 0.0046                      & 0.0004                      \\
+    % N                                 & 212                   & 212                   & 212                   & 212                   \\
     \bottomrule
-    \multicolumn{3}{l}{\footnotesize Standard errors in parentheses}             \\
-    \multicolumn{3}{l}{\footnotesize \sym{*} \(p<.01\), \sym{**} \(p<.001\)}     \\
+    \multicolumn{5}{l}{\footnotesize Standard errors in parentheses}                                                                              \\
+    \multicolumn{5}{l}{\footnotesize \sym{*} \(p<.01\), \sym{**} \(p<.001\)}                                                                      \\
 \end{tabular}
 }
+
