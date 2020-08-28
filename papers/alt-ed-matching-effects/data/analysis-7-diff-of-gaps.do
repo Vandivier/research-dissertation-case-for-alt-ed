@@ -148,7 +148,7 @@ estadd scalar f_p_value = r(p)
 
 esttab R6 R7 R8 R9 using temp.tex, booktabs replace se star(* .01 ** .001) stats(r2 f_p_value N, fmt(4 4 0) label(R-sqr p(F))) varwidth(25) b(%10.7e)  mtitles(1 2 3 4) nonumbers
 
-* // wow. compare the five below and don't forget `noconstant' in future:
+* // wow. compare the five below and consider `noconstant' in future:
 reg fav diff_alt2_wno_bodylanguage if diff_alt2_wno_body < 0
 reg fav diff_alt2_wno_bodylanguage if diff_alt2_wno_body < 0, noconstant
 reg fav diff_alt2_wno_bodylanguage, noconstant
