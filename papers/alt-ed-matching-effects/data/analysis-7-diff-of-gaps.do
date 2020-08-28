@@ -55,3 +55,76 @@ display -.3394951*.1415094 - .1573848*.0943396 + .1508238*.0330189
 * // rounded for the paper
 di -0.3395*0.1415 - 0.1574*0.0943 + 0.1508*0.0330
 * // rounded total effect = -0.0579
+
+* // truncation theory check...
+* // consistent with papers that say "B students are more succesful"
+* // ...it seems like the average college grad is closer to ideal, but distrobutionally a significant chunk of them suffer from overqualification
+* // "The average GPA for students at four-year colleges in the US is around 3.15, or a B average. This is much higher than it's been in the past..."
+* // https://blog.prepscholar.com/average-college-gpa-by-major
+sum diff_wno_concientiousness
+sum diff_wno_concientiousness if aetiwno_concientiousness != 0 & rcgtiwno_concientiousness != 0
+sum diff_wno_concientiousness if rcgtiwno_concientiousness != 0
+sum diff_wno_concientiousness if aetiwno_concientiousness != 0
+* // still positive coefficient for diff_wno_concientiousness
+reg fav diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness if aetiwno_concientiousness != 0 & rcgtiwno_concientiousness != 0
+
+* // this guy finally has a negative coefficient as expected but concientiousness is not significant
+* // benefit: gap diff interpretation is simpler because the variable is now just ACNG skill gap
+reg fav diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness if rcgtiwno_concientiousness == 0
+* // average is 1.2; we can relax restriction of == 0 to "is less than average" and still get expected negative sign
+* // positive sign decreases as allowed rcgtiwno_concientiousness increases, indicating a marginal effect
+sum rcgtiwno_concientiousness
+reg fav diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness if rcgtiwno_concientiousness < 1.3
+* // marginal fx not significant but they are moreso than linear with constrained sample ig progress
+reg fav diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness diff2_wno_concientiousness
+
+* // exploring...
+reg fav diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness if rcgtiwno_concientiousness > aetiwno_concientiousness
+reg fav diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness if rcgtiwno_concientiousness < aetiwno_concientiousness
+reg fav diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness if aetiwno_concientiousness == 0
+
+* // distinct truncation flags...positive coefficient persists
+* // minor good news - isideal is positively signed
+reg fav diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness is*
+reg fav diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness isideal* istruncated* oq* isbetter*
+
+* // one third of respondents think acng better work ethic compared to college grad
+* // but then they don't want to hire em!!
+* // could be indicative of a spurious result or overqualification rearing its head again...
+sum isbetter_acng_concientiousness
+reg fav isbetter_acng_concientiousness
+
+* // marginal gap fx with overqualification
+* // negative marginal concientiousness survives longer than linear effect but neither is p < 0.5
+* // still, weak model is all quads showing marginal analysis may be the key; these effects are stronger
+reg fav diff_wo* diff2_wo*
+reg fav diff2_wo_bodylanguage diff2_wo_commute diff2_wo_concientiousness diff2_wo_customerserviceskill diff2_wo_rulebreaker diff2_wo_teamwork diff2_wo_technicaljobskills diff_wo_bodylanguage diff_wo_commute diff_wo_concientiousness diff_wo_customerserviceskill diff_wo_rulebreaker diff_wo_teamwork diff_wo_technicaljobskills
+reg fav diff2_wo_bodylanguage diff2_wo_commute diff2_wo_customerserviceskill diff2_wo_teamwork diff2_wo_technicaljobskills
+
+* // wno still wins
+reg fav diff_wno* diff2_wno*
+reg fav diff_wno* diff2_wno* isideal* istruncated* oq* isbetter*
+reg fav diff2_wno_bodylanguage diff2_wno_commute diff2_wno_concientiousness diff2_wno_customerserviceskill diff2_wno_rulebreaker diff2_wno_teamwork diff2_wno_technicaljobskills diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness diff_wno_customerserviceskill diff_wno_rulebreaker diff_wno_teamwork diff_wno_technicaljobskills isideal* istruncated* oq* isbetter*
+
+* // start from M7 skill gaps not M5
+* // diff2_wno_concientiousness doesn't matter here
+* // conclusion: this could be a spurious result or it looks like concientiousness is a case where overqualification is desired
+reg fav diff2_wno_bodylanguage diff2_wno_commute diff2_wno_concientiousness diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness isideal* istruncated* oq* isbetter*
+reg fav diff2_wno_bodylanguage diff2_wno_commute diff2_wno_concientiousness diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness isideal* istruncated* oq* isbetter_acng_concientiousness isbetter_acng_commute
+reg fav diff2_wno_bodylanguage diff2_wno_concientiousness diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness isideal* istruncated_rcg oq* isbetter_acng_concientiousness isbetter_acng_commute
+reg fav diff2_wno_bodylanguage diff2_wno_concientiousness diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness isideal* istruncated_rcg oq* isbetter_acng_commute
+reg fav diff2_wno_bodylanguage diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness isideal* istruncated_rcg oq* isbetter_acng_commute
+
+* // one last check; maybe overqualification is desired bc we ignore price. so the true ideal is inclusive of cost considerations.
+* // nah they are pretty independent
+reg fav diff2_wno_bodylanguage diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness isideal* istruncated_rcg oq* isbetter_acng_commute aetiwno_price_x_con rcgtiwno_price_x_con diff_wno_price_x_con diff2_wno_price_x_con
+reg fav diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness diff_wno_price_x_con
+reg fav diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness diff_wno_salary
+
+* // another last thing lol...computing square diff an alternative way
+* // now we get negative coefficient that matters more than linear effect!
+* // computation difference is square the gap then take difference (instead of diff then square)
+* // result is sensitive to the order of operations.
+* // this model is technically better on model metrics but is fkin complex to explain and arguably contrived and/or wrong...maybe don't talk about it...
+reg fav diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness diff2_wno_concientiousness diff_alt2_wno_concientiousness
+reg fav diff_wno_bodylanguage diff_wno_commute diff_alt2_wno_concientiousness
