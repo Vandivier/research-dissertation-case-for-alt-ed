@@ -29,25 +29,25 @@ Such a situation is pareto-superior to degree attainment alone and is therefore 
 This paper focuses on the comparatively interesting case of alternative credentials as a substitute to the college degree in order to diagnose comparative disadvantage at the skill level.
 If a specific set of skills effectively explain labor outcome differences, then alternative learning providers could update products to affect better outcomes for their consumers.
 
-The signalling model has become one of the two standard explanations of the value of the college degree.
-Signalling theory provides three advantages over human capital theory for the purposes of the present study.
-First, signalling theory is able to explain labor outcome variance when human capital is held constant.
+The signaling model has become one of the two standard explanations of the value of the college degree.
+Signaling theory provides three advantages over human capital theory for the purposes of the present study.
+First, signaling theory is able to explain labor outcome variance when human capital is held constant.
 
-Second, the signalling model empowers a questionnaire research design.
+Second, the signaling model empowers a questionnaire research design.
 In an idealized human capital model, the measures of human capital would correspond to production process inputs.
 To establish a wide array of such skill measures would be complicated and prone to measurement sensitivies, assumptions, and errors of various kinds.
 In this framework, a questionnaire is a second-best design which provides a proxy for the functional measure of skill.
 Signaling theory takes the reverse approach.
-According to the signalling model, labor demand is formed on the basis of job candidate value as perceived by an employer.
+According to the signaling model, labor demand is formed on the basis of job candidate value as perceived by an employer.
 In this framework, a questionnaire is ideal.
 The manner is in which employer perception relates to job candidate technical skill, if at all, is secondary.
 An additional benefit of using a questionnaire is the ability to ask hypothetical questions.
 In pondering hypotheticals, employer evaluation of a credential or signal can be isolated from the human capital variance which occurs in actual job candidates.
 
-Third, signalling theorists have laid out a testable hypothesis for weak labor outcomes among non-college graduates.
+Third, signaling theorists have laid out a testable hypothesis for weak labor outcomes among non-college graduates.
 Following this model, scholars claim that the college degree signals intelligence, conscientiousness, and conformity.
-Non-traditional education, in contrast, is hypothesized to signal nonconformity.
-Non-traditional courses can be completed in a shorter span of time and with reduced entry qualifications relative to the traditional degree.
+Nontraditional education, in contrast, is hypothesized to signal nonconformity.
+Nontraditional courses can be completed in a shorter span of time and with reduced entry qualifications relative to the traditional degree.
 For this reason, alternative credentials are thought to signal low conscientiousness relative to the college degree.
 
 Research indicates the existence of bliss points for employee conscientiousness and conformity from the point of view of an employer.
@@ -195,7 +195,7 @@ Six of the seven perceived skill gaps in the preferred model are measures of sof
 The coefficient for the perceived technical skill gap is insignificant, but it does possess an intuitive negative sign which is robust to specification.
 The dominant effect of soft skills in the preferred regression supports the main hypothesis.
 
-In the classic signalling explanation of low ACNG demand, the ACNG signals an abnormal lack of conscientiousness and conformity.
+In the classic signaling explanation of low ACNG demand, the ACNG signals an abnormal lack of conscientiousness and conformity.
 Regression analysis raises three problems for the conformity component of the classic explanation.
 These problems are robust to the specification and operationalization of conformity.
 First, rulebreaker effects are positively related to hireability.
@@ -325,7 +325,7 @@ Perceived skill gaps do a better job of explaining hireability than do other wid
 Employer factors better explain candidate hireability than do the perceived skill gaps themselves.
 Technical skill gaps were identified with less relevance to hiring decisions compared to soft skill gaps for ACNG job candidates.
 
-The classic signalling model explanation for employer preference of college graduate labor over ACNG labor is that
+The classic signaling model explanation for employer preference of college graduate labor over ACNG labor is that
 the college degree provides a comparative signal of conscientiousness and conformity.
 The present paper finds evidence that conscientiousness is an important comparative difference which contributes to weak ACNG demand, but conformity does not have such a general effect.
 This paper finds that employers of different types have qualitatively different views about conformity.
