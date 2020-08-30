@@ -132,12 +132,18 @@ reg fav diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness diff_wn
 reg fav diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness diff2_wno_concientiousness diff_alt2_wno_concientiousness
 reg fav diff_wno_bodylanguage diff_wno_commute diff_alt2_wno_concientiousness
 
+* // make figure conc-linear-resid-vs-fitted.jpeg
+reg fav diff_wno_concientiousness
+grstyle init
+grstyle color background white
+rvfplot
+
 * // M8
 * // notice outlier at diff_alt2_wno_bodylanguage < -30
 * // body lang negative linear and total, nothing surprising
 * // commute positive linear and total, a bit surprising but this is bc mean value is negative...see next comment block + reg for more
 * // concientiousness interpretation: it's bad on average, marginal increase also bad, but it's getting less bad eventually
-* // why use cubics? bc quads had unexpected results and residual plots were abnormal
+* // why use cubics? bc linear and quads had unexpected results and residual plots were abnormal
 * // now we can see cubics matter more than linear or quad (not for commute, but in general)
 * // deeze resids is still abnormal, but this only means our p-values get thrown out...cardinally, not ordinally; cubic better than linear matters
 * // (I think also the r-squared is thrown out...)
@@ -153,7 +159,7 @@ estadd scalar f_p_value = r(p)
 * // commute pos coefficient is counterintuitive
 * // but, it just reflects the normal negative value; an increase isn't 1->2 it's -2 -> -1 which is favorable
 * // to see the increasing positive case, restrict sample and get expected negative coefficient:
-reg fav diff_wno_bodylanguage diff2_wno_bodylanguage diff3_wno_bodylanguage diff_wno_commute diff2_wno_commute diff_wno_concientiousness diff2_wno_concientiousness diff3_wno_concientiousness if diff_wno_commute > 0
+reg fav diff_wno_bodylanguage diff2_wno_bodylanguage diff3_wno_bodylanguage diff_wno_commute diff2_wno_commute diff3_wno_commute diff_wno_concientiousness diff2_wno_concientiousness diff3_wno_concientiousness if diff_wno_commute > 0
 
 esttab R6 R7 R8 using temp.tex, booktabs replace se star(* .01 ** .001) stats(r2 f_p_value N, fmt(4 4 0) label(R-sqr p(F))) varwidth(25) b(%10.7e)  mtitles(1 2 3 4) nonumbers
 
@@ -224,3 +230,9 @@ swilk y_res_from_alt_multi_bodylang
 qnorm y_res_from_alt_multi_bodylang
 scatter y_from_alt_multi_bodylang diff_wno_bodylanguage
 twoway scatter y_from_alt_multi_bodylang diff_wno_bodylanguage, xtitle("Difference in Body Language Skill") ytitle("Predicted Hirability")
+
+* // label variable l1 "Linear"
+* // label variable l2 "Quadratic"
+* // label variable l3 "Cubic"
+* // twoway (scatter fav diff_wno_concientiousness) (lfit fav diff_wno_concientiousness, ytitle(Linear)) (qfit fav diff_wno_concientiousness) (scatter l3 diff_wno_concientiousness), xtitle(Comparative Gap in Concientiousness) ytitle(Hirability)
+* // twoway (scatter fav diff_wno_concientiousness) (scatter l1 diff_wno_concientiousness) (scatter l2 diff_wno_concientiousness) (scatter l3 diff_wno_concientiousness), xtitle(Comparative Gap in Concientiousness) ytitle(Hirability)
