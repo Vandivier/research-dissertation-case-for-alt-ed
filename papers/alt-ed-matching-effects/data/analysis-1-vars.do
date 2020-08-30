@@ -94,14 +94,17 @@ gen diff2_wo_bodylanguage = diff_wo_bodylanguage*diff_wo_bodylanguage
 gen diff_alt2_wno_bodylanguage = rcgtiwno_bodylanguage*rcgtiwno_bodylanguage - aetiwno_bodylanguage*aetiwno_bodylanguage
 gen diff_alt3_wno_bodylanguage = rcgtiwno_bodylanguage*rcgtiwno_bodylanguage*rcgtiwno_bodylanguage - aetiwno_bodylanguage*aetiwno_bodylanguage*aetiwno_bodylanguage
 
+* // acng more willing to commute on average `sum willingtocommute_recentc willingtocommute_ng'
 gen rcgtiwno_commute = willingtocommute_ideal - willingtocommute_recentc
 gen rcgtiwo_commute = willingtocommute_ideal - willingtocommute_recentc
 replace rcgtiwno_commute = 0 if rcgtiwno_commute < 0
 gen diff_wno_commute = aetiwno_commute-rcgtiwno_commute
 gen diff_wo_commute = aetiwo_commute-rcgtiwo_commute
 gen diff2_wno_commute = diff_wno_commute*diff_wno_commute
+gen diff3_wno_commute = diff_wno_commute*diff_wno_commute*diff_wno_commute
 gen diff2_wo_commute = diff_wo_commute*diff_wo_commute
 gen diff_alt2_wno_commute = rcgtiwno_commute*rcgtiwno_commute - aetiwno_commute*aetiwno_commute
+gen diff_alt3_wno_commute = rcgtiwno_commute*rcgtiwno_commute*rcgtiwno_commute - aetiwno_commute*aetiwno_commute*aetiwno_commute
 
 gen rcgtiwno_concientiousness = concientiousness_ideal - concientiousness_recentc
 gen rcgtiwo_concientiousness = concientiousness_ideal - concientiousness_recentc
@@ -109,8 +112,10 @@ replace rcgtiwno_concientiousness = 0 if rcgtiwno_concientiousness < 0
 gen diff_wno_concientiousness = aetiwno_concientiousness-rcgtiwno_concientiousness
 gen diff_wo_concientiousness = aetiwo_concientiousness-rcgtiwo_concientiousness
 gen diff2_wno_concientiousness = diff_wno_concientiousness*diff_wno_concientiousness
+gen diff3_wno_concientiousness = diff_wno_concientiousness*diff_wno_concientiousness*diff_wno_concientiousness
 gen diff2_wo_concientiousness = diff_wo_concientiousness*diff_wo_concientiousness
 gen diff_alt2_wno_concientiousness = rcgtiwno_concientiousness*rcgtiwno_concientiousness - aetiwno_concientiousness*aetiwno_concientiousness
+gen diff_alt3_wno_concientiousness = rcgtiwno_concientiousness*rcgtiwno_concientiousness*rcgtiwno_concientiousness - aetiwno_concientiousness*aetiwno_concientiousness*aetiwno_concientiousness
 
 gen rcgtiwno_customerserviceskill = customerserviceskill_ideal - customerserviceskill_recentc
 gen rcgtiwo_customerserviceskill = customerserviceskill_ideal - customerserviceskill_recentc
@@ -207,6 +212,9 @@ label variable aetiwo_technicaljobskills "Gap, Technical"
 label variable aetiwno_technicaljobskills "Gap, Technical"
 label variable aetiwo_teamwork "Gap, Teamwork"
 label variable aetiwno_teamwork "Gap, Teamwork"
+label variable fav "Hirability"
+label variable diff_alt2_wno_bodylanguage "Difference in Squared Body Language Communication Skill"
+label variable diff2_wno_bodylanguage "Squared Difference in Body Language Communication Skill"
 label variable rulebreakersnormsprobablyhaveaha "Rule Breakers Risky"
 label variable rulebreakersnormsmightbedoingsob "Rule Breakers Rockstars"
 label variable rulebreakersnormstendtobegiftedi "Rule Breakers Culture Add"

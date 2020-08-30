@@ -889,6 +889,7 @@ More importantly, all quadratic effects are more significant than their linear c
 There is not a single linear factor with a p-value less than 0.6 in Model 8.
 % it's curvilinear! http://www.philender.com/courses/linearmodels/notes3/curve.html
 % ref for great stat interpretation: http://people.umass.edu/biep640w/pdf/Stata%20Illustration%20simple%20and%20multiple%20linear%20regression.pdf
+% ref: https://stats.idre.ucla.edu/other/mult-pkg/faq/general/faqhow-do-i-interpret-the-sign-of-the-quadratic-term-in-a-polynomial-regression/
 Model 9 reconsolidates factors by significance and retains only quadratic factors.
 
 % MAYBE TODO: show figure for `tab isideal*' or a correlation matrix
@@ -909,8 +910,9 @@ These summary statistics clarify that small comparative gaps generally occur whe
 % This makes the negative coefficient for the comparative marginal effect intuitive.
 Negative comparative marginal effects indicate that hirability increases as comparative gaps decrease.
 
-The converse is that as comparative gaps increase, hirability decreases.
-This is also made intuitive by the summary statistics on average perceived skill levels.
+% The converse is that as comparative gaps increase, hirability decreases.
+Negative marginal effects also indicate that hirability decreases as comparative gaps increase.
+% This is also made intuitive by the summary statistics on average perceived skill levels.
 For both willingness to commute and concientiousness, the average recent college graduate has higher perceived skill than the average ACNG.
 This means that large skill gaps tend to be cases where the ACNG is disproportionately deficient, so reduced hirability is expected.
 
@@ -970,6 +972,32 @@ This means that large skill gaps tend to be cases where the ACNG is disproportio
 % As such, the explanation from attenuation fails for the comparative gap in concientiousness.
 % Secondly, it is not obvious whether there should be any bliss point value for the comparative gap.
 % % this would probably get sorted out with a larger sample size and/or nonlinear analysis
+
+The positive marginal effects on body language in models 8 and 9 are both counterintuitive and misleading.
+Figure \ref{fig:diff_in_bodylang} shows a scatter plot of the squared difference in body language communication skill
+against hirability.
+The residuals are heteroscedastic and exhibit an r-shaped curve.
+This indicates that this squared factor itself is subject to a marginal effect.
+A cubic factor can capture marginal effects on quadratic terms.
+This is why Model 9 includes a cubic factor for comparative body language.
+The total effect of a comparative body language gap on hirability is negative, as expected\footnote{
+    The average difference in body language is 0.1415. The total effect is computed as: $ = *0.1415 + *0.1415^2 + *0.1415^3$.
+}.
+% TODO: footnote and compute above statement.
+
+This relation is described in Model 10 from Table \ref{tab:gap_of_gaps}.
+This model shows that quadratic effects are positive but insignificant.
+The apparant important of quadratic effects in Model 9 obfuscates the more significant cubic relation.
+Comparative gaps in body language
+
+\begin{figure}[h!]
+    \centering
+    \caption{H-1B VAR Results}
+    \begin{tikzpicture}[element/.style={minimum width=1.75cm, minimum height=0.85cm}]
+        \node (n1) {\includegraphics[width=1\textwidth]{./figures-and-tables/difference-in-body-lang.jpeg}};
+    \end{tikzpicture}
+    \label{fig:diff_in_bodylang}
+\end{figure}
 
 Model 9 provides a skill-level diagnostic in service of closing the demand gap.
 % This model indicates that the soft skill of communication through body language is the only skill difference associated with reduced hireability.
