@@ -17,55 +17,56 @@ Introduction
 A substantial gap exists between the skills expected by employers and those possessed by college graduates\cite{mcgarry2016examination, malik2017great, abbasi2018analysis, gingras2000there}.
 Experts view college alternatives, including vocational school, to be useful for technical training, but the traditional college degree retains a wage premium over vocational education.
 Unemployment, underemployment, and other adverse labor outcomes follow a similar pattern.
-This paper seeks to resolve the apparent discrepancy between these outcomes while preserving the mainline view that employers pay for perceived job candidate skill.
+This paper seeks to resolve the apparent discrepancy between these outcomes while preserving the mainline economic view that employers pay for perceived job candidate skill.
 To explain the apparent discrepancy, this paper tests the hypothesis that employers expect an offsetting non-technical skill deficit when considering an alternatively credentialed non-college graduate (ACNG).
-I find evidence that the general population of the United States, including employers, does apply a stigma to the ACNG in which soft skills are assumed to be deficient.
+I find evidence that employers and the general population in the United States expect a low level of soft skills from ACNG job candidates.
 
 Alternative credentials refer to credentials other than the undergraduate degree.
 The category includes, for example, industry certifications, portfolios of work, digital badges, and other records of unaccredited learning and achievement.
-Individuals pursuing alternative credentials typically intend to leverage the credential toward better employment.
+Individuals pursuing alternative credentials typically intend to leverage it toward better employment.
 That is, they typically have the same goals as a college student.
 Many individuals obtain alternative credentials as a supplement to the college degree.
 Such a situation is Pareto-superior to degree attainment alone and is therefore intentionally excluded from the analysis.
-This paper focuses on the comparatively interesting case of alternative credentials as a substitute for the college degree in order to diagnose comparative disadvantage at the skill level.
-If a specific set of skills effectively explain labor outcome differences, then alternative learning providers could update products to affect better outcomes for their consumers.
+This paper focuses on the comparatively interesting case of alternative credentials as a substitute for the college degree to diagnose comparative disadvantage at the skill level.
+If a specific skill set explains labor outcome differences, alternative learning providers can improve their products to reduce the outcome gap.
 
 The signaling model has become one of the two standard explanations of the value of the college degree.
-Signaling theory provides three advantages over human capital theory for the purposes of the present study.
-First, signaling theory is able to explain labor outcome variance when human capital is held constant.
+Signaling theory provides three advantages over human capital theory for the present study.
+First, signaling theory can explain labor outcome variance when human capital is held constant.
 
 Second, the signaling model empowers a questionnaire research design.
 In an idealized human capital model, the measures of human capital would correspond to production process inputs.
 To establish a wide array of such skill measures would be complicated and prone to measurement sensitivities, assumptions, and errors of various kinds.
 In this framework, a questionnaire is a second-best design that provides a proxy for the functional measure of skill.
 Signaling theory takes the reverse approach.
-According to the signaling model, labor demand is formed on the basis of job candidate value as perceived by an employer.
-In this framework, a questionnaire is ideal.
+According to the signaling model, employer perception and evaluation drive their willingness to pay for a job candidate.
 The manner is in which employer perception relates to job candidate technical skill, if at all, is secondary.
+In this framework, a questionnaire is ideal.
 An additional benefit of using a questionnaire is the ability to ask hypothetical questions.
 In pondering hypotheticals, employer evaluation of a credential or signal can be isolated from the human capital variance, which occurs in actual job candidates.
 
 Third, signaling theorists have laid out a testable hypothesis for weak labor outcomes among non-college graduates.
 Following this model, scholars claim that the college degree signals intelligence, conscientiousness, and conformity.
 Nontraditional education, in contrast, is hypothesized to signal nonconformity.
-Nontraditional courses can be completed in a shorter span of time and with reduced entry qualifications relative to the traditional degree.
-For this reason, alternative credentials are thought to signal low conscientiousness relative to the college degree.
+Nontraditional courses can be completed in a shorter time and with reduced entry qualifications relative to the traditional degree.
+For this reason, alternative credentials hypothetically signal low conscientiousness relative to the college degree.
 
-Research indicates the existence of bliss points for employee conscientiousness and conformity from the point of view of an employer.
+Research indicates that employer demand for employee conscientiousness and conformity follows a bliss point pattern.
 Excess individual conscientiousness can disturb team performance.
 Conformity can lead to a lack of innovation and suboptimal organizational practices.
 Conformity selection occurs in part through heuristic rather than deliberate cognition.
 
 Risk aversion is a distinct explanation for conformity selection.
-An employer may not be able to evaluate an alternative credential with confidence.
-From the point of view of such an employer, an ACNG may range in value from a positive outlier to a negative outlier.
-The employer may not prefer to hire such a candidate on the basis of risk aversion, even if their point estimate for ACNG labor value is higher than their point estimate for a recent college graduate.
-If employers with many employees are positively associated with ACNG hireability, this will add weight to an explanation based on risk aversion.
+Some employers are not able to evaluate an alternative credential with confidence.
+Such an employer views ACNG labor as a gamble with some odds of positive or negative outlier value.
+The employer may not prefer to hire such a candidate due to risk aversion, even if their point estimate for ACNG labor value is higher than their point estimate for a recent college graduate.
+If firm size effects are positively associated with ACNG hireability, this will add weight to an explanation based on risk aversion.
 
 Process Explanations of Suboptimal Wages
 Literature Review
 Data and Methodology
-The hypothesis in this paper is based on a simple model of demand for labor which is clarified in Equations \ref{eq1} and \ref{eq2}:
+A simple model of demand for labor provides context for the hypothesis of interest.
+This model is clarified in Equations \ref{eq1} and \ref{eq2}:
 
 S_j = f(H_j)
 w_{ij} = E_i(MRP_j) = f_i(S_j)
@@ -76,25 +77,26 @@ A specific employer is willing to pay a specific job candidate wages of $w_{ij}$
 
 This study uses ordinary least squares (OLS) regression analysis to estimate the effect of perceived skill gaps on hireability.
 An employer is willing to pay more for a relatively hirable individual.
-This makes hireability a proxy of demand for labor and $w_{ij}$.
-In order to explain the reduced willingness to pay for ACNG labor relative to college graduate labor, this paper hypothesizes that employers preferentially value soft skills in the course of $f_i(S_j)$.
+The representation of willingness to pay makes hireability a proxy of demand for labor and $w_{ij}$.
+This paper hypothesizes that employers preferentially value soft skills in the course of $f_i(S_j)$
+to explain the reduced willingness to pay for ACNG labor relative to college graduate labor.
 If employers do bias toward soft skills in job candidate evaluation, one or more soft skills should yield a negative coefficient
 in a regression on hireability.
 
-Regression analysis in this study is conducted using original cross-sectional data from an online self-completed questionnaire ($n = 212$).
+This study uses original cross-sectional data from an online self-completed questionnaire ($n = 212$).
 The data is available for replication or any other use\footnote{
 See \url{https://osf.io/8qtxf/?view_only=95b0c0b0c65e4b7983198cc87c2ab733}
-for data used in this study.
-Respondents were obtained through the Amazon Mechanical Turk crowdsourcing service.
+for data and statistical analysis code used in this study.
+The Amazon Mechanical Turk crowdsourcing service provided respondents for the questionnaire.
 Respondents were United States citizens at or over the age of eighteen, paid for participation, and selected on an opt-in, first-come, first-serve basis.
 The survey administration took place in July of 2020.
 
 The survey includes 65 questions in two sections\footnote{See Appendix A for a full copy of the survey.}.
 The first section captures respondent characteristics, and the second section captures perceived skill relative to hypothetical job applicants.
-Employer responses did not significantly differ from the general population, so respondent characteristics are also interpreted as employer characteristics.
+Employer responses did not significantly differ from the general population, so results generally hold for both employers and the United States population.
 
 Regression variables in this study are categorical or Likert-type responses based on a scale from 1 to 10
-Likert-type responses can be treated as categorical or continuous for the purposes of regression analysis.
+It is an accepted practice to treat Likert-type responses as either categorical or continuous for regression analysis.
 Jaccard and Wan provide support for continuous analysis of Likert-type data.
 They note that severe departures from the assumptions on cardinality "do not seem to affect Type I and Type II errors dramatically,"
 particularly when the Likert scale is five or more points.
@@ -107,11 +109,10 @@ Duration measures the length of time the respondent believes it takes to obtain 
 Employer status describes whether an individual makes hiring and firing decisions in the course of their employment.
 The variable takes one of three values: yes, no, or unemployed.
 Employer effects refer to the case where an individual states that they do make hiring and firing decisions.
-State of residence refers to a state within the United States.
-Respondents were allowed to select the District of Columbia as a state of residence, but no such responses were obtained.
+State of residence refers to a state within the United States, or the District of Columbia.
+While it was permitted, no actual responses identified the District of Columbia as a residence.
 
-Three other factor groups are investigated in the regression analysis.
-These variables are measured using Likert-type units.
+Regression analysis includes three other factor groups, and they are measured using Likert-type units.
 They include hireability, rulebreaker effects, and perceived skill gaps.
 Hireability is the dependent factor.
 It indicates the degree of agreement that, "For many professions, alternative credentials can qualify a person for an entry-level position."
