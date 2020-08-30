@@ -880,41 +880,10 @@ the average total effect of comparative skill gaps on hireability is negative\fo
 }.
 This replicates external research which shows lower demand for ACNG labor.
 
-The positive coefficient on willingness to commute and conscientiousness in Model 7 are unexpected.
-A simple interpretation of these coefficients is that when a recent college graduate possesses an ideal level of these skills, relative ACNG deficiency is valuable.
-Model 8 expands these linear factors with marginal effects.
-Linear body language effects were the most significant effect in Model 7, but they are the least significant in Model 8.
-The quadratic factor for body language is the only significant factor in this model.
-More importantly, all quadratic effects are more significant than their linear counterparts in this model.
-There is not a single linear factor with a p-value less than 0.6 in Model 8.
-% it's curvilinear! http://www.philender.com/courses/linearmodels/notes3/curve.html
-% ref for great stat interpretation: http://people.umass.edu/biep640w/pdf/Stata%20Illustration%20simple%20and%20multiple%20linear%20regression.pdf
-% ref: https://stats.idre.ucla.edu/other/mult-pkg/faq/general/faqhow-do-i-interpret-the-sign-of-the-quadratic-term-in-a-polynomial-regression/
-Model 9 reconsolidates factors by significance and retains only quadratic factors.
-
-% MAYBE TODO: show figure for `tab isideal*' or a correlation matrix
-% or `scatter concientiousness_ngwac concientiousness_recent'
-% or `tab concientiousness_ngwac concientiousness_recent'
-% but average comparison gets at it too (`sum concientiousness_ngwac concientiousness_recent con*ideal')
-% ref: `sum bodylanguage_ngwac bodylanguage_recentcollegegradua bodylanguage_ideal'
-% MAYBE TODO: heatmap https://fmwww.bc.edu/repec/dsug2019/germany19_jann.pdf
-% or correlation table https://lost-stats.github.io/Presentation/heatmap_colored_correlation_matrix.html#stata
-Model 9 is the preferred comparative gap regression because the factors in the model are each strong and the overall model also maximizes adjusted explanatory power.
-Quadratic factor coefficients from Model 9 can be interpreted as marginal effects.
-The negative marginal effects on willingness to commute and concientiousness are particularly intuitive when combined with summary statistics.
-The average perceived level of concientiousness for the ACNG is 7.11 ($\sigma = 1.85$),
-for the recent college graduate it is 7.14 ($\sigma = 1.87$),
-and for the ideal candidate it is 8.10 ($\sigma = 1.65$).
-Willingness to commute follows a similar pattern. % of dispersion
-These summary statistics clarify that small comparative gaps generally occur when both forms of labor are close to the ideal level of perceived skill.
-% This makes the negative coefficient for the comparative marginal effect intuitive.
-Negative comparative marginal effects indicate that hirability increases as comparative gaps decrease.
-
-% The converse is that as comparative gaps increase, hirability decreases.
-Negative marginal effects also indicate that hirability decreases as comparative gaps increase.
-% This is also made intuitive by the summary statistics on average perceived skill levels.
-For both willingness to commute and concientiousness, the average recent college graduate has higher perceived skill than the average ACNG.
-This means that large skill gaps tend to be cases where the ACNG is disproportionately deficient, so reduced hirability is expected.
+The average effect of an increased comparative gap in willingness to commute is positive on hirability.
+This is because ACNG labor is generally more willing to commute compared to the recent college graduate.
+The situation is reversed for body language communication skill.
+Because the recent college graduate has an advantage on average, the average effect of a comparative gap increase is negative on hirability.
 
 % % TODO: long paper food...talk about how the conscientiousness differential gap may be a spurious result per analysis-7-diff-of-gaps.do
 % % TODO: long paper food...try to explain positive coefficient on comparative concientiousness
@@ -973,22 +942,13 @@ This means that large skill gaps tend to be cases where the ACNG is disproportio
 % Secondly, it is not obvious whether there should be any bliss point value for the comparative gap.
 % % this would probably get sorted out with a larger sample size and/or nonlinear analysis
 
-The positive marginal effects on body language in models 8 and 9 are both counterintuitive and misleading.
-Figure \ref{fig:diff_in_bodylang} shows a scatter plot of the squared difference in body language communication skill
-against hirability.
-The residuals are heteroscedastic and exhibit an r-shaped curve.
-This indicates that this squared factor itself is subject to a marginal effect.
-A cubic factor can capture marginal effects on quadratic terms.
-This is why Model 9 includes a cubic factor for comparative body language.
-The total effect of a comparative body language gap on hirability is negative, as expected\footnote{
-    The average difference in body language is 0.1415. The total effect is computed as: $ = *0.1415 + *0.1415^2 + *0.1415^3$.
-}.
-% TODO: footnote and compute above statement.
-
-This relation is described in Model 10 from Table \ref{tab:gap_of_gaps}.
-This model shows that quadratic effects are positive but insignificant.
-The apparant important of quadratic effects in Model 9 obfuscates the more significant cubic relation.
-Comparative gaps in body language
+Conscientiousness has a more complicated result.
+The college graduate has an advantage on average, but the coefficient remains positive.
+This would seem to indicate that the ACNG maximizes hirability by minimizing concientiousness.
+The reason is that there are important nonlinear effects which are missed in Model 7.
+Figure \ref{fig:conc_rvfp} is a scatterplot of residuals from a simple regression of comparative concientiousness on hirability.
+The plot indicates a residual trend down and to the right with some heteroscedasticity.
+Looking along the bottom of the graph shows an m-shape, which is consistent with cubic effects.
 
 \begin{figure}[h!]
     \centering
@@ -996,17 +956,38 @@ Comparative gaps in body language
     \begin{tikzpicture}[element/.style={minimum width=1.75cm, minimum height=0.85cm}]
         \node (n1) {\includegraphics[width=1\textwidth]{./figures-and-tables/conc-linear-resid-vs-fitted.jpeg}};
     \end{tikzpicture}
-    \label{fig:diff_in_bodylang}
+    \label{fig:conc_rvfp}
 \end{figure}
 
-Model 9 provides a skill-level diagnostic in service of closing the demand gap.
+% M8: it's curvilinear! http://www.philender.com/courses/linearmodels/notes3/curve.html
+% ref for great stat interpretation: http://people.umass.edu/biep640w/pdf/Stata%20Illustration%20simple%20and%20multiple%20linear%20regression.pdf
+% ref: https://stats.idre.ucla.edu/other/mult-pkg/faq/general/faqhow-do-i-interpret-the-sign-of-the-quadratic-term-in-a-polynomial-regression/
+% ref: heatmap https://fmwww.bc.edu/repec/dsug2019/germany19_jann.pdf
+% ref: correlation table https://lost-stats.github.io/Presentation/heatmap_colored_correlation_matrix.html#stata
+Model 8 captures this curvilinear relationship by expanding Model 7 with quadratic and cubic factors.
+% Quadratic factors in this model represent marginal effects.
+% Cubic effects capture marginal changes in the marginal effects.
+The coefficients in this model are not significant, but the directions of effect are as expected.
+In this model, the average total effect of the comparative concientiousness gap on hirability is negative\footnote{
+    Computed as:
+    $-0.0018 = - 0.0524*0.0330 - 0.0465*0.0330^2 + 0.0380*0.0330^3$
+}.
+The average total effect for Model 8 as a whole is also negative\footnote{
+    Computed as:
+    $-0.0293 = -0.1444*0.1415 + 0.0340*0.1415^2 - 0.0194*0.1415^3 - 0.0803*0.0943 - 0.0112*0.0943^2 - 0.0023*0.0943^3 - 0.0524*0.0330 - 0.0465*0.0330^2 + 0.0380*0.0330^3$
+}.
+When the comparative gap in concientiousness increases above the average of 0.33,
+the linear effect is negative and the marginal effect is also negative,
+but the marginal effect is becoming less negative as concientiousness increases.
+
+Models 7 and 8 provide a skill-level diagnostic in service of closing the demand gap for ACNG labor.
 % This model indicates that the soft skill of communication through body language is the only skill difference associated with reduced hireability.
 % It is also the most significant and largest in magnitude of such differences.
 Training for body language communication skill can be incorporated into alternative learning provider products,
 or alternative learning provider consumers can append additional training and credentials to their skill profile which target this skill.
-This result should not be interpreted as a hireability difference due to generalized communication skill.
-Perceived skill gaps for emotional intelligence, verbal communication, and written communication are insignificant.
-
+% Improving body language communication skill is precisely diagnosed and not to be confused with generalized communication skill.
+% Perceived skill gaps for emotional intelligence, verbal communication, and written communication are insignificant.
+%
 Alternatively educated individuals can offset perceived concientiousness deficit by provisioning work history or results of a personality test.
 External research indicates that psychological therapy and other interventions can boost concientiousness in some cases\cite{kilduff_tasselli_landis_2018}.
 

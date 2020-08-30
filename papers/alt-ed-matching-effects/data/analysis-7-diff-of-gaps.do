@@ -150,11 +150,31 @@ rvfplot
 * // coefficient estimates are still curvilinearly optimal, p(F) still applies
 * // cubic model p(F) < (ie, better than) p(F)(quad model); both worse than linear but we have theoretical issue with linear model betas
 reg fav diff_wno_bodylanguage diff2_wno_bodylanguage diff3_wno_bodylanguage diff_wno_commute diff2_wno_commute diff3_wno_commute diff_wno_concientiousness diff2_wno_concientiousness diff3_wno_concientiousness
+predict ym8
 predict deeze, resid
 swilk deeze
 estimates store R8, title(Model 8)
 qui testparm*
 estadd scalar f_p_value = r(p)
+
+* // compute total effect
+* // result mean, respectively, rounded: .1415, -.0943, .0330
+* // coeff, in order of M8, rounded:
+* // -.1443692, .0340004, -.0193765, .080295, -.0112432, .0023336, -.0523916, -.046464, .0380066
+* // total result = -.02925909 = (rounded) = -0.0293
+sum diff_wno_bodylanguage diff_wno_commute diff_wno_concientiousness
+* // concientiousness result = -.00177847 = (rounded) = -0.0018
+di - 0.0524*0.0330 - 0.0465*0.0330^2 + 0.0380*0.0330^3
+* // total result = -.02925909 = (rounded) = -0.0293
+di -0.1444*0.1415 + 0.0340*0.1415^2 - 0.0194*0.1415^3 - 0.0803*0.0943 - 0.0112*0.0943^2 - 0.0023*0.0943^3 - 0.0524*0.0330 - 0.0465*0.0330^2 + 0.0380*0.0330^3
+* // or, equally
+di -0.1444*0.1415 + 0.0340*0.1415^2 - 0.0194*0.1415^3 - 0.0803*0.0943 - 0.0112*0.0943^2 - 0.0023*0.0943^3 - 0.0018
+
+* // MAYBE TODO: include below graph in paper
+scatter ym8 diff_wno_concientiousness
+
+* // reduced if you want it, but it's an overfit bc it destroys needed variables
+reg fav diff_wno_bodylanguage diff3_wno_bodylanguage diff3_wno_concientiousness
 
 * // commute pos coefficient is counterintuitive
 * // but, it just reflects the normal negative value; an increase isn't 1->2 it's -2 -> -1 which is favorable
