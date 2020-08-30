@@ -1,23 +1,24 @@
 
 Conformity and Soft Skills as Determinants of Alternatively Credentialed Non-College Graduate Hireability
 
-Despite targeting technical skills, vocational school graduates are paid less than college graduates.
+Despite targeting technical skills, vocational school graduates earn less than college graduates.
 This paper hypothesizes that conformity selection and a perceived deficit in soft skills substantially explain reduced alternatively credentialed non-college graduate (ACNG) hireability.
 Microdata from the United States confirm a perceived soft skill deficit for ACNG labor.
-Results also indicate that conformity is a key factor of hireability, but the direction of effect is heterogenous by employer type.
-Conformity and perceived skill gaps explain about one third of hireability variance.
-Perceived soft skill gaps explain about as much as the sum of the effects from state of residence and industry of occupation.
-Opposite a conventional explanation, the results of this study suggest that hireability is negatively correlated to conformity on average.
-ACNG job candidates tend to be perceived as creative types and an even mix of high and low performers.
-Evidence of risk aversion from employers with respect to labor productivity contributes to the explanation of low ACNG demand.
-The conclusion incorporates discussion of public misperception on the cost of vocational school and suggests that nontraditional postsecondary education is undervalued in the United States.
+Results indicate that conformity is a critical factor of hireability, but the direction of effect is heterogenous by employer type.
+Conformity and perceived skill gaps explain about one-third of hireability variance.
+Perceived soft skill explains more hireability variance than widely recognized factors like the industry of occupation.
+Opposite conventional explanation, results suggest that conformity reduces hireability on average.
+Respondents tend to perceive ACNG candidates as an even mix of high and low performers.
+Evidence favors employer risk aversion toward labor productivity as a preferred explanation of low ACNG demand.
+ACNG labor is perceived as low in conscientiousness and body language communication skills compared to college graduates.
+The conclusion incorporates discussion of public misperception on vocational school costs and suggests activities to reduce unconscious bias.
 
 Introduction
 A substantial gap exists between the skills expected by employers and those possessed by college graduates\cite{mcgarry2016examination, malik2017great, abbasi2018analysis, gingras2000there}.
-Experts view college alternatives including vocational school as useful for technical training, but the traditional college degree retains a wage premium over vocational education.
-Unemployment, underemployment, and other negative labor outcomes follow a similar pattern.
-This paper seeks to resolve the apparent descrepancy between these outcomes while preserving the mainline view that employers pay for perceived job candidate skill.
-To explain the apparent descrepancy, this paper tests the hypothesis that employers expect an offsetting non-technical skill deficit when considering an alternatively credentialed non-college graduate (ACNG).
+Experts view college alternatives, including vocational school, to be useful for technical training, but the traditional college degree retains a wage premium over vocational education.
+Unemployment, underemployment, and other adverse labor outcomes follow a similar pattern.
+This paper seeks to resolve the apparent discrepancy between these outcomes while preserving the mainline view that employers pay for perceived job candidate skill.
+To explain the apparent discrepancy, this paper tests the hypothesis that employers expect an offsetting non-technical skill deficit when considering an alternatively credentialed non-college graduate (ACNG).
 I find evidence that the general population of the United States, including employers, does apply a stigma to the ACNG in which soft skills are assumed to be deficient.
 
 Alternative credentials refer to credentials other than the undergraduate degree.
@@ -25,8 +26,8 @@ The category includes, for example, industry certifications, portfolios of work,
 Individuals pursuing alternative credentials typically intend to leverage the credential toward better employment.
 That is, they typically have the same goals as a college student.
 Many individuals obtain alternative credentials as a supplement to the college degree.
-Such a situation is pareto-superior to degree attainment alone and is therefore intentionally excluded from analysis.
-This paper focuses on the comparatively interesting case of alternative credentials as a substitute to the college degree in order to diagnose comparative disadvantage at the skill level.
+Such a situation is Pareto-superior to degree attainment alone and is therefore intentionally excluded from the analysis.
+This paper focuses on the comparatively interesting case of alternative credentials as a substitute for the college degree in order to diagnose comparative disadvantage at the skill level.
 If a specific set of skills effectively explain labor outcome differences, then alternative learning providers could update products to affect better outcomes for their consumers.
 
 The signaling model has become one of the two standard explanations of the value of the college degree.
@@ -35,14 +36,14 @@ First, signaling theory is able to explain labor outcome variance when human cap
 
 Second, the signaling model empowers a questionnaire research design.
 In an idealized human capital model, the measures of human capital would correspond to production process inputs.
-To establish a wide array of such skill measures would be complicated and prone to measurement sensitivies, assumptions, and errors of various kinds.
-In this framework, a questionnaire is a second-best design which provides a proxy for the functional measure of skill.
+To establish a wide array of such skill measures would be complicated and prone to measurement sensitivities, assumptions, and errors of various kinds.
+In this framework, a questionnaire is a second-best design that provides a proxy for the functional measure of skill.
 Signaling theory takes the reverse approach.
 According to the signaling model, labor demand is formed on the basis of job candidate value as perceived by an employer.
 In this framework, a questionnaire is ideal.
 The manner is in which employer perception relates to job candidate technical skill, if at all, is secondary.
 An additional benefit of using a questionnaire is the ability to ask hypothetical questions.
-In pondering hypotheticals, employer evaluation of a credential or signal can be isolated from the human capital variance which occurs in actual job candidates.
+In pondering hypotheticals, employer evaluation of a credential or signal can be isolated from the human capital variance, which occurs in actual job candidates.
 
 Third, signaling theorists have laid out a testable hypothesis for weak labor outcomes among non-college graduates.
 Following this model, scholars claim that the college degree signals intelligence, conscientiousness, and conformity.
@@ -189,7 +190,7 @@ As a result, duration was dropped from Models 3 and 4.
 The belief that it takes more than a year to obtain an alternative credential
 is positively correlated with hireability ($\beta = 0.875, p < 0.01$).
 
-The preferred model is able to explain roughly one third of the variance in hireability.
+The preferred model is able to explain roughly one-third of the variance in hireability.
 Rulebreaker effects are significant invariant to specification.
 Six of the seven perceived skill gaps in the preferred model are measures of soft skill.
 The coefficient for the perceived technical skill gap is insignificant, but it does possess an intuitive negative sign which is robust to specification.
@@ -245,7 +246,7 @@ These effects are not confirmed in the current study.
 Further study which includes job candidate personality data could test this hypothesis.
 
 Explanatory Share of Perceived Gaps
-The preferred model explains about one third of hireability variance, but how much of the explanatory power is attributable to perceived skill gaps?
+The preferred model explains about one-third of hireability variance, but how much of the explanatory power is attributable to perceived skill gaps?
 Table \ref{tab:explantory_power} provides evidence on the importance of perceived skill gaps and rulebreaker effects relative to other factor groups.
 Industry and state effects are factor groups that are widely regarded in the external literature as important for models in the labor market.
 Table \ref{tab:explantory_power} shows that perceived skill gaps and rulebreaker effects explain more variance in hireability than do the widely utilized variables for industry and state.
@@ -351,7 +352,7 @@ Obtaining a college degree after obtaining some work experience will allow stude
 Because ACNG hireability varies importantly by particular employer, ACNG job candidates are advised to apply to a substantial number of employers at the outset of the job search.
 Insight into ACNG hireability at a particular firm can be obtained prior to application through social networking with employees of the firm, online research into the policies of the target employer, or consulting a recruiter that specializes in the target employment industry.
 
-The preferred model explains about one third of hireability.
+The preferred model explains about one-third of hireability.
 Perceived skill gaps and rulebreaker effects account for most of the explanatory power in the model.
 The explanatory power of this study can be meaningfully improved in a few ways.
 Longitudinal study would allow for causal analysis and improve forecasting of ACNG hireability in the future.
