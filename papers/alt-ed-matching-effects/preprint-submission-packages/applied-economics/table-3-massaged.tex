@@ -1,0 +1,60 @@
+% ref: analysis-7-diff-of-gaps.do
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{3}{c}}
+    \toprule
+                          & \multicolumn{1}{c}{Model 6} & \multicolumn{1}{c}{Model 7} & \multicolumn{1}{c}{Model 8} \\
+    \midrule
+    Body Language         & -3.295e-01\sym{*}           & -3.395e-01\sym{*}           & -1.444e-01                  \\
+    %   & (1.138e-01)           & (1.049e-01)           & (1.333e-01)           \\
+    \addlinespace
+    Commute               & 1.498e-01                   & 1.574e-01                   & 8.030e-02                   \\
+    %   & (1.101e-01)           & (1.069e-01)           & (1.927e-01)           \\
+    \addlinespace
+    Conscientiousness     & 1.416e-01                   & 1.508e-01                   & -5.239e-02                  \\
+    %   & (1.119e-01)           & (1.061e-01)           & (1.853e-01)           \\
+    \addlinespace
+    Customer Service      & -1.493e-02                  &                             &                             \\
+    %   & (1.143e-01)           &                       &                       \\
+    \addlinespace
+    Technical             & 4.955e-02                   &                             &                             \\
+    %   & (1.164e-01)           &                       &                       \\
+    \addlinespace
+    Teamwork              & 1.552e-02                   &                             &                             \\
+    %   & (1.008e-01)           &                       &                       \\
+    \addlinespace
+    Nonconformity         & -5.822e-02                  &                             &                             \\
+    %   & (1.108e-01)           &                       &                       \\
+    \addlinespace
+    Body Language$^2$     &                             &                             & 3.400e-02                   \\
+    %   &                       &                       & (5.242e-02)           \\
+    \addlinespace
+    Body Language$^3$     &                             &                             & -1.938e-02                  \\
+    %   &                       &                       & (9.740e-03)           \\
+    \addlinespace
+    Commute$^2$           &                             &                             & -1.124e-02                  \\
+    %   &                       &                       & (5.193e-02)           \\
+    \addlinespace
+    Commute$^3$           &                             &                             & 2.334e-03                   \\
+    %   &                       &                       & (2.577e-02)           \\
+    \addlinespace
+    Conscientiousness$^2$ &                             &                             & -4.646e-02                  \\
+    %   &                       &                       & (5.505e-02)           \\
+    \addlinespace
+    Conscientiousness$^3$ &                             &                             & 3.801e-02                   \\
+    %   &                             &                             & (2.578e-02)                 \\
+    \addlinespace
+    % Constant              & 7.613e+00\sym{**}           & 7.629e+00\sym{**}           & 7.671e+00\sym{**}           \\
+    Constant              & 7.613\sym{**}               & 7.629\sym{**}               & 7.671\sym{**}               \\
+    %   & (1.264e-01)                 & (1.221e-01)                 & (1.531e-01)                 \\
+    \midrule
+    Adj R-sqr             & 0.0311                      & 0.0474                      & 0.0571                      \\
+    R-sqr                 & 0.0633                      & 0.0609                      & 0.0973                      \\
+    p(F)                  & 0.0610                      & 0.0044                      & 0.0125                      \\
+    % N                               & 212                   & 212                   & 212                   \\
+    \bottomrule
+    % \multicolumn{4}{l}{\footnotesize Standard errors in parentheses}                                                \\
+    \multicolumn{4}{l}{\footnotesize \sym{*} \(p<.01\), \sym{**} \(p<.001\)}                                        \\
+\end{tabular}
+}
+
