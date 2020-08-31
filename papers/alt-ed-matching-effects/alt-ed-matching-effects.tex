@@ -478,7 +478,7 @@ Duration measures the length of time the respondent believes it takes to obtain 
 Employer status describes whether an individual makes hiring and firing decisions in the course of their employment.
 The variable takes one of three values: yes, no, or unemployed.
 Employer effects refer to the case where an individual states that they do make hiring and firing decisions.
-State of residence refers to a state within the United States, or the District of Columbia.
+State of residence refers to a state within the United States or the District of Columbia.
 While it was permitted, no actual responses identified the District of Columbia as a residence.
 
 Regression analysis includes three other factor groups, and they are measured using Likert-type units.
@@ -490,7 +490,7 @@ It indicates the degree of agreement that, "For many professions, alternative cr
 % Rulebreaker effects refer to a collection of three factors that describe the way employers think about nonconformists, or "People who are willing to break formal or informal rules and norms."
 Rulebreaker effects refer to a collection of three factors that measure respondent agreement with statements about nonconformists, or "People who are willing to break formal or informal rules and norms."
 % The three rulebreaker questions measure respondent agreement with statements 
-The first statement indicates that nonconformists present a risk to the reputation, productivity, or value of a company.
+The first statement indicates that nonconformists present a risk to a company's reputation, productivity, or value.
 This statement received the least agreement and greatest response variance among three qualitatively different descriptions of nonconformists ($\mu = 6.40, \sigma = 2.55$).
 
 The second statement indicates that nonconformists are held back by rules and "could just as easily be high performers as low performers."
@@ -499,8 +499,7 @@ The second statement indicates that nonconformists are held back by rules and "c
 This statement received the most agreement and least variance among rulebreaker statements ($\mu = 7.42, \sigma = 1.91$).
 The agreement with this statement provides evidence against the thesis that employers value conformity for its own sake.
 In turn, this adds weight to the theory that employers value conformity as a risk aversion tactic while knowing that nonconformity signals positive outlier potential.
-The third description of nonconformists states that they tend to be gifted in the areas of innovation or creativity
-and that such people may benefit the culture of a company ($\mu = 7.25, \sigma = 2.03$).
+The third description of nonconformists states that they are creative, innovative, and may benefit company culture ($\mu = 7.25, \sigma = 2.03$).
 % managers are wary of ACNG, having high correlation with "Rule Breakers Risky"
 % reg _ismanager1 rulebreakersnormsmightbedoingsob rulebreakersnormsprobablyhaveaha rulebreakersnormstendtobegiftedi
 
@@ -518,27 +517,24 @@ and that such people may benefit the culture of a company ($\mu = 7.25, \sigma =
 % Raw perceived ACNG skill gaps are calculated by differencing the perceived skill of an ideal candidate with the perceived skill of an ACNG.
 % % technically, the actual skill of an ideal candidate equals the perceived skill so the adjective is extraneous; but let's be consistent and not confuse reader.
 
-Perceived skill gaps are computed two ways from perceived skill questions in the second section of the survey.
+Perceived skill questions in the second section of the survey allow for two ways to calculate perceived skill gaps.
 Perceived skill gaps are measured separately with and without overqualification effects.
-Overqualification effects have been identified as important in external research\cite{green2007there, raybould2005over}, but these effects are sometimes ignored during skill gap analysis\cite{blake_2018}.
+Overqualification effects are important in external research\cite{green2007there, raybould2005over}, but skill gap analysis that ignores these effects is also routine\cite{blake_2018}.
 % MAYBE TODO: cite more than 1 person who ignores overqualification
+% MAYBE TODO: just have one dependent variable and don't mention the other. it's something i did at analysis time, but may be confusing in the paper.
+%       alternatively, keep 'em both and call the second a robustness test...that is what i use it for anyway
 
 Perceived skill is a Likert-type response reporting agreement with the statement that a particular candidate has a particular skill.
-For each of 13 skills, the respondent is asked to imagine and report skill levels for the ideal candidate,
+For each of 13 skills, the respondent imagines and reports skill levels for the ideal candidate,
 the average actual employee,
 the average recent college graduate,
 and the average ACNG.
-% For each of 13 skills,
-Raw perceived ACNG skill gaps are calculated by differencing the perceived skill of an ideal candidate with the perceived skill of an ACNG.
+Raw perceived ACNG skill gaps equal the difference of the perceived skill of an ideal candidate with the perceived skill of an ACNG.
 The perceived skill gap with overqualification effects equals the raw perceived skill gap.
 The perceived skill gap without overqualification effects is calculated as the raw skill gap or zero if the raw skill gap value is negative.
-% MAYBE TODO: just have one dependent variable and don't mention the other. it's something i did at analysis time, but may be confusing in the paper.
 
 Rulebreaker effects and perceived skill gaps are structurally linked.
-Respondents are asked to evaluate the soft skill of nonconformity, or "willingness to break formal or informal rules and norms."
-% This question is a measure of the soft skill of nonconformity.
-%, which is the inverse of conformity.
-% Structurally, nonconformity interacts with employer disposition to rulebreaking.
+One of the skills that respondents evaluate is nonconformity, or "willingness to break formal or informal rules and norms."
 Nonconformity interacts with employer disposition to rulebreaking.
 For this reason, discussions on the importance of skill gaps include discussion on rulebreaker effects.
 
@@ -553,12 +549,14 @@ The model will support the risk aversion explanation of ACNG hireability over an
 % MAYBE TODO: I also expect signs to be generally negative and soft skills should be statistically significantly less for ACNG compared to recent college graduate
 % MAYBE TODO: rulebreaker effects and firm size effects also contribute to solutioning the risk aversion hypothesis
 
-This comparative analysis provides additional confidence in the data by replicating the hireability gap between ACNG labor and recent college graduates reported in external research.
-A comparative skill gap variable is constructed for each perceived skill gap that is important in the preferred hireability model.
-Comparative skill gap variables are constructed by subtracting the perceived recent college graduate skill level from perceived ACNG skill level.
+The last section of results goes over comparative results between ACNG skill gaps and gaps among recent college graduates.
+Comparative analysis provides additional confidence in the data by replicating the hireability gap between ACNG labor and recent college graduates reported in external research.
+Model 6, the initial comparative model, results from an adjustment of Model 5, the preferred noncomparative model of hireability.
+Each perceived skill gap in Model 5 is replaced with a comparative skill gap variable to generate Model 6.
+Comparative skill gaps equal the perceived skill gap for the ACNG minus the recent college graduate's perceived skill gap.
 Multiple regression of these comparison factors on hireability demonstrates which, if any, perceived skill gaps are important distinguishers of the ACNG from the college graduate.
 Identification of significant differences with a total negative effect on hireability will replicate external data on the lower job market value of ACNG labor
-and provide a diagnostic on which skill or skills must be better addressed through alternative learning programs.
+and provide a diagnostic that can be used by alternative learning providers to assist in remediating the gap in labor outcomes.
 % although the negation of the above sentence does not provide evidence against the main hypothesis...because hireability is wrt ACNG labor; we don't have recent grad hireability data in sample
 
 % begin low importance comment...
@@ -630,26 +628,26 @@ and provide a diagnostic on which skill or skills must be better addressed throu
 
 \subsection{Identification of the Preferred Model}
 
-Results confirm that employers, and the population in general, associate a soft skill deficit with ACNG candidates.
+Results confirm that employers and the general population associate a soft skill deficit with ACNG candidates.
 Employer status was associated with an insignificant positive coefficient on hireability.
 Hireability was generally positive ($\mu = 7.57, \sigma = 1.80$) and depends critically on rulebreaker effects.
 % The mean response was 7.5 on a scale from one to ten ($\sigma = 1.80$).
 % Hireability critically depends on rulebreaker effects.
 Rulebreaker effects have more explanatory power than perceived skill gaps,
-and perceived skill gaps have more explanatory power than widely recognized factors like state of residence and industry of occupation.
+and perceived skill gaps have more explanatory power than widely recognized factors like state of residence and industry.
 Duration effects, positive nonconformity selection,
 and the lack of important differences in conformity between ACNG and college graduate labor
 provide support for an explanation of ACNG hireability based on risk aversion rather than positive conformity selection.
 
 % TODO: long paper food...make tab:table_new_ols include all model factors
 Table \ref{tab:table_new_ols} reports statistics for five multiple regressions.
-Coefficients are reported for selected variables for brevity.
+The table displays selected coefficients for brevity.
 Selected variables include rulebreaker effects and any perceived skill gap that is important in any specification.
 In these models, an important factor is one that improves the adjusted explanatory power of the model when included.
 These factors are not constrained to have a p-value of less than 0.1, but as a rule of thumb, they generally have a p-value of less than 0.3.
 Of the thirteen perceived skill gaps tested, eight were important in at least one specification.
 Seven skill gaps were important in Model 5, the preferred model.
-An important interaction between the information technology industry and perceived body language communication skills is also identified.
+Evidence is found for an important interaction between the information technology industry and perceived body language communication skills.
 
 % n=212
 \begin{table}
@@ -665,31 +663,31 @@ Model 2 uses the perceived skill gap measures that exclude overqualification eff
 Models 3 and 4 are equivalent to models 1 and 2, respectively, after normalizing for industry, state, and firm size effects.
 Effect normalization involves retaining those factors which are robust across both models 1 and 2.
 For example, Alabama has a significant effect when overqualification is allowed in Model 1.
-The effect for respondent residence in the state of Alabama is insignificant when overqualification is excluded in Model 2.
+The effect for respondent residence in Alabama is insignificant Model 2, which excludes overqualification.
 Because Alabama is sensitive to this specification change, it is considered nonrobust and excluded after normalization.
 Employer status was positive in all models, but it was only significant in models 1 and 2.
 Significance loss on employer status during normalization
-suggests that the effect of employer status on hireability critically interacts with effects for industry,
+suggests that the effect of employer status on hireability critically interacts with industry,
 state of residence, and firm size, which are the normalized effects.
 
-Model 5 is specified as Model 4 plus two adjustments.
-First, the factor for salary is dropped.
-The salary factor improved adjusted explanatory power in Model 2, but it provided no such benefit in any other model.
+Making two adjustments to Model 4 yields Model 5.
+Model 5 drops the factor for salary.
+The salary factor improved adjusted explanatory power in Model 2, but it did not provide that benefit in other models.
 Moreover, the p-value of this factor was unacceptably low in Model 4 ($p > 0.9$).
 The second adjustment is to insert a variable for duration\footnote{
     Duration is a categorical variable that was important in both Models 1 and 2.
-    As a categorical variable, it was decomposed into a boolean series for factor analysis.
+    As a categorical variable, it decomposes into a boolean series for factor analysis.
     Models 1 and 2 retained one or more duration boolean factors, but none overlapped.
-    As a result, the duration variable was dropped from Models 3 and 4.
+    As a result, models 3 and 4 drop the duration variable.
 }.
 % The duration factor which indicates that the respondent believes it takes more than a year to obtain an alternative credential
 The belief that it takes more than a year to obtain an alternative credential
 is positively correlated with hireability ($\beta = 0.875, p < 0.01$).
 
-The preferred model is able to explain roughly one-third of the variance in hireability.
+The preferred model explains roughly one-third of the variance in hireability.
 Rulebreaker effects are significant invariant to specification.
 Six of the seven perceived skill gaps in the preferred model are measures of soft skill.
-The coefficient for the perceived technical skill gap is insignificant, but it does possess an intuitive negative sign which is robust to specification.
+The perceived technical skill gap coefficient is insignificant, but it does possess an intuitive negative sign that is robust to specification.
 The dominant effect of soft skills in the preferred regression supports the main hypothesis.
 
 In the classic signaling explanation of low ACNG demand, the ACNG signals an abnormal lack of conscientiousness and conformity.
@@ -702,34 +700,29 @@ This gap effect is equivalent to an association of low hireability and high conf
 % TODO: this paragraph may not be needed in short paper.
 % The gap effect applies to multiple models, but reference to a single model facilitates further explanation.
 % Focusing on the preferred model facilitates further explanation.
-Overqualification is ignored in Model 5, so a gap indicates that the job candidate has a low level of skill compared to an ideal candidate.
-In this model, an increase in gap size is equal to a reduction in the perceived level of skill possessed by a job candidate.
-The negative coefficient for nonconformity, therefore,
-indicates that a reduction to nonconformity is associated with reduced hireability.
-Similarly, an increase in perceived nonconformity shrinks the gap size and produces a positive change in hireability.
-% Similarly, an increase to the level of perceived nonconformity shrinks the gap size and produces a reduced negative effect on hireability.
-The positive relation between nonconformity and hireability is reinforced by a summary statistic,
-which is that the average actual employee is perceived to have a higher level of nonconformity than both the ACNG and the recent college graduate.
+Overqualification is ignored in Model 5, so a positive gap indicates that the job candidate has less skill than an ideal candidate.
+In this model, an increase in gap size is a reduction in the perceived level of skill possessed by a job candidate.
+Therefore, the negative coefficient for the nonconformity gap factor indicates that a low level of nonconformity is associated with reduced hireability.
+Similarly, a high level of perceived nonconformity has a positive effect on hireability.
+A summary statistic reinforces the point that conformity is not generally in demand:
+The average actual employee has a higher level of perceived nonconformity than either the ACNG or the recent college graduate.
 
-The third reason that an ACNG nonconformity signal does not explain reduced hireability is that ACNG
-and recent college graduate labor does not significantly differ in perceived levels of conformity.
-This is presently demonstrated using summary statistics, but Table \ref{tab:gap_of_gaps} also provides regression analysis for comparative skill gaps.
-% and is discussed in detail later in this paper.
 % tab rulebreaker_ngwac rulebreaker_recentcollege, chi2
 % sum rulebreaker_ideal rulebreaker_ngwac rulebreaker_recentcollegegraduat rulebreaker_typicalemployeeatmyc
 % anova rulebreaker_ngwac rulebreaker_recentcollege
 % reg rulebreaker_ngwac rulebreaker_recentcollege
+The third reason that an ACNG nonconformity signal does not explain reduced hireability is that ACNG
+and recent college graduate labor does not significantly differ in perceived levels of conformity.
+Here, summary statistics demonstrate this.
+Later, Table \ref{tab:gap_of_gaps} reiterates the point from another perspective.
+That table presents models in which comparative skill gaps between ACNG and recent college graduate labor explain ACNG hireability,
+but conformity is not an important factor in any such model.
+
 The average level of perceived nonconformity for the ACNG is 6.43, with a standard deviation of 2.25.
 The average for a recent college graduate is 6.29, with a standard deviation of 2.36.
 Informally, a lack of significant difference is apparent in that the means differ by less than one-quarter of a standard deviation.
-Formally, the F-statistic from an analysis of variance ($F = 19.25$) and Pearson's chi-squared test ($\chi = 298.80$) both indicate a probability of independence which is less than 0.0001.
+Formally, the F-statistic from an analysis of variance ($F = 19.25$) and Pearson's chi-squared test ($\chi = 298.80$) each indicate a probability of independence which is less than 0.0001.
 
-The coefficient on conscientiousness is significant and positive across specifications.
-Intuition would dictate that a large gap in conscientiousness would be associated with reduced hireability.
-Regression of the perceived gap in conscientiousness alone on hireability does produce the expected negative coefficient.
-% There are two reasons for the sign change on conscientiousness in the multiple regression.
-% The first explanation is bliss point seeking and the second is an explanation from attenuation.
-%
 % TODO: long paper food...replace below and above bliss seeking convo with marginal analysis and uncomment
 % % As previously discussed, excess individual conscientiousness can disturb team performance\cite{curcseu2019personality}.
 % % It follows that there is some bliss point level of conscientiousness.
@@ -746,35 +739,14 @@ Regression of the perceived gap in conscientiousness alone on hireability does p
 % % - 0.5 < y < 7.5 is an output constraint; independent effect is meanseeking not bliss seeking; bliss point would be 0 by construction
 % % - meanseeking implies marginal effects; otherwise perfect meanseeking would be insignicance of the factor
 % % - we can replace bliss point seeking analysis with marginal (decreasing return in either direction) but then it's like hey lazy analyst why not do all the marginal analysis?
-%
-% Adding a quadratic term to Model 5 identifies a negative marginal relation between conscientiousness and teamwork skill.
-% This replicates the other research which found a parabolic relationship between peer-rated team contribution and conscientiousness.
-% In addition, conscientiousness exhibits a negative marginal relation with hireability overall.
-%
-% The second explanation is that the direct measure of conscientiousness is an attenuating effect within certain specifications.
-The explanation for the sign change is that the direct measure of conscientiousness is an attenuating effect within certain specifications.
-% The explanation for the sign change during specification change is that the direct measure of conscientiousness is an attenuating effect within certain specifications.
-% The second explanation is that the direct measure of conscientiousness is an attenuating effect in the context of particular model specifications.
-% The second explanation is that the direct measure of conscientiousness is an attenuating effect in particular specifications. % an overstatement of the conscientiousness effect in the multiple regression.
-Conscientiousness is cross-correlated with several factors in all models from Table \ref{tab:table_new_ols}.
-% Conscientiousness also structurally interacts with rulebreaker effects.
-% In theory, a person that is high in conscientiousness will tend not to break rules.
-%
-% coefficient basically positive by coincidence, then...
-% in other words, I'm hypothesizing negative embedded conscientiousness effects in the cross-correlated factors.
-% It could be the case that conscientiousness is a composite of positive and negative variation.
-% It could be the case that these cross-correlates partial out a substantial degree of the negative variation in conscientiousness,
-% leaving net positive variation in the direct measure of conscientiousness.
-% This hypothesis is tested by removing other skill gap factors and the rulebreaker effects from Model 5.
-% partialled from is a thing academics say: ncbi.nlm.nih.gov/pmc/articles/PMC3152746/
-% i think 'partialled from' is kind of an awkward tense...but it's what the other academics say, so...
-It could be the case that these cross-correlate effects have partialled from negative variation in conscientiousness.
-% leaving net positive variation in the direct measure of conscientiousness.
-% The total effect of conscientiousness is spread across the direct measure and cross-correlated factors.
-% it's basically positive by coincidence, then...
-% This explanation is tested by removing other skill gap factors and the rulebreaker effects from Model 5.
-This hypothesis is tested by removing other skill gap factors and the rulebreaker effects from Model 5.
-The other factors for state, industry, duration, and employer status are retained.
+The coefficient on conscientiousness is significant and positive across specifications.
+Intuition would dictate that a large gap in conscientiousness would be associated with reduced hireability.
+Regression of the perceived gap in conscientiousness alone on hireability does produce the expected negative coefficient.
+Attenuation between the direct measure of conscientiousness and its cross-correlates explains the sign change.
+Conscientiousness is cross-correlated with several factors in each model from Table \ref{tab:table_new_ols}.
+It could be the case that these cross-correlated effects have partialled from negative variation in conscientiousness.
+Removing factors for skill gaps and rulebreaker effects from Model 5 tests this hypotheis.
+Model 5 retains the other factors for state, industry, duration, and employer status.
 When specified as such, the factor for the perceived conscientiousness skill gap yields the expected negative coefficient ($\beta = -0.084, p < 0.31$).
 
 Employer size is an important factor in the preferred model.
@@ -784,16 +756,16 @@ This finding supports the explanation of hireability from risk aversion over pos
 % The largest category of employer has lower risk, and in fact generates comparative advantage, when hiring from a high-variance pool of candidate quality.
 
 % TODO: long paper food...check state and industry effects against a regulation index
-Some state and industry effects are identified.
-No particular relation among state effects was found, but further comparative policy research is encouraged.
+Some state and industry effects are important in the preferred model.
+% No particular relation among state effects was found, but further comparative policy research is encouraged.
 Regarding industry effects, an interesting interaction between body language communication skills and employment in the information technology industry yields a significant and positive coefficient on hireability.
 Body language skill gaps are independently associated with reduced hireability.
 The interaction indicates a reduced penalty for lack of body language communication skills
 in the information technology industry.
 
 A reduced penalty for soft skill deficit helps explain the particular flourishing of alternative credentials in the information technology industry.
-The reduced penalty in this particular industry might be related to a relative lack of deregulation in the industry.
-Another explanation is that the reduced penalty may be related to cultural norms in the industry.
+The reduced penalty in this particular industry might be related to its relative lack of regulation.
+Another hypothetical explanation is that the reduced penalty is related to cultural norms in the industry.
 Suppose that there is a diminished technical need for social skills in programming.
 In that case, introverts obtain a comparative advantage in this field.
 Further study that includes personality data is encouraged to test this hypothesis.
@@ -803,7 +775,7 @@ Further study that includes personality data is encouraged to test this hypothes
 The preferred model explains about one-third of hireability variance, but how much of the explanatory power is attributable to perceived skill gaps?
 Table \ref{tab:explantory_power} provides evidence on the importance of perceived skill gaps and rulebreaker effects relative to other factor groups.
 % This table compares the explanatory power of selected factor groups.
-Industry and state effects are factor groups that are widely regarded in external literature as important for models in the labor market.
+Industry and state effects are factor groups regarded in external literature as important for models in the labor market.
 Table \ref{tab:explantory_power} shows that perceived skill gaps and rulebreaker effects explain more variance in hireability than do the widely utilized variables for industry and state.
 % are more than the widely accepted factors of importance when explaining hireability.
 Rulebreaker effects collectively explain more than three times as much response variance as do industrial or state effects.
@@ -817,9 +789,9 @@ Rulebreaker effects collectively explain more than three times as much response 
     \label{tab:explantory_power}
 \end{table}
 
-A comparison of simple regressions of perceived skill gaps on hireability reproduces the finding from multiple regression analysis that overqualification effects reduce explanatory power.
-Overqualification effects are heterogeneously signed and curved by skill, so nonlinear analysis where the overqualification effects are isolated in distinct factors is likely to improve explanatory power.
-Such an analysis would also require a larger sample in order to compensate for the loss of degrees of freedom.
+Comparing simple regressions of perceived skill gaps on hireability reproduces the finding from multiple regression analysis that overqualification effects reduce explanatory power.
+Overqualification effects are heterogeneously signed and curved by skill. As a result, nonlinear analysis is likely to improve explanatory power. Isolating overqualification effects into distinct factors may also improve model performance.
+Such an analysis would also require a larger sample to compensate for the loss of degrees of freedom.
 
 Semi-robust state effects are state effects which are significant in any multiple regression described in Table \ref{tab:table_new_ols}.
 Robust state effects are the significant factors in a simple regression of semi-robust state effects on hireability.
@@ -832,12 +804,12 @@ Illinois is an example of a state effect that appears in models 1 and 2 from Tab
 % The simple regression that uses semi-robust state effects has a better chance of overfitting sample data.
 The r-squared associated with a simple regression of semi-robust state effects is greater than the r-squared associated with robust state effects.
 Analysis has shown that perceived skill gaps that include overqualification effects are comparatively weak representations of perceived skill gaps for models of hireability.
-A conservative lower-bound on the explanatory ratio of perceived skill gaps to state effects can be constructed by using these two measures.
+These two measures allow computation of a conservative lower-bound on the explanatory ratio of perceived skill gaps to state effects.
 Perceived skill gaps conservatively explain about 14 percent more variance in hireability than do state effects\footnote{
     This is computed as $(0.0737 / 0.0648) - 1 = .1373$ and rounded to 0.14.
 }.
 
-With overqualification, perceived skill gaps explain about fifty percent more of the variance in hireability compared to industry or robust state effects.
+With overqualification, perceived skill gaps explain about fifty percent more of the variance in hireability than industry or robust state effects.
 Without overqualification, the adjusted explanatory power of perceived skill gaps is about three times the adjusted explanatory power of industry or state effects.
 Rulebreaker effects are about twice as important as perceived skill gaps.
 % These results provide evidence that ACNG hireability depends importantly on the way a particular employer views nonconformists.
@@ -851,9 +823,11 @@ These findings collectively provide evidence that perceived skill gaps and ruleb
 \subsection{Perceived Gaps Compared to the Recent College Graduate}
 
 Table \ref{tab:gap_of_gaps} provides two models of hireability where comparative skill gaps are independent factors.
-Model 6 is derived from Model 5 by replacing perceived skill gap factors with comparative perceived skill gap factors and dropping other factors.
-Model 7 is derived from Model 6 by consolidating factors in order to maximize adjusted explanatory power.
-The four factors that were eliminated in the consolidation from Model 6 to Model 7 had a p-value greater than 0.55.
+Replacing perceived skill gap factors in Model 5 with comparative perceived skill gap factors, then dropping other factors, results in Model 6.
+Eliminating insignificant factors to maximize adjusted explanatory power in Model 6 yields Model 7.
+In total, Model 6 drops four factors from Model 7.
+These four factors each had a p-value greater than 0.55.
+The maximum p-value in Model 7 is less than 0.16.
 % Because the p-value is greater than 0.5, these coefficients can be interpreted as more likely not to represent a real relation than to represent a real relation.
 % This indicates all four eliminated factors were more likely not to have a relation than to have a relation.
 % Model 7 is the preferred comparative gap model.
@@ -869,12 +843,11 @@ The maximum p-value in Model 7 is less than 0.16.
 
 Models 6 and 7 demonstrate that a few soft skills do constitute a significant difference between groups.
 The main differentiator between ACNG labor and the recent college graduate is body language communication skill.
-% Recent college graduates are perceived as skilled in this area,
-ACNG labor is perceived as comparatively deficient in this skill,
-and the comparative deficiency is associated with reduced ACNG hireability.
+Respondents perceive ACNG labor to be deficient in this skill relative to recent college graduates.
+This comparative disadvantage comes at the price of reduced ACNG hireability.
 
 Conscientiousness and willingness to commute are the other two comparative skill gaps in Model 7.
-These two factors are positively signed, smaller in magnitude, and of lower significance compared to the factor for body language communication skills.
+These two factors are positively signed, smaller in magnitude, and of lower significance than the factor for body language communication skills.z
 Model 7 plus summary statistics on the average value for each independent variable demonstrates that
 the average total effect of comparative skill gaps on hireability is negative\footnote{
     % per analysis-7-diff-of-gaps.do
@@ -886,12 +859,13 @@ the average total effect of comparative skill gaps on hireability is negative\fo
     % $Y = -0.3395*0.1415 - 0.1575*0.0943 + 0.1508*0.0330 = -0.0579$.
     $-0.0579 = -0.3395*0.1415 - 0.1574*0.0943 + 0.1508*0.0330$.
 }.
-This replicates external research that shows lower demand for ACNG labor.
+This negative total effect replicates external research that shows lower demand for ACNG labor.
 
 The average effect of an increased comparative gap in willingness to commute is positive on hireability.
-This is because ACNG labor is generally more willing to commute compared to the recent college graduate.
-The situation is reversed for body language communication skills.
-Because the recent college graduate has an advantage on average, the average effect of a comparative gap increase is negative on hireability.
+The fact that respondents perceive ACNG candidates as more willing to commute than recent college graduates explains the positive coefficient.
+The reverse is true for body language communication skills.
+For body language communication skills, the recent college graduate has the larger level of perceived skill on average.
+Because the average case favors the recent college graduate, linear optimization provides an average effect for this comparative gap, which negatively affects hireability.
 
 % % TODO: long paper food...talk about how the conscientiousness differential gap may be a spurious result per analysis-7-diff-of-gaps.do
 % % TODO: long paper food...try to explain positive coefficient on comparative conscientiousness
@@ -953,7 +927,7 @@ Because the recent college graduate has an advantage on average, the average eff
 Conscientiousness has a more complicated result.
 The college graduate has an advantage on average, but the coefficient remains positive.
 This would seem to indicate that the ACNG maximizes hireability by minimizing conscientiousness.
-The reason is that there are important nonlinear effects that are missed in Model 7.
+The reason is that Model 7 omits important nonlinear effects.
 Figure \ref{fig:conc_rvfp} is a scatterplot of residuals from a simple regression of comparative conscientiousness on hireability.
 The plot indicates a residual trend down and to the right with some heteroscedasticity.
 Looking along the bottom of the graph shows an m-shape, which is consistent with cubic effects.
@@ -989,13 +963,10 @@ the linear effect is negative and the marginal effect is also negative,
 but the marginal effect is becoming less negative as conscientiousness increases.
 
 Models 7 and 8 provide a skill-level diagnostic in service of closing the demand gap for ACNG labor.
-% This model indicates that the soft skill of communication through body language is the only skill difference associated with reduced hireability.
-% It is also the most significant and largest in magnitude of such differences.
-Training for body language communication skill can be incorporated into alternative learning provider products,
-or alternative learning provider consumers can append additional training and credentials to their skill profile which target this skill.
+Alternative learning providers can implement body language communication training in their products,
+or ACNG candidates can obtain additional training and credentials that target this skill a la cart.
 % Improving body language communication skill is precisely diagnosed and not to be confused with generalized communication skill.
 % Perceived skill gaps for emotional intelligence, verbal communication, and written communication are insignificant.
-%
 ACNG job candidates can offset perceived conscientiousness deficit by provisioning work history or results of a personality test.
 External research indicates that psychological therapy and other interventions can boost conscientiousness in some cases\cite{kilduff_tasselli_landis_2018}.
 
