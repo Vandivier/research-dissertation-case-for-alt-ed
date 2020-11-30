@@ -4,7 +4,7 @@ clear
 * // basically only definsible on structural grounds; lower p(F) is a nice result or incentive but it's not a good justification
 * // I arguably have a structural defense...but i would need to redo all models for consistency
 * // on second though i don't have structural defense. if all diffs are zero fav doesn't need to also be zero
-* //    moreover, for non-diff models, if all observed skills are zero it doesn't mean hirability is zero; there can be unobserved skills and also some willingness to hire someone with no skills.
+* //    moreover, for non-diff models, if all observed skills are zero it doesn't mean hireability is zero; there can be unobserved skills and also some willingness to hire someone with no skills.
 * // it's clear that r-squared with and without intercept is not comparablt, but it seems p(F) might be...prob need more research
 * // ref: https://stats.stackexchange.com/questions/484998/how-does-stata-compute-model-constants
 * // ref: https://stats.stackexchange.com/questions/26176/removal-of-statistically-significant-intercept-term-increases-r2-in-linear-mo/26205#26205

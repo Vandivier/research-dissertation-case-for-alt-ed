@@ -197,7 +197,7 @@ estadd scalar f_p_value = r(p)
 * // i can't use the _alt specification; it doesn't actually tell us if slope is increasing/decreasing/etc
 * // it is a marginal fx differential not a real marginal effect...not super useful and not what our theory predicts.
 * // noconstant is interesting but i shouldn't use that...see analysis-8...do for some refs
-* // basically, if all my skill gaps are 0 it doesn't mean hirability is 0, so i need constant
+* // basically, if all my skill gaps are 0 it doesn't mean hireability is 0, so i need constant
 reg fav diff_alt2_wno_bodylanguage if diff_alt2_wno_body < 0
 reg fav diff_alt2_wno_bodylanguage if diff_alt2_wno_body < 0, noconstant
 reg fav diff_alt2_wno_bodylanguage, noconstant
@@ -249,10 +249,10 @@ twoway scatter y_from_alt_multi_commute diff_wno_commute
 swilk y_res_from_alt_multi_bodylang
 qnorm y_res_from_alt_multi_bodylang
 scatter y_from_alt_multi_bodylang diff_wno_bodylanguage
-twoway scatter y_from_alt_multi_bodylang diff_wno_bodylanguage, xtitle("Difference in Body Language Skill") ytitle("Predicted Hirability")
+twoway scatter y_from_alt_multi_bodylang diff_wno_bodylanguage, xtitle("Difference in Body Language Skill") ytitle("Predicted Hireability")
 
 * // label variable l1 "Linear"
 * // label variable l2 "Quadratic"
 * // label variable l3 "Cubic"
-* // twoway (scatter fav diff_wno_concientiousness) (lfit fav diff_wno_concientiousness, ytitle(Linear)) (qfit fav diff_wno_concientiousness) (scatter l3 diff_wno_concientiousness), xtitle(Comparative Gap in Concientiousness) ytitle(Hirability)
-* // twoway (scatter fav diff_wno_concientiousness) (scatter l1 diff_wno_concientiousness) (scatter l2 diff_wno_concientiousness) (scatter l3 diff_wno_concientiousness), xtitle(Comparative Gap in Concientiousness) ytitle(Hirability)
+* // twoway (scatter fav diff_wno_concientiousness) (lfit fav diff_wno_concientiousness, ytitle(Linear)) (qfit fav diff_wno_concientiousness) (scatter l3 diff_wno_concientiousness), xtitle(Comparative Gap in Concientiousness) ytitle(Hireability)
+* // twoway (scatter fav diff_wno_concientiousness) (scatter l1 diff_wno_concientiousness) (scatter l2 diff_wno_concientiousness) (scatter l3 diff_wno_concientiousness), xtitle(Comparative Gap in Concientiousness) ytitle(Hireability)

@@ -1,0 +1,108 @@
+% using Elseveir template per https://www.elsevier.com/authors/author-schemas/latex-instructions
+\documentclass[review]{elsarticle}
+\usepackage{lineno,hyperref}
+\modulolinenumbers[5]
+\bibliographystyle{elsarticle-num}
+
+\usepackage{booktabs}
+\usepackage{graphicx}
+\graphicspath{{../alt-ed-survey/figures-and-tables}}
+\usepackage{hyperref}
+\usepackage{threeparttable}  
+\usepackage{tikz}
+\usetikzlibrary{calc,matrix}
+
+\begin{document}
+\begin{frontmatter}
+
+    \title{
+        Hireability and Educational Prestige
+    }
+
+    \author[mymainaddress]{John Vandivier}
+    \address[mymainaddress]{4400 University Dr, Fairfax, VA 22030}
+    \ead{jvandivi@masonlive.gmu.edu}
+
+    \begin{abstract}
+        This paper investigates the effect of educational prestige on willingness to hire.
+        This paper makes an important contribution to the existing literature on educational prestige
+        in that it extends analysis beyond university education by considering coding bootcamps.
+        This paper further decomposes prestige into seperate factors for familiarity and quality.
+        Prestige is assessed from a normative perspective by comparing the explanatory power of aggregate and individual familiarity and quality ratings.
+
+        % This analysis generalizes on both the university prestige literature
+        % and the literature on hirability of alternatively credentialed non-college graduates (ACNG).
+
+        % What do we find? Sample size? Caveats and implications?
+    \end{abstract}
+
+    \begin{keyword}
+        TODO
+        \MSC[2010] TODO123 %%% not grammatical
+    \end{keyword}
+
+\end{frontmatter}
+
+\pagebreak
+\linenumbers
+
+\section{Introduction}
+
+extends university prestige literature. book Pedigree by Lauren Rivera: https://www.youtube.com/watch?v=_70KfdHV7Nk
+merge literature on alt ed hirability: https://www.tandfonline.com/doi/abs/10.1080/13504851.2020.1767279
+sprinkle in some norms economics:
+https://www.behavioraleconomics.com/resources/mini-encyclopedia-of-be/social-norm/
+https://www.aeaweb.org/articles?id=10.1257/jep.3.4.99
+factors and caveats?
+
+theory: prestige substantially explains hirability
+rationally conspicuous consumption: part of the degree value is prestige
+suppose prestige is a combination of quality and familiarity; a simple combination would be the product of those factors.
+
+\section{Data and Methodology}
+
+1. Online questionnaire
+2. how was nonresponse bias addressed? - maybe not at all
+- main way to address nonresponse bias is to explicitly capture and correct for all of the individual characteristics that matter: ethnicity, age, income...
+- it would not be enough to show nonresponse bias exists;
+- it would need to be shown that it exists in the direction of some effect that moves the relation of interest in a predictable and meaningful way;
+- else the criticism is an argument from ignorance which due dilligence has been undertaken to preclude.
+- https://forum.effectivealtruism.org/posts/a6LMQcER6Awhawtqq/using-amazon-s-mechanical-turk-for-animal-advocacy-studies
+- above indicates overstatement of effects...i would want more info...there is a paper internally cited
+- above also deflates income nonresponse bias consern (these don't pay much so systematic bias from rich ppl) also i explicitly capture income anyway
+- "AMT was found to be a reliable source of data and to diminish the potential for non-response error in online research"
+- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4397064/
+- https://duckofminerva.com/2013/07/mechanical-turk-and-experiments-in-the-social-sciences.html
+- https://www.tandfonline.com/doi/abs/10.1080/10967494.2016.1276493
+3. How were ratings subjects selected? min 2*2*2 (isQuality)*(isBootcamp)*(isKnown) social and individual ratings [10 point likert-type unit]
+4. a few correction variables based on literature review and computed norm factors how
+
+Test making them aware of the normative data and price data for rating quality and hirability (not for rating name recognition)
+
+\section{Results}
+
+1. did perceived prestige explain willingness to hire?
+2. did normal prestige explain willingness to hire?
+3. is a prestigious alt cred better than a non-prestigious university? where are these prestige cutoffs? are they 1:1?
+4. how substantially did individual prestige vary from normal prestige (more variation indicates that it's easier for low-prestige to find a match somewhere)
+
+theoretically (low-prestige + not well known) > (low prestige + well known). did that seem true?
+
+\section{Conclusions}
+
+1. overall is there evidence that bootcamp can replace college due to prestige effects? what caveats?
+- we need to consider price in the real world
+- we had a threshold of name recognition to ensure statistical confidence; what happens if we drop below that? say a bootcamp w less than 30 reviews?
+2. online education isn't a good fit for all learners
+3. parental preference matters; if parents will finance university but not bootcamp (or vice-versa) then effective cost to student is modified
+- this also presents a channel for pro-ACNG movement
+4. policy differences: government or employer may provide financing or employment conditinoal on a certain type of educational participation
+
+overall advice: as an individual, work backwards from a particular desired job description
+as a society: push for policies which make comparing across types easier, generate lower cost and higher skill outputs,
+and clearer signals of productivity, reducing demand for prestige which is really 1) a second-best / fallback signal of productivity,
+and 2) a form of slack and a biased means toward inefficient selection (anti-diversity as a byproduct; again see Pedigree)
+
+\bibliography{./BibFile}
+
+\end{document}
