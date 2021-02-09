@@ -38,6 +38,30 @@ manager_effects_series = pd.get_dummies(df['manager_effects'])
 manager_effects_series = manager_effects_series.drop(columns=['No']).rename(columns={
     'Yes': 'is_manager', 'Not employed at present': 'is_unemployed'})
 
+industry_effects_series = pd.get_dummies(df['industry'])
+industry_effects_series = industry_effects_series.drop(
+    columns=['Agriculture']).rename(columns={})
+
+income_effects_series = pd.get_dummies(df['income'])
+income_effects_series = income_effects_series.drop(
+    columns=['Prefer not to answer']).rename(columns={})
+
+age_effects_series = pd.get_dummies(df['age'])
+age_effects_series = age_effects_series.drop(
+    columns=['> 60']).rename(columns={})
+
+education_effects_series = pd.get_dummies(df['education'])
+education_effects_series = education_effects_series.drop(
+    columns=['GED']).rename(columns={'Some\xa0Graduate School': 'Some Graduate School'})
+
+ethnicity_effects_series = pd.get_dummies(df['ethnicity'])
+ethnicity_effects_series = ethnicity_effects_series.drop(
+    columns=['American Indian or Alaskan Native']).rename(columns={})
+
+state_effects_series = pd.get_dummies(df['state'])
+state_effects_series = state_effects_series.drop(
+    columns=['Alabama']).rename(columns={})
+
 gender_effects_series = pd.get_dummies(df['gender'])
 gender_effects_series = gender_effects_series.drop(columns=['Female']).rename(columns={
     'Male': 'is_male', 'Other': 'is_nonbinary'
@@ -59,13 +83,13 @@ covid_ind_fav_online_series = covid_ind_fav_online_series.drop(columns=['No more
 df = pd.concat((
     df,
     manager_effects_series,
-    pd.get_dummies(df['industry']),
+    industry_effects_series,
     gender_effects_series,
-    pd.get_dummies(df['income']),
-    pd.get_dummies(df['age']),
-    pd.get_dummies(df['education']),
-    pd.get_dummies(df['ethnicity']),
-    pd.get_dummies(df['state']),
+    income_effects_series,
+    age_effects_series,
+    education_effects_series,
+    ethnicity_effects_series,
+    state_effects_series,
     covid_impact_series,
     covid_ind_remote_series,
     covid_ind_fav_online_series), axis=1)
@@ -73,9 +97,8 @@ df = pd.concat((
 # some columns dropped to avoid dummy trap / perfect multicolinearity
 # TODO: maybe run a regression using these dropped guys so I don't forget to look for them.
 df = df.drop(
-    columns=['manager_effects', 'industry', 'Agriculture', 'gender', 'income', 'Prefer not to answer',
-             'age', '> 60', 'education', 'GED', 'ethnicity', 'American Indian or Alaskan Native',
-             'state', 'Alabama', 'covid_impact', 'covid_ind_remote', 'covid_ind_fav_online']).rename(columns={'Some\xa0Graduate School': 'Some Graduate School'})
+    columns=['manager_effects', 'industry', 'gender', 'income', 'age', 'education', 'ethnicity',
+             'state', 'covid_impact', 'covid_ind_remote', 'covid_ind_fav_online'])
 
 # help build long model formula
 print(" + ".join(list(df.columns)))
@@ -87,8 +110,8 @@ print(" + ".join(list(df.columns)))
 # add constant ref: https://stackoverflow.com/questions/36409889/using-ols-from-statsmodels-formula-api-how-to-remove-constant-term
 # m1 = ar2 0.232
 print("---")
-# TODO: fix below
-# print(sm.OLS('favor_alt_creds ~ conventional_alt_creds + favor_online_ed + is_unemployed + is_manager + Education + Energy + Finance, Investment, or Accounting + Health + Information Technology + Law + Manufacturing + Military + Other + Real Estate + Retail + Transportation + is_male + is_nonbinary + 0-9,999 + 10,000-24,999 + 100,000-124,999 + 125,000-149,999 + 150,000-174,999 + 175,000-199,999 + 200,000+ + 25,000-49,999 + 50,000-74,999 + 75,000-99,999 + 18 -29 + 30-44 + 45-60 + High School Diploma + Obtained Non-Doctoral Graduate Degree + Obtained Undergraduate Degree + Obtained a Doctoral Degree + Some College + Some Graduate School + Asian / Pacific Islander + Black or African American + Hispanic + Other + White / Caucasian + Arizona + Arkansas + California + Colorado + Connecticut + Delaware + Florida + Georgia + Hawaii + Idaho + Illinois + Indiana + Iowa + Kentucky + Louisiana + Maryland + Massachusetts + Michigan + Minnesota + Mississippi + Missouri + Nebraska + Nevada + New Jersey + New Mexico + New York + North Carolina + North Dakota + Ohio + Oklahoma + Oregon + Pennsylvania + Rhode Island + South Carolina + South Dakota + Tennessee + Texas + Virginia + Washington + Wisconsin + covid_impact_large + covid_impact_moderate + covid_impact_slight + covid_ind_remote_large + covid_ind_remote_moderate + covid_ind_remote_slight + covid_ind_fav_online_large + covid_ind_fav_online_moderate + covid_ind_fav_online_slight + 1', data=df).fit().summary())
+# TODO: fix long regression below
+# print(sm.OLS('favor_alt_creds ~ conventional_alt_creds + favor_online_ed + is_unemployed + is_manager + Education + Energy + "Finance, Investment, or Accounting" + Health + "Information Technology" + Law + Manufacturing + Military + Other + "Real Estate" + Retail + Transportation + is_male + is_nonbinary + 0-9,999 + 10,000-24,999 + 100,000-124,999 + 125,000-149,999 + 150,000-174,999 + 175,000-199,999 + 200,000+ + 25,000-49,999 + 50,000-74,999 + 75,000-99,999 + 18 -29 + 30-44 + 45-60 + High School Diploma + Obtained Non-Doctoral Graduate Degree + Obtained Undergraduate Degree + Obtained a Doctoral Degree + Some College + Some Graduate School + Asian / Pacific Islander + Black or African American + Hispanic + Other + White / Caucasian + Arizona + Arkansas + California + Colorado + Connecticut + Delaware + Florida + Georgia + Hawaii + Idaho + Illinois + Indiana + Iowa + Kentucky + Louisiana + Maryland + Massachusetts + Michigan + Minnesota + Mississippi + Missouri + Nebraska + Nevada + New Jersey + New Mexico + New York + North Carolina + North Dakota + Ohio + Oklahoma + Oregon + Pennsylvania + Rhode Island + South Carolina + South Dakota + Tennessee + Texas + Virginia + Washington + Wisconsin + covid_impact_large + covid_impact_moderate + covid_impact_slight + covid_ind_remote_large + covid_ind_remote_moderate + covid_ind_remote_slight + covid_ind_fav_online_large + covid_ind_fav_online_moderate + covid_ind_fav_online_slight + 1', data=df).fit().summary())
 print(sm.OLS.from_formula('favor_alt_creds ~ conventional_alt_creds + favor_online_ed + is_unemployed + is_manager + Education + Energy + Tennessee + Texas + Virginia + Washington + Wisconsin + covid_impact_large + covid_impact_moderate + covid_impact_slight + covid_ind_remote_large + covid_ind_remote_moderate + covid_ind_remote_slight + covid_ind_fav_online_large + covid_ind_fav_online_moderate + covid_ind_fav_online_slight + 1', data=df).fit().summary())
 
 # # m2 = ar2 0.234
