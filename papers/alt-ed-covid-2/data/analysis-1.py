@@ -38,9 +38,15 @@ manager_effects_series = pd.get_dummies(df['manager_effects'])
 manager_effects_series = manager_effects_series.drop(columns=['No']).rename(columns={
     'Yes': 'is_manager', 'Not employed at present': 'is_unemployed'})
 
-industry_effects_series = pd.get_dummies(df['industry'])
+
+def fsReformatColumnNames(sColName):
+    return sColName.replace(',', '').replace(' ', '_').lower()
+
+
+industry_effects_series = pd.get_dummies(
+    df['industry']).rename(fsReformatColumnNames, axis='columns')
 industry_effects_series = industry_effects_series.drop(
-    columns=['Agriculture']).rename(columns={})
+    columns=['agriculture']).rename(columns={})
 
 income_effects_series = pd.get_dummies(df['income'])
 income_effects_series = income_effects_series.drop(
@@ -96,9 +102,9 @@ df = pd.concat((
 
 # some columns dropped to avoid dummy trap / perfect multicolinearity
 # TODO: maybe run a regression using these dropped guys so I don't forget to look for them.
-df = df.drop(
-    columns=['manager_effects', 'industry', 'gender', 'income', 'age', 'education', 'ethnicity',
-             'state', 'covid_impact', 'covid_ind_remote', 'covid_ind_fav_online'])
+# df = df.drop(
+#     columns=['manager_effects', 'industry', 'gender', 'income', 'age', 'education', 'ethnicity',
+#              'state', 'covid_impact', 'covid_ind_remote', 'covid_ind_fav_online'])
 
 # help build long model formula
 print(" + ".join(list(df.columns)))
@@ -112,7 +118,9 @@ print(" + ".join(list(df.columns)))
 print("---")
 # TODO: fix long regression below
 # print(sm.OLS('favor_alt_creds ~ conventional_alt_creds + favor_online_ed + is_unemployed + is_manager + Education + Energy + "Finance, Investment, or Accounting" + Health + "Information Technology" + Law + Manufacturing + Military + Other + "Real Estate" + Retail + Transportation + is_male + is_nonbinary + 0-9,999 + 10,000-24,999 + 100,000-124,999 + 125,000-149,999 + 150,000-174,999 + 175,000-199,999 + 200,000+ + 25,000-49,999 + 50,000-74,999 + 75,000-99,999 + 18 -29 + 30-44 + 45-60 + High School Diploma + Obtained Non-Doctoral Graduate Degree + Obtained Undergraduate Degree + Obtained a Doctoral Degree + Some College + Some Graduate School + Asian / Pacific Islander + Black or African American + Hispanic + Other + White / Caucasian + Arizona + Arkansas + California + Colorado + Connecticut + Delaware + Florida + Georgia + Hawaii + Idaho + Illinois + Indiana + Iowa + Kentucky + Louisiana + Maryland + Massachusetts + Michigan + Minnesota + Mississippi + Missouri + Nebraska + Nevada + New Jersey + New Mexico + New York + North Carolina + North Dakota + Ohio + Oklahoma + Oregon + Pennsylvania + Rhode Island + South Carolina + South Dakota + Tennessee + Texas + Virginia + Washington + Wisconsin + covid_impact_large + covid_impact_moderate + covid_impact_slight + covid_ind_remote_large + covid_ind_remote_moderate + covid_ind_remote_slight + covid_ind_fav_online_large + covid_ind_fav_online_moderate + covid_ind_fav_online_slight + 1', data=df).fit().summary())
-print(sm.OLS.from_formula('favor_alt_creds ~ conventional_alt_creds + favor_online_ed + is_unemployed + is_manager + Education + Energy + Tennessee + Texas + Virginia + Washington + Wisconsin + covid_impact_large + covid_impact_moderate + covid_impact_slight + covid_ind_remote_large + covid_ind_remote_moderate + covid_ind_remote_slight + covid_ind_fav_online_large + covid_ind_fav_online_moderate + covid_ind_fav_online_slight + 1', data=df).fit().summary())
+
+# print(sm.OLS.from_formula('favor_alt_creds ~ conventional_alt_creds + favor_online_ed + is_unemployed + is_manager + Education + Energy + Tennessee + Texas + Virginia + Washington + Wisconsin + covid_impact_large + covid_impact_moderate + covid_impact_slight + covid_ind_remote_large + covid_ind_remote_moderate + covid_ind_remote_slight + covid_ind_fav_online_large + covid_ind_fav_online_moderate + covid_ind_fav_online_slight + 1', data=df).fit().summary())
+print(industry_effects_series.columns)
 
 # # m2 = ar2 0.234
 # X2 = X1
