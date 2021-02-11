@@ -41,7 +41,7 @@ manager_effects_series = manager_effects_series.drop(columns=['No']).rename(colu
 
 def fsReformatColumnNames(sColName):
     sMassagedName = sColName.replace(',', '').replace(
-        ' ', '_').replace('-', '_').lower()
+        ' ', '_').replace('-', '_').replace('>', '').lower()
     sMassagedName = sMassagedName.replace('_/_', '_')
     sMassagedName = sMassagedName.replace('__', '_')
     return sMassagedName
@@ -57,15 +57,11 @@ income_effects_series = pd.get_dummies(df['income']).rename(
 income_effects_series = income_effects_series.drop(
     columns=['prefer_not_to_answer']).rename(columns={})
 
-age_effects_series = pd.get_dummies(df['age']).rename(
-    fsReformatColumnNames, axis='columns')
-age_effects_series = age_effects_series.drop(
-    columns=['>_60']).rename(columns={})
+df = pd.get_dummies(df, columns=['age']).rename(
+    fsReformatColumnNames, axis='columns').drop(columns=['age_60'])
 
-education_effects_series = pd.get_dummies(
-    df['education']).rename(fsReformatColumnNames, axis='columns')
-education_effects_series = education_effects_series.drop(
-    columns=['ged']).rename(columns={'Some\xa0Graduate School': 'Some Graduate School'})
+df = pd.get_dummies(df, columns=['education']).rename(
+    fsReformatColumnNames, axis='columns').drop(columns=['education_ged'])
 
 ethnicity_effects_series = pd.get_dummies(
     df['ethnicity']).rename(fsReformatColumnNames, axis='columns')
@@ -96,39 +92,26 @@ covid_ind_fav_online_series = pd.get_dummies(df['covid_ind_fav_online'])
 covid_ind_fav_online_series = covid_ind_fav_online_series.drop(columns=['No more favorable (or less favorable)']).rename(columns={
     'Large degree': 'covid_ind_fav_online_large', 'Moderate degree': 'covid_ind_fav_online_moderate', 'Slight degree': 'covid_ind_fav_online_slight'})
 
-df = pd.concat((
-    df,
-    manager_effects_series,
-    industry_effects_series,
-    gender_effects_series,
-    income_effects_series,
-    age_effects_series,
-    education_effects_series,
-    ethnicity_effects_series,
-    state_effects_series,
-    covid_impact_series,
-    covid_ind_remote_series,
-    covid_ind_fav_online_series), axis=1)
-
-# some columns dropped to avoid dummy trap / perfect multicolinearity
-# TODO: maybe run a regression using these dropped guys so I don't forget to look for them.
-# df = df.drop(
-#     columns=['manager_effects', 'industry', 'gender', 'income', 'age', 'education', 'ethnicity',
-#              'state', 'covid_impact', 'covid_ind_remote', 'covid_ind_fav_online'])
-
 # help build long model formula
 print(" + ".join(list(df.columns)))
 
-# TODO: then any custom vars per: https://kaijento.github.io/2017/04/22/pandas-create-new-column-sum/
+# TODO: custom vars.
+# custom vars ref: https://kaijento.github.io/2017/04/22/pandas-create-new-column-sum/
 # df['z'] = df.x + df.y
 
+print("---")
+
+# TODO: fix long regression below
 # from_formula ref: http://www.science.smith.edu/~jcrouser/SDS293/labs/lab2-py.html
 # add constant ref: https://stackoverflow.com/questions/36409889/using-ols-from-statsmodels-formula-api-how-to-remove-constant-term
-# m1 = ar2 0.232
-print("---")
-# TODO: fix long regression below
-# print(sm.OLS('favor_alt_creds ~ conventional_alt_creds + favor_online_ed + is_unemployed + is_manager + Education + Energy + "Finance, Investment, or Accounting" + Health + "Information Technology" + Law + Manufacturing + Military + Other + "Real Estate" + Retail + Transportation + is_male + is_nonbinary + 0-9,999 + 10,000-24,999 + 100,000-124,999 + 125,000-149,999 + 150,000-174,999 + 175,000-199,999 + 200,000+ + 25,000-49,999 + 50,000-74,999 + 75,000-99,999 + 18 -29 + 30-44 + 45-60 + High School Diploma + Obtained Non-Doctoral Graduate Degree + Obtained Undergraduate Degree + Obtained a Doctoral Degree + Some College + Some Graduate School + Asian / Pacific Islander + Black or African American + Hispanic + Other + White / Caucasian + Arizona + Arkansas + California + Colorado + Connecticut + Delaware + Florida + Georgia + Hawaii + Idaho + Illinois + Indiana + Iowa + Kentucky + Louisiana + Maryland + Massachusetts + Michigan + Minnesota + Mississippi + Missouri + Nebraska + Nevada + New Jersey + New Mexico + New York + North Carolina + North Dakota + Ohio + Oklahoma + Oregon + Pennsylvania + Rhode Island + South Carolina + South Dakota + Tennessee + Texas + Virginia + Washington + Wisconsin + covid_impact_large + covid_impact_moderate + covid_impact_slight + covid_ind_remote_large + covid_ind_remote_moderate + covid_ind_remote_slight + covid_ind_fav_online_large + covid_ind_fav_online_moderate + covid_ind_fav_online_slight + 1', data=df).fit().summary())
-# print(sm.OLS.from_formula('favor_alt_creds ~ conventional_alt_creds + favor_online_ed + is_unemployed + is_manager + Education + Energy + Tennessee + Texas + Virginia + Washington + Wisconsin + covid_impact_large + covid_impact_moderate + covid_impact_slight + covid_ind_remote_large + covid_ind_remote_moderate + covid_ind_remote_slight + covid_ind_fav_online_large + covid_ind_fav_online_moderate + covid_ind_fav_online_slight + 1', data=df).fit().summary())
+# shorthand ref: https://stackoverflow.com/questions/5251507/how-to-succinctly-write-a-formula-with-many-variables-from-a-data-frame
+# long reg / m1: n=350, r2=0.437, ar2=0.239
+print(sm.OLS.from_formula('''favor_alt_creds ~
+    manager_effects + conventional_alt_creds + favor_online_ed + industry
+    + age_18_29 + age_30_44 + age_45_60
+    + education_high_school_diploma + education_obtained_non_doctoral_graduate_degree + education_obtained_undergraduate_degree + education_obtained_a_doctoral_degree + education_some_college + education_some_graduate_school
+    + gender + ethnicity + income + state
+    + covid_impact + covid_ind_remote + covid_ind_fav_online + 1''', data=df).fit().summary())
 
 # # m2 = ar2 0.234
 # X2 = X1
