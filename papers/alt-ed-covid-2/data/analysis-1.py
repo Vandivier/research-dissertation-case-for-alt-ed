@@ -68,17 +68,14 @@ df = pd.get_dummies(df, columns=['state']).rename(
 df = pd.get_dummies(df, columns=['gender']).rename(
     fsReformatColumnNames, axis='columns').drop(columns=['gender_female'])
 
-covid_impact_series = pd.get_dummies(df['covid_impact'])
-covid_impact_series = covid_impact_series.drop(columns=['No negative impact (or a positive impact)']).rename(columns={
-    'Large negative impact': 'covid_impact_large', 'Moderate negative impact': 'covid_impact_moderate', 'Slight negative impact': 'covid_impact_slight'})
+df = pd.get_dummies(df, columns=['covid_impact']).rename(
+    fsReformatColumnNames, axis='columns').drop(columns=['covid_impact_no_negative_impact_(or_a_positive_impact)'])
 
-covid_ind_remote_series = pd.get_dummies(df['covid_ind_remote'])
-covid_ind_remote_series = covid_ind_remote_series.drop(columns=['No increase (or a decrease)']).rename(columns={
-    'Large degree': 'covid_ind_remote_large', 'Moderate degree': 'covid_ind_remote_moderate', 'Slight degree': 'covid_ind_remote_slight'})
+df = pd.get_dummies(df, columns=['covid_ind_remote']).rename(
+    fsReformatColumnNames, axis='columns').drop(columns=['covid_ind_remote_no_increase_(or_a_decrease)'])
 
-covid_ind_fav_online_series = pd.get_dummies(df['covid_ind_fav_online'])
-covid_ind_fav_online_series = covid_ind_fav_online_series.drop(columns=['No more favorable (or less favorable)']).rename(columns={
-    'Large degree': 'covid_ind_fav_online_large', 'Moderate degree': 'covid_ind_fav_online_moderate', 'Slight degree': 'covid_ind_fav_online_slight'})
+df = pd.get_dummies(df, columns=['covid_ind_fav_online']).rename(
+    fsReformatColumnNames, axis='columns').drop(columns=['covid_ind_fav_online_no_more_favorable_(or_less_favorable)'])
 
 # help build long model formula
 print(" + ".join(list(df.columns)))
@@ -95,9 +92,11 @@ print("---")
 # add constant ref: https://stackoverflow.com/questions/36409889/using-ols-from-statsmodels-formula-api-how-to-remove-constant-term
 # shorthand ref: https://stackoverflow.com/questions/5251507/how-to-succinctly-write-a-formula-with-many-variables-from-a-data-frame
 # long reg / m1: n=350, r2=0.437, ar2=0.239
-sm.OLS.from_formula('''favor_alt_creds ~
+m1 = '''favor_alt_creds ~
     + conventional_alt_creds + favor_online_ed
-    + covid_impact + covid_ind_remote + covid_ind_fav_online
+    + covid_impact_large_negative_impact + covid_impact_moderate_negative_impact + covid_impact_slight_negative_impact
+    + covid_ind_remote_large_degree + covid_ind_remote_moderate_degree + covid_ind_remote_slight_degree
+    + covid_ind_fav_online_large_degree + covid_ind_fav_online_moderate_degree + covid_ind_fav_online_slight_degree
     + manager_effects_not_employed_at_present + is_manager
     + industry_education + industry_energy + industry_finance_investment_or_accounting + industry_health + industry_information_technology + industry_law + industry_manufacturing + industry_military + industry_other + industry_real_estate + industry_retail + industry_transportation
     + age_18_29 + age_30_44 + age_45_60
@@ -106,20 +105,121 @@ sm.OLS.from_formula('''favor_alt_creds ~
     + ethnicity_asian_pacific_islander + ethnicity_black_or_african_american + ethnicity_hispanic + ethnicity_other + ethnicity_white_caucasian
     + income_0_9999 + income_10000_24999 + income_100000_124999 + income_125000_149999 + income_150000_174999 + income_175000_199999 + income_200000+ + income_25000_49999 + income_50000_74999 + income_75000_99999
     + state_arizona + state_arkansas + state_california + state_colorado + state_connecticut + state_delaware + state_florida + state_georgia + state_hawaii + state_idaho + state_illinois + state_indiana + state_iowa + state_kentucky + state_louisiana + state_maryland + state_massachusetts + state_michigan + state_minnesota + state_mississippi + state_missouri + state_nebraska + state_nevada + state_new_jersey + state_new_mexico + state_new_york + state_north_carolina + state_north_dakota + state_ohio + state_oklahoma + state_oregon + state_pennsylvania + state_rhode_island + state_south_carolina + state_south_dakota + state_tennessee + state_texas + state_virginia + state_washington + state_wisconsin
-    + 1''', data=df).fit().summary()
+    + 1'''
 
-print(sm.OLS.from_formula('''favor_alt_creds ~
+# note: first covid factor cut === covid_impact[T.No negative impact (or a positive impact)]
+# weak before nonlinear effects: n = 350, r2=0.430, ar2=0.312
+m2 = '''favor_alt_creds ~
     + conventional_alt_creds + favor_online_ed
-    + covid_impact + covid_ind_remote + covid_ind_fav_online
+    + covid_impact_large_negative_impact
+    + covid_ind_remote_large_degree + covid_ind_remote_slight_degree
+    + covid_ind_fav_online_large_degree + covid_ind_fav_online_moderate_degree + covid_ind_fav_online_slight_degree
     + is_manager
-    + industry_education + industry_energy + industry_finance_investment_or_accounting + industry_health + industry_information_technology + industry_manufacturing + industry_military + industry_other + industry_real_estate + industry_retail + industry_transportation
-    + age_18_29 + age_30_44 + age_45_60
+    + industry_health + industry_information_technology + industry_manufacturing + industry_other + industry_real_estate + industry_retail
+    + age_18_29 + age_30_44
     + education_high_school_diploma + education_obtained_non_doctoral_graduate_degree + education_obtained_undergraduate_degree + education_obtained_a_doctoral_degree + education_some_college
-    + gender_male + gender_other
-    + ethnicity_black_or_african_american + ethnicity_hispanic + ethnicity_other + ethnicity_white_caucasian
+    + gender_other
+    + ethnicity_hispanic + ethnicity_other + ethnicity_white_caucasian
     + income_0_9999 + income_10000_24999 + income_100000_124999 + income_125000_149999 + income_150000_174999 + income_175000_199999 + income_200000+ + income_25000_49999 + income_50000_74999 + income_75000_99999
-    + state_arizona + state_arkansas + state_california + state_colorado + state_connecticut + state_florida + state_georgia + state_hawaii + state_idaho + state_illinois + state_indiana + state_iowa + state_kentucky + state_maryland + state_massachusetts + state_michigan + state_minnesota + state_mississippi + state_missouri + state_nebraska + state_nevada + state_new_jersey + state_new_mexico + state_north_carolina + state_north_dakota + state_ohio + state_oregon + state_pennsylvania + state_south_carolina + state_tennessee + state_virginia + state_washington + state_wisconsin
-    + 1''', data=df).fit().summary())
+    + state_arizona + state_california + state_colorado + state_florida + state_georgia + state_hawaii + state_idaho + state_illinois + state_iowa + state_kentucky + state_maryland + state_michigan + state_mississippi + state_missouri + state_nevada + state_north_carolina + state_ohio + state_oregon + state_pennsylvania + state_south_carolina + state_tennessee + state_virginia + state_washington + state_wisconsin
+    + 1'''
+
+# note: fell out in order: education, age, gender
+# max ar model before curvilinear effects: r2 = 0.395, ar2 = 0.328
+m3 = '''favor_alt_creds ~
+    + conventional_alt_creds + favor_online_ed
+    + covid_impact_large_negative_impact
+    + covid_ind_remote_large_degree
+    + covid_ind_fav_online_large_degree + covid_ind_fav_online_moderate_degree + covid_ind_fav_online_slight_degree
+    + is_manager
+    + industry_health + industry_information_technology + industry_manufacturing + industry_real_estate
+    + ethnicity_hispanic + ethnicity_other + ethnicity_white_caucasian
+    + income_0_9999 + income_10000_24999 + income_100000_124999 + income_125000_149999 + income_150000_174999 + income_175000_199999 + income_200000+ + income_25000_49999 + income_50000_74999 + income_75000_99999
+    + state_florida + state_georgia + state_idaho + state_iowa + state_kentucky + state_nevada + state_north_carolina + state_ohio + state_pennsylvania + state_tennessee + state_washington
+    + 1'''
+
+# quadratic factor for favor_online_ed was more important and linear effect insignificant
+# local max ar model: r2 = 0.402, ar2 = 0.333
+m4 = '''favor_alt_creds ~
+    + conventional_alt_creds
+    + favor_online_ed^2
+    + covid_impact_large_negative_impact
+    + covid_ind_remote_large_degree
+    + covid_ind_fav_online_large_degree + covid_ind_fav_online_moderate_degree + covid_ind_fav_online_slight_degree
+    + is_manager
+    + industry_health + industry_information_technology + industry_manufacturing + industry_real_estate
+    + ethnicity_hispanic + ethnicity_other + ethnicity_white_caucasian
+    + income_0_9999 + income_10000_24999 + income_100000_124999 + income_125000_149999 + income_150000_174999 + income_175000_199999 + income_200000+ + income_25000_49999 + income_50000_74999 + income_75000_99999
+    + state_florida + state_georgia + state_idaho + state_iowa + state_kentucky + state_nevada + state_north_carolina + state_ohio + state_pennsylvania + state_tennessee + state_washington
+    + 1'''
+
+# note: retains all coronavirus variables.
+# reg of interest 1
+# max ar model: r2 = 0.385, ar2 = 0.334
+m5 = '''favor_alt_creds ~
+    + conventional_alt_creds
+    + favor_online_ed^2
+    + covid_impact_large_negative_impact
+    + covid_ind_remote_large_degree
+    + covid_ind_fav_online_large_degree + covid_ind_fav_online_moderate_degree + covid_ind_fav_online_slight_degree
+    + is_manager
+    + industry_health + industry_information_technology + industry_manufacturing + industry_real_estate
+    + ethnicity_hispanic + ethnicity_other + ethnicity_white_caucasian
+    + income_10000_24999 + income_100000_124999 + income_125000_149999
+    + state_florida + state_georgia + state_idaho + state_iowa + state_kentucky + state_north_carolina + state_ohio + state_pennsylvania + state_tennessee
+    + 1'''
+
+# note: fell out in order: covid_impact, income, is_manager
+# note: covid_ind_fav_online measures uniformly negative relation - interesting and counterintuitive.
+#   can interpret as 'thos people which were most favorably moved began by being the most disfavorable and ended in being less disfavorable, but still disfavorable.
+# note: covid_ind_fav_online is robust from maxar to strong; the other two covid factors have a positive relation but smaller coefficients.
+# two strong covid factors.
+# reg of interest 2
+# strong model: r2 = 0.353, ar2 = 0.318
+m6 = '''favor_alt_creds ~
+    + conventional_alt_creds
+    + favor_online_ed^2
+    + covid_ind_remote_large_degree
+    + covid_ind_fav_online_large_degree + covid_ind_fav_online_moderate_degree + covid_ind_fav_online_slight_degree
+    + industry_health + industry_information_technology + industry_manufacturing + industry_real_estate
+    + ethnicity_hispanic + ethnicity_other + ethnicity_white_caucasian
+    + state_georgia + state_iowa + state_kentucky + state_ohio + state_pennsylvania
+    + 1'''
+
+# strong model with re-inserted covid_impact_large_negative_impact as a robustness test.
+# note: direction of effects retained/stable/robust.
+# strong model: r2 = 0.355, ar2 = 0.318
+m7 = '''favor_alt_creds ~
+    + conventional_alt_creds
+    + favor_online_ed^2
+    + covid_impact_large_negative_impact
+    + covid_ind_remote_large_degree
+    + covid_ind_fav_online_large_degree + covid_ind_fav_online_moderate_degree + covid_ind_fav_online_slight_degree
+    + industry_health + industry_information_technology + industry_manufacturing + industry_real_estate
+    + ethnicity_hispanic + ethnicity_other + ethnicity_white_caucasian
+    + state_georgia + state_iowa + state_kentucky + state_ohio + state_pennsylvania
+    + 1'''
+
+# TODO: results:
+# 1. what is effect of covid impact?
+# 2. what is the average effect of covid impact?
+# 3. what is effect of other two covid vars?
+# 4. how do interpret counterintuitive covid_ind_fav_online?
+# 5. what is the average total effect across all three vars?
+# 6. what is the average favorability?
+
+# TODO: conclusion:
+# 1. it's a bit speculative, but do we think this bump is transient or permanent? why?
+# 2. how does this relate to covid impact to school choice results?
+# 3. what open questions remain?
+#     a. collecting more samples and samples over time would allow for more confidence bc multi-specification checks, forward-testing, more factor confidence.
+#     b. identifying underlying patterns within-group for state, industry, and ethnic effects could prove useful for modelling and also instructive for policy.
+#          i. my skill gap survey dives into industry effects.
+#     c. alternative credentials are extremely diverse. a useful study would disaggregate this category and ask about alternative credentials of different kinds.
+#          i. my prestige study does this, and the skill gap study to some degree.
+# 4. are there any implications for consumers, policymakers, firms/hiring managers, or alternative education providers?
+
+print(sm.OLS.from_formula(m6, data=df).fit().summary())
 
 # # m2 = ar2 0.234
 # X2 = X1
