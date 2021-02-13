@@ -33,29 +33,25 @@ df.rename(columns={
           "To what degree has coronavirus-induced remote activity improved your favorability to remote learning (either for yourself or for other people)?": "covid_ind_fav_online",
           }, inplace=True)
 
-# get dummies ref: https://stackoverflow.com/questions/55738056/using-categorical-variables-in-statsmodels-ols-class
-manager_effects_series = pd.get_dummies(df['manager_effects'])
-manager_effects_series = manager_effects_series.drop(columns=['No']).rename(columns={
-    'Yes': 'is_manager', 'Not employed at present': 'is_unemployed'})
-
 
 def fsReformatColumnNames(sColName):
     sMassagedName = sColName.replace(',', '').replace(
-        ' ', '_').replace('-', '_').replace('>', '').lower()
+        ' ', '_').replace('-', '_').replace('>', '').replace('+', '').lower()
     sMassagedName = sMassagedName.replace('_/_', '_')
     sMassagedName = sMassagedName.replace('__', '_')
     return sMassagedName
 
 
-industry_effects_series = pd.get_dummies(
-    df['industry']).rename(fsReformatColumnNames, axis='columns')
-industry_effects_series = industry_effects_series.drop(
-    columns=['agriculture']).rename(columns={})
+# get dummies ref: https://stackoverflow.com/questions/55738056/using-categorical-variables-in-statsmodels-ols-class
+df = pd.get_dummies(df, columns=['manager_effects']).rename(
+    fsReformatColumnNames, axis='columns').drop(columns=['manager_effects_no']).rename(columns={
+        'manager_effects_yes': 'is_manager'})
 
-income_effects_series = pd.get_dummies(df['income']).rename(
-    fsReformatColumnNames, axis='columns')
-income_effects_series = income_effects_series.drop(
-    columns=['prefer_not_to_answer']).rename(columns={})
+df = pd.get_dummies(df, columns=['industry']).rename(
+    fsReformatColumnNames, axis='columns').drop(columns=['industry_agriculture'])
+
+df = pd.get_dummies(df, columns=['income']).rename(
+    fsReformatColumnNames, axis='columns').drop(columns=['income_prefer_not_to_answer'])
 
 df = pd.get_dummies(df, columns=['age']).rename(
     fsReformatColumnNames, axis='columns').drop(columns=['age_60'])
@@ -63,23 +59,15 @@ df = pd.get_dummies(df, columns=['age']).rename(
 df = pd.get_dummies(df, columns=['education']).rename(
     fsReformatColumnNames, axis='columns').drop(columns=['education_ged'])
 
-ethnicity_effects_series = pd.get_dummies(
-    df['ethnicity']).rename(fsReformatColumnNames, axis='columns')
-ethnicity_effects_series = ethnicity_effects_series.drop(
-    columns=['american_indian_or_alaskan_native']).rename(columns={})
+df = pd.get_dummies(df, columns=['ethnicity']).rename(
+    fsReformatColumnNames, axis='columns').drop(columns=['ethnicity_american_indian_or_alaskan_native'])
 
-state_effects_series = pd.get_dummies(df['state']).rename(
-    fsReformatColumnNames, axis='columns')
-state_effects_series = state_effects_series.drop(
-    columns=['alabama']).rename(columns={})
+df = pd.get_dummies(df, columns=['state']).rename(
+    fsReformatColumnNames, axis='columns').drop(columns=['state_alabama'])
 
-gender_effects_series = pd.get_dummies(df['gender']).rename(
-    fsReformatColumnNames, axis='columns')
-gender_effects_series = gender_effects_series.drop(columns=['female']).rename(columns={
-    'Male': 'is_male', 'Other': 'is_nonbinary'
-})
+df = pd.get_dummies(df, columns=['gender']).rename(
+    fsReformatColumnNames, axis='columns').drop(columns=['gender_female'])
 
-# TODO: don't forget to analyze no negative impact / positive impact effects seperately.
 covid_impact_series = pd.get_dummies(df['covid_impact'])
 covid_impact_series = covid_impact_series.drop(columns=['No negative impact (or a positive impact)']).rename(columns={
     'Large negative impact': 'covid_impact_large', 'Moderate negative impact': 'covid_impact_moderate', 'Slight negative impact': 'covid_impact_slight'})
@@ -102,16 +90,36 @@ print(" + ".join(list(df.columns)))
 print("---")
 
 # TODO: fix long regression below
+# formulas are built using Patsy. ref: https://patsy.readthedocs.io/en/latest/formulas.html
 # from_formula ref: http://www.science.smith.edu/~jcrouser/SDS293/labs/lab2-py.html
 # add constant ref: https://stackoverflow.com/questions/36409889/using-ols-from-statsmodels-formula-api-how-to-remove-constant-term
 # shorthand ref: https://stackoverflow.com/questions/5251507/how-to-succinctly-write-a-formula-with-many-variables-from-a-data-frame
 # long reg / m1: n=350, r2=0.437, ar2=0.239
-print(sm.OLS.from_formula('''favor_alt_creds ~
-    manager_effects + conventional_alt_creds + favor_online_ed + industry
+sm.OLS.from_formula('''favor_alt_creds ~
+    + conventional_alt_creds + favor_online_ed
+    + covid_impact + covid_ind_remote + covid_ind_fav_online
+    + manager_effects_not_employed_at_present + is_manager
+    + industry_education + industry_energy + industry_finance_investment_or_accounting + industry_health + industry_information_technology + industry_law + industry_manufacturing + industry_military + industry_other + industry_real_estate + industry_retail + industry_transportation
     + age_18_29 + age_30_44 + age_45_60
     + education_high_school_diploma + education_obtained_non_doctoral_graduate_degree + education_obtained_undergraduate_degree + education_obtained_a_doctoral_degree + education_some_college + education_some_graduate_school
-    + gender + ethnicity + income + state
-    + covid_impact + covid_ind_remote + covid_ind_fav_online + 1''', data=df).fit().summary())
+    + gender_male + gender_other
+    + ethnicity_asian_pacific_islander + ethnicity_black_or_african_american + ethnicity_hispanic + ethnicity_other + ethnicity_white_caucasian
+    + income_0_9999 + income_10000_24999 + income_100000_124999 + income_125000_149999 + income_150000_174999 + income_175000_199999 + income_200000+ + income_25000_49999 + income_50000_74999 + income_75000_99999
+    + state_arizona + state_arkansas + state_california + state_colorado + state_connecticut + state_delaware + state_florida + state_georgia + state_hawaii + state_idaho + state_illinois + state_indiana + state_iowa + state_kentucky + state_louisiana + state_maryland + state_massachusetts + state_michigan + state_minnesota + state_mississippi + state_missouri + state_nebraska + state_nevada + state_new_jersey + state_new_mexico + state_new_york + state_north_carolina + state_north_dakota + state_ohio + state_oklahoma + state_oregon + state_pennsylvania + state_rhode_island + state_south_carolina + state_south_dakota + state_tennessee + state_texas + state_virginia + state_washington + state_wisconsin
+    + 1''', data=df).fit().summary()
+
+print(sm.OLS.from_formula('''favor_alt_creds ~
+    + conventional_alt_creds + favor_online_ed
+    + covid_impact + covid_ind_remote + covid_ind_fav_online
+    + is_manager
+    + industry_education + industry_energy + industry_finance_investment_or_accounting + industry_health + industry_information_technology + industry_manufacturing + industry_military + industry_other + industry_real_estate + industry_retail + industry_transportation
+    + age_18_29 + age_30_44 + age_45_60
+    + education_high_school_diploma + education_obtained_non_doctoral_graduate_degree + education_obtained_undergraduate_degree + education_obtained_a_doctoral_degree + education_some_college
+    + gender_male + gender_other
+    + ethnicity_black_or_african_american + ethnicity_hispanic + ethnicity_other + ethnicity_white_caucasian
+    + income_0_9999 + income_10000_24999 + income_100000_124999 + income_125000_149999 + income_150000_174999 + income_175000_199999 + income_200000+ + income_25000_49999 + income_50000_74999 + income_75000_99999
+    + state_arizona + state_arkansas + state_california + state_colorado + state_connecticut + state_florida + state_georgia + state_hawaii + state_idaho + state_illinois + state_indiana + state_iowa + state_kentucky + state_maryland + state_massachusetts + state_michigan + state_minnesota + state_mississippi + state_missouri + state_nebraska + state_nevada + state_new_jersey + state_new_mexico + state_north_carolina + state_north_dakota + state_ohio + state_oregon + state_pennsylvania + state_south_carolina + state_tennessee + state_virginia + state_washington + state_wisconsin
+    + 1''', data=df).fit().summary())
 
 # # m2 = ar2 0.234
 # X2 = X1
