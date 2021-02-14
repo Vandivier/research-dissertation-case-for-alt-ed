@@ -195,7 +195,7 @@ m6 = '''favor_alt_creds ~
 
 # strong model with re-inserted covid_impact_large_negative_impact as a robustness test.
 # note: direction of effects retained/stable/robust.
-# strong model: r2 = 0.355, ar2 = 0.318
+# strong model with re-inserted covid_impact_large_negative_impact: r2 = 0.355, ar2 = 0.318
 m7 = '''favor_alt_creds ~
     + conventional_alt_creds
     + favor_online_ed^2
@@ -207,10 +207,25 @@ m7 = '''favor_alt_creds ~
     + state_georgia + state_iowa + state_kentucky + state_ohio + state_pennsylvania
     + 1'''
 
+# skew correction ref: https://www.annualreviews.org/doi/pdf/10.1146/annurev.publhealth.28.082206.094100
+# linear-log was insignificant independent vars, so trying log-log
+# it's more skewed and kurtosis, not less
+# log strong model (skew correction): r2 = 0.324, ar2 = 0.294
+m8 = '''np.log(favor_alt_creds) ~
+    + conventional_alt_creds
+    + np.log(favor_online_ed) + favor_online_ed + favor_online_ed^2
+    + covid_impact_large_negative_impact
+    + covid_ind_remote_large_degree
+    + covid_ind_fav_online_large_degree + covid_ind_fav_online_moderate_degree
+    + industry_real_estate
+    + ethnicity_hispanic + ethnicity_other + ethnicity_white_caucasian
+    + state_georgia + state_iowa + state_pennsylvania
+    + 1'''
+
 if __name__ == '__main__':
     # this file executed as script
     getData()
-    print(sm.OLS.from_formula(m6, data=getData()).fit().summary())
+    print(sm.OLS.from_formula(m8, data=getData()).fit().summary())
 
 # # m2 = ar2 0.234
 # X2 = X1
