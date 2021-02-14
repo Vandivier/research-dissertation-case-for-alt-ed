@@ -1,6 +1,5 @@
 
 import matplotlib.pyplot as plt
-import statsmodels.api as sm
 
 import analysis_1_vars_and_regression as GetVars
 
