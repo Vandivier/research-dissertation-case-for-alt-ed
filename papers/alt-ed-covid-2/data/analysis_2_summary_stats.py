@@ -5,27 +5,11 @@ import statsmodels.api as sm
 import analysis_1_vars_and_regression as GetVars
 
 df = GetVars.getData()
-# df = df.drop(df[df['favor_alt_creds'] < 4].index)
-
-x = []
-y = []
-
-# note: 1-10 are possible response values for favorability question
-for i in range(10):
-    currX = i + 1
-    x.append(currX)
-    y.append((df.favor_alt_creds.values == currX).sum())
 
 # ref: https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.boxplot.html
-# ref: https://matplotlib.org/3.1.1/gallery/shapes_and_collections/scatter.html
 # ref: https://matplotlib.org/3.3.3/gallery/pyplots/boxplot_demo_pyplot.html
-# plt.scatter(x, y)
 plt.boxplot(df.favor_alt_creds, vert=False)
 plt.show()
-
-
-# print(df[df.favor_alt_creds == 10].count())
-# print()
 
 # TODO: results:
 # 1. what is effect of covid impact?
