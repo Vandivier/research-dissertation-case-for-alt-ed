@@ -12,27 +12,6 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 import statsmodels.api as sm
 
-df = pd.read_csv('alt-ed-covid-2-hidden-massaged.csv')
-# ref: https://stackoverflow.com/a/51428632/3931488
-print(df.columns)
-
-df.rename(columns={
-          "Do you contribute to hiring and firing decisions at your company?": "manager_effects",
-          "For many professions, alternative credentials can qualify a person for an entry-level position.": "favor_alt_creds",
-          "It will soon become fairly conventional for high school graduates to obtain alternative credentials instead of going to college.": "conventional_alt_creds",
-          "When you add up the pros and cons for online education, it's probably a good thing for society overall.": "favor_online_ed",
-          "Which of these industries most closely matches your profession?": "industry",
-          "Gender?": "gender",
-          "Household Income?": "income",
-          "Age?": "age",
-          "What is the highest level of education you have completed?": "education",
-          "Which race/ethnicity best describes you? (Please choose only one.) ": "ethnicity",
-          "What state do you reside in?": "state",
-          "To what degree has coronavirus negatively impacted your life?": "covid_impact",
-          "To what degree has coronavirus caused you to increase your participation in remote learning, remote working, and other remote activities?": "covid_ind_remote",
-          "To what degree has coronavirus-induced remote activity improved your favorability to remote learning (either for yourself or for other people)?": "covid_ind_fav_online",
-          }, inplace=True)
-
 
 def fsReformatColumnNames(sColName):
     sMassagedName = sColName.replace(',', '').replace(
@@ -42,49 +21,75 @@ def fsReformatColumnNames(sColName):
     return sMassagedName
 
 
-# get dummies ref: https://stackoverflow.com/questions/55738056/using-categorical-variables-in-statsmodels-ols-class
-df = pd.get_dummies(df, columns=['manager_effects']).rename(
-    fsReformatColumnNames, axis='columns').drop(columns=['manager_effects_no']).rename(columns={
-        'manager_effects_yes': 'is_manager'})
+def getData():
+    df = pd.read_csv('alt-ed-covid-2-hidden-massaged.csv')
+    # ref: https://stackoverflow.com/a/51428632/3931488
+    print(df.columns)
 
-df = pd.get_dummies(df, columns=['industry']).rename(
-    fsReformatColumnNames, axis='columns').drop(columns=['industry_agriculture'])
+    df.rename(columns={
+        "Do you contribute to hiring and firing decisions at your company?": "manager_effects",
+        "For many professions, alternative credentials can qualify a person for an entry-level position.": "favor_alt_creds",
+        "It will soon become fairly conventional for high school graduates to obtain alternative credentials instead of going to college.": "conventional_alt_creds",
+        "When you add up the pros and cons for online education, it's probably a good thing for society overall.": "favor_online_ed",
+        "Which of these industries most closely matches your profession?": "industry",
+        "Gender?": "gender",
+        "Household Income?": "income",
+        "Age?": "age",
+        "What is the highest level of education you have completed?": "education",
+        "Which race/ethnicity best describes you? (Please choose only one.) ": "ethnicity",
+        "What state do you reside in?": "state",
+        "To what degree has coronavirus negatively impacted your life?": "covid_impact",
+        "To what degree has coronavirus caused you to increase your participation in remote learning, remote working, and other remote activities?": "covid_ind_remote",
+        "To what degree has coronavirus-induced remote activity improved your favorability to remote learning (either for yourself or for other people)?": "covid_ind_fav_online",
+    }, inplace=True)
 
-df = pd.get_dummies(df, columns=['income']).rename(
-    fsReformatColumnNames, axis='columns').drop(columns=['income_prefer_not_to_answer'])
+    # get dummies ref: https://stackoverflow.com/questions/55738056/using-categorical-variables-in-statsmodels-ols-class
+    df = pd.get_dummies(df, columns=['manager_effects']).rename(
+        fsReformatColumnNames, axis='columns').drop(columns=['manager_effects_no']).rename(columns={
+            'manager_effects_yes': 'is_manager'})
 
-df = pd.get_dummies(df, columns=['age']).rename(
-    fsReformatColumnNames, axis='columns').drop(columns=['age_60'])
+    df = pd.get_dummies(df, columns=['industry']).rename(
+        fsReformatColumnNames, axis='columns').drop(columns=['industry_agriculture'])
 
-df = pd.get_dummies(df, columns=['education']).rename(
-    fsReformatColumnNames, axis='columns').drop(columns=['education_ged'])
+    df = pd.get_dummies(df, columns=['income']).rename(
+        fsReformatColumnNames, axis='columns').drop(columns=['income_prefer_not_to_answer'])
 
-df = pd.get_dummies(df, columns=['ethnicity']).rename(
-    fsReformatColumnNames, axis='columns').drop(columns=['ethnicity_american_indian_or_alaskan_native'])
+    df = pd.get_dummies(df, columns=['age']).rename(
+        fsReformatColumnNames, axis='columns').drop(columns=['age_60'])
 
-df = pd.get_dummies(df, columns=['state']).rename(
-    fsReformatColumnNames, axis='columns').drop(columns=['state_alabama'])
+    df = pd.get_dummies(df, columns=['education']).rename(
+        fsReformatColumnNames, axis='columns').drop(columns=['education_ged'])
 
-df = pd.get_dummies(df, columns=['gender']).rename(
-    fsReformatColumnNames, axis='columns').drop(columns=['gender_female'])
+    df = pd.get_dummies(df, columns=['ethnicity']).rename(
+        fsReformatColumnNames, axis='columns').drop(columns=['ethnicity_american_indian_or_alaskan_native'])
 
-df = pd.get_dummies(df, columns=['covid_impact']).rename(
-    fsReformatColumnNames, axis='columns').drop(columns=['covid_impact_no_negative_impact_(or_a_positive_impact)'])
+    df = pd.get_dummies(df, columns=['state']).rename(
+        fsReformatColumnNames, axis='columns').drop(columns=['state_alabama'])
 
-df = pd.get_dummies(df, columns=['covid_ind_remote']).rename(
-    fsReformatColumnNames, axis='columns').drop(columns=['covid_ind_remote_no_increase_(or_a_decrease)'])
+    df = pd.get_dummies(df, columns=['gender']).rename(
+        fsReformatColumnNames, axis='columns').drop(columns=['gender_female'])
 
-df = pd.get_dummies(df, columns=['covid_ind_fav_online']).rename(
-    fsReformatColumnNames, axis='columns').drop(columns=['covid_ind_fav_online_no_more_favorable_(or_less_favorable)'])
+    df = pd.get_dummies(df, columns=['covid_impact']).rename(
+        fsReformatColumnNames, axis='columns').drop(columns=['covid_impact_no_negative_impact_(or_a_positive_impact)'])
 
-# help build long model formula
-print(" + ".join(list(df.columns)))
+    df = pd.get_dummies(df, columns=['covid_ind_remote']).rename(
+        fsReformatColumnNames, axis='columns').drop(columns=['covid_ind_remote_no_increase_(or_a_decrease)'])
 
-# TODO: custom vars.
-# custom vars ref: https://kaijento.github.io/2017/04/22/pandas-create-new-column-sum/
-# df['z'] = df.x + df.y
+    df = pd.get_dummies(df, columns=['covid_ind_fav_online']).rename(
+        fsReformatColumnNames, axis='columns').drop(columns=['covid_ind_fav_online_no_more_favorable_(or_less_favorable)'])
 
-print("---")
+    # help build long model formula
+    print(" + ".join(list(df.columns)))
+
+    # TODO: custom vars.
+    # custom vars ref: https://kaijento.github.io/2017/04/22/pandas-create-new-column-sum/
+    # df['z'] = df.x + df.y
+
+    print("---")
+    print("done getting data")
+    print("---")
+    return df
+
 
 # TODO: fix long regression below
 # formulas are built using Patsy. ref: https://patsy.readthedocs.io/en/latest/formulas.html
@@ -173,6 +178,8 @@ m5 = '''favor_alt_creds ~
 # note: covid_ind_fav_online measures uniformly negative relation - interesting and counterintuitive.
 #   can interpret as 'thos people which were most favorably moved began by being the most disfavorable and ended in being less disfavorable, but still disfavorable.
 # note: covid_ind_fav_online is robust from maxar to strong; the other two covid factors have a positive relation but smaller coefficients.
+# note: on the high side of insignificant skew or on the very low side of moderate skew:
+#   ref: https://www.spcforexcel.com/knowledge/basic-statistics/are-skewness-and-kurtosis-useful-statistics
 # two strong covid factors.
 # reg of interest 2
 # strong model: r2 = 0.353, ar2 = 0.318
@@ -200,26 +207,10 @@ m7 = '''favor_alt_creds ~
     + state_georgia + state_iowa + state_kentucky + state_ohio + state_pennsylvania
     + 1'''
 
-# TODO: results:
-# 1. what is effect of covid impact?
-# 2. what is the average effect of covid impact?
-# 3. what is effect of other two covid vars?
-# 4. how do interpret counterintuitive covid_ind_fav_online?
-# 5. what is the average total effect across all three vars?
-# 6. what is the average favorability?
-
-# TODO: conclusion:
-# 1. it's a bit speculative, but do we think this bump is transient or permanent? why?
-# 2. how does this relate to covid impact to school choice results?
-# 3. what open questions remain?
-#     a. collecting more samples and samples over time would allow for more confidence bc multi-specification checks, forward-testing, more factor confidence.
-#     b. identifying underlying patterns within-group for state, industry, and ethnic effects could prove useful for modelling and also instructive for policy.
-#          i. my skill gap survey dives into industry effects.
-#     c. alternative credentials are extremely diverse. a useful study would disaggregate this category and ask about alternative credentials of different kinds.
-#          i. my prestige study does this, and the skill gap study to some degree.
-# 4. are there any implications for consumers, policymakers, firms/hiring managers, or alternative education providers?
-
-print(sm.OLS.from_formula(m6, data=df).fit().summary())
+if __name__ == '__main__':
+    # this file executed as script
+    getData()
+    print(sm.OLS.from_formula(m6, data=getData()).fit().summary())
 
 # # m2 = ar2 0.234
 # X2 = X1
