@@ -2,7 +2,6 @@
 \documentclass[review]{elsarticle}
 \usepackage{lineno,hyperref}
 \modulolinenumbers[5]
-% \journal{Journal of \LaTeX\ Templates}
 \bibliographystyle{elsarticle-num}
 
 \usepackage{booktabs}
@@ -17,11 +16,7 @@
 \begin{frontmatter}
 
     \title{
-        % COVID-19 Effects on Interest in Alternative Postsecondary Learning
-        % calls for papers: Policy Analysis and Management
-        % https://www.journals.elsevier.com/journal-of-public-economics/call-for-papers/call-for-papers-the-public-economics-of-covid-19
-        % https://www.journals.elsevier.com/social-sciences-and-humanities-open/call-for-papers/coronavirus-society-call-for-papers
-        Personality and Ideological Factors of Alternative Learning Favorability
+        COVID-19 and Alternative Postsecondary Learning
         % \tnoteref{titlenotes}
     }
     % \tnotetext[titlenotes]{
@@ -30,21 +25,21 @@
     %     survey data, and data analysis source code.
     % }
 
-    %% Group authors per affiliation:
-    \author[mymainaddress]{John Vandivier} % \fnref{authorlinefootnote}}
+    \author[mymainaddress]{John Vandivier}
     \address[mymainaddress]{4400 University Dr, Fairfax, VA 22030}
     \ead{jvandivi@masonlive.gmu.edu}
     % \fntext[authorlinefootnote]{
     %     Vandivier: George Mason University,
     %     4400 University Dr, Fairfax, VA 22030,
     %     jvandivi@masonlive.gmu.edu.
-    %     The author acknowledges valuable input from Bryan Caplan at George Mason University.
     % }
 
     \begin{abstract}
-        This paper investigates an original data set to understand
-        the effects of personality and political ideology
+        This paper investigates an original data set (n=350) to understand
+        the effects of COVID-19
         on support for alternative postsecondary learning.
+
+        Coronavirus-induced forced exposure to remote
         Specifically, this study tests whether conservative support for regulation
         is observed as an effect of personality or constrained mental effort.
         The evidence indicates that mental effort does not influence support for regulation.
@@ -176,6 +171,27 @@ The expectation variable is a response from 1 to 10 to the question,
 % or 2) It's a rational response, even if the rationale follows some unobserved logical structure
 
 \section{Results}
+
+% TODO: results:
+% 1. what is effect of covid impact?
+% 2. what is the average effect of covid impact?
+% 3. what is effect of other two covid vars?
+% 4. how do interpret counterintuitive covid_ind_fav_online?
+% 5. what is the average total effect across all three vars?
+% 6. what is the average favorability?
+% 7. what about skew and kurtosis and robustness? reg of interest 3 and 4
+
+% TODO: conclusion:
+% 1. it's a bit speculative, but do we think this bump is transient or permanent? why?
+% 2. how does this relate to covid impact to school choice results?
+% 3. what open questions remain?
+%     a. collecting more samples and samples over time would allow for more confidence bc multi-specification checks, forward-testing, more factor confidence.
+%     b. identifying underlying patterns within-group for state, industry, and ethnic effects could prove useful for modelling and also instructive for policy.
+%          i. my skill gap survey dives into industry effects.
+%     c. alternative credentials are extremely diverse. a useful study would disaggregate this category and ask about alternative credentials of different kinds.
+%          i. my prestige study does this, and the skill gap study to some degree.
+% 4. are there any implications for consumers, policymakers, firms/hiring managers, or alternative education providers?
+
 
 Table \ref{tab:table_new_ols} provides selected coefficients across four models of interest.
 Selected variables emphasize representation of each category of effect,
