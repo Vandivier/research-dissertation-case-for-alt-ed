@@ -6,10 +6,8 @@ import analysis_1_vars_and_regression as GetVars
 
 df = GetVars.getData()
 
-# ref: https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.boxplot.html
-# ref: https://matplotlib.org/3.3.3/gallery/pyplots/boxplot_demo_pyplot.html
-plt.boxplot(df.favor_alt_creds, vert=False)
-plt.show()
+# note: mean 7.6, median 8.0
+print(df['favor_alt_creds'].describe())
 
 # TODO: results:
 # 1. what is effect of covid impact?
