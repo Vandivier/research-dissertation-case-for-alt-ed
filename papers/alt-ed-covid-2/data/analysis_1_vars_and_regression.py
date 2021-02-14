@@ -21,7 +21,7 @@ def fsReformatColumnNames(sColName):
     return sMassagedName
 
 
-def getData():
+def getData(dropFirstDummy=True):
     df = pd.read_csv('alt-ed-covid-2-hidden-massaged.csv')
     # ref: https://stackoverflow.com/a/51428632/3931488
     print(df.columns)
@@ -45,38 +45,44 @@ def getData():
 
     # get dummies ref: https://stackoverflow.com/questions/55738056/using-categorical-variables-in-statsmodels-ols-class
     df = pd.get_dummies(df, columns=['manager_effects']).rename(
-        fsReformatColumnNames, axis='columns').drop(columns=['manager_effects_no']).rename(columns={
+        fsReformatColumnNames, axis='columns').rename(columns={
             'manager_effects_yes': 'is_manager'})
 
     df = pd.get_dummies(df, columns=['industry']).rename(
-        fsReformatColumnNames, axis='columns').drop(columns=['industry_agriculture'])
+        fsReformatColumnNames, axis='columns')
 
     df = pd.get_dummies(df, columns=['income']).rename(
-        fsReformatColumnNames, axis='columns').drop(columns=['income_prefer_not_to_answer'])
+        fsReformatColumnNames, axis='columns')
 
     df = pd.get_dummies(df, columns=['age']).rename(
-        fsReformatColumnNames, axis='columns').drop(columns=['age_60'])
+        fsReformatColumnNames, axis='columns')
 
     df = pd.get_dummies(df, columns=['education']).rename(
-        fsReformatColumnNames, axis='columns').drop(columns=['education_ged'])
+        fsReformatColumnNames, axis='columns')
 
     df = pd.get_dummies(df, columns=['ethnicity']).rename(
-        fsReformatColumnNames, axis='columns').drop(columns=['ethnicity_american_indian_or_alaskan_native'])
+        fsReformatColumnNames, axis='columns')
 
     df = pd.get_dummies(df, columns=['state']).rename(
-        fsReformatColumnNames, axis='columns').drop(columns=['state_alabama'])
+        fsReformatColumnNames, axis='columns')
 
     df = pd.get_dummies(df, columns=['gender']).rename(
-        fsReformatColumnNames, axis='columns').drop(columns=['gender_female'])
+        fsReformatColumnNames, axis='columns')
 
     df = pd.get_dummies(df, columns=['covid_impact']).rename(
-        fsReformatColumnNames, axis='columns').drop(columns=['covid_impact_no_negative_impact_(or_a_positive_impact)'])
+        fsReformatColumnNames, axis='columns')
 
     df = pd.get_dummies(df, columns=['covid_ind_remote']).rename(
-        fsReformatColumnNames, axis='columns').drop(columns=['covid_ind_remote_no_increase_(or_a_decrease)'])
+        fsReformatColumnNames, axis='columns')
 
     df = pd.get_dummies(df, columns=['covid_ind_fav_online']).rename(
-        fsReformatColumnNames, axis='columns').drop(columns=['covid_ind_fav_online_no_more_favorable_(or_less_favorable)'])
+        fsReformatColumnNames, axis='columns')
+
+    if dropFirstDummy:
+        df.drop(columns=['manager_effects_no', 'industry_agriculture', 'income_prefer_not_to_answer',
+                         'age_60', 'education_ged', 'ethnicity_american_indian_or_alaskan_native',
+                         'state_alabama', 'gender_female', 'covid_impact_no_negative_impact_(or_a_positive_impact)',
+                         'covid_ind_remote_no_increase_(or_a_decrease)', 'covid_ind_fav_online_no_more_favorable_(or_less_favorable)'])
 
     # help build long model formula
     print(" + ".join(list(df.columns)))
@@ -89,6 +95,13 @@ def getData():
     print("done getting data")
     print("---")
     return df
+
+
+# drop out-of-quartile to reduce skew
+# it works! and kurtosis is normalized to boot
+def getDeskewedData(dropFirstDummy=True):
+    df = getData(dropFirstDummy)
+    return df.drop(df[df['favor_alt_creds'] < 4].index)
 
 
 # TODO: fix long regression below
@@ -265,7 +278,8 @@ m8 = '''np.log(favor_alt_creds) ~
     + 1'''
 
 # strong model reduced with dropped super-low responses
-# ref: `df = df.drop(df[df['favor_alt_creds'] < 4].index)` [drops 11 obs, less than 4%]
+# ref: `df = df.drop(df[df['favor_alt_creds'] < 4].index)`
+#   [drops 11 obs, less than 4%...model works well enough either way but tbh you should get more samples to study that low-response pop better]
 # reg of interest 3; covid effects insignificantly different
 # reg of interest 4; nothing changes...uncomment code below `print(sm.RLM.from_formula(m9, data=df).fit().summary())`
 # note: fell out in order: covid_impact
@@ -282,14 +296,24 @@ m9 = '''favor_alt_creds ~
     + state_georgia + state_ohio + state_pennsylvania
     + 1'''
 
+# misc model of interest
+# note: test `people are not connecting 'remote learning' and 'alternative credentials' (after correction)`
+#   by removing favor online ed factorn and watching impact on `covid_ind_fav_online`
+m10 = '''favor_alt_creds ~
+    + conventional_alt_creds
+    + covid_ind_remote_large_degree
+    + covid_ind_fav_online_large_degree + \
+        covid_ind_fav_online_moderate_degree + covid_ind_fav_online_slight_degree
+    + industry_health + industry_information_technology + \
+        industry_manufacturing
+    + ethnicity_other + ethnicity_white_caucasian
+    + state_georgia + state_ohio + state_pennsylvania
+    + 1'''
+
+# if this file executed as script
 if __name__ == '__main__':
-    # this file executed as script
-    df = getData()
-    # drop out-of-quartile to reduce skew
-    # it works! and kurtosis is normalized to boot
-    # df = df.drop(df[df['favor_alt_creds'] < 4].index)
-    print(sm.OLS.from_formula(m9, data=df).fit().summary())
-    # print(sm.RLM.from_formula(m9, data=df).fit().summary())
+    # print(sm.OLS.from_formula(m6, data=getData()).fit().summary())
+    print(sm.RLM.from_formula(m10, data=getDeskewedData()).fit().summary())
 
 # # m2 = ar2 0.234
 # X2 = X1
