@@ -99,17 +99,31 @@ def getData():
 # long reg / m1: n=350, r2=0.437, ar2=0.239
 m1 = '''favor_alt_creds ~
     + conventional_alt_creds + favor_online_ed
-    + covid_impact_large_negative_impact + covid_impact_moderate_negative_impact + covid_impact_slight_negative_impact
-    + covid_ind_remote_large_degree + covid_ind_remote_moderate_degree + covid_ind_remote_slight_degree
-    + covid_ind_fav_online_large_degree + covid_ind_fav_online_moderate_degree + covid_ind_fav_online_slight_degree
+    + covid_impact_large_negative_impact + \
+        covid_impact_moderate_negative_impact + covid_impact_slight_negative_impact
+    + covid_ind_remote_large_degree + \
+        covid_ind_remote_moderate_degree + covid_ind_remote_slight_degree
+    + covid_ind_fav_online_large_degree + \
+        covid_ind_fav_online_moderate_degree + covid_ind_fav_online_slight_degree
     + manager_effects_not_employed_at_present + is_manager
-    + industry_education + industry_energy + industry_finance_investment_or_accounting + industry_health + industry_information_technology + industry_law + industry_manufacturing + industry_military + industry_other + industry_real_estate + industry_retail + industry_transportation
+    + industry_education + industry_energy + industry_finance_investment_or_accounting + industry_health + industry_information_technology + \
+        industry_law + industry_manufacturing + industry_military + industry_other + \
+            industry_real_estate + industry_retail + industry_transportation
     + age_18_29 + age_30_44 + age_45_60
-    + education_high_school_diploma + education_obtained_non_doctoral_graduate_degree + education_obtained_undergraduate_degree + education_obtained_a_doctoral_degree + education_some_college + education_some_graduate_school
+    + education_high_school_diploma + education_obtained_non_doctoral_graduate_degree + education_obtained_undergraduate_degree + \
+        education_obtained_a_doctoral_degree + \
+            education_some_college + education_some_graduate_school
     + gender_male + gender_other
-    + ethnicity_asian_pacific_islander + ethnicity_black_or_african_american + ethnicity_hispanic + ethnicity_other + ethnicity_white_caucasian
-    + income_0_9999 + income_10000_24999 + income_100000_124999 + income_125000_149999 + income_150000_174999 + income_175000_199999 + income_200000+ + income_25000_49999 + income_50000_74999 + income_75000_99999
-    + state_arizona + state_arkansas + state_california + state_colorado + state_connecticut + state_delaware + state_florida + state_georgia + state_hawaii + state_idaho + state_illinois + state_indiana + state_iowa + state_kentucky + state_louisiana + state_maryland + state_massachusetts + state_michigan + state_minnesota + state_mississippi + state_missouri + state_nebraska + state_nevada + state_new_jersey + state_new_mexico + state_new_york + state_north_carolina + state_north_dakota + state_ohio + state_oklahoma + state_oregon + state_pennsylvania + state_rhode_island + state_south_carolina + state_south_dakota + state_tennessee + state_texas + state_virginia + state_washington + state_wisconsin
+    + ethnicity_asian_pacific_islander + ethnicity_black_or_african_american + \
+        ethnicity_hispanic + ethnicity_other + ethnicity_white_caucasian
+    + income_0_9999 + income_10000_24999 + income_100000_124999 + income_125000_149999 + income_150000_174999 + \
+        income_175000_199999 + income_200000+ + income_25000_49999 + \
+            income_50000_74999 + income_75000_99999
+    + state_arizona + state_arkansas + state_california + state_colorado + state_connecticut + state_delaware + state_florida + state_georgia + state_hawaii + state_idaho + state_illinois + state_indiana + state_iowa + state_kentucky + state_louisiana + state_maryland + state_massachusetts + state_michigan + state_minnesota + state_mississippi + state_missouri + \
+        state_nebraska + state_nevada + state_new_jersey + state_new_mexico + state_new_york + state_north_carolina + state_north_dakota + state_ohio + state_oklahoma + state_oregon + \
+            state_pennsylvania + state_rhode_island + state_south_carolina + state_south_dakota + \
+                state_tennessee + state_texas + state_virginia + \
+                    state_washington + state_wisconsin
     + 1'''
 
 # note: first covid factor cut === covid_impact[T.No negative impact (or a positive impact)]
@@ -118,15 +132,24 @@ m2 = '''favor_alt_creds ~
     + conventional_alt_creds + favor_online_ed
     + covid_impact_large_negative_impact
     + covid_ind_remote_large_degree + covid_ind_remote_slight_degree
-    + covid_ind_fav_online_large_degree + covid_ind_fav_online_moderate_degree + covid_ind_fav_online_slight_degree
+    + covid_ind_fav_online_large_degree + \
+        covid_ind_fav_online_moderate_degree + covid_ind_fav_online_slight_degree
     + is_manager
-    + industry_health + industry_information_technology + industry_manufacturing + industry_other + industry_real_estate + industry_retail
+    + industry_health + industry_information_technology + industry_manufacturing + \
+        industry_other + industry_real_estate + industry_retail
     + age_18_29 + age_30_44
-    + education_high_school_diploma + education_obtained_non_doctoral_graduate_degree + education_obtained_undergraduate_degree + education_obtained_a_doctoral_degree + education_some_college
+    + education_high_school_diploma + education_obtained_non_doctoral_graduate_degree + \
+        education_obtained_undergraduate_degree + \
+            education_obtained_a_doctoral_degree + education_some_college
     + gender_other
     + ethnicity_hispanic + ethnicity_other + ethnicity_white_caucasian
-    + income_0_9999 + income_10000_24999 + income_100000_124999 + income_125000_149999 + income_150000_174999 + income_175000_199999 + income_200000+ + income_25000_49999 + income_50000_74999 + income_75000_99999
-    + state_arizona + state_california + state_colorado + state_florida + state_georgia + state_hawaii + state_idaho + state_illinois + state_iowa + state_kentucky + state_maryland + state_michigan + state_mississippi + state_missouri + state_nevada + state_north_carolina + state_ohio + state_oregon + state_pennsylvania + state_south_carolina + state_tennessee + state_virginia + state_washington + state_wisconsin
+    + income_0_9999 + income_10000_24999 + income_100000_124999 + income_125000_149999 + income_150000_174999 + \
+        income_175000_199999 + income_200000+ + income_25000_49999 + \
+            income_50000_74999 + income_75000_99999
+    + state_arizona + state_california + state_colorado + state_florida + state_georgia + state_hawaii + state_idaho + state_illinois + state_iowa + state_kentucky + state_maryland + state_michigan + state_mississippi + \
+        state_missouri + state_nevada + state_north_carolina + state_ohio + state_oregon + state_pennsylvania + \
+            state_south_carolina + state_tennessee + \
+                state_virginia + state_washington + state_wisconsin
     + 1'''
 
 # note: fell out in order: education, age, gender
@@ -135,12 +158,18 @@ m3 = '''favor_alt_creds ~
     + conventional_alt_creds + favor_online_ed
     + covid_impact_large_negative_impact
     + covid_ind_remote_large_degree
-    + covid_ind_fav_online_large_degree + covid_ind_fav_online_moderate_degree + covid_ind_fav_online_slight_degree
+    + covid_ind_fav_online_large_degree + \
+        covid_ind_fav_online_moderate_degree + covid_ind_fav_online_slight_degree
     + is_manager
-    + industry_health + industry_information_technology + industry_manufacturing + industry_real_estate
+    + industry_health + industry_information_technology + \
+        industry_manufacturing + industry_real_estate
     + ethnicity_hispanic + ethnicity_other + ethnicity_white_caucasian
-    + income_0_9999 + income_10000_24999 + income_100000_124999 + income_125000_149999 + income_150000_174999 + income_175000_199999 + income_200000+ + income_25000_49999 + income_50000_74999 + income_75000_99999
-    + state_florida + state_georgia + state_idaho + state_iowa + state_kentucky + state_nevada + state_north_carolina + state_ohio + state_pennsylvania + state_tennessee + state_washington
+    + income_0_9999 + income_10000_24999 + income_100000_124999 + income_125000_149999 + income_150000_174999 + \
+        income_175000_199999 + income_200000+ + income_25000_49999 + \
+            income_50000_74999 + income_75000_99999
+    + state_florida + state_georgia + state_idaho + state_iowa + state_kentucky + state_nevada + \
+        state_north_carolina + state_ohio + state_pennsylvania + \
+            state_tennessee + state_washington
     + 1'''
 
 # quadratic factor for favor_online_ed was more important and linear effect insignificant
@@ -150,12 +179,18 @@ m4 = '''favor_alt_creds ~
     + favor_online_ed^2
     + covid_impact_large_negative_impact
     + covid_ind_remote_large_degree
-    + covid_ind_fav_online_large_degree + covid_ind_fav_online_moderate_degree + covid_ind_fav_online_slight_degree
+    + covid_ind_fav_online_large_degree + \
+        covid_ind_fav_online_moderate_degree + covid_ind_fav_online_slight_degree
     + is_manager
-    + industry_health + industry_information_technology + industry_manufacturing + industry_real_estate
+    + industry_health + industry_information_technology + \
+        industry_manufacturing + industry_real_estate
     + ethnicity_hispanic + ethnicity_other + ethnicity_white_caucasian
-    + income_0_9999 + income_10000_24999 + income_100000_124999 + income_125000_149999 + income_150000_174999 + income_175000_199999 + income_200000+ + income_25000_49999 + income_50000_74999 + income_75000_99999
-    + state_florida + state_georgia + state_idaho + state_iowa + state_kentucky + state_nevada + state_north_carolina + state_ohio + state_pennsylvania + state_tennessee + state_washington
+    + income_0_9999 + income_10000_24999 + income_100000_124999 + income_125000_149999 + income_150000_174999 + \
+        income_175000_199999 + income_200000+ + income_25000_49999 + \
+            income_50000_74999 + income_75000_99999
+    + state_florida + state_georgia + state_idaho + state_iowa + state_kentucky + state_nevada + \
+        state_north_carolina + state_ohio + state_pennsylvania + \
+            state_tennessee + state_washington
     + 1'''
 
 # note: retains all coronavirus variables.
@@ -166,12 +201,15 @@ m5 = '''favor_alt_creds ~
     + favor_online_ed^2
     + covid_impact_large_negative_impact
     + covid_ind_remote_large_degree
-    + covid_ind_fav_online_large_degree + covid_ind_fav_online_moderate_degree + covid_ind_fav_online_slight_degree
+    + covid_ind_fav_online_large_degree + \
+        covid_ind_fav_online_moderate_degree + covid_ind_fav_online_slight_degree
     + is_manager
-    + industry_health + industry_information_technology + industry_manufacturing + industry_real_estate
+    + industry_health + industry_information_technology + \
+        industry_manufacturing + industry_real_estate
     + ethnicity_hispanic + ethnicity_other + ethnicity_white_caucasian
     + income_10000_24999 + income_100000_124999 + income_125000_149999
-    + state_florida + state_georgia + state_idaho + state_iowa + state_kentucky + state_north_carolina + state_ohio + state_pennsylvania + state_tennessee
+    + state_florida + state_georgia + state_idaho + state_iowa + state_kentucky + \
+        state_north_carolina + state_ohio + state_pennsylvania + state_tennessee
     + 1'''
 
 # note: fell out in order: covid_impact, income, is_manager
@@ -187,8 +225,10 @@ m6 = '''favor_alt_creds ~
     + conventional_alt_creds
     + favor_online_ed^2
     + covid_ind_remote_large_degree
-    + covid_ind_fav_online_large_degree + covid_ind_fav_online_moderate_degree + covid_ind_fav_online_slight_degree
-    + industry_health + industry_information_technology + industry_manufacturing + industry_real_estate
+    + covid_ind_fav_online_large_degree + \
+        covid_ind_fav_online_moderate_degree + covid_ind_fav_online_slight_degree
+    + industry_health + industry_information_technology + \
+        industry_manufacturing + industry_real_estate
     + ethnicity_hispanic + ethnicity_other + ethnicity_white_caucasian
     + state_georgia + state_iowa + state_kentucky + state_ohio + state_pennsylvania
     + 1'''
@@ -201,8 +241,10 @@ m7 = '''favor_alt_creds ~
     + favor_online_ed^2
     + covid_impact_large_negative_impact
     + covid_ind_remote_large_degree
-    + covid_ind_fav_online_large_degree + covid_ind_fav_online_moderate_degree + covid_ind_fav_online_slight_degree
-    + industry_health + industry_information_technology + industry_manufacturing + industry_real_estate
+    + covid_ind_fav_online_large_degree + \
+        covid_ind_fav_online_moderate_degree + covid_ind_fav_online_slight_degree
+    + industry_health + industry_information_technology + \
+        industry_manufacturing + industry_real_estate
     + ethnicity_hispanic + ethnicity_other + ethnicity_white_caucasian
     + state_georgia + state_iowa + state_kentucky + state_ohio + state_pennsylvania
     + 1'''
@@ -222,10 +264,32 @@ m8 = '''np.log(favor_alt_creds) ~
     + state_georgia + state_iowa + state_pennsylvania
     + 1'''
 
+# strong model reduced with dropped super-low responses
+# ref: `df = df.drop(df[df['favor_alt_creds'] < 4].index)` [drops 11 obs, less than 4%]
+# reg of interest 3; covid effects insignificantly different
+# reg of interest 4; nothing changes...uncomment code below `print(sm.RLM.from_formula(m9, data=df).fit().summary())`
+# note: fell out in order: covid_impact
+# note: n = 339 r2 = 0.339, ar2 = 0.311
+m9 = '''favor_alt_creds ~
+    + conventional_alt_creds
+    + favor_online_ed^2
+    + covid_ind_remote_large_degree
+    + covid_ind_fav_online_large_degree + \
+        covid_ind_fav_online_moderate_degree + covid_ind_fav_online_slight_degree
+    + industry_health + industry_information_technology + \
+        industry_manufacturing
+    + ethnicity_other + ethnicity_white_caucasian
+    + state_georgia + state_ohio + state_pennsylvania
+    + 1'''
+
 if __name__ == '__main__':
     # this file executed as script
-    getData()
-    print(sm.OLS.from_formula(m8, data=getData()).fit().summary())
+    df = getData()
+    # drop out-of-quartile to reduce skew
+    # it works! and kurtosis is normalized to boot
+    # df = df.drop(df[df['favor_alt_creds'] < 4].index)
+    print(sm.OLS.from_formula(m9, data=df).fit().summary())
+    # print(sm.RLM.from_formula(m9, data=df).fit().summary())
 
 # # m2 = ar2 0.234
 # X2 = X1
