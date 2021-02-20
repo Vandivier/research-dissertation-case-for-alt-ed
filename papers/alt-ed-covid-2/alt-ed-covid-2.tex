@@ -70,7 +70,7 @@ Traditional credentials include a high school diploma or an accredited degree fr
 Many alternative credentials are obtained as a result of education that involves a substantial component of remote learning.
 This study tests the hypothesis that the impact of coronavirus is associated with increased favorability toward alternative credentials.
 % This study also examines whether coronavirus-induced remote activity is associated with favorability to alternative credentials.
-This study does find significant evidence in favor of that hypothesis, but there are several interesting caveats.
+Results favor the hypothesis, with a few interesting caveats.
 
 There are three theoretical reasons to suppose that a pandemic would make alternative postsecondary credentials more attractive.
 The first is that a pandemic would induce increased remote learning.
@@ -134,95 +134,45 @@ There are already several papers examining the impact of coronavirus on the educ
 These papers focus on education from kindergarten through high school,
 but it is reasonable to expect postsecondary education to be impacted in a similar way.
 
-% TODO: cite four papers
+% TODO: cite four papers and show how they relate
 
-This paper derives a hyp
+\section{Description of Data and Methodology}
 
-Education economics has sought to explain favorability to alternative education.
-One paradoxical result is that conservatives favor accredited education\cite{vandivier2020preliminary}.
-The result holds after correcting for status quo bias, religiosity, standard controls, and other factors.
-% That is in addition to standard controls for age, income, ethnicity, gender, and more.
-This paper hypothesizes that the paradox is a case of non-logical survey response and omitted variable bias.
-This paper seeks to resolve the paradox by introducing new controls.
-Specifically, this paper hypothesizes that after correcting for personality and mental effort,
-conservatism will not be negatively related to support for alternative education.
-Opposite expectation,
-conservative support for alternative learning is amplified,
-not attenuated,
-in a multiple regression with factors of personality.
-Important mental effort effects are not identified.
+This paper uses an original set of response data (n = 350) obtained through the administration of an online questionnaire.
+This cross-sectional data was obtained at the beginning of February in 2021.
+Respondents are United States citizens at or over the age of eighteen.
+The Amazon Mechanical Turk platform was used to recruit qualified participants.
 
-% This paper follows prior survey method closely, then adds new controls.
-% Controls are added for personality and mental effort.
-Grit and Big Five personality traits are captured as measures of personality.
-Survey completion time is used as a proxy of mental effort and intelligence.
-% survey completion time could reflect time value or intelligence, but it can simultaneously proxy mental effort too.
-% Survey respondents have unobserved opportunity costs of time.
+% TODO: footnote that the python code for analysis and visualization is open source, although the data is confidential as requested by a relevant regulatory body.
+Responses are investigated using least squares multiple regression.
+Appendix A contains the exact wording and response options for each question.
+Appendix A also contains the wording for a priming message presented at the start of the survey.
+This message lays out the definition of alternative credentials for the purposes of this study.
+The message also provides several concrete examples, including "a Certified Project Manager certification,
+a portfolio of work, a Khan Academy profile, or a Nanodegree from Udacity."
 
-In a behavioral approach, constrained mental effort is associated with classically inefficient results.
-With respect to such results, this paper prefers the label of non-logical to irrational.
-This amounts to a boundedly rational explanation\cite{candela2016vilfredo}.
+The questionnaire is composed of fourteen questions.
+There is one for the dependent variable of interest, favorability,
+one for the independent variable of interest, coronavirus impact,
+ten control factors,
+and two questions on causality.
 
-Risk aversion is a key theoretical reason to control for personality and mental effort.
-Conservatism is an aggregate symbol that reflects many concerns\cite{hill1997liberal}.
-High levels of risk aversion among conservatives are one such concern of economic importance\cite{perhac1996does}.
-Personality relates directly to conservative identification\cite{chirumbolo2010personality} and also to risk tolerance.
-% Risk aversion presents a plausible claim to omitted variable bias in prior analysis.
+The variables of interest,
+causality questions,
+and two control variables are Likert-type responses.
+% TODO: which are continuous vs categorical
+\footnote{
+    It is an accepted practice to treat Likert-type responses as either categorical or continuous for regression analysis.
+    Jaccard and Wan provide support for continuous analysis of Likert-type data.
+    They note that severe departures from the assumptions on cardinality "do not seem to affect Type I and Type II errors dramatically,"
+    particularly when the Likert scale is five or more points\cite{jaccard1996lisrel}.
+    This paper treats responses on a 10-point scale as continuous.
+    This paper treats responses on a 4-point scale as categorical.
+}.
 
-Conservatives oppose regulation as a matter of ideological principle\cite{teghtsoonian1993neo}.
-Decisioning on ideological principle, however, may tend to occur with high mental effort.
-Under conditions of low mental effort, risk aversion may dominate in the conservative thought process.
-These hypothetical conditions explain the response in favor of accreditation on the part of a conservative.
-This paper seeks to test whether such hypothetical conditions exist in the real world.
-% From a psychological perspective, conservatives exhibit high levels of risk aversion.
-% From an economic-cognitive perspective, conservatives exhibit high risk aversion and also favorability to market solutions.
-% Risk aversion may dominate when a conservative exerts low mental effort, while market preference may dominate with high mental effort.
-
-% One way to solve the issue is to appeal to status quo bias.
-% Conservative bias towards the status quo is documented in the literature\cite{eidelman2012bias}.
-% With respect to alternative credentials, status quo bias opposes deregulation.
-% This is not inconsistent with an explanation from personality.
-% Status quo bias appears similar to a low degree of oppenness.
-% Similarly, progressive support for alternative credentials may be explained by high openness.
-% If personality effects dominate ideological effects, the contradiction is resolved in Kahnamen-like fashion\cite{kahneman2011thinking}.
-% Taking a survey is a fast-paced activity which is likely to activate system 1 rather than system 2.
-% Personality effects are already known to relate importantly to political ideology.
-
-% \section{Data and Methodology}
-\section{Description of Data}
-
-This paper uses a combination of existing and original survey data.
-The survey for this paper is based on the Attitudinal Survey on Alternative Credentials\cite{dataset_vandivier}.
-% That survey follows an unbalanced panel design.
-% Certain questions are asked in every period, while other questions exist only in one or a few administrations.
-% Original observations were obtained through a new administration of that survey including two new questions.
-Original observations were obtained through a new administration of that survey with two new questions.
-Respondents were instructed to take online versions of the Big Five personality assessment and the Short Grit Scale and report their results.
-Grit is scored from 1 to 5, and Big Five traits are scored from 0 to 100.
-See Appendix A for the wording of each question, with possible responses.
-% The data set is an unbalanced panel, although time effects were insignificant in this analysis.
-% Maybe AI is an inefficient measure of status quo bias
-% that would indicate that AI is more conventional than alternative education
-% this seems hard to defend
-
-Survey data is investigated using multiple regression.
-The dataset includes 2175 observations, but 201 samples are relevant in the preferred model.
-Personality effects turn out to be important, and only 201 samples include such information.
-
-The dependent variable is favorability to alternative credentials.
-This study defines alternative credentials as those issued by a non-governmental body.
-Respondents are primed with the definition of alternative credentials.
-Appendix A contains the wording of the priming message.
-
-The first independent variable of interest is favorability to regulation.
-The inverse of this variable is taken as a measure of conservative economic preference.
-Favorability questions are rated from 1 to 10.
-The second independent variable of interest is survey completion time in minutes.
-
-Other variables include standard controls for age,
-gender, ethnicity, income, and level of education.
-Employment status is reported, including whether an employed respondent is a manager.
-If employed, the industry of employment is recorded for the respondent.
+Eight of the ten control factors are categorical measures for
+for age, gender, ethnicity, income,
+level of education, employment status, industry of occupation, and state of residence.
 
 % prior work shows this is a comparatively good innovation bias proxy
 Favorability to artificial intelligence technology is observed.
@@ -257,18 +207,6 @@ The expectation variable is a response from 1 to 10 to the question,
 % 6. what is the average favorability?
 % 7. what about skew and kurtosis and robustness? reg of interest 3 and 4
 
-% TODO: conclusion:
-% 1. it's a bit speculative, but do we think this bump is transient or permanent? why?
-% 2. how does this relate to covid impact to school choice results?
-% 3. what open questions remain?
-%     a. collecting more samples and samples over time would allow for more confidence bc multi-specification checks, forward-testing, more factor confidence.
-%     b. identifying underlying patterns within-group for state, industry, and ethnic effects could prove useful for modelling and also instructive for policy.
-%          i. my skill gap survey dives into industry effects.
-%     c. alternative credentials are extremely diverse. a useful study would disaggregate this category and ask about alternative credentials of different kinds.
-%          i. my prestige study does this, and the skill gap study to some degree.
-% 4. are there any implications for consumers, policymakers, firms/hiring managers, or alternative education providers?
-
-
 Table \ref{tab:table_new_ols} provides selected coefficients across four models of interest.
 Selected variables emphasize representation of each category of effect,
 significant effects,
@@ -297,12 +235,6 @@ The general concept of conservatism does seem to apply to the problem.
 The social category of conservatism also does not seem to provide an explanation.
 Correction for religiosity in 2018 shows that social conservatives tend to support alternative education.
 
-% in prior paper a medium model was preferred (2019), and so here
-% start w replication section, then new OLS results, then implied OLS results (regional effects), then special checks (interactions)
-% 2018 Model is perfectly replicated; no delta in n; so column is exempt
-% ref: tab:models in postprint-alt-ed-survey-short.tex
-% income and regional effects also important
-% time effects not important in 2020 model
 \begin{table}
     \caption{Table of Multiple Regression on Enrollment, Selected Variables}
     \resizebox{\columnwidth}{!}{
@@ -334,60 +266,19 @@ That paper found that grit was strongly related to conscientiousness ($\rho = 0.
 The consistency facet of grit showed greater independence ($\rho = 0.61$).
 The strong correlation between conscientiousness and grit is replicated in the present data ($\rho = 0.73$).
 The present data also shows a strong correlation between grit and neuroticism ($\rho = -0.66$).
-% Because grit attenuates positive familiarity bias, it may be interpreted as reflecting realism or pessimism.
-% This paper does not dispute that grit may eventually be synthesized as a facet of a Big Five trait.
-% That facet, however, does not yet exist in standard long Big Five scales, let along the short scales.
-% For modern applied purposes, and for economic survey administration, grit appears as if it has independent economic importance.
-% Despite strong correlation, grit appears as if it has independent economic importance.
-
-% Despite overlap, the substantial remaining variance may prove economically important.
-% The meta-study failed to comment on multiple regression involving both conscientiousness and grit.
-% As this study demonstrates, for applied purposes it may be useful to include both measures.
-
-% The results of this paper inflate the distinction between grit and conscientiousness.
-% Regression of conscientiousness alone on grit is about as powerful as regression of neuroticism alone on grit.
-% Either approach shows an overlap in this data near 50 percent.
-% A regression of all big five factors on grit at the individual level achieves an r-squared of 0.65.
-% Despite significant overlap, this study
-% This paper suggests that it is often
-% There is strong overlap clear overlap and also clear added value from utilization of grit in this study.
-
-% I believe the relative power of grit in the present study is explained by an anchoring effect.
-% Grit appears to be more meaningful when a particular long term objective exists.
-% In the case of the present study, respondents are anchored to the idea of education and career success.
-% One would expect even higher distinction in the so-called
-
-% Because grit and conscientiousness overlap in their subscales on work ethic,
-% this difference seems attributable to the presence of passion toward long term goals, which is a unique aspect of grit.
-
-% The paper replicates prior findings that manager preferences are insignificantly different from the population at large.
-% Industrial effects, age, income, ethnicity, status quo bias,
-
-% Ideological effects appear robust to inclusion of personality.
-% This indicates the popular correlation between regulation an alternative education is not rooted in personality,
-% and therefore appears to be ideological, if incoherently so.
-
-%
-
-% ai favorability is lower among low regulation supporters
-% highly significant and positive relation found, but total r2 is low
-% this is counterintuitive because intellectual conservatives should embrace technological advancement and the free market
-% potential solution: as a matter of personality, or Kahneman's System 1 response, conservatives may exhibit anti-innovation bias
-% raising more regulation and ai (eg techno-liberal or scientistic progressive) is associated with a reduction in alt ed cred support
-% reducing ai and reducing regulation (eg anti-innovation conservative) is associated with more support for alt ed cred (indicates ideological dominance over personality at survey time)
-% but, both of these effects are weak.
-% ideological dominance over personality is consistent with results in this paper: weak personality effects relative to ideology (2:1, without multiple regression).
-
-% in preferred model a reason not to think grit attenuates conscientiousness: eliminating the latter does not reverse the sign of the former
-
-The sign on AI favorability flips in the M-2020 specification.
-A simple regression of AI favorability on the variable of interest using the new sample maintains this relation,
-so it appears due to sampling variation rather than a specification change.
-% and yet collector effects are insignificant
-% This breaks a prior consistency across facets of conservatism, but it doesn't solve the regulation paradox
-% maybe i should avoid the discussion on AI completely...?
 
 \section{Conclusions}
+
+% TODO: conclusion:
+% 1. it's a bit speculative, but do we think this bump is transient or permanent? why?
+% 2. how does this relate to covid impact to school choice results?
+% 3. what open questions remain?
+%     a. collecting more samples and samples over time would allow for more confidence bc multi-specification checks, forward-testing, more factor confidence.
+%     b. identifying underlying patterns within-group for state, industry, and ethnic effects could prove useful for modelling and also instructive for policy.
+%          i. my skill gap survey dives into industry effects.
+%     c. alternative credentials are extremely diverse. a useful study would disaggregate this category and ask about alternative credentials of different kinds.
+%          i. my prestige study does this, and the skill gap study to some degree.
+% 4. are there any implications for consumers, policymakers, firms/hiring managers, or alternative education providers?
 
 This study introduced controls for mental effort and personality into an estimate of favorability of alternative postsecondary learning.
 The main hypothesis was that these controls would deflate an apparent paradox in conservative opposition to a market solution.
@@ -397,12 +288,6 @@ Personality factors were identified with importance and contributed to superior 
 Conscientiousness and openness were important Big Five traits.
 Grit was independently important in a multiple regression over and above conscientiousness.
 Individuals high in grit experienced weaker familiarity bias.
-% This may be seen as realism, pessimism,
-% or a gritty individual's interpretation of alternative ed as a distraction from a key goal
-
-% This paper agrees with other research which suggests that grit can be incorporated into the Big Five model.
-% This paper disagrees with research which suggests that grit can be simply ignored.
-% This paper also resists clarity that grit is better considered a facet of conscientiousness rather than neuroticism.
 
 Robustness of the pro-regulatory effect may be explained using a combination of three alternative hypotheses.
 First, the pro-regulatory effect may represent an unobserved logical structure.
@@ -432,34 +317,6 @@ but it might also be attributable in part to a recent massive social adoption of
 COVID-19 has forced massive social change to technology use.
 This may contribute to an unexpectedly rapid normalization of artificial intelligence.
 This third hypothesis need not exclude some effect from the other two.
-
-% how does this relate to hiring and firing or industry growth trends?
-% answer: personality answer: managers tend to have certain personality traits
-% We assume independence of personality and ideology, along with stability of both over time.
-% These assumptions are necessary because multiple regression of both sets of effects cannot be accomplished with the present data set.
-% We have ideological effects, which I am distinguishing from cultural effects.
-% Cultural effects include regional and ethnic effects.
-
-% Non-cultural ideological effects include religiosity,
-% christianity,
-% favorability to regulation,
-% favorability to AI (conservatism and anti-innovation bias proxy),
-% STEM employment measure (scientism proxy),
-% and whether American education is important (nationalist / anti-foreign prox)
-
-% 1. Personality matters more than a bunch of other things (time, ethnicity, industrial effects, familiarity/provider effects)
-% 2. Personality matters less than ideology (regulation favorability)
-% 3. For the purposes of this paper, grit > OCEAN and is not a synonym of conscientiousness. read conclusion food comment in basic exploration
-% personality not strong in the sense that p < 0.1, but additional sampling would likely resolve this
-% if we believe we can improve alternative education favorability through exposure, we need to attenuate those expectations due to personality interaction
-% 4. support for regulation retains positive assocation after personality correction
-% 5. is personality even related to regulation positivity? (not significantly)
-% 6. is personality interacted with familiarity? specifically, grit, conscientiousness, or openness (neuroticism irrational pessimism)
-%   grit-provider interaction is the only one that is significant, and it's negative
-%   stronger than ideological (even AI) or other personality effects
-%   the reasoning behind this isn't obvious but it may be that gritty folks are losers in the alternative education system
-
-% what did prior survey say about regional effects? they're missing now
 
 \bibliography{./BibFile}
 
