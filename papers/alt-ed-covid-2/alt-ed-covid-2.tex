@@ -135,6 +135,12 @@ These papers focus on education from kindergarten through high school,
 but it is reasonable to expect postsecondary education to be impacted in a similar way.
 
 % TODO: cite four papers and show how they relate
+% TODO: why do we care about these credentials? 1 higher quality, 2 lower price, 3 faster, 4 align to workforce needs, 5 solve for equity/equality
+% TODO: alt creds vs alt ed? signalling theory says credentials communicate value;
+%       from a modeling perspective they make alt ed concrete by demarking achievement for factor attribution
+% TODO: BLS data: "postsecondary nondegree award"
+% TODO: other orgs? saylor academy, lumina foundation, credly/acclaim, ACE gov body, (OER) open ed resources much online, 'skill gap'
+% TODO: why remote learning matters? even traditional is moving that way
 
 \section{Description of Data and Methodology}
 
@@ -147,8 +153,9 @@ The Amazon Mechanical Turk platform was used to recruit qualified participants.
 Responses are investigated using least squares multiple regression.
 Appendix A contains the exact wording and response options for each question.
 Appendix A also contains the wording for a priming message presented at the start of the survey.
-This message lays out the definition of alternative credentials for the purposes of this study.
-The message also provides several concrete examples, including "a Certified Project Manager certification,
+The priming message lays out the definition of alternative credentials for the purposes of the study.
+The message also provides several concrete examples of alternative credentials,
+including "a Certified Project Manager certification,
 a portfolio of work, a Khan Academy profile, or a Nanodegree from Udacity."
 
 The questionnaire is composed of fourteen questions.
@@ -157,10 +164,49 @@ one for the independent variable of interest, coronavirus impact,
 ten control factors,
 and two questions on causality.
 
+% TODO: cite a couple papers
+Eight of the ten control factors are common controls in the literature.
+These eight controls are categorical measures for
+for age, gender, ethnicity, income,
+level of education, employment status, industry of occupation, and state of residence.
+
+The two remaining controls are unique to this study.
+The first is expectated conventionality.
+This is question three in the appendix.
+This control is meant to explain the favorability effect attributable to the normative acceptability of alternative credentials.
+This allows the favorability effect to be interpreted along simple lines of individual favorability,
+holding constant an important side-question about the way social norms relate to individual favorability.
+% As a matter of current social norms, alternative credentials are stigmatized when treated as a substitute for the traditional degree.
+
+% TODO: maybe talk about a couple papers that say mode of instruction is related to favorability
+The second unique control is support for online education.
+This is question four in the appendix.
+This control allows an analyst to hold constant the mode of instruction when interpreting favorability to alternative credentials.
+% Mode of instruction is a bit of a red herring which is not what this study is centrally concerned with.
+% Favorability to online education creates noise in the signal of favorability to alternative credentials,
+% and this factor seperates that effect.
+% The reason isolating this noise is important is because there are two assumptions in the mind of the respondent population.
+% The first assumption is that traditional education involves in-person learning.
+% The second assumption is that alternative education typically involves remote learning.
+% Neither of these associations are held as true in the current analysis, so the introduction of this control allows
+% Alternative education often employs remote learning, but this is not always the case.
+% A respondent may still tend to associate the concepts and impute a halo effect from one to the other.
+% This control allows an analyst to seperate favorability from alternative credentials
+
+The primary interest of this study is to identify the effect or lack of effect of coronavirus on favorability.
+If an effect is found, however, an interesting question arises on the mechanism which supports that effect.
+Both unique controls and the two questions on causality support this investigation about mechanism.
+Specifically, one hypothesized mechanism is that coronavirus stimulates remote activity,
+then exposure to remote activity improves favorability to all remote activities,
+then alternative credentials improve in favorability through a normative association with remote learning.
+
 The variables of interest,
 causality questions,
-and two control variables are Likert-type responses.
-% TODO: which are continuous vs categorical
+and the two unique controls obtain Likert-type responses.
+The impact of coronavirus and the causality questions use a 4-point scale.
+Favorability and the unique controls use a 10-point scale.
+Continuous treatment of items on the 10-point scale permits curvilinear analysis,
+including investigation of interesting marginal effects
 \footnote{
     It is an accepted practice to treat Likert-type responses as either categorical or continuous for regression analysis.
     Jaccard and Wan provide support for continuous analysis of Likert-type data.
@@ -169,32 +215,6 @@ and two control variables are Likert-type responses.
     This paper treats responses on a 10-point scale as continuous.
     This paper treats responses on a 4-point scale as categorical.
 }.
-
-Eight of the ten control factors are categorical measures for
-for age, gender, ethnicity, income,
-level of education, employment status, industry of occupation, and state of residence.
-
-% prior work shows this is a comparatively good innovation bias proxy
-Favorability to artificial intelligence technology is observed.
-This is interpreted as a measure of innovation bias.
-Innovation bias is interpreted as isomorphic to inverse status quo bias.
-
-Two other important right-hand variables exist.
-Respondents are asked whether they have heard of five popular alternative learning providers.
-Familiarity is the count of confirmed known providers.
-The expectation variable is a response from 1 to 10 to the question,
-"It will soon become fairly conventional for high school graduates to obtain alternative credentials instead of going to college."
-
-% The analytical strategy of this analysis is to address the hypothesis through the partialling out of certain effects.
-%
-% We know that personality and political ideology explain each other,
-% so including for personality should partial out some or all of the political ideological effect.
-% A surprising result is that the coefficient on regulatory favorability increases when we do this,
-% and this is consistent with early regressions that corrected for more ideological variables and found an even
-% higher coefficient. It seems the effect is neither a matter of reactionary response, personality, nor political ideology.
-% What we seem to be left with is either:
-% 1) It's a non-political ideological response,
-% or 2) It's a rational response, even if the rationale follows some unobserved logical structure
 
 \section{Results}
 
