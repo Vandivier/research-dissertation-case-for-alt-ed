@@ -1,6 +1,6 @@
 clear
 
-import delimited D:\workspace\github\research-dissertation-case-for-alt-ed\papers\alt-ed-matching-effects-2\data\alt-ed-matching-effects-hidden.csv
+import delimited C:\Users\vandi\workspace\research-dissertation-case-for-alt-ed\papers\alt-ed-matching-effects-2\data\replicate-hidden-wrangled.csv
 
 tab doyoucontributetohiring, gen(_ismanager)
 tab doyouworkinastem, gen(_isstem)

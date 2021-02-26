@@ -71,7 +71,14 @@ reg aetiwo_rulebreaker _iscompanysize4 _iscompanysize8 _isduration1 _isduration2
 reg favorability _iscompanysize4 _iscompanysize8 _isduration1 _isduration2 _isduration4 _isduration5 _isindustry1 _isindustry10 _isindustry11 _isindustry2 _isindustry4 _isindustry6 _isindustry8 _ismanager1 _ismanager2 _isstate13 _isstate14 _isstate16 _isstate20 _isstate21 _isstate26 _isstate34 _isstate36 _isstate37 _isstate6 _isstate8 aetiwo_bodylanguage aetiwo_concientiousness aetiwo_customerserviceskill aetiwo_technicaljobskills rulebreakers* aetiwo_body_x_it
 reg favorability _ismanager1 _ismanager2 _isstate13 _isstate21 _isstate34 _isstate36 _isstate8 aetiwo_concientiousness aetiwo_customerserviceskill rulebreakers*
 
+* // regtocompare1
 * // re-insert aetiwo_rulebreaker to strong model, in order to tell a story (even though this effect is weak)
 * // sign is negative and p < 0.025
 * // so, it's robustly negatively signed but we don't very well know the coefficient; probably less than 2.
 reg favorability _ismanager1 _ismanager2 _isstate13 _isstate21 _isstate34 _isstate36 _isstate8 aetiwo_concientiousness aetiwo_customerserviceskill rulebreakers* aetiwo_rulebreaker
+
+* // regtocompare2 === regtocompare1 without states bc i don't feel like mapping state values
+* // r2=0.2047, ar2=0.1733, n=212, F=6.53,
+* // minFactorP={rulebreakersnormsprobablyhaveaha, t=3.67, B=0.183},
+* // maxFactorP={_ismanager1, t=0.70, B=0.591} 
+reg favorability _ismanager1 _ismanager2 aetiwo_concientiousness aetiwo_customerserviceskill rulebreakers* aetiwo_rulebreaker
