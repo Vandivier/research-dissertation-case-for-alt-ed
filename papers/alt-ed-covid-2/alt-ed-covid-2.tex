@@ -44,8 +44,9 @@
         to understand the effects of COVID-19
         on support for alternative postsecondary learning.
         Respondents are U.S. citizens over the age of 18.
-        Cross-sectional analysis using ordinary least squares (OLS) indicates that
-        individual perception of a large negative impact from coronavirus
+        Cross-sectional analysis using ordinary least squares (OLS)
+        and Iteratively Reweighted Least Squares (IRLS)
+        indicates that individual perception of a large negative impact from coronavirus
         is significantly correlated with
         higher favorability to alternative credentials.
         Some important industrial, ethnic, and state effects are also identified.
@@ -149,8 +150,22 @@ This cross-sectional data was obtained at the beginning of February in 2021.
 Respondents are United States citizens at or over the age of eighteen.
 The Amazon Mechanical Turk platform was used to recruit qualified participants.
 
-% TODO: footnote that the python code for analysis and visualization is open source, although the data is confidential as requested by a relevant regulatory body.
-Responses are investigated using least squares multiple regression.
+Responses are investigated using regression analysis and descriptive statistics including skew
+\footnote{
+    While the data for this analysis is not public, the analytical code is open-source.
+    See \url{https://github.com/Vandivier/research-dissertation-case-for-alt-ed/tree/master/papers/alt-ed-covid-2/data}
+}.
+% Mild skew was detected, so results of interest are compared with and without skew correction.
+% Adjustments for skew constrain the applicability of results.
+Regression analysis includes multiple regression of linear and curvilinear effects
+with either ordinary or robust linear modelling.
+Ordinary linear modelling uses ordinary least squares,
+and robust linear modelling (RLM) uses iteratively reweighted least squares.
+% TODO: paper showing why use a robust linear model and/or that it's a good practice to compare to OLS
+Factor coefficients across these approaches are comparable,
+but RLM does not generate a useful R-squared statistic
+for model-level comparison.
+
 Appendix A contains the exact wording and response options for each question.
 Appendix A also contains the wording for a priming message presented at the start of the survey.
 The priming message lays out the definition of alternative credentials for the purposes of the study.
@@ -218,6 +233,69 @@ including investigation of interesting marginal effects
 
 \section{Results}
 
+The median favorability response was eight out of ten.
+Figure \ref{fig:employer_driven_favorability} visualizes the distribution of responses.
+Of 350 responses, 11 responses indicate a favorability of less than four out of ten.
+Regression analysis indicates a significant and positive coronavirus impact effect,
+invariant to whether outliers are dropped.
+As a conservative interpretation,
+the magnitude of the coronavirus impact coefficient
+is not held with confidence over the outlier range.
+
+\begin{figure}[h!]
+    \centering
+    \caption{Distribution of Favorability}
+
+    \begin{tikzpicture}[element/.style={minimum width=1.75cm, minimum height=0.85cm}]
+
+    \node (n1) [above=0.25cm] {\includegraphics[width=0.7\textwidth]{./figures-and-tables/figure-1.png}};
+    \node (n2) [above=0.25cm] at ($(n1)!0.5!(n1) - (6.2, 0)$) {\textbf{Suitability}};
+    \node (n3) [above=0.25cm] at ($(n1)!0.5!(n1) - (0, 3.5)$) {\textbf{Time}};
+
+    \end{tikzpicture}
+
+    \label{fig:one}
+    \end{figure}
+
+The average response was 7.6 on a 10-point scale.
+Excluding outliers, over 96 percent of responses fall into the normal range.
+The average response in the normal range was about 7.8.
+Table \ref{tab:desc_stats} summarizes statistics about favorability,
+the direct measure of coronavirus impact,
+and the two support factors about the mechanism of coronavirus impact
+across both response ranges.
+
+\begin{table}
+    \caption{Summary Statistics for Factors of Interest}
+    \resizebox{\columnwidth}{!}{
+        \input{./figures-and-tables/table-summary-stats.tex}
+    }
+    \label{tab:desc_stats}
+\end{table}
+
+
+
+    \begin{table}
+        \caption{Table of Multiple Regressions}
+        \resizebox{\columnwidth}{!}{
+            \input{./figures-and-tables/table-regs.tex}
+        }
+        \label{tab:table_new_ols}
+    \end{table}
+    
+    \begin{table}
+        \caption{Table of Factors for Robust Linear Model}
+        \resizebox{\columnwidth}{!}{
+            \input{./figures-and-tables/table-robust-model.tex}
+        }
+        \label{tab:table_robust_reg}
+    \end{table}
+
+
+
+These responses generate a slight skew in the
+The average favorability response was about 7.8 on a scale from one to ten.
+
 % TODO: results:
 % 1. what is effect of covid impact?
 % 2. what is the average effect of covid impact?
@@ -251,14 +329,6 @@ Evidence does not indicate that conservative opposition to alternative credentia
 The general concept of conservatism does seem to apply to the problem.
 The social category of conservatism also does not seem to provide an explanation.
 Correction for religiosity in 2018 shows that social conservatives tend to support alternative education.
-
-\begin{table}
-    \caption{Table of Multiple Regression on Enrollment, Selected Variables}
-    \resizebox{\columnwidth}{!}{
-        \input{./figures-and-tables/table-regs.tex}
-    }
-    \label{tab:table_new_ols}
-\end{table}
 
 The most significant personality factor is an interaction between grit and familiarity ($p<0.005$).
 If this factor is replaced with simple grit,

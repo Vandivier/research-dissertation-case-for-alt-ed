@@ -1,12 +1,17 @@
 
 import matplotlib.pyplot as plt
 import statsmodels.stats as sm
+from scipy.stats import skew
 
 import analysis_1_vars_and_regression as GetVars
 
 df = GetVars.getDeskewedData(False)
-# m6 data gotten like:
-# df = GetVars.getData(False)
+df_skewed = GetVars.getData(False)
+
+print("favorability skew before then after skew correction")
+print(skew(df_skewed['favor_alt_creds'].describe()))
+print(skew(df['favor_alt_creds'].describe()))
+print('---')
 
 # note: m6 n = 350, mean 7.65, median 8.0
 # note: m9 n = 339, mean 7.81, median 8.0
