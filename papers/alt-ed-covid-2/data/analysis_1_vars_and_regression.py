@@ -11,6 +11,7 @@ import matplotlib.pyplot as plt  # To visualize
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 import statsmodels.api as sm
+from statsmodels.iolib.summary2 import summary_col
 
 
 def fsReformatColumnNames(sColName):
@@ -312,8 +313,31 @@ m10 = '''favor_alt_creds ~
 
 # if this file executed as script
 if __name__ == '__main__':
-    # print(sm.OLS.from_formula(m6, data=getData()).fit().summary())
-    print(sm.RLM.from_formula(m10, data=getDeskewedData()).fit().summary())
+    skewedData = getData()
+    deskewedData = getDeskewedData()
+
+    reg_maxar2 = sm.OLS.from_formula(m5, data=skewedData).fit()
+    reg_str_inserted_impact = sm.OLS.from_formula(m7, data=skewedData).fit()
+    reg_str_inserted_impact_deskewed = sm.OLS.from_formula(m7, data=deskewedData).fit()
+    reg_strong = sm.OLS.from_formula(m6, data=skewedData).fit()
+
+    robust_deskewed = sm.RLM.from_formula(m10, data=deskewedData).fit()
+
+    print(robust_deskewed.summary())
+    print('==========END NON-LATEX SUMMARY==========')
+
+    # use this file like `py [this_file] >> foo.tex` to get table source
+    for table in robust_deskewed.summary().tables:
+        print(table.as_latex_tabular())
+
+    # ref: https://stackoverflow.com/questions/23576328/any-python-library-produces-publication-style-regression-tables
+    print(summary_col([reg_maxar2,reg_str_inserted_impact,reg_str_inserted_impact_deskewed,reg_strong],
+        stars=True,float_format='%0.2f',
+        info_dict={
+            'N':lambda x: "{0:d}".format(int(x.nobs)),
+            'R2':lambda x: "{:.3f}".format(x.rsquared)
+            }
+        ).as_latex())
 
 # # m2 = ar2 0.234
 # X2 = X1

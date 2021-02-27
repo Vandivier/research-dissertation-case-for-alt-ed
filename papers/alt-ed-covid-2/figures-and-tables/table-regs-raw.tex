@@ -1,0 +1,38 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{lcccccc}
+\toprule
+                                                   & \textbf{coef} & \textbf{std err} & \textbf{t} & \textbf{P$> |$t$|$} & \textbf{[0.025} & \textbf{0.975]}  \\
+\midrule
+\textbf{Intercept}                                 &       3.4814  &        0.431     &     8.071  &         0.000        &        2.633    &        4.330     \\
+\textbf{conventional\_alt\_creds}                  &       0.4485  &        0.045     &     9.918  &         0.000        &        0.360    &        0.537     \\
+\textbf{favor\_online\_ed ^ 2}                     &       0.0993  &        0.035     &     2.843  &         0.005        &        0.031    &        0.168     \\
+\textbf{covid\_ind\_remote\_large\_degree}         &       0.5613  &        0.206     &     2.721  &         0.007        &        0.156    &        0.967     \\
+\textbf{covid\_ind\_fav\_online\_large\_degree}    &      -0.8037  &        0.309     &    -2.602  &         0.010        &       -1.411    &       -0.196     \\
+\textbf{covid\_ind\_fav\_online\_moderate\_degree} &      -0.6581  &        0.243     &    -2.711  &         0.007        &       -1.136    &       -0.181     \\
+\textbf{covid\_ind\_fav\_online\_slight\_degree}   &      -0.5347  &        0.251     &    -2.127  &         0.034        &       -1.029    &       -0.040     \\
+\textbf{industry\_health}                          &       0.5461  &        0.288     &     1.894  &         0.059        &       -0.021    &        1.113     \\
+\textbf{industry\_information\_technology}         &       0.3394  &        0.192     &     1.766  &         0.078        &       -0.039    &        0.717     \\
+\textbf{industry\_manufacturing}                   &       0.6792  &        0.294     &     2.307  &         0.022        &        0.100    &        1.258     \\
+\textbf{industry\_real\_estate}                    &       1.1427  &        0.645     &     1.770  &         0.078        &       -0.127    &        2.412     \\
+\textbf{ethnicity\_hispanic}                       &       0.7559  &        0.414     &     1.827  &         0.069        &       -0.058    &        1.570     \\
+\textbf{ethnicity\_other}                          &       1.5186  &        0.781     &     1.945  &         0.053        &       -0.017    &        3.054     \\
+\textbf{ethnicity\_white\_caucasian}               &       0.4370  &        0.180     &     2.432  &         0.016        &        0.083    &        0.791     \\
+\textbf{state\_georgia}                            &       1.2169  &        0.509     &     2.392  &         0.017        &        0.216    &        2.218     \\
+\textbf{state\_iowa}                               &      -2.6606  &        0.882     &    -3.018  &         0.003        &       -4.395    &       -0.926     \\
+\textbf{state\_kentucky}                           &      -1.2358  &        0.682     &    -1.812  &         0.071        &       -2.577    &        0.106     \\
+\textbf{state\_ohio}                               &      -1.3443  &        0.638     &    -2.108  &         0.036        &       -2.599    &       -0.090     \\
+\textbf{state\_pennsylvania}                       &      -0.9913  &        0.468     &    -2.116  &         0.035        &       -1.913    &       -0.070     \\
+\bottomrule
+\end{tabular}
+% \end{center}
+% \begin{center}
+% \begin{tabular}{lclc}
+% \toprule
+% \textbf{Omnibus:}       & 23.897 & \textbf{  Durbin-Watson:     } &    2.218  \\
+% \textbf{Prob(Omnibus):} &  0.000 & \textbf{  Jarque-Bera (JB):  } &   29.746  \\
+% \textbf{Skew:}          & -0.558 & \textbf{  Prob(JB):          } & 3.47e-07  \\
+% \textbf{Kurtosis:}      &  3.892 & \textbf{  Cond. No.          } &     124.  \\
+% \bottomrule
+% \end{tabular}
+}
