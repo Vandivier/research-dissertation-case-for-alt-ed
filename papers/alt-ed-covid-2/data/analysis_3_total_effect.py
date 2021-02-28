@@ -13,6 +13,7 @@ print(skew(df_skewed['favor_alt_creds'].describe()))
 print(skew(df['favor_alt_creds'].describe()))
 print('---')
 
+# fwiw, m6 is strong model and m9 is robust model
 # note: m6 n = 350, mean 7.65, median 8.0
 # note: m9 n = 339, mean 7.81, median 8.0
 print(df['favor_alt_creds'].describe())

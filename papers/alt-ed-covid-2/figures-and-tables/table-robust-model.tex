@@ -1,43 +1,26 @@
 {
 \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
-
-    % \begin{center}
-    % \begin{tabular}{lclc}
-    % \toprule
-    % \textbf{Dep. Variable:}  & favor\_alt\_creds & \textbf{  No. Observations:  } &    339  \\
-    % \textbf{Model:}          &        RLM        & \textbf{  Df Residuals:      } &    325  \\
-    % \textbf{Method:}         &        IRLS       & \textbf{  Df Model:          } &     13  \\
-    % \textbf{Norm:}           &       HuberT      & \textbf{                     } &         \\
-    % \textbf{Scale Est.:}     &        mad        & \textbf{                     } &         \\
-    % \textbf{Cov Type:}       &         H1        & \textbf{                     } &         \\
-    % \textbf{Date:}           &  Sat, 27 Feb 2021 & \textbf{                     } &         \\
-    % \textbf{Time:}           &      01:33:04     & \textbf{                     } &         \\
-    % \textbf{No. Iterations:} &         19        & \textbf{                     } &         \\
-    % \bottomrule
-    % \end{tabular}
-    %\caption{Robust linear Model Regression Results}
-    % \end{center}
-
-    % \begin{center}
-    \begin{tabular}{lcccccc}
+\begin{tabular}{lcccccc}
     \toprule
-                                                       & \textbf{coef} & \textbf{std err} & \textbf{z} & \textbf{P$> |$z$|$} & \textbf{[0.025} & \textbf{0.975]}  \\
+                                                    & \textbf{coef} & \textbf{std err} & \textbf{z} & \textbf{P$> |$z$|$} & \textbf{[0.025} & \textbf{0.975]} \\
     \midrule
-    \textbf{Intercept}                                 &       4.5848  &        0.360     &    12.735  &         0.000        &        3.879    &        5.290     \\
-    \textbf{conventional\_alt\_creds}                  &       0.4445  &        0.041     &    10.792  &         0.000        &        0.364    &        0.525     \\
-    \textbf{covid\_ind\_remote\_large\_degree}         &       0.5702  &        0.188     &     3.040  &         0.002        &        0.203    &        0.938     \\
-    \textbf{covid\_ind\_fav\_online\_large\_degree}    &      -0.6131  &        0.284     &    -2.159  &         0.031        &       -1.170    &       -0.056     \\
-    \textbf{covid\_ind\_fav\_online\_moderate\_degree} &      -0.7287  &        0.224     &    -3.249  &         0.001        &       -1.168    &       -0.289     \\
-    \textbf{covid\_ind\_fav\_online\_slight\_degree}   &      -0.6705  &        0.231     &    -2.898  &         0.004        &       -1.124    &       -0.217     \\
-    \textbf{industry\_health}                          &       0.6316  &        0.266     &     2.377  &         0.017        &        0.111    &        1.152     \\
-    \textbf{industry\_information\_technology}         &       0.4122  &        0.176     &     2.346  &         0.019        &        0.068    &        0.757     \\
-    \textbf{industry\_manufacturing}                   &       0.7248  &        0.272     &     2.666  &         0.008        &        0.192    &        1.258     \\
-    \textbf{ethnicity\_other}                          &       1.6102  &        0.699     &     2.302  &         0.021        &        0.239    &        2.981     \\
-    \textbf{ethnicity\_white\_caucasian}               &       0.2874  &        0.158     &     1.818  &         0.069        &       -0.022    &        0.597     \\
-    \textbf{state\_georgia}                            &       1.0125  &        0.463     &     2.188  &         0.029        &        0.105    &        1.920     \\
-    \textbf{state\_ohio}                               &      -1.1001  &        0.580     &    -1.896  &         0.058        &       -2.237    &        0.037     \\
-    \textbf{state\_pennsylvania}                       &      -0.6778  &        0.445     &    -1.525  &         0.127        &       -1.549    &        0.194     \\
+    \textbf{Favor Online Education$^2$}             & 0.1083        & 0.033            & 3.289      & 0.001               & 0.044           & 0.173           \\
+    \textbf{Expected Conventionality}               & 0.4566        & 0.042            & 10.855     & 0.000               & 0.374           & 0.539           \\
+    \textbf{Large Change to Remote Activity}        & 0.6981        & 0.192            & 3.637      & 0.000               & 0.322           & 1.074           \\
+    \textbf{Small Increase to Remote Favorability}  & -0.6117       & 0.236            & -2.595     & 0.009               & -1.074          & -0.150          \\
+    \textbf{Medium Increase to Remote Favorability} & -0.7676       & 0.228            & -3.362     & 0.001               & -1.215          & -0.320          \\
+    \textbf{Large Increase to Remote Favorability}  & -0.8345       & 0.290            & -2.874     & 0.004               & -1.404          & -0.265          \\
+    \textbf{Industry, Health}                       & 0.5969        & 0.271            & 2.205      & 0.027               & 0.066           & 1.128           \\
+    \textbf{Industry, Information Technology}       & 0.4016        & 0.180            & 2.237      & 0.025               & 0.050           & 0.754           \\
+    \textbf{Industry, Manufacturing}                & 0.7399        & 0.277            & 2.672      & 0.008               & 0.197           & 1.282           \\
+    \textbf{Ethnicity, Caucasian}                   & 0.3168        & 0.161            & 1.963      & 0.050               & 0.001           & 0.633           \\
+    \textbf{Ethnicity, Other}                       & 1.7074        & 0.724            & 2.359      & 0.018               & 0.289           & 3.126           \\
+    \textbf{State, Georgia}                         & 1.0604        & 0.479            & 2.212      & 0.027               & 0.121           & 2.000           \\
+    \textbf{State, Ohio}                            & -1.0150       & 0.601            & -1.690     & 0.091               & -2.192          & 0.162           \\
+    \textbf{State, Pennsylvania}                    & -0.8238       & 0.441            & -1.867     & 0.062               & -1.688          & 0.041           \\
+    \textbf{Intercept}                              & 3.5185        & 0.401            & 8.785      & 0.000               & 2.734           & 4.303           \\
+    \midrule
+    \textbf{N}                                      & 350           &                  &            &                     &                 &                 \\
     \bottomrule
-    \end{tabular}
-    % \end{center}
+\end{tabular}
 }

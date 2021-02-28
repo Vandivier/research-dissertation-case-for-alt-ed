@@ -321,6 +321,12 @@ m10 = '''favor_alt_creds ~
     + state_georgia + state_ohio + state_pennsylvania
     + 1'''
 
+# noobcheck...simple reg coeff should be larger in magnitude than partialled
+# compare to m5
+m11 = '''favor_alt_creds ~
+    + covid_impact_large_negative_impact
+    + 1'''
+
 # if this file executed as script
 if __name__ == '__main__':
     skewedData = getData()
@@ -332,13 +338,14 @@ if __name__ == '__main__':
         m7, data=deskewedData).fit()
     reg_strong = sm.OLS.from_formula(m6, data=skewedData).fit()
 
-    robust_deskewed = sm.RLM.from_formula(m10, data=deskewedData).fit()
+    robust = sm.RLM.from_formula(m9, data=skewedData).fit()
+    noobcheck = sm.RLM.from_formula(m11, data=skewedData).fit()
 
-    print(robust_deskewed.summary())
+    print(noobcheck.summary())
     print('==========END NON-LATEX SUMMARY==========')
 
     # use this file like `py [this_file] >> foo.tex` to get table source
-    for table in robust_deskewed.summary().tables:
+    for table in robust.summary().tables:
         print(table.as_latex_tabular())
 
     # ref: https://stackoverflow.com/questions/23576328/any-python-library-produces-publication-style-regression-tables
@@ -349,19 +356,3 @@ if __name__ == '__main__':
         'R2': lambda x: "{:.3f}".format(x.rsquared)
     }
     ).as_latex())
-
-# # m2 = ar2 0.234
-# X2 = X1
-# del X2['What state do you reside in?']
-# m2 = sm.OLS(Y, X2)
-# m2Results = m2.fit()
-# # print(m2Results.summary())
-
-# fig, axes = plt.subplots()
-# fig = sm.graphics.plot_fit(m1Results, 1, ax=axes)
-# axes.set_ylabel("Favorability")
-# axes.set_xlabel("Poverty Level")
-# axes.set_title("Linear Regression")
-# plt.show()
-
-# plt.scatter(x, y

@@ -76,20 +76,29 @@ Results favor the hypothesis, with a few interesting caveats.
 There are three theoretical reasons to suppose that a pandemic would make alternative postsecondary credentials more attractive.
 The first is that a pandemic would induce increased remote learning.
 This causes exposure, and exposure effects are generally positive on favorability.
-Secondly, alternative learning providers tend to be smaller organizations with increased market exposure and less regulation
+Secondly, alternative learning providers tend to be smaller, less regulated, and better able to adapt in the face of social change
 compared to the traditional postsecondary provider of education, the accredited university.
-As a result, alternative learning providers will adapt more quickly during a pandemic.
-Quicker adaptation will lead to a higher quality product at a lower price, and consumers are then expected to improve in favorability accordingly.
+% As a result, alternative learning providers will adapt more quickly during a pandemic.
+In the face of a pandemic, comparatively higher quality at a lower price is expected by alternative producers,
+and high comparative consumer favorability would be expected to follow.
 
-The third theory is that a pandemic is a time when normal strangeness increases across the economy.
-This would theoretically reduce any relative stigma which the alternatively educated invididual might face.
-The stigma is reduced by two mechanisms.
-First, society changes many norms during a pandemic, so the general strength of social norms is reduced.
-In this way, the general preference for traditional over alternative education is reduced.
-Secondly, consuming alternative education is specifically reasonable as a pandemic adaptation.
-During a pandemic, many of the attractions of university life are unusable,
-remote learning provides protection against becoming ill,
-and pinching pennies is more understandable than it is during times of flourishing.
+The third theory is that a pandemic is a time when normal strangeness increases across society.
+When the normal level of strangeness increases, things which were already finitely strange become relatively less strange.
+Alternative credentials are strange in some sense by construction,
+but the relative stigma associated with these credentials might decrease in a time of pandemic.
+This becomes more plausible when the connection of alternative credentials to remote activity is highlighted.
+At a time when personal contact is costly,
+remote learning becomes a better bargain,
+and the social benefits of traditional education are simultaneously diminished.
+
+% This would theoretically reduce any relative stigma which the alternatively educated invididual might face.
+% The stigma is reduced by two mechanisms.
+% First, society changes many norms during a pandemic, so the general strength of social norms is reduced.
+% In this way, the general preference for traditional over alternative education is reduced.
+% Secondly, consuming alternative education is specifically reasonable as a pandemic adaptation.
+% During a pandemic, many of the attractions of university life are unusable,
+% remote learning provides protection against becoming ill,
+% and pinching pennies is more understandable than it is during times of flourishing.
 % When an individual has such good reasons for pursuing alternative education, it becomes unreasonable to impose a stigma at hiring decision time.
 % TODO: the above is related to mitigation tactics for disabled people during interview; stigma management...idk the exact keywords look it up
 
@@ -300,13 +309,79 @@ but it is assessed against the normal range of the population, excluding outlier
     \label{tab:multiple_regs}
 \end{table}
 
+The direct effect of coronavirus appears to be weak but positive.
+The response indicating that a person has perceived a large impact from coronavirus was the only factor to appear in these models of interest.
+Notice that the large impact factor is invariant to the outlier subpopulation,
+because no negative outlier reported a large impact.
 
-Control variables exhibit some interesting effects.
+The two causality questions are significant across models.
+The coefficients range from half a point to a point, which indicates moderate importance.
+The first causality question asks whether coronavirus caused an increased degree of remote activity for the respondent.
+The coefficient on the dummy variable indicating a large coronavirus-induced increase to remote activity is positive.
+This is consistent with the hypothesis of a positive exposure effect.
+
+The second question on causality asks whether coronavirus-induced remote activity has caused an increase
+to favorability to remote learning.
+The exact wording is:
+"To what degree has coronavirus-induced remote activity improved your favorability to remote learning
+(either for yourself or for other people)?"
+As such, any response other than "none" constitutes evidence that coronavirus caused increased favorability to remote learning.
+Given that there is a positive relationship between favorability to online learning and favorability to alternative credentials,
+any response other than "none" effectively supports the hypothesized mechanism in which an exposure effect leads to support for alternative credentials.
+Referring back to Table \ref{tab:desc_stats},
+about 83.1 percent of the full population of Americans indicate a small,
+medium, or large increase to favorability of remote learning
+caused by coronavirus-induced remote activity.
+
+The observation of nonzero responses to the factor for coronavirus-induced remote learning favorability is causal evidence.
+The fact that these nonzero responses are negatively related to favorability is a non-causal association.
+This association indicates that those who gained the most in favorability also ended with less than average favorability.
+This means the greatest gainers started far below the average and ended slightly below the average,
+while those with prior high favorability did not move much higher.
+This interpretation is reinforced by referring back to the summary statistics in Table \ref{tab:desc_stats}.
+Notice that the negative outlier group has highest affirmative response with respect to both a
+medium increase to remote favorability
+and also to a large increase to remote favorability.
+The normal range, on the other hand, has the highest indication of a small increase to remote favorability.
+This makes sense given that the median response is already near the maximum response.
+
+Coronavirus-induced favorability to online education is distinct from a plain measure of favorability to online education.
+The latter is labeled Favor Online Education within Table \ref{tab:multiple_regs},
+and it is one of the two unique controls discussed in the Methodology.
+This factor was most significant when modeled as a quadratic term.
+The positive coefficient on the quadratic term can be interpreted as a positive marginal effect over the sample range.
+It is worth noting that plain favorability to online education
+and coronavirus-induced favorability to online education share a nontrivial correlation (Pearson's $r=0.303$).
+This demonstrates internal consistency among responses and it also further validates the explanation from exposure.
+
+The other unique control is expected conventionality.
+This factor is also significant, robust to specification, and important.
+Expected conventionality is moderately correlated with favorability to online education (Pearson's $r=0.445$),
+but it is uncorrelated to coronavirus-induced favorability to online education.
+This indicates that respondents do not seem to generate a greater expectation that alternative credentials will be conventional in the future
+after being exposed to coronavirus-induced remote activity.
+
+Table \ref{tab:table_robust_reg} is a table of factors for a robust linear model (RLM).
+Robust regression is useful in part to address samples in which outliers exist, so the whole sample is used.
+Because RLM enters factors in linearly, the coefficients are comparable to OLS coefficients.
+This makes the model in Table \ref{tab:table_robust_reg} useful for factor analysis as well.
+Specifically, the model in this table is a simple respecification of Model 4 from Table \ref{tab:multiple_regs} into RLM.
+The main result in this table is that none of the effects of interest are importantly different between RLM and OLS specification.
+
+\begin{table}
+    \caption{Table of Factors for Robust Linear Model}
+    \resizebox{\columnwidth}{!}{
+        \input{./figures-and-tables/table-robust-model.tex}
+    }
+    \label{tab:table_robust_reg}
+\end{table}
+
+The other control variables also exhibit some interesting effects.
 Caucasians disproportionately attend and graduate from college,
-so this group is seen by some as a guard of the traditional path to education. % TODO: citation
+so this group is somtimes seen as a guard of the traditional degree or an opponent of alternative education. % TODO: citation
 Alternative credentials are viewed as a diversity strategy,
 and minority students do benefit disproportionately from alternative learning programs. % TODO: citation
-Opposite those narratives, this analysis finds that ethnic group is associated with positive favorability.
+This analysis presents evidence that undermines those narratives by observing a significant positive correlation between favorability and caucasian ethnicity.
 
 Information Technology is a well-known bastion of alternative credentials including coding bootcamps.
 This industry is fundamentally connected to the web and is unique in the high rate of obscolescence of dated learning.
@@ -328,36 +403,6 @@ It is also interesting to note the control variables that are identified as insi
 Gender, age, and level of education had no bearing on favorability.
 This provides weak evidence against the hypotheses that older individuals
 or individuals that do have traditional degrees have a disproportionate opposition to alternative credentials.
-
-% TODO: recall from Table \ref{tab:desc_stats} when discussing 
-% A second item of note from Table \ref{tab:desc_stats} will relate
-% Notice that the Tens affirm smaller increases in favorability to remote activity compared to the negative outliers.
-% As factor analysis shows more deeply,
-% there is a counterintuitive association in which favorability of remote activity
-% is associated with a decrease in favorability to alternative credentials.
-% This relationship is opposite to the hypothesized mechanism,
-% and a more complex mechanism is revealed.
-% Most of the gains in favorability are achieved by groups which start and end with less than average favorability.
-
-
-
-
-\begin{table}
-    \caption{Table of Factors for Robust Linear Model}
-    \resizebox{\columnwidth}{!}{
-        \input{./figures-and-tables/table-robust-model.tex}
-    }
-    \label{tab:table_robust_reg}
-\end{table}
-
-% TODO: results:
-% 1. what is effect of covid impact?
-% 2. what is the average effect of covid impact?
-% 3. what is effect of other two covid vars?
-% 4. how do interpret counterintuitive covid_ind_fav_online?
-% 5. what is the average total effect across all three vars?
-% 6. what is the average favorability?
-% 7. what about skew and kurtosis and robustness? reg of interest 3 and 4
 
 \section{Conclusions}
 
