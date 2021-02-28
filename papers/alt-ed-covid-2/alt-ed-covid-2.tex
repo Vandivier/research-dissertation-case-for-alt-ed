@@ -234,36 +234,48 @@ including investigation of interesting marginal effects
 \section{Results}
 
 The median favorability response was eight out of ten.
-Figure \ref{fig:employer_driven_favorability} visualizes the distribution of responses.
+Figure \ref{fig:one} visualizes the distribution of responses.
 Of 350 responses, 11 responses indicate a favorability of less than four out of ten.
 Regression analysis indicates a significant and positive coronavirus impact effect,
 invariant to whether outliers are dropped.
-As a conservative interpretation,
-the magnitude of the coronavirus impact coefficient
+% As a conservative interpretation,
+The effect of the coronavirus impact on favorability
 is not held with confidence over the outlier range.
 
 \begin{figure}[h!]
     \centering
-    \caption{Distribution of Favorability}
-
+    \caption{Distribution of Favorability to Alternative Credentials}
     \begin{tikzpicture}[element/.style={minimum width=1.75cm, minimum height=0.85cm}]
-
-    \node (n1) [above=0.25cm] {\includegraphics[width=0.7\textwidth]{./figures-and-tables/figure-1.png}};
-    \node (n2) [above=0.25cm] at ($(n1)!0.5!(n1) - (6.2, 0)$) {\textbf{Suitability}};
-    \node (n3) [above=0.25cm] at ($(n1)!0.5!(n1) - (0, 3.5)$) {\textbf{Time}};
-
+        \node (n1) {\includegraphics[width=0.7\textwidth]{./figures-and-tables/figure-1.png}};
     \end{tikzpicture}
-
     \label{fig:one}
-    \end{figure}
+\end{figure}
 
-The average response was 7.6 on a 10-point scale.
+The average response was 7.65 on a 10-point scale.
 Excluding outliers, over 96 percent of responses fall into the normal range.
-The average response in the normal range was about 7.8.
+The average response in the normal range was about 7.81.
 Table \ref{tab:desc_stats} summarizes statistics about favorability,
 the direct measure of coronavirus impact,
-and the two support factors about the mechanism of coronavirus impact
-across both response ranges.
+and the two support factors about the mechanism of coronavirus impact.
+
+Summary statistics are given for the total population and three subpopulations.
+The subpopulations include the normal range, the outlier population, and the Tens.
+Because factors in Table \ref{tab:desc_stats} dummy variables,
+with an exception for favorability,
+the mean values for each variable can be interpreted as the proportion of the population
+that affirms the response.
+
+The Tens are those individuals that responded with a favorability of 10 to alternative credentials.
+This is not an outlier group, but they are interesting to allow a better understanding of the distribution of responses.
+These groups are in some ways similar to each other and in other ways they are importantly different.
+For example, there are no negative outliers that report a large perceived impact from coronavirus.
+In contrast, the Tens report a large perceived impact at a disproportionately high rate.
+This is important when conclusions about the American population are drawn from the discussion on factor effects.
+
+This data is consistent with external reporting that most Americans are impacted by coronavirus\cite{demographic2020},
+but it adds the wrinkle that most Americans consider the impact to be minor.
+This is another case where outliers and Tens importantly differ from the average.
+The Tens report higher coronavirus impact while the outliers cluster around a medium impact response.
 
 \begin{table}
     \caption{Summary Statistics for Factors of Interest}
@@ -273,28 +285,70 @@ across both response ranges.
     \label{tab:desc_stats}
 \end{table}
 
+Table \ref{tab:multiple_regs} provides factor coefficients for four interesting OLS models.
+Model 1 is the adjusted R-squared maximizing model.
+Model 4 is composed only of significant factors.
+Model 2 is Model 4 plus a dummy for a large coronavirus impact.
+Model 3 follows the same specification as Model 2,
+but it is assessed against the normal range of the population, excluding outliers.
+
+\begin{table}
+    \caption{Table of Multiple Regressions}
+    \resizebox{\columnwidth}{!}{
+        \input{./figures-and-tables/table-regs.tex}
+    }
+    \label{tab:multiple_regs}
+\end{table}
 
 
-    \begin{table}
-        \caption{Table of Multiple Regressions}
-        \resizebox{\columnwidth}{!}{
-            \input{./figures-and-tables/table-regs.tex}
-        }
-        \label{tab:table_new_ols}
-    \end{table}
-    
-    \begin{table}
-        \caption{Table of Factors for Robust Linear Model}
-        \resizebox{\columnwidth}{!}{
-            \input{./figures-and-tables/table-robust-model.tex}
-        }
-        \label{tab:table_robust_reg}
-    \end{table}
+Control variables exhibit some interesting effects.
+Caucasians disproportionately attend and graduate from college,
+so this group is seen by some as a guard of the traditional path to education. % TODO: citation
+Alternative credentials are viewed as a diversity strategy,
+and minority students do benefit disproportionately from alternative learning programs. % TODO: citation
+Opposite those narratives, this analysis finds that ethnic group is associated with positive favorability.
+
+Information Technology is a well-known bastion of alternative credentials including coding bootcamps.
+This industry is fundamentally connected to the web and is unique in the high rate of obscolescence of dated learning.
+It is not surprising that it is positively associated with favorability,
+but it is surprising that it comes in third place among four industries with positive and significant favorability.
+
+Health is an industry which has historically been difficult to digitize,
+and it is sometimes given as an explicit example of an industry in which alternative credentials
+might not work. % TODO: cite regulatory concerns and also cite improvements to simulation technology.
+This analysis may indicate improvements to digital learning in health,
+or changing social attitudes on whether accredited credentials are
+generally preferred for many industry positions.
+
+There are a variety of political and cultural reasons for which favorability might vary by state,
+but no obvious explanation is evidenced in the current analysis.
+Employment status was largely insignificant,
+but Model 1 hints at a weak positive effect among hiring managers.
+It is also interesting to note the control variables that are identified as insignificant.
+Gender, age, and level of education had no bearing on favorability.
+This provides weak evidence against the hypotheses that older individuals
+or individuals that do have traditional degrees have a disproportionate opposition to alternative credentials.
+
+% TODO: recall from Table \ref{tab:desc_stats} when discussing 
+% A second item of note from Table \ref{tab:desc_stats} will relate
+% Notice that the Tens affirm smaller increases in favorability to remote activity compared to the negative outliers.
+% As factor analysis shows more deeply,
+% there is a counterintuitive association in which favorability of remote activity
+% is associated with a decrease in favorability to alternative credentials.
+% This relationship is opposite to the hypothesized mechanism,
+% and a more complex mechanism is revealed.
+% Most of the gains in favorability are achieved by groups which start and end with less than average favorability.
 
 
 
-These responses generate a slight skew in the
-The average favorability response was about 7.8 on a scale from one to ten.
+
+\begin{table}
+    \caption{Table of Factors for Robust Linear Model}
+    \resizebox{\columnwidth}{!}{
+        \input{./figures-and-tables/table-robust-model.tex}
+    }
+    \label{tab:table_robust_reg}
+\end{table}
 
 % TODO: results:
 % 1. what is effect of covid impact?
@@ -304,43 +358,6 @@ The average favorability response was about 7.8 on a scale from one to ten.
 % 5. what is the average total effect across all three vars?
 % 6. what is the average favorability?
 % 7. what about skew and kurtosis and robustness? reg of interest 3 and 4
-
-Table \ref{tab:table_new_ols} provides selected coefficients across four models of interest.
-% Selected variables emphasize representation of each category of effect,
-% significant effects,
-% and variables shared across models.
-
-M-2019-2 involves a larger sample size compared to M-2019.
-Coefficient significance and direction of effect is replicated.
-Coefficient magnitude varies with a general lack of importance.
-The coefficient on being a college graduate changes notably, but it is not a significant factor.
-
-M-2020 introduces factors of personality.
-The effect of mental effort is insignificant.
-Being a college graduate is a significant and important factor in this specification.
-Including factors of personality improves total and adjusted explanatory power by about 5 percent.
-Grit, conscientiousness, and openness were important in the model.
-These factors were significant at the $p<.18$ level.
-
-Partialling out personality modifies the pro-regulatory effect in a direction opposite expectation.
-The coefficient on regulatory favorability is amplified, rather than attenuated.
-The result is significant and falls within the range of prior estimates.
-Evidence does not indicate that conservative opposition to alternative credentials is an effect of personality or constrained mental effort.
-The general concept of conservatism does seem to apply to the problem.
-The social category of conservatism also does not seem to provide an explanation.
-Correction for religiosity in 2018 shows that social conservatives tend to support alternative education.
-
-The most significant personality factor is an interaction between grit and familiarity ($p<0.005$).
-If this factor is replaced with simple grit,
-the negative direction of effect is maintained, but the significance is reduced ($p<0.17$).
-% Marginal familiarity effects also become insignificant and exhibit an unexpected negative sign in that case.
-Notice that the negative direction of effect is opposite in sign when compared with conscientiousness.
-
-Familiarity bias is usually associated with favorability.
-This bias is reproduced in work on alternative credentials,
-but the favorability response is heterogeneous by personality.
-Specifically, concurrently higher grit and familiarity yield lower favorability to alternative credentials.
-The interaction effect is not reproduced when conscientiousness is substituted for grit.
 
 \section{Conclusions}
 

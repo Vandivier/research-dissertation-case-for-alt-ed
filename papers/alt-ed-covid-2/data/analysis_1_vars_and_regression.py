@@ -105,6 +105,16 @@ def getDeskewedData(dropFirstDummy=True):
     return df.drop(df[df['favor_alt_creds'] < 4].index)
 
 
+def getOutlierData(dropFirstDummy=True):
+    df = getData(dropFirstDummy)
+    return df.drop(df[df['favor_alt_creds'] >= 4].index)
+
+
+def getTens(dropFirstDummy=True):
+    df = getData(dropFirstDummy)
+    return df.drop(df[df['favor_alt_creds'] < 10].index)
+
+
 # TODO: fix long regression below
 # formulas are built using Patsy. ref: https://patsy.readthedocs.io/en/latest/formulas.html
 # from_formula ref: http://www.science.smith.edu/~jcrouser/SDS293/labs/lab2-py.html
@@ -318,7 +328,8 @@ if __name__ == '__main__':
 
     reg_maxar2 = sm.OLS.from_formula(m5, data=skewedData).fit()
     reg_str_inserted_impact = sm.OLS.from_formula(m7, data=skewedData).fit()
-    reg_str_inserted_impact_deskewed = sm.OLS.from_formula(m7, data=deskewedData).fit()
+    reg_str_inserted_impact_deskewed = sm.OLS.from_formula(
+        m7, data=deskewedData).fit()
     reg_strong = sm.OLS.from_formula(m6, data=skewedData).fit()
 
     robust_deskewed = sm.RLM.from_formula(m10, data=deskewedData).fit()
@@ -331,13 +342,13 @@ if __name__ == '__main__':
         print(table.as_latex_tabular())
 
     # ref: https://stackoverflow.com/questions/23576328/any-python-library-produces-publication-style-regression-tables
-    print(summary_col([reg_maxar2,reg_str_inserted_impact,reg_str_inserted_impact_deskewed,reg_strong],
-        stars=True,float_format='%0.2f',
-        info_dict={
-            'N':lambda x: "{0:d}".format(int(x.nobs)),
-            'R2':lambda x: "{:.3f}".format(x.rsquared)
-            }
-        ).as_latex())
+    print(summary_col([reg_maxar2, reg_str_inserted_impact, reg_str_inserted_impact_deskewed, reg_strong],
+                      stars=True, float_format='%0.2f',
+                      info_dict={
+        'N': lambda x: "{0:d}".format(int(x.nobs)),
+        'R2': lambda x: "{:.3f}".format(x.rsquared)
+    }
+    ).as_latex())
 
 # # m2 = ar2 0.234
 # X2 = X1
