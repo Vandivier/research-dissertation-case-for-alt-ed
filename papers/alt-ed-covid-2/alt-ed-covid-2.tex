@@ -151,6 +151,11 @@ but it is reasonable to expect postsecondary education to be impacted in a simil
 % TODO: BLS data: "postsecondary nondegree award"
 % TODO: other orgs? saylor academy, lumina foundation, credly/acclaim, ACE gov body, (OER) open ed resources much online, 'skill gap'
 % TODO: why remote learning matters? even traditional is moving that way
+% TODO: why would remote learning correlate with alternative credentials? a few reasons:
+%   1. online learning is itself an early form of alternative education. It is not a traditional pedagogy.
+%   2. online learning has a historical connection with edtech;
+%      edtech is generally the perview of alternative providers precisely because change and innovation are slow at the traditional institution
+%   as an aside, the highlights again the special role of the information technology industry; edtech is a subsection of IT.
 
 \section{Description of Data and Methodology}
 
@@ -309,10 +314,18 @@ but it is assessed against the normal range of the population, excluding outlier
     \label{tab:multiple_regs}
 \end{table}
 
-The direct effect of coronavirus appears to be weak but positive.
-The response indicating that a person has perceived a large impact from coronavirus was the only factor to appear in these models of interest.
+The direct effect of coronavirus appears to be positive, but of little significance.
+The response indicating that a person has perceived a large impact from coronavirus is the only dummy
+within this categorical variable to appear in any of these models of interest.
 Notice that the large impact factor is invariant to the outlier subpopulation,
 because no negative outlier reported a large impact.
+
+In a simple regression of the large coronavirus impact dummy on favorability,
+the variable becomes more significant and important ($\beta = 0.46, p < 0.15$).
+The two questions on causality\footnote{These include questions thirteen and fourteen in Appendix A.}
+partial out the explanation from the direct measure.
+This is evidence that a coronavirus-induced remote activity exposure effect does account for most of the effect generally attributable to coronavirus.
+% This should not be taken as evidence that coronavirus as a historical event has insignificant bearing on favorability.
 
 The two causality questions are significant across models.
 The coefficients range from half a point to a point, which indicates moderate importance.
@@ -406,6 +419,54 @@ or individuals that do have traditional degrees have a disproportionate oppositi
 
 \section{Conclusions}
 
+Results indicate that coronavirus as a historical event has significantly improved American favorability to alternative credentials.
+% The effect is not direct, as if an individual severely struck by illness would immediately opens their mind to new modes of learning.
+The effect is not well-explained by the direct impact of coronavirus on an individual.
+The effect is well-explained as a positive exposure effect which results from coronavirus-induced remote activity.
+The largest gains in favorability were obtained by individuals that began and ended with less than average favorability.
+
+As to whether the increase is transient or permanent, this is a cross-sectional study with little ability to generate confident forecasts.
+A low-confidence statistical answer about whether a coin will turn up heads is to expect heads half of the time.
+Similarly, expected future favorability is between current and previous favorability.
+This amounts to weak support for the concept of a long-term new normal which settles at a favorability level in excess of the historical norm,
+but which is also a lower level than presently observed.
+
+This study indicates that the population supports alternative credentials.
+Policy recommendations that facilitate this preference include improvements to federal recognition and social access.
+Much of this work is already underway.
+Many colleges now award credit for professional experience or nontraditional education.
+Institutions like the American Council on Education (ACE)
+have facilitated this effort through programs like the current ACE Apprenticeship Pathways project
+and the now-defunct Alternative Credit Project (ACP). % TODO: cite https://www.acenet.edu/Programs-Services/Pages/Credit-Transcripts/Credit-Accepting-Institutions.aspx
+Renewal of the ACP is an example of a public-private partnership that is feasible and would improve recognition of alternative credentials.
+
+In 2012, The Heritage Foundation called for certain radical policy changes that would level the playing field between traditional and alternative educators.
+While they did not go as far as to suggest eliminating accreditation altogether,
+they did advocate for removing accreditation agencies and suggested the government should directly accredit courses rather than organizations. % TODO: cite https://www.americanprogress.org/issues/education-postsecondary/reports/2019/04/18/468840/trump-administration-undoing-college-accreditation/
+They also called for a decoupling of accreditation and federal funding.
+
+Those suggestions have yet to be implemented, but accreditation difficulty was reduced by Department of Education rule changes that
+took effect in July of 2020. % TODO: https://diverseeducation.com/article/158738/
+Further accreditation reform can incentivize competition in the university space,
+essentially causing universities to compete with alternative providers on price and quality to a greater extent.
+This would not drive support for alternative credentials directly, but improving competition and removing
+barriers to entry in higher education seem to be beneficial for the market as a whole.
+
+% The Society for Human Resource Management (SHRM) has supported policies along these lines going back at least to the Obama administration. % TODO: cite https://www.insidehighered.com/news/2015/04/09/political-pressure-builds-new-accreditation-and-aid-pathway-upstart-providers
+
+Removal of federal subsidy for higher education would do much to reduce college prices, but this is another unpopular reform.
+A second-best solution would be to open the subsidy to alternative providers.
+Section 127 of the Internal Revenue Code allows for employer educational assistance.
+Previously, such assistance consisted in paying for new accredited education.
+Under the CARES Act, this assistance was expanded to include paying down student loans which currently exist from prior accredited education.
+One small move that would improve access to alternative education would be to modify the definition of educational asssistance to included unaccredited learning.
+
+In addition to public policy changes, industry and firm policy changes facilitate adoption of alternative credentials.
+Several high-value corporations have dropped the requirement of a college degree. % TODO: cite a few
+Other companies allow particular unaccredited credentials to fulfill a college degree requirement. % TODO: cite google
+Alternative education providers have also begun providing a payment option using an income sharing agreement (ISA) rather than loans.
+The income sharing agreement improves access by eliminating the need for student payment until employment involving a minimum level of income is obtained.
+
 % TODO: conclusion:
 % 1. it's a bit speculative, but do we think this bump is transient or permanent? why?
 % 2. how does this relate to covid impact to school choice results?
@@ -416,44 +477,6 @@ or individuals that do have traditional degrees have a disproportionate oppositi
 %     c. alternative credentials are extremely diverse. a useful study would disaggregate this category and ask about alternative credentials of different kinds.
 %          i. my prestige study does this, and the skill gap study to some degree.
 % 4. are there any implications for consumers, policymakers, firms/hiring managers, or alternative education providers?
-
-This study introduced controls for mental effort and personality into an estimate of favorability of alternative postsecondary learning.
-The main hypothesis was that these controls would deflate an apparent paradox in conservative opposition to a market solution.
-Contrary to expectation, the paradoxical pro-regulatory effect was amplified with significance.
-Personality factors were identified with importance and contributed to superior model power.
-
-Conscientiousness and openness were important Big Five traits.
-Grit was independently important in a multiple regression over and above conscientiousness.
-Individuals high in grit experienced weaker familiarity bias.
-
-Robustness of the pro-regulatory effect may be explained using a combination of three alternative hypotheses.
-First, the pro-regulatory effect may represent an unobserved logical structure.
-This hypothesis makes sense of improved effect identification resulting from added controls.
-This hypothesis also makes sense of the lack of important mental effort effects.
-
-A second hypothesis is that the measure of status quo bias is ineffective.
-This explanation holds that status quo bias in education is particularly strong.
-After correcting for the status quo proxy, there could be residual status quo bias remaining in the estimate.
-
-In this study, the favorability of artificial intelligence is used as an innovation proxy.
-Low favorability is taken to indicate status quo bias.
-As artificial intelligence becomes normal,
-favorability tends to become a poor tool to distinguish innovation from the status quo.
-It seems plausible that for some respondents,
-artificial intelligence is less a deviation from the status quo
-compared to unaccredited learning.
-
-The hypothesis of proxy failure may dovetail with an explanation from an unobserved logical structure.
-That is, some conservatives may carve out education as a logical-ideological exception to general market favorability.
-
-A third hypothesis is that there is systematic variation in the sample.
-This explanation leverages an unexpected difference in the favorability to artificial intelligence
-in the current sample compared to prior periods.
-This variation can be taken as random,
-but it might also be attributable in part to a recent massive social adoption of new technologies.
-COVID-19 has forced massive social change to technology use.
-This may contribute to an unexpectedly rapid normalization of artificial intelligence.
-This third hypothesis need not exclude some effect from the other two.
 
 \bibliography{./BibFile}
 
