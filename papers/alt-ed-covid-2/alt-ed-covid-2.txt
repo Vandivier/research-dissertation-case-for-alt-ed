@@ -1,9 +1,12 @@
 
 COVID-19 and Alternative Postsecondary Learning
 
-As a result of the coronavirus pandemic, many individuals now engage in remote activities that they would otherwise not.
-While other research has assessed the impact of coronavirus on K-12 education, this paper fills a gap in the literature regarding
-the impact to professional certifications and other unaccredited postsecondary credentials.
+The coronavirus pandemic has induced an increase in remote activity.
+Prior research shows that a variety of K-12 educational practices, public preferences, policies, and outcomes
+have changed as a result of the pandemic.
+This paper extends the literature on the impact of coronavirus on education
+to solve for the lack of analysis on professional certifications
+and other unaccredited postsecondary credentials.
 This paper investigates the results of an original online questionnaire (n=350)
 to understand the effects of COVID-19
 on support for alternative postsecondary learning.
@@ -13,12 +16,12 @@ and Iteratively Reweighted Least Squares (IRLS)
 indicates that individual perception of a large negative impact from coronavirus
 is significantly correlated with
 higher favorability to alternative credentials.
-Some important industrial, ethnic, and state effects are also identified.
-Independent factors including the level of education, income, age, and gender were identified as insignificant.
+Analysis indicates that important control factors include industry, ethnicity, and state of residence.
+Age, gender, income, and level of education are insignificant.
 
 Introduction
-This study is concerned with postsecondary alternative credentials.
-This category includes professional certifications, coding bootcamps, portfolios of work, and other proof of education other than traditional credentials.
+This study is concerned with alternative postsecondary credentials.
+This category includes professional certifications, coding bootcamps, work portfolios, and other proof of education other than traditional credentials.
 Traditional credentials include a high school diploma or an accredited degree from a university.
 Many alternative credentials are obtained as a result of education that involves a substantial component of remote learning.
 This study tests the hypothesis that the impact of coronavirus is associated with increased favorability toward alternative credentials.
