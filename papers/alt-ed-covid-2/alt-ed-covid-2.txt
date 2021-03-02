@@ -1,0 +1,268 @@
+
+COVID-19 and Alternative Postsecondary Learning
+
+As a result of the coronavirus pandemic, many individuals now engage in remote activities that they would otherwise not.
+While other research has assessed the impact of coronavirus on K-12 education, this paper fills a gap in the literature regarding
+the impact to professional certifications and other unaccredited postsecondary credentials.
+This paper investigates the results of an original online questionnaire (n=350)
+to understand the effects of COVID-19
+on support for alternative postsecondary learning.
+Respondents are U.S. citizens over the age of 18.
+Cross-sectional analysis using ordinary least squares (OLS)
+and Iteratively Reweighted Least Squares (IRLS)
+indicates that individual perception of a large negative impact from coronavirus
+is significantly correlated with
+higher favorability to alternative credentials.
+Some important industrial, ethnic, and state effects are also identified.
+Independent factors including the level of education, income, age, and gender were identified as insignificant.
+
+Introduction
+This study is concerned with postsecondary alternative credentials.
+This category includes professional certifications, coding bootcamps, portfolios of work, and other proof of education other than traditional credentials.
+Traditional credentials include a high school diploma or an accredited degree from a university.
+Many alternative credentials are obtained as a result of education that involves a substantial component of remote learning.
+This study tests the hypothesis that the impact of coronavirus is associated with increased favorability toward alternative credentials.
+Results favor the hypothesis, with a few interesting caveats.
+
+There are three theoretical reasons to suppose that a pandemic would make alternative postsecondary credentials more attractive.
+The first is that a pandemic would induce increased remote learning.
+This causes exposure, and exposure effects are generally positive on favorability.
+Secondly, alternative learning providers tend to be smaller, less regulated, and better able to adapt in the face of social change
+compared to the traditional postsecondary provider of education, the accredited university.
+In the face of a pandemic, comparatively higher quality at a lower price is expected by alternative producers, and high comparative consumer favorability would be expected to follow.
+
+The third theory is that a pandemic is a time when normal strangeness increases across society.
+When the normal level of strangeness increases, things which were already finitely strange become relatively less strange.
+Alternative credentials are strange in some sense by construction, but the relative stigma associated with these credentials might decrease in a time of pandemic.
+This becomes more plausible when the connection of alternative credentials to remote activity is highlighted.
+At a time when personal contact is costly, remote learning becomes a better bargain, and the social benefits of traditional education are simultaneously diminished.
+
+While exposure to some stigma generally increases favorability, there are several special cases where it declines instead.
+It could be the case that coronavirus-induced remote learning and work are an exceptional case where decline is observed.
+This paper is valuable in part because it replaces this ambiguity with empirical evidence.
+Pandemic exposure is an interesting case of exposure because it is a harmful, unwanted, or forced exposure.
+It is not clear that coronavirus-induced exposure to remote learning and work will result in
+Remote work and learning which are taken as a result of the pandemic might be perceived negatively by association, or they might be perceived as a useful option that becomes more valuable in light of an unfortunate pandemic.
+Familiarity bias and mere-exposure effects are generally positive on favorability to some stimulus, but these exposures are generally voluntary. Unwanted exposure can generate positive or negative favorability changes, and when the exposure involves harm it tends to reduce favorability.
+Backfire, boomerang, and blowback effects are some examples of negative favorability reactions to exposure.
+One study hits remarkably close to COVID-19 pandemic relevance because it found a backfire effect in efforts to market flu vaccine usage, unintentionally resulting in reduced willingness to take the flu vaccine [1].
+Even repeated unwanted exposure to harm can eventually lead to positive favorability through as documented in the work on Stockholm syndrome.
+
+The actual effect of coronavirus could mimick a combination of the above effects.
+As a result, it is not obvious a priori whether the actual effect is positive, negative, or insignificant, and this ambiguity calls for empirical investigation.
+Individual favorability to alternative credentials is also like to vary for a variety of personal reasons which are unrelated to the pandemic.
+This paper uses multiple regression to identify the net effect of coronavirus on favorability while holding constant these other sources of variation.
+
+There are already several papers examining the impact of coronavirus on the education system.
+These papers focus on education from kindergarten through high school, but it is reasonable to expect postsecondary education to be impacted in a similar way.
+
+Description of Data and Methodology
+This paper uses an original set of response data (n = 350) obtained through the administration of an online questionnaire.
+This cross-sectional data was obtained at the beginning of February in 2021.
+Respondents are United States citizens at or over the age of eighteen.
+The Amazon Mechanical Turk platform was used to recruit qualified participants.
+
+Responses are investigated using regression analysis and descriptive statistics including skew
+While the data for this analysis is not public, the analytical code is open-source.
+See \url{https://github.com/Vandivier/research-dissertation-case-for-alt-ed/tree/master/papers/alt-ed-covid-2/data}
+Regression analysis includes multiple regression of linear and curvilinear effects
+with either ordinary or robust linear modelling.
+Ordinary linear modelling uses ordinary least squares, and robust linear modelling (RLM) uses iteratively reweighted least squares.
+Factor coefficients across these approaches are comparable, but RLM does not generate a useful R-squared statistic
+for model-level comparison.
+
+Appendix A contains the exact wording and response options for each question.
+Appendix A also contains the wording for a priming message presented at the start of the survey.
+The priming message lays out the definition of alternative credentials for the purposes of the study.
+The message also provides several concrete examples of alternative credentials, including "a Certified Project Manager certification, a portfolio of work, a Khan Academy profile, or a Nanodegree from Udacity."
+
+The questionnaire is composed of fourteen questions.
+There is one for the dependent variable of interest, favorability, one for the independent variable of interest, coronavirus impact, ten control factors, and two questions on causality.
+
+Eight of the ten control factors are common controls in the literature.
+These eight controls are categorical measures for
+for age, gender, ethnicity, income, level of education, employment status, industry of occupation, and state of residence.
+
+The two remaining controls are unique to this study.
+The first is expectated conventionality.
+This is question three in the appendix.
+This control is meant to explain the favorability effect attributable to the normative acceptability of alternative credentials.
+This allows the favorability effect to be interpreted along simple lines of individual favorability, holding constant an important side-question about the way social norms relate to individual favorability.
+
+The second unique control is support for online education.
+This is question four in the appendix.
+This control allows an analyst to hold constant the mode of instruction when interpreting favorability to alternative credentials.
+
+The primary interest of this study is to identify the effect or lack of effect of coronavirus on favorability.
+If an effect is found, however, an interesting question arises on the mechanism which supports that effect.
+Both unique controls and the two questions on causality support this investigation about mechanism.
+Specifically, one hypothesized mechanism is that coronavirus stimulates remote activity, then exposure to remote activity improves favorability to all remote activities, then alternative credentials improve in favorability through a normative association with remote learning.
+
+The variables of interest, causality questions, and the two unique controls obtain Likert-type responses.
+The impact of coronavirus and the causality questions use a 4-point scale.
+Favorability and the unique controls use a 10-point scale.
+Continuous treatment of items on the 10-point scale permits curvilinear analysis, including investigation of interesting marginal effects
+It is an accepted practice to treat Likert-type responses as either categorical or continuous for regression analysis.
+Jaccard and Wan provide support for continuous analysis of Likert-type data.
+They note that severe departures from the assumptions on cardinality "do not seem to affect Type I and Type II errors dramatically,"
+particularly when the Likert scale is five or more points.
+This paper treats responses on a 10-point scale as continuous.
+This paper treats responses on a 4-point scale as categorical.
+
+Results
+The median favorability response was eight out of ten.
+Figure \ref{fig:one} visualizes the distribution of responses.
+Of 350 responses, 11 responses indicate a favorability of less than four out of ten.
+Regression analysis indicates a significant and positive coronavirus impact effect, invariant to whether outliers are dropped.
+The effect of the coronavirus impact on favorability
+is not held with confidence over the outlier range.
+
+The average response was 7.65 on a 10-point scale.
+Excluding outliers, over 96 percent of responses fall into the normal range.
+The average response in the normal range was about 7.81.
+Table \ref{tab:desc_stats} summarizes statistics about favorability, the direct measure of coronavirus impact, and the two support factors about the mechanism of coronavirus impact.
+
+Summary statistics are given for the total population and three subpopulations.
+The subpopulations include the normal range, the outlier population, and the Tens.
+Because factors in Table \ref{tab:desc_stats} dummy variables, with an exception for favorability, the mean values for each variable can be interpreted as the proportion of the population
+that affirms the response.
+
+The Tens are those individuals that responded with a favorability of 10 to alternative credentials.
+This is not an outlier group, but they are interesting to allow a better understanding of the distribution of responses.
+These groups are in some ways similar to each other and in other ways they are importantly different.
+For example, there are no negative outliers that report a large perceived impact from coronavirus.
+In contrast, the Tens report a large perceived impact at a disproportionately high rate.
+This is important when conclusions about the American population are drawn from the discussion on factor effects.
+
+This data is consistent with external reporting that most Americans are impacted by coronavirus, but it adds the wrinkle that most Americans consider the impact to be minor.
+This is another case where outliers and Tens importantly differ from the average.
+The Tens report higher coronavirus impact while the outliers cluster around a medium impact response.
+
+Table \ref{tab:multiple_regs} provides factor coefficients for four interesting OLS models.
+Model 1 is the adjusted R-squared maximizing model.
+Model 4 is composed only of significant factors.
+Model 2 is Model 4 plus a dummy for a large coronavirus impact.
+Model 3 follows the same specification as Model 2, but it is assessed against the normal range of the population, excluding outliers.
+
+The direct effect of coronavirus appears to be positive, but of little significance.
+The response indicating that a person has perceived a large impact from coronavirus is the only dummy
+within this categorical variable to appear in any of these models of interest.
+Notice that the large impact factor is invariant to the outlier subpopulation, because no negative outlier reported a large impact.
+
+In a simple regression of the large coronavirus impact dummy on favorability, the variable becomes more significant and important ($\beta = 0.46, p < 0.15$).
+The two questions on causality\footnote{These include questions thirteen and fourteen in Appendix A.}
+partial out the explanation from the direct measure.
+This is evidence that a coronavirus-induced remote activity exposure effect does account for most of the effect generally attributable to coronavirus.
+
+The two causality questions are significant across models.
+The coefficients range from half a point to a point, which indicates moderate importance.
+The first causality question asks whether coronavirus caused an increased degree of remote activity for the respondent.
+The coefficient on the dummy variable indicating a large coronavirus-induced increase to remote activity is positive.
+This is consistent with the hypothesis of a positive exposure effect.
+
+The second question on causality asks whether coronavirus-induced remote activity has caused an increase
+to favorability to remote learning.
+The exact wording is:
+"To what degree has coronavirus-induced remote activity improved your favorability to remote learning
+(either for yourself or for other people)?"
+As such, any response other than "none" constitutes evidence that coronavirus caused increased favorability to remote learning.
+Given that there is a positive relationship between favorability to online learning and favorability to alternative credentials, any response other than "none" effectively supports the hypothesized mechanism in which an exposure effect leads to support for alternative credentials.
+Referring back to Table \ref{tab:desc_stats}, about 83.1 percent of the full population of Americans indicate a small, medium, or large increase to favorability of remote learning
+caused by coronavirus-induced remote activity.
+
+The observation of nonzero responses to the factor for coronavirus-induced remote learning favorability is causal evidence.
+The fact that these nonzero responses are negatively related to favorability is a non-causal association.
+This association indicates that those who gained the most in favorability also ended with less than average favorability.
+This means the greatest gainers started far below the average and ended slightly below the average, while those with prior high favorability did not move much higher.
+This interpretation is reinforced by referring back to the summary statistics in Table \ref{tab:desc_stats}.
+Notice that the negative outlier group has highest affirmative response with respect to both a
+medium increase to remote favorability
+and also to a large increase to remote favorability.
+The normal range, on the other hand, has the highest indication of a small increase to remote favorability.
+This makes sense given that the median response is already near the maximum response.
+
+Coronavirus-induced favorability to online education is distinct from a plain measure of favorability to online education.
+The latter is labeled Favor Online Education within Table \ref{tab:multiple_regs}, and it is one of the two unique controls discussed in the Methodology.
+This factor was most significant when modeled as a quadratic term.
+The positive coefficient on the quadratic term can be interpreted as a positive marginal effect over the sample range.
+It is worth noting that plain favorability to online education
+and coronavirus-induced favorability to online education share a nontrivial correlation (Pearson's $r=0.303$).
+This demonstrates internal consistency among responses and it also further validates the explanation from exposure.
+
+The other unique control is expected conventionality.
+This factor is also significant, robust to specification, and important.
+Expected conventionality is moderately correlated with favorability to online education (Pearson's $r=0.445$), but it is uncorrelated to coronavirus-induced favorability to online education.
+This indicates that respondents do not seem to generate a greater expectation that alternative credentials will be conventional in the future
+after being exposed to coronavirus-induced remote activity.
+
+Table \ref{tab:table_robust_reg} is a table of factors for a robust linear model (RLM).
+Robust regression is useful in part to address samples in which outliers exist, so the whole sample is used.
+Because RLM enters factors in linearly, the coefficients are comparable to OLS coefficients.
+This makes the model in Table \ref{tab:table_robust_reg} useful for factor analysis as well.
+Specifically, the model in this table is a simple respecification of Model 4 from Table \ref{tab:multiple_regs} into RLM.
+The main result in this table is that none of the effects of interest are importantly different between RLM and OLS specification.
+
+The other control variables also exhibit some interesting effects.
+Caucasians disproportionately attend and graduate from college, so this group is somtimes seen as a guard of the traditional degree or an opponent of alternative education. % TODO: citation
+Alternative credentials are viewed as a diversity strategy, and minority students do benefit disproportionately from alternative learning programs. % TODO: citation
+This analysis presents evidence that undermines those narratives by observing a significant positive correlation between favorability and caucasian ethnicity.
+
+Information Technology is a well-known bastion of alternative credentials including coding bootcamps.
+This industry is fundamentally connected to the web and is unique in the high rate of obscolescence of dated learning.
+It is not surprising that it is positively associated with favorability, but it is surprising that it comes in third place among four industries with positive and significant favorability.
+
+Health is an industry which has historically been difficult to digitize, and it is sometimes given as an explicit example of an industry in which alternative credentials
+might not work. % TODO: cite regulatory concerns and also cite improvements to simulation technology.
+This analysis may indicate improvements to digital learning in health, or changing social attitudes on whether accredited credentials are
+generally preferred for many industry positions.
+
+There are a variety of political and cultural reasons for which favorability might vary by state, but no obvious explanation is evidenced in the current analysis.
+Employment status was largely insignificant, but Model 1 hints at a weak positive effect among hiring managers.
+It is also interesting to note the control variables that are identified as insignificant.
+Gender, age, and level of education had no bearing on favorability.
+This provides weak evidence against the hypotheses that older individuals
+or individuals that do have traditional degrees have a disproportionate opposition to alternative credentials.
+
+Conclusions
+Results indicate that coronavirus as a historical event has significantly improved American favorability to alternative credentials.
+The effect is not well-explained by the direct impact of coronavirus on an individual.
+The effect is well-explained as a positive exposure effect which results from coronavirus-induced remote activity.
+The largest gains in favorability were obtained by individuals that began and ended with less than average favorability.
+
+As to whether the increase is transient or permanent, this is a cross-sectional study with little ability to generate confident forecasts.
+A low-confidence statistical answer about whether a coin will turn up heads is to expect heads half of the time.
+Similarly, expected future favorability is between current and previous favorability.
+This amounts to weak support for the concept of a long-term new normal which settles at a favorability level in excess of the historical norm, but which is also a lower level than presently observed.
+
+This study indicates that the population supports alternative credentials.
+Policy recommendations that facilitate this preference include improvements to federal recognition and social access.
+Much of this work is already underway.
+Many colleges now award credit for professional experience or nontraditional education.
+Institutions like the American Council on Education (ACE)
+have facilitated this effort through programs like the current ACE Apprenticeship Pathways project
+and the now-defunct Alternative Credit Project (ACP). % TODO: cite https://www.acenet.edu/Programs-Services/Pages/Credit-Transcripts/Credit-Accepting-Institutions.aspx
+Renewal of the ACP is an example of a public-private partnership that is feasible and would improve recognition of alternative credentials.
+
+In 2012, The Heritage Foundation called for certain radical policy changes that would level the playing field between traditional and alternative educators.
+While they did not go as far as to suggest eliminating accreditation altogether, they did advocate for removing accreditation agencies and suggested the government should directly accredit courses rather than organizations. % TODO: cite https://www.americanprogress.org/issues/education-postsecondary/reports/2019/04/18/468840/trump-administration-undoing-college-accreditation/
+They also called for a decoupling of accreditation and federal funding.
+
+Those suggestions have yet to be implemented, but accreditation difficulty was reduced by Department of Education rule changes that
+took effect in July of 2020. % TODO: https://diverseeducation.com/article/158738/
+Further accreditation reform can incentivize competition in the university space, essentially causing universities to compete with alternative providers on price and quality to a greater extent.
+This would not drive support for alternative credentials directly, but improving competition and removing
+barriers to entry in higher education seem to be beneficial for the market as a whole.
+
+Removal of federal subsidy for higher education would do much to reduce college prices, but this is another unpopular reform.
+A second-best solution would be to open the subsidy to alternative providers.
+Section 127 of the Internal Revenue Code allows for employer educational assistance.
+Previously, such assistance consisted in paying for new accredited education.
+Under the CARES Act, this assistance was expanded to include paying down student loans which currently exist from prior accredited education.
+One small move that would improve access to alternative education would be to modify the definition of educational asssistance to included unaccredited learning.
+
+In addition to public policy changes, industry and firm policy changes facilitate adoption of alternative credentials.
+Several high-value corporations have dropped the requirement of a college degree. % TODO: cite a few
+Other companies allow particular unaccredited credentials to fulfill a college degree requirement. % TODO: cite google
+Alternative education providers have also begun providing a payment option using an income sharing agreement (ISA) rather than loans.
+The income sharing agreement improves access by eliminating the need for student payment until employment involving a minimum level of income is obtained.
+
