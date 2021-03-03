@@ -34,9 +34,7 @@ A recent paper on organizational agility in higher education specifically points
 
 The third theory is that a pandemic is a time when normal strangeness increases across society.
 When the normal level of strangeness increases, things that were already finitely strange become relatively less strange.
-Alternative credentials are strange in some sense by construction, but the relative stigma associated with these credentials might decrease in a time of pandemic.
-This becomes more plausible when the connection of alternative credentials to remote activity is highlighted.
-At a time when personal contact is costly, remote learning becomes a better bargain, and the social benefits of traditional education are simultaneously diminished.
+Alternative credentials are strange in some sense by construction, but the relative stigma associated with these credentials might decrease in a time like that of the present pandemic, where all sorts of previously strange behaviors have become a new normal.
 
 While exposure to some stigma generally increases favorability, there are several special cases where it declines instead.
 Coronavirus-induced exposure could be such a case of negative exposure for a few reasons.
