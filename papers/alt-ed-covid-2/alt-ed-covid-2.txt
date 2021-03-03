@@ -39,15 +39,17 @@ Alternative credentials are strange in some sense by construction, but the relat
 While exposure to some stigma generally increases favorability, there are several special cases where it declines instead.
 Coronavirus-induced exposure could be such a case of negative exposure for a few reasons.
 Direct exposure to disease is generally harmful, unwanted, and forced.
-Disease-induced activities are not always involuntary but they might be perceived disfavorably by association.
-Familiarity bias and mere-exposure effects are generally positive on favorability to some stimulus, but these exposures are generally voluntary.
-Unwanted exposure can generate positive or negative favorability changes, and when the exposure involves harm it tends to reduce favorability.
-Backfire, boomerang, and blowback effects are some examples of negative favorability reactions to exposure.
-One study hits remarkably close to COVID-19 pandemic relevance because it found a backfire effect in efforts to market flu vaccine usage, unintentionally resulting in reduced willingness to take the flu vaccine [1].
-Even repeated unwanted exposure to harm can eventually lead to positive favorability through as documented in the work on Stockholm syndrome.
+Disease-induced activities are not strictly involuntary, but they might be perceived disfavorably by association.
+The mere exposure effect and familiarity bias
+are generally positive on favorability to some stimulus, but these exposures are often voluntary.
+Unwanted exposure that involves harm tends to reduce favorability.
+Backfire, boomerang, and blowback effects are examples of a negative response to exposure
+One study relates closely to the COVID-19 pandemic in finding a backfire effect in efforts to market flu vaccine usage
+.
+Even repeated negative exposure, though, can eventually lead to positive favorability, as documented in work on Stockholm syndrome.
 
-The actual effect of coronavirus could mimick a combination of the above effects.
-As a result, it is not obvious a priori whether the actual effect is positive, negative, or insignificant, and this ambiguity calls for empirical investigation.
+The exposure effect of coronavirus and related social changes might reflect a combination of the above effects.
+As a result, the direction of effect is not logically obvious prior to empirical study.
 Individual favorability to alternative credentials is also like to vary for a variety of personal reasons which are unrelated to the pandemic.
 This paper uses multiple regression to identify the net effect of coronavirus on favorability while holding constant these other sources of variation.
 
@@ -55,17 +57,17 @@ There are already several papers examining the impact of coronavirus on the educ
 These papers focus on education from kindergarten through high school, but it is reasonable to expect postsecondary education to be impacted in a similar way.
 
 Description of Data and Methodology
-This paper uses an original set of response data (n = 350) obtained through the administration of an online questionnaire.
-This cross-sectional data was obtained at the beginning of February in 2021.
+This paper leverages an original set of online questionnaire responses (n = 350).
+Responses form a cross-sectional data set that was obtained in early February of 2021.
 Respondents are United States citizens at or over the age of eighteen.
 The Amazon Mechanical Turk platform was used to recruit qualified participants.
 
-Responses are investigated using regression analysis and descriptive statistics including skew
+Responses are investigated using regression analysis
 While the data for this analysis is not public, the analytical code is open-source.
 See \url{https://github.com/Vandivier/research-dissertation-case-for-alt-ed/tree/master/papers/alt-ed-covid-2/data}
 Regression analysis includes multiple regression of linear and curvilinear effects
-with either ordinary or robust linear modelling.
-Ordinary linear modelling uses ordinary least squares, and robust linear modelling (RLM) uses iteratively reweighted least squares.
+with either ordinary or robust linear modeling.
+Ordinary linear modeling uses ordinary least squares, and robust linear modeling (RLM) uses iteratively reweighted least squares.
 Factor coefficients across these approaches are comparable, but RLM does not generate a useful R-squared statistic
 for model-level comparison.
 

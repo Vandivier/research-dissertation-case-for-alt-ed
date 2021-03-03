@@ -126,12 +126,12 @@ The mere exposure effect\cite{robinson2005novel} and familiarity bias\cite{cao20
 are generally positive on favorability to some stimulus,
 but these exposures are often voluntary.
 Unwanted exposure that involves harm tends to reduce favorability.
-Backfire, boomerang, and blowback effects are examples of a negative exposure response
+Backfire, boomerang, and blowback effects are examples of a negative response to exposure
 \cite{swire2020searching, byrne2009boomerang, campagna2016strategic}.
 One study relates closely to the COVID-19 pandemic in finding a backfire effect in efforts to market flu vaccine usage
 \cite{nyhan2015does}.
 Even repeated negative exposure, though, can eventually lead to positive favorability,
-as documented in the work on Stockholm syndrome\cite{julich2005stockholm}.
+as documented in work on Stockholm syndrome\cite{julich2005stockholm}.
 
 The exposure effect of coronavirus and related social changes might reflect a combination of the above effects.
 As a result, the direction of effect is not logically obvious prior to empirical study.
@@ -158,12 +158,13 @@ but it is reasonable to expect postsecondary education to be impacted in a simil
 
 \section{Description of Data and Methodology}
 
-This paper uses an original set of response data (n = 350) obtained through the administration of an online questionnaire.
-This cross-sectional data was obtained at the beginning of February in 2021.
+This paper leverages an original set of online questionnaire responses (n = 350).
+Responses are cross-sectional data obtained in early February of 2021,
+about one year after a public health emergency due to the coronavirus outbreak was declared in the United States\cite{staff_2021}.
 Respondents are United States citizens at or over the age of eighteen.
 The Amazon Mechanical Turk platform was used to recruit qualified participants.
 
-Responses are investigated using regression analysis and descriptive statistics including skew
+Responses are investigated using regression analysis
 \footnote{
     While the data for this analysis is not public, the analytical code is open-source.
     See \url{https://github.com/Vandivier/research-dissertation-case-for-alt-ed/tree/master/papers/alt-ed-covid-2/data}
@@ -171,13 +172,14 @@ Responses are investigated using regression analysis and descriptive statistics 
 % Mild skew was detected, so results of interest are compared with and without skew correction.
 % Adjustments for skew constrain the applicability of results.
 Regression analysis includes multiple regression of linear and curvilinear effects
-with either ordinary or robust linear modelling.
-Ordinary linear modelling uses ordinary least squares,
-and robust linear modelling (RLM) uses iteratively reweighted least squares.
-% TODO: paper showing why use a robust linear model and/or that it's a good practice to compare to OLS
-Factor coefficients across these approaches are comparable,
+specified using an ordinary linear model or a robust linear model (RLM).
+Ordinary linear models compute factor coefficients using ordinary least squares (OLS),
+and robust linear models use iteratively reweighted least squares (IRLS).
+Factor coefficients across these models are comparable,
 but RLM does not generate a useful R-squared statistic
 for model-level comparison.
+Robust linear models are useful to improve estimation when outliers exist\cite{sievers2004rank},
+and 11 outliers are idenfitied in the sample.
 
 Appendix A contains the exact wording and response options for each question.
 Appendix A also contains the wording for a priming message presented at the start of the survey.
@@ -495,7 +497,7 @@ The income sharing agreement improves access by eliminating the need for student
 % 2. how does this relate to covid impact to school choice results?
 % 3. what open questions remain?
 %     a. collecting more samples and samples over time would allow for more confidence bc multi-specification checks, forward-testing, more factor confidence.
-%     b. identifying underlying patterns within-group for state, industry, and ethnic effects could prove useful for modelling and also instructive for policy.
+%     b. identifying underlying patterns within-group for state, industry, and ethnic effects could prove useful for modeling and also instructive for policy.
 %          i. my skill gap survey dives into industry effects.
 %     c. alternative credentials are extremely diverse. a useful study would disaggregate this category and ask about alternative credentials of different kinds.
 %          i. my prestige study does this, and the skill gap study to some degree.
