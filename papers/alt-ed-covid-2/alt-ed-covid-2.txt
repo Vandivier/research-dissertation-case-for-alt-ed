@@ -96,7 +96,7 @@ attributable to the future social acceptability of alternative credentials.
 Correcting for social acceptability allows the remaining effects to be interpreted more accurately as an individual preference.
 
 The second unique control is support for online education.
-This is question four in the appendix.
+Online education is the response to question four in the appendix.
 This control allows an analyst to hold constant the mode of instruction when interpreting favorability to alternative credentials.
 
 The primary interest of this study is to identify the effect of coronavirus on favorability.
@@ -106,7 +106,7 @@ The two unique controls and the two questions about causality support investigat
 The variables of interest, causality questions, and the two unique controls obtain Likert-type responses.
 The impact of coronavirus and the causality questions use a 4-point scale.
 Favorability and the unique controls use a 10-point scale.
-Continuous treatment of items on the 10-point scale permits curvilinear analysis, including investigation of interesting marginal effects
+Continuous treatment of items on the 10-point scale permits curvilinear analysis, allowing investigation of marginal effects
 It is an accepted practice to treat Likert-type responses as either categorical or continuous for regression analysis.
 Jaccard and Wan provide support for continuous analysis of Likert-type data.
 They note that severe departures from the assumptions on cardinality "do not seem to affect Type I and Type II errors dramatically,"
@@ -118,35 +118,34 @@ Results
 The median favorability response was eight out of ten.
 Figure \ref{fig:one} visualizes the distribution of responses.
 Of 350 responses, 11 responses indicate a favorability of less than four out of ten.
-Regression analysis indicates a significant and positive coronavirus impact effect, invariant to whether outliers are dropped.
-The effect of the coronavirus impact on favorability
-is not held with confidence over the outlier range.
+Regression analysis indicates a significant and positive coronavirus impact effect.
+Analysis with and without outliers does not show a meaningful difference in the effect.
 
 The average response was 7.65 on a 10-point scale.
 Excluding outliers, over 96 percent of responses fall into the normal range.
 The average response in the normal range was about 7.81.
-Table \ref{tab:desc_stats} summarizes statistics about favorability, the direct measure of coronavirus impact, and the two causality questions.
+Table \ref{tab:desc_stats} summarizes statistics about favorability and the direct measure of coronavirus impact.
+The table also includes summary results for the two causality questions.
 
-Summary statistics are given for the total population and three subpopulations.
+Table \ref{tab:desc_stats} reports statistics across the total population and also for three subpopulations.
 The subpopulations include the normal range, the outlier population, and the Tens.
 Because factors in Table \ref{tab:desc_stats} dummy variables, with an exception for favorability, the mean values for each variable can be interpreted as the proportion of the population
 that affirms the response.
 
 The Tens are those individuals that responded with a favorability of 10 to alternative credentials.
-This is not an outlier group, but they are interesting to allow a better understanding of the distribution of responses.
-A large perceived impact from coronavirus is not reported by any individual for whom a negative outlier response on favorability is observed.
-In contrast, the Tens report a large perceived impact at a disproportionately high rate.
-This is important when conclusions about the American population are drawn from the discussion on coronavirus impact.
+The Tens are not an outlier group, but inspection of this group assists in understanding the response distribution.
+The Tens report a large perceived impact at a disproportionately high rate.
+In contrast, no member of the negative outlier group also reports a large perceived impact of coronavirus.
 
-This data is consistent with external reporting that most Americans are impacted by COVID-19, but it adds the wrinkle that most Americans consider the impact to be minor.
-This is another case where outliers and Tens importantly differ from the average.
+This data is consistent with external reporting that COVID-19 impacts most Americans, but it adds the wrinkle that most Americans consider the impact to be minor.
+The magnitude of perceived impact is another case where outliers and Tens importantly differ from the average.
 The Tens report higher coronavirus impact while the outliers cluster around a medium impact response.
 
 Table \ref{tab:multiple_regs} provides factor coefficients for four interesting OLS models.
 Model 1 is the adjusted R-squared maximizing model.
 Model 4 is composed only of significant factors.
 Model 2 is Model 4 plus a dummy for a large coronavirus impact.
-Model 3 follows the same specification as Model 2, but it is assessed against the normal range of the population, excluding outliers.
+Model 3 follows the same specification as Model 2, but Model 3 excludes outliers.
 
 The direct effect of coronavirus appears to be positive and also insignificant.
 The response indicating that a person has perceived a large impact from coronavirus is the only dummy
@@ -170,10 +169,12 @@ to favorability about remote learning.
 The exact wording is:
 "To what degree has coronavirus-induced remote activity improved your favorability to remote learning
 (either for yourself or for other people)?"
-As such, any response other than "none" constitutes evidence that coronavirus caused increased favorability to remote learning.
-Given that there is a positive relationship between favorability to online learning and favorability to alternative credentials, any response other than "none" effectively supports the hypothesized mechanism in which an exposure effect leads to support for alternative credentials.
 Referring back to Table \ref{tab:desc_stats}, about 83.1 percent of the full population of Americans indicate a small, medium, or large increase in favorability of remote learning
 caused by coronavirus-induced remote activity.
+This study seperately demonstrates a positive relationship between favorability to remote learning
+and favorability to alternative credentials.
+Taken together, these two factors provide positive evidence toward the hypothesis that coronavirus-induced exposure to remote learning
+results in an increase to favorability of alternative credentials.
 
 The observation of nonzero responses to the factor for coronavirus-induced remote learning favorability is causal evidence.
 The fact that these nonzero responses are negatively related to favorability is a non-causal association.

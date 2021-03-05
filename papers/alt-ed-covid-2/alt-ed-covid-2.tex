@@ -145,6 +145,8 @@ This paper uses multiple regression to hold these sources of variation constant.
 There are already several papers examining the impact of coronavirus on the education system.
 These papers focus on education from kindergarten through high school,
 but they inspire the hypothesis of a similar situation in higher education.
+One paper in the Journal of School Choice examined educational experiences of families under COVID-19\cite{carpenter2020we}.
+The study found that 57 percent of parents found remote learning worked better than they expected.
 
 % TODO: cite four papers and show how they relate
 % TODO: why do we care about these credentials? 1 higher quality, 2 lower price, 3 faster, 4 align to workforce needs, 5 solve for equity/equality
@@ -208,7 +210,7 @@ Correcting for social acceptability allows the remaining effects to be interpret
 
 % TODO: maybe talk about a couple papers that say mode of instruction is related to favorability
 The second unique control is support for online education.
-This is question four in the appendix.
+Online education is the response to question four in the appendix.
 This control allows an analyst to hold constant the mode of instruction when interpreting favorability to alternative credentials.
 % Mode of instruction is a bit of a red herring which is not what this study is centrally concerned with.
 % Favorability to online education creates noise in the signal of favorability to alternative credentials,
@@ -234,7 +236,7 @@ and the two unique controls obtain Likert-type responses.
 The impact of coronavirus and the causality questions use a 4-point scale.
 Favorability and the unique controls use a 10-point scale.
 Continuous treatment of items on the 10-point scale permits curvilinear analysis,
-including investigation of interesting marginal effects
+allowing investigation of marginal effects
 \footnote{
     It is an accepted practice to treat Likert-type responses as either categorical or continuous for regression analysis.
     Jaccard and Wan provide support for continuous analysis of Likert-type data.
@@ -249,11 +251,10 @@ including investigation of interesting marginal effects
 The median favorability response was eight out of ten.
 Figure \ref{fig:one} visualizes the distribution of responses.
 Of 350 responses, 11 responses indicate a favorability of less than four out of ten.
-Regression analysis indicates a significant and positive coronavirus impact effect,
-invariant to whether outliers are dropped.
-% As a conservative interpretation,
-The effect of the coronavirus impact on favorability
-is not held with confidence over the outlier range.
+Regression analysis indicates a significant and positive coronavirus impact effect.
+Analysis with and without outliers does not show a meaningful difference in the effect.
+% The effect of the coronavirus impact on favorability
+% is not held with confidence over the outlier range.
 
 \begin{figure}[h!]
     \centering
@@ -267,11 +268,11 @@ is not held with confidence over the outlier range.
 The average response was 7.65 on a 10-point scale.
 Excluding outliers, over 96 percent of responses fall into the normal range.
 The average response in the normal range was about 7.81.
-Table \ref{tab:desc_stats} summarizes statistics about favorability,
-the direct measure of coronavirus impact,
-and the two causality questions.
+Table \ref{tab:desc_stats} summarizes statistics about favorability and the direct measure of coronavirus impact.
+The table also includes summary results for the two causality questions.
 
-Summary statistics are given for the total population and three subpopulations.
+% Table \ref{tab:desc_stats} describes summary statistics for the total sample and also distinctly describes three subsamples.
+Table \ref{tab:desc_stats} reports statistics across the total population and also for three subpopulations.
 The subpopulations include the normal range, the outlier population, and the Tens.
 Because factors in Table \ref{tab:desc_stats} dummy variables,
 with an exception for favorability,
@@ -279,14 +280,16 @@ the mean values for each variable can be interpreted as the proportion of the po
 that affirms the response.
 
 The Tens are those individuals that responded with a favorability of 10 to alternative credentials.
-This is not an outlier group, but they are interesting to allow a better understanding of the distribution of responses.
-A large perceived impact from coronavirus is not reported by any individual for whom a negative outlier response on favorability is observed.
-In contrast, the Tens report a large perceived impact at a disproportionately high rate.
-This is important when conclusions about the American population are drawn from the discussion on coronavirus impact.
+The Tens are not an outlier group, but inspection of this group assists in understanding the response distribution.
+The Tens report a large perceived impact at a disproportionately high rate.
+In contrast, no member of the negative outlier group also reports a large perceived impact of coronavirus.
+% Group differences like this demonstrate that general results for the whole American population are to be taken lightly,
+% and 
+% The difference in perceived impact by group is important when conclusions about the American population are drawn from the discussion on coronavirus impact.
 
-This data is consistent with external reporting that most Americans are impacted by COVID-19\cite{demographic2020},
+This data is consistent with external reporting that COVID-19 impacts most Americans\cite{demographic2020},
 but it adds the wrinkle that most Americans consider the impact to be minor.
-This is another case where outliers and Tens importantly differ from the average.
+The magnitude of perceived impact is another case where outliers and Tens importantly differ from the average.
 The Tens report higher coronavirus impact while the outliers cluster around a medium impact response.
 
 \begin{table}
@@ -301,8 +304,7 @@ Table \ref{tab:multiple_regs} provides factor coefficients for four interesting 
 Model 1 is the adjusted R-squared maximizing model.
 Model 4 is composed only of significant factors.
 Model 2 is Model 4 plus a dummy for a large coronavirus impact.
-Model 3 follows the same specification as Model 2,
-but it is assessed against the normal range of the population, excluding outliers.
+Model 3 follows the same specification as Model 2, but Model 3 excludes outliers.
 
 \begin{table}
     \caption{Table of Multiple Regressions}
@@ -336,41 +338,44 @@ to favorability about remote learning.
 The exact wording is:
 "To what degree has coronavirus-induced remote activity improved your favorability to remote learning
 (either for yourself or for other people)?"
-As such, any response other than "none" constitutes evidence that coronavirus caused increased favorability to remote learning.
-Given that there is a positive relationship between favorability to online learning and favorability to alternative credentials,
-any response other than "none" effectively supports the hypothesized mechanism in which an exposure effect leads to support for alternative credentials.
 Referring back to Table \ref{tab:desc_stats},
 about 83.1 percent of the full population of Americans indicate a small,
 medium, or large increase in favorability of remote learning
 caused by coronavirus-induced remote activity.
+% Other than "none", any response to this question constitutes evidence that coronavirus causes increased favorability to remote learning.
+This study seperately demonstrates a positive relationship between favorability to remote learning
+and favorability to alternative credentials.
+Taken together,
+these two factors provide positive evidence toward the hypothesis that coronavirus-induced exposure to remote learning
+results in an increase to favorability of alternative credentials.
 
 The observation of nonzero responses to the factor for coronavirus-induced remote learning favorability is causal evidence.
 The fact that these nonzero responses are negatively related to favorability is a non-causal association.
-This association indicates that those who gained the most in favorability also ended with less than average favorability.
-This means the greatest gainers started far below the average and ended slightly below the average,
+This association indicates that those who gained the most favorability also ended with less than average favorability,
 while those with prior high favorability did not move much higher.
 This interpretation is reinforced by referring back to the summary statistics in Table \ref{tab:desc_stats}.
-Notice that the negative outlier group has the highest affirmative response with respect to both a
+Notice that the negative outlier group has the highest affirmative response for both a
 medium increase in remote favorability
 and also to a large increase in remote favorability.
-The normal range, on the other hand, has the highest indication of a small increase to remote favorability.
-This makes sense given that the median response is already near the maximum response.
+On the other hand, the normal range has the highest response rate for a small increase to remote favorability.
+A relatively small improvement for most respondents makes sense given that the median response is already near the maximum response.
 
 Coronavirus-induced favorability to online education is distinct from a plain measure of favorability to online education.
 The latter is labeled Favor Online Education within Table \ref{tab:multiple_regs},
 and it is one of the two unique controls discussed in the Methodology.
 This factor was most significant when modeled as a quadratic term.
-The positive coefficient on the quadratic term can be interpreted as a positive marginal effect over the sample range.
-It is worth noting that plain favorability to online education
+A quadratic term captures marginal effects.
+The coefficient for this term is positive, indicating a positive marginal effect.
+Favorability to online education
 and coronavirus-induced favorability to online education are moderately correlated (Pearson's $r=0.303$).
 This demonstrates internal consistency among responses,
 and it also adds weight to the explanation from exposure.
 
 The other unique control is expected conventionality.
 This factor is also significant, robust to specification, and important.
-Expected conventionality is moderately correlated with favorability to online education (Pearson's $r=0.445$),
-but it is uncorrelated to coronavirus-induced favorability to online education.
-This indicates that respondents do not seem to generate a greater expectation that alternative credentials will be conventional in the future
+Expected conventionality is moderately correlated with favorability to online education (Pearson's $r=0.445$).
+Expected conventionality is uncorrelated to coronavirus-induced favorability to online education.
+Respondents do not form an expectation that alternative credentials will be conventional in the future
 after being exposed to coronavirus-induced remote activities.
 
 Table \ref{tab:table_robust_reg} is a table of factors for a robust linear model (RLM).
@@ -390,10 +395,12 @@ The main result in this table is that none of the effects of interest are import
 
 The other control variables also exhibit some interesting effects.
 Caucasians disproportionately attend and graduate from college,
-so this group is sometimes seen as a guard of the traditional degree or an opponent of alternative education. % TODO: citation
-Alternative credentials are viewed as a diversity strategy,
-and minority students do benefit disproportionately from alternative learning programs. % TODO: citation
-This analysis presents evidence that undermines those narratives by observing a significant positive correlation between favorability and caucasian ethnicity.
+leading some scholars argue that higher education is an instrument of white supremacy\cite{hikido2016whitened, dennis2001skillful}.
+Other scholars note that alternative institutions support a higher rate of minority graduation,
+and as a result the support for alternative credentials is considered a workforce diversity strategy\cite{brown2017complex, jones2018alternative, rossiter2019designing}.
+Given such prior research,
+it is intuitive to expect a negative association between caucasian ethnicity and support for alternative credentials.
+Opposite expectation, caucasian ethnic identification presents a significant positive coefficient in this study.
 
 Information Technology is a well-known bastion of alternative credentials, including coding bootcamps.
 This industry is fundamentally connected to the web and is unique in the high rate of obsolescence of dated learning.
