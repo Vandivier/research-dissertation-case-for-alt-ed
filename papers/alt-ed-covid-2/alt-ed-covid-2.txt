@@ -57,6 +57,8 @@ This paper uses multiple regression to hold these sources of variation constant.
 
 There are already several papers examining the impact of coronavirus on the education system.
 These papers focus on education from kindergarten through high school, but they inspire the hypothesis of a similar situation in higher education.
+One paper in the Journal of School Choice examined the educational experiences of families under COVID-19.
+The study found that 57 percent of parents found remote learning worked better than they expected.
 
 Description of Data and Methodology
 This paper leverages an original set of online questionnaire responses (n = 350).
@@ -138,7 +140,7 @@ The Tens report a large perceived impact at a disproportionately high rate.
 In contrast, no member of the negative outlier group also reports a large perceived impact of coronavirus.
 
 This data is consistent with external reporting that COVID-19 impacts most Americans, but it adds the wrinkle that most Americans consider the impact to be minor.
-The magnitude of perceived impact is another case where outliers and Tens importantly differ from the average.
+Perceived COVID-19 impact is another case where outliers and Tens importantly differ from the average.
 The Tens report higher coronavirus impact while the outliers cluster around a medium impact response.
 
 Table \ref{tab:multiple_regs} provides factor coefficients for four interesting OLS models.
@@ -171,57 +173,62 @@ The exact wording is:
 (either for yourself or for other people)?"
 Referring back to Table \ref{tab:desc_stats}, about 83.1 percent of the full population of Americans indicate a small, medium, or large increase in favorability of remote learning
 caused by coronavirus-induced remote activity.
-This study seperately demonstrates a positive relationship between favorability to remote learning
+This study separately demonstrates a positive relationship between favorability to remote learning
 and favorability to alternative credentials.
 Taken together, these two factors provide positive evidence toward the hypothesis that coronavirus-induced exposure to remote learning
-results in an increase to favorability of alternative credentials.
+results in an increase in favorability to alternative credentials.
 
 The observation of nonzero responses to the factor for coronavirus-induced remote learning favorability is causal evidence.
 The fact that these nonzero responses are negatively related to favorability is a non-causal association.
-This association indicates that those who gained the most in favorability also ended with less than average favorability.
-This means the greatest gainers started far below the average and ended slightly below the average, while those with prior high favorability did not move much higher.
+This association indicates that those who gained the most favorability also ended with less than average favorability, while those with prior high favorability did not move much higher.
 This interpretation is reinforced by referring back to the summary statistics in Table \ref{tab:desc_stats}.
-Notice that the negative outlier group has the highest affirmative response with respect to both a
+Notice that the negative outlier group has the highest affirmative response for both a
 medium increase in remote favorability
 and also to a large increase in remote favorability.
-The normal range, on the other hand, has the highest indication of a small increase to remote favorability.
-This makes sense given that the median response is already near the maximum response.
+On the other hand, the normal range has the highest response rate for a small increase to remote favorability.
+A relatively small improvement for most respondents makes sense, given that the median response is already near the maximum response.
 
 Coronavirus-induced favorability to online education is distinct from a plain measure of favorability to online education.
 The latter is labeled Favor Online Education within Table \ref{tab:multiple_regs}, and it is one of the two unique controls discussed in the Methodology.
 This factor was most significant when modeled as a quadratic term.
-The positive coefficient on the quadratic term can be interpreted as a positive marginal effect over the sample range.
-It is worth noting that plain favorability to online education
+A quadratic term captures marginal effects.
+The coefficient for this term is positive, indicating a positive marginal effect.
+Favorability to online education
 and coronavirus-induced favorability to online education are moderately correlated (Pearson's $r=0.303$).
 This demonstrates internal consistency among responses, and it also adds weight to the explanation from exposure.
 
 The other unique control is expected conventionality.
 This factor is also significant, robust to specification, and important.
-Expected conventionality is moderately correlated with favorability to online education (Pearson's $r=0.445$), but it is uncorrelated to coronavirus-induced favorability to online education.
-This indicates that respondents do not seem to generate a greater expectation that alternative credentials will be conventional in the future
+Expected conventionality and favorability to online education correlate moderately (Pearson's $r=0.445$).
+Expected conventionality is uncorrelated to coronavirus-induced favorability to online education.
+Respondents do not form an expectation that alternative credentials will be conventional in the future
 after being exposed to coronavirus-induced remote activities.
 
 Table \ref{tab:table_robust_reg} is a table of factors for a robust linear model (RLM).
-Robust regression is useful in part to address samples in which outliers exist, so the whole sample is used.
+Robust regression is useful in addressing samples in which outliers exist, so the robust model includes the whole sample.
 Because RLM treats factors linearly, the coefficients are comparable to OLS coefficients.
 This makes the model in Table \ref{tab:table_robust_reg} useful for factor analysis as well.
 Specifically, the model in this table is a simple respecification of Model 4 from Table \ref{tab:multiple_regs} into RLM.
 The main result in this table is that none of the effects of interest are importantly different between RLM and OLS specification.
 
 The other control variables also exhibit some interesting effects.
-Caucasians disproportionately attend and graduate from college, so this group is sometimes seen as a guard of the traditional degree or an opponent of alternative education. % TODO: citation
-Alternative credentials are viewed as a diversity strategy, and minority students do benefit disproportionately from alternative learning programs. % TODO: citation
-This analysis presents evidence that undermines those narratives by observing a significant positive correlation between favorability and caucasian ethnicity.
+Caucasians disproportionately attend and graduate from college, leading some scholars to argue that higher education is an instrument of white supremacy\cite{hikido2016whitened, dennis2001skillful}.
+Other scholars note that alternative institutions support a higher rate of minority graduation.
+As a result, support for alternative credentials is considered a workforce diversity strategy\cite{brown2017complex, jones2018alternative, rossiter2019designing}.
+Given such prior research, it is intuitive to expect a negative association between caucasian ethnicity and support for alternative credentials.
+Opposite expectation, caucasian ethnic identification presents a significant positive coefficient in this study.
 
-Information Technology is a well-known bastion of alternative credentials, including coding bootcamps.
-This industry is fundamentally connected to the web and is unique in the high rate of obsolescence of dated learning.
-It is not surprising that it is positively associated with favorability, but it is surprising that it comes in third place among four industries with positive and significant favorability.
+Information technology is a well-known stronghold of support for alternative education, including coding bootcamps.
+Key skills in information technology are easily digitized and taught over the web.
+This industry demands flexible instruction because it is associated with a uniquely high rate of technical obsolescence.
+It is not surprising that it is positively associated with favorability.
+It is surprising that it comes in third place among four industries with positive and significant favorability.
 
-Health is an industry that has historically been difficult to digitize, and it is sometimes given as an explicit example of an industry in which alternative credentials
-might not work. % TODO: cite regulatory concerns and also cite improvements to simulation technology.
-This analysis may indicate improvements to digital learning in health
-or changing social attitudes on whether accredited credentials are
-generally preferred for many industry positions.
+Health is an industry that has historically been difficult to digitize.
+The positive health industry effect found in this study
+agrees with external research that considers current digital health education to be satisfactory.
+One paper on digital education in health declares that health simulations using virtual reality
+became useful with the rise of the Oculus Rift after the year 2010.
 
 There are a variety of political and cultural reasons for which favorability might vary by state, but no obvious explanation is evidenced in the current analysis.
 Employment status was largely insignificant, but Model 1 hints at a weak positive effect among hiring managers.
