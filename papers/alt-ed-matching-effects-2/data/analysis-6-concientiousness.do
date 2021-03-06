@@ -1,6 +1,6 @@
 clear
 
-do "D:\workspace\github\research-dissertation-case-for-alt-ed\papers\alt-ed-matching-effects\data\analysis-1-vars.do"
+do "C:\Users\vandi\workspace\research-dissertation-case-for-alt-ed\papers\alt-ed-matching-effects-2\data\analysis-1-vars.do"
 
 * // simple reg and all bools reg negative beta as expected
 reg fav aetiwno_concientiousness

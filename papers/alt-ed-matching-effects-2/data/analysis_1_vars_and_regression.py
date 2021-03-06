@@ -17,7 +17,7 @@ def fsReformatColumnNamesLikeStata(sColName):
 
 
 def getData(dropFirstDummy=True):
-    df = pd.read_csv('replicate-hidden-wrangled.csv')
+    df = pd.read_csv('data-hidden-wrangled.csv')
     df.rename(fsReformatColumnNamesLikeStata, axis='columns', inplace=True)
 
     if dropFirstDummy:

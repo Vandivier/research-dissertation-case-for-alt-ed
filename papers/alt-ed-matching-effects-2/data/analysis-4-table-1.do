@@ -1,6 +1,6 @@
 clear
 
-do "D:\workspace\github\research-dissertation-case-for-alt-ed\papers\alt-ed-matching-effects\data\analysis-1-vars.do"
+do "C:\Users\vandi\workspace\research-dissertation-case-for-alt-ed\papers\alt-ed-matching-effects-2\data\analysis-1-vars.do"
 
 * // 6 robust effects: industry, state, duration, company size, skill gaps, rulebreaker effects
 * // rulebreaker, duration, company size will be spelled out in main reg table, so not here...or should they be? if space allows

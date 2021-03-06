@@ -1,6 +1,6 @@
 clear
 
-import delimited C:\Users\vandi\workspace\research-dissertation-case-for-alt-ed\papers\alt-ed-matching-effects-2\data\replicate-hidden-wrangled.csv
+import delimited C:\Users\vandi\workspace\research-dissertation-case-for-alt-ed\papers\alt-ed-matching-effects-2\data\data-hidden-wrangled.csv
 
 tab doyoucontributetohiring, gen(_ismanager)
 tab doyouworkinastem, gen(_isstem)
@@ -11,9 +11,6 @@ tab thinkingaboutthejobtitle, gen(_isawareofrelevantcredentials)
 tab whichoftheseindustries, gen(_isindustry)
 tab whatstate, gen(_isstate)
 
-gen cawareofrelevantcredentials1 = thinkingaboutthejobtitle if thinkingaboutthejobtitle != 5
-gen cawareofrelevantcredentials2 = cawareofrelevantcredentials1*cawareofrelevantcredentials1
-gen cawareofrelevantcredentials3 = cawareofrelevantcredentials1*cawareofrelevantcredentials1*cawareofrelevantcredentials1
 gen ccompanysize1 = roughlyhowmany if roughlyhowmany != 9
 gen ccompanysize2 = ccompanysize1*ccompanysize1
 gen ccompanysize3 = ccompanysize1*ccompanysize1*ccompanysize1
@@ -189,6 +186,10 @@ drop thinkingaboutthejobtitle
 drop whichoftheseindustries
 drop whatstate
 
+* // TODO: remember how STATA names a tab_gen variable:
+* // in alphabetical order, but skipping when 0 responses
+* // eg, _isstate16 is Kansas rather than Iowa bc 0 ppl said Iowa
+* // but, below _is* have been verified
 label variable _iscompanysize4 "Employees 201-500"
 label variable _iscompanysize8 "Employees 10,000+"
 label variable _isduration6 "Duration 1 Year+"

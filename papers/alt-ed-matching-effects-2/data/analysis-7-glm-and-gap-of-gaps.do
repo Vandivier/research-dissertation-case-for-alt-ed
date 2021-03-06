@@ -1,28 +1,24 @@
 clear
 
-do "D:\workspace\github\research-dissertation-case-for-alt-ed\papers\alt-ed-matching-effects\data\analysis-1-vars.do"
+do "C:\Users\vandi\workspace\research-dissertation-case-for-alt-ed\papers\alt-ed-matching-effects-2\data\analysis-1-vars.do"
 
 * // diff is positive but insignificant; could become significant w bigger sample.
 * // ACNG has worse body lang skill bc positive diff_wno_bodylanguage
-sum rcgtiwno_bodylanguage aetiwno_bodylanguage diff_wno_bodylanguage diff_wo_bodylanguage bodylanguage_recentcollege bodylanguage_ngwac
+sum rcgtiwno_bodylanguage aetiwno_bodylanguage diff_wno_bodylanguage diff_wo_bodylanguage bodylanguage_recentc bodylanguage_ngwac
 
 * // breaking rules is awesome and employers know it.
 * // measurement robust bc rulebreaker effects and rulebreaker gap both in consistent direction
 sum rulebreaker_ideal rulebreaker_ngwac rulebreaker_recentcollegegraduat rulebreaker_typicalemployeeatmyc
 reg fav aetiwno_rulebreaker
 
-* // MANOVA? nah...multiple reg diff of gaps
-* // do soft skills differ collectively (not individually) for ACNG vs recent college grad
-* // do soft skills collectively (not individually) explain hireability diff for ACNG vs recent college grad
-* // note: the above are served just as well or better by multiple OLS compared to MANOVA
-* // I think i can compute myself by multiplying p-values but someone might get mad at a homebrewed approach... will do multiple regression
-* // ref: https://stats.stackexchange.com/questions/69145/what-particular-measure-to-use-multiple-regression-or-manova
-* // ref: https://stats.idre.ucla.edu/stata/output/manova/
-* // ref: http://www.differencebetween.net/science/mathematics-statistics/difference-between-anova-and-manova/
-* // TODO: multifactor anova? ACNG vs recent grad http://onlinestatbook.com/2/analysis_of_variance/multiway.html
-* // MAYBE TODO: boring but solid linear model http://sites.utexas.edu/sos/guided/inferential/numeric/glm/
-* // actually I don't want any of that, i just want to know if soft 
-* // just skill gaps
+* // p(factors, RLM), p(factors, RGLM) < p(factors, OLM)
+* // coefficients are the same across all three
+* // also, GLM is overkill in the literature; but a nice-to-have robustness test
+* // prefer RLM for interpretability of the y distribution; also i think RLM skew is negligiable
+* // ref: http://sites.utexas.edu/sos/guided/inferential/numeric/glm/
+* // ref: https://www.stata.com/news/generalized-linear-models-and-extensions/
+* // ref: https://stats.stackexchange.com/questions/427206/test-to-know-when-to-use-glm-over-linear-regression
+* // compare p(F) linear, rlm, glm
 
 * // diff* is ACNG - recent college grad; so positive coeff means ACNG is comparatively valued for having a bigger gap
 * // skills i care about from preferred reg...aetiwno_bodylanguage aetiwno_commute aetiwno_concientiousness aetiwno_customerserviceskill aetiwno_technicaljobskills aetiwno_teamwork aetiwno_rulebreaker
