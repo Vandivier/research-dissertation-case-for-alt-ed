@@ -253,7 +253,6 @@ organizational agility has enabled the development of quality products.
 
 As is a cross-sectional analysis, this study provides little ability to make confident forecasts about whether the favorability increase is transient or permanent.
 With that caveat, there are three reasons to expect average favorability to remain near a score of eight out of ten.
-With that caveat, there are three reasons to expect average favorability to remain near a score of eight out of ten.
 The first reason is that this was the average score found in the analysis.
 Barring contrary evidence, this point-estimate remains preferred.
 
@@ -279,26 +278,28 @@ and the now-defunct Alternative Credit Project (ACP).
 Renewal of the ACP is an example of a public-private partnership that is feasible and would improve recognition of alternative credentials.
 
 In 2012, The Heritage Foundation called for certain radical policy changes that would level the playing field between traditional and alternative educators.
-While they did not go as far as to suggest eliminating accreditation altogether, they did advocate for removing accreditation agencies and suggested the government should directly accredit courses rather than organizations. % TODO: cite https://www.americanprogress.org/issues/education-postsecondary/reports/2019/04/18/468840/trump-administration-undoing-college-accreditation/
+While they did not go as far as to suggest eliminating accreditation altogether, they did advocate for removing accreditation agencies.
+Heritage suggested the government should directly accredit courses rather than organizations.
 They also called for a decoupling of accreditation and federal funding.
 
-Those suggestions have yet to be implemented, but accreditation difficulty was reduced by Department of Education rule changes
-that took effect in July of 2020.
+Congress has yet to take Heritage up on the idea, but rule changes from the Department of Education that took effect in July of 2020
+have made accreditation easier.
 Further accreditation reform can incentivize competition in the university space, essentially causing universities to compete with alternative providers on price and quality to a greater extent.
-This would not drive support for alternative credentials directly, but improving competition and removing
-barriers to entry in higher education seem to be beneficial for the market as a whole.
+This would not drive support for alternative credentials directly, but improving competition and removing barriers to entry in higher education seems beneficial for the market as a whole.
 
-Removal of federal subsidy for higher education would do much to reduce college prices, but this is another unpopular reform.
+Removal of federal subsidies for higher education would reduce college prices and combat student debt, but this is another unpopular reform.
 A second-best solution would be to open the subsidy to alternative providers.
 Section 127 of the Internal Revenue Code allows for employer educational assistance.
 Previously, such assistance consisted of paying for new accredited education.
-Under the CARES Act, this assistance was expanded to include paying down student loans that currently exist from accredited prior education.
+The CARES Act expanded Section 127 employer assistance
+to include paying down student loans that currently exist from accredited prior education.
 One small move that would improve access to alternative education
 would be to modify the definition of educational assistance to include unaccredited learning.
 
-In addition to public policy changes, industry and firm policy changes facilitate the adoption of alternative credentials.
-Several high-value corporations have dropped the requirement of a college degree. % TODO: cite a few
-Other companies allow particular unaccredited credentials to fulfill a college degree requirement. % TODO: cite google
+In addition to public policy changes, industry and firm policy changes can facilitate the adoption of alternative credentials.
+Several high-value corporations have dropped the requirement of a college degree.
+Other companies allow particular unaccredited credentials to fulfill a college degree requirement.
 Alternative education providers have also begun providing a payment option using an income sharing agreement (ISA) rather than loans.
-The income sharing agreement improves access by eliminating the need for student payment until employment involving a minimum level of income is obtained.
+The income sharing agreement improves access by eliminating the need for student payment
+until a student obtains employment involving a designated minimum salary.
 
