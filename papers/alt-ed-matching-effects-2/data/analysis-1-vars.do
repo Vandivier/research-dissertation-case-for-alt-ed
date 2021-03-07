@@ -61,11 +61,6 @@ replace aetiwno_commute = 0 if aetiwno_commute < 0
 gen aetiwno_oddhours = willingtoworkoddhours_ideal - willingtoworkoddhours_ngwac
 replace aetiwno_oddhours = 0 if aetiwno_oddhours < 0
 
-* // TODO: repeat for each of 13 skills the diff_wno*1-3
-gen diff1_wno_bodylanguage = aetiwno_bodylanguage-rcgtiwno_bodylanguage
-gen diff2_wno_bodylanguage = diff_wno_bodylanguage*diff_wno_bodylanguage
-gen diff3_wno_bodylanguage = diff_wno_bodylanguage*diff_wno_bodylanguage*diff_wno_bodylanguage
-
 * // gen aetiwo_bodylanguage_x_it_industry = 1*2
 gen aetiwo_body_x_it = aetiwo_bodylanguage*_isindustry6
 gen aetiwno_body_x_it = aetiwno_bodylanguage*_isindustry6
@@ -85,93 +80,14 @@ gen r_x_rulebreaker_risky = aetiwno_rulebreaker*rulebreakersnormsprobablyhaveaha
 gen r_x_rulebreaker_rockstars = aetiwno_rulebreaker*rulebreakersnormsmightbedoingsob
 gen r_x_rulebreaker_culture_add = aetiwno_rulebreaker*rulebreakersnormstendtobegiftedi
 
-gen rcgtiwno_bodylanguage = bodylanguage_ideal - bodylanguage_recentc
-gen rcgtiwo_bodylanguage = bodylanguage_ideal - bodylanguage_recentc
-replace rcgtiwno_bodylanguage = 0 if rcgtiwno_bodylanguage < 0
-gen diff_wo_bodylanguage = aetiwo_bodylanguage-rcgtiwo_bodylanguage
-gen diff2_wo_bodylanguage = diff_wo_bodylanguage*diff_wo_bodylanguage
-gen diff_alt2_wno_bodylanguage = rcgtiwno_bodylanguage*rcgtiwno_bodylanguage - aetiwno_bodylanguage*aetiwno_bodylanguage
-gen diff_alt3_wno_bodylanguage = rcgtiwno_bodylanguage*rcgtiwno_bodylanguage*rcgtiwno_bodylanguage - aetiwno_bodylanguage*aetiwno_bodylanguage*aetiwno_bodylanguage
-
-* // acng more willing to commute on average `sum willingtocommute_recentc willingtocommute_ng'
-gen rcgtiwno_commute = willingtocommute_ideal - willingtocommute_recentc
-gen rcgtiwo_commute = willingtocommute_ideal - willingtocommute_recentc
-replace rcgtiwno_commute = 0 if rcgtiwno_commute < 0
-gen diff_wno_commute = aetiwno_commute-rcgtiwno_commute
-gen diff_wo_commute = aetiwo_commute-rcgtiwo_commute
-gen diff2_wno_commute = diff_wno_commute*diff_wno_commute
-gen diff3_wno_commute = diff_wno_commute*diff_wno_commute*diff_wno_commute
-gen diff2_wo_commute = diff_wo_commute*diff_wo_commute
-gen diff_alt2_wno_commute = rcgtiwno_commute*rcgtiwno_commute - aetiwno_commute*aetiwno_commute
-gen diff_alt3_wno_commute = rcgtiwno_commute*rcgtiwno_commute*rcgtiwno_commute - aetiwno_commute*aetiwno_commute*aetiwno_commute
-
-gen rcgtiwno_concientiousness = concientiousness_ideal - concientiousness_recentc
-gen rcgtiwo_concientiousness = concientiousness_ideal - concientiousness_recentc
-replace rcgtiwno_concientiousness = 0 if rcgtiwno_concientiousness < 0
-gen diff_wno_concientiousness = aetiwno_concientiousness-rcgtiwno_concientiousness
-gen diff_wo_concientiousness = aetiwo_concientiousness-rcgtiwo_concientiousness
-gen diff2_wno_concientiousness = diff_wno_concientiousness*diff_wno_concientiousness
-gen diff3_wno_concientiousness = diff_wno_concientiousness*diff_wno_concientiousness*diff_wno_concientiousness
-gen diff2_wo_concientiousness = diff_wo_concientiousness*diff_wo_concientiousness
-gen diff_alt2_wno_concientiousness = rcgtiwno_concientiousness*rcgtiwno_concientiousness - aetiwno_concientiousness*aetiwno_concientiousness
-gen diff_alt3_wno_concientiousness = rcgtiwno_concientiousness*rcgtiwno_concientiousness*rcgtiwno_concientiousness - aetiwno_concientiousness*aetiwno_concientiousness*aetiwno_concientiousness
-
-gen rcgtiwno_customerserviceskill = customerserviceskill_ideal - customerserviceskill_recentc
-gen rcgtiwo_customerserviceskill = customerserviceskill_ideal - customerserviceskill_recentc
-replace rcgtiwno_customerserviceskill = 0 if rcgtiwno_customerserviceskill < 0
-gen diff_wno_customerserviceskill = aetiwno_customerserviceskill-rcgtiwno_customerserviceskill
-gen diff_wo_customerserviceskill = aetiwo_customerserviceskill-rcgtiwo_customerserviceskill
-gen diff2_wno_customerserviceskill = diff_wno_customerserviceskill*diff_wno_customerserviceskill
-gen diff2_wo_customerserviceskill = diff_wo_customerserviceskill*diff_wo_customerserviceskill
-
-gen rcgtiwno_technicaljobskills = technicaljobskills_ideal - technicaljobskills_recentc
-gen rcgtiwo_technicaljobskills = technicaljobskills_ideal - technicaljobskills_recentc
-replace rcgtiwno_technicaljobskills = 0 if rcgtiwno_technicaljobskills < 0
-gen diff_wno_technicaljobskills = aetiwno_technicaljobskills-rcgtiwno_technicaljobskills
-gen diff_wo_technicaljobskills = aetiwo_technicaljobskills-rcgtiwo_technicaljobskills
-gen diff2_wno_technicaljobskills = diff_wno_technicaljobskills*diff_wno_technicaljobskills
-gen diff2_wo_technicaljobskills = diff_wo_technicaljobskills*diff_wo_technicaljobskills
-
-gen rcgtiwno_teamwork = teamwork_ideal - teamwork_recentc
-gen rcgtiwo_teamwork = teamwork_ideal - teamwork_recentc
-replace rcgtiwno_teamwork = 0 if rcgtiwno_teamwork < 0
-gen diff_wno_teamwork = aetiwno_teamwork-rcgtiwno_teamwork
-gen diff_wo_teamwork = aetiwo_teamwork-rcgtiwo_teamwork
-gen diff2_wno_teamwork = diff_wno_teamwork*diff_wno_teamwork
-gen diff2_wo_teamwork = diff_wo_teamwork*diff_wo_teamwork
-
-gen rcgtiwno_rulebreaker = rulebreaker_ideal - rulebreaker_recentc
-gen rcgtiwo_rulebreaker = rulebreaker_ideal - rulebreaker_recentc
-replace rcgtiwno_rulebreaker = 0 if rcgtiwno_rulebreaker < 0
-gen diff_wno_rulebreaker = aetiwno_rulebreaker-rcgtiwno_rulebreaker
-gen diff_wo_rulebreaker = aetiwo_rulebreaker-rcgtiwo_rulebreaker
-gen diff2_wno_rulebreaker = diff_wno_rulebreaker*diff_wno_rulebreaker
-gen diff2_wo_rulebreaker = diff_wo_rulebreaker*diff_wo_rulebreaker
-
-* // 7.5 seems to be a real shelling point...i wonder why?
-* // queue some other paper on unconcious logical bias; 7.5 is the 'very mark' half way between 5 and 10
-* // interpreted this way, 7.2 salary means 'ideal candidate costs more than average, but not very well paid'
-gen rcgtiwno_salary = salary_ideal - salary_recentc
-gen rcgtiwo_salary = salary_ideal - salary_recentc
-replace rcgtiwno_salary = 0 if rcgtiwno_salary < 0
-gen diff_wno_salary = aetiwno_salary-rcgtiwno_salary
-gen diff_wo_salary = aetiwo_salary-rcgtiwo_salary
-gen diff2_wno_salary = diff_wno_salary*diff_wno_salary
-gen diff2_wo_salary = diff_wo_salary*diff_wo_salary
-
-gen istruncated_acng = aetiwno_concientiousness == 0
-gen istruncated_rcg = rcgtiwno_concientiousness == 0
+* // gen istruncated_acng = aetiwno_concientiousness == 0
+* // gen istruncated_rcg = rcgtiwno_concientiousness == 0
 
 gen isideal_acng = concientiousness_ngwac == concientiousness_ideal
 gen isideal_rcg = concientiousness_recent == concientiousness_ideal
 gen isbetter_acng_concientiousness = concientiousness_ngwac > concientiousness_recent
 gen isbetter_acng_commute = willingtocommute_ngwac > willingtocommute_recent
 gen isbetter_acng_bodylanguage = bodylanguage_ngwac > bodylanguage_recent
-
-gen aetiwno_price_x_con = aetiwno_salary*aetiwno_concientiousness
-gen rcgtiwno_price_x_con = rcgtiwno_salary*rcgtiwno_concientiousness
-gen diff_wno_price_x_con = aetiwno_price_x_con-rcgtiwno_price_x_con
-gen diff2_wno_price_x_con = diff_wno_price_x_con*diff_wno_price_x_con
 
 * // oq = overqualified
 * // it's like an inverse _wno_ operation
@@ -192,6 +108,88 @@ drop roughlyhowmany
 drop thinkingaboutthejobtitle
 drop whichoftheseindustries
 drop whatstate
+
+gen rcgtiwno_attractiveness = attractiveness_ideal - attractiveness_recentc
+replace rcgtiwno_attractiveness = 0 if rcgtiwno_attractiveness < 0
+gen diff1_wno_attractiveness = aetiwno_attractiveness-rcgtiwno_attractiveness
+gen diff2_wno_attractiveness = diff1_wno_attractiveness*diff1_wno_attractiveness
+gen diff3_wno_attractiveness = diff1_wno_attractiveness*diff1_wno_attractiveness*diff1_wno_attractiveness
+
+gen rcgtiwno_eq = eq_ideal - eq_recentc
+replace rcgtiwno_eq = 0 if rcgtiwno_eq < 0
+gen diff1_wno_eq = aetiwno_eq-rcgtiwno_eq
+gen diff2_wno_eq = diff1_wno_eq*diff1_wno_eq
+gen diff3_wno_eq = diff1_wno_eq*diff1_wno_eq*diff1_wno_eq
+
+gen rcgtiwno_salary = salary_ideal - salary_recentc
+replace rcgtiwno_salary = 0 if rcgtiwno_salary < 0
+gen diff1_wno_salary = aetiwno_salary-rcgtiwno_salary
+gen diff2_wno_salary = diff1_wno_salary*diff1_wno_salary
+gen diff3_wno_salary = diff1_wno_salary*diff1_wno_salary*diff1_wno_salary
+
+gen rcgtiwno_written = written_ideal - written_recentc
+replace rcgtiwno_written = 0 if rcgtiwno_written < 0
+gen diff1_wno_written = aetiwno_written-rcgtiwno_written
+gen diff2_wno_written = diff1_wno_written*diff1_wno_written
+gen diff3_wno_written = diff1_wno_written*diff1_wno_written*diff1_wno_written
+
+gen rcgtiwno_verbal = verbal_ideal - verbal_recentc
+replace rcgtiwno_verbal = 0 if rcgtiwno_verbal < 0
+gen diff1_wno_verbal = aetiwno_verbal-rcgtiwno_verbal
+gen diff2_wno_verbal = diff1_wno_verbal*diff1_wno_verbal
+gen diff3_wno_verbal = diff1_wno_verbal*diff1_wno_verbal*diff1_wno_verbal
+
+gen rcgtiwno_bodylanguage = bodylanguage_ideal - bodylanguage_recentc
+replace rcgtiwno_bodylanguage = 0 if rcgtiwno_bodylanguage < 0
+gen diff1_wno_bodylanguage = aetiwno_bodylanguage-rcgtiwno_bodylanguage
+gen diff2_wno_bodylanguage = diff1_wno_bodylanguage*diff1_wno_bodylanguage
+gen diff3_wno_bodylanguage = diff1_wno_bodylanguage*diff1_wno_bodylanguage*diff1_wno_bodylanguage
+
+gen rcgtiwno_technicaljobskills = technicaljobskills_ideal - technicaljobskills_recentc
+replace rcgtiwno_technicaljobskills = 0 if rcgtiwno_technicaljobskills < 0
+gen diff1_wno_technicaljobskills = aetiwno_technicaljobskills-rcgtiwno_technicaljobskills
+gen diff2_wno_technicaljobskills = diff1_wno_technicaljobskills*diff1_wno_technicaljobskills
+gen diff3_wno_technicaljobskills = diff1_wno_technicaljobskills*diff1_wno_technicaljobskills*diff1_wno_technicaljobskills
+
+gen rcgtiwno_concientiousness = concientiousness_ideal - concientiousness_recentc
+replace rcgtiwno_concientiousness = 0 if rcgtiwno_concientiousness < 0
+gen diff1_wno_concientiousness = aetiwno_concientiousness-rcgtiwno_concientiousness
+gen diff2_wno_concientiousness = diff1_wno_concientiousness*diff1_wno_concientiousness
+gen diff3_wno_concientiousness = diff1_wno_concientiousness*diff1_wno_concientiousness*diff1_wno_concientiousness
+
+gen rcgtiwno_rulebreaker = rulebreaker_ideal - rulebreaker_recentc
+replace rcgtiwno_rulebreaker = 0 if rcgtiwno_rulebreaker < 0
+gen diff1_wno_rulebreaker = aetiwno_rulebreaker-rcgtiwno_rulebreaker
+gen diff2_wno_rulebreaker = diff1_wno_rulebreaker*diff1_wno_rulebreaker
+gen diff3_wno_rulebreaker = diff1_wno_rulebreaker*diff1_wno_rulebreaker*diff1_wno_rulebreaker
+
+gen rcgtiwno_customerserviceskill = customerserviceskill_ideal - customerserviceskill_recentc
+replace rcgtiwno_customerserviceskill = 0 if rcgtiwno_customerserviceskill < 0
+gen diff1_wno_customerserviceskill = aetiwno_customerserviceskill-rcgtiwno_customerserviceskill
+gen diff2_wno_customerserviceskill = diff1_wno_customerserviceskill*diff1_wno_customerserviceskill
+gen diff3_wno_customerserviceskill = diff1_wno_customerserviceskill*diff1_wno_customerserviceskill*diff1_wno_customerserviceskill
+
+gen rcgtiwno_teamwork = teamwork_ideal - teamwork_recentc
+replace rcgtiwno_teamwork = 0 if rcgtiwno_teamwork < 0
+gen diff1_wno_teamwork = aetiwno_teamwork-rcgtiwno_teamwork
+gen diff2_wno_teamwork = diff1_wno_teamwork*diff1_wno_teamwork
+gen diff3_wno_teamwork = diff1_wno_teamwork*diff1_wno_teamwork*diff1_wno_teamwork
+
+gen rcgtiwno_commute = willingtocommute_ideal - willingtocommute_recentc
+replace rcgtiwno_commute = 0 if rcgtiwno_commute < 0
+gen diff1_wno_commute = aetiwno_commute-rcgtiwno_commute
+gen diff2_wno_commute = diff1_wno_commute*diff1_wno_commute
+gen diff3_wno_commute = diff1_wno_commute*diff1_wno_commute*diff1_wno_commute
+
+gen rcgtiwno_oddhours = willingtoworkoddhours_ideal - willingtoworkoddhours_recentc
+replace rcgtiwno_oddhours = 0 if rcgtiwno_oddhours < 0
+gen diff1_wno_oddhours = aetiwno_oddhours-rcgtiwno_oddhours
+gen diff2_wno_oddhours = diff1_wno_oddhours*diff1_wno_oddhours
+gen diff3_wno_oddhours = diff1_wno_oddhours*diff1_wno_oddhours*diff1_wno_oddhours
+
+* // TODO: interesting, but not studied
+* // gen diff1_wno_price_x_con = aetiwno_price_x_con-rcgtiwno_price_x_con
+* // gen diff2_wno_price_x_con = diff1_wno_price_x_con*diff1_wno_price_x_con
 
 * // TODO: remember how STATA names a tab_gen variable:
 * // in alphabetical order, but skipping when 0 responses
@@ -221,7 +219,7 @@ label variable aetiwno_technicaljobskills "Gap, Technical"
 label variable aetiwo_teamwork "Gap, Teamwork"
 label variable aetiwno_teamwork "Gap, Teamwork"
 label variable fav "Hireability"
-label variable diff_alt2_wno_bodylanguage "Difference in Squared Body Language Communication Skill"
+* // label variable diff_alt2_wno_bodylanguage "Difference in Squared Body Language Communication Skill"
 label variable diff2_wno_bodylanguage "Squared Difference in Body Language Communication Skill"
 label variable rulebreakersnormsprobablyhaveaha "Rule Breakers Risky"
 label variable rulebreakersnormsmightbedoingsob "Rule Breakers Rockstars"

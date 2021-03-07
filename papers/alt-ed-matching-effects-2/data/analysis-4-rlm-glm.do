@@ -2,6 +2,10 @@ clear
 
 do "C:\Users\vandi\workspace\research-dissertation-case-for-alt-ed\papers\alt-ed-matching-effects-2\data\analysis-1-vars.do"
 
+* // TODO?
+* // purpose of this analysis: we found the most important gaps, but does rlm or glm change coefficients? no, just errors.
+* // I'm not even going to include this in the paper unless a ref asks. consider this whole file a TODO in that case.
+
 * // begin TODO
 * // p(factors, RLM), p(factors, RGLM) < p(factors, OLM)
 * // coefficients are the same across all three
