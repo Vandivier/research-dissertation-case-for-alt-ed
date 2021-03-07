@@ -54,10 +54,18 @@ reg favorability _ismanager1 _ismanager2 _isstem1 _isgender1 _iscompanysize3 _is
 reg favorability _ismanager1 _ismanager2 _isstem1 _isgender1 _iscompanysize3 _isawareofrelevantcredentials1 _isawareofrelevantcredentials2 _isawareofrelevantcredentials3 _isawareofrelevantcredentials4 _isindustry1 _isindustry3 _isindustry4 _isindustry6 _isindustry7 _isindustry8 _isindustry12 _isstate1 _isstate2 _isstate3 _isstate4 _isstate5 _isstate6 _isstate7 _isstate8 _isstate10 _isstate11 _isstate12 _isstate14 _isstate15 _isstate16 _isstate17 _isstate18 _isstate19 _isstate20 _isstate21 _isstate23 _isstate24 _isstate25 _isstate26 _isstate27 _isstate28 _isstate29 _isstate30 _isstate31 _isstate32 _isstate33 _isstate34 _isstate35 _isstate36 _isstate37 _isstate38 _isstate39 _isstate41 _isstate42 _isstate43 cd*2 cd*3 r_x_rulebreaker_rockstars r_x_rulebreaker_culture_add aetiwno_attractiveness aetiwno_body_x_it aetiwno_concientiousness aetiwno_eq aetiwno_rulebreaker rulebreakers*
 reg favorability _ismanager2 _isstem1 _isgender1 _iscompanysize3 _isawareofrelevantcredentials1 _isawareofrelevantcredentials2 _isawareofrelevantcredentials3 _isawareofrelevantcredentials4 _isindustry1 _isindustry3 _isindustry4 _isindustry6 _isindustry7 _isindustry8 _isindustry12 _isstate1 _isstate3 _isstate4 _isstate5 _isstate6 _isstate7 _isstate8 _isstate10 _isstate11 _isstate12 _isstate14 _isstate15 _isstate16 _isstate17 _isstate18 _isstate19 _isstate20 _isstate21 _isstate23 _isstate24 _isstate25 _isstate26 _isstate27 _isstate28 _isstate29 _isstate30 _isstate31 _isstate32 _isstate33 _isstate34 _isstate36 _isstate37 _isstate38 _isstate39 _isstate41 _isstate42 _isstate43 cd*2 cd*3 r_x_rulebreaker_rockstars r_x_rulebreaker_culture_add aetiwno_attractiveness aetiwno_body_x_it aetiwno_concientiousness aetiwno_eq aetiwno_rulebreaker rulebreakers*
 
-* // ar2 maximizing, at least locally
+* // ar2 maximizing, preferred
 * // n = 322; aetiwno*: r2=0.3543, ar2=0.2517
 reg favorability _ismanager2 _isstem1 _iscompanysize3 _isawareofrelevantcredentials1 _isawareofrelevantcredentials2 _isawareofrelevantcredentials3 _isawareofrelevantcredentials4 _isindustry1 _isindustry3 _isindustry4 _isindustry6 _isindustry7 _isindustry12 _isstate3 _isstate4 _isstate5 _isstate6 _isstate7 _isstate10 _isstate12 _isstate14 _isstate16 _isstate17 _isstate18 _isstate20 _isstate26 _isstate27 _isstate28 _isstate29 _isstate32 _isstate34 _isstate36 _isstate37 _isstate38 _isstate42 cd*2 cd*3 aetiwno_attractiveness aetiwno_body_x_it aetiwno_concientiousness aetiwno_eq rulebreakers*
 
+* // reducing to strong wip...but we are cutting clearly known factors like knowledge of credentials
+* // factors dropped in order: aetiwno_concientiousness, _isawareofrelevantcredentials*, company size, aetiwno_eq, aetiwno_body_x_it
+reg favorability _ismanager2 _isstem1 _iscompanysize3 _isawareofrelevantcredentials2 _isindustry1 _isindustry3 _isindustry4 _isindustry7 _isindustry12 _isstate3 _isstate4 _isstate5 _isstate6 _isstate12 _isstate14 _isstate16 _isstate17 _isstate18 _isstate26 _isstate27 _isstate29 _isstate32 _isstate37 _isstate38 _isstate42 cd*2 cd*3 aetiwno_attractiveness aetiwno_body_x_it aetiwno_eq rulebreakers*
+reg favorability _ismanager2 _isstem1 _isindustry1 _isindustry3 _isindustry4 _isindustry7 _isindustry12 _isstate4 _isstate6 _isstate12 _isstate16 _isstate17 _isstate32 _isstate37 cd*2 cd*3 aetiwno_attractiveness aetiwno_body_x_it rulebreakers*
+
+* // strong reg
+* // n = 322; aetiwno*: r2=0.2527, ar2=0.2135
+reg favorability _ismanager2 _isstem1 _isindustry3 _isindustry4 _isindustry7 _isstate4 _isstate12 _isstate16 _isstate17 _isstate32 cd*2 cd*3 aetiwno_attractiveness rulebreakers*
 
 * // remember to add robust option to ar2 and strong models for table...no B change but error correction...also note GLM
 
