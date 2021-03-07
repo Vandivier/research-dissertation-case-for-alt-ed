@@ -61,6 +61,11 @@ replace aetiwno_commute = 0 if aetiwno_commute < 0
 gen aetiwno_oddhours = willingtoworkoddhours_ideal - willingtoworkoddhours_ngwac
 replace aetiwno_oddhours = 0 if aetiwno_oddhours < 0
 
+* // TODO: repeat for each of 13 skills the diff_wno*1-3
+gen diff1_wno_bodylanguage = aetiwno_bodylanguage-rcgtiwno_bodylanguage
+gen diff2_wno_bodylanguage = diff_wno_bodylanguage*diff_wno_bodylanguage
+gen diff3_wno_bodylanguage = diff_wno_bodylanguage*diff_wno_bodylanguage*diff_wno_bodylanguage
+
 * // gen aetiwo_bodylanguage_x_it_industry = 1*2
 gen aetiwo_body_x_it = aetiwo_bodylanguage*_isindustry6
 gen aetiwno_body_x_it = aetiwno_bodylanguage*_isindustry6
@@ -83,10 +88,7 @@ gen r_x_rulebreaker_culture_add = aetiwno_rulebreaker*rulebreakersnormstendtobeg
 gen rcgtiwno_bodylanguage = bodylanguage_ideal - bodylanguage_recentc
 gen rcgtiwo_bodylanguage = bodylanguage_ideal - bodylanguage_recentc
 replace rcgtiwno_bodylanguage = 0 if rcgtiwno_bodylanguage < 0
-gen diff_wno_bodylanguage = aetiwno_bodylanguage-rcgtiwno_bodylanguage
 gen diff_wo_bodylanguage = aetiwo_bodylanguage-rcgtiwo_bodylanguage
-gen diff2_wno_bodylanguage = diff_wno_bodylanguage*diff_wno_bodylanguage
-gen diff3_wno_bodylanguage = diff_wno_bodylanguage*diff_wno_bodylanguage*diff_wno_bodylanguage
 gen diff2_wo_bodylanguage = diff_wo_bodylanguage*diff_wo_bodylanguage
 gen diff_alt2_wno_bodylanguage = rcgtiwno_bodylanguage*rcgtiwno_bodylanguage - aetiwno_bodylanguage*aetiwno_bodylanguage
 gen diff_alt3_wno_bodylanguage = rcgtiwno_bodylanguage*rcgtiwno_bodylanguage*rcgtiwno_bodylanguage - aetiwno_bodylanguage*aetiwno_bodylanguage*aetiwno_bodylanguage
@@ -177,6 +179,11 @@ gen oq_rcg_concientiousness = concientiousness_recentc - concientiousness_ideal
 replace oq_rcg_concientiousness = 0 if oq_rcg_concientiousness < 0
 gen oq_acng_concientiousness = concientiousness_ngwac - concientiousness_ideal
 replace oq_acng_concientiousness = 0 if oq_acng_concientiousness < 0
+
+gen m2aetiwno_concientiousness = aetiwno_concientiousness*aetiwno_concientiousness
+gen m2aetiwno_attractiveness = aetiwno_attractiveness*aetiwno_attractiveness
+gen m2aetiwno_body_x_it = aetiwno_body_x_it*aetiwno_body_x_it
+gen m2aetiwno_eq = aetiwno_eq*aetiwno_eq
 
 drop formanyprofessionsalternativecre
 drop howlongdoyoubelieveitusually

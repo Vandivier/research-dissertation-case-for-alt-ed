@@ -2,15 +2,7 @@ clear
 
 do "C:\Users\vandi\workspace\research-dissertation-case-for-alt-ed\papers\alt-ed-matching-effects-2\data\analysis-1-vars.do"
 
-* // diff is positive but insignificant; could become significant w bigger sample.
-* // ACNG has worse body lang skill bc positive diff_wno_bodylanguage
-sum rcgtiwno_bodylanguage aetiwno_bodylanguage diff_wno_bodylanguage diff_wo_bodylanguage bodylanguage_recentc bodylanguage_ngwac
-
-* // breaking rules is awesome and employers know it.
-* // measurement robust bc rulebreaker effects and rulebreaker gap both in consistent direction
-sum rulebreaker_ideal rulebreaker_ngwac rulebreaker_recentcollegegraduat rulebreaker_typicalemployeeatmyc
-reg fav aetiwno_rulebreaker
-
+* // begin TODO
 * // p(factors, RLM), p(factors, RGLM) < p(factors, OLM)
 * // coefficients are the same across all three
 * // also, GLM is overkill in the literature; but a nice-to-have robustness test
@@ -19,6 +11,11 @@ reg fav aetiwno_rulebreaker
 * // ref: https://www.stata.com/news/generalized-linear-models-and-extensions/
 * // ref: https://stats.stackexchange.com/questions/427206/test-to-know-when-to-use-glm-over-linear-regression
 * // compare p(F) linear, rlm, glm
+* // end TODO
+
+* // diff is positive but insignificant; could become significant w bigger sample.
+* // ACNG has worse body lang skill bc positive diff_wno_bodylanguage
+sum rcgtiwno_bodylanguage aetiwno_bodylanguage diff_wno_bodylanguage diff_wo_bodylanguage bodylanguage_recentc bodylanguage_ngwac
 
 * // diff* is ACNG - recent college grad; so positive coeff means ACNG is comparatively valued for having a bigger gap
 * // skills i care about from preferred reg...aetiwno_bodylanguage aetiwno_commute aetiwno_concientiousness aetiwno_customerserviceskill aetiwno_technicaljobskills aetiwno_teamwork aetiwno_rulebreaker
@@ -187,68 +184,3 @@ reg fav diff_wno_bodylanguage diff3_wno_bodylanguage diff3_wno_concientiousness
 estimates store R9, title(Model 9)
 qui testparm*
 estadd scalar f_p_value = r(p)
-
-*** // bunch of interesting historical bullshit below
-
-* // i can't use the _alt specification; it doesn't actually tell us if slope is increasing/decreasing/etc
-* // it is a marginal fx differential not a real marginal effect...not super useful and not what our theory predicts.
-* // noconstant is interesting but i shouldn't use that...see analysis-8...do for some refs
-* // basically, if all my skill gaps are 0 it doesn't mean hireability is 0, so i need constant
-reg fav diff_alt2_wno_bodylanguage if diff_alt2_wno_body < 0
-reg fav diff_alt2_wno_bodylanguage if diff_alt2_wno_body < 0, noconstant
-reg fav diff_alt2_wno_bodylanguage, noconstant
-reg fav diff2_wno_bodylanguage, noconstant
-reg fav diff2_wo_bodylanguage, noconstant
-
-* // i suspect there's a hidden cubic...let's check residuals
-* // there is a heavy influencing outlier. so check with and without that outlier.
-* //
-* // residuals + normality info: https://campusguides.lib.utah.edu/c.php?g=160853&p=1054157
-* // normality is violated, but per above article this means we have to throw out p-value and F-test but it doesn't undermine coefficients
-* // cubic actually slightly reduces residual normality, but that's ok bc i think the data really isn't normal and it's a better fit model
-* //
-* // TODO: long paper food...
-* // there aren't enough samples and degrees of freedom to give confidence to an analysis which systematically and simulataneouly investigates linear, quadratic,
-* // and cubic fx for all skills plus higher power interactions.
-* // get a sample 2-10x current sample size we would be gtg.
-twoway scatter fav diff_alt2_wno_bodylanguage || lfit fav diff_alt2_wno_bodylanguage
-twoway scatter fav diff_alt2_wno_bodylanguage if diff_alt2_wno_bodylanguage > -40 || lfit fav diff_alt2_wno_bodylanguage if diff_alt2_wno_bodylanguage > -40
-reg fav diff_alt2_wno_bodylanguage
-predict y_from_alt2_bodylang, residuals
-swilk y_from_alt2_bodylang
-rvfplot
-reg fav diff_wno_body diff_alt2_wno_bodylanguage diff_alt3_wno_bodylanguage
-estimates store R10, title(Model 10)
-qui testparm*
-estadd scalar f_p_value = r(p)
-predict y_res_from_alt_multi_bodylang, residuals
-predict y_from_alt_multi_bodylang
-
-* // negative adj r2 and insignificant p(F)...this model doesn't fly.
-reg fav diff_wno_con diff_alt2_wno_concientiousness diff_alt3_wno_concientiousness
-* // among bad options, this is the best con model we have...so no, we don't want the con cubic
-reg fav diff_alt2_wno_concientiousness
-* // not a single p < 0.5 here...it is not comparable to the bodylang case
-* // linear effect only is best p(F)...so again no we don't want cubic
-reg fav diff_wno_commute diff_alt2_wno_commute diff_alt3_wno_commute
-predict y_from_alt_multi_commute
-predict y_res_from_alt_multi_commute, residuals
-twoway scatter y_from_alt_multi_commute diff_wno_commute
-
-* // below makes `difference-in-squared-body-lang.jpeg'
-* // total effect as body lang increases is deacrease, whether using _wno or diff_alt
-* // they all not normal
-* // residuals look sysematically non-normal; below line for exteme values; may represent kurtosis or middle-concentration (predictable for likert-type)
-* // log transform is a possible kurtosis fix https://www.researchgate.net/post/how_to_reduce_skewness_and_kurtosis
-* // also other kinds of other regression, nl, maybe ologit, or boolean decomposition
-* // also maybe Leptokurtic adjustment or use Golden Ratio to estimate SE/SD and ignore kurtosis https://www.researchgate.net/post/What_type_of_data_transformation_is_suitable_for_high_Kurtosis_data
-swilk y_res_from_alt_multi_bodylang
-qnorm y_res_from_alt_multi_bodylang
-scatter y_from_alt_multi_bodylang diff_wno_bodylanguage
-twoway scatter y_from_alt_multi_bodylang diff_wno_bodylanguage, xtitle("Difference in Body Language Skill") ytitle("Predicted Hireability")
-
-* // label variable l1 "Linear"
-* // label variable l2 "Quadratic"
-* // label variable l3 "Cubic"
-* // twoway (scatter fav diff_wno_concientiousness) (lfit fav diff_wno_concientiousness, ytitle(Linear)) (qfit fav diff_wno_concientiousness) (scatter l3 diff_wno_concientiousness), xtitle(Comparative Gap in Concientiousness) ytitle(Hireability)
-* // twoway (scatter fav diff_wno_concientiousness) (scatter l1 diff_wno_concientiousness) (scatter l2 diff_wno_concientiousness) (scatter l3 diff_wno_concientiousness), xtitle(Comparative Gap in Concientiousness) ytitle(Hireability)
