@@ -2,9 +2,22 @@ clear
 
 do "C:\Users\vandi\workspace\research-dissertation-case-for-alt-ed\papers\alt-ed-matching-effects-2\data\analysis-1-vars.do"
 
-* // TODO?
-* // purpose of this analysis: we found the most important gaps, but does rlm or glm change coefficients? no, just errors.
-* // I'm not even going to include this in the paper unless a ref asks. consider this whole file a TODO in that case.
+* // purpose of this analysis: mainly just to check if p>0.5 for OLM factors and summary stats
+* // extended use of GLM can be done if refs ask. note that RLM / GLM don't modify coefficients, just errors.
+* // in order below, reiterate preferred model, then add robust, then glm robust
+* // results: aetiwno_body_x_it, _isstate34, are pushed over p(0.3), but no coefficient change and no p'>p
+* //    also, p|GLM < p|RLM, so OLS seems a bit overfit and RLM seems a bit underfit compared to GLM; important skills don't change
+reg favorability _ismanager2 _isstem1 _iscompanysize3 _isawareofrelevantcredentials1 _isawareofrelevantcredentials2 _isindustry3 _isindustry4 _isindustry6 _isindustry7 _isindustry12 _isstate3 _isstate4 _isstate5 _isstate6 _isstate12 _isstate14 _isstate16 _isstate17 _isstate18 _isstate26 _isstate27 _isstate28 _isstate29 _isstate32 _isstate34 _isstate36 _isstate37 _isstate38 _isstate42 cd*1 cd*2 diff1_wno_customerserviceskill diff1_wno_oddhours diff1_wno_teamwork diff1_wno_written aetiwno_attractiveness aetiwno_body_x_it aetiwno_concientiousness rulebreakers*
+reg favorability _ismanager2 _isstem1 _iscompanysize3 _isawareofrelevantcredentials1 _isawareofrelevantcredentials2 _isindustry3 _isindustry4 _isindustry6 _isindustry7 _isindustry12 _isstate3 _isstate4 _isstate5 _isstate6 _isstate12 _isstate14 _isstate16 _isstate17 _isstate18 _isstate26 _isstate27 _isstate28 _isstate29 _isstate32 _isstate34 _isstate36 _isstate37 _isstate38 _isstate42 cd*1 cd*2 diff1_wno_customerserviceskill diff1_wno_oddhours diff1_wno_teamwork diff1_wno_written aetiwno_attractiveness aetiwno_body_x_it aetiwno_concientiousness rulebreakers*, robust
+glm favorability _ismanager2 _isstem1 _iscompanysize3 _isawareofrelevantcredentials1 _isawareofrelevantcredentials2 _isindustry3 _isindustry4 _isindustry6 _isindustry7 _isindustry12 _isstate3 _isstate4 _isstate5 _isstate6 _isstate12 _isstate14 _isstate16 _isstate17 _isstate18 _isstate26 _isstate27 _isstate28 _isstate29 _isstate32 _isstate34 _isstate36 _isstate37 _isstate38 _isstate42 cd*1 cd*2 diff1_wno_customerserviceskill diff1_wno_oddhours diff1_wno_teamwork diff1_wno_written aetiwno_attractiveness aetiwno_body_x_it aetiwno_concientiousness rulebreakers*, robust
+
+* // summary stats
+* // mean 7.42, median of 8
+* // n=322. 21 partial responses but they did not affect the preferred models; so full 322 in models.
+* // 10 responses (about 3.1%) with fav < 4 accounts for skew
+sum fav, d
+
+* // note: below analysis not used in paper
 
 * // begin TODO
 * // p(factors, RLM), p(factors, RGLM) < p(factors, OLM)
