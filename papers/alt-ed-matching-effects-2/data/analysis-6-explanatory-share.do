@@ -26,11 +26,3 @@ reg fav aetiwo_bodylanguage aetiwo_concientiousness aetiwo_customerserviceskill 
 * // robust skill gaps with no overqualification
 * // n=212, r2=0.0933, ar2=0.0758, maxp=0.115
 reg fav aetiwno_bodylanguage aetiwno_concientiousness aetiwno_customerserviceskill aetiwno_body_x_it
-
-* // robust skill gaps (3 + an interaction): bodylanguage, concientiousness, customerserviceskill, body_x_it
-* // semi-robust skill gaps (either maxar2 model, superset of robust): commute, salary, teamwork, rulebreaker, technicaljobskills
-* // notice that semi-robust skill gaps are generally structurally/theoretically important...but we can't say the same for states/industries...
-* // that's why it's ok semi-robust skill gaps in preferred model but not states/industries
-* // generally supports soft-skill dominance; but not EQ per se
-* // skill gaps 1.5-2x as important industry or states but rulebreaker effects even more important.
-* // simple (linear) analysis friendly to 'no overqualification' specification; heterogenous nonlinear effects might be harder to detect tho

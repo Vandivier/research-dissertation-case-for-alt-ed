@@ -22,7 +22,7 @@ reg favorability _ismanager2 _isstem1 _iscompanysize3 _isawareofrelevantcredenti
 
 * // after eliminating insignificant vars we still have higher r2 and ar2
 * // n = 322; r2=0.3706, ar2=0.2784;
-reg favorability _ismanager2 _isstem1 _iscompanysize3 _isawareofrelevantcredentials1 _isawareofrelevantcredentials2 _isindustry3 _isindustry4 _isindustry6 _isindustry7 _isindustry12 _isstate3 _isstate4 _isstate5 _isstate6 _isstate12 _isstate14 _isstate16 _isstate17 _isstate18 _isstate26 _isstate27 _isstate28 _isstate29 _isstate32 _isstate34 _isstate36 _isstate37 _isstate38 _isstate42 cd*1 cd*2 diff1_wno_customerserviceskill diff1_wno_oddhours diff1_wno_teamwork diff1_wno_written aetiwno_attractiveness aetiwno_body_x_it aetiwno_concientiousness rulebreakers*
+reg favorability _ismanager2 _isstem1 _iscompanysize3 _isawareofrelevantcredentials1 _isawareofrelevantcredentials2 _isindustry3 _isindustry4 _isindustry6 _isindustry7 _isindustry12 _isstate3 _isstate4 _isstate5 _isstate6 _isstate12 _isstate14 _isstate16 _isstate17 _isstate18 _isstate26 _isstate27 _isstate28 _isstate29 _isstate32 _isstate34 _isstate36 _isstate37 _isstate38 _isstate42 cduration1 cduration2 diff1_wno_customerserviceskill diff1_wno_oddhours diff1_wno_teamwork diff1_wno_written aetiwno_attractiveness aetiwno_body_x_it aetiwno_concientiousness rulebreakers*
 
 * // special; force rulebreaker gaps in
 * // they aren't significant but they are positively signed; interesting for the story
@@ -33,3 +33,10 @@ reg favorability _ismanager2 _isstem1 _iscompanysize3 _isawareofrelevantcredenti
 * // 2. unlikely to flip signs
 * // 3a. creates complexity in interpretation and **raises more questions than it answers (interactions, how to square a diff...)
 * // 3b. could be interesting future research
+
+* // visualize results using top-line boxplots. maybe low hanging diagnostic fruit? commented visualization ideas follow but won't be used
+* // ref: stata.com/links/resources-for-learning-stata/cheat-sheets/StataCheatSheet_visualization_2016_June-REV.pdf
+graph hbox diff1_wno_customerserviceskill diff1_wno_oddhours diff1_wno_teamwork diff1_wno_written aetiwno_attractiveness aetiwno_body_x_it aetiwno_concientiousness
+
+* // ig this is kinda cool but won't use
+* // graph matrix rulebreakersnormsmightbedoingsob rulebreakersnormsprobablyhaveaha rulebreakersnormstendtobegiftedi fav

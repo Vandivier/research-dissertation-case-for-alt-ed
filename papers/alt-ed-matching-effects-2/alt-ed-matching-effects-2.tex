@@ -313,18 +313,6 @@ If firm size effects are positively associated with ACNG hireability, this will 
 
 
 \section{Data and Methodology}
-% note: description of data / model / methodology: one section in a short paper; can be broken into seperate sections for a long paper...or can it? seems kinda intertwined
-% for this paper: methodology [i. model / method of analysis, ii. description of data collection iii. additional description of data as needed at factor level]
-% I don't feel the need to spell out an OLS model equation unless requested by a reviewer
-% I don't feel the need to spell out the risk aversion model equation unless requested by a reviewer (it's just a signal multiplier on actual skill which varies by credential and employer)
-% the risk aversion model i feel is more interesting, but it would be an inappropriately high level of focus and detail for an item of secondary interest
-
-% The method of this study begins with a decomposition of the main hypothesis into three simple statistical tests.
-% This study applies the three-step method to the case of the ACNG, but the three-step method itself is sufficiently general to apply to any measurably distinct job candidate type.
-% First, skill gaps are identified as independent factors with a general ability to explain hireability.
-% Second, the coefficient for a
-% Finally, gaps in soft skills are hypothesized to be more important than technical skill gaps.
-% If the above three conditions hold, ACNG labor dispreference can be explained with or without comparing labor outcomes to the college graduate.
 
 A simple model of demand for labor provides context for the hypothesis of interest.
 This model is clarified in Equations \ref{eq1} and \ref{eq2}:
@@ -446,7 +434,7 @@ The second statement indicates that nonconformists are held back by rules and ``
 This statement received the most agreement and least variance among rulebreaker statements ($\mu = 6.93, \sigma = 2.10$).
 The agreement with this statement provides evidence against the thesis that employers value conformity for its own sake.
 In turn, this adds weight to the theory that employers value conformity as a risk aversion tactic while knowing that nonconformity signals positive outlier potential.
-The third description of nonconformists states that they are creative, innovative, and may benefit company culture ($\mu = 6.71, \sigma = 2.18$).
+The third rulebreaker effect states that rulebreakers are creative, innovative, and likely to benefit company culture ($\mu = 6.71, \sigma = 2.18$).
 % managers are wary of ACNG, having high correlation with "Rule Breakers Risky"
 % reg _ismanager1 rulebreakersnormsmightbedoingsob rulebreakersnormsprobablyhaveaha rulebreakersnormstendtobegiftedi
 
@@ -464,6 +452,16 @@ The third description of nonconformists states that they are creative, innovativ
 % Raw perceived ACNG skill gaps are calculated by differencing the perceived skill of an ideal candidate with the perceived skill of an ACNG.
 % % technically, the actual skill of an ideal candidate equals the perceived skill so the adjective is extraneous; but let's be consistent and not confuse reader.
 
+Rulebreaker effects and perceived skill gaps are structurally linked.
+One of the skills that respondents evaluate is nonconformity, or ``willingness to break formal or informal rules and norms.''
+Interpreting rulebreaker effects jointly with the conformity gap effect
+% Joint interpretation of nonconformity and rulebreaker effects
+enables better explanatory power and diagnostic utility.
+% Explanatory power is improved because conformity has potential benefits and costs.
+% Aggregating these effects under a single variable creates noise.
+% Explanatory power is improved because employers can express that they value conformity either per se or as a proxy for some other qualities.
+% Diagnostic utility is improved because alternative learning providers may be able to accomodate whatever non-per-se qualities employers value.
+
 Perceived skill questions in the second section of the survey allow for two ways to calculate perceived skill gaps.
 Perceived skill gaps are measured separately with and without overqualification effects.
 Overqualification effects are important in external research\cite{green2007there, raybould2005over}, but skill gap analysis that ignores these effects is also routine\cite{blake_2018}.
@@ -476,34 +474,33 @@ For each of 13 skills, the respondent imagines and reports skill levels for the 
 the average actual employee,
 the average recent college graduate,
 and the average ACNG.
-Raw perceived ACNG skill gaps equal the difference of the perceived skill of an ideal candidate with the perceived skill of an ACNG.
+As a result, 52 of the 65 questions in the survey are questions on perceived skill about kind of candidate.
+
+The raw skill gap for some kind of candidate is the difference between the perceived skill for that candidate and the ideal candidate.
 The perceived skill gap with overqualification effects equals the raw perceived skill gap.
-The perceived skill gap without overqualification effects is calculated as the raw skill gap or zero if the raw skill gap value is negative.
+The perceived skill gap without overqualification is zero if the raw skill gap is negative,
+and otherwise it is equal to the raw skill gap.
 
-Rulebreaker effects and perceived skill gaps are structurally linked.
-One of the skills that respondents evaluate is nonconformity, or ``willingness to break formal or informal rules and norms.''
-Nonconformity interacts with employer disposition to rulebreaking.
-For this reason, discussions on the importance of skill gaps include discussion on rulebreaker effects.
+Results focus on ACNG skill gap coefficients, and also comparative skill gaps between ACNG labor and recent college graduates.
+Perceived ACNG skill gaps are also called absolute skill gaps.
+Subtracting the perceived recent college graduate skill gap from the absolute skill gap yiels the comparative skill gap.
+% In this study, overqualification effects ended up reducing explanatory power, so they are largely ignored.
 
-% TODO: long paper food...spell out OLS model. it is hireability = f(employer status, firm size, duration, industry, state, rulebreakers, skill gaps) there is also the skill gap-it interaction...
+% TODO: discuss the thirteen skill gaps, cite halo effect, etc
 
-% MAYBE TODO: delete this paragraph
-These methods allow for the identification of a preferred model that explains hireability using perceived ACNG skill gaps.
-The identified model will support the hypothesis if soft skills are more important than technical skill gaps. % and negatively affect ACNG hireability.
-The model will support the risk aversion explanation of ACNG hireability over an explanation from conformity selection if large employer size is positively associated with hireability.
-% If employers preferentially value soft skills then soft skill gaps should be identified as important and negatively relate to ACNG hireability.
-% MAYBE TODO: I said this earlier in this same section...am I referencing the main hypothesis too often or is it healthy?
+Models of these variables will support the hypothesis if soft skills are more important than technical skill gaps.
+Significant rulebreaker effects would provide evidence that conformity is not valued by employers per se.
+A positive relationship between firm size and hireability would support an explanation from risk aversion.
 % MAYBE TODO: I also expect signs to be generally negative and soft skills should be statistically significantly less for ACNG compared to recent college graduate
-% MAYBE TODO: rulebreaker effects and firm size effects also contribute to solutioning the risk aversion hypothesis
 
-The last section of results goes over comparative results between ACNG skill gaps and gaps among recent college graduates.
-The comparative analysis provides additional confidence in the data by replicating the hireability gap between ACNG labor and recent college graduates reported in external research.
-Model 6, the initial comparative model, results from an adjustment of Model 5, the preferred noncomparative model of hireability.
-Each perceived skill gap in Model 5 is replaced with a comparative skill gap variable to generate Model 6.
-Comparative skill gaps equal the perceived skill gap for the ACNG minus the recent college graduate's perceived skill gap.
-Multiple regression of these comparison factors on hireability demonstrates which, if any, perceived skill gaps are important distinguishers of the ACNG from the college graduate.
-Identification of significant differences with a total negative effect on hireability will replicate external data on the lower job market value of ACNG labor
-and provide a diagnostic that can be used by alternative learning providers to assist in remediating the gap in labor outcomes.
+% The last section of results goes over comparative results between ACNG skill gaps and gaps among recent college graduates.
+% The comparative analysis provides additional confidence in the data by replicating the hireability gap between ACNG labor and recent college graduates reported in external research.
+% Model 6, the initial comparative model, results from an adjustment of Model 5, the preferred noncomparative model of hireability.
+% Each perceived skill gap in Model 5 is replaced with a comparative skill gap variable to generate Model 6.
+% Comparative skill gaps equal the perceived skill gap for the ACNG minus the recent college graduate's perceived skill gap.
+% Multiple regression of these comparison factors on hireability demonstrates which, if any, perceived skill gaps are important distinguishers of the ACNG from the college graduate.
+% Identification of significant differences with a total negative effect on hireability will replicate external data on the lower job market value of ACNG labor
+% and provide a diagnostic that can be used by alternative learning providers to assist in remediating the gap in labor outcomes.
 % although the negation of the above sentence does not provide evidence against the main hypothesis...because hireability is wrt ACNG labor; we don't have recent grad hireability data in sample
 
 % begin low importance comment...
@@ -553,24 +550,31 @@ and provide a diagnostic that can be used by alternative learning providers to a
 
 \section{Results}
 
-The median favorability response was eight out of ten.
+% Hireability in this study is called favorability in the COVID study.
+% Here, I want to highlight the theoretical connection to willingness to pay.
+% In the other study, I wanted to highlight the psychometric connection to familiarity bias and so forth
+The median hireability response was eight out of ten.
 The mean response is about 7.42.
-% Of 322 responses, 10 responses indicate a favorability of less than four out of ten.
+% Of 322 responses, 10 responses indicate a hireability of less than four out of ten.
 % Partial responses were submitted in 21 cases, but partial responses did not impact factors in models of interest.
-Absolute skill gaps and comparative skills gaps are both important explanations of favorability.
-Soft skills explain favorability better than technical skill does in both absolute and comparative terms.
+Absolute skill gaps and comparative skills gaps are both important explanations of hireability.
+Soft skills explain hireability better than technical skill does in both absolute and comparative terms.
 Technical skill is not a significant factor in the preferred model.
 Of the thirteen skills investigated, seven skills contribute to the preferred model.
 
-TODO: skill gap ols, gap of gaps ols
+% TODO: skill gap ols, gap of gaps ols
 
-TODO: final ols
+% TODO: final ols
 
-TODO: consider RLM, GLM, and control variables.
+% TODO: consider RLM, GLM, and control variables.
 
 % TODO: maybe Compare directly to bootcamp results from Indeed: https://www.indeed.com/lead/what-employers-think-about-coding-bootcamp
 
-\subsection{A Model of Absolute Skill Gaps}
+% TODO: in preferred model, discuss Duration forced in, don't worry bout multicollinearity bc N/A dropped; rulebreaker gaps forced in
+
+% \subsection{A Model of Absolute Skill Gaps}
+
+Table 
 
 Skill gaps are the difference between what an employer desired and what a candidate presents.
 Results will specifically refer to ACNG Skill Gaps as absolute skill gaps to emphasize their distinction with comparative skill gaps.
@@ -600,7 +604,7 @@ Seven skill gaps were important in Model 5, the preferred model.
 Evidence is found for an important interaction between the information technology industry and perceived body language communication skills.
 
 \begin{table}
-    \caption{Table of Coefficients for Multiple Regressions on hireability, Selected Variables}
+    \caption{Table of Coefficients for Multiple Regressions on Hireability, Selected Variables}
     \resizebox{\columnwidth}{!}{
         \input{./figures-and-tables/table-2-massaged.tex}
     }
@@ -719,7 +723,7 @@ Suppose that there is a diminished technical need for social skills in programmi
 In that case, introverts obtain a comparative advantage in this field.
 Further study that includes personality data is encouraged to test this hypothesis.
 
-\subsection{Explanatory Share of Perceived Gaps}
+% \subsection{Explanatory Share of Perceived Gaps}
 
 The preferred model explains about one-third of hireability variance, but how much of the explanatory power is attributable to perceived skill gaps?
 Table \ref{tab:explantory_power} provides evidence on the importance of perceived skill gaps and rulebreaker effects relative to other factor groups.
@@ -769,7 +773,7 @@ Rulebreaker effects are about twice as important as perceived skill gaps.
 % This contrasts with something like poor communication skill which is generally detrimental.
 These findings collectively provide evidence that perceived skill gaps and rulebreaker effects are factors of high importance for models of hireability.
 
-\subsection{Perceived Gaps Compared to the Recent College Graduate}
+% \subsection{Perceived Gaps Compared to the Recent College Graduate}
 
 Table \ref{tab:gap_of_gaps} provides two models of hireability where comparative skill gaps are independent factors.
 Replacing perceived skill gap factors in Model 5 with comparative perceived skill gap factors, then dropping other factors, results in Model 6.

@@ -58,6 +58,7 @@ reg favorability _ismanager2 _isstem1 _isgender1 _iscompanysize3 _isawareofrelev
 * // n = 322; aetiwno*: r2=0.3543, ar2=0.2517
 reg favorability _ismanager2 _isstem1 _iscompanysize3 _isawareofrelevantcredentials1 _isawareofrelevantcredentials2 _isawareofrelevantcredentials3 _isawareofrelevantcredentials4 _isindustry1 _isindustry3 _isindustry4 _isindustry6 _isindustry7 _isindustry12 _isstate3 _isstate4 _isstate5 _isstate6 _isstate7 _isstate10 _isstate12 _isstate14 _isstate16 _isstate17 _isstate18 _isstate20 _isstate26 _isstate27 _isstate28 _isstate29 _isstate32 _isstate34 _isstate36 _isstate37 _isstate38 _isstate42 cd*2 cd*3 aetiwno_attractiveness aetiwno_body_x_it aetiwno_concientiousness aetiwno_eq rulebreakers*
 
+* // regoi1
 * // special aside, preferred; not used for reduction
 * // shift c*2,3 -> c*1,2 for smiplicity and understanding, negligiable ar2 decrease; better ar2 than categorical duration
 * // n = 322; aetiwno*: r2=0.3539, ar2=0.2512
@@ -68,6 +69,7 @@ reg favorability _ismanager2 _isstem1 _iscompanysize3 _isawareofrelevantcredenti
 reg favorability _ismanager2 _isstem1 _iscompanysize3 _isawareofrelevantcredentials2 _isindustry1 _isindustry3 _isindustry4 _isindustry7 _isindustry12 _isstate3 _isstate4 _isstate5 _isstate6 _isstate12 _isstate14 _isstate16 _isstate17 _isstate18 _isstate26 _isstate27 _isstate29 _isstate32 _isstate37 _isstate38 _isstate42 cd*2 cd*3 aetiwno_attractiveness aetiwno_body_x_it aetiwno_eq rulebreakers*
 reg favorability _ismanager2 _isstem1 _isindustry1 _isindustry3 _isindustry4 _isindustry7 _isindustry12 _isstate4 _isstate6 _isstate12 _isstate16 _isstate17 _isstate32 _isstate37 cd*2 cd*3 aetiwno_attractiveness aetiwno_body_x_it rulebreakers*
 
+* // regoi2
 * // strong reg
 * // n = 322; aetiwno*: r2=0.2527, ar2=0.2135
 reg favorability _ismanager2 _isstem1 _isindustry3 _isindustry4 _isindustry7 _isstate4 _isstate12 _isstate16 _isstate17 _isstate32 cd*2 cd*3 aetiwno_attractiveness rulebreakers*
