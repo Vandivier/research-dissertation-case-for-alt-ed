@@ -1,69 +1,131 @@
+% derived from analysis-5-regs-table.do
 {
 \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
 \begin{tabular}{l*{5}{c}}
-    \toprule
-                             & \multicolumn{1}{c}{Model 1} & \multicolumn{1}{c}{Model 2} & \multicolumn{1}{c}{Model 3} & \multicolumn{1}{c}{Model 4} & \multicolumn{1}{c}{Model 5} \\
-    \midrule
-    % Duration 1 Year$+$        &                       & 9.582e-01\sym{*}      &                       &                       & 8.746e-01\sym{*}            \\
-    %                           &                       & (3.090e-01)           &                       &                       & (3.109e-01)                 \\
-    % \addlinespace
-    % Employees $201-500$       & 4.526e-01             & 5.611e-01\sym{+}      & 5.135e-01\sym{+}      & 4.644e-01             & 5.963e-01\sym{++}           \\
-    %                           & (2.952e-01)           & (2.857e-01)           & (2.999e-01)           & (3.001e-01)           & (2.932e-01)                 \\
-    % \addlinespace
-    % Employees $10,000+$       & 7.610e-01             & 6.669e-01             & 5.083e-01             & 5.620e-01             & 5.898e-01                   \\
-    %                           & (4.615e-01)           & (4.585e-01)           & (4.789e-01)           & (4.809e-01)           & (4.707e-01)                 \\
-    % \addlinespace
-    % Is Manager                & 1.265e+00             & 1.698e+00\sym{+}      & 5.416e-01             & 6.437e-01             & 6.972e-01                   \\
-    %                           & (9.700e-01)           & (9.402e-01)           & (8.642e-01)           & (8.570e-01)           & (8.388e-01)                 \\
-    % \addlinespace
-    % Is Employed Non-Manager   & 1.587e+00\sym{+}      & 1.959e+00\sym{++}     & 9.190e-01             & 9.435e-01             & 1.006e+00                   \\
-    %                           & (9.590e-01)           & (9.255e-01)           & (8.499e-01)           & (8.427e-01)           & (8.252e-01)                 \\
-    % \addlinespace
-    Gap, Body Language       & -2.240e-01\sym{*}           & -3.831e-01\sym{**}          & -1.507e-01\sym{+}           & -3.155e-01\sym{*}           & -3.060e-01\sym{*}           \\
-                             & (8.314e-02)                 & (1.124e-01)                 & (8.980e-02)                 & (1.173e-01)                 & (1.145e-01)                 \\
-    \addlinespace
-    Gap, Body Language-IT    & 2.199e-01\sym{+}            & 2.298e-01                   & 1.837e-01                   & 2.791e-01                   & 2.771e-01\sym{+}            \\
-                             & (1.269e-01)                 & (1.656e-01)                 & (1.334e-01)                 & (1.707e-01)                 & (1.665e-01)                 \\
-    \addlinespace
-    Gap, Commute             &                             & -2.320e-01\sym{++}          & -4.953e-02                  & -1.197e-01                  & -1.582e-01                  \\
-                             &                             & (9.720e-02)                 & (6.862e-02)                 & (1.023e-01)                 & (1.010e-01)                 \\
-    \addlinespace
-    Gap, Conscientiousness   & 2.416e-01\sym{*}            & 3.223e-01\sym{*}            & 1.387e-01                   & 2.174e-01\sym{+}            & 2.175e-01\sym{++}           \\
-                             & (8.000e-02)                 & (1.045e-01)                 & (8.483e-02)                 & (1.129e-01)                 & (1.093e-01)                 \\
-    \addlinespace
-    Gap, Customer Service    & -1.259e-01\sym{+}           & -1.512e-01                  & -1.253e-01\sym{+}           & -1.276e-01                  & -1.323e-01                  \\
-                             & (6.389e-02)                 & (9.599e-02)                 & (7.162e-02)                 & (1.037e-01)                 & (1.009e-01)                 \\
-    \addlinespace
-    Gap, Nonconformity       &                             & -6.336e-02                  & -3.896e-02                  & -8.535e-02                  & -1.034e-01                  \\
-                             &                             & (1.028e-01)                 & (6.054e-02)                 & (1.082e-01)                 & (1.036e-01)                 \\
-    \addlinespace
-    Gap, Salary              &                             & -1.135e-01                  & 3.873e-02                   & -6.250e-03                  &                             \\
-                             &                             & (8.284e-02)                 & (6.597e-02)                 & (8.575e-02)                 &                             \\
-    \addlinespace
-    Gap, Teamwork            &                             & 1.227e-01                   & 6.812e-02                   & 1.287e-01                   & 1.131e-01                   \\
-                             &                             & (9.179e-02)                 & (6.963e-02)                 & (9.697e-02)                 & (9.505e-02)                 \\
-    \addlinespace
-    Gap, Technical           & -1.274e-01\sym{+}           &                             & -9.408e-02                  & -1.010e-01                  & -9.806e-02                  \\
-                             & (7.443e-02)                 &                             & (7.702e-02)                 & (1.023e-01)                 & (1.001e-01)                 \\
-    \addlinespace
-    Rulebreaker, Culture Add & 2.612e-01\sym{**}           & 2.829e-01\sym{**}           & 2.114e-01\sym{*}            & 2.279e-01\sym{*}            & 2.235e-01\sym{*}            \\
-                             & (7.057e-02)                 & (7.015e-02)                 & (7.187e-02)                 & (7.190e-02)                 & (7.036e-02)                 \\
-    \addlinespace
-    Rulebreaker, Risky       & 1.688e-01\sym{**}           & 1.758e-01\sym{**}           & 1.517e-01\sym{*}            & 1.472e-01\sym{*}            & 1.686e-01\sym{**}           \\
-                             & (4.993e-02)                 & (4.813e-02)                 & (5.160e-02)                 & (5.063e-02)                 & (5.006e-02)                 \\
-    \addlinespace
-    Rulebreaker, Rockstars   & 1.406e-01\sym{+}            & 1.748e-01\sym{++}           & 1.669e-01\sym{++}           & 1.546e-01\sym{++}           & 1.655e-01\sym{++}           \\
-                             & (7.646e-02)                 & (7.245e-02)                 & (7.851e-02)                 & (7.754e-02)                 & (7.599e-02)                 \\
-    \midrule
-    Adj R-sqr                & 0.3100                      & 0.3491                      & 0.2317                      & 0.2554                      & 0.2866                      \\
-    R-sqr                    & 0.4408                      & 0.4663                      & 0.3409                      & 0.3613                      & 0.3880                      \\
-    % N                         & 212                   & 212                   & 212                   & 212                   & 212                         \\
-    \bottomrule
-    \multicolumn{6}{l}{\footnotesize Standard errors in parentheses. \sym{+} \(p<0.10\), \sym{++} \(p<0.05\), \sym{*} \(p<.01\), \sym{**} \(p<.001\)}                              \\
-    \multicolumn{6}{l}{\footnotesize
-        For each model, the probability of a greater F-statistic is less than $0.0001$ and the sample size is 212.
-        % The unit of the coefficients in this table are hireability per Likert-type unit, where hireability is also a Likert-type unit.
-        % In this paper, all Likert-type scales are 10-point scales.
-    }                                                                                                                                                                              \\
+\toprule
+                         &\multicolumn{1}{c}{1}&\multicolumn{1}{c}{2}&\multicolumn{1}{c}{3}&\multicolumn{1}{c}{4}&\multicolumn{1}{c}{Model 5}\\
+\midrule
+Is Employed Non-Manager  &      -0.336         &      -0.383\sym{*}  &      -0.497\sym{**} &      -0.471\sym{**} &      -0.451\sym{**} \\
+\addlinespace
+Is STEM Worker           &      -0.491\sym{**} &      -0.529\sym{**} &      -0.525\sym{**} &      -0.557\sym{**} &      -0.564\sym{**} \\
+\addlinespace
+Employees 51-200         &      -0.475\sym{*}  &      -0.480\sym{**} &      -0.364         &      -0.459\sym{*}  &      -0.457\sym{*}  \\
+\addlinespace
+Industry Credentials Legally Required&       0.706\sym{*}  &       0.722\sym{**} &       0.374         &       0.378         &       0.375         \\
+\addlinespace
+Industry Credentials Normal&       0.932\sym{**} &       0.926\sym{**} &       0.487\sym{*}  &       0.436\sym{*}  &       0.448\sym{*}  \\
+\addlinespace
+Industry Credentials Sometimes Used&       0.467         &       0.475         &                     &                     &                     \\
+\addlinespace
+Industry Credentials Unknown&       0.641\sym{*}  &       0.684\sym{**} &                     &                     &                     \\
+\addlinespace
+Industry, Agriculture    &       1.368         &       1.619\sym{*}  &                     &                     &                     \\
+\addlinespace
+Industry, Energy         &      -1.277\sym{*}  &      -1.190\sym{*}  &      -1.200\sym{*}  &      -1.442\sym{**} &      -1.448\sym{**} \\
+\addlinespace
+Industry, Finance, Investment, or Accounting&      -0.811\sym{***}&      -0.783\sym{***}&      -0.712\sym{***}&      -0.715\sym{***}&      -0.717\sym{***}\\
+\addlinespace
+Industry, Information Technology&       0.335         &       0.264         &       0.438\sym{*}  &       0.306         &       0.337         \\
+\addlinespace
+Industry, Law            &      -1.813\sym{***}&      -1.670\sym{**} &      -1.935\sym{***}&      -1.876\sym{***}&      -1.857\sym{***}\\
+\addlinespace
+Industry, Transportation &       1.512\sym{*}  &       1.643\sym{**} &       1.216         &       1.403\sym{*}  &       1.350\sym{*}  \\
+\addlinespace
+State, Arizona           &      -1.157\sym{**} &      -1.048\sym{**} &      -0.755         &      -0.823\sym{*}  &      -0.790         \\
+\addlinespace
+State, Arkansas          &      -2.690\sym{***}&      -2.817\sym{***}&      -2.489\sym{***}&      -2.664\sym{***}&      -2.770\sym{***}\\
+\addlinespace
+State, California        &      -0.575\sym{*}  &      -0.570\sym{**} &      -0.488\sym{*}  &      -0.435         &      -0.446         \\
+\addlinespace
+State, Colorado          &      -1.446\sym{**} &      -1.423\sym{**} &      -1.463\sym{**} &      -1.521\sym{***}&      -1.508\sym{***}\\
+\addlinespace
+State, Connecticut       &      -1.401         &      -1.550         &                     &                     &                     \\
+\addlinespace
+State, Florida           &      -0.444         &      -0.454         &                     &                     &                     \\
+\addlinespace
+State, Hawaii            &      -3.232\sym{***}&      -3.271\sym{***}&      -2.884\sym{***}&      -2.869\sym{***}&      -2.812\sym{***}\\
+\addlinespace
+State, Illinois          &      -0.637         &      -0.699\sym{*}  &      -0.596         &      -0.675\sym{*}  &      -0.698\sym{*}  \\
+\addlinespace
+State, Kansas            &      -3.283\sym{**} &      -3.486\sym{**} &      -2.923\sym{*}  &      -3.116\sym{**} &      -3.101\sym{*}  \\
+\addlinespace
+State, Kentucky          &      -3.143\sym{***}&      -3.167\sym{***}&      -2.583\sym{***}&      -2.729\sym{***}&      -2.679\sym{***}\\
+\addlinespace
+State, Louisiana         &      -1.455\sym{*}  &      -1.255\sym{*}  &      -0.915         &      -0.941         &      -0.898         \\
+\addlinespace
+State, Maryland          &      -0.596         &      -0.642         &                     &                     &                     \\
+\addlinespace
+State, Nebraska          &      -2.037\sym{*}  &      -2.167\sym{*}  &      -1.391         &      -1.655         &      -1.596         \\
+\addlinespace
+State, Nevada            &      -1.406         &      -1.470         &      -1.465         &      -1.434         &      -1.409         \\
+\addlinespace
+State, New Jersey        &      -1.145         &      -1.139         &      -0.976         &      -0.936         &      -0.963         \\
+\addlinespace
+State, New York          &      -0.692\sym{**} &      -0.640\sym{*}  &      -0.617\sym{*}  &      -0.595\sym{*}  &      -0.590\sym{*}  \\
+\addlinespace
+State, Ohio              &      -3.943\sym{***}&      -4.024\sym{***}&      -4.051\sym{***}&      -3.808\sym{***}&      -3.761\sym{***}\\
+\addlinespace
+State, Pennsylvania      &      -0.752         &      -0.687         &      -0.608         &      -0.534         &      -0.539         \\
+\addlinespace
+State, South Carolina    &      -1.183         &      -1.243         &      -1.361         &      -1.310         &      -1.347         \\
+\addlinespace
+State, Tennessee         &      -1.878\sym{**} &      -1.909\sym{**} &      -1.545\sym{*}  &      -1.843\sym{**} &      -1.799\sym{**} \\
+\addlinespace
+State, Texas             &      -0.906\sym{**} &      -0.851\sym{**} &      -0.797\sym{**} &      -0.790\sym{**} &      -0.789\sym{**} \\
+\addlinespace
+State, Washington        &      -0.817         &      -0.863\sym{*}  &      -0.880\sym{*}  &      -0.996\sym{**} &      -1.003\sym{**} \\
+\addlinespace
+Duration                 &       0.666\sym{**} &       0.634\sym{**} &       0.811\sym{***}&       0.744\sym{**} &       0.719\sym{**} \\
+\addlinespace
+cduration2               &     -0.0884\sym{**} &     -0.0857\sym{**} &      -0.113\sym{***}&      -0.103\sym{**} &     -0.1000\sym{**} \\
+\addlinespace
+WOQ, Gap, Attractiveness &      -0.161\sym{***}&                     &                     &                     &                     \\
+\addlinespace
+WOQ, Gap, Body Language-IT&       0.100         &                     &                     &                     &                     \\
+\addlinespace
+WOQ, Gap, Conscientiousness&     -0.0657         &                     &                     &                     &                     \\
+\addlinespace
+WOQ, Gap, EQ             &     -0.0966         &                     &                     &                     &                     \\
+\addlinespace
+Rule Breakers Risky      &      0.0732\sym{*}  &      0.0715\sym{*}  &      0.0880\sym{**} &      0.0747\sym{*}  &      0.0762\sym{*}  \\
+\addlinespace
+Rule Breakers Rockstars  &       0.133\sym{**} &       0.128\sym{**} &       0.147\sym{**} &       0.141\sym{**} &       0.140\sym{**} \\
+\addlinespace
+Rule Breakers Culture Add&      0.0905         &      0.0974\sym{*}  &       0.115\sym{**} &       0.112\sym{**} &       0.110\sym{**} \\
+\addlinespace
+Gap, Attractiveness      &                     &      -0.367\sym{***}&                     &      -0.350\sym{***}&      -0.358\sym{***}\\
+\addlinespace
+Gap, Body Language-IT    &                     &       0.132         &                     &       0.106         &      0.0874         \\
+\addlinespace
+Gap, Conscientiousness   &                     &     -0.0845         &                     &      -0.132\sym{**} &      -0.134\sym{**} \\
+\addlinespace
+Gap, EQ                  &                     &     -0.0952         &                     &                     &                     \\
+\addlinespace
+Comparative, Attractiveness&                    &                     &      -0.185\sym{*}  &                     &                     \\
+\addlinespace
+Comparative, Conscientiousness&                     &                     &      -0.140         &                     &                     \\
+\addlinespace
+Comparative, Customer Service&                     &                     &       0.138         &       0.142\sym{*}  &       0.145\sym{*}  \\
+\addlinespace
+Comparative, EQ          &                     &                     &     -0.0955         &                     &                     \\
+\addlinespace
+Comparative, Willing to Work Odd Hours&                     &                     &      -0.177\sym{*}  &      -0.255\sym{***}&      -0.260\sym{***}\\
+\addlinespace
+Comparative, Teamwork    &                     &                     &      -0.196\sym{*}  &      -0.242\sym{**} &      -0.251\sym{**} \\
+\addlinespace
+Comparative, Written Communication&                     &                     &       0.128         &      0.0920         &      0.0934         \\
+\addlinespace
+Comparative, Rulebreaker &                     &                     &                     &                     &      0.0182         \\
+\addlinespace
+Gap, Rule Breaker        &                     &                     &                     &                     &      0.0574         \\
+\addlinespace
+Constant                 &       5.036\sym{***}&       5.356\sym{***}&       4.755\sym{***}&       5.327\sym{***}&       5.343\sym{***}\\
+\midrule
+R-sqr                    &      0.3253         &      0.3539         &      0.3310         &      0.3706         &      0.3721         \\
+p(F)                     &      0.0000         &      0.0000         &      0.0000         &      0.0000         &      0.0000         \\
+N                        &         322         &         322         &         322         &         322         &         322         \\
+\bottomrule
+\multicolumn{6}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<.01\)}\\
 \end{tabular}
 }
