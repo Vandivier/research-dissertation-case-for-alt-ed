@@ -3,6 +3,7 @@
 
 \usepackage{amsmath}
 \usepackage{lineno,hyperref}
+\usepackage{longtable}
 \usepackage{booktabs}
 \usepackage{hyperref}
 \usepackage{siunitx}
@@ -603,13 +604,19 @@ Of the thirteen perceived skill gaps tested, eight were important in at least on
 Seven skill gaps were important in Model 5, the preferred model.
 Evidence is found for an important interaction between the information technology industry and perceived body language communication skills.
 
-\begin{table}
-    \caption{Table of Coefficients for Multiple Regressions on Hireability, Selected Variables}
-    \resizebox{\columnwidth}{!}{
-        \input{./figures-and-tables/table-2-massaged.tex}
-    }
-    \label{tab:table_new_ols}
-\end{table}
+
+\input{./figures-and-tables/table-2-massaged.tex}
+
+% \begin{center}
+%     \begin{longtable}{|l|l|l|}
+% % \begin{longtable}{l*{5}{c}}
+%     \caption{Linear Models of Hireability}
+%     \label{tab:table_new_ols}
+%     % \resizebox{\columnwidth}{!}{
+%         \input{./figures-and-tables/table-2-massaged.tex}
+%     % }
+% \end{longtable}
+% \end{center}
 
 Model 1 allows for overqualification.
 Model 2 uses the perceived skill gap measures that exclude overqualification effects.
@@ -667,7 +674,7 @@ The average actual employee has more perceived nonconformity than either the ACN
 The third reason that an ACNG nonconformity signal does not explain reduced hireability is that ACNG
 and recent college graduate labor does not significantly differ in perceived levels of conformity.
 Here, summary statistics demonstrate this.
-Later, Table \ref{tab:gap_of_gaps} reiterates the point from another perspective.
+% Later, Table \ref{tab:gap_of_gaps} reiterates the point from another perspective.
 That table presents models in which comparative skill gaps between ACNG and recent college graduate labor explain ACNG hireability,
 but conformity is not an important factor in any such model.
 
@@ -775,7 +782,7 @@ These findings collectively provide evidence that perceived skill gaps and ruleb
 
 % \subsection{Perceived Gaps Compared to the Recent College Graduate}
 
-Table \ref{tab:gap_of_gaps} provides two models of hireability where comparative skill gaps are independent factors.
+% Table \ref{tab:gap_of_gaps} provides two models of hireability where comparative skill gaps are independent factors.
 Replacing perceived skill gap factors in Model 5 with comparative perceived skill gap factors, then dropping other factors, results in Model 6.
 Eliminating insignificant factors to maximize adjusted explanatory power in Model 6 yields Model 7.
 In total, Model 6 drops four factors from Model 7.
@@ -786,13 +793,13 @@ The maximum p-value in Model 7 is less than 0.16.
 % Model 7 is the preferred comparative gap model.
 The maximum p-value in Model 7 is less than 0.16.
 
-\begin{table}
-    \caption{Multiple Regression of Comparative Skill Gap on Hireability}
-    \resizebox{\columnwidth}{!}{
-        \input{./figures-and-tables/table-3-massaged.tex}
-    }
-    \label{tab:gap_of_gaps}
-\end{table}
+% \begin{table}
+%     \caption{Multiple Regression of Comparative Skill Gap on Hireability}
+%     \resizebox{\columnwidth}{!}{
+%         \input{./figures-and-tables/table-3-massaged.tex}
+%     }
+%     \label{tab:gap_of_gaps}
+% \end{table}
 
 Models 6 and 7 demonstrate that a few soft skills do constitute a significant difference between groups.
 The main differentiator between ACNG labor and the recent college graduate is body language communication skill.
@@ -887,9 +894,18 @@ Looking along the bottom of the graph shows an m-shape, which is consistent with
 
 \begin{figure}[h!]
     \centering
-    \caption{Scatterplot of Residual and Fitted Values for Comparative Gap in Conscientiousness}
+    \caption{Distribution of Firm Size}
     \begin{tikzpicture}[element/.style={minimum width=1.75cm, minimum height=0.85cm}]
-        \node (n1) {\includegraphics[width=1\textwidth]{./figures-and-tables/conc-linear-resid-vs-fitted.jpeg}};
+        \node (n1) {\includegraphics[width=1\textwidth]{./figures-and-tables/firm-size-hist.png}};
+    \end{tikzpicture}
+    \label{fig:conc_rvfp}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \caption{Distribution of Important Gaps}
+    \begin{tikzpicture}[element/.style={minimum width=1.75cm, minimum height=0.85cm}]
+        \node (n1) {\includegraphics[width=1\textwidth]{./figures-and-tables/skill-bars.png}};
     \end{tikzpicture}
     \label{fig:conc_rvfp}
 \end{figure}
