@@ -26,7 +26,7 @@ reg favorability _ismanager2 _isstem1 _iscompanysize3 _isawareofrelevantcredenti
 
 * // special; force rulebreaker gaps in
 * // they aren't significant but they are positively signed; interesting for the story
-reg favorability _ismanager2 _isstem1 _iscompanysize3 _isawareofrelevantcredentials1 _isawareofrelevantcredentials2 _isindustry3 _isindustry4 _isindustry6 _isindustry7 _isindustry12 _isstate3 _isstate4 _isstate5 _isstate6 _isstate12 _isstate14 _isstate16 _isstate17 _isstate18 _isstate26 _isstate27 _isstate28 _isstate29 _isstate32 _isstate34 _isstate36 _isstate37 _isstate38 _isstate42 cd*1 cd*2 diff1_wno_customerserviceskill diff1_wno_oddhours diff1_wno_teamwork diff1_wno_written aetiwno_attractiveness aetiwno_body_x_it aetiwno_concientiousness rulebreakers* diff1_wno_rule aetiwno_rule
+reg favorability _ismanager2 _isstem1 _iscompanysize1 _iscompanysize2 _iscompanysize3 _iscompanysize4 _iscompanysize5 _iscompanysize6 _iscompanysize7 _iscompanysize8 _isawareofrelevantcredentials1 _isawareofrelevantcredentials2 _isindustry3 _isindustry4 _isindustry6 _isindustry7 _isindustry12 _isstate3 _isstate4 _isstate5 _isstate6 _isstate12 _isstate14 _isstate16 _isstate17 _isstate18 _isstate26 _isstate27 _isstate28 _isstate29 _isstate32 _isstate34 _isstate36 _isstate37 _isstate38 _isstate42 cd*1 cd*2 diff1_wno_customerserviceskill diff1_wno_oddhours diff1_wno_teamwork diff1_wno_written aetiwno_attractiveness aetiwno_body_x_it aetiwno_concientiousness rulebreakers* diff1_wno_rule aetiwno_rule
 
 * // note: considering marginal effects will increase r2 and ar2 but
 * // 1. fear overfitting
