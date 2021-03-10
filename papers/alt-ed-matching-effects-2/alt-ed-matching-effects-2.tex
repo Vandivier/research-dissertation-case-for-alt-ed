@@ -671,11 +671,12 @@ Figure \ref{tab:important_gaps} illustrates the distribution for each important 
 Reflecting on this figure helps inform a diagnostic analysis for use by alternative learning providers.
 ACNG candidates can also supplement their own learning to address these gaps.
 Attractiveness and willingness to work odd hours do not seem to be easily remedied.
-Conscientiousness is also difficult to train, although perception management is a possible remedy.
+Conscientiousness is difficult to train, but analysis suggests perception management as a remedy.
 % corr cduration1 aetiwo_concientiousness => 0.21
 Perceived conscientiousness has a slight correlation duration (Pearson's $r = 0.21$).
 Perceived concientiousness can be achieved through longer time to obtain for credentials.
 ACNG supplementation of a credential with additional self-study time may also improve perceived concientiousness.
+% External research indicates that psychological therapy and other interventions can boost conscientiousness in some cases\cite{kilduff_tasselli_landis_2018}.
 
 The important body language communication gap is interacted with the information technology industry variable.
 The interaction indicates a reduced penalty for lack of body language communication skills
@@ -719,10 +720,9 @@ The preferred model explains about one-third of hireability variance,
 but how much of the explanatory power is attributable to skill gaps?
 Table \ref{tab:explantory_power} provides evidence on the importance of perceived skill gaps and rulebreaker effects
 relative to other factor groups.
+Model 4 is composed of factor groups.
+Table \ref{tab:explantory_power} summarizes results for simple regressions of each factor group on hireability.
 Industry and state effects are factor groups regarded in external literature as important for models in the labor market.
-Table \ref{tab:explantory_power} shows that perceived skill gaps and rulebreaker effects explain more
-variance in hireability than do the widely utilized variables for industry and state.
-Rulebreaker effects collectively explain more than three times as much response variance as do industrial or state effects.
 
 \begin{table}
     \caption{Factor Group Explanatory Power in a Simple Regression}
@@ -732,59 +732,15 @@ Rulebreaker effects collectively explain more than three times as much response 
     \label{tab:explantory_power}
 \end{table}
 
-Comparing simple regressions of perceived skill gaps on hireability reproduces the finding from multiple regression analysis that overqualification effects reduce explanatory power.
-Overqualification effects are heterogeneously signed and curved by skill. As a result, nonlinear analysis is likely to improve explanatory power. Isolating overqualification effects into distinct factors may also improve model performance.
-Such an analysis would also require a larger sample to compensate for the loss of degrees of freedom.
-
-Semi-robust state effects are state effects which are significant in any multiple regression described in Table \ref{tab:table_new_ols}.
-Robust state effects are the significant factors in a simple regression of semi-robust state effects on hireability.
-Illinois is an example of a state effect that appears in models 1 and 2 from Table \ref{tab:table_new_ols} but is not significant in a simple regression of semi-robust state effects on hireability.
-
-% TODO: long paper food...figure out how to explain this false positive identification risk and get some more word count.
-% Because semi-robust state effects are a combination of robust and sensitive state effects which are sensitive to specification and some that are not,
-% Semi-robust state effects are the set of robust effects plus effects which are sensitive to specification,
-% so there is a strictly greater chance of false positive factor identification compared to the set of robust state effects.
-% The simple regression that uses semi-robust state effects has a better chance of overfitting sample data.
-The r-squared associated with a simple regression of semi-robust state effects is greater than the r-squared associated with robust state effects.
-Analysis has shown that perceived skill gaps that include overqualification effects are comparatively weak representations of perceived skill gaps for models of hireability.
-These two measures allow the computation of a conservative lower-bound on the explanatory ratio of perceived skill gaps to state effects.
-Perceived skill gaps conservatively explain about 14 percent more variance in hireability than do state effects\footnote{
-    This is computed as $(0.0737 / 0.0648) - 1 = .1373$ and rounded to 0.14.
-}.
-
-With overqualification, perceived skill gaps explain about fifty percent more of the variance in hireability than industry or robust state effects.
-Without overqualification, the adjusted explanatory power of perceived skill gaps is about three times the adjusted explanatory power of industry or state effects.
-Rulebreaker effects are about twice as important as perceived skill gaps.
-These findings collectively provide evidence that perceived skill gaps and rulebreaker effects are factors of high importance for models of hireability.
-
-% M8: it's curvilinear! http://www.philender.com/courses/linearmodels/notes3/curve.html
-% ref for great stat interpretation: http://people.umass.edu/biep640w/pdf/Stata%20Illustration%20simple%20and%20multiple%20linear%20regression.pdf
-% ref: https://stats.idre.ucla.edu/other/mult-pkg/faq/general/faqhow-do-i-interpret-the-sign-of-the-quadratic-term-in-a-polynomial-regression/
-% ref: heatmap https://fmwww.bc.edu/repec/dsug2019/germany19_jann.pdf
-% ref: correlation table https://lost-stats.github.io/Presentation/heatmap_colored_correlation_matrix.html#stata
-Model 8 captures this curvilinear relationship by expanding Model 7 with quadratic and cubic factors.
-% Quadratic factors in this model represent marginal effects.
-% Cubic effects capture marginal changes in the marginal effects.
-The coefficients in this model are not significant, but the directions of effect are as expected.
-In this model, the average total effect of the comparative conscientiousness gap on hireability is negative\footnote{
-    Computed as:
-    $-0.0018 = - 0.0524*0.0330 - 0.0465*0.0330^2 + 0.0380*0.0330^3$
-}.
-The average total effect for Model 8 as a whole is also negative\footnote{
-    Computed as:
-    $-0.0293 = -0.1444*0.1415 + 0.0340*0.1415^2 - 0.0194*0.1415^3 - 0.0803*0.0943 - 0.0112*0.0943^2 - 0.0023*0.0943^3 - 0.0524*0.0330 - 0.0465*0.0330^2 + 0.0380*0.0330^3$
-}.
-When the comparative gap in conscientiousness increases above the average of 0.33,
-the linear effect is negative and the marginal effect is also negative,
-but the marginal effect is becoming less negative as conscientiousness increases.
-
-Models 7 and 8 provide a skill-level diagnostic in service of closing the demand gap for ACNG labor.
-Alternative learning providers can implement body language communication training in their products,
-or ACNG candidates can obtain additional training and credentials that target this skill a la cart.
-% Improving body language communication skill is precisely diagnosed and not to be confused with generalized communication skill.
-% Perceived skill gaps for emotional intelligence, verbal communication, and written communication are insignificant.
-ACNG job candidates can offset perceived conscientiousness deficit by provisioning work history or results of a personality test.
-External research indicates that psychological therapy and other interventions can boost conscientiousness in some cases\cite{kilduff_tasselli_landis_2018}.
+Table \ref{tab:explantory_power} shows that perceived skill gaps and rulebreaker effects explain more
+variance in hireability compared to state, industry, and other effects.
+Industry and state effects are also less stable.
+When favorability is modeled on industry effects alone,
+certain industry dummies obtain a p-value approaching 1.
+In contrast, the least significant absolute skill gaps are statistically significant in a simple regression ($p < 0.1$).
+% Rulebreaker effects collectively explain more than three times as much response variance as do industrial or state effects.
+These findings collectively provide evidence that perceived skill gaps and rulebreaker
+effects are factors of high importance for models of hireability.
 
 \section{Conclusion}
 

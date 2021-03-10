@@ -2,27 +2,22 @@ clear
 
 do "C:\Users\vandi\workspace\research-dissertation-case-for-alt-ed\papers\alt-ed-matching-effects-2\data\analysis-1-vars.do"
 
-* // 6 robust effects: industry, state, duration, company size, skill gaps, rulebreaker effects
-* // rulebreaker, duration, company size will be spelled out in main reg table, so not here...or should they be? if space allows
+* // this file takes factors from the preferred model and regresses favorability on those by group
 
-* // summary factor group explanatory power...another table
-* // industry effects; all highly robust (both maxar2 multiple regs and simple effects reg)
-* // n=212, r2=0.0510, ar2=0.0185, maxp=0.288
-reg fav _isindustry1 _isindustry10 _isindustry11 _isindustry2 _isindustry4 _isindustry6 _isindustry8
-* // semi-robust states
-* // significant in multiple regression but not in a simple regression of state effects on favorability
-* // n=212, r2=0.0648, ar2=0.0034, maxp=0.831
-reg fav _isstate13 _isstate14 _isstate16 _isstate20 _isstate21 _isstate25 _isstate26 _isstate34 _isstate36 _isstate37 _isstate39 _isstate6 _isstate8
-* // highly robust state effects; maxar2 among state effect simple regression
-* // state effects are about as important as industry effects
-* // n=212, r2=0.0503, ar2=0.0177, maxp=0.227
-reg fav _isstate13 _isstate16 _isstate26 _isstate34 _isstate37 _isstate39 _isstate8
-* // rulebreaker effects
-* // n=212, r2=0.1554, ar2=0.1432, maxp=0.053
+* // all other factors / other controls
+reg fav _ismanager2 _isstem1 _iscompanysize3 _isawareofrelevantcredentials1 _isawareofrelevantcredentials2 cd*1 cd*2
+
+* // industry
+reg fav  _isindustry3 _isindustry4 _isindustry6 _isindustry7 _isindustry12
+
+* // state
+reg fav  _isstate3 _isstate4 _isstate5 _isstate6 _isstate12 _isstate14 _isstate16 _isstate17 _isstate18 _isstate26 _isstate27 _isstate28 _isstate29 _isstate32 _isstate34 _isstate36 _isstate37 _isstate38 _isstate42
+
+* // absolute skill gaps
+reg fav aetiwno_attractiveness aetiwno_body_x_it aetiwno_concientiousness
+
+* // comparative skill gaps
+reg fav diff1_wno_customerserviceskill diff1_wno_oddhours diff1_wno_teamwork diff1_wno_written
+
+* // rulebreakers
 reg fav rulebreakers*
-* // robust skill gaps with overqualification
-* // n=212, r2=0.0737, ar2=0.0558, maxp=0.106
-reg fav aetiwo_bodylanguage aetiwo_concientiousness aetiwo_customerserviceskill aetiwo_body_x_it
-* // robust skill gaps with no overqualification
-* // n=212, r2=0.0933, ar2=0.0758, maxp=0.115
-reg fav aetiwno_bodylanguage aetiwno_concientiousness aetiwno_customerserviceskill aetiwno_body_x_it

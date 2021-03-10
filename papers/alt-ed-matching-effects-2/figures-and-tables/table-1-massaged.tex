@@ -1,24 +1,37 @@
 {
 \def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+% \begin{center}
+    {
+        \fontsize{8pt}{7pt}\selectfont
+        % \begin{small}
+        \tabcolsep=3pt
 \begin{tabular}{l*{4}{c}}
     \toprule
-    \multicolumn{1}{c}{Effect Group Name} & \multicolumn{1}{c}{Adj R-Sqr} & \multicolumn{1}{c}{R-Sqr} & \multicolumn{1}{c}{Max p-value} \\
+    \multicolumn{1}{c}{Effect Group} & \multicolumn{1}{c}{Adj R-Sqr} & \multicolumn{1}{c}{R-Sqr} & \multicolumn{1}{c}{Max p-value} \\
     \midrule
-    Industry                              & 0.0185                        & 0.0510                    & 0.288                           \\
+    Absolute Gap                          & 0.0615                        & 0.0703                    & 0.097                           \\
     \addlinespace
-    Rulebreaker                           & 0.1432                        & 0.1554                    & 0.053                           \\
+    Comparative Gap                     & 0.0176                        & 0.0298                    & 0.687                    \\
+    % \addlinespace
+    % Rulebreaker                           & 0.1432                        & 0.1554                    & 0.053                           \\
     \addlinespace
-    Skill Gaps                            &                               &                           &                                 \\
-    with Overqualification                & 0.0558                        & 0.0737                    & 0.106                           \\
+    Industry                              & 0.0303                        & 0.0454                    & 0.958                           \\
+   \addlinespace
     \addlinespace
-    Skill Gaps                            &                               &                           &                                 \\
-    without Overqualification             & 0.0758                        & 0.0933                    & 0.115                           \\
+    Other Factors                       & 0.0072                        & 0.0288                    & 0.537                           \\
     \addlinespace
-    State, Robust                         & 0.0177                        & 0.0503                    & 0.227                           \\
-    \addlinespace
-    State, Semi-Robust                    & 0.0034                        & 0.0648                    & 0.831                           \\
+    Rulebreaker                         & 0.0783                        & 0.0869                    & 0.127                           \\
+     \addlinespace
+    State                                & 0.0469                        & 0.1033                    & 0.772                           \\
+    % \addlinespace
+    % State, Semi-Robust                    & 0.0034                        & 0.0648                    & 0.831                           \\
     \bottomrule
 \end{tabular}
+% \end{center}
+    }
 }
 
-% TODO: add Skill Gaps Diff
+% TODO: maybe a count of k factors in group
+% TODO: maybe distinguish strong and weak effects for industry, state, and gaps
+% TODO: maybe other controls / other factors section doesn't matter
+% TODO: maybe combine skill gaps
