@@ -560,7 +560,7 @@ The mean response is about 7.42.
 % Partial responses were submitted in 21 cases, but partial responses did not impact factors in models of interest.
 Absolute skill gaps and comparative skills gaps are both important explanations of hireability.
 Soft skills explain hireability better than technical skill does in both absolute and comparative terms.
-Technical skill is not a significant factor in the preferred model.
+Technical skill is not a contributing factor in any model of interest.
 Of the thirteen skills investigated, seven skills contribute to the preferred model.
 
 % TODO: skill gap ols, gap of gaps ols
@@ -632,6 +632,7 @@ A response of nine indicates that the question is not applicable because the res
 The ninth response is dropped from Model 5 to prevent multicollinearity.
 There is no loss of analytical power in Model 5 because the dropped dummy does not represent firms of any size.
 This figure further illustrates that the negative coefficient pertains to small firms.
+Large employer favorability adds to the explanation of low ACNG labor demand from risk aversion.
 
 \begin{figure}[h!]
     \centering
@@ -642,54 +643,85 @@ This figure further illustrates that the negative coefficient pertains to small 
     \label{fig:firm_size}
 \end{figure}
 
-TODO: THIS IS ALSO SPELLED OUT IN THE HISTOGRAM.
-TODO: THIS ADDS TO EVIDENCE THAT RISK AVERSION EXPLAINS LOW ACNG favorability
+Models are specified using ordinary least squares (OLS).
+Models were also tested in a robust linear model (RLM) and generalized linear model (GLM) specification.
+RLM and GLM specification alters factor significance but does not alter the coefficient value.
+RLM and GLM models account for abnormal factor distribution.
+In OLS specification of Model 4, the preferred model, p-values did not exceed 0.28.
+In RLM specification, p-values did not exceed 0.41.
+In GLM specification, p-values did not exceed 0.38.
+Overall, OLS seems slightly overfit and RLM seems slightly underfit compared to GLM.
+This analysis is mainly concerned with the direction of factor effects,
+rather than a precise estimate of coefficient magnitudes.
+The important result from robustness testing is that coefficients did not change,
+and the direction for each factor is plausible ($p < 0.5 < p'$).
 
+\begin{figure}[h!]
+    \centering
+    \caption{Distribution of Important Gaps}
+    \begin{tikzpicture}[element/.style={minimum width=1.75cm, minimum height=0.85cm}]
+        \node (n1) {\includegraphics[width=1\textwidth]{./figures-and-tables/skill-bars.png}};
+    \end{tikzpicture}
+    \label{fig:important_gaps}
+\end{figure}
 
+Seven skill gaps are considered important because they contribute to Model 4.
+Four important skill gaps are comparative gaps, and three are absolute gaps for ACNG candidates.
+Figure \ref{tab:important_gaps} illustrates the distribution for each important skill gap.
+Reflecting on this figure helps inform a diagnostic analysis for use by alternative learning providers.
+ACNG candidates can also supplement their own learning to address these gaps.
+Attractiveness and willingness to work odd hours do not seem to be easily remedied.
+Conscientiousness is also difficult to train, although perception management is a possible remedy.
+% corr cduration1 aetiwo_concientiousness => 0.21
+Perceived conscientiousness has a slight correlation duration (Pearson's $r = 0.21$).
+Perceived concientiousness can be achieved through longer time to obtain for credentials.
+ACNG supplementation of a credential with additional self-study time may also improve perceived concientiousness.
 
-TODO: RETURNING TO MODEL 4, HOW GOOD OF AN EXPLANATION IS IT?
-HOW MUCH DO SKILL GAPS MATTER?
-DIAGNOSTIC RESULTS
-
-
-The preferred model explains roughly one-third of the variance in hireability.
-Rulebreaker effects are significant invariant to specification.
-Six of the seven perceived skill gaps in the preferred model are measures of soft skill.
-The perceived technical skill gap coefficient is insignificant, but it does possess an intuitive negative sign that is robust to specification.
-The dominant effect of soft skills in the preferred regression supports the main hypothesis.
-
-In the classic signaling explanation of low ACNG demand, the ACNG signals an abnormal lack of conscientiousness and conformity.
-Regression analysis raises three problems for the conformity component of the classic explanation.
-These problems are robust to the specification and operationalization of conformity.
-First, rulebreaker effects are positively related to hireability.
-Secondly, a gap in perceived nonconformity yields a negative coefficient on hireability.
-This gap effect is equivalent to an association of low hireability and high conformity.
-
-WHAT ABOUT THE CONTROLS?
-
-% TODO: long paper food...check state and industry effects against a regulation index
-Some state and industry effects are important in the preferred model.
-% No particular relation among state effects was found, but further comparative policy research is encouraged.
-Regarding industry effects, an interesting interaction between body language communication skills and employment in the information technology industry yields a significant and positive coefficient on hireability.
-Body language skill gaps are independently associated with reduced hireability.
+The important body language communication gap is interacted with the information technology industry variable.
 The interaction indicates a reduced penalty for lack of body language communication skills
 in the information technology industry.
-
-A reduced penalty for soft skill deficit helps explain the particular flourishing of alternative credentials in the information technology industry.
+A reduced penalty for soft skill deficit helps explain the particular flourishing of
+alternative credentials in the information technology industry.
 The reduced penalty in this particular industry might be related to its relative lack of regulation.
 Another hypothetical explanation is that the reduced penalty is related to cultural norms in the industry.
 Suppose that there is a diminished technical need for social skills in programming.
 In that case, introverts obtain a comparative advantage in this field.
 Further study that includes personality data is encouraged to test this hypothesis.
+The interacted body language skill gap and the customer service skill gap
+are interesting for niche learning providers.
 
-% \subsection{Explanatory Share of Perceived Gaps}
+The gaps in teamwork and written communication skill seem to be best candidates for
+feasible remedy with broad learning provider applicability.
+Written communication skill is uniquely amenable to online learning.
+Written communication skill is also unique in the response distribution.
+The written communication skill gap is a comparative gap where the interquartile range favors ACNG labor.
+This indicates the perception that ACNG providers are generally capable of providing this skill.
+The distribution reflects positive and negative outliers.
+Positive outliers indicate that some learning providers have an ability to produce even higher skill,
+and negative outliers indicates that some learning providers are particularly poor at training this skill.
+If learning providers are generally effective in training this skill,
+improvement for ineffective providers is likely to be feasible.
 
-The preferred model explains about one-third of hireability variance, but how much of the explanatory power is attributable to perceived skill gaps?
-Table \ref{tab:explantory_power} provides evidence on the importance of perceived skill gaps and rulebreaker effects relative to other factor groups.
-% This table compares the explanatory power of selected factor groups.
+% TODO: maybe cite some literature on digital social learning or project-based learning
+Alternative learning providers can use project-based learning and social learning
+techniques to facilitate teamwork skill development.
+These are not the most common pedagogies, but they are an established and effective pattern.
+These methods of instruction can be adapted to an online learning environment.
+The distribution of responses indicates that improving teamwork skill has neither the maximum
+penalty nor the maximum return potential compared to improving written communication.
+This distributional consideration should be balanced against the model results.
+Model 4 indicates that the effect of teamwork skill on favorability is more reliable
+and larger in magnitude compared to the coefficient on written communication skill.
+Targeting both of these two skills is feasible and beneficial to educational quality.
+% where educational quality is defined as plausible impact to labor outcomes
+
+The preferred model explains about one-third of hireability variance,
+but how much of the explanatory power is attributable to skill gaps?
+Table \ref{tab:explantory_power} provides evidence on the importance of perceived skill gaps and rulebreaker effects
+relative to other factor groups.
 Industry and state effects are factor groups regarded in external literature as important for models in the labor market.
-Table \ref{tab:explantory_power} shows that perceived skill gaps and rulebreaker effects explain more variance in hireability than do the widely utilized variables for industry and state.
-% are more than the widely accepted factors of importance when explaining hireability.
+Table \ref{tab:explantory_power} shows that perceived skill gaps and rulebreaker effects explain more
+variance in hireability than do the widely utilized variables for industry and state.
 Rulebreaker effects collectively explain more than three times as much response variance as do industrial or state effects.
 
 \begin{table}
@@ -725,17 +757,6 @@ Without overqualification, the adjusted explanatory power of perceived skill gap
 Rulebreaker effects are about twice as important as perceived skill gaps.
 These findings collectively provide evidence that perceived skill gaps and rulebreaker effects are factors of high importance for models of hireability.
 
-
-
-\begin{figure}[h!]
-    \centering
-    \caption{Distribution of Important Gaps}
-    \begin{tikzpicture}[element/.style={minimum width=1.75cm, minimum height=0.85cm}]
-        \node (n1) {\includegraphics[width=1\textwidth]{./figures-and-tables/skill-bars.png}};
-    \end{tikzpicture}
-    \label{fig:conc_rvfp}
-\end{figure}
-
 % M8: it's curvilinear! http://www.philender.com/courses/linearmodels/notes3/curve.html
 % ref for great stat interpretation: http://people.umass.edu/biep640w/pdf/Stata%20Illustration%20simple%20and%20multiple%20linear%20regression.pdf
 % ref: https://stats.idre.ucla.edu/other/mult-pkg/faq/general/faqhow-do-i-interpret-the-sign-of-the-quadratic-term-in-a-polynomial-regression/
@@ -766,6 +787,9 @@ ACNG job candidates can offset perceived conscientiousness deficit by provisioni
 External research indicates that psychological therapy and other interventions can boost conscientiousness in some cases\cite{kilduff_tasselli_landis_2018}.
 
 \section{Conclusion}
+
+Larger employers face a lower risk premium for various reasons, including spreading risk across many hires
+and reducing the risk of any particular hire through better collections of hiring data.
 
 % TODO: long paper food...talk about job candidate stigma mitigation techniques and hope for the ACNG
 %       ACNG is not strictly dispreferred to the college grad, they just need to find a well-fitting employer
