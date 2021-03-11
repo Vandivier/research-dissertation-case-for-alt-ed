@@ -482,6 +482,20 @@ The perceived skill gap with overqualification effects equals the raw perceived 
 The perceived skill gap without overqualification is zero if the raw skill gap is negative,
 and otherwise it is equal to the raw skill gap.
 
+The concept of skill is intentionally treated loosely in this analysis.
+The thirteen factors treated as skills include
+attractiveness,
+verbal, written, and body language communication skills,
+conscientiousness,
+customer service skill,
+emotional intelligence (EQ),
+expected salary,
+teamwork,
+technical skill,
+willingness to break formal or informal rules (nonconformity),
+willingness to work odd hours,
+and willingness to commute.
+
 Results focus on ACNG skill gap coefficients, and also comparative skill gaps between ACNG labor and recent college graduates.
 Perceived ACNG skill gaps are also called absolute skill gaps.
 Subtracting the perceived recent college graduate skill gap from the absolute skill gap yiels the comparative skill gap.
@@ -638,7 +652,9 @@ The high willingness to hire on the part of large employers adds to the explanat
     \centering
     \caption{Distribution of Firm Size}
     \begin{tikzpicture}[element/.style={minimum width=1.75cm, minimum height=0.85cm}]
-        \node (n1) {\includegraphics[width=1\textwidth]{./figures-and-tables/firm-size-hist.png}};
+        \node (n1) {\includegraphics[width=0.8\textwidth]{./figures-and-tables/firm-size-hist.png}};
+        \node (n2) [above=0.25cm] at ($(n1)!0.5!(n1) - (5.75, 0)$) {\textbf{Density}};
+        \node (n3) [above=0.25cm] at ($(n1)!0.5!(n1) - (0, 4.5)$) {\textbf{Discretized Firm Size}};
     \end{tikzpicture}
     \label{fig:firm_size}
 \end{figure}
@@ -656,18 +672,9 @@ rather than a precise estimate of coefficient magnitudes.
 The important result from robustness testing is that coefficients did not change,
 and the direction for each factor is plausible ($p < 0.5 < p'$).
 
-\begin{figure}[h!]
-    \centering
-    \caption{Distribution of Important Gaps}
-    \begin{tikzpicture}[element/.style={minimum width=1.75cm, minimum height=0.85cm}]
-        \node (n1) {\includegraphics[width=1\textwidth]{./figures-and-tables/skill-bars.png}};
-    \end{tikzpicture}
-    \label{fig:important_gaps}
-\end{figure}
-
 Seven skill gaps are considered important because they contribute to Model 4.
 Four important skill gaps are comparative gaps, and three are absolute gaps for ACNG candidates.
-Figure \ref{tab:important_gaps} illustrates the distribution for each important skill gap.
+Figure \ref{fig:important_gaps} illustrates the distribution for each important skill gap.
 Reflecting on this figure helps inform a diagnostic analysis for use by alternative learning providers.
 ACNG candidates can also supplement their own learning to address these gaps.
 Attractiveness and willingness to work odd hours do not seem to be easily remedied.
@@ -690,6 +697,15 @@ In that case, introverts obtain a comparative advantage in this field.
 Further study that includes personality data is encouraged to test this hypothesis.
 The interacted body language skill gap and the customer service skill gap
 are interesting for niche learning providers.
+
+\begin{figure}[h!]
+    \centering
+    \caption{Distribution of Important Gaps}
+    \begin{tikzpicture}[element/.style={minimum width=1.75cm, minimum height=0.85cm}]
+        \node (n1) {\includegraphics[width=1\textwidth]{./figures-and-tables/skill-bars.png}};
+    \end{tikzpicture}
+    \label{fig:important_gaps}
+\end{figure}
 
 The gaps in teamwork and written communication skill seem to be best candidates for
 feasible remedy with broad learning provider applicability.
