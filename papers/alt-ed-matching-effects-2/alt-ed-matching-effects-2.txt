@@ -8,7 +8,7 @@ Microdata from the United States
 reveal a perceived soft skill deficit for
 alternatively credentialed non-college graduate (ACNG) labor.
 Conformity is also important, but the direction of effect is heterogenous by employer type.
-Conformity and perceived skill gaps explain about one-third of hireability variance.
+Conformity and perceived skill gaps explain about one-third of the hireability variance.
 Perceived soft skill gaps explain more hireability variance than widely recognized factors like the industry of occupation.
 Opposite conventional explanation, results suggest that conformity reduces hireability on average.
 Respondents tend to perceive ACNG candidates as an even mix of high and low performers.
@@ -27,9 +27,9 @@ Alternative credentials refer to credentials other than the undergraduate degree
 The category includes, for example, industry certifications, portfolios of work, digital badges, and other records of unaccredited learning and achievement.
 Individuals typically obtain alternative credentials to improve employability.
 That is, they typically have the same goals as a college student.
-Many individuals obtain alternative credentials as a supplement to the college degree.
+Many individuals obtain alternative credentials as a supplement to a college degree.
 Such a situation is Pareto-superior to degree attainment alone and is therefore intentionally excluded from the analysis.
-This paper focuses on the comparatively interesting case of alternative credentials as a substitute for the college degree.
+This paper focuses on the comparatively interesting case of alternative credentials as a substitute for a college degree.
 This research is valuable as a diagnostic tool at the skill level.
 If specific skills explain labor outcome differences, alternative learning providers can improve their products to reduce the outcome gap.
 
@@ -39,24 +39,24 @@ First, signaling theory can explain labor outcome variance when human capital is
 
 Second, the signaling model empowers a questionnaire research design.
 In an idealized human capital model, the measures of human capital would correspond to production process inputs.
-To establish a wide array of such skill measures would be complicated and prone to measurement sensitivities, assumptions, and errors of various kinds.
+Establishing a wide array of such skill measures would be complicated and prone to measurement sensitivities, assumptions, and errors of various kinds.
 In this framework, a questionnaire is a second-best design that provides a proxy for the functional measure of skill.
 
 Signaling theory takes the reverse approach.
 According to the signaling model, employer perception of candidate quality critically determines willingness to pay.
-The manner in which employer perception relates to candidate productivity, if at all, is secondary.
+How employer perception relates to candidate productivity, if at all, is secondary.
 In this framework, a questionnaire is an ideal measurement tool.
 An additional benefit of using a questionnaire is the ability to ask hypothetical questions.
 Real job candidates might vary systematically in ways not observed by an analyst, but hypothetical questions preclude this issue.
 
 Third, signaling theorists have laid out a testable hypothesis for weak labor outcomes among non-college graduates.
 Following this model, scholars claim that the college degree signals intelligence, conscientiousness, and conformity.
-In contrast, alternative credentials are hypothesized to signal nonconformity and low concientiousness.
+This paper hypothesizes that, in contrast, alternative credentials signal nonconformity and low conscientiousness.
 
-Research indicates that employer demand for conscientiousness and conformity follows a bliss point pattern.
+Employer demand for conscientiousness and conformity follows a bliss point pattern.
 Excess individual conscientiousness can disturb team performance.
 Conformity can lead to a lack of innovation and suboptimal organizational practices.
-Conformity selection occurs in part through heuristic decisionmaking, or unconcious bias.
+Conformity selection occurs in part through heuristic cognition or unconscious bias.
 
 Risk aversion is a distinct explanation for conformity selection.
 Some employers are not able to evaluate an alternative credential with confidence.
@@ -73,7 +73,7 @@ This model is clarified in Equations \ref{eq1} and \ref{eq2}:
 S_j = f(H_j)
 w_{ij} = E_i(MRP_j) = f_i(S_j)
 
-Job candidate $j$, generates a signal of productivity, $S_j$ from unobserved human capital, $H_j$.
+Job candidate $j$ generates a signal of productivity $S_j$ from unobserved human capital $H_j$.
 Employer $i$, forms an expectation of the marginal revenue product of $j$ on the basis of $f_i(S_j)$, an employer-specific evaluation of $S_j$.
 A specific employer is willing to pay a specific job candidate wages of $w_{ij}$.
 
@@ -92,8 +92,8 @@ Qualified respondents participated in the survey through the Amazon Mechanical T
 
 The survey includes 65 questions in two sections\footnote{See Appendix A for a full copy of the survey.}.
 The first section captures respondent characteristics, and the second section captures a skill-level evaluation of various hypothetical job candidates.
-These questions can be grouped into three groups of variables.
-There is the dependent variable of interest, a set of independent variables of interest, and some categorical controls.
+Grouping these variables into three groups simplifies discussion.
+There is the dependent variable of interest, independent variables of interest, and categorical controls.
 
 In this study, the categorical variables and the control variables are the same set.
 The independent and dependent variables of interest are Likert-type responses on a 10-point scale
@@ -102,7 +102,7 @@ Jaccard and Wan provide support for continuous analysis of Likert-type data.
 They note that severe departures from the assumptions on cardinality ``do not seem to affect Type I and Type II errors dramatically,''
 particularly when the Likert scale is five or more points.
 This paper uses a 10-point scale and treats these data as continuous.
-Higher Likert-type values indicate greater agreement with some statement.
+Higher Likert-type values indicate greater agreement with the associated statement.
 Categorical controls include state of residence, the industry of occupation, employer status, firm size, and a measure called duration.
 
 Duration measures the length of time the respondent believes it takes to obtain an alternative credential.
@@ -120,7 +120,7 @@ The first statement indicates that nonconformists present a risk to a company's 
 This statement received the least agreement and greatest response variance
 among three qualitatively different descriptions of nonconformists ($\mu = 6.29, \sigma = 2.51$).
 
-The second statement indicates that nonconformists are held back by rules and ``could just as easily be high performers as low performers.''
+The second statement indicates that nonconformists are held back by rules, and ``could just as easily be high performers as low performers.''
 This statement received the most agreement and least variance among rulebreaker statements ($\mu = 6.93, \sigma = 2.10$).
 The agreement with this statement provides evidence against the thesis that employers value conformity for its own sake.
 In turn, this adds weight to the theory that employers value conformity as a risk aversion tactic while knowing that nonconformity signals positive outlier potential.
@@ -135,24 +135,25 @@ Perceived skill questions in the second section of the survey allow for two ways
 Perceived skill gaps are measured separately with and without overqualification effects.
 Overqualification effects are important in external research\cite{green2007there, raybould2005over}, but skill gap analysis that ignores these effects is also routine.
 
-Perceived skill is a Likert-type response reporting agreement with the statement that a particular candidate has a particular skill.
+Perceived skill is a Likert-type response reporting agreement stating that a particular candidate has a particular skill.
 For each of 13 skills, the respondent imagines and reports skill levels for the ideal candidate, the average actual employee, the average recent college graduate, and the average ACNG.
 As a result, 52 of the 65 questions in the survey are questions on perceived skill about kind of candidate.
 
 The raw skill gap for some kind of candidate is the difference between the perceived skill for that candidate and the ideal candidate.
 The perceived skill gap with overqualification effects equals the raw perceived skill gap.
-The perceived skill gap without overqualification is zero if the raw skill gap is negative, and otherwise it is equal to the raw skill gap.
+The perceived skill gap without overqualification is zero if the raw skill gap is negative, and otherwise, it is equal to the raw skill gap.
 
 The concept of skill is intentionally treated loosely in this analysis.
 The thirteen factors treated as skills include
 attractiveness, verbal, written, and body language communication skills, conscientiousness, customer service skill, emotional intelligence (EQ), expected salary, teamwork, technical skill, willingness to break formal or informal rules (nonconformity), willingness to work odd hours, and willingness to commute.
 
-Results focus on ACNG skill gap coefficients, and also comparative skill gaps between ACNG labor and recent college graduates.
+Results focus on ACNG skill gap coefficients
+and also comparative skill gaps between ACNG labor and recent college graduates.
 Perceived ACNG skill gaps are also called absolute skill gaps.
-Subtracting the perceived recent college graduate skill gap from the absolute skill gap yiels the comparative skill gap.
+Subtracting the perceived recent college graduate skill gap from the absolute skill gap yields the comparative skill gap.
 
 Models of these variables will support the hypothesis if soft skills are more important than technical skill gaps.
-Significant rulebreaker effects would provide evidence that conformity is not valued by employers per se.
+Significant rulebreaker effects would provide evidence that conformity is valued differently for different types of employers.
 A positive relationship between firm size and hireability would support an explanation from risk aversion.
 
 Results
@@ -171,7 +172,7 @@ Model 4 is the preferred model, and factors in this model have a p-value less th
 Model 5 is a special case designed to answer an analytical question.
 
 Models 1 and 2 maximizes adjusted r-squared using absolute skill gaps.
-Model 1 includes overqualification effects and Model 2 excludes these effects.
+Model 1 includes overqualification effects, and Model 2 excludes these effects.
 This model is useful to demonstrate which skills are important determinants of ACNG hireability.
 The key result from these two models is that measuring skill gaps without overqualification is preferred.
 
@@ -181,18 +182,18 @@ This model is useful for understanding which skills give a hireability advantage
 Model 4 synthesizes comparative and absolute skill gaps.
 
 Rulebreaker effects are significant in all models, but the conformity skill is insignificant when rulebreaker effects are included.
-This is intuitive, because these factors are essentially explaining the same thing.
+This is intuitive because these factors are essentially explaining the same thing.
 Rulebreaker effects describe the way a respondent views conformity in a qualitative way.
 Excluding overqualification, a conformity skill gap indicates that a respondent views ACNG labor as less conformist than ideal.
 The degree to which a candidate is less conformist than ideal is almost fully implied in rulebreaker effects.
 This implication is substantial but imperfect.
 Because the implication is substantial, a conformity skill gap does not improve adjusted r-squared.
 Because the implication is imperfect, there is an opportunity to force the conformity skill gap into the model.
-While the p-value will be unacceptably high, it is still analytically interesting to obtain the sign of the conformity skill gap in this way.
+While the p-value will be unacceptably high, it is still analytically interesting to obtain the direction of the conformity skill gap effect.
 This is what Model 5 does.
 
 Model 5 takes Model 4 and adds additional factors for employer size, the absolute skill gap for conformity, and the comparative gap for conformity.
-These coefficients are not estimated with confidence, but their signs add marginally to the cumuluative evidence for conclusions.
+These coefficients are not estimated with confidence, but their signs add marginally to the cumulative evidence for conclusions.
 Rulebreaker effects are robustly positive and significant in all models.
 Positive rulebreaker effects indicate that nonconformity is positive on hireability.
 This result is reinforced by positive coefficients on the conformity skill gap in Model 5.
@@ -204,13 +205,13 @@ are more favorable to ACNG labor.
 However, the dummy in Model 4 represents an employer size that is less than average.
 This implies that the model constant contains a positive effect for larger employers.
 This subtle implication is reinforced in Model 5.
-In Model 5, positive coefficients are identified for firms most firm sizes, including firms at or above the median size.
+In Model 5, positive coefficients are identified for most firm sizes, including firms at or above the median size.
 
 Figure \ref{fig:firm_size} adds to the evidence that large firms favor alternative credentials.
 Firm size is a categorical variable with nine possible responses.
 Figure \ref{fig:firm_size} plots a numeric transform of the variable along the horizontal axis.
 The vertical axis represents the frequency of response for a given value.
-Responses from one through eight represent increasing firm size.
+Responses from one through eight represent increasing intervals of firm size.
 The negative coefficient on employer size in Model 4 corresponds to a response of three in the horizontal axis.
 A response of nine indicates that the question is not applicable because the respondent is not employed.
 The ninth response is dropped from Model 5 to prevent multicollinearity.
@@ -222,11 +223,12 @@ Models are specified using ordinary least squares (OLS).
 Models were also tested in a robust linear model (RLM) and generalized linear model (GLM) specification.
 RLM and GLM specification alters factor significance but does not alter the coefficient value.
 RLM and GLM models account for abnormal factor distribution.
-In OLS specification of Model 4, the preferred model, p-values did not exceed 0.28.
+In the OLS specification of Model 4, the preferred model, p-values did not exceed 0.28.
 In RLM specification, p-values did not exceed 0.41.
 In GLM specification, p-values did not exceed 0.38.
-Overall, OLS seems slightly overfit and RLM seems slightly underfit compared to GLM.
-This analysis is mainly concerned with the direction of factor effects, rather than a precise estimate of coefficient magnitudes.
+Overall, OLS seems slightly overfit, and RLM seems slightly underfit compared to GLM.
+This analysis is mainly concerned with the direction of factor effects
+rather than a precise estimate of coefficient magnitudes.
 The important result from robustness testing is that coefficients did not change, and the direction for each factor is plausible ($p < 0.5 < p'$).
 
 Seven skill gaps are considered important because they contribute to Model 4.
@@ -237,10 +239,10 @@ ACNG candidates can also supplement their own learning to address these gaps.
 Attractiveness and willingness to work odd hours do not seem to be easily remedied.
 Conscientiousness is difficult to train, but analysis suggests perception management as a remedy.
 Perceived conscientiousness has a slight correlation duration (Pearson's $r = 0.21$).
-Perceived concientiousness can be achieved through longer time to obtain for credentials.
-ACNG supplementation of a credential with additional self-study time may also improve perceived concientiousness.
+Perceived conscientiousness can be achieved by spending additional time obtaining the credential.
+ACNG supplementation of a credential with additional self-study time may also improve perceived conscientiousness.
 
-The important body language communication gap is interacted with the information technology industry variable.
+The important body language communication gap is an interaction with the information technology industry variable.
 The interaction indicates a reduced penalty for lack of body language communication skills
 in the information technology industry.
 A reduced penalty for soft skill deficit helps explain the particular flourishing of
@@ -253,14 +255,15 @@ Further study that includes personality data is encouraged to test this hypothes
 The interacted body language skill gap and the customer service skill gap
 are interesting for niche learning providers.
 
-The gaps in teamwork and written communication skill seem to be best candidates for
+The gaps in teamwork and written communication skill seem to be the best candidates for
 feasible remedy with broad learning provider applicability.
 Written communication skill is uniquely amenable to online learning.
 Written communication skill is also unique in the response distribution.
 The written communication skill gap is a comparative gap where the interquartile range favors ACNG labor.
 This indicates the perception that ACNG providers are generally capable of providing this skill.
 The distribution reflects positive and negative outliers.
-Positive outliers indicate that some learning providers have an ability to produce even higher skill, and negative outliers indicates that some learning providers are particularly poor at training this skill.
+Positive outliers indicate that the typical provider can improve by emulating market leaders.
+Negative outliers indicate that some learning providers are particularly poor at training this skill.
 If learning providers are generally effective in training this skill, improvement for ineffective providers is likely to be feasible.
 
 Alternative learning providers can use project-based learning and social learning
@@ -282,7 +285,7 @@ Table \ref{tab:explantory_power} summarizes results for simple regressions of ea
 Industry and state effects are factor groups regarded in external literature as important for models in the labor market.
 
 Table \ref{tab:explantory_power} shows that perceived skill gaps and rulebreaker effects explain more
-variance in hireability compared to state, industry, and other effects.
+variance in hireability compared to the state, industry, and other effects.
 Industry and state effects are also less stable.
 When hireability is modeled on industry effects alone, certain industry dummies obtain a p-value approaching 1.
 In contrast, the least significant absolute skill gaps are statistically significant in a simple regression ($p < 0.1$).
@@ -293,13 +296,13 @@ Conclusion
 This study provides evidence that the general population is favorable to alternative credentials.
 Hiring managers have higher hireability than employees that are not managers.
 Alternative credentials signal a qualitatively different basket of skills compared to recent college graduates.
-ACNG labor is perceived as weak in soft skills, but there are steps which can be taken to mitigate this issue.
+ACNG labor is perceived as weak in soft skills, but there are steps that can be taken to mitigate this issue.
 ACNG labor is viewed as low in conformity, but this results in added hireability on average.
 
 ACNG labor is also viewed as a risky hire.
-An explanation of low ACNG demand from employer risk aversion better explains results
+An explanation of low ACNG demand from employer risk aversion better explains the results
 compared to an explanation of selection for conformity.
-In addition to direct response indicating risk perception, firm size effects support an explanation from risk aversion.
+In addition to a direct response indicating risk perception, firm size effects support an explanation from risk aversion.
 Large employers face a lower risk premium for various reasons.
 For instance, large employers can spread risk across many hires.
 Risk premiums are also lower for large employers because they have access to better hiring data.
@@ -309,16 +312,15 @@ the college degree provides a comparative signal of conscientiousness and confor
 This paper replicates the importance of conscientiousness.
 Gaps in perceived conscientiousness are an important effect, but conscientiousness is not seen as an important differentiator of college graduates compared to ACNG candidates.
 
-While hireability is negatively associated with conformity on average, this varies importantly by employer.
-Descriptions of employer preferences better explain willingness to hire ACNG candidates than skill gaps.
-Industry level effects are also important, but effects at the employer level are significantly more reliable than industry effects.
-Skill gaps better explain hireability compared to effects which are widely regarded as important, such as industry and state effects.
+While hireability is negatively associated with conformity on average, this varies importantly by the employer.
+Descriptions of employer preferences better explain the willingness to hire ACNG candidates than skill gaps.
+Industry effects are also important, but effects at the employer level are significantly more reliable than industry effects.
+Skill gaps better explain hireability compared to effects that are widely regarded as important, such as industry and state effects.
 
 Risk aversion and conformity selection are both partially unconscious biases that lead to an inefficient organizational operation.
-A practical recommendation is for organizations to implement bias controls concerning ACNG evaluation.
-An example control would be to provide human resource procedures for formal evaluation of particular credentials relevant to specified job families.
-These procedures provide immediate operational benefits regarding known credentials and job families.
-These procedures should also be retained for ongoing application as new credentials are developed and encountered over time.
+A practical recommendation is for organizations to implement bias control processes concerning ACNG evaluation.
+An example process improvement would be for a human resources department to maintain a list of specific credentials
+which are valued in connection with particular job familiar.
 
 Another action item is for educational institutions, policymakers, and the general public to invest further in correcting alternative education misinformation.
 A survey on trade schooling taken in 2019 provides evidence on the role of this kind of misinformation.
