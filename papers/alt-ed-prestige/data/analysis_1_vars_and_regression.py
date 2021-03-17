@@ -10,19 +10,19 @@ from statsmodels.iolib.summary2 import summary_col
 def fsImproveProviderNames(sColName):
     sMassagedName = sColName
     sMassagedName = sMassagedName.replace('provider_hireability_1', 'provider_hireability_b_nacc_nself_yother')
-    sMassagedName = sMassagedName.replace('provider_impressed_1', 'provider_hireability_b_nacc_nself_yother')
+    sMassagedName = sMassagedName.replace('provider_impressed_1', 'provider_impressed_b_nacc_nself_yother')
     sMassagedName = sMassagedName.replace('provider_hireability_2', 'provider_hireability_c_nacc_yself_nother')
-    sMassagedName = sMassagedName.replace('provider_impressed_2', 'provider_hireability_c_nacc_yself_nother')
+    sMassagedName = sMassagedName.replace('provider_impressed_2', 'provider_impressed_c_nacc_yself_nother')
     sMassagedName = sMassagedName.replace('provider_hireability_3', 'provider_hireability_d_nacc_yself_yother')
-    sMassagedName = sMassagedName.replace('provider_impressed_3', 'provider_hireability_d_nacc_yself_yother')
+    sMassagedName = sMassagedName.replace('provider_impressed_3', 'provider_impressed_d_nacc_yself_yother')
     sMassagedName = sMassagedName.replace('provider_hireability_4', 'provider_hireability_e_yacc_nself_nother')
-    sMassagedName = sMassagedName.replace('provider_impressed_4', 'provider_hireability_e_yacc_nself_nother')
+    sMassagedName = sMassagedName.replace('provider_impressed_4', 'provider_impressed_e_yacc_nself_nother')
     sMassagedName = sMassagedName.replace('provider_hireability_5', 'provider_hireability_f_yacc_nself_yother')
-    sMassagedName = sMassagedName.replace('provider_impressed_5', 'provider_hireability_f_yacc_nself_yother')
+    sMassagedName = sMassagedName.replace('provider_impressed_5', 'provider_impressed_f_yacc_nself_yother')
     sMassagedName = sMassagedName.replace('provider_hireability_6', 'provider_hireability_g_yacc_yself_nother')
-    sMassagedName = sMassagedName.replace('provider_impressed_6', 'provider_hireability_g_yacc_yself_nother')
+    sMassagedName = sMassagedName.replace('provider_impressed_6', 'provider_impressed_g_yacc_yself_nother')
     sMassagedName = sMassagedName.replace('provider_hireability_7', 'provider_hireability_h_yacc_yself_yother')
-    sMassagedName = sMassagedName.replace('provider_impressed_7', 'provider_hireability_h_yacc_yself_yother')
+    sMassagedName = sMassagedName.replace('provider_impressed_7', 'provider_impressed_h_yacc_yself_yother')
     return sMassagedName
 
 
@@ -34,6 +34,7 @@ def fsReformatColumnNames(sColName):
     sMassagedName = sMassagedName.replace('_/_', '_')
     sMassagedName = sMassagedName.replace('__', '_')
     sMassagedName = sMassagedName.replace('how_impressed_would_you_be_if_you_heard_that_someone_studied_at_this_school', 'provider_impressed')
+    sMassagedName = sMassagedName.replace('how_impressed_would_you_be_if_you_heard_that_someone_studied_at_', 'provider_impressed_')
     sMassagedName = sMassagedName.replace('for_many_professions_learning_at_this_school_can_qualify_a_person_for_an_entry_level_position', 'provider_hireability')
     return sMassagedName
 
@@ -90,30 +91,25 @@ def getData(dropFirstDummy=True):
     df.drop(columns=['provider_hireability_', 'provider_impressed'])
     df = df.rename(fsImproveProviderNames, axis='columns')
 
-    # BEGIN TODO
-    sMassagedName = sMassagedName.replace('provider_hireability_1', 'provider_hireability_b_nacc_nself_yother')
-    sMassagedName = sMassagedName.replace('provider_impressed_1', 'provider_impressed_b_nacc_nself_yother')
-    sMassagedName = sMassagedName.replace('provider_hireability_2', 'provider_hireability_c_nacc_yself_nother')
-    sMassagedName = sMassagedName.replace('provider_impressed_2', 'provider_impressed_c_nacc_yself_nother')
-    sMassagedName = sMassagedName.replace('provider_hireability_3', 'provider_hireability_d_nacc_yself_yother')
-    sMassagedName = sMassagedName.replace('provider_impressed_3', 'provider_impressed_d_nacc_yself_yother')
-    sMassagedName = sMassagedName.replace('provider_hireability_4', 'provider_hireability_e_yacc_nself_nother')
-    sMassagedName = sMassagedName.replace('provider_impressed_4', 'provider_impressed_e_yacc_nself_nother')
-    sMassagedName = sMassagedName.replace('provider_hireability_5', 'provider_impressed_f_yacc_nself_yother')
-    sMassagedName = sMassagedName.replace('provider_impressed_5', 'provider_hireability_f_yacc_nself_yother')
-    sMassagedName = sMassagedName.replace('provider_hireability_6', 'provider_impressed_g_yacc_yself_nother')
-    sMassagedName = sMassagedName.replace('provider_impressed_6', 'provider_hireability_g_yacc_yself_nother')
-    sMassagedName = sMassagedName.replace('provider_hireability_7', 'provider_impressed_h_yacc_yself_yother')
-    sMassagedName = sMassagedName.replace('provider_impressed_7', 'provider_hireability_h_yacc_yself_yother')
+    df['hireability_concrete_high_prestige'] = (df['provider_impressed_california_institute_of_technology'] + df['provider_impressed_university_of_chicago']
+        + df['provider_impressed_app_academy'] + df['provider_impressed_general_assembly'] + df['provider_impressed_google'])/5
+    df['hireability_concrete_low_prestige'] = (df['provider_impressed_portland_state_university'] + df['provider_impressed_university_of_nebraska_omaha']
+        + df['provider_impressed_fvi_school_of_technology'] + df['provider_impressed_bov_academy'])/4
+    df['hireability_vignette_high_prestige'] = (df['provider_hireability_d_nacc_yself_yother'] + df['provider_hireability_h_yacc_yself_yother'])/2
+    df['hireability_vignette_low_prestige'] = (df['provider_hireability_a_nacc_nself_nother'] + df['provider_hireability_e_yacc_nself_nother'])/2
+    df['hireability_total_high_prestige'] = (df['hireability_concrete_high_prestige'] + df['hireability_vignette_high_prestige'])/2
+    df['hireability_total_low_prestige'] = (df['hireability_concrete_low_prestige'] + df['hireability_vignette_low_prestige'])/2
+    df['hireability_delta_prestige'] = df['hireability_total_high_prestige'] - df['hireability_total_low_prestige']
 
-    df['hireability_concrete_high_prestige'] = df['provider_hireability_h_yacc_yself_yother'] + df['provider_hireability_d_nacc_yself_yother']
-    df['hireability_concrete_low_prestige'] = df['provider_hireability_h_yacc_yself_yother'] + df['provider_hireability_d_nacc_yself_yother']
-    df['hireability_vignette_high_prestige'] = df['provider_impressed']
-    df['hireability_vignette_low_prestige'] = df['provider_impressed']
-    df['hireability_total_high_prestige']
-    df['hireability_total_low_prestige']
-    df['hireability_delta_prestige']
-    # END TODO
+    df['hireability_concrete_accredited'] = (df['provider_impressed_california_institute_of_technology'] + df['provider_impressed_university_of_chicago']
+        + df['provider_impressed_portland_state_university'] + df['provider_impressed_university_of_nebraska_omaha'])/4
+    df['hireability_concrete_unaccredited'] = (df['provider_impressed_app_academy'] + df['provider_impressed_general_assembly'] + df['provider_impressed_google']
+        + df['provider_impressed_fvi_school_of_technology'] + df['provider_impressed_bov_academy'])/5
+    df['hireability_vignette_accredited'] = (df['provider_hireability_e_yacc_nself_nother'] + df['provider_hireability_h_yacc_yself_yother'])/2
+    df['hireability_vignette_unaccredited'] = (df['provider_hireability_a_nacc_nself_nother'] + df['provider_hireability_d_nacc_yself_yother'])/2
+    df['hireability_total_accredited'] = (df['hireability_concrete_accredited'] + df['hireability_vignette_accredited'])/2
+    df['hireability_total_unaccredited'] = (df['hireability_concrete_unaccredited'] + df['hireability_vignette_unaccredited'])/2
+    df['hireability_delta_accreditation'] = df['hireability_total_accredited'] - df['hireability_total_unaccredited']
 
     # TODO: booleanize heard of vars and create a sum var
 
@@ -123,7 +119,7 @@ def getData(dropFirstDummy=True):
     return df
 
 # long reg / m1: n=350, r2=0.437, ar2=0.239
-m1 = '''favor_alt_creds ~
+m1 = '''hireability ~
     + is_low_context
     + 1'''
 

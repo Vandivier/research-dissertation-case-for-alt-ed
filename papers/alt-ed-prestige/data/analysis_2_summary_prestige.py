@@ -19,15 +19,5 @@ df = GetVars.getData(False)
 #   Prestige -> [concrete] x [high, low] + [vignette] x [high, low, mixed]
 # Mixed should be broken up for regression, but need not be broken up for summary table
 
-
-
-print(df['favor_alt_creds'].describe())
-print(df['covid_impact_slight_negative_impact'].describe())
-print(df['covid_impact_moderate_negative_impact'].describe())
-print(df['covid_impact_large_negative_impact'].describe())
-print(df['covid_ind_remote_slight_degree'].describe())
-print(df['covid_ind_remote_moderate_degree'].describe())
-print(df['covid_ind_remote_large_degree'].describe())
-print(df['covid_ind_fav_online_slight_degree'].describe())
-print(df['covid_ind_fav_online_moderate_degree'].describe())
-print(df['covid_ind_fav_online_large_degree'].describe())
+print(df['hireability_delta_accreditation'].describe())
+print(df['hireability_delta_prestige'].describe())
