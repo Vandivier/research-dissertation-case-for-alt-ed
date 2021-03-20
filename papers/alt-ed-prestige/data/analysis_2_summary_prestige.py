@@ -2,6 +2,7 @@
 # three approaches:
 # 1. summary stats (this file)
 # 2. synthetic records regression (turn 1 row into multiple; concrete 2 ways and vignette)
+#   b. supplement with rotation of models approach in case big regression is contested
 # 3. standard regression (Q13 and 14 of interest)
 
 import statsmodels.stats as sm

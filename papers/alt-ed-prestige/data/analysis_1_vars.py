@@ -121,6 +121,39 @@ def getData(dropFirstDummy=True):
     print("---")
     return df
 
+# https://en.wikipedia.org/wiki/Panel_data
+# this is basically wrangling a cross-sectional panel
+def getSyntheticColumns():
+    df = getData()
+
+    # section 1 hireability on alternative credentials in general is_unaccredited,
+    # and this is communicated to respondents.
+    # i expect/hope is_reiterated_unaccredited is insignificant; that is in section 2, 3    
+    newColumns = list(df) + ['is_concrete', 'is_vignette', 'is_accredited', 'is_reiterated_unaccredited',
+        'is_high_prestige', 'is_low_prestige', 'is_high_other_prestige', 'is_high_own_prestige', 'is_low_other_prestige', 'is_low_own_prestige']
+    dfNew = pd.DataFrame([], columns = newColumns)
+
+    print(list(dfNew))
+
+    # TODO: I'm not using name recognition for now, but I will check it out as a follow-on study
+    #   OR, if current study doesn't present expected result (prestige ~=||> accreditation) 
+    # TODO: future study, external quality data; name recognition and quality for when is_concrete
+    # TODO: future study, internal name recognition (heard of) instead of external name recognition
+    # TODO: future study, are own prestige, perceived other prestige, and actual other prestige correlated? shouldn't they be in an efficient economy?
+    # internal_name_recognition
+    # external_name_recognition
+
+    # for index, row in df.iterrows():
+    #     print(row['respondent_id'])
+    
+    return dfNew
+
+
 # if this file executed as script
+# dump to file to assist validation
+# non-synthetic row count = 454
+# expected synthetic for ~17*454 records (a bit less for partial fills)
+# include individual-level effects; eg response id factor
 if __name__ == '__main__':
-    getData()
+    df = getSyntheticColumns()
+    # df.to_csv('prestige-postprocess-hidden.csv')
