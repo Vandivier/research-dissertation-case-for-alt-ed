@@ -79,7 +79,6 @@ def getData(dropFirstDummy=True):
     df = df.rename(fsReformatColumnNames, axis='columns')
 
     if dropFirstDummy:
-
         df.drop(columns=['manager_effects_not_employed_at_present', 'industry_agriculture', 'income_prefer_not_to_answer',
                          'age_60', 'education_ged', 'ethnicity_american_indian_or_alaskan_native',
                          'state_alabama', 'gender_other'])
@@ -123,17 +122,19 @@ def getData(dropFirstDummy=True):
 
 # https://en.wikipedia.org/wiki/Panel_data
 # this is basically wrangling a cross-sectional panel
-def getSyntheticColumns():
+def getPanelizedData():
     df = getData()
 
     # section 1 hireability on alternative credentials in general is_unaccredited,
     # and this is communicated to respondents.
     # i expect/hope is_reiterated_unaccredited is insignificant; that is in section 2, 3    
-    newColumns = list(df) + ['is_concrete', 'is_vignette', 'is_accredited', 'is_reiterated_unaccredited',
-        'is_high_prestige', 'is_low_prestige', 'is_high_other_prestige', 'is_high_own_prestige', 'is_low_other_prestige', 'is_low_own_prestige']
-    dfNew = pd.DataFrame([], columns = newColumns)
-
-    print(list(dfNew))
+    # newColumns = list(df) + ['is_concrete', 'is_vignette', 'is_accredited', 'is_reiterated_unaccredited',
+    #     'is_high_prestige', 'is_low_prestige', 'is_high_other_prestige', 'is_high_own_prestige', 'is_low_other_prestige', 'is_low_own_prestige']
+    dfNew = df[0:0]
+    dfNew['is_concrete'] = []
+    dfNew['is_vignette'] = []
+    dfNew['is_accredited'] = []
+    dfNew['is_reiterated_unaccredited'] = []
 
     # TODO: I'm not using name recognition for now, but I will check it out as a follow-on study
     #   OR, if current study doesn't present expected result (prestige ~=||> accreditation) 
@@ -143,17 +144,63 @@ def getSyntheticColumns():
     # internal_name_recognition
     # external_name_recognition
 
-    # for index, row in df.iterrows():
-    #     print(row['respondent_id'])
-    
+    # Each raw response is folded into 18 cross-sectional panel observations.
+    # TODO: I guess itertouples is preferred but having trouble doing that or seeing perf benefit w named tuples
+    for index, row in df.iterrows():
+        observationSectionOne = row.copy()
+        observationSectionOne.at['is_concrete'] = 0
+        observationSectionOne.at['is_vignette'] = 0
+        observationSectionOne.at['is_accredited'] = 0
+        observationSectionOne.at['is_reiterated_unaccredited'] = 0
+
+        observationCalTech = row.copy()
+        observationCalTech.at['is_concrete'] = 1
+        observationCalTech.at['is_vignette'] = 0
+        observationCalTech.at['is_accredited'] = 1
+        observationCalTech.at['is_reiterated_unaccredited'] = 0
+
+        observationChicago = row
+        observationPsu = row
+        observationUno = row
+        observationAppAcademy = row
+        observationGenAssembly = row
+        observationFviTech = row
+        observationBov = row
+        observationGoogle = row
+        observation_a_nacc_nself_nother = row
+        observation_b_nacc_nself_yother = row
+        observation_c_nacc_yself_nother = row
+        observation_d_nacc_yself_yother = row
+        observation_e_yacc_nself_nother = row
+        observation_f_yacc_nself_yother = row
+        observation_g_yacc_yself_nother = row
+        observation_h_yacc_yself_yother = row
+
+        newRows = [observationSectionOne, observationCalTech, observationChicago, observationPsu, observationUno,
+            observationAppAcademy, observationGenAssembly, observationFviTech, observationBov, observationGoogle,
+            observation_a_nacc_nself_nother, observation_b_nacc_nself_yother, observation_c_nacc_yself_nother, observation_d_nacc_yself_yother,
+            observation_e_yacc_nself_nother, observation_f_yacc_nself_yother, observation_g_yacc_yself_nother, observation_h_yacc_yself_yother]
+
+        dfNew = dfNew.append(newRows, ignore_index=True)
+
+        dfNew.drop(columns=[
+                'provider_hireability_a_nacc_nself_nother', 'provider_impressed_a_nacc_nself_nother',
+                'provider_hireability_b_nacc_nself_yother', 'provider_impressed_b_nacc_nself_yother',
+                'provider_hireability_c_nacc_yself_nother', 'provider_impressed_c_nacc_yself_nother',
+                'provider_hireability_d_nacc_yself_yother', 'provider_impressed_d_nacc_yself_yother',
+                'provider_hireability_e_yacc_nself_nother', 'provider_impressed_e_yacc_nself_nother', 
+                'provider_hireability_f_yacc_nself_yother', 'provider_impressed_f_yacc_nself_yother',
+                'provider_hireability_g_yacc_yself_nother', 'provider_impressed_g_yacc_yself_nother',
+                'provider_hireability_h_yacc_yself_yother', 'provider_impressed_h_yacc_yself_yother',
+            ])
+
+    print('dfNew len = ' + str(len(dfNew.index)))
+    print('---')
     return dfNew
 
 
 # if this file executed as script
 # dump to file to assist validation
-# non-synthetic row count = 454
-# expected synthetic for ~17*454 records (a bit less for partial fills)
-# include individual-level effects; eg response id factor
 if __name__ == '__main__':
-    df = getSyntheticColumns()
-    # df.to_csv('prestige-postprocess-hidden.csv')
+    df = getPanelizedData()
+    df.to_csv('prestige-postprocess-hidden.csv')
