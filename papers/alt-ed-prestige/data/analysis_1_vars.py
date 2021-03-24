@@ -127,14 +127,20 @@ def getPanelizedData():
 
     # section 1 hireability on alternative credentials in general is_unaccredited,
     # and this is communicated to respondents.
-    # i expect/hope is_reiterated_unaccredited is insignificant; that is in section 2, 3    
-    # newColumns = list(df) + ['is_concrete', 'is_vignette', 'is_accredited', 'is_reiterated_unaccredited',
-    #     'is_high_prestige', 'is_low_prestige', 'is_high_other_prestige', 'is_high_own_prestige', 'is_low_other_prestige', 'is_low_own_prestige']
+    # i expect/hope is_reiterated_unaccredited is insignificant; that is in section 2, 3
     dfNew = df[0:0]
     dfNew['is_concrete'] = []
     dfNew['is_vignette'] = []
     dfNew['is_accredited'] = []
     dfNew['is_reiterated_unaccredited'] = []
+    dfNew['prestige_other'] = []
+    dfNew['prestige_own'] = []
+    dfNew['is_high_other_prestige'] = []
+    dfNew['is_high_own_prestige'] = []
+    dfNew['is_high_prestige'] = []
+    dfNew['is_low_other_prestige'] = []
+    dfNew['is_low_own_prestige'] = []
+    dfNew['is_low_prestige'] = []
 
     # TODO: I'm not using name recognition for now, but I will check it out as a follow-on study
     #   OR, if current study doesn't present expected result (prestige ~=||> accreditation) 
@@ -152,29 +158,101 @@ def getPanelizedData():
         observationSectionOne.at['is_vignette'] = 0
         observationSectionOne.at['is_accredited'] = 0
         observationSectionOne.at['is_reiterated_unaccredited'] = 0
+        # observationSectionOne.at['prestige_other'] = []
+        # observationSectionOne.at['prestige_own'] = []
+        # observationSectionOne.at['is_high_other_prestige'] = []
+        # observationSectionOne.at['is_high_own_prestige'] = []
+        # observationSectionOne.at['is_high_prestige'] = []
+        # observationSectionOne.at['is_low_other_prestige'] = []
+        # observationSectionOne.at['is_low_own_prestige'] = []
+        # observationSectionOne.at['is_low_prestige'] = []
 
         observationCalTech = row.copy()
         observationCalTech.at['is_concrete'] = 1
         observationCalTech.at['is_vignette'] = 0
         observationCalTech.at['is_accredited'] = 1
         observationCalTech.at['is_reiterated_unaccredited'] = 0
+        observationCalTech.at['prestige_own'] = observationCalTech.at['provider_impressed_california_institute_of_technology']
 
-        observationChicago = row
-        observationPsu = row
-        observationUno = row
-        observationAppAcademy = row
-        observationGenAssembly = row
-        observationFviTech = row
-        observationBov = row
-        observationGoogle = row
-        observation_a_nacc_nself_nother = row
-        observation_b_nacc_nself_yother = row
-        observation_c_nacc_yself_nother = row
-        observation_d_nacc_yself_yother = row
-        observation_e_yacc_nself_nother = row
-        observation_f_yacc_nself_yother = row
-        observation_g_yacc_yself_nother = row
-        observation_h_yacc_yself_yother = row
+        observationChicago = row.copy()
+        observationChicago.at['is_concrete'] = 1
+        observationChicago.at['is_vignette'] = 0
+        observationChicago.at['is_accredited'] = 1
+        observationChicago.at['is_reiterated_unaccredited'] = 0
+        observationChicago.at['prestige_own'] = observationChicago.at['provider_impressed_university_of_chicago']
+
+        observationPsu = row.copy()
+        observationPsu.at['is_concrete'] = 1
+        observationPsu.at['is_vignette'] = 0
+        observationPsu.at['is_accredited'] = 1
+        observationPsu.at['is_reiterated_unaccredited'] = 0
+        observationPsu.at['prestige_own'] = observationPsu.at['provider_impressed_portland_state_university']
+
+        observationUno = row.copy()
+        observationUno.at['is_concrete'] = 1
+        observationUno.at['is_vignette'] = 0
+        observationUno.at['is_accredited'] = 1
+        observationUno.at['is_reiterated_unaccredited'] = 0
+        observationUno.at['prestige_own'] = observationUno.at['provider_impressed_university_of_nebraska_omaha']
+
+        observationAppAcademy = row.copy()
+        observationAppAcademy.at['is_concrete'] = 1
+        observationAppAcademy.at['is_vignette'] = 0
+        observationAppAcademy.at['is_accredited'] = 0
+        observationAppAcademy.at['is_reiterated_unaccredited'] = 1
+        observationAppAcademy.at['prestige_own'] = observationAppAcademy.at['provider_impressed_app_academy']
+
+        observationGenAssembly = row.copy()
+        observationGenAssembly.at['is_concrete'] = 1
+        observationGenAssembly.at['is_vignette'] = 0
+        observationGenAssembly.at['is_accredited'] = 0
+        observationGenAssembly.at['is_reiterated_unaccredited'] = 1
+        observationGenAssembly.at['prestige_own'] = observationGenAssembly.at['provider_impressed_general_assembly']
+
+        observationFviTech = row.copy()
+        observationFviTech.at['is_concrete'] = 1
+        observationFviTech.at['is_vignette'] = 0
+        observationFviTech.at['is_accredited'] = 0
+        observationFviTech.at['is_reiterated_unaccredited'] = 1
+        observationFviTech.at['prestige_own'] = observationFviTech.at['provider_impressed_fvi_school_of_technology']
+
+        observationBov = row.copy()
+        observationBov.at['is_concrete'] = 1
+        observationBov.at['is_vignette'] = 0
+        observationBov.at['is_accredited'] = 0
+        observationBov.at['is_reiterated_unaccredited'] = 1
+        observationBov.at['prestige_own'] = observationBov.at['provider_impressed_bov_academy']
+
+        observationGoogle = row.copy()
+        observationGoogle.at['is_concrete'] = 1
+        observationGoogle.at['is_vignette'] = 0
+        observationGoogle.at['is_accredited'] = 0
+        observationGoogle.at['is_reiterated_unaccredited'] = 1
+        observationGoogle.at['prestige_own'] = observationGoogle.at['provider_impressed_google']
+
+        observation_a_nacc_nself_nother = row.copy()
+        observationSectionOne.at['is_concrete'] = 0
+        observationSectionOne.at['is_vignette'] = 1
+        observationSectionOne.at['is_accredited'] = 0
+        observationSectionOne.at['is_reiterated_unaccredited'] = 0
+        observationSectionOne.at['is_stipulated_other_impressed'] = 0
+        observationSectionOne.at['is_stipulated_self_impressed'] = 0
+        observationSectionOne.at['prestige_own'] = observationSectionOne.at['provider_impressed_a_nacc_nself_nother']
+        observationSectionOne.at['hireability'] = observationSectionOne.at['provider_hireability_a_nacc_nself_nother']
+
+        observation_b_nacc_nself_yother = row.copy()
+
+        observation_c_nacc_yself_nother = row.copy()
+
+        observation_d_nacc_yself_yother = row.copy()
+
+        observation_e_yacc_nself_nother = row.copy()
+
+        observation_f_yacc_nself_yother = row.copy()
+
+        observation_g_yacc_yself_nother = row.copy()
+        
+        observation_h_yacc_yself_yother = row.copy()
 
         newRows = [observationSectionOne, observationCalTech, observationChicago, observationPsu, observationUno,
             observationAppAcademy, observationGenAssembly, observationFviTech, observationBov, observationGoogle,
@@ -183,16 +261,21 @@ def getPanelizedData():
 
         dfNew = dfNew.append(newRows, ignore_index=True)
 
+        # TODO: del column, don't drop https://stackoverflow.com/questions/13411544/delete-column-from-pandas-dataframe
         dfNew.drop(columns=[
-                'provider_hireability_a_nacc_nself_nother', 'provider_impressed_a_nacc_nself_nother',
-                'provider_hireability_b_nacc_nself_yother', 'provider_impressed_b_nacc_nself_yother',
-                'provider_hireability_c_nacc_yself_nother', 'provider_impressed_c_nacc_yself_nother',
-                'provider_hireability_d_nacc_yself_yother', 'provider_impressed_d_nacc_yself_yother',
-                'provider_hireability_e_yacc_nself_nother', 'provider_impressed_e_yacc_nself_nother', 
-                'provider_hireability_f_yacc_nself_yother', 'provider_impressed_f_yacc_nself_yother',
-                'provider_hireability_g_yacc_yself_nother', 'provider_impressed_g_yacc_yself_nother',
-                'provider_hireability_h_yacc_yself_yother', 'provider_impressed_h_yacc_yself_yother',
-            ])
+            'provider_impressed_california_institute_of_technology',
+            'provider_hireability_a_nacc_nself_nother', 'provider_impressed_a_nacc_nself_nother',
+            'provider_hireability_b_nacc_nself_yother', 'provider_impressed_b_nacc_nself_yother',
+            'provider_hireability_c_nacc_yself_nother', 'provider_impressed_c_nacc_yself_nother',
+            'provider_hireability_d_nacc_yself_yother', 'provider_impressed_d_nacc_yself_yother',
+            'provider_hireability_e_yacc_nself_nother', 'provider_impressed_e_yacc_nself_nother', 
+            'provider_hireability_f_yacc_nself_yother', 'provider_impressed_f_yacc_nself_yother',
+            'provider_hireability_g_yacc_yself_nother', 'provider_impressed_g_yacc_yself_nother',
+            'provider_hireability_h_yacc_yself_yother', 'provider_impressed_h_yacc_yself_yother',
+        ])
+            
+    dfNew['is_high_prestige'] = 1 if dfNew['is_high_other_prestige'] + dfNew['is_high_prestige'] == 2 else 0
+    dfNew['is_low_prestige'] = 1 if dfNew['is_low_other_prestige'] + dfNew['is_low_prestige'] == 2 else 0
 
     print('dfNew len = ' + str(len(dfNew.index)))
     print('---')
