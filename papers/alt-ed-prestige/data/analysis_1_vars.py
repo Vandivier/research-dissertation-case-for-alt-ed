@@ -13,7 +13,7 @@ def fsImproveProviderNames(sColName):
     sMassagedName = sMassagedName.replace('provider_impressed_1', 'provider_impressed_b_nacc_nself_yother')
     sMassagedName = sMassagedName.replace('provider_hireability_2', 'provider_hireability_c_nacc_yself_nother')
     sMassagedName = sMassagedName.replace('provider_impressed_2', 'provider_impressed_c_nacc_yself_nother')
-    sMassagedName = sMassagedName.replace('provider_hireability_3', 'provider_hireability_d_nacc_yself_yother')
+    sMassagedName = sMassagedName.replace('provider_hireability_3', 'provider_hireability_d_nacc_yself_nother')
     sMassagedName = sMassagedName.replace('provider_impressed_3', 'provider_impressed_d_nacc_yself_yother')
     sMassagedName = sMassagedName.replace('provider_hireability_4', 'provider_hireability_e_yacc_nself_nother')
     sMassagedName = sMassagedName.replace('provider_impressed_4', 'provider_impressed_e_yacc_nself_nother')
@@ -231,32 +231,88 @@ def getPanelizedData():
         observationGoogle.at['prestige_own'] = observationGoogle.at['provider_impressed_google']
 
         observation_a_nacc_nself_nother = row.copy()
-        observationSectionOne.at['is_concrete'] = 0
-        observationSectionOne.at['is_vignette'] = 1
-        observationSectionOne.at['is_accredited'] = 0
-        observationSectionOne.at['is_reiterated_unaccredited'] = 0
-        observationSectionOne.at['is_stipulated_other_impressed'] = 0
-        observationSectionOne.at['is_stipulated_self_impressed'] = 0
-        observationSectionOne.at['prestige_own'] = observationSectionOne.at['provider_impressed_a_nacc_nself_nother']
-        observationSectionOne.at['hireability'] = observationSectionOne.at['provider_hireability_a_nacc_nself_nother']
+        observation_a_nacc_nself_nother.at['is_concrete'] = 0
+        observation_a_nacc_nself_nother.at['is_vignette'] = 1
+        observation_a_nacc_nself_nother.at['is_accredited'] = 0
+        observation_a_nacc_nself_nother.at['is_reiterated_unaccredited'] = 1
+        observation_a_nacc_nself_nother.at['is_stipulated_other_impressed'] = 0
+        observation_a_nacc_nself_nother.at['is_stipulated_self_impressed'] = 0
+        observation_a_nacc_nself_nother.at['prestige_own'] = observation_a_nacc_nself_nother.at['provider_impressed_a_nacc_nself_nother']
+        observation_a_nacc_nself_nother.at['hireability'] = observation_a_nacc_nself_nother.at['provider_hireability_a_nacc_nself_nother']
 
         observation_b_nacc_nself_yother = row.copy()
+        observation_b_nacc_nself_yother.at['is_concrete'] = 0
+        observation_b_nacc_nself_yother.at['is_vignette'] = 1
+        observation_b_nacc_nself_yother.at['is_accredited'] = 0
+        observation_b_nacc_nself_yother.at['is_reiterated_unaccredited'] = 1
+        observation_b_nacc_nself_yother.at['is_stipulated_other_impressed'] = 1
+        observation_b_nacc_nself_yother.at['is_stipulated_self_impressed'] = 0
+        observation_b_nacc_nself_yother.at['prestige_own'] = observation_b_nacc_nself_yother.at['provider_impressed_b_nacc_nself_yother']
+        observation_b_nacc_nself_yother.at['hireability'] = observation_b_nacc_nself_yother.at['provider_hireability_b_nacc_nself_yother']
 
         observation_c_nacc_yself_nother = row.copy()
+        observation_c_nacc_yself_nother.at['is_concrete'] = 0
+        observation_c_nacc_yself_nother.at['is_vignette'] = 1
+        observation_c_nacc_yself_nother.at['is_accredited'] = 0
+        observation_c_nacc_yself_nother.at['is_reiterated_unaccredited'] = 1
+        observation_c_nacc_yself_nother.at['is_stipulated_other_impressed'] = 0
+        observation_c_nacc_yself_nother.at['is_stipulated_self_impressed'] = 1
+        observation_c_nacc_yself_nother.at['prestige_own'] = observation_c_nacc_yself_nother.at['provider_impressed_c_nacc_yself_nother']
+        observation_c_nacc_yself_nother.at['hireability'] = observation_c_nacc_yself_nother.at['provider_hireability_c_nacc_yself_nother']
 
-        observation_d_nacc_yself_yother = row.copy()
+        observation_d_nacc_yself_nother = row.copy()
+        observation_d_nacc_yself_nother.at['is_concrete'] = 0
+        observation_d_nacc_yself_nother.at['is_vignette'] = 1
+        observation_d_nacc_yself_nother.at['is_accredited'] = 0
+        observation_d_nacc_yself_nother.at['is_reiterated_unaccredited'] = 1
+        observation_d_nacc_yself_nother.at['is_stipulated_other_impressed'] = 1
+        observation_d_nacc_yself_nother.at['is_stipulated_self_impressed'] = 1
+        observation_d_nacc_yself_nother.at['prestige_own'] = observation_d_nacc_yself_nother.at['provider_impressed_d_nacc_yself_yother']
+        observation_d_nacc_yself_nother.at['hireability'] = observation_d_nacc_yself_nother.at['provider_hireability_d_nacc_yself_yother']
 
         observation_e_yacc_nself_nother = row.copy()
+        observation_e_yacc_nself_nother.at['is_concrete'] = 0
+        observation_e_yacc_nself_nother.at['is_vignette'] = 1
+        observation_e_yacc_nself_nother.at['is_accredited'] = 1
+        observation_e_yacc_nself_nother.at['is_reiterated_unaccredited'] = 0
+        observation_e_yacc_nself_nother.at['is_stipulated_other_impressed'] = 0
+        observation_e_yacc_nself_nother.at['is_stipulated_self_impressed'] = 0
+        observation_e_yacc_nself_nother.at['prestige_own'] = observation_e_yacc_nself_nother.at['provider_impressed_e_yacc_nself_nother']
+        observation_e_yacc_nself_nother.at['hireability'] = observation_e_yacc_nself_nother.at['provider_hireability_e_yacc_nself_nother']
 
         observation_f_yacc_nself_yother = row.copy()
+        observation_f_yacc_nself_yother.at['is_concrete'] = 0
+        observation_f_yacc_nself_yother.at['is_vignette'] = 1
+        observation_f_yacc_nself_yother.at['is_accredited'] = 1
+        observation_f_yacc_nself_yother.at['is_reiterated_unaccredited'] = 0
+        observation_f_yacc_nself_yother.at['is_stipulated_other_impressed'] = 1
+        observation_f_yacc_nself_yother.at['is_stipulated_self_impressed'] = 0
+        observation_f_yacc_nself_yother.at['prestige_own'] = observation_f_yacc_nself_yother.at['provider_impressed_f_yacc_nself_yother']
+        observation_f_yacc_nself_yother.at['hireability'] = observation_f_yacc_nself_yother.at['provider_hireability_f_yacc_nself_yother']
 
         observation_g_yacc_yself_nother = row.copy()
+        observation_g_yacc_yself_nother.at['is_concrete'] = 0
+        observation_g_yacc_yself_nother.at['is_vignette'] = 1
+        observation_g_yacc_yself_nother.at['is_accredited'] = 1
+        observation_g_yacc_yself_nother.at['is_reiterated_unaccredited'] = 0
+        observation_g_yacc_yself_nother.at['is_stipulated_other_impressed'] = 0
+        observation_g_yacc_yself_nother.at['is_stipulated_self_impressed'] = 1
+        observation_g_yacc_yself_nother.at['prestige_own'] = observation_g_yacc_yself_nother.at['provider_impressed_g_yacc_yself_nother']
+        observation_g_yacc_yself_nother.at['hireability'] = observation_g_yacc_yself_nother.at['provider_hireability_g_yacc_yself_nother']
         
         observation_h_yacc_yself_yother = row.copy()
+        observation_h_yacc_yself_yother.at['is_concrete'] = 0
+        observation_h_yacc_yself_yother.at['is_vignette'] = 1
+        observation_h_yacc_yself_yother.at['is_accredited'] = 1
+        observation_h_yacc_yself_yother.at['is_reiterated_unaccredited'] = 0
+        observation_h_yacc_yself_yother.at['is_stipulated_other_impressed'] = 1
+        observation_h_yacc_yself_yother.at['is_stipulated_self_impressed'] = 1
+        observation_h_yacc_yself_yother.at['prestige_own'] = observation_h_yacc_yself_yother.at['provider_impressed_h_yacc_yself_yother']
+        observation_h_yacc_yself_yother.at['hireability'] = observation_h_yacc_yself_yother.at['provider_hireability_h_yacc_yself_yother']
 
         newRows = [observationSectionOne, observationCalTech, observationChicago, observationPsu, observationUno,
             observationAppAcademy, observationGenAssembly, observationFviTech, observationBov, observationGoogle,
-            observation_a_nacc_nself_nother, observation_b_nacc_nself_yother, observation_c_nacc_yself_nother, observation_d_nacc_yself_yother,
+            observation_a_nacc_nself_nother, observation_b_nacc_nself_yother, observation_c_nacc_yself_nother, observation_d_nacc_yself_nother,
             observation_e_yacc_nself_nother, observation_f_yacc_nself_yother, observation_g_yacc_yself_nother, observation_h_yacc_yself_yother]
 
         dfNew = dfNew.append(newRows, ignore_index=True)
