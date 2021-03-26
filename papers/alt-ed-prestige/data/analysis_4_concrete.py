@@ -15,13 +15,26 @@
 import statsmodels.api as sm
 import analysis_1_vars as GetVars
 
-# long reg / m1: n=454, r2=0.492, ar2=0.367
 m1 = '''hireability ~ conventional_alt_creds + favor_online_ed
     + cat_prefer_degree_true
     + is_concrete + is_vignette
     + manager_effects_no + manager_effects_yes
     + gender_female + gender_male
+    + is_accredited + is_reiterated_unaccredited
+    + is_stipulated_other_impressed + is_stipulated_self_impressed
+    + prestige_own
     + 1'''
+
+    
+# m1 = '''hireability ~ conventional_alt_creds + favor_online_ed
+#     + cat_prefer_degree_true
+#     + is_concrete + is_vignette
+#     + manager_effects_no + manager_effects_yes
+#     + gender_female + gender_male
+#     + is_accredited + is_reiterated_unaccredited
+#     + is_stipulated_other_impressed + is_stipulated_self_impressed
+#     + prestige_own + is_high_prestige + is_low_prestige
+#     + 1'''
 
 # if this file executed as script
 if __name__ == '__main__':

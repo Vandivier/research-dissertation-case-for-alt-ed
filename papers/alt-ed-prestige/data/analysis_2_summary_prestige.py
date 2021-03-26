@@ -22,3 +22,8 @@ print(df['hireability_delta_prestige'].describe())
 
 # n = 454, mean = frequency of agreement (to prefer degree) = 58.37%
 print(df['cat_prefer_degree_true'].describe())
+
+print(df['cat_work_with_external_partners_a'].describe())
+print(df['cat_work_with_external_partners_b'].describe())
+print(df['cat_work_with_external_partners_c'].describe())
+print(df['cat_work_with_external_partners_d'].describe())

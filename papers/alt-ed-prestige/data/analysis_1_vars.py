@@ -13,7 +13,7 @@ def fsImproveProviderNames(sColName):
     sMassagedName = sMassagedName.replace('provider_impressed_1', 'provider_impressed_b_nacc_nself_yother')
     sMassagedName = sMassagedName.replace('provider_hireability_2', 'provider_hireability_c_nacc_yself_nother')
     sMassagedName = sMassagedName.replace('provider_impressed_2', 'provider_impressed_c_nacc_yself_nother')
-    sMassagedName = sMassagedName.replace('provider_hireability_3', 'provider_hireability_d_nacc_yself_nother')
+    sMassagedName = sMassagedName.replace('provider_hireability_3', 'provider_hireability_d_nacc_yself_yother')
     sMassagedName = sMassagedName.replace('provider_impressed_3', 'provider_impressed_d_nacc_yself_yother')
     sMassagedName = sMassagedName.replace('provider_hireability_4', 'provider_hireability_e_yacc_nself_nother')
     sMassagedName = sMassagedName.replace('provider_impressed_4', 'provider_impressed_e_yacc_nself_nother')
@@ -46,6 +46,15 @@ def getData(dropFirstDummy=True):
     # ref: https://stackoverflow.com/a/51428632/3931488
     print(df.columns)
 
+    # df.replace(to_replace="Not employed at present", value="a", inplace=True)
+    # df.replace(to_replace="I usually spend more time with customers and external business partners than with coworkers.", value="b", inplace=True)
+    # df.replace(to_replace="I usually spend at least an hour each day with customers and external business partners.", value="c", inplace=True)
+    # df.replace(to_replace="I usually spend less than an hour each day in direct contact with customers and external business partners.", value="d", inplace=True)
+    # df = df.replace("Not employed at present", "a")
+    # df = df.replace("I usually spend more time with customers and external business partners than with coworkers.", "b")
+    # df = df.replace("I usually spend at least an hour each day with customers and external business partners.", "c")
+    # df = df.replace("I usually spend less than an hour each day in direct contact with customers and external business partners.", "d")
+
     df.rename(columns={
         "Do you contribute to hiring and firing decisions at your company?": "manager_effects",
         "For many professions, alternative credentials can qualify a person for an entry-level position.": "hireability", # aka favorability
@@ -75,6 +84,11 @@ def getData(dropFirstDummy=True):
     df = pd.get_dummies(df, columns=['state'])
     df = pd.get_dummies(df, columns=['gender'])
     df = pd.get_dummies(df, columns=['cat_prefer_degree'])
+    
+    df['cat_work_with_external_partners_a'] = df['work_with_external_partners'].str.contains('Not employed at present')
+    df['cat_work_with_external_partners_b'] = df['work_with_external_partners'].str.contains('I usually spend more time with customers and external business partners than with coworkers.')
+    df['cat_work_with_external_partners_c'] = df['work_with_external_partners'].str.contains('I usually spend at least an hour each day with customers and external business partners.')
+    df['cat_work_with_external_partners_d'] = df['work_with_external_partners'].str.contains('I usually spend less than an hour each day in direct contact with customers and external business partners.')
 
     df = df.rename(fsReformatColumnNames, axis='columns')
 
@@ -329,9 +343,9 @@ def getPanelizedData():
             'provider_hireability_g_yacc_yself_nother', 'provider_impressed_g_yacc_yself_nother',
             'provider_hireability_h_yacc_yself_yother', 'provider_impressed_h_yacc_yself_yother',
         ])
-            
-    dfNew['is_high_prestige'] = 1 if dfNew['is_high_other_prestige'] + dfNew['is_high_prestige'] == 2 else 0
-    dfNew['is_low_prestige'] = 1 if dfNew['is_low_other_prestige'] + dfNew['is_low_prestige'] == 2 else 0
+
+    dfNew['is_high_prestige'] = dfNew['is_high_other_prestige'] * dfNew['is_high_prestige']
+    dfNew['is_low_prestige'] = dfNew['is_low_other_prestige'] * dfNew['is_low_prestige']
 
     print('dfNew len = ' + str(len(dfNew.index)))
     print('---')
