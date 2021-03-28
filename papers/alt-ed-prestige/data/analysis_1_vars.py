@@ -352,8 +352,19 @@ def getPanelizedData():
     return dfNew
 
 
+def getVignetteData():
+    df = getPanelizedData()
+    dfNew = df[df.is_vignette == 1]
+    dfNew = dfNew[dfNew.hireability < 11]
+    dfNew = dfNew[dfNew.hireability > 0]
+    # dfNew = dfNew[isinstance(dfNew.hireability, int)]
+    print('getVignetteData dfNew len = ' + str(len(dfNew.index)))
+    print('---')
+    return dfNew
+
+
 # if this file executed as script
 # dump to file to assist validation
 if __name__ == '__main__':
-    df = getPanelizedData()
+    df = getVignetteData()
     df.to_csv('prestige-postprocess-hidden.csv')
