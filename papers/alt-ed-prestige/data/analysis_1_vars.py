@@ -186,6 +186,8 @@ def getPanelizedData():
         observationCalTech.at['is_vignette'] = 0
         observationCalTech.at['is_accredited'] = 1
         observationCalTech.at['is_reiterated_unaccredited'] = 0
+        observationCalTech.at['is_stipulated_other_impressed'] = 1
+        observationCalTech.at['is_stipulated_self_impressed'] = 1
         observationCalTech.at['prestige_own'] = observationCalTech.at['provider_impressed_california_institute_of_technology']
 
         observationChicago = row.copy()
@@ -193,6 +195,8 @@ def getPanelizedData():
         observationChicago.at['is_vignette'] = 0
         observationChicago.at['is_accredited'] = 1
         observationChicago.at['is_reiterated_unaccredited'] = 0
+        observationChicago.at['is_stipulated_other_impressed'] = 1
+        observationChicago.at['is_stipulated_self_impressed'] = 1
         observationChicago.at['prestige_own'] = observationChicago.at['provider_impressed_university_of_chicago']
 
         observationPsu = row.copy()
@@ -200,6 +204,8 @@ def getPanelizedData():
         observationPsu.at['is_vignette'] = 0
         observationPsu.at['is_accredited'] = 1
         observationPsu.at['is_reiterated_unaccredited'] = 0
+        observationPsu.at['is_stipulated_other_impressed'] = 0
+        observationPsu.at['is_stipulated_self_impressed'] = 0
         observationPsu.at['prestige_own'] = observationPsu.at['provider_impressed_portland_state_university']
 
         observationUno = row.copy()
@@ -207,6 +213,8 @@ def getPanelizedData():
         observationUno.at['is_vignette'] = 0
         observationUno.at['is_accredited'] = 1
         observationUno.at['is_reiterated_unaccredited'] = 0
+        observationUno.at['is_stipulated_other_impressed'] = 0
+        observationUno.at['is_stipulated_self_impressed'] = 0
         observationUno.at['prestige_own'] = observationUno.at['provider_impressed_university_of_nebraska_omaha']
 
         observationAppAcademy = row.copy()
@@ -214,6 +222,8 @@ def getPanelizedData():
         observationAppAcademy.at['is_vignette'] = 0
         observationAppAcademy.at['is_accredited'] = 0
         observationAppAcademy.at['is_reiterated_unaccredited'] = 1
+        observationAppAcademy.at['is_stipulated_other_impressed'] = 1
+        observationAppAcademy.at['is_stipulated_self_impressed'] = 1
         observationAppAcademy.at['prestige_own'] = observationAppAcademy.at['provider_impressed_app_academy']
 
         observationGenAssembly = row.copy()
@@ -221,6 +231,8 @@ def getPanelizedData():
         observationGenAssembly.at['is_vignette'] = 0
         observationGenAssembly.at['is_accredited'] = 0
         observationGenAssembly.at['is_reiterated_unaccredited'] = 1
+        observationGenAssembly.at['is_stipulated_other_impressed'] = 1
+        observationGenAssembly.at['is_stipulated_self_impressed'] = 1
         observationGenAssembly.at['prestige_own'] = observationGenAssembly.at['provider_impressed_general_assembly']
 
         observationFviTech = row.copy()
@@ -228,6 +240,8 @@ def getPanelizedData():
         observationFviTech.at['is_vignette'] = 0
         observationFviTech.at['is_accredited'] = 0
         observationFviTech.at['is_reiterated_unaccredited'] = 1
+        observationFviTech.at['is_stipulated_other_impressed'] = 0
+        observationFviTech.at['is_stipulated_self_impressed'] = 0
         observationFviTech.at['prestige_own'] = observationFviTech.at['provider_impressed_fvi_school_of_technology']
 
         observationBov = row.copy()
@@ -235,6 +249,8 @@ def getPanelizedData():
         observationBov.at['is_vignette'] = 0
         observationBov.at['is_accredited'] = 0
         observationBov.at['is_reiterated_unaccredited'] = 1
+        observationBov.at['is_stipulated_other_impressed'] = 0
+        observationBov.at['is_stipulated_self_impressed'] = 0
         observationBov.at['prestige_own'] = observationBov.at['provider_impressed_bov_academy']
 
         observationGoogle = row.copy()
@@ -242,6 +258,8 @@ def getPanelizedData():
         observationGoogle.at['is_vignette'] = 0
         observationGoogle.at['is_accredited'] = 0
         observationGoogle.at['is_reiterated_unaccredited'] = 1
+        observationGoogle.at['is_stipulated_other_impressed'] = 1
+        observationGoogle.at['is_stipulated_self_impressed'] = 1
         observationGoogle.at['prestige_own'] = observationGoogle.at['provider_impressed_google']
 
         observation_a_nacc_nself_nother = row.copy()
@@ -344,8 +362,11 @@ def getPanelizedData():
             'provider_hireability_h_yacc_yself_yother', 'provider_impressed_h_yacc_yself_yother',
         ])
 
-    dfNew['is_high_prestige'] = dfNew['is_high_other_prestige'] * dfNew['is_high_prestige']
-    dfNew['is_low_prestige'] = dfNew['is_low_other_prestige'] * dfNew['is_low_prestige']
+    # dfNew['is_high_prestige'] = dfNew['is_high_other_prestige'] * dfNew['is_high_prestige']
+    # dfNew['is_low_prestige'] = dfNew['is_low_other_prestige'] * dfNew['is_low_prestige']
+    dfNew['is_high_prestige'] = dfNew['is_stipulated_other_impressed'] * dfNew['is_stipulated_self_impressed']
+    # dfNew['is_crude_aggregated_prestige'] = dfNew['is_stipulated_other_impressed'] + dfNew['is_stipulated_self_impressed']
+    dfNew['is_low_prestige'] = (dfNew['is_stipulated_other_impressed'] == 0) & (dfNew['is_stipulated_self_impressed'] == 0)
 
     print('dfNew len = ' + str(len(dfNew.index)))
     print('---')
@@ -363,8 +384,19 @@ def getVignetteData():
     return dfNew
 
 
+def getConcreteData():
+    df = getPanelizedData()
+    dfNew = df[df.is_concrete == 1]
+    dfNew = dfNew[dfNew.hireability < 11]
+    dfNew = dfNew[dfNew.hireability > 0]
+    # dfNew = dfNew[isinstance(dfNew.hireability, int)]
+    print('getVignetteData dfNew len = ' + str(len(dfNew.index)))
+    print('---')
+    return dfNew
+
+
 # if this file executed as script
 # dump to file to assist validation
 if __name__ == '__main__':
-    df = getVignetteData()
+    df = getPanelizedData()
     df.to_csv('prestige-postprocess-hidden.csv')
