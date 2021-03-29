@@ -1,7 +1,5 @@
 
-from scipy import stats
 import statsmodels.api as sm
-import statsmodels.stats.api as sms
 import statsmodels.stats.weightstats as ws
 import analysis_1_vars as GetVars
 
@@ -28,18 +26,11 @@ print(c_unaccredited.describe())
 print(v_high_prestige.describe())
 print(c_high_prestige.describe())
 
-# X1 = v_accredited.dropna().to_numpy()
-# X2 = c_accredited.dropna().to_numpy()
-# print(X1)
-# print(X2)
-# cm = sms.CompareMeans(sms.DescrStatsW(X1), sms.DescrStatsW(X2))
-# # print(cm.tconfint_diff())
-# print(cm.tconfint_diff(usevar='unequal'))
-
-# # this works!
-# print(stats.ttest_ind(X1,X2, equal_var = False, nan_policy='omit'))
-
 # is the average prestige for an learning provider categories importantly different between vignette and concrete providers?
+# answer: stat sig, yes, but not important for unaccredited. so we can locate a concrete high prestige alt cred.
+#       diff is important for accredited and high prestige;
+#       vignette high prestige was higher than concrete high prestige
+#       vignette accredited prestige was lower than concrete accredited prestige
 comparison_accredited = ws.CompareMeans.from_data(v_accredited, c_accredited)
 comparison_unaccredited = ws.CompareMeans.from_data(v_unaccredited, c_unaccredited)
 comparison_high_prestige = ws.CompareMeans.from_data(v_high_prestige, c_high_prestige)
