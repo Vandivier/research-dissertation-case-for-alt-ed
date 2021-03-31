@@ -61,25 +61,50 @@ m5 = '''hireability ~ prestige_own
     + is_stipulated_other_impressed
     + conventional_alt_creds + favor_online_ed
     + cat_prefer_degree_true
-    + cat_work_with_external_partners_b + cat_work_with_external_partners_d
-    + industry_education + industry_finance_investment_or_accounting
-    + industry_information_technology + industry_manufacturing + industry_other
+    + industry_other
     + income_0_9999 + income_100000_124999
-        + income_175000_199999 + income_200000 + income_25000_49999 + income_50000_74999 + income_75000_99999
-    + age_45_60
-    + state_arizona + state_california + state_connecticut
-        + state_florida + state_georgia + state_kansas
-        + state_maryland + state_massachusetts + state_michigan + state_mississippi
-        + state_missouri + state_nebraska + state_new_mexico
-        + state_pennsylvania
-        + state_tennessee + state_texas + state_west_virginia
+        + income_25000_49999 + income_50000_74999 + income_75000_99999
+    + state_california + state_michigan + state_missouri + state_nebraska
+    '''
+
+m6 = '''hireability ~ prestige_own
+    + is_accredited
+    + is_high_prestige + is_low_prestige
+    + is_stipulated_other_impressed
+    + conventional_alt_creds + favor_online_ed
+    + cat_prefer_degree_true
+    + industry_other
+    + income_0_9999 + income_100000_124999
+        + income_25000_49999 + income_50000_74999 + income_75000_99999
+    + state_california
+    '''
+
+m7 = '''hireability ~ prestige_own
+    + is_accredited
+    + is_low_prestige
+    + is_stipulated_other_impressed
+    + conventional_alt_creds
+    + state_california
+    '''
+
+# switch is_low_prestige -> is_high_prestige to make interpretation intuitive
+m8 = '''hireability ~ prestige_own
+    + is_accredited
+    + is_high_prestige
+    + is_stipulated_other_impressed
+    + conventional_alt_creds
+    + state_california
     '''
 
 
 # if this file executed as script
 if __name__ == '__main__':
-    long_v_reg = sm.MixedLM.from_formula(m4, data=data, groups=data["respondent_id"], re_formula="respondent_id").fit(method=["lbfgs"])
     # prefer weak v strong to fight overfit in mixed lm; there is no ar2 measure
-    weak_v_reg = sm.MixedLM.from_formula(m5, data=data, groups=data["respondent_id"], re_formula="respondent_id").fit(method=["lbfgs"])
+    # weak reg has Hessian matrix issue
+    # long_v_reg = sm.MixedLM.from_formula(m4, data=data, groups=data["respondent_id"], re_formula="respondent_id").fit(method=["lbfgs"])
+    # weak_v_reg = sm.MixedLM.from_formula(m5, data=data, groups=data["respondent_id"], re_formula="respondent_id").fit(method=["lbfgs"])
+    # point_three_v_reg = sm.MixedLM.from_formula(m6, data=data, groups=data["respondent_id"], re_formula="respondent_id").fit(method=["lbfgs"])
+    # strong_v_reg = sm.MixedLM.from_formula(m7, data=data, groups=data["respondent_id"], re_formula="respondent_id").fit(method=["lbfgs"])
+    strong_modified_v_reg = sm.MixedLM.from_formula(m8, data=data, groups=data["respondent_id"], re_formula="respondent_id").fit(method=["lbfgs"])
 
-    print(long_v_reg.summary())
+    print(strong_modified_v_reg.summary())
