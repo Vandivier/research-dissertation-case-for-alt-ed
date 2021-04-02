@@ -79,6 +79,13 @@ m6 = '''hireability ~ prestige_own
     + state_california
     '''
 
+# technically, this was optimized using .fit(method=["lbfgs"])
+# then i dropped it bc m8 wouldn't converge unless i dropped it
+# also, idk what it does so good idea to drop it
+# negative side-effect is, I didn't backward-select m4-m7 without it
+# m7 with method=["lbfgs"], B(is_accredited) = 0.649
+# m7 without method=["lbfgs"], B(is_accredited) = 0.649
+# so, I don't think it matters
 m7 = '''hireability ~ prestige_own
     + is_accredited
     + is_low_prestige
@@ -87,13 +94,14 @@ m7 = '''hireability ~ prestige_own
     + state_california
     '''
 
-# switch is_low_prestige -> is_high_prestige to make interpretation intuitive
+# shorter model for practical application
+# during application, assume is_stipulated_other_impressed = false for a more conservative estimate
+# in practice, degree-substituting consumers will prefer high prestige alt creds; so removing the factor
+# creates a more conservative prestige_own effect through an intentional omitted variable bias
+# i would keep the CA factor but model doesn't converge in that case
 m8 = '''hireability ~ prestige_own
     + is_accredited
-    + is_high_prestige
     + is_stipulated_other_impressed
-    + conventional_alt_creds
-    + state_california
     '''
 
 
@@ -104,7 +112,9 @@ if __name__ == '__main__':
     # long_v_reg = sm.MixedLM.from_formula(m4, data=data, groups=data["respondent_id"], re_formula="respondent_id").fit(method=["lbfgs"])
     # weak_v_reg = sm.MixedLM.from_formula(m5, data=data, groups=data["respondent_id"], re_formula="respondent_id").fit(method=["lbfgs"])
     # point_three_v_reg = sm.MixedLM.from_formula(m6, data=data, groups=data["respondent_id"], re_formula="respondent_id").fit(method=["lbfgs"])
-    # strong_v_reg = sm.MixedLM.from_formula(m7, data=data, groups=data["respondent_id"], re_formula="respondent_id").fit(method=["lbfgs"])
-    strong_modified_v_reg = sm.MixedLM.from_formula(m8, data=data, groups=data["respondent_id"], re_formula="respondent_id").fit(method=["lbfgs"])
 
+    strong_v_reg = sm.MixedLM.from_formula(m7, data=data, groups=data["respondent_id"], re_formula="respondent_id").fit()
+    print(strong_v_reg.summary())
+
+    strong_modified_v_reg = sm.MixedLM.from_formula(m8, data=data, groups=data["respondent_id"], re_formula="respondent_id").fit()
     print(strong_modified_v_reg.summary())
