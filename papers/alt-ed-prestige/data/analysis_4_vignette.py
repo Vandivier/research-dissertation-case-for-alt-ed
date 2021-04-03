@@ -104,7 +104,6 @@ m8 = '''hireability ~ prestige_own
     + is_stipulated_other_impressed
     '''
 
-
 # if this file executed as script
 if __name__ == '__main__':
     # prefer weak v strong to fight overfit in mixed lm; there is no ar2 measure

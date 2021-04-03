@@ -368,6 +368,84 @@ def getPanelizedData():
     # dfNew['is_crude_aggregated_prestige'] = dfNew['is_stipulated_other_impressed'] + dfNew['is_stipulated_self_impressed']
     dfNew['is_low_prestige'] = (dfNew['is_stipulated_other_impressed'] == 0) & (dfNew['is_stipulated_self_impressed'] == 0)
 
+    dfNew['is_low_context_and_accredited'] = dfNew['is_low_context'] * dfNew['is_accredited']
+    dfNew['is_low_context_and_fvi'] = dfNew['is_low_context'] * dfNew['provider_impressed_fvi_school_of_technology']
+
+    # this factor is same as revealed_preference_cat_prefer_degree but no google
+    # from a consumer process perspective, the user picks a top-knotch bootcamp on an aggregator site (rating > 4/5 w 100+ reviews)
+    dfNew['prefer_alt_cred_revealed_high_v_low_no_goog'] = dfNew.eval('False'
+            + ' or provider_impressed_app_academy > provider_impressed_portland_state_university'
+            + ' or provider_impressed_app_academy > provider_impressed_university_of_nebraska_omaha'
+            + ' or provider_impressed_general_assembly > provider_impressed_portland_state_university'
+            + ' or provider_impressed_general_assembly > provider_impressed_university_of_nebraska_omaha'
+            + '')
+
+    # # this is a revealed or ecological preference
+    # # it is more clear than the plain cat_prefer_degree_false
+    # # they can also cross-reference each other as a robustness check
+    # # this permissive check is 'if any high-quality alt cred is preferred to any low quality school'
+    # consumer process perspective, user takes the best creds even outside of an aggregator; more difficult;
+    #   can be accomplished by consulting hiring managers, industry employees, other experts, and extensive research
+    dfNew['prefer_alt_cred_revealed_high_v_low'] = dfNew.eval('prefer_alt_cred_revealed_high_v_low_no_goog'
+            + ' or provider_impressed_google > provider_impressed_portland_state_university'
+            + ' or provider_impressed_google > provider_impressed_university_of_nebraska_omaha'
+            + '')
+
+    # high v high demonstrates that some employers, although rare, prefer creds to prestigious universities
+    # from a functional perspective this supports the 'job search as a numbers game' process
+    #   the candidate must consult a large number of employers and will have a low chance of success, but eventually find high employer support
+    dfNew['prefer_alt_cred_revealed_high_v_high'] = dfNew.eval('False'
+            + ' or provider_impressed_app_academy > provider_impressed_california_institute_of_technology'
+            + ' or provider_impressed_app_academy > provider_impressed_university_of_chicago'
+            + ' or provider_impressed_general_assembly > provider_impressed_california_institute_of_technology'
+            + ' or provider_impressed_general_assembly > provider_impressed_university_of_chicago'
+            + ' or provider_impressed_google > provider_impressed_california_institute_of_technology'
+            + ' or provider_impressed_google > provider_impressed_university_of_chicago'
+            + '')
+
+    # high v high no goog reflects process just aggregator consult
+    dfNew['prefer_alt_cred_revealed_high_v_high_no_goog'] = dfNew.eval('False'
+            + ' or provider_impressed_app_academy > provider_impressed_california_institute_of_technology'
+            + ' or provider_impressed_app_academy > provider_impressed_university_of_chicago'
+            + ' or provider_impressed_general_assembly > provider_impressed_california_institute_of_technology'
+            + ' or provider_impressed_general_assembly > provider_impressed_university_of_chicago'
+            + '')
+
+    # # this is even more permissive; if any alt cred is preferred to any school
+    # # why might this happen?
+    # # 1. general distaste for accredited education or occasional distaste for a specific school
+    # # 2. general favorability to alternative credentials or occasional high favor to specific credentials (esp google)
+    # # 3. improper distorted perception; eg naming effects appear important.
+    # #   eg many ppl highly rated p_fvi_school_of_technology - seems due to naming effects; caltech improperly higher than chicago too
+    dfNew['prefer_alt_cred_revealed'] = dfNew.eval('False'
+            + ' or provider_impressed_google > provider_impressed_california_institute_of_technology'
+            + ' or provider_impressed_google > provider_impressed_university_of_chicago'
+            + ' or provider_impressed_google > provider_impressed_portland_state_university'
+            + ' or provider_impressed_google > provider_impressed_university_of_nebraska_omaha'
+            + ''
+            + ' or provider_impressed_app_academy > provider_impressed_california_institute_of_technology'
+            + ' or provider_impressed_app_academy > provider_impressed_university_of_chicago'
+            + ' or provider_impressed_app_academy > provider_impressed_portland_state_university'
+            + ' or provider_impressed_app_academy > provider_impressed_university_of_nebraska_omaha'
+            + ''
+            + ' or provider_impressed_general_assembly > provider_impressed_california_institute_of_technology'
+            + ' or provider_impressed_general_assembly > provider_impressed_university_of_chicago'
+            + ' or provider_impressed_general_assembly > provider_impressed_portland_state_university'
+            + ' or provider_impressed_general_assembly > provider_impressed_university_of_nebraska_omaha'
+            + ''
+            + ' or provider_impressed_bov_academy > provider_impressed_california_institute_of_technology'
+            + ' or provider_impressed_bov_academy > provider_impressed_university_of_chicago'
+            + ' or provider_impressed_bov_academy > provider_impressed_portland_state_university'
+            + ' or provider_impressed_bov_academy > provider_impressed_university_of_nebraska_omaha'
+            + ''
+            + ' or provider_impressed_fvi_school_of_technology > provider_impressed_california_institute_of_technology'
+            + ' or provider_impressed_fvi_school_of_technology > provider_impressed_university_of_chicago'
+            + ' or provider_impressed_fvi_school_of_technology > provider_impressed_portland_state_university'
+            + ' or provider_impressed_fvi_school_of_technology > provider_impressed_university_of_nebraska_omaha'
+            + '')
+
+    dfNew['prefer_alt_cred_espoused_weakly'] = dfNew.eval('cat_prefer_degree_false')
+
     print('dfNew len = ' + str(len(dfNew.index)))
     print('---')
     return dfNew
@@ -378,7 +456,6 @@ def getVignetteData():
     dfNew = df[df.is_vignette == 1]
     dfNew = dfNew[dfNew.hireability < 11]
     dfNew = dfNew[dfNew.hireability > 0]
-    # dfNew = dfNew[isinstance(dfNew.hireability, int)]
     print('getVignetteData dfNew len = ' + str(len(dfNew.index)))
     print('---')
     return dfNew
@@ -389,8 +466,9 @@ def getConcreteData():
     dfNew = df[df.is_concrete == 1]
     dfNew = dfNew[dfNew.hireability < 11]
     dfNew = dfNew[dfNew.hireability > 0]
-    # dfNew = dfNew[isinstance(dfNew.hireability, int)]
-    print('getVignetteData dfNew len = ' + str(len(dfNew.index)))
+    dfNew = dfNew[dfNew.prestige_own > 0]
+    # TODO: need no null prestige_own
+    print('getConcreteData dfNew len = ' + str(len(dfNew.index)))
     print('---')
     return dfNew
 

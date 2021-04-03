@@ -16,6 +16,11 @@ p_google = nonpanelized['provider_impressed_google'].dropna()
 p_fvi_school_of_technology = nonpanelized['provider_impressed_fvi_school_of_technology'].dropna()
 p_bov_academy = nonpanelized['provider_impressed_bov_academy'].dropna()
 
+p_california_institute_of_technology = nonpanelized['provider_impressed_california_institute_of_technology'].dropna()
+p_university_of_chicago = nonpanelized['provider_impressed_university_of_chicago'].dropna()
+p_portland_state_university = nonpanelized['provider_impressed_portland_state_university'].dropna()
+p_university_of_nebraska_omaha = nonpanelized['provider_impressed_university_of_nebraska_omaha'].dropna()
+
 v_accredited = vignette[vignette.is_accredited == 1]['prestige_own'].dropna()
 c_accredited = concrete[concrete.is_accredited == 1]['prestige_own'].dropna()
 v_unaccredited = vignette[vignette.is_reiterated_unaccredited == 1]['prestige_own'].dropna()
@@ -69,19 +74,147 @@ print(c_unaccredited.quantile(0.7))
 # score of 9
 print(c_unaccredited.quantile(0.85))
 
-print('p_google mean, median')
-print(p_google.mean() + ', ' + p_google.quantile(0.5))
-print('p_app_academy below')
-p_app_academy = nonpanelized['provider_impressed_app_academy'].dropna()
-print('p_general_assembly below')
-p_general_assembly = nonpanelized['provider_impressed_general_assembly'].dropna()
-print('p_fvi_school_of_technology below')
-p_fvi_school_of_technology = nonpanelized['provider_impressed_fvi_school_of_technology'].dropna()
-print('p_bov_academy below')
-p_bov_academy = nonpanelized['provider_impressed_bov_academy'].dropna()
-
+print('p_google mean then median below')
+print(p_google.mean())
+print(p_google.quantile(0.5))
+print('p_app_academy mean then median below')
+print(p_app_academy.mean())
+print(p_app_academy.quantile(0.5))
+print('p_general_assembly mean then median below')
+print(p_general_assembly.mean())
+print(p_general_assembly.quantile(0.5))
+print('p_fvi_school_of_technology mean then median below')
+print(p_fvi_school_of_technology.mean())
+print(p_fvi_school_of_technology.quantile(0.5))
+print('p_bov_academy mean then median below')
+print(p_bov_academy.mean())
+print(p_bov_academy.quantile(0.5))
 
 # which real alt ed places are good enough to make up for not accredited?
+# looks like, on average, none of them meet the 8/9 bar
 
+print('---accredited below')
+
+print('p_california_institute_of_technology mean then median below')
+print(p_california_institute_of_technology.mean())
+print(p_california_institute_of_technology.quantile(0.5))
+print('p_university_of_chicago mean then median below')
+print(p_university_of_chicago.mean())
+print(p_university_of_chicago.quantile(0.5))
+print('p_portland_state_university mean then median below')
+print(p_portland_state_university.mean())
+print(p_portland_state_university.quantile(0.5))
+print('p_university_of_nebraska_omaha mean then median below')
+print(p_university_of_nebraska_omaha.mean())
+print(p_university_of_nebraska_omaha.quantile(0.5))
 
 print('---')
+print('with high context below')
+print('---')
+
+with_high_context = nonpanelized[nonpanelized.is_low_context == 0]
+
+# results:
+# with the exception of fvi_school_of_technology, unaccredited responses fell in expected order on average
+# however, only google was good enough to beat any accredited degree on average (it beat 2)
+# at the same time, some proportion of respondents considered alt creds substitutable to some extent every time.
+
+p_app_academy = with_high_context['provider_impressed_app_academy'].dropna()
+p_general_assembly = with_high_context['provider_impressed_general_assembly'].dropna()
+p_google = with_high_context['provider_impressed_google'].dropna()
+p_fvi_school_of_technology =with_high_context['provider_impressed_fvi_school_of_technology'].dropna()
+p_bov_academy = with_high_context['provider_impressed_bov_academy'].dropna()
+
+p_california_institute_of_technology = with_high_context['provider_impressed_california_institute_of_technology'].dropna()
+p_university_of_chicago = with_high_context['provider_impressed_university_of_chicago'].dropna()
+p_portland_state_university = with_high_context['provider_impressed_portland_state_university'].dropna()
+p_university_of_nebraska_omaha = with_high_context['provider_impressed_university_of_nebraska_omaha'].dropna()
+
+c_unaccredited = concrete[concrete.is_low_context == 0][concrete.is_reiterated_unaccredited == 1]['prestige_own'].dropna()
+# score of 8
+print(c_unaccredited.quantile(0.7))
+# score of 9
+print(c_unaccredited.quantile(0.85))
+
+print('p_google mean then median below')
+print(p_google.mean())
+print(p_google.quantile(0.5))
+print('p_app_academy mean then median below')
+print(p_app_academy.mean())
+print(p_app_academy.quantile(0.5))
+print('p_general_assembly mean then median below')
+print(p_general_assembly.mean())
+print(p_general_assembly.quantile(0.5))
+print('p_fvi_school_of_technology mean then median below')
+print(p_fvi_school_of_technology.mean())
+print(p_fvi_school_of_technology.quantile(0.5))
+print('p_bov_academy mean then median below')
+print(p_bov_academy.mean())
+print(p_bov_academy.quantile(0.5))
+
+# which real alt ed places are good enough to make up for not accredited?
+# looks like, on average, none of them meet the 8/9 bar
+
+print('---accredited below')
+
+print('p_california_institute_of_technology mean then median below')
+print(p_california_institute_of_technology.mean())
+print(p_california_institute_of_technology.quantile(0.5))
+print('p_university_of_chicago mean then median below')
+print(p_university_of_chicago.mean())
+print(p_university_of_chicago.quantile(0.5))
+print('p_portland_state_university mean then median below')
+print(p_portland_state_university.mean())
+print(p_portland_state_university.quantile(0.5))
+print('p_university_of_nebraska_omaha mean then median below')
+print(p_university_of_nebraska_omaha.mean())
+print(p_university_of_nebraska_omaha.quantile(0.5))
+
+
+print('espoused weakly to prefer alt cred before then after adding context')
+print(nonpanelized['prefer_alt_cred_espoused_weakly'].mean())
+print(with_high_context['prefer_alt_cred_espoused_weakly'].mean())
+
+print('revealed prefer alt cred sometimes before then after adding context')
+print(nonpanelized['prefer_alt_cred_revealed'].mean())
+print(with_high_context['prefer_alt_cred_revealed'].mean())
+
+print('revealed prefer high alt cred to low accredited before then after adding context')
+print(nonpanelized['prefer_alt_cred_revealed_high_v_low'].mean())
+print(with_high_context['prefer_alt_cred_revealed_high_v_low'].mean())
+
+print('revealed prefer high alt cred to low accredited no google before then after adding context')
+print(nonpanelized['prefer_alt_cred_revealed_high_v_low_no_goog'].mean())
+print(with_high_context['prefer_alt_cred_revealed_high_v_low_no_goog'].mean())
+
+print('revealed prefer high alt cred to high accredited before then after adding context')
+print(nonpanelized['prefer_alt_cred_revealed_high_v_high'].mean())
+print(with_high_context['prefer_alt_cred_revealed_high_v_high'].mean())
+
+print('revealed prefer high alt cred to high accredited no google before then after adding context')
+print(nonpanelized['prefer_alt_cred_revealed_high_v_high_no_goog'].mean())
+print(with_high_context['prefer_alt_cred_revealed_high_v_high_no_goog'].mean())
+
+
+# summary with high context
+# context shifts unaccredited right and accredited
+# ---
+# 70th - before [8] - after [7]
+# 85th - before [9] - after [9]
+# goog - before [7.058] - after [7.100]
+# app_academy - before [5.776] - after [5.822]
+# gen_ass - before [5.754] - after [5.871]
+# fvi - before [6.100] - after [6.054]
+# bov - before [5.647] - after [5.602]
+# caltech - before [7.463] - after [7.481]
+# uchicago - before [7.545] - after [7.515]
+# portland - before [6.678] - after [6.494]
+# nebraska - before [6.494] - after [6.344]
+# espoused prefer alt cred (don't prefer degree)
+#          - before
+# revealed prefer alt cred any
+#          - before
+# revealed prefer alt cred no goog high/low
+#          - before
+# revealed prefer alt cred high/low
+#          - before
