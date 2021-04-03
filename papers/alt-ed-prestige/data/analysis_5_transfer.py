@@ -210,11 +210,22 @@ print(with_high_context['prefer_alt_cred_revealed_high_v_high_no_goog'].mean())
 # uchicago - before [7.545] - after [7.515]
 # portland - before [6.678] - after [6.494]
 # nebraska - before [6.494] - after [6.344]
-# espoused prefer alt cred (don't prefer degree)
-#          - before
-# revealed prefer alt cred any
-#          - before
-# revealed prefer alt cred no goog high/low
-#          - before
-# revealed prefer alt cred high/low
-#          - before
+#
+# espoused weakly to prefer alt cred before then after adding context
+# before context - 0.416
+# after context - 0.376
+# revealed prefer alt cred sometimes before then after adding context
+# before context - 0.714
+# after context - 0.748
+# revealed prefer high alt cred to low accredited before then after adding context
+# before context - 0.626
+# after context - 0.645
+# revealed prefer high alt cred to low accredited no google before then after adding context
+# before context - 0.377
+# after context - 0.430
+# revealed prefer high alt cred to high accredited before then after adding context
+# before context - 0.502
+# after context - 0.512
+# revealed prefer high alt cred to high accredited no google before then after adding context
+# before context - 0.278
+# after context - 0.298

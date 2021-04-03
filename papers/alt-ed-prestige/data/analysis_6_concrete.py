@@ -8,7 +8,6 @@ m9 = '''hireability ~ prestige_own
     + is_accredited
     + is_stipulated_other_impressed
     '''
-    
 
 m10 = '''hireability ~ prestige_own
     + is_accredited
