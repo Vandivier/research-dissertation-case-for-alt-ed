@@ -14,7 +14,47 @@ industry, state, individual, and other effects
 favor the nontraditional student in specific cases.
 
 Introduction
-Alternative credentials, or non-accredited credentials, as well as supernormal returns to education for some students.
+The accredited degree is an established means toward desirable labor outcomes, but proliferation of the degree is associated with a variety of well-understood issues including
+the student debt crisis, skill gaps, grade inflation, low social return, and contribution to lack of diversity in the labor market.
+Alternative credentials, or non-accredited credentials, are a broad category of offerings that exhibit greater variation intensity, price, and outcomes.
+This paper hypothesizes that variation in the properties of alternative credentials
+contemporaneously inhibit normal usage and support occasional superior results.
+
+Strategic usage of alternative credentials requires a qualitative description of the occasions in which they provide superior results.
+Decomposition of alternative credentials can be accomplished through a variety of lenses, and this paper takes the lens of prestige.
+This paper tests the hypothesis that prestige is a better explanation of willingness to hire
+than accreditation.
+Results are made practical through the description of low-effort methods to identify of high prestige alternative credentials.
+
+The motivation for the lens of prestige extends from the literatures on education economics and the economics of social norms.
+In a broad review of economics and norm types, hiring decisions exist within what Elster would identify as work norms.
+Elster finds support for a rational explanation of work norms, concluding with the caveat that actual social interactions may involve unobserved emotional effects.
+Similarly, the neoclassical model utilized in this paper comes with the caveat that
+applicability of results is constrained in cases where a hiring decision is made subject to abnormal emotional effects.
+Elster importantly distinguishes between social and legal norms, in a move that becomes surprisingly useful to the current analysis.
+
+Within the economics of work norms, Rivera is one scholar to have recently operationalized social norms as prestige.
+Rivera finds that prestige is important in her analysis, but the scope of her analysis is focused
+within an analysis of traditional education and a few specific industries including health and law.
+The current paper extends the analysis of prestige and hiring norms
+across all industries and to include alternative credentials.
+
+TODO: continue below 4/4/21 5:30 PM
+
+Vocational schools are only sometimes accredited, and non-accredited means of learning some vocations are common.
+For this reason, it is widely accepted that there are particular jobs for which alternative credentials are preferred, but the explanation for the lack of general non-accreditated higher learning is commonly made on the basis of social norms.
+As two sides of the same coin, some argue that vocational schooling and alternative credentials bear some stigma.
+Others argue that there is a positive social expectation, and indeed systematized facilitation, of educational progress from a high school to an accredited university.
+
+TODO: DRAW ON ELSTER TO CONSTRUCT A NORMS-WEIGHTED UTILITY FUNCTION
+we are specifically concerned with work norms
+
+As a preview, statistical evidence confirms that prestige independently explains hirability better than accreditation alone, but accreditation fails to be explained away.
+Instead, models that use both factors produce superior estimates of willingness to hire.
+The independent importance of accreditation indicates that asymptotic improvement to alternative credentials
+are unlikely to fully compete away the traditional education system.
+A change in legal norms
+The conclusion describes policy options that solve for the remainder of concerns in higher education that survive competition from alternative credentials.
 
 theory: prestige substantially explains hirability
 rationally conspicuous consumption: part of the degree value is prestige
@@ -99,6 +139,46 @@ conclusion - implications for application from the consumer perspective and supp
 theoretically (low-prestige + not well known) > (low prestige + well known). did that seem true?
 
 Conclusions
+policy recommendations are constrained in recognition of the political economy of education as a turbulent, endogenous, entangled thing, in contrast to a simplistic analysis that might treat politics as a thing distinct from and able to exogenously move the economy
+(wagner: % https://mason.gmu.edu/~rwagner/Wirth%20Keynote.pdf)
+Wagner argues contra Becker and other neoclassicals that so-called political competition doesn't get you to the efficient economic outcome.
+"Unlike market entities, political entities cannot generate their own revenue.
+To support their activities, political entities must attach themselves parasitically to
+market entities and activities"
+so, rents still exist in some form or another, usually vis a vis an indirect transaction:
+'an indirect form of transaction, not different in form from the various indirect transactions that arise in the presence of price controls'
+from american democracy comes a forced triad
+traces the problem all the way to the american constitutional architecture.
+at some level, a full resolution to the problem would require competition at the level of the constitution; insert plug for seasteading
+it's not actually even clear that the success of seasteading or another form of constutional competition is less feasible than
+change in the below 8 laws;
+
+also cite leeson/boettke robust political economy to emphasize the perhaps unexpectedly high difficulty of substantial change
+perhaps refer to the friedman rule about how, even if we got the legal change we asked for, administrative costs and so forth could result in cost/quality differentials that are in excess of what we want
+
+perhaps a short history of educational change policy; media and social reaction (eg faciliation under trump was decried)
+to emphasize the general pessimism extends into education and it perhaps accentuated rather than attenuated in this particular policy field
+
+so, constitutional competition is the great height at which the last remainder of educational policy consequence can be addressed at the macro level
+express optimism that much can be done at the mesoeconomic and micro levels; individuals, and firms and even meso entities like states and industries
+can and are already doing much...
+
+The conclusion describes policy options that solve for the remainder of concerns in higher education that survive competition from alternative credentials.
+
+1. remove accreditation
+2. lower the bar for accreditation
+3. remove professional requirements that include requirement for accreditation
+4. remove legally enshrined preferential treatment of accredited credentials (esp government pay scales and in government contracts)
+5. how to fill the gap? define skill-based requirements instead of accreditation (better outcomes for govt and all)
+6. (institution based vs skill or course based accreditation)
+1. ...see 8 for a non-policy workaround (but working around is likely more costly than direct fix)
+6. aggregators need to do a better job
+7. individuals don't need to wait for social movement to reap individual-level benefits
+8. hybrid approach; universities can (and increasingly already do) partner with external providers for a win-win
+1. better university placement rates
+2. better university solutioning of the skill gap
+3. accreditation given fully or partially (ACE; professional credit) to unaccredited partners (institution based vs skill or course based accreditation)
+
 1. overall is there evidence that bootcamp can replace college due to prestige effects? what caveats?
 - we need to consider price in the real world
 - we had a threshold of name recognition to ensure statistical confidence; what happens if we drop below that? say a bootcamp w less than 30 reviews?
