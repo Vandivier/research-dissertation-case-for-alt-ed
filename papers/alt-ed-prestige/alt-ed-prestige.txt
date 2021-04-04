@@ -1,24 +1,23 @@
 
-Hireability and Educational Prestige
+Hirability and Educational Prestige
 
-Alternative credentials, or non-accredited credentials, offer a partial solution to the skill gap and the student debt crisis, as well as supernormal returns to education for some students.
-This paper investigates the effect of educational prestige on willingness to hire.
-The paper tests the hypothesis that the prestige of a credential better explains
-willingness to hire compared to accreditation status.
+Alternative credentials
+offer a partial solution to the skill gap and student debt crises, as well as supernormal returns for some students.
+This paper tests the hypothesis that educational prestige explains hirability
+better than accreditation.
 Results from an original questionnaire ($n = 454$)
-confirm that prestige is a comparatively preferred explanation of hireability.
+confirm that prestige explains comparatively more hirability variance.
 Accredited credentials have higher average prestige, but alternative credentials have a larger variance in prestige, so a significant number of job opportunities favor the nontraditional student.
-When prestige is low, hireability for alternative credentials remains nontrivial, so this option remains preferred for some consumers.
+When prestige is low, hirability for alternative credentials remains nontrivial.
 Analysis using ordinary least squares and linear mixed models demonstrate that
 industry, state, individual, and other effects
 favor the nontraditional student in specific cases.
-Individuals that are made aware of quality ratings for accredited and non-accredited learning providers
-improve in their expressions of relative prestige on alternative credentials.
-The conclusion includes a discussion on policy, and actionable recommendations for employers, students, and quality rating aggregators.
 
 TODO
 
 Introduction
+Alternative credentials, or non-accredited credentials, as well as supernormal returns to education for some students.
+
 theory: prestige substantially explains hirability
 rationally conspicuous consumption: part of the degree value is prestige
 suppose prestige is a combination of quality and familiarity; a simple combination would be the product of those factors.
@@ -50,9 +49,9 @@ Test making them aware of the normative data and price data for rating quality a
 
 Results
 Results ($n = 454$) indicate that accredited degrees are generally higher in prestige compared to alternative credentials.
-At the same, alternative credentials are associated with significant hireability, and alternative credentials are preferred to accredited degrees in a certain common situations.
+At the same, alternative credentials are associated with significant hirability, and alternative credentials are preferred to accredited degrees in a certain common situations.
 
-Three specific situations are identified in which an alternative credential is preferred to a degree from a hireability perspective.
+Three specific situations are identified in which an alternative credential is preferred to a degree from a hirability perspective.
 First, specific alternative credentials are of particularly high prestige.
 This study found that a credential from Google was regarded as better than some accredited degrees.
 
@@ -67,8 +66,8 @@ When asked directly, about 42 percent of respondents state that they do not pref
 to work with a person that has a college degree rather a person that holds a reputable non-college credential.
 
 Third, in some cases there are indirect compensating factors, such as industry or state effects, that enhance support for alternative credentials to the extent that they become competitive with an accredited degree.
-In one regression model discussed later on, a state effect for California is positive on hireability
-to the extent that it compensates almost exactly for the hireability penalty from non-accreditation.
+In one regression model discussed later on, a state effect for California is positive on hirability
+to the extent that it compensates almost exactly for the hirability penalty from non-accreditation.
 
 Zety is in part a job search support platform.
 Zety finds that one in six job applicants are given an interview, and the average conversion rate from interview to offer was 19.78 in 2016.
@@ -78,10 +77,10 @@ The associated probability of having at least one offer result from four intervi
 Given the rates at which respondents prefer alternative credentials to accredited degrees, a job search of typical length is likely to include several applications and at least one interview
 with one or more employers that would prefer an alternative credential to an accredited degree.
 
-Average hireability among the sample of
+Average hirability among the sample of
 
 1. summary Results (percent prefer degree, prestige high-low stipulated vs prestige yes-no accreditation)
-2. vignette Results (prestige vs accreditation on hireability)
+2. vignette Results (prestige vs accreditation on hirability)
 3. concrete results (translating prestige into aggregation site metrics; no fav reg)
 b. context effect
 4. [optional] did stipulated prestige match response prestige? did response prestige correlate to aggregation site metrics?

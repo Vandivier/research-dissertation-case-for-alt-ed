@@ -104,6 +104,27 @@ m8 = '''hireability ~ prestige_own
     + is_stipulated_other_impressed
     '''
 
+# this is m7 plus is_accredited*prestige_own
+# the idea here is that accreditation interacts w prestige in such a way
+# that there is no independent substance to accreditation other than the hidden prestige
+# the expected result is not found
+# instead, accreditation and prestige magnitudes both increase while maintaining high significance
+# the interaction presents a highly significant negative, or attenuating, effect.
+# this agrees with the hypothesis that accreditation and prestige share a duplicative explanatory component,
+# but it strongly disagrees with the hypothesis that the shared component dominates the total explanatory power of accreditation
+# what are the non-prestige reasons accreditation might matter?
+#   1) legal requirement of education for doctors, lawyers, and so on,
+#   2) legal support for accredited education vis a vis subsidies, loans, and so on,
+#   3) predictability / risk concerns,
+#   4) deep systemic lock-in from before the internet and flourishing of alternative education
+m9 = '''hireability ~ prestige_own
+    + is_accredited + (is_accredited*prestige_own) 
+    + is_low_prestige
+    + is_stipulated_other_impressed
+    + conventional_alt_creds
+    + state_california
+    '''
+
 # if this file executed as script
 if __name__ == '__main__':
     # prefer weak v strong to fight overfit in mixed lm; there is no ar2 measure
@@ -117,3 +138,19 @@ if __name__ == '__main__':
 
     strong_modified_v_reg = sm.MixedLM.from_formula(m8, data=data, groups=data["respondent_id"], re_formula="respondent_id").fit()
     print(strong_modified_v_reg.summary())
+
+    strong_modified_interacted_v_reg = sm.MixedLM.from_formula(m9, data=data, groups=data["respondent_id"], re_formula="respondent_id").fit()
+    print(strong_modified_interacted_v_reg.summary())
+
+    # a4.1
+    # low prestige is about one-third of a standard deviation lower hireability
+    # and still over 5; more yes than no (maybe affirmation bias can negate tho)
+    without_accreditation = data[data.is_accredited == False]
+    print(without_accreditation[without_accreditation.is_low_prestige == True].hireability.mean())
+    print(without_accreditation.hireability.describe())
+
+    # a4.2
+    # average alt cred prestige among those exposed to quality ratings vs not
+    # small increase but increase nontheless (stat insignificant tbh; multiple reg could change that)
+    print(without_accreditation[without_accreditation.is_low_context == False].prestige_own.mean())
+    print(without_accreditation[without_accreditation.is_low_context == True].prestige_own.mean())
