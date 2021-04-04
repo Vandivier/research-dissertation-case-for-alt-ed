@@ -2,7 +2,7 @@
 Hirability and Educational Prestige
 
 Alternative credentials
-offer a partial solution to the skill gap and student debt crises, as well as supernormal returns for some students.
+offer a partial solution to the skill gap and student debt crises, supernormal returns for some students, and a tool to support diversity hiring for firms.
 This paper tests the hypothesis that educational prestige explains hirability
 better than accreditation.
 Results from an original questionnaire ($n = 454$)
@@ -12,8 +12,6 @@ When prestige is low, hirability for alternative credentials remains nontrivial.
 Analysis using ordinary least squares and linear mixed models demonstrate that
 industry, state, individual, and other effects
 favor the nontraditional student in specific cases.
-
-TODO
 
 Introduction
 Alternative credentials, or non-accredited credentials, as well as supernormal returns to education for some students.
