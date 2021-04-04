@@ -1,86 +1,24 @@
-% cleaning note: run:
-% `deno run --allow-read --allow-write ../../../../deno-utility-tex-to-text/tex-to-text.ts --infile /c/Users/vandi/workspace/research-dissertation-case-for-alt-ed/papers/alt-ed-prestige/alt-ed-prestige.tex'
 
-% using Elseveir template per https://www.elsevier.com/authors/author-schemas/latex-instructions
-\documentclass[review]{elsarticle}
-\usepackage{lineno,hyperref}
-\modulolinenumbers[5]
-\bibliographystyle{elsarticle-num}
+Hireability and Educational Prestige
 
-\usepackage{booktabs}
-\usepackage{graphicx}
-\graphicspath{{../alt-ed-survey/figures-and-tables}}
-\usepackage{hyperref}
-\usepackage{threeparttable}  
-\usepackage{tikz}
-\usetikzlibrary{calc,matrix}
+Alternative credentials, or non-accredited credentials, offer a partial solution to the skill gap and the student debt crisis, as well as supernormal returns to education for some students.
+This paper investigates the effect of educational prestige on willingness to hire.
+The paper tests the hypothesis that the prestige of a credential better explains
+willingness to hire compared to accreditation status.
+Results from an original questionnaire ($n = 454$)
+confirm that prestige is a comparatively preferred explanation of hireability.
+Accredited credentials have higher average prestige, but alternative credentials have a larger variance in prestige, so a significant number of job opportunities favor the nontraditional student.
+When prestige is low, hireability for alternative credentials remains nontrivial, so this option remains preferred for some consumers.
+Analysis using ordinary least squares and linear mixed models demonstrate that
+industry, state, individual, and other effects
+favor the nontraditional student in specific cases.
+Individuals that are made aware of quality ratings for accredited and non-accredited learning providers
+improve in their expressions of relative prestige on alternative credentials.
+The conclusion includes a discussion on policy, and actionable recommendations for employers, students, and quality rating aggregators.
 
-\begin{document}
-\begin{frontmatter}
+TODO
 
-    \title{
-        Hireability and Educational Prestige
-    }
-
-    \author[mymainaddress]{John Vandivier}
-    \address[mymainaddress]{4400 University Dr, Fairfax, VA 22030}
-    \ead{jvandivi@masonlive.gmu.edu}
-
-    \begin{abstract}
-        Alternative credentials, or non-accredited credentials,
-        offer a partial solution to the skill gap and the student debt crisis,
-        as well as supernormal returns to education for some students.
-        % Diversity of credentials presents a selection problem for consumers and producers,
-        % resulting in perception of risk on both sides that inhibits higher levels of social adoption.
-        This paper investigates the effect of educational prestige on willingness to hire.
-        The paper tests the hypothesis that the prestige of a credential better explains
-        the willingness to hire compared to accreditation status.
-        Results from an original questionnaire ($n = 454$)
-        confirm that prestige is a comparatively preferred explanation of hireability.
-        % Accreditation is independently associated with 
-        Accredited credentials have higher average prestige,
-        but alternative credentials have a larger variance in prestige,
-        so a significant number of job opportunities favor the nontraditional student.
-        When prestige is low, hireability for alternative credentials remains nontrivial,
-        so this option remains preferred for some consumers.
-        Analysis using ordinary least squares and linear mixed models demonstrate that
-        industry, state, individual, and other effects
-        favor the nontraditional student in specific cases.
-        Individuals that are made aware of quality ratings for accredited and non-accredited learning providers
-        improve in their expressions of relative prestige on alternative credentials.
-        The conclusion includes a discussion on policy,
-        and actionable recommendations for employers, students, and quality rating aggregators.
-        % Do I really need to offer policy solutions?
-
-        % At the same time, situations are revealed in which alternative credentials are preferred.
-        % Hireability is high for alternative credentials,
-        % and these credentials can be obtained at a lower cost and difficulty compared
-        % to certain degrees.
-        % As a result, alternative credentials are sometimes preferred even when comparative prestige is low.
-        % Descriptive statistics show that prestige for alternative credentials is
-        % more dispersed than prestige for the accredited degree,
-        % so some proprtion of respondents prefer alternative credentials.
-    \end{abstract}
-
-    \begin{keyword}
-        TODO
-        \MSC[2010] TODO123 %%% not grammatical
-    \end{keyword}
-
-\end{frontmatter}
-
-\pagebreak
-\linenumbers
-
-\section{Introduction}
-
-% extends university prestige literature. book Pedigree by Lauren Rivera: https://www.youtube.com/watch?v=_70KfdHV7Nk
-% merge literature on alt ed hirability: https://www.tandfonline.com/doi/abs/10.1080/13504851.2020.1767279
-% sprinkle in some norms economics:
-% https://www.behavioraleconomics.com/resources/mini-encyclopedia-of-be/social-norm/
-% https://www.aeaweb.org/articles?id=10.1257/jep.3.4.99
-% factors and caveats?
-
+Introduction
 theory: prestige substantially explains hirability
 rationally conspicuous consumption: part of the degree value is prestige
 suppose prestige is a combination of quality and familiarity; a simple combination would be the product of those factors.
@@ -91,8 +29,7 @@ as opposed to well-known + lowly regarded
 (a note on question 13 and 14 wording:
 in common parlance: prestigious implies "elite" while reputable indicates generally good but not necessarily elite)
 
-\section{Data and Methodology}
-
+Data and Methodology
 1. Online questionnaire
 2. how was nonresponse bias addressed? - maybe not at all
 - main way to address nonresponse bias is to explicitly capture and correct for all of the individual characteristics that matter: ethnicity, age, income...
@@ -111,69 +48,48 @@ in common parlance: prestigious implies "elite" while reputable indicates genera
 
 Test making them aware of the normative data and price data for rating quality and hirability (not for rating name recognition)
 
-\section{Results}
-
-% top line results; alt creds are lower prestige on average but still important
-
+Results
 Results ($n = 454$) indicate that accredited degrees are generally higher in prestige compared to alternative credentials.
-At the same, alternative credentials are associated with significant hireability,
-and alternative credentials are preferred to accredited degrees in a certain common situations.
+At the same, alternative credentials are associated with significant hireability, and alternative credentials are preferred to accredited degrees in a certain common situations.
 
 Three specific situations are identified in which an alternative credential is preferred to a degree from a hireability perspective.
 First, specific alternative credentials are of particularly high prestige.
 This study found that a credential from Google was regarded as better than some accredited degrees.
 
 Second, some individuals place high value on alternative education.
-% analysis_5_transfer table a5.1
 This study found that 71 percent of respondents preferred at least one specific alternative credential to at least one specific accredited degree.
 This proportion increases to about 75 percent when respondents are given rating data provided from online aggregator and review sites.
 These sites include US News and Course Report, and they aggregate learning providers, report standard information about those providers, and allow users to leave reviews.
 
 More than half of respondents prefer a high prestige alternative credential to at least one high prestige accredited degree.
-After excluding the highest prestige alternative credential from Google,
-more than one-quarter of respondents still prefer one of the remaining high prestige alternative credentials to at least one high prestige accredited degree.
-% a2.2
+After excluding the highest prestige alternative credential from Google, more than one-quarter of respondents still prefer one of the remaining high prestige alternative credentials to at least one high prestige accredited degree.
 When asked directly, about 42 percent of respondents state that they do not prefer
 to work with a person that has a college degree rather a person that holds a reputable non-college credential.
 
-Third, in some cases there are indirect compensating factors, such as industry or state effects,
-that enhance support for alternative credentials to the extent that they become competitive with an accredited degree.
+Third, in some cases there are indirect compensating factors, such as industry or state effects, that enhance support for alternative credentials to the extent that they become competitive with an accredited degree.
 In one regression model discussed later on, a state effect for California is positive on hireability
 to the extent that it compensates almost exactly for the hireability penalty from non-accreditation.
 
 Zety is in part a job search support platform.
-Zety finds that one in six job applicants are given an interview,
-and the average conversion rate from interview to offer was 19.78 in 2016\cite{turczynski_2021}.
+Zety finds that one in six job applicants are given an interview, and the average conversion rate from interview to offer was 19.78 in 2016.
 Assuming rejections are independent allows us to naively estimate that most job searches consist of at least four interviews\footnote{
-    Four independent games that each include an eighty percent chance of rejection yields $0.8^4 = 0.4096$.
-    The associated probability of having at least one offer result from four interviews would be about $1 - 0.41 = 0.59$,
-    or 59 percent, which is more likely than not.
-} and dozens of applications.
-Given the rates at which respondents prefer alternative credentials to accredited degrees,
-a job search of typical length is likely to include several applications and at least one interview
+Four independent games that each include an eighty percent chance of rejection yields $0.8^4 = 0.4096$.
+The associated probability of having at least one offer result from four interviews would be about $1 - 0.41 = 0.59$, or 59 percent, which is more likely than not.
+Given the rates at which respondents prefer alternative credentials to accredited degrees, a job search of typical length is likely to include several applications and at least one interview
 with one or more employers that would prefer an alternative credential to an accredited degree.
 
-% summary statistics
-
-
-
-% summary statistics
-% a2.1
-Average hireability among the sample of 
+Average hireability among the sample of
 
 1. summary Results (percent prefer degree, prestige high-low stipulated vs prestige yes-no accreditation)
 2. vignette Results (prestige vs accreditation on hireability)
 3. concrete results (translating prestige into aggregation site metrics; no fav reg)
-    b. context effect
+b. context effect
 4. [optional] did stipulated prestige match response prestige? did response prestige correlate to aggregation site metrics?
 
 1. did perceived prestige explain willingness to hire?
 2. did normal prestige explain willingness to hire?
 3. is a prestigious alt cred better than a non-prestigious university? where are these prestige cutoffs? are they 1:1?
 4. how substantially did individual prestige vary from normal prestige (more variation indicates that it's easier for low-prestige to find a match somewhere)
-
-
-
 
 arguments roughly
 1. summary data: stipulated high quality alt creds vs others and proportion that would weakly affirm
@@ -185,8 +101,7 @@ conclusion - implications for application from the consumer perspective and supp
 
 theoretically (low-prestige + not well known) > (low prestige + well known). did that seem true?
 
-\section{Conclusions}
-
+Conclusions
 1. overall is there evidence that bootcamp can replace college due to prestige effects? what caveats?
 - we need to consider price in the real world
 - we had a threshold of name recognition to ensure statistical confidence; what happens if we drop below that? say a bootcamp w less than 30 reviews?
@@ -196,10 +111,5 @@ theoretically (low-prestige + not well known) > (low prestige + well known). did
 4. policy differences: government or employer may provide financing or employment conditinoal on a certain type of educational participation
 
 overall advice: as an individual, work backwards from a particular desired job description
-as a society: push for policies which make comparing across types easier, generate lower cost and higher skill outputs,
-and clearer signals of productivity, reducing demand for prestige which is really 1) a second-best / fallback signal of productivity,
-and 2) a form of slack and a biased means toward inefficient selection (anti-diversity as a byproduct; again see Pedigree)
+as a society: push for policies which make comparing across types easier, generate lower cost and higher skill outputs, and clearer signals of productivity, reducing demand for prestige which is really 1) a second-best / fallback signal of productivity, and 2) a form of slack and a biased means toward inefficient selection (anti-diversity as a byproduct; again see Pedigree)
 
-\bibliography{./BibFile}
-
-\end{document}
