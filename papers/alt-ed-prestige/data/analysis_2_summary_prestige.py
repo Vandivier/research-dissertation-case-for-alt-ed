@@ -20,10 +20,14 @@ df = GetVars.getData(False)
 print(df['hireability_delta_accreditation'].describe())
 print(df['hireability_delta_prestige'].describe())
 
-# n = 454, mean = frequency of agreement (to prefer degree) = 58.37%
-print(df['cat_prefer_degree_true'].describe())
-
 print(df['cat_work_with_external_partners_a'].describe())
 print(df['cat_work_with_external_partners_b'].describe())
 print(df['cat_work_with_external_partners_c'].describe())
 print(df['cat_work_with_external_partners_d'].describe())
+
+# a2.1
+print(df['hireability'].describe())
+
+# a2.2
+# n = 454, mean = frequency of disagreement (to prefer degree) = 41.63%
+print(df['cat_prefer_degree_false'].describe())

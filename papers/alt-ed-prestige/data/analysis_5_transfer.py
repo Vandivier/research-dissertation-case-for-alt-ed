@@ -195,7 +195,7 @@ print('revealed prefer high alt cred to high accredited no google before then af
 print(nonpanelized['prefer_alt_cred_revealed_high_v_high_no_goog'].mean())
 print(with_high_context['prefer_alt_cred_revealed_high_v_high_no_goog'].mean())
 
-
+# a5.1
 # summary with high context
 # context shifts unaccredited right and accredited
 # ---
