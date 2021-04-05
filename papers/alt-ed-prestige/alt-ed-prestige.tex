@@ -88,58 +88,167 @@ than accreditation.
 Results are made practical through the description of low-effort methods to identify of high prestige alternative credentials.
 
 The motivation for the lens of prestige extends from the literatures on education economics and the economics of social norms.
+Education economics provides two mainstream accounts of the value of a degree.
+One account is the human capital model and the other is the signaling model.
+The human capital model explains that improved labor outcomes result from skills gained by a student in the course of education.
+
+Alternative credentials are regarded as preferred to the traditional degree for the attainment of specific technical skills\cite{craig2018new}.
+For this reason, many college graduates supplement using alternative credentials.
+Some alternative learning providers specifically target this market with a special kind of alternative education called last-mile training.
+This presents an explanatory problem for the human capital model.
+If better labor outcomes arise from skill enhancement,
+then alternatively educated individuals should enjoy better wages, employment rates, and so on,
+compared to college graduates.
+
+The signaling model holds that credentials signal a basket of applicant qualities that are valued by employers.
+Proponents of the signaling model commonly argue that the college degree signals intelligence,
+work ethic, and conformity\cite{caplan_2012}.
+This presents a testable contrast to the signal of an alternative credential.
+Alternative credentials also signal intelligence,
+but they may not signal work ethic,
+and they are generally expected to signal non-conformity rather than conformity.
+
+This paper hypothesizes that prestige is valued by employers as a signal,
+and indeed it is in part a signal of conformity.
+Google is a prestigious employer and also an alternative learning provider.
+From the point of view of Google, their own credential is a preferred conformity signal as well as a signal of skill.
+The case of employer-provided credentials is interesting,
+but it is not the main argument in this paper.
+While conformity and prestige intersect at times,
+this paper does not suppose they are identical nor generally correlated.
+Instead, this paper argues that these are two social characteristics that are valued by employers
+and a lack in one may be compensated for by the presence of the other.
+% This paper hypothesizes that alternative credentials will have low average prestige,
+% but that some particular credentials from prestigious providers like Google will prove valuable.
+
 In a broad review of economics and norm types, hiring decisions exist within what Elster would identify as work norms\cite{elster1989social}.
-Elster finds support for a rational explanation of work norms, concluding with the caveat that actual social interactions may involve unobserved emotional effects.
+Elster supports a rational model of work norms, with the caveat that social interactions may involve unobserved emotional effects.
 Similarly, the neoclassical model utilized in this paper comes with the caveat that
 applicability of results is constrained in cases where a hiring decision is made subject to abnormal emotional effects.
-Elster importantly distinguishes between social and legal norms, in a move that becomes surprisingly useful to the current analysis.
+This paper will also make use of the distinction between social and legal norms provided by Elster.
 
 Within the economics of work norms, Rivera is one scholar to have recently operationalized social norms as prestige\cite{rivera2016pedigree}.
 Rivera finds that prestige is important in her analysis, but the scope of her analysis is focused
 within an analysis of traditional education and a few specific industries including health and law.
 The current paper extends the analysis of prestige and hiring norms
-across all industries and to include alternative credentials.
+across many industries and to include alternative credentials.
 % arguably I emphasize coding bootcamps / other bootcamp industries / information technology industry and perhaps sales
 
-TODO: continue below 4/4/21 5:30 PM
-
-Vocational schools are only sometimes accredited, and non-accredited means of learning some vocations are common.
-For this reason, it is widely accepted that there are particular jobs for which alternative credentials are preferred,
-but the explanation for the lack of general non-accreditated higher learning is commonly made on the basis of social norms.
-As two sides of the same coin, some argue that vocational schooling and alternative credentials bear some stigma.
-Others argue that there is a positive social expectation, and indeed systematized facilitation,
-of educational progress from a high school to an accredited university.
-
-
-TODO: DRAW ON ELSTER TO CONSTRUCT A NORMS-WEIGHTED UTILITY FUNCTION
-we are specifically concerned with work norms
-
-% Elster, smithian connection
+% Vocational schools are only sometimes accredited, and non-accredited means of learning some vocations are common.
+% For this reason, it is widely accepted that there are particular jobs for which alternative credentials are preferred,
+% but the explanation for the lack of general non-accreditated higher learning is commonly made on the basis of social norms.
+% As two sides of the same coin, some argue that vocational schooling and alternative credentials bear some stigma.
+% Others argue that there is a positive social expectation, and indeed systematized facilitation,
+% of educational progress from a high school to an accredited university.
 
 As a preview, statistical evidence confirms that prestige independently explains hirability better than accreditation alone,
 but accreditation fails to be explained away.
 Instead, models that use both factors produce superior estimates of willingness to hire.
 The independent importance of accreditation indicates that asymptotic improvement to alternative credentials
 are unlikely to fully compete away the traditional education system.
-A change in legal norms 
+The failure of arbitrary technical and social gains in alternative credentials to fully crowd out traditional education
+supports the analysis of legal norms for further remedy.
 The conclusion describes policy options that solve for the remainder of concerns in higher education that survive competition from alternative credentials.
 
-% extends university prestige literature. book Pedigree by Lauren Rivera: https://www.youtube.com/watch?v=_70KfdHV7Nk
-% sprinkle in some norms economics:
-% https://www.behavioraleconomics.com/resources/mini-encyclopedia-of-be/social-norm/
-% https://www.aeaweb.org/articles?id=10.1257/jep.3.4.99
+\section{Description of Data and Methodology}
 
-theory: prestige substantially explains hirability
-rationally conspicuous consumption: part of the degree value is prestige
-suppose prestige is a combination of quality and familiarity; a simple combination would be the product of those factors.
+This paper investigates an original set of online questionnaire responses ($n = 454$).
+Responses are cross-sectional data obtained in March of 2021.
+Respondents are United States citizens at or over the age of eighteen.
+Qualified respondents participated in the survey through the Amazon Mechanical Turk platform.
 
-prestige vs well-known vs reputable; I'm using "economics of prestige" like "economics of reputation"
-which is well-known + highly regarded
-as opposed to well-known + lowly regarded
-(a note on question 13 and 14 wording:
-in common parlance: prestigious implies "elite" while reputable indicates generally good but not necessarily elite)
+Appendix A contains the exact wording and response options for each question.
+Appendix A also contains the wording for a priming message presented at the start of the survey.
+The priming message lays out the definition of alternative credentials for the purposes of the study.
+The message also provides several concrete examples of alternative credentials,
+including ``a Certified Project Manager certification,
+a portfolio of work, a Khan Academy profile, or a Nanodegree from Udacity.''
 
-\section{Data and Methodology}
+The dependent variable of interest is called hirability.
+This variable measures individual response on a 10-point scale to the question,
+``For many professions, alternative credentials can qualify a person for an entry-level position.''
+The questionnaire is composed of three sections.
+The first section collects respondent characteristics and baseline hirability.
+The second section collects hirability and prestige responses with respect to nine specific learning providers.
+The third section collects hirability and prestige responses with respect to eight vignette learning providers.
+
+Data from the first section is used to optimize an ordinary least squares model.
+Vignette data is analyzed as panel data in a mixed model with individual random effects.
+The vignette analysis allows theoretically clean comparison of prestige and accreditation coefficients,
+but it encounters a problem in that the schools are only vignettes rather than actual learning providers.
+As a third analytical step, learnings from the vignette model are checked for robustness and made practical
+through comparing and contrasting descriptive statistics with concrete learning provider information from the second section.
+
+TODO: cite WHY USE A VIGNETTE AND BELOW IS COPIED GARBAGE
+
+fourteen questions.
+Favorability is the dependent variable of interest.
+Coronavirus impact is the independent variable of interest.
+There are also ten control factors and two questions on causality.
+
+% TODO: cite a couple papers
+Eight of the ten control factors are common controls in the literature.
+These eight controls are categorical measures for
+for age, gender, ethnicity, income,
+level of education, employment status, the industry of occupation, and state of residence.
+
+The two remaining controls are unique to this study.
+Expected conventionality is the first unique control.
+Expected conventionality is the term used to describe the response to question three in the appendix.
+Expected conventionality explains the effect on favorability that is
+attributable to the future social acceptability of alternative credentials.
+Correcting for social acceptability allows the remaining effects to be interpreted more accurately as an individual preference.
+
+% TODO: maybe talk about a couple papers that say mode of instruction is related to favorability
+The second unique control is support for online education.
+Online education is the response to question four in the appendix.
+This control allows an analyst to hold constant the mode of instruction when interpreting favorability to alternative credentials.
+% Mode of instruction is a bit of a red herring which is not what this study is centrally concerned with.
+% Favorability to online education creates noise in the signal of favorability to alternative credentials,
+% and this factor seperates that effect.
+% The reason isolating this noise is important is because there are two assumptions in the mind of the respondent population.
+% The first assumption is that traditional education involves in-person learning.
+% The second assumption is that alternative education typically involves remote learning.
+% Neither of these associations are held as true in the current analysis, so the introduction of this control allows
+% Alternative education often employs remote learning, but this is not always the case.
+% A respondent may still tend to associate the concepts and impute a halo effect from one to the other.
+% This control allows an analyst to seperate favorability from alternative credentials
+
+The primary interest of this study is to identify the effect of coronavirus on favorability.
+If the effect of coronavirus is significant, a description of the origin of that effect improves the value of the results.
+The two unique controls and the two questions about causality support investigation into exposure to remote activity as an explanation.
+% Specifically, one hypothesized mechanism is that coronavirus stimulates remote activity,
+% then exposure to remote activity improves favorability to all remote activities,
+% then alternative credentials improve in favorability through a normative association with remote learning.
+
+The variables of interest,
+causality questions,
+and the two unique controls obtain Likert-type responses.
+The impact of coronavirus and the causality questions use a 4-point scale.
+Favorability and the unique controls use a 10-point scale.
+Continuous treatment of items on the 10-point scale permits curvilinear analysis,
+allowing investigation of marginal effects
+\footnote{
+    It is an accepted practice to treat Likert-type responses as either categorical or continuous for regression analysis.
+    Jaccard and Wan provide support for continuous analysis of Likert-type data.
+    They note that severe departures from the assumptions on cardinality ``do not seem to affect Type I and Type II errors dramatically,''
+    particularly when the Likert scale is five or more points\cite{jaccard1996lisrel}.
+    This paper treats responses on a 10-point scale as continuous.
+    This paper treats responses on a 4-point scale as categorical.
+}.
+
+
+WHY LMM? BC INDIVIDUAL RANDOM EFFECTS ACCORDING TO PPL I WILL NOW CITE
+
+This study uses multiple regression and descriptive statistics to generate results.
+% \footnote{
+%     While the data for this analysis is not public, the analytical code is open-source.
+%     See \url{https://github.com/Vandivier/research-dissertation-case-for-alt-ed/tree/master/papers/alt-ed-prestige}
+% }.
+Multiple regression is conducted using ordinary least squares (OLS)
+and linear mixed models (LMM)
+% formula for LMM at https://www.statsmodels.org/stable/mixed_linear.html
+% individual random effects https://www.statsmodels.org/stable/examples/notebooks/generated/mixed_lm_example.html#Growth-curves-of-pigs
 
 1. Online questionnaire
 2. how was nonresponse bias addressed? - maybe not at all
@@ -156,8 +265,6 @@ in common parlance: prestigious implies "elite" while reputable indicates genera
 - https://www.tandfonline.com/doi/abs/10.1080/10967494.2016.1276493
 3. How were ratings subjects selected? min 2*2*2 (isQuality)*(isBootcamp)*(isKnown) social and individual ratings [10 point likert-type unit]
 4. a few correction variables based on literature review and computed norm factors how
-
-Test making them aware of the normative data and price data for rating quality and hirability (not for rating name recognition)
 
 \section{Results}
 
