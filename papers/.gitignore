@@ -10,3 +10,6 @@
 *_temp.tex
 *hidden*
 *.pyc
+
+.~lock*
+alt-ed*.log
