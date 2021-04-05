@@ -147,8 +147,11 @@ Instead, models that use both factors produce superior estimates of willingness 
 The independent importance of accreditation indicates that asymptotic improvement to alternative credentials
 are unlikely to fully compete away the traditional education system.
 The failure of arbitrary technical and social gains in alternative credentials to fully crowd out traditional education
-supports the analysis of legal norms for further remedy.
+points to a need to investigate legal norms for further remedy.
 The conclusion describes policy options that solve for the remainder of concerns in higher education that survive competition from alternative credentials.
+% At the same time, there is a large level of economic value/arbitrage to be had/exploited from the socialization of alternative credentials
+% before the binding constraint of legal stability is encountered.
+% TODO: maybe estimate the level of economic growth (it would be proportional utility growth which is merely analgous tho)
 
 \section{Description of Data and Methodology}
 
@@ -157,7 +160,7 @@ Responses are cross-sectional data obtained in March of 2021.
 Respondents are United States citizens at or over the age of eighteen.
 Qualified respondents participated in the survey through the Amazon Mechanical Turk platform.
 
-Appendix A contains the exact wording and response options for each question.
+Appendix A contains the wording and response options for each question.
 Appendix A also contains the wording for a priming message presented at the start of the survey.
 The priming message lays out the definition of alternative credentials for the purposes of the study.
 The message also provides several concrete examples of alternative credentials,
@@ -174,71 +177,80 @@ The third section collects hirability and prestige responses with respect to eig
 
 Data from the first section is used to optimize an ordinary least squares model.
 Vignette data is analyzed as panel data in a mixed model with individual random effects.
-The vignette analysis allows theoretically clean comparison of prestige and accreditation coefficients,
-but it encounters a problem in that the schools are only vignettes rather than actual learning providers.
-As a third analytical step, learnings from the vignette model are checked for robustness and made practical
-through comparing and contrasting descriptive statistics with concrete learning provider information from the second section.
+The vignette model allows comparison between prestige and accreditation coefficients,
+but it encounters a practical problem in that the schools are only vignettes rather than actual learning providers.
+To address the practical concern,
+descriptive statistics are compared between vignette and actual schools using information from the second section.
 
-TODO: cite WHY USE A VIGNETTE AND BELOW IS COPIED GARBAGE
+Additionally, half of respondents were randomly selected for exposure to an informational message about actual schools.
+The message is included in Appendix A.
+The message provides rating data from two leading credential aggregator websites.
+University ratings are US News ranking information for the 2021 school year.
+Coding bootcamp ratings are Course Report ratings from December 2020.
+% TODO: maybe cite the above two sources
 
-fourteen questions.
-Favorability is the dependent variable of interest.
-Coronavirus impact is the independent variable of interest.
-There are also ten control factors and two questions on causality.
+% TODO: write the below content into the paper when we get to results on concrete providers
+% why do we not use a mixed model of concrete providers?
+% three reasons:
+%   first, the whole point of using an aggregator is to obtain individual-independent data
+%   second, ratings are heterogenous so there would be some noise introduced by indexing them together
+%   third, i use stipulated prestige categories as a pseudo-index
+%       the pseudo-index can be used via simpler descriptive stats,
+%       and the pseudo-index has evidence supporting it; that is, high / low stipulated prestige is sig correlated to response prestige.
+% if all those objections fail, then fine we can do it but i suspect the answer will be:
+%   'findings are insignificant bc of low variation and injected noise not bc no such level exists'
 
-% TODO: cite a couple papers
-Eight of the ten control factors are common controls in the literature.
-These eight controls are categorical measures for
-for age, gender, ethnicity, income,
-level of education, employment status, the industry of occupation, and state of residence.
+Respondent characteristics are measured as categorical variables.
+Hirability and prestige are measured as 10-point likert-type responses.
+Prestige also takes a secondary representation as a stipulated boolean.
+Stipulating schools as high or low prestige allows the paper to verify
+that prestige response is correlated to stipulated prestige.
+For example, a vignette school is identified to the respondent as well-known for being prestigious.
+This corresponds to a stipulated boolean with a value of true.
+When the respondent reads that a school is known for being high in prestige,
+they are then asked for their own prestige rating on a 10-point scale.
 
-The two remaining controls are unique to this study.
-Expected conventionality is the first unique control.
-Expected conventionality is the term used to describe the response to question three in the appendix.
-Expected conventionality explains the effect on favorability that is
-attributable to the future social acceptability of alternative credentials.
-Correcting for social acceptability allows the remaining effects to be interpreted more accurately as an individual preference.
+As a preview of results, stipulated high prestige is strongly correlated with high prestige response.
+At the same time, there are cases where a respondent gives a low response rating to,
+for example, the University of Chicago,
+which is a school that happens to be stipulated as high prestige on the basis of aggregator website ratings.
 
-% TODO: maybe talk about a couple papers that say mode of instruction is related to favorability
-The second unique control is support for online education.
-Online education is the response to question four in the appendix.
-This control allows an analyst to hold constant the mode of instruction when interpreting favorability to alternative credentials.
-% Mode of instruction is a bit of a red herring which is not what this study is centrally concerned with.
-% Favorability to online education creates noise in the signal of favorability to alternative credentials,
-% and this factor seperates that effect.
-% The reason isolating this noise is important is because there are two assumptions in the mind of the respondent population.
-% The first assumption is that traditional education involves in-person learning.
-% The second assumption is that alternative education typically involves remote learning.
-% Neither of these associations are held as true in the current analysis, so the introduction of this control allows
-% Alternative education often employs remote learning, but this is not always the case.
-% A respondent may still tend to associate the concepts and impute a halo effect from one to the other.
-% This control allows an analyst to seperate favorability from alternative credentials
+Two-way representation of prestige enables better general application of findings into the real world.
+In the real world, an individual can easily access aggregator website ratings.
+In the real world, an individual cannot readily access questionnaire results for many credentials.
+Results from this paper include the identification of rules of thumb
+that a person can use to identify actual learning providers as high prestige.
+To ensure clarity of results,
+stipulated prestige always refers to the boolean and prestige response refers to the 10-point measure.
 
-The primary interest of this study is to identify the effect of coronavirus on favorability.
-If the effect of coronavirus is significant, a description of the origin of that effect improves the value of the results.
-The two unique controls and the two questions about causality support investigation into exposure to remote activity as an explanation.
-% Specifically, one hypothesized mechanism is that coronavirus stimulates remote activity,
-% then exposure to remote activity improves favorability to all remote activities,
-% then alternative credentials improve in favorability through a normative association with remote learning.
-
-The variables of interest,
-causality questions,
-and the two unique controls obtain Likert-type responses.
-The impact of coronavirus and the causality questions use a 4-point scale.
-Favorability and the unique controls use a 10-point scale.
-Continuous treatment of items on the 10-point scale permits curvilinear analysis,
-allowing investigation of marginal effects
-\footnote{
+Stipulated prestige is used in the vignette section and the section on actual schools.
+All other variables are either 10-point likert-type responses or categorical variables\footnote{
     It is an accepted practice to treat Likert-type responses as either categorical or continuous for regression analysis.
     Jaccard and Wan provide support for continuous analysis of Likert-type data.
     They note that severe departures from the assumptions on cardinality ``do not seem to affect Type I and Type II errors dramatically,''
     particularly when the Likert scale is five or more points\cite{jaccard1996lisrel}.
     This paper treats responses on a 10-point scale as continuous.
-    This paper treats responses on a 4-point scale as categorical.
 }.
+Categorical variables are exclusively respondent characteristics like age group, sex, or industry of occupation.
+Vignette responses include responses for hirability and prestige,
+while actual schools only receive responses for hirability.
+% Prestige is measured two-ways in the vignette section, but it is only stipulated in the section on actual schools.
 
+Respondent characteristics include eight standard controls and two questions unique to this study.
+The eight controls include
+age, gender, ethnicity, income,
+level of education, employment status, the industry of occupation, and state of residence.
+A unique question on work norms records whether the respondent tends ``to work more closely with coworkers at your company or customers and external business partners.''
+The motivation for this question is to test whether prestige disproportionately impacts roles that are outward or client-facing.
+Respondents are also directly asked whether they
+``prefer to hire or work with a person that has a college degree rather a person that holds a reputable certification or non-college credential.''
 
-WHY LMM? BC INDIVIDUAL RANDOM EFFECTS ACCORDING TO PPL I WILL NOW CITE
+Vignette questions are formatted following Atzm{\"u}ller and Steiner\cite{atzmuller2010experimental}.
+Each vignette stipulates whether a school is accredited,
+whether the respondent should imagine the school as impressive,
+and whether the respondent should imagine that other people consider the school impressive.
+Each stipulated factor can take a value of true or false,
+resulting in eight vignette questions.
 
 This study uses multiple regression and descriptive statistics to generate results.
 % \footnote{
@@ -246,25 +258,36 @@ This study uses multiple regression and descriptive statistics to generate resul
 %     See \url{https://github.com/Vandivier/research-dissertation-case-for-alt-ed/tree/master/papers/alt-ed-prestige}
 % }.
 Multiple regression is conducted using ordinary least squares (OLS)
+for baseline hirability analysis
 and linear mixed models (LMM)
+are used for for vignette analysis.
+OLS specification of vignette data is inappropriate because repeated measures of hirability
+from a single participant introduce an individual-level bias into resulting coefficients.
+LMM yields linear coefficients that can be interpreted as similar to OLS coefficients.
+One difference of note is that adjusted r-squared is not available for an LMM model.
+Following Magezi\cite{magezi2015linear},
+linear mixed models in this paper use a within-participant random factor,
+or individual random effects,
+to correct for individual-level repeated measures bias.
+% For this reasons, an OLS model is optimized for baseline hirability,
+% and then that specification is trivially modified into an LMM model for further analysis.
 % formula for LMM at https://www.statsmodels.org/stable/mixed_linear.html
 % individual random effects https://www.statsmodels.org/stable/examples/notebooks/generated/mixed_lm_example.html#Growth-curves-of-pigs
 
-1. Online questionnaire
-2. how was nonresponse bias addressed? - maybe not at all
-- main way to address nonresponse bias is to explicitly capture and correct for all of the individual characteristics that matter: ethnicity, age, income...
-- it would not be enough to show nonresponse bias exists;
-- it would need to be shown that it exists in the direction of some effect that moves the relation of interest in a predictable and meaningful way;
-- else the criticism is an argument from ignorance which due dilligence has been undertaken to preclude.
-- https://forum.effectivealtruism.org/posts/a6LMQcER6Awhawtqq/using-amazon-s-mechanical-turk-for-animal-advocacy-studies
-- above indicates overstatement of effects...i would want more info...there is a paper internally cited
-- above also deflates income nonresponse bias consern (these don't pay much so systematic bias from rich ppl) also i explicitly capture income anyway
-- "AMT was found to be a reliable source of data and to diminish the potential for non-response error in online research"
-- https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4397064/
-- https://duckofminerva.com/2013/07/mechanical-turk-and-experiments-in-the-social-sciences.html
-- https://www.tandfonline.com/doi/abs/10.1080/10967494.2016.1276493
-3. How were ratings subjects selected? min 2*2*2 (isQuality)*(isBootcamp)*(isKnown) social and individual ratings [10 point likert-type unit]
-4. a few correction variables based on literature review and computed norm factors how
+% 2. how was nonresponse bias addressed? - maybe not at all
+% - main way to address nonresponse bias is to explicitly capture and correct for all of the individual characteristics that matter: ethnicity, age, income...
+% - it would not be enough to show nonresponse bias exists;
+% - it would need to be shown that it exists in the direction of some effect that moves the relation of interest in a predictable and meaningful way;
+% - else the criticism is an argument from ignorance which due dilligence has been undertaken to preclude.
+% - https://forum.effectivealtruism.org/posts/a6LMQcER6Awhawtqq/using-amazon-s-mechanical-turk-for-animal-advocacy-studies
+% - above indicates overstatement of effects...i would want more info...there is a paper internally cited
+% - above also deflates income nonresponse bias consern (these don't pay much so systematic bias from rich ppl) also i explicitly capture income anyway
+% - "AMT was found to be a reliable source of data and to diminish the potential for non-response error in online research"
+% - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4397064/
+% - https://duckofminerva.com/2013/07/mechanical-turk-and-experiments-in-the-social-sciences.html
+% - https://www.tandfonline.com/doi/abs/10.1080/10967494.2016.1276493
+% 3. How were ratings subjects selected? min 2*2*2 (isQuality)*(isBootcamp)*(isKnown) social and individual ratings [10 point likert-type unit]
+% 4. a few correction variables based on literature review and computed norm factors how
 
 \section{Results}
 
@@ -346,9 +369,9 @@ policy recommendations are constrained in recognition of the political economy o
 in contrast to a simplistic analysis that might treat politics as a thing distinct from and able to exogenously move the economy
 (wagner: % https://mason.gmu.edu/~rwagner/Wirth%20Keynote.pdf)
 Wagner argues contra Becker and other neoclassicals that so-called political competition doesn't get you to the efficient economic outcome.
-"Unlike market entities, political entities cannot generate their own revenue.
+``Unlike market entities, political entities cannot generate their own revenue.
 To support their activities, political entities must attach themselves parasitically to
-market entities and activities"
+market entities and activities''
 so, rents still exist in some form or another, usually vis a vis an indirect transaction:
 'an indirect form of transaction, not different in form from the various indirect transactions that arise in the presence of price controls'
 from american democracy comes a forced triad
