@@ -6,9 +6,10 @@ import analysis_1_vars as GetVars
 # this file is about testing transfer theory; do vignette results apply to real world?
 # concrete survey section has only high and low prestige; no 'mixed' schools
 
-concrete = GetVars.getConcreteData()
+panelized = GetVars.getPanelizedData()
+concrete = GetVars.getConcreteData(panelized)
 nonpanelized = GetVars.getData()
-vignette = GetVars.getVignetteData()
+vignette = GetVars.getVignetteData(panelized)
 
 p_app_academy = nonpanelized['provider_impressed_app_academy'].dropna()
 p_general_assembly = nonpanelized['provider_impressed_general_assembly'].dropna()

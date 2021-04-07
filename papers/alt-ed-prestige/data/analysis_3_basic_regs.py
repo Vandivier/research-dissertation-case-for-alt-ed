@@ -4,7 +4,7 @@ import statsmodels.api as sm
 import analysis_1_vars as GetVars
 
 # long reg / m1: n=454, r2=0.492, ar2=0.367
-m1 = '''hireability ~ conventional_alt_creds + favor_online_ed
+m1 = '''baseline_hirability ~ conventional_alt_creds + favor_online_ed
     + cat_prefer_degree_true
     + cat_work_with_external_partners_b + cat_work_with_external_partners_c + cat_work_with_external_partners_d
     + manager_effects_no + manager_effects_yes
@@ -28,7 +28,7 @@ m1 = '''hireability ~ conventional_alt_creds + favor_online_ed
     + 1'''
 
 # weak reg / m2: n=454, r2=0.488, ar2=0.411
-m2 = '''hireability ~ conventional_alt_creds + favor_online_ed
+m2 = '''baseline_hirability ~ conventional_alt_creds + favor_online_ed
     + cat_prefer_degree_true
     + cat_work_with_external_partners_b + cat_work_with_external_partners_c + cat_work_with_external_partners_d
     + manager_effects_no + manager_effects_yes
@@ -51,7 +51,8 @@ m2 = '''hireability ~ conventional_alt_creds + favor_online_ed
     + 1'''
 
 # n=454, r2=0.468, ar2=0.422
-m3 = '''hireability ~ conventional_alt_creds + favor_online_ed
+# what is not important? gender, manager, education, ethnicity
+m3 = '''baseline_hirability ~ conventional_alt_creds + favor_online_ed
     + cat_prefer_degree_true
     + cat_work_with_external_partners_b + cat_work_with_external_partners_c + cat_work_with_external_partners_d
     + industry_education + industry_finance_investment_or_accounting
@@ -67,6 +68,24 @@ m3 = '''hireability ~ conventional_alt_creds + favor_online_ed
         + state_tennessee + state_texas + state_west_virginia
     + 1'''
 
+# loss is too severe...we dcan't use m4
+# n=454, r2=0.188, ar2=0.122
+m4 = '''baseline_hirability ~
+    + cat_prefer_degree_true
+    + cat_work_with_external_partners_b + cat_work_with_external_partners_c + cat_work_with_external_partners_d
+    + industry_education + industry_finance_investment_or_accounting
+    + industry_information_technology + industry_manufacturing + industry_other
+    + income_0_9999 + income_100000_124999
+        + income_175000_199999 + income_200000 + income_25000_49999 + income_50000_74999 + income_75000_99999
+    + age_45_60
+    + state_arizona + state_california + state_connecticut
+        + state_florida + state_georgia + state_kansas
+        + state_maryland + state_massachusetts + state_michigan + state_mississippi
+        + state_missouri + state_nebraska + state_new_mexico
+        + state_pennsylvania
+        + state_texas + state_west_virginia
+    + 1'''
+
 # if this file executed as script
 if __name__ == '__main__':
     data = GetVars.getData()
@@ -74,7 +93,8 @@ if __name__ == '__main__':
     reg_long = sm.OLS.from_formula(m1, data=data).fit()
     reg_weak = sm.OLS.from_formula(m2, data=data).fit()
     reg_maxar2 = sm.OLS.from_formula(m3, data=data).fit()
+    reg_maxar2_mod = sm.OLS.from_formula(m4, data=data).fit()
     # robust = sm.RLM.from_formula(m9, data=data).fit()
 
-    print(reg_maxar2.summary())
+    print(reg_maxar2_mod.summary())
     
