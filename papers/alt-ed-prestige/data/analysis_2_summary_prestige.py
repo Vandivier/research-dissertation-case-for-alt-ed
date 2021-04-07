@@ -9,6 +9,9 @@ import statsmodels.stats as sm
 import analysis_1_vars as GetVars
 
 df = GetVars.getData(False)
+panelized = GetVars.getPanelizedData()
+concrete = GetVars.getConcreteData(panelized)
+vignette = GetVars.getVignetteData(panelized)
 
 # Make Table like [Difference, High, Low] x [Accreditation, Prestige]
 # These summary table categories turn into Booleans for reg analysis:
@@ -26,8 +29,66 @@ print(df['cat_work_with_external_partners_c'].describe())
 print(df['cat_work_with_external_partners_d'].describe())
 
 # a2.1
-print(df['hireability'].describe())
+# uncomment below line to throw error...this is good it proves hirability exists only for vignette as expected
+# print(df['hirability'].describe())
+print(df['baseline_hirability'].describe())
 
 # a2.2
 # n = 454, mean = frequency of disagreement (to prefer degree) = 41.63%
 print(df['cat_prefer_degree_false'].describe())
+
+# nan for hirability here is good. it proves hirability for concrete DNE as expected
+print(concrete['hirability'].mean())
+print(concrete['prestige_own'].mean())
+print(concrete['hirability'][concrete.is_accredited == 1].mean())
+print(concrete['prestige_own'][concrete.is_accredited == 1].mean())
+print(concrete['hirability'][concrete.is_accredited == 0].mean())
+print(concrete['prestige_own'][concrete.is_accredited == 0].mean())
+print(concrete['hirability'][concrete.is_high_prestige == 1].mean())
+print(concrete['prestige_own'][concrete.is_high_prestige == 1].mean())
+print(concrete['hirability'][concrete.is_low_prestige == 1].mean())
+print(concrete['prestige_own'][concrete.is_low_prestige == 1].mean())
+
+print(vignette['hirability'].mean())
+print(vignette['prestige_own'].mean())
+print(vignette['hirability'][vignette.is_accredited == 1].mean())
+print(vignette['prestige_own'][vignette.is_accredited == 1].mean())
+print(vignette['hirability'][vignette.is_accredited == 0].mean())
+print(vignette['prestige_own'][vignette.is_accredited == 0].mean())
+print(vignette['hirability'][vignette.is_high_prestige == 1].mean())
+print(vignette['prestige_own'][vignette.is_low_prestige == 1].mean())
+
+print(panelized['hirability'].mean())
+print(panelized['prestige_own'].mean())
+print(panelized['hirability'][panelized.is_accredited == 1].mean())
+print(panelized['prestige_own'][panelized.is_accredited == 1].mean())
+print(panelized['hirability'][panelized.is_accredited == 0].mean())
+print(panelized['prestige_own'][panelized.is_accredited == 0].mean())
+print(panelized['hirability'][panelized.is_high_prestige == 1].mean())
+print(panelized['prestige_own'][panelized.is_low_prestige == 1].mean())
+
+# a2.3
+# ref: table-summary-stats.tex
+#                                   Avg Hirability      Avg Prestige                            
+# Actual Schools                    n/a                 6.502
+#     accredited                    n/a
+#     unaccredited                  n/a
+#     difference                    n/a
+#     stipulated high prestige      n/a
+#     stipulated low prestige       n/a
+#     difference                    n/a
+# Vignette Schools                  
+#     accredited                    
+#     unaccredited                  
+#     difference                    
+#     stipulated high prestige      
+#     stipulated low prestige       
+#     difference                    
+# Combined Schools                  
+#     accredited                    
+#     unaccredited                  
+#     difference                    
+#     stipulated high prestige      
+#     stipulated low prestige       
+#     difference                    
+

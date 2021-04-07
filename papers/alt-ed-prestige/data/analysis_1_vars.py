@@ -9,19 +9,19 @@ from statsmodels.iolib.summary2 import summary_col
 
 def fsImproveProviderNames(sColName):
     sMassagedName = sColName
-    sMassagedName = sMassagedName.replace('provider_hireability_1', 'provider_hireability_b_nacc_nself_yother')
+    sMassagedName = sMassagedName.replace('provider_hirability_1', 'provider_hirability_b_nacc_nself_yother')
     sMassagedName = sMassagedName.replace('provider_impressed_1', 'provider_impressed_b_nacc_nself_yother')
-    sMassagedName = sMassagedName.replace('provider_hireability_2', 'provider_hireability_c_nacc_yself_nother')
+    sMassagedName = sMassagedName.replace('provider_hirability_2', 'provider_hirability_c_nacc_yself_nother')
     sMassagedName = sMassagedName.replace('provider_impressed_2', 'provider_impressed_c_nacc_yself_nother')
-    sMassagedName = sMassagedName.replace('provider_hireability_3', 'provider_hireability_d_nacc_yself_yother')
+    sMassagedName = sMassagedName.replace('provider_hirability_3', 'provider_hirability_d_nacc_yself_yother')
     sMassagedName = sMassagedName.replace('provider_impressed_3', 'provider_impressed_d_nacc_yself_yother')
-    sMassagedName = sMassagedName.replace('provider_hireability_4', 'provider_hireability_e_yacc_nself_nother')
+    sMassagedName = sMassagedName.replace('provider_hirability_4', 'provider_hirability_e_yacc_nself_nother')
     sMassagedName = sMassagedName.replace('provider_impressed_4', 'provider_impressed_e_yacc_nself_nother')
-    sMassagedName = sMassagedName.replace('provider_hireability_5', 'provider_hireability_f_yacc_nself_yother')
+    sMassagedName = sMassagedName.replace('provider_hirability_5', 'provider_hirability_f_yacc_nself_yother')
     sMassagedName = sMassagedName.replace('provider_impressed_5', 'provider_impressed_f_yacc_nself_yother')
-    sMassagedName = sMassagedName.replace('provider_hireability_6', 'provider_hireability_g_yacc_yself_nother')
+    sMassagedName = sMassagedName.replace('provider_hirability_6', 'provider_hirability_g_yacc_yself_nother')
     sMassagedName = sMassagedName.replace('provider_impressed_6', 'provider_impressed_g_yacc_yself_nother')
-    sMassagedName = sMassagedName.replace('provider_hireability_7', 'provider_hireability_h_yacc_yself_yother')
+    sMassagedName = sMassagedName.replace('provider_hirability_7', 'provider_hirability_h_yacc_yself_yother')
     sMassagedName = sMassagedName.replace('provider_impressed_7', 'provider_impressed_h_yacc_yself_yother')
     return sMassagedName
 
@@ -37,7 +37,7 @@ def fsReformatColumnNames(sColName):
     sMassagedName = sMassagedName.replace('__', '_')
     sMassagedName = sMassagedName.replace('how_impressed_would_you_be_if_you_heard_that_someone_studied_at_this_school', 'provider_impressed')
     sMassagedName = sMassagedName.replace('how_impressed_would_you_be_if_you_heard_that_someone_studied_at_', 'provider_impressed_')
-    sMassagedName = sMassagedName.replace('for_many_professions_learning_at_this_school_can_qualify_a_person_for_an_entry_level_position', 'provider_hireability')
+    sMassagedName = sMassagedName.replace('for_many_professions_learning_at_this_school_can_qualify_a_person_for_an_entry_level_position', 'provider_hirability')
     return sMassagedName
 
 
@@ -57,7 +57,7 @@ def getData(dropFirstDummy=True):
 
     df.rename(columns={
         "Do you contribute to hiring and firing decisions at your company?": "manager_effects",
-        "For many professions, alternative credentials can qualify a person for an entry-level position.": "hireability", # aka favorability
+        "For many professions, alternative credentials can qualify a person for an entry-level position.": "baseline_hirability", # aka favorability
         "It will soon become fairly conventional for high school graduates to obtain alternative credentials instead of going to college.": "conventional_alt_creds",
         "It will soon become common for high school graduates to obtain alternative credentials instead of going to college.": "conventional_alt_creds",
         "When you add up the pros and cons for online education, it's probably a good thing for society overall.": "favor_online_ed",
@@ -102,17 +102,17 @@ def getData(dropFirstDummy=True):
 
     # custom vars
     # ref: analysis_2_summary_prestige.py
-    df['provider_hireability_a_nacc_nself_nother'] = df['provider_hireability_']
+    df['provider_hirability_a_nacc_nself_nother'] = df['provider_hirability_']
     df['provider_impressed_a_nacc_nself_nother'] = df['provider_impressed']
-    df.drop(columns=['provider_hireability_', 'provider_impressed'])
+    df.drop(columns=['provider_hirability_', 'provider_impressed'])
     df = df.rename(fsImproveProviderNames, axis='columns')
 
     df['hireability_concrete_high_prestige'] = (df['provider_impressed_california_institute_of_technology'] + df['provider_impressed_university_of_chicago']
         + df['provider_impressed_app_academy'] + df['provider_impressed_general_assembly'] + df['provider_impressed_google'])/5
     df['hireability_concrete_low_prestige'] = (df['provider_impressed_portland_state_university'] + df['provider_impressed_university_of_nebraska_omaha']
         + df['provider_impressed_fvi_school_of_technology'] + df['provider_impressed_bov_academy'])/4
-    df['hireability_vignette_high_prestige'] = (df['provider_hireability_d_nacc_yself_yother'] + df['provider_hireability_h_yacc_yself_yother'])/2
-    df['hireability_vignette_low_prestige'] = (df['provider_hireability_a_nacc_nself_nother'] + df['provider_hireability_e_yacc_nself_nother'])/2
+    df['hireability_vignette_high_prestige'] = (df['provider_hirability_d_nacc_yself_yother'] + df['provider_hirability_h_yacc_yself_yother'])/2
+    df['hireability_vignette_low_prestige'] = (df['provider_hirability_a_nacc_nself_nother'] + df['provider_hirability_e_yacc_nself_nother'])/2
     df['hireability_total_high_prestige'] = (df['hireability_concrete_high_prestige'] + df['hireability_vignette_high_prestige'])/2
     df['hireability_total_low_prestige'] = (df['hireability_concrete_low_prestige'] + df['hireability_vignette_low_prestige'])/2
     df['hireability_delta_prestige'] = df['hireability_total_high_prestige'] - df['hireability_total_low_prestige']
@@ -121,8 +121,8 @@ def getData(dropFirstDummy=True):
         + df['provider_impressed_portland_state_university'] + df['provider_impressed_university_of_nebraska_omaha'])/4
     df['hireability_concrete_unaccredited'] = (df['provider_impressed_app_academy'] + df['provider_impressed_general_assembly'] + df['provider_impressed_google']
         + df['provider_impressed_fvi_school_of_technology'] + df['provider_impressed_bov_academy'])/5
-    df['hireability_vignette_accredited'] = (df['provider_hireability_e_yacc_nself_nother'] + df['provider_hireability_h_yacc_yself_yother'])/2
-    df['hireability_vignette_unaccredited'] = (df['provider_hireability_a_nacc_nself_nother'] + df['provider_hireability_d_nacc_yself_yother'])/2
+    df['hireability_vignette_accredited'] = (df['provider_hirability_e_yacc_nself_nother'] + df['provider_hirability_h_yacc_yself_yother'])/2
+    df['hireability_vignette_unaccredited'] = (df['provider_hirability_a_nacc_nself_nother'] + df['provider_hirability_d_nacc_yself_yother'])/2
     df['hireability_total_accredited'] = (df['hireability_concrete_accredited'] + df['hireability_vignette_accredited'])/2
     df['hireability_total_unaccredited'] = (df['hireability_concrete_unaccredited'] + df['hireability_vignette_unaccredited'])/2
     df['hireability_delta_accreditation'] = df['hireability_total_accredited'] - df['hireability_total_unaccredited']
@@ -218,6 +218,8 @@ def getPanelizedData():
     # and this is communicated to respondents.
     # i expect/hope is_reiterated_unaccredited is insignificant; that is in section 2, 3
     dfNew = df[0:0]
+    # baseline_hirability = hirability for non-actual & non-vignette (eg, baseline) records
+    dfNew['hirability'] = []
     dfNew['is_concrete'] = []
     dfNew['is_vignette'] = []
     dfNew['is_accredited'] = []
@@ -247,14 +249,7 @@ def getPanelizedData():
         observationSectionOne.at['is_vignette'] = 0
         observationSectionOne.at['is_accredited'] = 0
         observationSectionOne.at['is_reiterated_unaccredited'] = 0
-        # observationSectionOne.at['prestige_other'] = []
-        # observationSectionOne.at['prestige_own'] = []
-        # observationSectionOne.at['is_high_other_prestige'] = []
-        # observationSectionOne.at['is_high_own_prestige'] = []
-        # observationSectionOne.at['is_high_prestige'] = []
-        # observationSectionOne.at['is_low_other_prestige'] = []
-        # observationSectionOne.at['is_low_own_prestige'] = []
-        # observationSectionOne.at['is_low_prestige'] = []
+        observationSectionOne.at['hirability'] = observationSectionOne.at['baseline_hirability']
 
         observationCalTech = row.copy()
         observationCalTech.at['is_concrete'] = 1
@@ -345,7 +340,7 @@ def getPanelizedData():
         observation_a_nacc_nself_nother.at['is_stipulated_other_impressed'] = 0
         observation_a_nacc_nself_nother.at['is_stipulated_self_impressed'] = 0
         observation_a_nacc_nself_nother.at['prestige_own'] = observation_a_nacc_nself_nother.at['provider_impressed_a_nacc_nself_nother']
-        observation_a_nacc_nself_nother.at['hireability'] = observation_a_nacc_nself_nother.at['provider_hireability_a_nacc_nself_nother']
+        observation_a_nacc_nself_nother.at['hirability'] = observation_a_nacc_nself_nother.at['provider_hirability_a_nacc_nself_nother']
 
         observation_b_nacc_nself_yother = row.copy()
         observation_b_nacc_nself_yother.at['is_concrete'] = 0
@@ -355,7 +350,7 @@ def getPanelizedData():
         observation_b_nacc_nself_yother.at['is_stipulated_other_impressed'] = 1
         observation_b_nacc_nself_yother.at['is_stipulated_self_impressed'] = 0
         observation_b_nacc_nself_yother.at['prestige_own'] = observation_b_nacc_nself_yother.at['provider_impressed_b_nacc_nself_yother']
-        observation_b_nacc_nself_yother.at['hireability'] = observation_b_nacc_nself_yother.at['provider_hireability_b_nacc_nself_yother']
+        observation_b_nacc_nself_yother.at['hirability'] = observation_b_nacc_nself_yother.at['provider_hirability_b_nacc_nself_yother']
 
         observation_c_nacc_yself_nother = row.copy()
         observation_c_nacc_yself_nother.at['is_concrete'] = 0
@@ -365,7 +360,7 @@ def getPanelizedData():
         observation_c_nacc_yself_nother.at['is_stipulated_other_impressed'] = 0
         observation_c_nacc_yself_nother.at['is_stipulated_self_impressed'] = 1
         observation_c_nacc_yself_nother.at['prestige_own'] = observation_c_nacc_yself_nother.at['provider_impressed_c_nacc_yself_nother']
-        observation_c_nacc_yself_nother.at['hireability'] = observation_c_nacc_yself_nother.at['provider_hireability_c_nacc_yself_nother']
+        observation_c_nacc_yself_nother.at['hirability'] = observation_c_nacc_yself_nother.at['provider_hirability_c_nacc_yself_nother']
 
         observation_d_nacc_yself_nother = row.copy()
         observation_d_nacc_yself_nother.at['is_concrete'] = 0
@@ -375,7 +370,7 @@ def getPanelizedData():
         observation_d_nacc_yself_nother.at['is_stipulated_other_impressed'] = 1
         observation_d_nacc_yself_nother.at['is_stipulated_self_impressed'] = 1
         observation_d_nacc_yself_nother.at['prestige_own'] = observation_d_nacc_yself_nother.at['provider_impressed_d_nacc_yself_yother']
-        observation_d_nacc_yself_nother.at['hireability'] = observation_d_nacc_yself_nother.at['provider_hireability_d_nacc_yself_yother']
+        observation_d_nacc_yself_nother.at['hirability'] = observation_d_nacc_yself_nother.at['provider_hirability_d_nacc_yself_yother']
 
         observation_e_yacc_nself_nother = row.copy()
         observation_e_yacc_nself_nother.at['is_concrete'] = 0
@@ -385,7 +380,7 @@ def getPanelizedData():
         observation_e_yacc_nself_nother.at['is_stipulated_other_impressed'] = 0
         observation_e_yacc_nself_nother.at['is_stipulated_self_impressed'] = 0
         observation_e_yacc_nself_nother.at['prestige_own'] = observation_e_yacc_nself_nother.at['provider_impressed_e_yacc_nself_nother']
-        observation_e_yacc_nself_nother.at['hireability'] = observation_e_yacc_nself_nother.at['provider_hireability_e_yacc_nself_nother']
+        observation_e_yacc_nself_nother.at['hirability'] = observation_e_yacc_nself_nother.at['provider_hirability_e_yacc_nself_nother']
 
         observation_f_yacc_nself_yother = row.copy()
         observation_f_yacc_nself_yother.at['is_concrete'] = 0
@@ -395,7 +390,7 @@ def getPanelizedData():
         observation_f_yacc_nself_yother.at['is_stipulated_other_impressed'] = 1
         observation_f_yacc_nself_yother.at['is_stipulated_self_impressed'] = 0
         observation_f_yacc_nself_yother.at['prestige_own'] = observation_f_yacc_nself_yother.at['provider_impressed_f_yacc_nself_yother']
-        observation_f_yacc_nself_yother.at['hireability'] = observation_f_yacc_nself_yother.at['provider_hireability_f_yacc_nself_yother']
+        observation_f_yacc_nself_yother.at['hirability'] = observation_f_yacc_nself_yother.at['provider_hirability_f_yacc_nself_yother']
 
         observation_g_yacc_yself_nother = row.copy()
         observation_g_yacc_yself_nother.at['is_concrete'] = 0
@@ -405,7 +400,7 @@ def getPanelizedData():
         observation_g_yacc_yself_nother.at['is_stipulated_other_impressed'] = 0
         observation_g_yacc_yself_nother.at['is_stipulated_self_impressed'] = 1
         observation_g_yacc_yself_nother.at['prestige_own'] = observation_g_yacc_yself_nother.at['provider_impressed_g_yacc_yself_nother']
-        observation_g_yacc_yself_nother.at['hireability'] = observation_g_yacc_yself_nother.at['provider_hireability_g_yacc_yself_nother']
+        observation_g_yacc_yself_nother.at['hirability'] = observation_g_yacc_yself_nother.at['provider_hirability_g_yacc_yself_nother']
         
         observation_h_yacc_yself_yother = row.copy()
         observation_h_yacc_yself_yother.at['is_concrete'] = 0
@@ -415,7 +410,7 @@ def getPanelizedData():
         observation_h_yacc_yself_yother.at['is_stipulated_other_impressed'] = 1
         observation_h_yacc_yself_yother.at['is_stipulated_self_impressed'] = 1
         observation_h_yacc_yself_yother.at['prestige_own'] = observation_h_yacc_yself_yother.at['provider_impressed_h_yacc_yself_yother']
-        observation_h_yacc_yself_yother.at['hireability'] = observation_h_yacc_yself_yother.at['provider_hireability_h_yacc_yself_yother']
+        observation_h_yacc_yself_yother.at['hirability'] = observation_h_yacc_yself_yother.at['provider_hirability_h_yacc_yself_yother']
 
         newRows = [observationSectionOne, observationCalTech, observationChicago, observationPsu, observationUno,
             observationAppAcademy, observationGenAssembly, observationFviTech, observationBov, observationGoogle,
@@ -427,14 +422,14 @@ def getPanelizedData():
         # TODO: del column, don't drop https://stackoverflow.com/questions/13411544/delete-column-from-pandas-dataframe
         dfNew.drop(columns=[
             'provider_impressed_california_institute_of_technology',
-            'provider_hireability_a_nacc_nself_nother', 'provider_impressed_a_nacc_nself_nother',
-            'provider_hireability_b_nacc_nself_yother', 'provider_impressed_b_nacc_nself_yother',
-            'provider_hireability_c_nacc_yself_nother', 'provider_impressed_c_nacc_yself_nother',
-            'provider_hireability_d_nacc_yself_yother', 'provider_impressed_d_nacc_yself_yother',
-            'provider_hireability_e_yacc_nself_nother', 'provider_impressed_e_yacc_nself_nother', 
-            'provider_hireability_f_yacc_nself_yother', 'provider_impressed_f_yacc_nself_yother',
-            'provider_hireability_g_yacc_yself_nother', 'provider_impressed_g_yacc_yself_nother',
-            'provider_hireability_h_yacc_yself_yother', 'provider_impressed_h_yacc_yself_yother',
+            'provider_hirability_a_nacc_nself_nother', 'provider_impressed_a_nacc_nself_nother',
+            'provider_hirability_b_nacc_nself_yother', 'provider_impressed_b_nacc_nself_yother',
+            'provider_hirability_c_nacc_yself_nother', 'provider_impressed_c_nacc_yself_nother',
+            'provider_hirability_d_nacc_yself_yother', 'provider_impressed_d_nacc_yself_yother',
+            'provider_hirability_e_yacc_nself_nother', 'provider_impressed_e_yacc_nself_nother', 
+            'provider_hirability_f_yacc_nself_yother', 'provider_impressed_f_yacc_nself_yother',
+            'provider_hirability_g_yacc_yself_nother', 'provider_impressed_g_yacc_yself_nother',
+            'provider_hirability_h_yacc_yself_yother', 'provider_impressed_h_yacc_yself_yother',
         ])
 
     # dfNew['is_high_prestige'] = dfNew['is_high_other_prestige'] * dfNew['is_high_prestige']
@@ -451,23 +446,26 @@ def getPanelizedData():
     return dfNew
 
 
-def getVignetteData():
-    df = getPanelizedData()
+def getVignetteData(df: pd.DataFrame = None) -> pd.DataFrame:
+    if df is None:
+        df = getPanelizedData()
+
     dfNew = df[df.is_vignette == 1]
-    dfNew = dfNew[dfNew.hireability < 11]
-    dfNew = dfNew[dfNew.hireability > 0]
+    dfNew = dfNew[dfNew.hirability > 0]
+    dfNew = dfNew[dfNew.prestige_own > 0]
     print('getVignetteData dfNew len = ' + str(len(dfNew.index)))
     print('---')
     return dfNew
 
 
-def getConcreteData():
-    df = getPanelizedData()
+def getConcreteData(df: pd.DataFrame = None) -> pd.DataFrame:
+    if df is None:
+        df = getPanelizedData()
+
     dfNew = df[df.is_concrete == 1]
-    dfNew = dfNew[dfNew.hireability < 11]
-    dfNew = dfNew[dfNew.hireability > 0]
+    # uncomment below line to get 0 records; this is good bc concrete has no hirability
+    # dfNew = dfNew[dfNew.hirability > 0]
     dfNew = dfNew[dfNew.prestige_own > 0]
-    # TODO: need no null prestige_own
     print('getConcreteData dfNew len = ' + str(len(dfNew.index)))
     print('---')
     return dfNew
