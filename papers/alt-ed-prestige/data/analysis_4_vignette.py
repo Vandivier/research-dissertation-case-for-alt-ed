@@ -27,17 +27,27 @@ import analysis_1_vars as GetVars
 
 data = GetVars.getVignetteData()
 
-
-# removing is_low_prestige eliminates Hessian concern. ref: theanalysisfactor.com/wacky-hessian-matrix/
-#   however, maybe backwards elimination will also remove the hessian concern. let's see.
-# long_v_reg, is m3 + vignette effects and respecified into a mixed linear model
-#   (that is, a cross-sectional panel OLS plus individual random effects)
-# singular matrix ref: https://stats.stackexchange.com/a/489243/142294
-# n=3600, r2=0.554, ar2=0.549
-m4 = '''hireability ~ prestige_own
+# m4, long_v_reg, is m3 + vignette effects and respecified into a mixed linear model
+# ref: theanalysisfactor.com/wacky-hessian-matrix/
+# ref: https://stats.stackexchange.com/a/489243/142294
+# the idea for prestige-accreditation interaction is that
+#   there is no independent substance to accreditation other than the hidden prestige
+#   the expected result is not found
+#   instead, accreditation and prestige magnitudes both increase while maintaining high significance
+#   the interaction presents a highly significant negative, or attenuating, effect.
+#   this agrees with the hypothesis that accreditation and prestige share a duplicative explanatory component,
+#   but it strongly disagrees with the hypothesis that the shared component dominates the total explanatory power of accreditation
+#   what are the non-prestige reasons accreditation might matter?
+#       1) legal requirement of education for doctors, lawyers, and so on,
+#       2) legal support for accredited education vis a vis subsidies, loans, and so on,
+#       3) predictability / risk concerns,
+#       4) deep systemic lock-in from before the internet and flourishing of alternative education
+# n=3600 (g = 450), r2/ar2 DNE for mixed model
+m4 = '''hirability ~ prestige_own
     + is_accredited
-    + is_high_prestige + is_low_prestige
+    + (is_accredited*prestige_own)
     + is_stipulated_other_impressed
+    + is_stipulated_self_impressed
     + conventional_alt_creds + favor_online_ed
     + cat_prefer_degree_true
     + cat_work_with_external_partners_b + cat_work_with_external_partners_c + cat_work_with_external_partners_d
@@ -53,104 +63,59 @@ m4 = '''hireability ~ prestige_own
         + state_pennsylvania
         + state_tennessee + state_texas + state_west_virginia
     '''
-    # + is_stipulated_self_impressed
+    # + is_high_prestige
 
-m5 = '''hireability ~ prestige_own
+# m5 is the weak reg; p < 0.5
+m5 = '''hirability ~ prestige_own
     + is_accredited
-    + is_high_prestige + is_low_prestige
+    + (is_accredited*prestige_own)
     + is_stipulated_other_impressed
     + conventional_alt_creds + favor_online_ed
     + cat_prefer_degree_true
-    + industry_other
+    + industry_education
+      + industry_other
     + income_0_9999 + income_100000_124999
-        + income_25000_49999 + income_50000_74999 + income_75000_99999
-    + state_california + state_michigan + state_missouri + state_nebraska
+         + income_25000_49999 + income_50000_74999 + income_75000_99999
+    + state_arizona + state_california + state_florida
+        + state_michigan + state_missouri + state_nebraska
+        + state_pennsylvania
     '''
+    # + is_high_prestige
 
-m6 = '''hireability ~ prestige_own
+# m6 is m5 with re-inserted is_high_prestige
+# then, re-reduce to a weak model (p < 0.5)
+m6 = '''hirability ~ prestige_own
     + is_accredited
-    + is_high_prestige + is_low_prestige
+    + (is_accredited*prestige_own)
     + is_stipulated_other_impressed
+    + is_high_prestige
     + conventional_alt_creds + favor_online_ed
     + cat_prefer_degree_true
-    + industry_other
     + income_0_9999 + income_100000_124999
-        + income_25000_49999 + income_50000_74999 + income_75000_99999
-    + state_california
-    '''
-
-# technically, this was optimized using .fit(method=["lbfgs"])
-# then i dropped it bc m8 wouldn't converge unless i dropped it
-# also, idk what it does so good idea to drop it
-# negative side-effect is, I didn't backward-select m4-m7 without it
-# m7 with method=["lbfgs"], B(is_accredited) = 0.649
-# m7 without method=["lbfgs"], B(is_accredited) = 0.649
-# so, I don't think it matters
-m7 = '''hireability ~ prestige_own
-    + is_accredited
-    + is_low_prestige
-    + is_stipulated_other_impressed
-    + conventional_alt_creds
-    + state_california
-    '''
-
-# shorter model for practical application
-# during application, assume is_stipulated_other_impressed = false for a more conservative estimate
-# in practice, degree-substituting consumers will prefer high prestige alt creds; so removing the factor
-# creates a more conservative prestige_own effect through an intentional omitted variable bias
-# i would keep the CA factor but model doesn't converge in that case
-m8 = '''hireability ~ prestige_own
-    + is_accredited
-    + is_stipulated_other_impressed
-    '''
-
-# this is m7 plus is_accredited*prestige_own
-# the idea here is that accreditation interacts w prestige in such a way
-# that there is no independent substance to accreditation other than the hidden prestige
-# the expected result is not found
-# instead, accreditation and prestige magnitudes both increase while maintaining high significance
-# the interaction presents a highly significant negative, or attenuating, effect.
-# this agrees with the hypothesis that accreditation and prestige share a duplicative explanatory component,
-# but it strongly disagrees with the hypothesis that the shared component dominates the total explanatory power of accreditation
-# what are the non-prestige reasons accreditation might matter?
-#   1) legal requirement of education for doctors, lawyers, and so on,
-#   2) legal support for accredited education vis a vis subsidies, loans, and so on,
-#   3) predictability / risk concerns,
-#   4) deep systemic lock-in from before the internet and flourishing of alternative education
-m9 = '''hireability ~ prestige_own
-    + is_accredited + (is_accredited*prestige_own) 
-    + is_low_prestige
-    + is_stipulated_other_impressed
-    + conventional_alt_creds
-    + state_california
+         + income_50000_74999
+     + state_california
     '''
 
 # if this file executed as script
 if __name__ == '__main__':
-    # prefer weak v strong to fight overfit in mixed lm; there is no ar2 measure
-    # weak reg has Hessian matrix issue
-    # long_v_reg = sm.MixedLM.from_formula(m4, data=data, groups=data["respondent_id"], re_formula="respondent_id").fit(method=["lbfgs"])
-    # weak_v_reg = sm.MixedLM.from_formula(m5, data=data, groups=data["respondent_id"], re_formula="respondent_id").fit(method=["lbfgs"])
-    # point_three_v_reg = sm.MixedLM.from_formula(m6, data=data, groups=data["respondent_id"], re_formula="respondent_id").fit(method=["lbfgs"])
-
-    strong_v_reg = sm.MixedLM.from_formula(m7, data=data, groups=data["respondent_id"], re_formula="respondent_id").fit()
-    print(strong_v_reg.summary())
-
-    strong_modified_v_reg = sm.MixedLM.from_formula(m8, data=data, groups=data["respondent_id"], re_formula="respondent_id").fit()
-    print(strong_modified_v_reg.summary())
-
-    strong_modified_interacted_v_reg = sm.MixedLM.from_formula(m9, data=data, groups=data["respondent_id"], re_formula="respondent_id").fit()
-    print(strong_modified_interacted_v_reg.summary())
-
     # a4.1
-    # low prestige is about one-third of a standard deviation lower hireability
+    # low prestige is about one-third of a standard deviation lower hirability
     # and still over 5; more yes than no (maybe affirmation bias can negate tho)
     without_accreditation = data[data.is_accredited == False]
-    print(without_accreditation[without_accreditation.is_low_prestige == True].hireability.mean())
-    print(without_accreditation.hireability.describe())
+    print(without_accreditation[without_accreditation.is_low_prestige == True].hirability.mean())
+    print(without_accreditation.hirability.describe())
 
     # a4.2
     # average alt cred prestige among those exposed to quality ratings vs not
     # small increase but increase nontheless (stat insignificant tbh; multiple reg could change that)
     print(without_accreditation[without_accreditation.is_low_context == False].prestige_own.mean())
     print(without_accreditation[without_accreditation.is_low_context == True].prestige_own.mean())
+
+    # prefer weak v strong to fight overfit in mixed lm; there is no ar2 measure
+    # weak reg has Hessian matrix issue
+    long_v_reg = sm.MixedLM.from_formula(m4, data=data, groups=data["respondent_id"], re_formula="respondent_id").fit(method=["lbfgs"])
+    weak_v_reg = sm.MixedLM.from_formula(m6, data=data, groups=data["respondent_id"], re_formula="respondent_id").fit(method=["lbfgs"])
+    print('weak_v_reg---')
+    print(weak_v_reg.summary())
+
+    # TODO: maybe do a model that filters any non-robust coefficients that flip sign when ols -> lmm
