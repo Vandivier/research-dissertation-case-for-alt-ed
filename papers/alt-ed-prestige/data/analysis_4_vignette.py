@@ -23,9 +23,30 @@
 
 import statsmodels.api as sm
 import analysis_1_vars as GetVars
+from statsmodels.iolib.summary2 import summary_col
 
-
+baseline_data = GetVars.getData()
 data = GetVars.getVignetteData()
+
+# copy of m3 from ./analysis_3_basic_regs.py
+# here so we can easily .as_latex() our table
+# n=454, r2=0.468, ar2=0.422
+# what is not important? gender, manager, education, ethnicity
+m3 = '''baseline_hirability ~ conventional_alt_creds + favor_online_ed
+    + cat_prefer_degree_true
+    + cat_work_with_external_partners_b + cat_work_with_external_partners_c + cat_work_with_external_partners_d
+    + industry_education + industry_finance_investment_or_accounting
+    + industry_information_technology + industry_manufacturing + industry_other
+    + income_0_9999 + income_100000_124999
+        + income_175000_199999 + income_200000 + income_25000_49999 + income_50000_74999 + income_75000_99999
+    + age_45_60
+    + state_arizona + state_california + state_connecticut
+        + state_florida + state_georgia + state_kansas
+        + state_maryland + state_massachusetts + state_michigan + state_mississippi
+        + state_missouri + state_nebraska + state_new_mexico
+        + state_pennsylvania
+        + state_tennessee + state_texas + state_west_virginia
+    + 1'''
 
 # m4, long_v_reg, is m3 + vignette effects and respecified into a mixed linear model
 # ref: theanalysisfactor.com/wacky-hessian-matrix/
@@ -105,6 +126,9 @@ if __name__ == '__main__':
     print(without_accreditation[without_accreditation.is_low_prestige == True].hirability.mean())
     print(without_accreditation.hirability.describe())
 
+    
+    ols_reg_maxar2 = sm.OLS.from_formula(m3, data=baseline_data).fit()
+
     # a4.2
     # average alt cred prestige among those exposed to quality ratings vs not
     # small increase but increase nontheless (stat insignificant tbh; multiple reg could change that)
@@ -119,3 +143,12 @@ if __name__ == '__main__':
     print(weak_v_reg.summary())
 
     # TODO: maybe do a model that filters any non-robust coefficients that flip sign when ols -> lmm
+    # such vars include: cat\_prefer\_degree\_true [Prefers Accredited Coworker]
+
+    print(summary_col([ols_reg_maxar2, long_v_reg, weak_v_reg],
+                      stars=True, float_format='%0.2f',
+                      info_dict={
+        'N': lambda x: "{0:d}".format(int(x.nobs)),
+        'R2': lambda x: "{:.3f}".format(x.rsquared)
+    }
+    ).as_latex())
