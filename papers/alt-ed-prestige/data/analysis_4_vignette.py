@@ -126,7 +126,6 @@ if __name__ == '__main__':
     print(without_accreditation[without_accreditation.is_low_prestige == True].hirability.mean())
     print(without_accreditation.hirability.describe())
 
-    
     ols_reg_maxar2 = sm.OLS.from_formula(m3, data=baseline_data).fit()
 
     # a4.2

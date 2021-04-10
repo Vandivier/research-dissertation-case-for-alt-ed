@@ -3,16 +3,21 @@
 
 % using Elseveir template per https://www.elsevier.com/authors/author-schemas/latex-instructions
 \documentclass[review]{elsarticle}
-\usepackage{lineno,hyperref}
-\modulolinenumbers[5]
-\bibliographystyle{elsarticle-num}
 
+\usepackage{amsmath}
 \usepackage{booktabs}
 \usepackage{graphicx}
-\graphicspath{{../alt-ed-survey/figures-and-tables}}
 \usepackage{hyperref}
-\usepackage{threeparttable}  
+\usepackage{lineno}
+\usepackage{longtable}
+\usepackage{siunitx}
+\usepackage{tabularx}
+\usepackage{threeparttable}
 \usepackage{tikz}
+
+\modulolinenumbers[5]
+\bibliographystyle{elsarticle-num}
+\graphicspath{{../alt-ed-survey/figures-and-tables}}
 \usetikzlibrary{calc,matrix}
 
 \begin{document}
@@ -333,8 +338,7 @@ For example, the state effect for California is positive on hirability
 and it retains a magnitude that compensates almost exactly for the hirability penalty from non-accreditation.
 
 % summary statistics
-
-
+% a2.1
 Mean baseline hirability is 7.58 on a 10-point scale, and the median response is 8.
 Table \ref{tab:desc_stats} gives average hirability and prestige for interesting segments of respondents.
 Four basic results in the table are worth noting.
@@ -359,6 +363,10 @@ it will be at least as prestigious as the average accredited school.
     }
     \label{tab:desc_stats}
 \end{table}
+
+% The differences reported in Table \ref{tab:desc_stats} are significant ($p < 0.1$).
+% Smaller differences between actual schools and vignette schools are also significant.
+% The minimum difference of 0.14 between unaccredited actual and vignette schools is significant ($p < 0.1$).
 
 Google is the only unaccredited learning provider to acheive a strong competitive status.
 The mean prestige response for Google was 7.10 and the median response was 7.
@@ -400,26 +408,18 @@ more than one-quarter of respondents still prefer one of the remaining high pres
 When asked directly, about 42 percent of respondents state that they do not prefer
 to work with a person that has a college degree rather a person that holds a reputable non-college credential.
 
-\begin{table}
-    \caption{Table of Regression Results}
-    \resizebox{\columnwidth}{!}{
-        \input{./figures-and-tables/table-models.tex}
-    }
-    \label{tab:table_regs}
-\end{table}
-
-%% TODO: BASELINE REGRESSION YIELDS PANELIZED REGRESSION
+\input{./figures-and-tables/table-regressions.tex}
 
 % TODO: is_low_context effect
 % TODO: difference in means test
 % TODO: is_low_context two-color histogram https://stackoverflow.com/a/39481709/3931488
-    % TODO: maybe four color (low_context for each of (universities, high prestige alt credentials); or, is_low_context*is_accredited)
+% TODO: maybe four color (low_context for each of (universities, high prestige alt credentials); or, is_low_context*is_accredited)
 % TODO: summarize
 
 1. summary Results (percent prefer degree, prestige high-low stipulated vs prestige yes-no accreditation)
 2. vignette Results (prestige vs accreditation on hirability)
 3. concrete results (translating prestige into aggregation site metrics; no fav reg)
-    b. context effect
+b. context effect
 
 \section{Conclusions}
 
@@ -470,13 +470,13 @@ The conclusion describes policy options that solve for the remainder of concerns
 4. remove legally enshrined preferential treatment of accredited credentials (esp government pay scales and in government contracts)
 5. how to fill the gap? define skill-based requirements instead of accreditation (better outcomes for govt and all)
 6. (institution based vs skill or course based accreditation)
-    1. ...see 8 for a non-policy workaround (but working around is likely more costly than direct fix)
+1. ...see 8 for a non-policy workaround (but working around is likely more costly than direct fix)
 6. aggregators need to do a better job
 7. individuals don't need to wait for social movement to reap individual-level benefits
 8. hybrid approach; universities can (and increasingly already do) partner with external providers for a win-win
-    1. better university placement rates
-    2. better university solutioning of the skill gap
-    3. accreditation given fully or partially (ACE; professional credit) to unaccredited partners (institution based vs skill or course based accreditation)
+1. better university placement rates
+2. better university solutioning of the skill gap
+3. accreditation given fully or partially (ACE; professional credit) to unaccredited partners (institution based vs skill or course based accreditation)
 
 1. overall is there evidence that bootcamp can replace college due to prestige effects? what caveats?
 - we need to consider price in the real world
