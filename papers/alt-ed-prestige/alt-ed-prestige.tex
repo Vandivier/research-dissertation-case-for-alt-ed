@@ -139,13 +139,6 @@ The current paper extends the analysis of prestige and hiring norms
 across many industries and to include alternative credentials.
 % arguably I emphasize coding bootcamps / other bootcamp industries / information technology industry and perhaps sales
 
-% Vocational schools are only sometimes accredited, and non-accredited means of learning some vocations are common.
-% For this reason, it is widely accepted that there are particular jobs for which alternative credentials are preferred,
-% but the explanation for the lack of general non-accreditated higher learning is commonly made on the basis of social norms.
-% As two sides of the same coin, some argue that vocational schooling and alternative credentials bear some stigma.
-% Others argue that there is a positive social expectation, and indeed systematized facilitation,
-% of educational progress from a high school to an accredited university.
-
 As a preview, statistical evidence confirms that prestige independently explains hirability better than accreditation alone,
 but accreditation fails to be explained away.
 Instead, models that use both factors produce superior estimates of willingness to hire.
@@ -373,10 +366,12 @@ The mean prestige response for Google was 7.10 and the median response was 7.
 Two lower bars for competitive status are interesting.
 First, an alternative provider can be described as moderately competitive if it fails to beat the average university,
 but it succeeds in beating at least one university on average.
+The lowest average prestige score for an accredited university takes a value of 6.34 for the University of Nebraska.
+
 Second, an alternative provider can be described as weakly competitive if it fails to beat any university on average,
 but it succeeds in beating at least one university in a significant percentage of individual responses.
 No alternative credentials investigated in this study meet the criteria for moderate competitiveness.
-% App Academy, General Assembly, and Google are the three alternative learning providers with stipulated high prestige.
+App Academy, General Assembly, and Google are the three alternative learning providers with stipulated high prestige.
 All stipulated high prestige learning providers are at least weakly competitive.
 
 When asked directly, 41.6 percent of respondents indicated that they would not prefer to
@@ -410,86 +405,186 @@ to work with a person that has a college degree rather a person that holds a rep
 
 \input{./figures-and-tables/table-regressions.tex}
 
-% TODO: is_low_context effect
-% TODO: difference in means test
-% TODO: is_low_context two-color histogram https://stackoverflow.com/a/39481709/3931488
-% TODO: maybe four color (low_context for each of (universities, high prestige alt credentials); or, is_low_context*is_accredited)
-% TODO: summarize
+Table \ref{tab:table_regs} gives three models.
+The first model is an ordinary least squares model of baselines hirability.
+The model is identified through backward elimination to the point of adjusted r-squared maximization.
+Model 2 is a linear mixed model (LMM) adaptation of Model 1,
+plus factors of accreditation and prestige.
+Model 3 results from additional backward elimination on Model 2.
 
-1. summary Results (percent prefer degree, prestige high-low stipulated vs prestige yes-no accreditation)
-2. vignette Results (prestige vs accreditation on hirability)
-3. concrete results (translating prestige into aggregation site metrics; no fav reg)
-b. context effect
+Four individuals that completed the first section of the questionnaire
+did not complete the entire questionnaire.
+Eight hirability measures for vignette schools are observed for the
+remaining 450 respondents, yielding a 3,600 observations for the mixed models.
+
+Because LMM does not permit computation of r-squared,
+the termination criteria for the factor elimination process in Model 3
+was to retain all factors with a p-value under 0.5.
+This is a permissive criteria intended to guard against overfitting.
+The logical basis for such a criteria is that each observed effect is
+more likely to exist than to not exist when $p < 0.5$.
+Despite permissive criteria, only one insignificant factor for income is retained.
+
+% Comparison of coefficients across specifications improves confidence in the coefficients in all but two cases.
+% The factor for the income range under ten thousand dollars per year
+% and the factor for preference in a traditional coworker flip signs,
+% but other factors are fairly consistent in their effects.
+
+Model 2 and Model 3 have one other interesting difference.
+Model 3 includes the boolean for whether a school was stipulated as high prestige.
+For a vignette to be stipulated as high prestige in general
+means that two more specific stipulations were made concurrently.
+First, it is stipulated that the respondent should consider the school impressive.
+Second, it is also stipulated that the respondent should suppose other people consider the school impressive.
+The inclusion of this variable in Model 2 generates perfect multicolinearity.
+After backwards elimination, however, this variable can be added without concern.
+
+Model 3 is the preferred model.
+Prestige and accreditation effects are positive and significant.
+These two effects also interact with a significant and negative coefficient.
+The value of these coefficients of interest are consistent across Model 2 and Model 3.
+The dummy variable for accreditation is about two and a half times larger than the prestige response,
+but the average prestige response is near seven.
+This indicates that the prestige response explains a larger share of hirability variance compared to accreditation.
+% The negative interaction indicates both a decreasing marginal benefit for prestige among the accredited,
+% and also a decreasing marginal penalty for prestige among the unaccredited.
+
+An application of Model 3 is another approach to identification of alternative credentials
+that are able to compete with an accredited degree.
+Hold factors other than accreditation and prestige constant.
+Let the hirability level of school $k$ be called $H_k$.
+Let $X_{ka}$ be accreditation status,
+$X_{kp}$ is own prestige response,
+$X_{kh}$ is the dummy for stipulated high prestige,
+and $X_{ko}$ is the dummy for whether other people consider the school prestigious.
+
+Let $H_1$ be an unaccredited school with high stipulated prestige.
+Let $H_2$ be an accredited school without high stipulated prestige.
+Let $H_2$ receive a prestige response equal to the average for an accredited vignette.
+Let $X_{2p} = 6.49$, which is the average prestige leve
+Let the prestige response for $H_2$ be the average level for an accredited vignette.
+Table \ref{tab:desc_stats} identifies $X_{2p} = 6.49$ and the system of equations yields:
+
+\begin{subequations}
+    \begin{equation}
+        H_k = 1.27X_{ka} - \num{0.1}X_{ka}X_{kp} + 0.53X_{kp} + 0.14X_{kh} + 0.59X_{ko}
+        \label{eq1}
+    \end{equation}
+    \begin{equation}
+        H_1 = 0.53X_{kp} + 0.14 + 0.59
+        \label{eq2}
+    \end{equation}
+    \begin{equation}
+        H_2 = 1.27 - \num{0.1}(6.49) + 0.53(6.49)
+        \label{eq3}
+    \end{equation}
+    \begin{equation}
+        X_{kp} = (1.27 - \num{0.1}(6.49) + 0.53(6.49) - 0.14 - 0.59) / 0.53
+        \label{eq4}
+    \end{equation}
+    \begin{equation}
+        X_{kp} \approx 6.28
+        \label{eq5}
+    \end{equation}
+\end{subequations}
+
+Equation \ref{eq5} indicates that a high prestige alternative credential with a
+prestige response of 6.28 or higher is roughly competitive with the average accredited vignette.
+Table \ref{tab:desc_stats} indicates that the prestige response for the average vignette school is 6.21.
+This is a significant difference compared to the average actual school prestige response of 6.50.
+Coincidentally, additive and proportional compensation of 6.28 both yield 6.57.
+
+Google remains the only alternative provider that can meet the prestige level required
+for competitiveness on average.
+App Academy and General Assembly retain a deficit of about three-quarters of a point.
+The model reveals several situations in which other factors overcome this deficit,
+but several of the offsetting factors would be hard for a job candidate to determine ahead of time.
+The California state effect is an interesting exception that could be exploited
+for preferential job search outcomes.
+
+Alternative credentials provide a source of potential diverse labor to employers.
+It is interesting that neither ethnicity nor gender was significantly associated with hirability.
+There is little evidence for the claim that accredited degrees are preferentially valued for client-facing roles.
+Respondent job location in a client-facing role was associated with slightly larger
+baseline willingness to hire an alternatively educated candidate.
+The extent of client contact was insignificant in the mixed model.
+
+\begin{figure}[h!]
+    \centering
+    \caption{Prestige Response Distribution for Actual Schools}
+    \begin{tikzpicture}[element/.style={minimum width=1.75cm, minimum height=0.85cm}]
+        \node (n1) {\includegraphics[width=1\textwidth]{./figures-and-tables/context-graph-massaged.png}};
+    \end{tikzpicture}
+    \label{fig:var_results}
+\end{figure}
+
+% This effect does not enter in to any regression
+Finally, Figure \ref{fig:var_results} visualizes the prestige response distribution
+for actual schools.
+Responses are grouped according to whether the respondent randomly received information
+from review site aggregators.
+For all schools, responses at the positive and negative extrema are both reduced
+when individuals are exposed to informational messages.
+On average, alternative education prestige rose and accredited education prestige declined
+when a respondent received review aggregator site information.
 
 \section{Conclusions}
 
-Two rules of thumb:
-1. Get a Google. (general competitive rule: Amazon and Microsoft are other examples)
-2. Aggregator cream of the crop (secondary rule; may result in a longer job search but still viable)
+The results of this paper provide evidence that credential prestige explains a larger share
+of hirability variance compared to accreditation.
+At the same time, accreditation independently explains a substantial share of hirability.
+The independent importance of accreditation indicates that arbitrary improvements to alternative credential
+quality and social acceptability will not displace the higher education system.
+A change in legal norms appears to be required in order to create an even competitive environment between traditional and alternative providers.
 
-In any case, also seek to leverage compensating factors (third rule)
+In 2012, The Heritage Foundation called for two policy changes that are worth considering.
+First, the Foundation proposed that the government should directly accredit courses rather than organizations\cite{burke2012accreditation}.
+Second, they also called for a decoupling of accreditation and federal funding.
+An additional option would be to replace legal requirements for formal education could be replaced with skill assessments.
+Without a legal requirement for formal education, then, formal accreditation could be removed.
 
-The synthesis of results from this paper and the data from Zety on job search length forms a practical rule of thumb.
-The selection criteria for stipulated high prestige alternative credentials other than Google was to use a reputable bootcamp aggregator,
-in this case Course Report,
-and to choose a learning provider with more than four hundred reviews and an average rating of more than 4.25 on a 5-point scale.
-Google was selected on the basis of industry leadership.
-Credential producers that are also Fortune 50 companies fit this description.
+There are several reasons to be pessimistic about the feasibility of these policy changes.
+Reductions in public expenditure are particularly unpopular among the voting populace.
+Education is compulsory in the United States,
+over ninety percent of K-12 students in the United States attended a public school in 2016\cite{us2019digest},
+and there is a systematized pipeline from public school to the traditional university system.
+Education represents an example of entangled political economy\cite{wagner2014entangled}.
+Robust political economy points out additional reasons to doubt rapid innovation in this space\cite{boettke2004liberalism}.
 
-policy recommendations are constrained in recognition of the political economy of education as a turbulent, endogenous, entangled thing,
-in contrast to a simplistic analysis that might treat politics as a thing distinct from and able to exogenously move the economy
-(wagner: % https://mason.gmu.edu/~rwagner/Wirth%20Keynote.pdf)
-Wagner argues contra Becker and other neoclassicals that so-called political competition doesn't get you to the efficient economic outcome.
-``Unlike market entities, political entities cannot generate their own revenue.
-To support their activities, political entities must attach themselves parasitically to
-market entities and activities''
-so, rents still exist in some form or another, usually vis a vis an indirect transaction:
-'an indirect form of transaction, not different in form from the various indirect transactions that arise in the presence of price controls'
-from american democracy comes a forced triad
-traces the problem all the way to the american constitutional architecture.
-at some level, a full resolution to the problem would require competition at the level of the constitution; insert plug for seasteading
-it's not actually even clear that the success of seasteading or another form of constutional competition is less feasible than
-change in the below 8 laws;
+An interesting alternative to formal legislative change is the emerging model of public-private partnership in education.
+In 2013, Georgia Tech formally partnered with Udacity to produce an accredited online graduate degree in Computer Science\cite{empson_2013}.
+Udacity was able to facilitate a high quality experience online and at scale with an affordable rate.
+Georgia Tech offered branding, legitimacy, and accreditation which allowed Udacity to charge a higher price.
+In other cases, the hybridization of traditional and alternative education is informal.
+Prior learning assessments and portfolio review are two of many processes by which a university can award credit to a student
+without formal requirements connected to the source of student learning\cite{conrad2008building}.
+This is one route by which course-level accreditation can effectively take place without formal legislative support.
 
-also cite leeson/boettke robust political economy to emphasize the perhaps unexpectedly high difficulty of substantial change
-perhaps refer to the friedman rule about how, even if we got the legal change we asked for,
-administrative costs and so forth could result in cost/quality differentials that are in excess of what we want
+% 1. remove accreditation
+% 2. lower the bar for accreditation
+% 3. remove professional requirements that include requirement for accreditation
+% 4. remove legally enshrined preferential treatment of accredited credentials (esp government pay scales and in government contracts)
+% 5. how to fill the gap? define skill-based requirements instead of accreditation (better outcomes for govt and all)
+% 6. (institution based vs skill or course based accreditation)
+% 1. ...see 8 for a non-policy workaround (but working around is likely more costly than direct fix)
+% 6. aggregators need to do a better job
+% 7. individuals don't need to wait for social movement to reap individual-level benefits
+% 8. hybrid approach; universities can (and increasingly already do) partner with external providers for a win-win
+% 1. better university placement rates
+% 2. better university solutioning of the skill gap
+% 3. accreditation given fully or partially (ACE; professional credit) to unaccredited partners (institution based vs skill or course based accreditation)
 
-perhaps a short history of educational change policy; media and social reaction (eg faciliation under trump was decried)
-to emphasize the general pessimism extends into education and it perhaps accentuated rather than attenuated in this particular policy field
+Finally, this paper evaluated practical alternative credential selection strategies.
+One strategy is to leverage credentials from industry leaders.
+Google was selected as a Fortune 50 alternative learning provider.
+A credential from Google was the only alternative credential to be identified as generally competitive with an accredited degree.
+The second strategy is to use credential review aggregator sites to identify high prestige credentials.
+This paper used Course Report as an aggregator to search for alternative credentials.
+App Academy and General Assembly were identified by applying search criteria that includes a rating of 4.25 or better on a 5-point scale and a minimum of four hundred reviews.
+The combination of results with information on typical job search length from Zety indicated
+that these credentials provide meaningful job search benefits,
+albeit with significantly less efficacy than an accredited degree or a credential from Google.
 
-so, constitutional competition is the great height at which the last remainder of educational policy consequence can be addressed at the macro level
-express optimism that much can be done at the mesoeconomic and micro levels; individuals, and firms and even meso entities like states and industries
-can and are already doing much...
-
-The conclusion describes policy options that solve for the remainder of concerns in higher education that survive competition from alternative credentials.
-
-1. remove accreditation
-2. lower the bar for accreditation
-3. remove professional requirements that include requirement for accreditation
-4. remove legally enshrined preferential treatment of accredited credentials (esp government pay scales and in government contracts)
-5. how to fill the gap? define skill-based requirements instead of accreditation (better outcomes for govt and all)
-6. (institution based vs skill or course based accreditation)
-1. ...see 8 for a non-policy workaround (but working around is likely more costly than direct fix)
-6. aggregators need to do a better job
-7. individuals don't need to wait for social movement to reap individual-level benefits
-8. hybrid approach; universities can (and increasingly already do) partner with external providers for a win-win
-1. better university placement rates
-2. better university solutioning of the skill gap
-3. accreditation given fully or partially (ACE; professional credit) to unaccredited partners (institution based vs skill or course based accreditation)
-
-1. overall is there evidence that bootcamp can replace college due to prestige effects? what caveats?
-- we need to consider price in the real world
-- we had a threshold of name recognition to ensure statistical confidence; what happens if we drop below that? say a bootcamp w less than 30 reviews?
-2. online education isn't a good fit for all learners
-3. parental preference matters; if parents will finance university but not bootcamp (or vice-versa) then effective cost to student is modified
-- this also presents a channel for pro-ACNG movement
-4. policy differences: government or employer may provide financing or employment conditinoal on a certain type of educational participation
-
-overall advice: as an individual, work backwards from a particular desired job description
-as a society: push for policies which make comparing across types easier, generate lower cost and higher skill outputs,
-and clearer signals of productivity, reducing demand for prestige which is really 1) a second-best / fallback signal of productivity,
-and 2) a form of slack and a biased means toward inefficient selection (anti-diversity as a byproduct; again see Pedigree)
 
 \bibliography{./BibFile}
 
