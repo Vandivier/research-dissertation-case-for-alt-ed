@@ -198,16 +198,18 @@ This variable measures individual response on a 10-point scale to the question,
 ``For many professions, alternative credentials can qualify a person for an entry-level position.''
 The questionnaire is composed of three sections.
 The first section collects respondent characteristics and baseline hirability.
-The second section collects hirability and prestige responses with respect to nine specific learning providers.
+The second section collects prestige responses with respect to nine real-world learning providers.
 The third section collects hirability and prestige responses with respect to eight vignette learning providers.
 
-Ordinary least squares (OLS) analysis uses single-measure responses in the first section of the questionnaire.
-Vignette data is analyzed as a panel in a mixed model with individual random effects.
-The vignette model allows comparison between prestige and accreditation coefficients,
-but it encounters a practical problem in that the schools are only vignettes rather than actual learning providers.
+% TODO: maybe describe real-world learning provider selection criteria here.
+
+Investigation of the first section of the questionnaire uses ordinary least squares analysis.
+Vignette data is analyzed as a panel in mixed models with individual random effects.
+The vignette model allows comparison between prestige and accreditation coefficients.
+Vignette analysis encounters a practical utility problem in that the schools are only vignettes rather than actual learning providers.
 A comparison of descriptive statistics across vignettes and actual schools addresses this concern.
 
-Half of the respondents randomly received exposure to an informational message about actual schools.
+Half of the respondents randomly received an informational message about the nine real-world learning providers.
 Appendix A includes the wording of this message.
 The message provides rating data from two leading credential aggregator websites.
 University ratings are US News ranking information for the 2021 school year.
@@ -241,12 +243,12 @@ Hirability and prestige are 10-point Likert-type responses.
 Prestige takes a second representation as a stipulated boolean.
 Stipulating prestige enables the application of results to a real job search.
 If stipulated prestige is highly correlated to prestige response,
-then the selection criteria for stipulation can be applied in an actual job search to replicate analytical findings in the actual job search.
-Replication of analytical findings is beneficial to a real job search in the expected case where prestige is associated with increased hirability.
+and if prestige response is correlated to improved hirability,
+then the selection criteria for stipulated prestige can be applied in an actual job search to potentially improve outcomes.
 
 To illustrate the method of two-way prestige validation,
 suppose that a vignette school is stipulated as high prestige.
-This situation corresponds to a stipulated prestige value of true.
+This situation is represented in regression as a dummy variable for stipulated high prestige with a value of true.
 The respondent reads that the vignette school is known to be prestigious.
 After reading this, the respondent provides a prestige response rating on a 10-point scale.
 Investigation of all responses allows an analyst to determine an average prestige response level which is associated with
@@ -263,7 +265,7 @@ In an actual job search, individuals can easily access aggregator website data.
 In the real world, an individual cannot readily access questionnaire results for many credentials.
 Results from this paper include the identification of rules of thumb
 that a person can use to identify actual learning providers as high prestige.
-To ensure clarity of results, stipulated prestige always refers to the boolean, and prestige response refers to the 10-point measure.
+To ensure clarity of results, stipulated prestige always refers to the dummy variable, and prestige response refers to the 10-point measure.
 
 The vignette section and the section on actual schools use stipulated prestige.
 All other variables are either 10-point Likert-type responses or categorical variables\footnote{
@@ -280,9 +282,9 @@ while actual schools only receive responses for hirability.
 % Prestige is measured two-ways in the vignette section, but it is only stipulated in the section on actual schools.
 
 Respondent characteristics include eight standard controls and four questions unique to this study.
-The eight controls include
+The eight standard controls include
 age, gender, ethnicity, income,
-level of education, employment status, industry of occupation, and state of residence.
+level of education, employment status, the industry of occupation, and state of residence.
 A unique question on work norms records whether the respondent tends ``to work more closely with coworkers at your company or customers and external business partners.''
 The motivation for this question is to test whether prestige disproportionately impacts roles that are outward or client-facing.
 Respondents are also directly asked whether they
@@ -329,12 +331,13 @@ and linear mixed models (LMM)
 are used for vignette analysis.
 OLS specification of vignette data is inappropriate because repeated measures of hirability
 from a single participant introduce an individual-level bias into resulting coefficients.
-LMM yields linear coefficients, so the interpretation of LMM coefficients is similar to OLS.
-One difference of note is that adjusted r-squared is not available for an LMM model.
+LMM models are able to account for these individual-level effects.
 Following Magezi\cite{magezi2015linear},
 linear mixed models in this paper use a within-participant random factor,
 or individual random effects,
 to correct for individual-level repeated measures bias.
+LMM yields linear coefficients, so the interpretation of LMM coefficients is similar to OLS.
+One difference of note is that adjusted r-squared is not available for an LMM model.
 % For this reasons, an OLS model is optimized for baseline hirability,
 % and then that specification is trivially modified into an LMM model for further analysis.
 % formula for LMM at https://www.statsmodels.org/stable/mixed_linear.html
@@ -362,22 +365,22 @@ Results ($n = 454$) indicate that accredited degrees are generally higher in pre
 Alternative credentials are meaningfully associated with hirability,
 and in certain situations, they are preferred to accredited degrees.
 
-Competitive status indicates an association with hirability similar to or higher than that of an accredited degree.
+Competitive status indicates that a credential is correlated with hirability to a similar or greater extent compared to an accredited degree.
 Results provide evidence for three cases in which alternative credentials are competitive.
 First, specific alternative credentials are of particularly high prestige.
 This study finds that a credential from Google is sufficiently prestigious to be competitive without a requirement of supplementary conditions.
 
 Second, some individuals award prestige preferentially to alternative learning providers.
 % analysis_5_transfer table a5.1
-When comparing actual learning providers,
+In a comparison among nine actual learning providers in this study,
 71 percent of respondents prefer at least one alternative credential to at least one university degree.
-The proportion increases to about 75 percent when respondents view rating data from online review aggregators.
-These sites include US News and Course Report, and they aggregate learning providers,
-report standard information about those providers,
-and allow users to leave reviews.
+The proportion increases to about 75 percent when respondents view rating data from the online review aggregators Course Report and US News.
+% These sites include US News and Course Report, and they aggregate learning providers,
+% report standard information about those providers,
+% and allow users to leave reviews.
 
 % TODO: maybe re-introduce the term 'alternativel credentialed non-college graduated' / ACNG.
-Third, other independent factors preferentially support the hirability of alternatively credentialed job candidates.
+Third, certain independent factors in hiring decision models support the hirability of alternatively credentialed job candidates.
 Industry and state effects are two such compensating factors that can add up to overcome the average comparative preference for accredited labor to alternatively credentialed job candidates.
 % For example, the state effect for California is positive on hirability
 % and it retains a magnitude that compensates almost exactly for the hirability penalty from non-accreditation.
@@ -389,12 +392,12 @@ The mean response for baseline hirability is 7.58 on a 10-point scale, and the m
 Table \ref{tab:desc_stats} gives average hirability and prestige for interesting segments of respondents.
 Four basic results in the table are worth noting.
 First, stipulated prestige always moves with prestige response as expected.
-Second, as expected, accredited schools are generally higher than non-accredited schools.
+Second, as expected, the hirability and prestige effects for accredited schools are generally higher than non-accredited schools.
 
 Third, the difference in average hirability between high and low prestige providers
 is more than twice the difference in hirability between accredited and unaccredited providers.
-This supports the possibility that at some level of prestige,
-alternative education becomes competitive with traditional education.
+This supports the possibility of an actual competitive alternative credential in the attainable range of prestige.
+% alternative education becomes competitive with traditional education.
 % The fourth result is that the average actual school with stipulated high prestige
 % is too low in prestige to be competitive with the average actual school with an accredited status.
 The fourth result is an initial attempt at a prestige rule of thumb.
@@ -414,7 +417,7 @@ it will be at least as prestigious as the average accredited school.
 % Smaller differences between actual schools and vignette schools are also significant.
 % The minimum difference of 0.14 between unaccredited actual and vignette schools is significant ($p < 0.1$).
 
-Google is the only unaccredited learning provider to achieve a strong competitive status.
+Google is the only unaccredited learning provider to achieve a competitive status on the basis of this initial rule.
 The mean prestige response for Google was 7.10, and the median response was 7.
 Two lower bars for competitive status are interesting.
 First, an alternative provider can be described as moderately competitive if it fails to beat the average university,
@@ -449,20 +452,20 @@ Given the rates at which respondents prefer alternative credentials to accredite
 a job search of typical length is likely to include several applications and at least one interview
 with one or more employers that would prefer an alternative credential with stipulated high prestige to an accredited degree.
 
-More than half of respondents prefer a high prestige alternative credential to at least one high prestige accredited degree.
-After excluding the highest prestige alternative credential from Google,
-more than one-quarter of respondents still prefer one of the remaining high prestige alternative credentials to at least one high prestige accredited degree.
-% a2.2
-When asked directly, about 42 percent of respondents state that they do not prefer
-to work with a person that has a college degree rather than a person that holds a reputable non-college credential.
+% More than half of respondents prefer a high prestige alternative credential to at least one high prestige accredited degree.
+% After excluding the highest prestige alternative credential from Google,
+% more than one-quarter of respondents still prefer one of the remaining high prestige alternative credentials to at least one high prestige accredited degree.
+% % a2.2
+% When asked directly, about 42 percent of respondents state that they do not prefer
+% to work with a person that has a college degree rather than a person that holds a reputable non-college credential.
 
 \input{./figures-and-tables/table-regressions.tex}
 
 Table \ref{tab:table_regs} gives three models.
-The first model is an ordinary least squares model of baselines hirability.
+The first model is an ordinary least squares model of baseline hirability.
 Backward elimination to the point of adjusted r-squared maximization yields Model 1.
 Adding factors of accreditation and prestige to Model 1,
-then adapting the model to a linear mixed model (LMM) specification yields Model 2.
+then adapting the model to a linear mixed model (LMM) yields Model 2.
 Model 3 results from additional backward elimination on Model 2.
 
 Four individuals that completed the first section of the questionnaire
@@ -489,8 +492,8 @@ For vignette schools with high prestige, the participant viewed two statements a
 The questionnaire instructs the participant to imagine a school they consider to be impressive.
 The questionnaire also instructs the participant to imagine that other people consider the school to be impressive.
 This situation is technically equivalent to an interaction of the two subcomponents.
-Because Model 2 includes both discrete components and the accreditation dummy, including high prestige generates perfect multicollinearity.
-Backward elimination of Model 2 drops the component on own stipulated prestige, so subsequent insertion of high prestige is nonproblematic.
+Because Model 2 includes both stipulated high prestige subcomponents and the accreditation dummy, including high prestige generates perfect multicollinearity.
+Backward elimination of Model 2 drops the factor for own stipulated prestige, so subsequent insertion of high prestige is nonproblematic.
 
 Model 3 is the preferred model.
 Prestige and accreditation effects are positive and significant.
@@ -506,15 +509,16 @@ An application of Model 3 is another approach to the identification of competiti
 Hold factors other than accreditation and prestige constant.
 Let the hirability level of school $k$ be called $H_k$.
 Let $X_{ka}$ be accreditation status,
-$X_{kp}$ is own prestige response,
+$X_{kp}$ is prestige response,
 $X_{kh}$ is the dummy for stipulated high prestige,
 and $X_{ko}$ is the dummy for whether other people consider the school prestigious.
 
 Let $H_1$ be an unaccredited school with high stipulated prestige.
 Let $H_2$ be an accredited school without high stipulated prestige.
-Let $H_2$ receive a prestige response equal to the average for an accredited vignette.
-Let $X_{2p} = 6.49$, which is the average prestige level for an accredited vignette.
-Table \ref{tab:desc_stats} identifies $X_{2p} = 6.49$ and the system of equations yields:
+% Let $H_2$ receive a prestige response equal to the average for an accredited vignette.
+Let $X_{2p} = 6.49$, which is the prestige response equal to the average for an accredited vignette,
+as reported in Table \ref{tab:desc_stats}.
+This system of equations is described in equations \ref{eq1} through \ref{eq5}:
 
 \begin{subequations}
     \begin{equation}
@@ -539,16 +543,17 @@ Table \ref{tab:desc_stats} identifies $X_{2p} = 6.49$ and the system of equation
     \end{equation}
 \end{subequations}
 
-Equation \ref{eq5} indicates that a high prestige alternative credential with a
-prestige response of 6.28 or higher is roughly competitive with the average accredited vignette.
+Equation \ref{eq5} indicates that an alternative credential
+with stipulated high prestige
+and a prestige response of 6.28 or higher is approximately competitive with the average accredited vignette.
 Table \ref{tab:desc_stats} indicates that the prestige response for the average vignette school is 6.21.
 This is a significant difference compared to the average actual school prestige response of 6.50.
 Coincidentally, additive and proportional compensation of 6.28 both yield 6.57.
 
-Google remains the only alternative provider that can meet the prestige level required
-for competitiveness on average.
-App Academy and General Assembly retain a deficit of about three-quarters of a point.
-The model reveals several situations in which other factors overcome this deficit,
+This prestige requirement exceeds the low bar set by comparison to the University of Nebraska.
+Google remains the only alternative provider to obtain general competitive status without the presence of other preferential factors.
+App Academy and General Assembly both have average prestige responses close to 5.8.
+Models reveal several situations in which other factors overcome this deficit,
 but many of these offsetting factors are difficult to determine and leverage prior to a hiring decision.
 The California state effect is an interesting exception that an actual job search could exploit.
 
