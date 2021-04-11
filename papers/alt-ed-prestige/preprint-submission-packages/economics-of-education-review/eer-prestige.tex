@@ -1,0 +1,673 @@
+% cleaning note: run:
+% `deno run --allow-read --allow-write ../../../../deno-utility-tex-to-text/tex-to-text.ts --infile /d/Users/vandi/workspace/research-dissertation-case-for-alt-ed/papers/alt-ed-prestige/alt-ed-prestige.tex'
+% `deno run --allow-read --allow-write ../../../../deno-utility-tex-to-text/tex-to-text.ts --infile /d/workspace/github/research-dissertation-case-for-alt-ed/papers/alt-ed-prestige/alt-ed-prestige.tex'
+
+% using Elseveir template per https://www.elsevier.com/authors/author-schemas/latex-instructions
+\documentclass[review]{elsarticle}
+
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{lineno}
+\usepackage{longtable}
+\usepackage{siunitx}
+\usepackage{tabularx}
+\usepackage{threeparttable}
+\usepackage{tikz}
+
+\modulolinenumbers[5]
+\bibliographystyle{elsarticle-num}
+\graphicspath{{../alt-ed-survey/figures-and-tables}}
+\usetikzlibrary{calc,matrix}
+
+\begin{document}
+\begin{frontmatter}
+
+    \title{
+        Hirability and Educational Prestige
+    }
+
+    \author[mymainaddress]{John Vandivier}
+    \address[mymainaddress]{4400 University Dr, Fairfax, VA 22030}
+    \ead{jvandivi@masonlive.gmu.edu}
+
+    \begin{abstract}
+        % a4.1
+        Alternative credentials
+        offer a partial solution to the skill gap and student debt crises,
+        supernormal returns for some students,
+        and a tool to support diversity hiring for firms.
+        This paper tests the hypothesis that educational prestige explains hirability
+        better than accreditation.
+        An original questionnaire using repeated measures ($n = 454$)
+        is investigated to determine the effects of accreditation and prestige on willingness to hire.
+        A combination of descriptive statistics, ordinary least squares (OLS), and linear mixed models (LMM)
+        reveal that prestige explains a larger component of hirability variance than accreditation.
+        Accreditation remains independently important.
+        Alternative credentials from a Fortune 50 learning provider are competitive with a traditional degree.
+        Other high prestige alternative credentials demonstrate job search value, albeit at a lower level.
+        The conclusion includes a discussion on industry and policy moves to improve total market surplus.
+        % A discussion on
+        % Partnerships between accredited and alternative institutions
+        % provide a path to improved social outcomes without the difficulty 
+        % below line is true per a4.2 but it's a very weak increase so let's not mention
+        % Exposure to quality ratings for learning providers
+        % is associated with improved relative prestige on alternative credentials.
+        % The conclusion includes a discussion on policy,
+        % and actionable recommendations for employers, students, and quality rating aggregators.
+        % Do I really need to offer policy solutions?
+        % At the same time, situations are revealed in which alternative credentials are preferred.
+        % Hirability is high for alternative credentials,
+        % and these credentials can be obtained at a lower cost and difficulty compared
+        % to certain degrees.
+        % As a result, alternative credentials are sometimes preferred even when comparative prestige is low.
+        % Descriptive statistics show that prestige for alternative credentials is
+        % more dispersed than prestige for the accredited degree,
+        % so some proprtion of respondents prefer alternative credentials.
+    \end{abstract}
+
+    \begin{keyword}
+        alternative education, job search, work norms, education economics, social economics, labor economics, skill gap, prestige, debt crisis    %%% not grammatical
+        % debt crisis               288k
+        % prestige                  1.55m
+        % skill gap                 2.24m
+        % labor economics           3.45m
+        % social economics          3.86m
+        % education economics       4.0m
+        % work norms                4.01m
+        % job search                4.92m
+        % alternative education     5.23m
+        \MSC[2010] I20, I24, J24, B55                                                                     %%% not grammatical
+    \end{keyword}
+
+\end{frontmatter}
+
+\pagebreak
+\linenumbers
+
+\section{Introduction}
+
+The accredited degree is an established means to individual-level employability, but the proliferation of the degree is associated with a variety of well-understood issues.
+These issues include the student debt crisis, skill gaps, grade inflation, low social return, and contribution to lack of diversity in the labor market.
+Alternative credentials, or non-accredited credentials, are a broad category of offerings that exhibit greater variation intensity, price, and outcomes\cite{urdan_2020}.
+Alternative credentials are often a signal of niche skills and expertise in a particular job family.
+These characteristics combine to provide the benefit of high possible value addition to the labor market
+with the cost of a value calculation problem shared by potential employers and education consumers.
+
+This paper seeks to reduce the general difficulty of credential value calculation by testing a method of value normalization
+with heuristics to identify those credentials likely to yield meaningful benefits to the typical job search.
+This paper tests the lens of prestige as a tool to normalize value across accredited and alternative credentials.
+This study leverages an original questionnaire to identify prestige levels of various credentials.
+This paper tests the composite hypothesis that some level of prestige allows an alternative credential to compete with traditional credentials for employment.
+
+Several specific lines of evidence are required to support the composite hypothesis.
+Statistical evidence must demonstrate significant positive effects for accreditation and prestige on hirability.
+The effect size for prestige must be sufficiently large to dominate the accreditation effect over the attainable range.
+The questionnaire allows a prestige response on a 10-point scale, so the attainable range is from 1 to 10.
+A vignette analysis can test whether a dominant range for prestige exists within the attainable window.
+An ideal result would further show that one or more actual alternative credentials fall into this dominant range.
+
+The motivation for the lens of prestige extends from the academic work in education economics and the economics of social norms.
+Education economics provides two mainstream accounts of the value of a degree.
+One account is the human capital model, and the other is the signaling model.
+The human capital model explains that improved labor outcomes result from skills gained by a student in the course of education.
+
+Stakeholders of various kinds prefer alternative credentials to the traditional degree for the attainment of specific technical skills\cite{craig2018new}.
+For this reason, many college graduates supplement using alternative credentials.
+Some alternative learning providers specifically target this market with a special kind of alternative education called last-mile training.
+This presents an explanatory problem for the human capital model.
+If better labor outcomes arise from skill enhancement,
+then alternatively educated individuals should enjoy better wages, employment rates, and so on,
+compared to college graduates.
+
+The signaling model holds that credentials signal a basket of applicant qualities that employers value.
+Proponents of the signaling model commonly argue that the college degree signals intelligence,
+work ethic, and conformity\cite{caplan_2012}.
+The signaling model presents an explanation for
+the correlation of weak labor outcomes and alternative credentials,
+even if alternative credentials endow students with better skills.
+The explanation is that the alternative credential signals
+an offsetting deficit of some kind.
+This paper treats prestige as a signal rather than a matter of human capital.
+This paper prefers the signaling approach to directly investigate prestige effects
+with minimal theoretical baggage and without a need to test student skill.
+% without concern for testing skill differences in students of various kinds.
+% This paper hypothesizes that employers value prestige as a signal.
+% Accredited degrees 
+% A full description of such signal deficits is irrelevant to this study,
+% but potential negative signals may include a deficit in conformity or work ethic.
+% This study uses the signaling model as a framework for investigation
+% because it appears 
+
+% This paper hypothesizes that prestige is valued by employers as a signal.
+% Prestige can be taken as a signal of conformity in part.
+% Google is a prestigious employer and also an alternative learning provider.
+% From the point of view of Google, their own credential is a preferred conformity signal as well as a signal of skill.
+% The case of employer-provided credentials is interesting,
+% but the component of prestige is 
+% The main argument is that accreditation signals prestige,
+% but there
+% The simple hypothesis is that accredited degrees obtain higher prestige on average,
+% but 
+% While conformity and prestige intersect at times,
+% this paper does not suppose they are identical nor generally correlated.
+% Instead, this paper argues that these are two social characteristics that are valued by employers
+% and a lack in one may be compensated for by the presence of the other.
+% This paper hypothesizes that alternative credentials will have low average prestige,
+% but that some particular credentials from prestigious providers like Google will prove valuable.
+
+In a broad review of economics and norm types, hiring decisions exist within what Elster would identify as work norms\cite{elster1989social}.
+Elster supports a rational model of work norms, with the caveat that social interactions may involve unobserved emotional effects.
+Similarly, the rational model used in this paper may not extrapolate with accuracy into abnormal emotional situations.
+This paper will also make use of the distinction between social and legal norms provided by Elster.
+
+Rivera is one scholar within the economics of work norms to have recently operationalized social norms as prestige\cite{rivera2016pedigree}.
+Rivera finds that prestige is important in her analysis, but her analytical scope focuses on traditional education and a few specific industries, including health and law.
+The current paper extends the analysis of prestige and hiring norms
+across many industries and to include alternative credentials.
+% arguably I emphasize coding bootcamps / other bootcamp industries / information technology industry and perhaps sales
+
+% To preview results,, statistical evidence confirms that prestige independently explains hirability better than accreditation alone,
+% but accreditation fails to be explained away.
+% Instead, models that use both factors produce superior estimates of willingness to hire.
+% The independent importance of accreditation indicates that asymptotic improvements to alternative credentials are unlikely to totally outcompete the traditional education system.
+% The failure of arbitrary technical and social gains in alternative credentials to fully crowd out traditional education
+% points to a need to investigate legal norms for further remedy.
+% The conclusion describes industry and policy solutions for the remainder of concerns in higher education.
+% At the same time, there is a large level of economic value/arbitrage to be had/exploited from the socialization of alternative credentials
+% before the binding constraint of legal stability is encountered.
+% TODO: maybe estimate the level of economic growth (it would be proportional utility growth which is merely analgous tho)
+
+\section{Description of Data and Methodology}
+
+This paper investigates an original set of online questionnaire responses ($n = 454$).
+Responses are cross-sectional data obtained in March of 2021.
+Respondents are United States citizens at or over the age of eighteen.
+Qualified respondents participated in the survey through the Amazon Mechanical Turk platform.
+
+Appendix A contains the wording and response options for each question.
+Appendix A also contains the wording for a priming message presented at the start of the survey.
+The priming message lays out the definition of alternative credentials used in this study.
+The message also provides several concrete examples of alternative credentials,
+including ``a Certified Project Manager certification,
+a portfolio of work, a Khan Academy profile, or a Nanodegree from Udacity.''
+
+The dependent variable of interest is called hirability.
+This variable measures individual response on a 10-point scale to the question,
+``For many professions, alternative credentials can qualify a person for an entry-level position.''
+The questionnaire is composed of three sections.
+The first section collects respondent characteristics and baseline hirability.
+The second section collects prestige responses with respect to nine real-world learning providers.
+The third section collects hirability and prestige responses with respect to eight vignette learning providers.
+
+% TODO: maybe describe real-world learning provider selection criteria here.
+
+Investigation of the first section of the questionnaire uses ordinary least squares analysis.
+Vignette data is analyzed as a panel in mixed models with individual random effects.
+The vignette model allows comparison between prestige and accreditation coefficients.
+Vignette analysis encounters a practical utility problem in that the schools are only vignettes rather than actual learning providers.
+A comparison of descriptive statistics across vignettes and actual schools addresses this concern.
+
+Half of the respondents randomly received an informational message about the nine real-world learning providers.
+Appendix A includes the wording of this message.
+The message provides rating data from two leading credential aggregator websites.
+University ratings are US News ranking information for the 2021 school year.
+Course Report provides the rating data for so-called coding bootcamps as of December 2020.
+
+As an aside, inaccurate credential category labels contribute to the knowledge and value calculation problems that inhibit social adoption.
+Coding bootcamps focus on roles in the information technology industry, but these roles are much broader in scope than the category label implies.
+Moreover, the information technology industry is a special industry that cuts across all other industries.
+Much of the academic, policy, and industry discussion on coding bootcamps misses that these institutions provide credentials that potentially compete with university degrees in nearly any subject.
+
+For example, General Assembly is one of the particular coding bootcamps investigated in this study.
+General Assembly provides credentials for user experience design, a set of skills involving market research, and applied technical art skills.
+General Assembly provides credentials for product management.
+Product management is a job family that competes for labor among business degree graduates.
+The data science credential provides skills that compete with accredited labor in mathematics, statistics, economics, and even subjects in the hard sciences like computational biology.
+Finally, there are credentials that relate to software development and compete with accredited degrees in computer science.
+
+% TODO: write the below content into the paper when we get to results on concrete providers
+% why do we not use a mixed model of concrete providers?
+% three reasons:
+%   first, the whole point of using an aggregator is to obtain individual-independent data
+%   second, ratings are heterogenous so there would be some noise introduced by indexing them together
+%   third, i use stipulated prestige categories as a pseudo-index
+%       the pseudo-index can be used via simpler descriptive stats,
+%       and the pseudo-index has evidence supporting it; that is, high / low stipulated prestige is sig correlated to response prestige.
+% if all those objections fail, then fine we can do it but i suspect the answer will be:
+%   'findings are insignificant bc of low variation and injected noise not bc no such level exists'
+
+Respondent characteristics are categorical variables.
+Hirability and prestige are 10-point Likert-type responses.
+Prestige takes a second representation as a stipulated boolean.
+Stipulating prestige enables the application of results to a real job search.
+If stipulated prestige is highly correlated to prestige response,
+and if prestige response is correlated to improved hirability,
+then the selection criteria for stipulated prestige can be applied in an actual job search to potentially improve outcomes.
+
+To illustrate the method of two-way prestige validation,
+suppose that a vignette school is stipulated as high prestige.
+This situation is represented in regression as a dummy variable for stipulated high prestige with a value of true.
+The respondent reads that the vignette school is known to be prestigious.
+After reading this, the respondent provides a prestige response rating on a 10-point scale.
+Investigation of all responses allows an analyst to determine an average prestige response level which is associated with
+the stipulated high prestige criteria.
+
+To preview results, stipulated high prestige turns out to be strongly correlated with high prestige response.
+Interestingly, there are cases where a respondent gives a low response rating to, for example,
+the University of Chicago, a school with high stipulated prestige based on aggregator website ratings.
+This result indicates the importance of some analysis that accounts for individual effects.
+% the person could just be generally stingy with hirability points, they might be particularly opposed to accredited degrees, have a special issue w this school...
+
+Two-way representation of prestige enables the application of findings into an actual job search.
+In an actual job search, individuals can easily access aggregator website data.
+In the real world, an individual cannot readily access questionnaire results for many credentials.
+Results from this paper include the identification of rules of thumb
+that a person can use to identify actual learning providers as high prestige.
+To ensure clarity of results, stipulated prestige always refers to the dummy variable, and prestige response refers to the 10-point measure.
+
+The vignette section and the section on actual schools use stipulated prestige.
+All other variables are either 10-point Likert-type responses or categorical variables\footnote{
+    It is an accepted practice to treat Likert-type responses as either categorical or continuous for regression analysis.
+    Jaccard and Wan provide support for continuous analysis of Likert-type data.
+    They note that severe departures from the assumptions on cardinality ``do not seem to affect Type I and Type II errors dramatically,''
+    particularly when the Likert scale is five or more points\cite{jaccard1996lisrel}.
+    This paper treats responses on a 10-point scale as continuous.
+}.
+Categorical variables are exclusively respondent characteristics.
+Four other respondent measures are Likert-type responses.
+Vignette responses include responses for hirability and prestige,
+while actual schools only receive responses for hirability.
+% Prestige is measured two-ways in the vignette section, but it is only stipulated in the section on actual schools.
+
+Respondent characteristics include eight standard controls and four questions unique to this study.
+The eight standard controls include
+age, gender, ethnicity, income,
+level of education, employment status, the industry of occupation, and state of residence.
+A unique question on work norms records whether the respondent tends ``to work more closely with coworkers at your company or customers and external business partners.''
+The motivation for this question is to test whether prestige disproportionately impacts roles that are outward or client-facing.
+Respondents are also directly asked whether they
+``prefer to hire or work with a person that has a college degree rather a person that holds a reputable certification or non-college credential.''
+
+Another unique control is support for online education.
+This control allows analysis to separate hirability effects due to online education preference
+from hirability effects due to unaccredited education preference.
+In practice, many alternative credentials involve online learning,
+but accredited learning is also increasingly taking place online.
+
+The fourth control is expected conventionality.
+% This is an important representation of perceived social norms.
+This variable measures whether the respondent believes that
+``It will soon become common for high school graduates to obtain alternative credentials instead of going to college.''
+This is a useful correction variable for two reasons.
+First, it separates willingness to hire based on respondent preference
+from indirect willingness to hire based on perceived social norms.
+Individual preferences and social norms are certainly correlated,
+but the correlation is small enough that failure to separate these effects leads to nontrivial statistical noise.
+
+Second, surveys sometimes overreport demand effects because of the lack of cost constraint on respondent expression.
+This bias is sometimes called budget constraint bias or omitted budget constraint bias\cite{ahlheim1998contingent, pachali2020omitted}.
+% This is also in part corrected for by collecting income...so there isn't an 'unobserved budget' really...see sources cited
+Without a cost constraint, respondents tend to exaggerate demand responses like the willingness to hire.
+Budget constraint bias affects both hirability and expected conventionality,
+so conventionality operates in part as a bias control.
+
+Vignette question formatting follows Atzm{\"u}ller and Steiner\cite{atzmuller2010experimental}.
+Each vignette stipulates whether a school is accredited,
+whether the respondent should imagine the school as impressive,
+and whether the respondent should imagine that other people consider the school impressive.
+Each stipulated factor can take a value of true or false,
+resulting in eight vignette questions.
+
+This study uses multiple regression and descriptive statistics to generate results.
+% \footnote{
+%     While the data for this analysis is not public, the analytical code is open-source.
+%     See \url{https://github.com/Vandivier/research-dissertation-case-for-alt-ed/tree/master/papers/alt-ed-prestige}
+% }.
+Multiple regression is conducted using ordinary least squares (OLS)
+for baseline hirability analysis
+and linear mixed models (LMM)
+are used for vignette analysis.
+OLS specification of vignette data is inappropriate because repeated measures of hirability
+from a single participant introduce an individual-level bias into resulting coefficients.
+LMM models are able to account for these individual-level effects.
+Following Magezi\cite{magezi2015linear},
+linear mixed models in this paper use a within-participant random factor,
+or individual random effects,
+to correct for individual-level repeated measures bias.
+LMM yields linear coefficients, so the interpretation of LMM coefficients is similar to OLS.
+One difference of note is that adjusted r-squared is not available for an LMM model.
+% For this reasons, an OLS model is optimized for baseline hirability,
+% and then that specification is trivially modified into an LMM model for further analysis.
+% formula for LMM at https://www.statsmodels.org/stable/mixed_linear.html
+% individual random effects https://www.statsmodels.org/stable/examples/notebooks/generated/mixed_lm_example.html#Growth-curves-of-pigs
+
+% 2. how was nonresponse bias addressed? - maybe not at all
+% - main way to address nonresponse bias is to explicitly capture and correct for all of the individual characteristics that matter: ethnicity, age, income...
+% - it would not be enough to show nonresponse bias exists;
+% - it would need to be shown that it exists in the direction of some effect that moves the relation of interest in a predictable and meaningful way;
+% - else the criticism is an argument from ignorance which due dilligence has been undertaken to preclude.
+% - https://forum.effectivealtruism.org/posts/a6LMQcER6Awhawtqq/using-amazon-s-mechanical-turk-for-animal-advocacy-studies
+% - above indicates overstatement of effects...i would want more info...there is a paper internally cited
+% - above also deflates income nonresponse bias consern (these don't pay much so systematic bias from rich ppl) also i explicitly capture income anyway
+% - "AMT was found to be a reliable source of data and to diminish the potential for non-response error in online research"
+% - https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4397064/
+% - https://duckofminerva.com/2013/07/mechanical-turk-and-experiments-in-the-social-sciences.html
+% - https://www.tandfonline.com/doi/abs/10.1080/10967494.2016.1276493
+% 3. How were ratings subjects selected? min 2*2*2 (isQuality)*(isBootcamp)*(isKnown) social and individual ratings [10 point likert-type unit]
+% 4. a few correction variables based on literature review and computed norm factors how
+
+\section{Results}
+
+% top line results; alt creds are lower prestige on average but still important
+Results ($n = 454$) indicate that accredited degrees are generally higher in prestige compared to alternative credentials.
+Alternative credentials are meaningfully associated with hirability,
+and in certain situations, they are preferred to accredited degrees.
+
+Competitive status indicates that a credential is correlated with hirability to a similar or greater extent compared to an accredited degree.
+Results provide evidence for three cases in which alternative credentials are competitive.
+First, specific alternative credentials are of particularly high prestige.
+This study finds that a credential from Google is sufficiently prestigious to be competitive without a requirement of supplementary conditions.
+
+Second, some individuals award prestige preferentially to alternative learning providers.
+% analysis_5_transfer table a5.1
+In a comparison among nine actual learning providers in this study,
+71 percent of respondents prefer at least one alternative credential to at least one university degree.
+The proportion increases to about 75 percent when respondents view rating data from the online review aggregators Course Report and US News.
+% These sites include US News and Course Report, and they aggregate learning providers,
+% report standard information about those providers,
+% and allow users to leave reviews.
+
+% TODO: maybe re-introduce the term 'alternativel credentialed non-college graduated' / ACNG.
+Third, certain independent factors in hiring decision models support the hirability of alternatively credentialed job candidates.
+Industry and state effects are two such compensating factors that can add up to overcome the average comparative preference for accredited labor to alternatively credentialed job candidates.
+% For example, the state effect for California is positive on hirability
+% and it retains a magnitude that compensates almost exactly for the hirability penalty from non-accreditation.
+
+% summary statistics
+% a2.1
+Baseline hirability is the institution-agnostic hirability measure.
+The mean response for baseline hirability is 7.58 on a 10-point scale, and the median response is 8.
+Table \ref{tab:desc_stats} gives average hirability and prestige for interesting segments of respondents.
+Four basic results in the table are worth noting.
+First, stipulated prestige always moves with prestige response as expected.
+Second, as expected, the hirability and prestige effects for accredited schools are generally higher than non-accredited schools.
+
+Third, the difference in average hirability between high and low prestige providers
+is more than twice the difference in hirability between accredited and unaccredited providers.
+This supports the possibility of an actual competitive alternative credential in the attainable range of prestige.
+% alternative education becomes competitive with traditional education.
+% The fourth result is that the average actual school with stipulated high prestige
+% is too low in prestige to be competitive with the average actual school with an accredited status.
+The fourth result is an initial attempt at a prestige rule of thumb.
+For both vignette and actual schools,
+if a school can obtain a prestige score of 7 or more,
+it will be at least as prestigious as the average accredited school.
+
+\begin{table}
+    \caption{Average Hirability and Prestige}
+    \resizebox{\columnwidth}{!}{
+        \input{./figures-and-tables/table-summary-stats.tex}
+    }
+    \label{tab:desc_stats}
+\end{table}
+
+% The differences reported in Table \ref{tab:desc_stats} are significant ($p < 0.1$).
+% Smaller differences between actual schools and vignette schools are also significant.
+% The minimum difference of 0.14 between unaccredited actual and vignette schools is significant ($p < 0.1$).
+
+Google is the only unaccredited learning provider to achieve a competitive status on the basis of this initial rule.
+The mean prestige response for Google was 7.10, and the median response was 7.
+Two lower bars for competitive status are interesting.
+First, an alternative provider can be described as moderately competitive if it fails to beat the average university,
+but it succeeds in beating at least one university on average.
+The lowest average prestige response for an accredited university is 6.34 for the University of Nebraska.
+
+Second, an alternative provider can be described as weakly competitive if it fails to beat any university on average,
+but it succeeds in beating at least one university in a significant percentage of individual responses.
+No alternative credentials investigated in this study meet the criteria for moderate competitiveness.
+App Academy, General Assembly, and Google are the three alternative learning providers with stipulated high prestige.
+All stipulated high prestige learning providers are at least weakly competitive.
+
+When asked directly, 41.6 percent of respondents indicated that they would not prefer to
+work with a person that holds an accredited credential instead of ``a person that holds a reputable certification or non-college credential.''
+When examining prestige response instead of asking directly, over 70 percent of respondents reveal a preference for
+at least one actual alternative credential to at least one university credential.
+Over half of respondents preferred at least one actual alternative credential with stipulated high prestige
+to at least one university credential with stipulated high prestige.
+After excluding Google, over one-quarter of respondents continue to prefer
+at least one actual alternative credential with stipulated high prestige to at least one university credential with stipulated high prestige.
+
+% TODO: Does zety belong in the conclusion?
+Zety is an online platform that facilitates job search.
+Zety reports that one in six job applicants in the United States receive an interview,
+and the average conversion rate from interview to offer was 19.78 in 2016\cite{turczynski_2021}.
+Assuming rejections are independent enables naive estimation that most job searches consist of at least four interviews\footnote{
+    Four independent games that each include an eighty percent chance of rejection yields $0.8^4 = 0.4096$.
+    The associated probability of having at least one offer result from four interviews would be about $1 - 0.41 = 0.59$,
+    or 59 percent, which is more likely than not.
+} and dozens of applications.
+Given the rates at which respondents prefer alternative credentials to accredited degrees,
+a job search of typical length is likely to include several applications and at least one interview
+with one or more employers that would prefer an alternative credential with stipulated high prestige to an accredited degree.
+
+% More than half of respondents prefer a high prestige alternative credential to at least one high prestige accredited degree.
+% After excluding the highest prestige alternative credential from Google,
+% more than one-quarter of respondents still prefer one of the remaining high prestige alternative credentials to at least one high prestige accredited degree.
+% % a2.2
+% When asked directly, about 42 percent of respondents state that they do not prefer
+% to work with a person that has a college degree rather than a person that holds a reputable non-college credential.
+
+\input{./figures-and-tables/table-regressions.tex}
+
+Table \ref{tab:table_regs} gives three models.
+The first model is an ordinary least squares model of baseline hirability.
+Backward elimination to the point of adjusted r-squared maximization yields Model 1.
+Adding factors of accreditation and prestige to Model 1,
+then adapting the model to a linear mixed model (LMM) yields Model 2.
+Model 3 results from additional backward elimination on Model 2.
+
+Four individuals that completed the first section of the questionnaire
+did not complete the entire questionnaire.
+The remaining 450 respondents each report hirability for the eight vignette schools,
+yielding 3,600 observations for the mixed models.
+
+Because LMM does not permit computation of r-squared,
+the termination criteria for the factor elimination process in Model 3
+was to retain all factors with a p-value under 0.5.
+This is a permissive criterion intended to guard against overfitting.
+The logical basis for this rule is that each observed effect is
+more likely to exist than to not exist when $p < 0.5$.
+Despite permissive criteria, only one insignificant factor for income exists in Model 3.
+
+% Comparison of coefficients across specifications improves confidence in the coefficients in all but two cases.
+% The factor for the income range under ten thousand dollars per year
+% and the factor for preference in a traditional coworker flip signs,
+% but other factors are fairly consistent in their effects.
+
+Model 2 and Model 3 have one other interesting difference.
+Model 3 includes the boolean for whether a school was stipulated as high prestige.
+For vignette schools with high prestige, the participant viewed two statements about the vignette.
+The questionnaire instructs the participant to imagine a school they consider to be impressive.
+The questionnaire also instructs the participant to imagine that other people consider the school to be impressive.
+This situation is technically equivalent to an interaction of the two subcomponents.
+Because Model 2 includes both stipulated high prestige subcomponents and the accreditation dummy, including high prestige generates perfect multicollinearity.
+Backward elimination of Model 2 drops the factor for own stipulated prestige, so subsequent insertion of high prestige is nonproblematic.
+
+Model 3 is the preferred model.
+Prestige and accreditation effects are positive and significant.
+These two effects also interact with a significant and negative coefficient.
+The values of these coefficients of interest are consistent across Model 2 and Model 3.
+The dummy variable for accreditation is about two and a half times larger than the prestige response,
+but the average prestige response is near seven.
+This indicates that the prestige response explains a larger share of hirability variance compared to accreditation.
+% The negative interaction indicates both a decreasing marginal benefit for prestige among the accredited,
+% and also a decreasing marginal penalty for prestige among the unaccredited.
+
+An application of Model 3 is another approach to the identification of competitive alternative credentials.
+Hold factors other than accreditation and prestige constant.
+Let the hirability level of school $k$ be called $H_k$.
+Let $X_{ka}$ be accreditation status,
+$X_{kp}$ is prestige response,
+$X_{kh}$ is the dummy for stipulated high prestige,
+and $X_{ko}$ is the dummy for whether other people consider the school prestigious.
+
+Let $H_1$ be an unaccredited school with high stipulated prestige.
+Let $H_2$ be an accredited school without high stipulated prestige.
+% Let $H_2$ receive a prestige response equal to the average for an accredited vignette.
+Let $X_{2p} = 6.49$, which is the prestige response equal to the average for an accredited vignette,
+as reported in Table \ref{tab:desc_stats}.
+This system of equations is described in equations \ref{eq1} through \ref{eq5}:
+
+\begin{subequations}
+    \begin{equation}
+        H_k = 1.27X_{ka} - \num{0.1}X_{ka}X_{kp} + 0.53X_{kp} + 0.14X_{kh} + 0.59X_{ko}
+        \label{eq1}
+    \end{equation}
+    \begin{equation}
+        H_1 = 0.53X_{kp} + 0.14 + 0.59
+        \label{eq2}
+    \end{equation}
+    \begin{equation}
+        H_2 = 1.27 - \num{0.1}(6.49) + 0.53(6.49)
+        \label{eq3}
+    \end{equation}
+    \begin{equation}
+        X_{kp} = (1.27 - \num{0.1}(6.49) + 0.53(6.49) - 0.14 - 0.59) / 0.53
+        \label{eq4}
+    \end{equation}
+    \begin{equation}
+        X_{kp} \approx 6.28
+        \label{eq5}
+    \end{equation}
+\end{subequations}
+
+Equation \ref{eq5} indicates that an alternative credential
+with stipulated high prestige
+and a prestige response of 6.28 or higher is approximately competitive with the average accredited vignette.
+Table \ref{tab:desc_stats} indicates that the prestige response for the average vignette school is 6.21.
+This is a significant difference compared to the average actual school prestige response of 6.50.
+Coincidentally, additive and proportional compensation of 6.28 both yield 6.57.
+
+This prestige requirement exceeds the low bar set by comparison to the University of Nebraska.
+Google remains the only alternative provider to obtain general competitive status without the presence of other preferential factors.
+App Academy and General Assembly both have average prestige responses close to 5.8.
+Models reveal several situations in which other factors overcome this deficit,
+but many of these offsetting factors are difficult to determine and leverage prior to a hiring decision.
+The California state effect is an interesting exception that an actual job search could exploit.
+
+Alternative credentials provide a source of potential diverse labor to employers.
+Interestingly, neither ethnicity nor gender was significantly associated with hirability.
+There is little evidence for the thesis that client-facing roles preferentially benefit from credential prestige or accreditation.
+Respondent client exposure on the job was associated with a slightly larger baseline willingness to hire an alternatively educated candidate.
+The extent of client contact was insignificant in mixed models.
+
+\begin{figure}[h!]
+    \centering
+    \caption{Prestige Response Distribution for Actual Schools}
+    \begin{tikzpicture}[element/.style={minimum width=1.75cm, minimum height=0.85cm}]
+        \node (n1) {\includegraphics[width=1\textwidth]{./figures-and-tables/context-graph-massaged.png}};
+    \end{tikzpicture}
+    \label{fig:var_results}
+\end{figure}
+
+% This effect does not enter in to any regression
+Finally, Figure \ref{fig:var_results} visualizes the prestige response distribution
+for actual schools.
+The four subplots describe whether a respondent randomly received information from review site aggregators
+and how they evaluated credential accreditation.
+Exposure to aggregated review information is associated with fewer responses at the positive
+and negative extrema of the response distribution for accredited and unaccredited schools.
+On average, alternative education prestige rose,
+and accredited education prestige declined when a respondent received review aggregator site information.
+
+\section{Conclusions}
+
+This study hypothesized that some level of prestige allows an alternative credential to compete with traditional credentials for employment.
+Results provide evidence in favor of this hypothesis.
+Regression results show meaningful positive correlations of prestige and accreditation on hirability.
+A range of hirability responses that include the average response and some below-average responses
+find a dominant explanation in prestige effects over accreditation alone.
+
+While prestige explains a larger share of hirability variance than accreditation, accreditation robustly maintains a meaningful effect on its own.
+The robust importance of accreditation indicates that arbitrary improvements to alternative credential
+quality and social acceptability are not likely to displace the higher education system in expectation.
+This study began with the assertion that alternative credentials are a source of unexploited technical value.
+The study validated a partial explanation from prestige as a representation of social norms.
+The introduction noted an important distinction between legal and social norms from Elster.
+By elimination, legal norm change is an important candidate to allow alternative credentials the opportunity
+to fully outcompete the hirability effects of accreditation.
+
+% While prestige explains a larger share of hirability variance than accreditation,
+% accreditation robustly maintains a meaningful effect on its own.
+% The robust importance of accreditation indicates that arbitrary improvements to alternative credential
+% quality and social acceptability are not likely to displace the higher education system in expectation.
+% % quality and social acceptability will not displace the higher education system in expectation.
+% % quality and social acceptability will not displace the higher education system in expectation.
+% Synthesis of the distinction from Elster between social and legal norms with the results of this study
+% point to a need for legal norm change in order to create a competitive environment between traditional and alternative providers.
+% % A change in legal norms appears to be required in order to create an even competitive environment between traditional and alternative providers.
+
+In 2012, The Heritage Foundation called for two policy changes that are worth considering.
+First, the Foundation proposed that the government should directly accredit courses rather than organizations\cite{burke2012accreditation}.
+Second, they also called for a decoupling of accreditation and federal funding.
+An additional option would be to replace legal requirements for formal education could be replaced with skill assessments.
+With a legal requirement that prefers skills to degrees,
+the public sector gains the ability to transfer formal accreditation duties to a market model with no loss of labor quality control.
+
+There are several reasons to be pessimistic about the feasibility of these policy changes.
+Reductions to education spending are unpopular with voters in the United States.
+% Education is compulsory in the United States.
+Over ninety percent of K-12 students in the United States attended a public school in 2016\cite{us2019digest},
+and there is a systematized pipeline from public school to the traditional university system.
+Education represents an example of an entangled political economy\cite{wagner2014entangled}.
+Robust political economy points out additional reasons to doubt rapid innovation in this space\cite{boettke2004liberalism}.
+Reduced political entanglement is associated with the absence of compulsory education.
+However, after they exist, the elimination of compulsory laws also appears intractable.
+The removal of compulsory education is a qualitative change that does not appear any less subject to the path dependency,
+lock-in, ratchet, and other effects that inhibit contraction in the quantitative process of appropriations.
+% Ratchet Effect
+% One way to weaken the degree of political entanglement entanglement would be the absence of compulsory education laws,
+
+An interesting alternative to formal legislative change is the emerging model of public-private partnerships in education.
+In 2013, Georgia Tech formally partnered with Udacity to produce an accredited online graduate degree in Computer Science\cite{empson_2013}.
+Udacity was able to facilitate an improved online learning experience at scale with an affordable price.
+Georgia Tech offered branding, legitimacy, and accreditation, which supported a higher price point compared to the other offerings from Udacity.
+
+In other cases, the hybridization of traditional and alternative education is indirect and informal.
+Prior learning assessments and portfolio reviews are two of many processes by which a university can award credit to a student
+without formal requirements connected to the source of student learning\cite{conrad2008building}.
+University support for prior learning is an implementation pattern for course-level accreditation that does not require legislative action.
+Formal and informal partnerships between traditional and alternative institutions can yield increased market surplus for producers and consumers.
+
+% 1. remove accreditation
+% 2. lower the bar for accreditation
+% 3. remove professional requirements that include requirement for accreditation
+% 4. remove legally enshrined preferential treatment of accredited credentials (esp government pay scales and in government contracts)
+% 5. how to fill the gap? define skill-based requirements instead of accreditation (better outcomes for govt and all)
+% 6. (institution based vs skill or course based accreditation)
+% 1. ...see 8 for a non-policy workaround (but working around is likely more costly than direct fix)
+% 6. aggregators need to do a better job
+% 7. individuals don't need to wait for social movement to reap individual-level benefits
+% 8. hybrid approach; universities can (and increasingly already do) partner with external providers for a win-win
+% 1. better university placement rates
+% 2. better university solutioning of the skill gap
+% 3. accreditation given fully or partially (ACE; professional credit) to unaccredited partners (institution based vs skill or course based accreditation)
+
+Finally, this paper evaluated practical alternative credential selection strategies.
+One strategy is to leverage credentials from industry leaders.
+In this study, Google represented an alternative learning provider that is also an industry leader.
+Fortune 50 membership is a rule of thumb used in this study to select an industry-leading firm.
+A credential from Google was the only alternative credential to be identified as generally competitive with an accredited degree.
+
+The second strategy is to use credential review aggregator sites to identify high prestige credentials.
+This paper used Course Report as an aggregator to search for alternative credentials.
+App Academy and General Assembly were identified by applying search criteria that include a rating of 4.25 or better on a 5-point scale and a minimum of four hundred reviews.
+The combination of results with information on typical job search length from Zety indicated
+that these credentials provide meaningful job search benefits,
+albeit with significantly less efficacy than an accredited degree or a credential from Google.
+
+\bibliography{./BibFile}
+
+\end{document}
