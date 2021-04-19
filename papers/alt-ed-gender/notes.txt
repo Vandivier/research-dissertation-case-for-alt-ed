@@ -1,0 +1,139 @@
+Digital Bootcamps and Gender Equity
+
+Intended for the Session on Differential Gender Effects from Education Policy.
+Computer science enrollment dropped in the wake of the dot-com bubble, and the proportion of women in the field never rebounded.
+The United States is presently confronted by a student debt crisis that is suffered primarily by women.
+Women have earned more degrees than men for years and have recently become the majority of the college-educated workforce,
+yet in several industries, there remains a female labor shortage of stable or increasing size.
+Digital bootcamps are an interesting form of alternative education that disproportionately provides female labor to the information technology industry.
+This two-stage analysis involves both a meta-study on gender and favorability to alternative education,
+as well as an original repeated cross-sectional analysis.
+
+
+This paper provides findings from a two-stage study of the impact of digital bootcamps on gender outcomes across industries.
+The first stage is a meta-study of gender effects in studies of favorability to alternative education.
+The second stage is an original repeated cross-sectional analysis of favorability to alternative education.
+Results indicate tax and accreditation reform, industry moves, and consumption changes to reduce social debt and improve social return, particularly for women.
+
+# digital bootcamp vs online course? both often include some sort of credential, but the credential of the bootcamp is generally more meritorious; courses are often cers of participation
+# go to a bootcamp to get a job; courses improve a more narrow range of skill, don't include job assistance
+# employers take not of bootcamp grads; that proves an important difference in endowed skill
+
+# employer deduction for school can go to loans, but removing the employer restriction is even better for women
+
+test income-interacted gender: expect more support for alt ed from lower income women compared to higher income. 'economic dominance theory'
+
+
+Industrial demand for female labor exceeds the provision of the accredited education system, so what can be done?
+Alternative
+
+#https://www.forbes.com/sites/kimelsesser/2019/07/02/now-theres-more-college-educated-women-than-men-in-workforce-but-women-still-lag-behind-men-in-pay
+
+Question: can we use a graph of google searches, books/ngram, or papers over time to show that diversity/equality is a more prominent scholarly subject now than in the past?
+
+
+Since 2000 (local max dot com watermark of interest), men and women interest in comp sci degree went down
+However at that time women were less interested to begin with, dipped further down, and recovered less.
+Yet, firms want women as much as ever
+
+
+degree recovery: 2003 to 2015, but women didn't recover: https://www.edweek.org/teaching-learning/computer-science-degrees-hit-new-peak/2017/04
+
+1. women are 51% of the population and 47% of labor force (it was over 50% https://time.com/5766787/women-workforce/ but then covid https://www.americanprogress.org/issues/women/reports/2020/10/30/492582/covid-19-sent-womens-workforce-progress-backward/)
+
+Theory: disproportionate representation of women in alt ed as 'mean regression' eg economics over relatively unconstrained (rationally irrational under debt) preferences
+
+
+https://money.cnn.com/2017/02/28/technology/girls-math-science-engineering/index.html
+"Conformity to social expectations, gender stereotypes, gender roles and lack of role models continue to channel girls' career choices away from STEM fields," said psychology professor Martin Bauer of the London School of Economics, who helped coordinate the survey of 11,500 girls across 12 European countries.
+
+https://www.tandfonline.com/doi/abs/10.1080/08993408.2019.1682379
+"women attending boot camps are career changers that develop an interest in software development too late to major in CS, discovering a post-college enjoyment of programming undertaken to support work goals at a current job or an aspirational job."
+
+
+below on degree....here bootcamp
+'In online bootcamps, women (49.5% of online graduates) and men (49% of online graduates) are almost equally represented' -> https://www.coursereport.com/blog/data-dive-gender-in-coding-bootcamps
+('For example, Flatiron School currently sees 50/50 gender parity in their online program.
+  The bootcamp attributes this success to their Women Take Tech Scholarship which quickly reshaped their online community from 35% women to 50% women.')
+
+
+  2020 update https://www.ncwit.org/resources/ncwit-scorecard-status-women-computing-2020-update
+  
+https://www.ncwit.org/sites/default/files/resources/ncwitscorecard_04182014_lowres.pdf
+TODO: look for more recent ncwitscorecard. p 8 women less interested in 2012 vs 2000...but true for men too. p 23, degrees awarded not rebounding as quickly.
+problem? 'uneven preperation in high school' including AP / extracurriculurs -> or uneven interest?
+
+women are:
+51% population
+57% labor force https://nces.ed.gov/fastfacts/display.asp?id=98#:~:text=The%20number%20of%20female%20students,students%20in%202017%20were%20female.
+15-20% information tech industry labor force (10% at exec level) https://www.isemag.com/2020/10/telecom-the-latest-stats-on-women-in-tech/
+
+computer programmers down
+
+https://www.statista.com/statistics/311972/us-women-computer-workers/
+
+repeated cross-sectional design -> https://ukdataservice.ac.uk/media/455362/changeovertime.pdf
+
+- a meta-analysis of alternative ed studies with a focus on gender differences;
+  - don't dwell on non-sex diversity (ethnicity, ideological)
+- paper has some discussion on ethnic diversity but main focus is gender (also some focus in ideological diversity)
+interesting question - women already dominate higher ed, why are they so weak in tech that bootcamps favor them?
+
+before we get 
+
+arguments for diversity:
+1. improved problem solving; observable proxy for intellectual diversity
+    a. common pitfall: culture fit vs culture add
+    b. common pitfall: prioritize observables (skip on, say, ideological diversity) - problem of superficially diverse monoculture
+    c. common pitfall: reverse discrementation ('more minorities are better' instead of rational targets) - 62% women ideal? https://mondo.com/blog-women-in-tech-business-benefits/
+2. customer empathy
+3. branding
+4. pure preference; employee, executive, or other preferences - maybe your target audience is white liberals but they want a hyperdiverse producer!
+5. expands employee pool (potentially) -> https://www.ncwit.org/sites/default/files/resources/ncwitscorecard_04182014_lowres.pdf
+
+arguments against diversity:
+1. people don't want it
+    a. jordan peterson's bit about swedish equal opportunity leading to greater occupational-gender disparity
+2. sometimes homogeneity is beneficial - ideological alignment can support institutional agility
+3. it's expensive to implement hiring & firing controls along these lines; you end up paying more or trading productivity for superficial diversity, etc
+    a. gains arguments can address this concern to some extent, but
+    b. diminishing marginal returns from diversity likely means that efficient diversity is substantive rather
+4. customer empathy; sometimes the target customer is among a particular social group and excess firm diversity results in less, not more, empathy
+5. pure preference; employee, executive, or other preferences - maybe your target audience is white liberals but they want their chinese food made only by chinese people!
+
+highest level - technical training / vocational
+lower level - tech bootcamps (tech as in Information Technology industry, NOT JUST CODING BOOTCAMPS...IT works across industries)
+lowest - actually coding
+
+
+
+beware pseudo-diverse monoculture https://onlinelibrary.wiley.com/doi/full/10.1002/job.2362
+
+
+"gender diversity is linked with a lower team average issue fixing time" -> supertechnical code-level: https://jserd.springeropen.com/articles/10.1186/s40411-017-0044-y
+and increased politeness -> diversity can make work more enjoyable, lowering required salary all around (beyond labor pool expansion)
+
+
+*it's not clear whether instructors tend female for coding bootcamps but students do*
+
+
+~2012 more women than men w college degree https://www.statista.com/statistics/184272/educational-attainment-of-college-diploma-or-higher-by-gender/
+
+
+also see google scholar
+https://www.google.com/search?q=why+do+women+not+get+computer+science+degree&rlz=1C1CHBD_enUS716US716&oq=why+do+women+not+get+computer+science+degree&aqs=chrome..69i57.145611j0j4&sourceid=chrome&ie=UTF-8
+
+
+https://www.insidehighered.com/news/2018/06/25/lecturers-explanation-gender-gap-computer-science-it-reflect-womens-choices
+"But the leveling off of numbers reflects the choices of women, not discrimination. And further gains are unlikely, he writes."
+
+men and women similar percent hold credentials
+http://connectingcredentials.org/wp-content/uploads/2015/02/Measuring-Alternative-Credentials.pdf
+
+
+https://blog.google/outreach-initiatives/grow-with-google/career-certificates/
+'53% of graduates of the IT Support Certificate in the U.S. have been female, Black, Latino or veterans'
+
+policies:
+'The student loan interest deduction is a federal income tax deduction that allows you to subtract up to $2,500 of the interest you paid on qualified student loans from your taxable income. 1﻿ It is one of several tax breaks available to students...'
+why stop at 2500? why just fed loans what about alt ed? employer assistance? govt use unaccredited labor
