@@ -12,6 +12,8 @@
 \usepackage{tikz}
 \usetikzlibrary{calc,matrix}
 
+\usepackage[capposition=top]{floatrow}
+
 % ref: https://tex.stackexchange.com/questions/50747/options-for-appearance-of-links-in-hyperref
 \hypersetup{
     hidelinks = true,
@@ -268,6 +270,9 @@ Analysis with and without outliers does not show a meaningful difference in the 
         \node (n1) {\includegraphics[width=0.7\textwidth]{./figures-and-tables/figure-1.png}};
     \end{tikzpicture}
     \label{fig:one}
+
+    % \caption*{A figure}
+    % \floatfoot{$^*$The outlying points at $X = {1,2,3}$ simply indicates there are one or more observations at these locations. It does not indicate t}
 \end{figure}
 
 The average response was 7.65 on a 10-point scale.
