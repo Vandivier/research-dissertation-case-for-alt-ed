@@ -4,8 +4,7 @@ Conformity and Soft Skills as Determinants of Alternatively Credentialed Non-Col
 Despite targeting technical skills, vocational school graduates earn less than college graduates.
 This paper presents evidence that
 conformity selection and perceived skill gaps explain differences in hireability.
-Microdata from the United States
-reveal a perceived soft skill deficit for
+Microdata from the United States reveals a perceived soft skill deficit for
 alternatively credentialed non-college graduate (ACNG) labor.
 Conformity is also important, but the direction of effect is heterogenous by employer type.
 Conformity and perceived skill gaps explain about one-third of the hireability variance.
@@ -25,29 +24,48 @@ I find evidence that employers and the general population in the United States e
 
 Alternative credentials refer to credentials other than the undergraduate degree.
 The category includes, for example, industry certifications, portfolios of work, digital badges, and other records of unaccredited learning and achievement.
-Individuals typically obtain alternative credentials to improve employability.
+Consumers of alternative education typically intend to leverage alternative credentials toward better employment.
 That is, they typically have the same goals as a college student.
 Many individuals obtain alternative credentials as a supplement to a college degree.
-Such a situation is Pareto-superior to degree attainment alone and is therefore intentionally excluded from the analysis.
-This paper focuses on the comparatively interesting case of alternative credentials as a substitute for a college degree.
-This research is valuable as a diagnostic tool at the skill level.
-If specific skills explain labor outcome differences, alternative learning providers can improve their products to reduce the outcome gap.
+Supplemental usage is excluded from the analysis in this paper.
+This paper focuses on the use of alternative credentials as a substitute for a college degree.
+This paper provides a comparative analysis between traditional and alternative credentials at the skill level.
+Education consumers and learning advisors can use results to inform strategic consumption.
+Learning providers can use results as a skill-level diagnostic and product improvement resource.
 
-The signaling model has become one of the two standard explanations of the value of the college degree.
-Signaling theory provides three advantages over human capital theory for the present study.
-First, signaling theory can explain labor outcome variance when human capital is held constant.
+In a noteworthy literature review, Bills identifies seven sociological or economic theories of the relationship between schooling and job assignment.
+A keyword search in April 2021 indicates that human capital theory, institutional theory, and signaling theory are the three theories mentioned by Bills that are most frequently observed\footnote{
+A Google Scholar search for ``institutional theory'' yields about $210,000$ results.
+About two million results are found for control theory, but Bills notes that ``In its explanatory form, control theory is indistinguishable from human capital theory.''
+In addition, the keyword search results on control theory include disproportionately many results that do not relate to economic analysis.
+The search for `human capital theory' yields about $72,000$ results.
+The sum of `signaling theory' and `signalling theory' is about $45,000$ results.
+The total search result count for the other four theories is less than twenty-five thousand results.
+When applied to the economics of education, the institutional theory holds that an institution improves individual labor prospects by declaring some individuals to be graduates.
+In this application, institutional theory can be included in a signaling model with institutional effects.
+In the current study, institutional effects are held constant by using hypothetical questions involving anonymous institutions.
+
+For the purpose of this study, signaling theory provides three advantages over the alternative human capital theory.
+First, signaling theory can explain labor outcome variance when human capital unobserved.
+By extension, signaling theory can also explain labor outcome variance when human capital is held constant.
 
 Second, the signaling model empowers a questionnaire research design.
-In an idealized human capital model, the measures of human capital would correspond to production process inputs.
+In a standard human capital model of wages, human capital is an input to a production function.
+In a competitive labor market, firms are willing to pay wages equal to the marginal revenue product.
+The marginal revenue product for an individual is a function of human capital factors, including skills.
 Establishing a wide array of such skill measures would be complicated and prone to measurement sensitivities, assumptions, and errors of various kinds.
 In this framework, a questionnaire is a second-best design that provides a proxy for the functional measure of skill.
 
 Signaling theory takes the reverse approach.
-According to the signaling model, employer perception of candidate quality critically determines willingness to pay.
-How employer perception relates to candidate productivity, if at all, is secondary.
+According to the signaling model, willingness to pay is a function of perceived quality.
+The relationship between perceived quality and actual quality is secondary.
 In this framework, a questionnaire is an ideal measurement tool.
+The value of this research approach is supported by the broad use of questionnaires
+to identify willingness to pay within the field of market research.
+
 An additional benefit of using a questionnaire is the ability to ask hypothetical questions.
-Real job candidates might vary systematically in ways not observed by an analyst, but hypothetical questions preclude this issue.
+Hypothetical questions avoid the problem of unobserved heterogeneity
+because the analyst has total knowledge over the subject of measurement.
 
 Third, signaling theorists have laid out a testable hypothesis for weak labor outcomes among non-college graduates.
 Following this model, scholars claim that the college degree signals intelligence, conscientiousness, and conformity.
@@ -358,6 +376,6 @@ Further study of the differences between perceived and actual skills is encourag
 In many cases, employer-perceived skill gaps are not statistically different when comparing recent college graduates with ACNG candidates.
 Employers are already favorable to individuals with alternative credentials, but specific steps will prevent the loss of this favorable status.
 Results suggested curriculum improvements that target specific skills.
-In addition, public education on alternative education, creation of new programs in underserved industries, and public policies that give fair treatment to unaccredited education
+In addition, public education on alternative education, the creation of new programs in underserved industries, and public policies that give fair treatment to unaccredited education
 can do much to improve public support for alternative credentials.
 

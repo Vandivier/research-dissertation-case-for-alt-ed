@@ -3,11 +3,11 @@ COVID-19 and Alternative Postsecondary Learning
 
 The coronavirus pandemic has induced an increase in remote activity.
 Prior research shows that a variety of K-12 educational practices, public preferences, policies, and outcomes
-have changed as a result of the pandemic.
+have changed due to the pandemic.
 This paper extends the literature on the impact of coronavirus on education
 to solve for the lack of analysis on professional certifications
 and other unaccredited postsecondary credentials.
-This paper investigates the results of an original online questionnaire (n=350)
+This paper investigates the results of an original online questionnaire ($n = 350$)
 to understand the effects of COVID-19
 on support for alternative postsecondary learning.
 Respondents are U.S. citizens over the age of 18.
@@ -20,6 +20,11 @@ Analysis indicates that important control factors include industry, ethnicity, a
 Age, gender, income, and level of education are insignificant.
 
 Introduction
+Has COVID-19 pushed technology forward in education?
+Online learning has become increasingly utilized since the turn of the century, but have forced social distancing measures sparked a new disdain for remote learning?
+Scholars have recently uncovered impacts in the American K-12 space and the university system, but this paper adds much-needed attention to the question of alternative credentials
+and unaccredited postsecondary education.
+
 This study is concerned with alternative postsecondary credentials.
 This category includes professional certifications, coding bootcamps, work portfolios, and other proof of education other than traditional credentials.
 In this study, traditional credentials mainly refer to the accredited college degree.
@@ -61,7 +66,7 @@ One paper in the Journal of School Choice examined the educational experiences o
 The study found that 57 percent of parents found remote learning worked better than they expected.
 
 Description of Data and Methodology
-This paper leverages an original set of online questionnaire responses (n = 350).
+This paper leverages an original set of online questionnaire responses ($n = 350$).
 Responses are cross-sectional data obtained in early February of 2021, about one year after a public health emergency due to the coronavirus outbreak was declared in the United States.
 Respondents are United States citizens at or over the age of eighteen.
 Qualified respondents participated in the survey through the Amazon Mechanical Turk platform.
@@ -79,7 +84,7 @@ and 11 outliers exist in the sample.
 Appendix A contains the exact wording and response options for each question.
 Appendix A also contains the wording for a priming message presented at the start of the survey.
 The priming message lays out the definition of alternative credentials for the purposes of the study.
-The message also provides several concrete examples of alternative credentials, including "a Certified Project Manager certification, a portfolio of work, a Khan Academy profile, or a Nanodegree from Udacity."
+The message also provides several concrete examples of alternative credentials, including ``a Certified Project Manager certification, a portfolio of work, a Khan Academy profile, or a Nanodegree from Udacity.''
 
 The questionnaire is composed of fourteen questions.
 Favorability is the dependent variable of interest.
@@ -87,7 +92,7 @@ Coronavirus impact is the independent variable of interest.
 There are also ten control factors and two questions on causality.
 
 Eight of the ten control factors are common controls in the literature.
-These eight controls are categorical measures for
+These eight controls are categorical measures
 for age, gender, ethnicity, income, level of education, employment status, the industry of occupation, and state of residence.
 
 The two remaining controls are unique to this study.
@@ -111,7 +116,7 @@ Favorability and the unique controls use a 10-point scale.
 Continuous treatment of items on the 10-point scale permits curvilinear analysis, allowing investigation of marginal effects
 It is an accepted practice to treat Likert-type responses as either categorical or continuous for regression analysis.
 Jaccard and Wan provide support for continuous analysis of Likert-type data.
-They note that severe departures from the assumptions on cardinality "do not seem to affect Type I and Type II errors dramatically,"
+They note that severe departures from the assumptions on cardinality ``do not seem to affect Type I and Type II errors dramatically,''
 particularly when the Likert scale is five or more points.
 This paper treats responses on a 10-point scale as continuous.
 This paper treats responses on a 4-point scale as categorical.
@@ -169,8 +174,8 @@ This is consistent with the hypothesis of a positive exposure effect.
 The second question on causality asks whether coronavirus-induced remote activities cause an increase
 to favorability about remote learning.
 The exact wording is:
-"To what degree has coronavirus-induced remote activity improved your favorability to remote learning
-(either for yourself or for other people)?"
+``To what degree has coronavirus-induced remote activity improved your favorability to remote learning
+(either for yourself or for other people)?''
 Referring back to Table \ref{tab:desc_stats}, about 83.1 percent of the full population of Americans indicate a small, medium, or large increase in favorability of remote learning
 caused by coronavirus-induced remote activity.
 This study separately demonstrates a positive relationship between favorability to remote learning
@@ -224,11 +229,18 @@ This industry demands flexible instruction because it is associated with a uniqu
 It is not surprising that it is positively associated with favorability.
 It is surprising that it comes in third place among four industries with positive and significant favorability.
 
-Health is an industry that has historically been difficult to digitize.
-The positive health industry effect found in this study
-agrees with external research that considers current digital health education to be satisfactory.
-One paper on digital education in health declares that health simulations using virtual reality
-became useful with the rise of the Oculus Rift after the year 2010.
+Health is an industry that has been historically difficult to digitize.
+Shimizu et al. describe improvements to remote medical education from 2003 to 2013.
+They show, for example, that improvements to video quality over time were an important technological driver
+of success for instruction on surgical techniques.
+The historical difficulty of remote medical education and service delivery seems at tension with the present study.
+The present study shows an important positive effect of the health industry on favorability.
+
+The tension is resolved by a recognition of the recent flourishing of remote health technology.
+Health education was enhanced, for example, through the application of virtual reality to simulation-based learning.
+The Oculus Rift is a hardware device that improved virtual reality simulation quality after the year 2010.
+Three meta-analyses from the Digital Health Education Collaboration in 2019 confirm that modern virtual reality, mobile digital education, and
+digital problem-based learning methods are as effective or more effective than traditional learning methods\cite{kyaw2019virtual, dunleavy2019mobile, car2019digital}.
 
 There are various political and cultural reasons for which favorability might vary by state, but the current analysis does not provide strong evidence toward any particular explanation.
 Employment status was largely insignificant, but Model 1 hints at a weak positive effect among hiring managers.
@@ -278,7 +290,7 @@ and the now-defunct Alternative Credit Project (ACP).
 Renewal of the ACP is an example of a public-private partnership that is feasible and would improve recognition of alternative credentials.
 
 In 2012, The Heritage Foundation called for certain radical policy changes that would level the playing field between traditional and alternative educators.
-While they did not go as far as to suggest eliminating accreditation altogether, they did advocate for removing accreditation agencies.
+While they did not go as far as to suggest eliminating accreditation, they did advocate for removing accreditation agencies.
 Heritage suggested the government should directly accredit courses rather than organizations.
 They also called for a decoupling of accreditation and federal funding.
 
