@@ -73,6 +73,13 @@
 
 \section{Introduction}
 
+Has COVID-19 pushed technology forward in education?
+Online learning has become increasingly utilized since the turn of the century,
+but have forced social distancing measures sparked a new disdain for remote learning?
+Scholars have recently uncovered impacts in the American K-12 space and in the university system,
+but this paper adds much-needed attention to the question on alternative credentials
+and unaccredited postsecondary education.
+
 This study is concerned with alternative postsecondary credentials.
 This category includes professional certifications, coding bootcamps, work portfolios,
 and other proof of education other than traditional credentials.
@@ -268,6 +275,8 @@ Analysis with and without outliers does not show a meaningful difference in the 
     \caption{Distribution of Favorability to Alternative Credentials}
     \begin{tikzpicture}[element/.style={minimum width=1.75cm, minimum height=0.85cm}]
         \node (n1) {\includegraphics[width=0.7\textwidth]{./figures-and-tables/figure-1.png}};
+        \node (n2) [above=0.25cm] at ($(n1)!0.5!(n1) - (4.9, 0)$) {\textbf{Count}};
+        \node (n3) [above=0.25cm] at ($(n1)!0.5!(n1) - (0, 4.1)$) {\textbf{Favorability}};
     \end{tikzpicture}
     \label{fig:one}
 
@@ -419,11 +428,19 @@ This industry demands flexible instruction because it is associated with a uniqu
 It is not surprising that it is positively associated with favorability.
 It is surprising that it comes in third place among four industries with positive and significant favorability.
 
-Health is an industry that has historically been difficult to digitize.
-The positive health industry effect found in this study
-agrees with external research that considers current digital health education to be satisfactory.
-One paper on digital education in health declares that health simulations using virtual reality
-became useful with the rise of the Oculus Rift after the year 2010\cite{giuseppe2015new}.
+Health is an industry that has been historically difficult to digitize.
+Shimizu et al describes improvements to remote medical education from 2003 to 2013\cite{shimizu2014ten}.
+They report, for example, that improvement of video quality over time was an important technological driver
+of success for instruction on surgical techniques.
+The historic difficulty of remote medical education and service delivery seems at tension with the present study.
+The present study shows an important positive effect of the health industry on favorability.
+
+The tension is resolved by a recognition of the recent flourishing of remote health technology.
+Health education was enhanced, for example, through the application of virtual reality to simulation-based learning.
+The Oculus Rift is a hardware device that improved virtual reality simulation quality after the year 2010\cite{giuseppe2015new}.
+Three meta-analyses from the Digital Health Education Collaboration in 2019 confirm that modern virtual reality,
+mobile digital education, and
+digital problem-based learning methods are as effective or more effective than traditional learning methods\cite{kyaw2019virtual, dunleavy2019mobile, car2019digital}.
 
 There are various political and cultural reasons for which favorability might vary by state, but the current analysis does not provide strong evidence toward any particular explanation.
 Employment status was largely insignificant, but Model 1 hints at a weak positive effect among hiring managers.
