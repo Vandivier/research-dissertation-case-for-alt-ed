@@ -1,0 +1,211 @@
+% derived from analysis-5-regs-table.do
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{center}
+    {
+        \fontsize{8pt}{7pt}\selectfont
+        % \begin{small}
+        \tabcolsep=3pt
+        % \baselineskip=8pt
+        \begin{longtable}{l*{5}{c}}
+            \caption{Linear Models with Hireability as Dependent Variable}
+            \label{tab:table_new_ols}                                                                                                                                \\
+
+            % \hline
+            \toprule
+                                             & \multicolumn{1}{c}{1} & \multicolumn{1}{c}{2} & \multicolumn{1}{c}{3} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{5} \\
+            \midrule
+            % \multicolumn{1}{|c|}{\textbf{First column}} & \multicolumn{1}{c|}{\textbf{Second column}} & \multicolumn{1}{c|}{\textbf{Third column}} \\
+            % \hline 
+            \endfirsthead
+
+            \multicolumn{6}{c}%
+            {{\bfseries \tablename\ \thetable{} -- Continued}}                                                                                                       \\
+            \addlinespace
+            \toprule
+                                             & \multicolumn{1}{c}{1} & \multicolumn{1}{c}{2} & \multicolumn{1}{c}{3} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{5} \\
+            % \hline \multicolumn{1}{|c|}{\textbf{First column}} & \multicolumn{1}{c|}{\textbf{Second column}} & \multicolumn{1}{c|}{\textbf{Third column}} \\
+            % \hline
+            \midrule
+            \endhead
+
+            \addlinespace
+            \hline
+            \multicolumn{6}{|c|}{{Continued on Next Page}}                                                                                                           \\
+            \hline
+            \endfoot
+
+            \hline \hline
+            \endlastfoot
+
+            % \begin{tabular}{l*{5}{c}}
+            % \toprule
+            %                          &\multicolumn{1}{c}{1}&\multicolumn{1}{c}{2}&\multicolumn{1}{c}{3}&\multicolumn{1}{c}{4}&\multicolumn{1}{c}{5}\\
+            % \midrule
+
+            Comparative, Attractiveness      & -0.161\sym{***}       &                       & -0.185\sym{*}         &                       &                       \\
+            \addlinespace
+            Comparative, Conscientiousness   &                       &                       & -0.140                &                       &                       \\
+            \addlinespace
+            Comparative, Customer Service    &                       &                       & 0.138                 & 0.142\sym{*}          & 0.145\sym{*}          \\
+            \addlinespace
+            Comparative, EQ                  &                       &                       & -0.0955               &                       &                       \\
+            \addlinespace
+            % Comparative, Willing to Work Odd Hours&                     &                     &      -0.177\sym{*}  &      -0.255\sym{***}&      -0.260\sym{***}\\
+            Comparative, Odd Hours           &                       &                       & -0.177\sym{*}         & -0.255\sym{***}       & -0.260\sym{***}       \\
+            \addlinespace
+            Comparative, Teamwork            &                       &                       & -0.196\sym{*}         & -0.242\sym{**}        & -0.251\sym{**}        \\
+            \addlinespace
+            % Comparative, Written Communication&                     &                     &       0.128         &      0.0920         &      0.0934         \\
+            Comparative, Writing             &                       &                       & 0.128                 & 0.0920                & 0.0934                \\
+            \addlinespace
+            Comparative, Rulebreaker         &                       &                       &                       &                       & 0.0182                \\
+            \addlinespace
+
+
+            Duration                         & 0.666\sym{**}         & 0.634\sym{**}         & 0.811\sym{***}        & 0.744\sym{**}         & 0.719\sym{**}         \\
+            \addlinespace
+            Duration$^2$                     & -0.0884\sym{**}       & -0.0857\sym{**}       & -0.113\sym{***}       & -0.103\sym{**}        & -0.1000\sym{**}       \\
+            \addlinespace
+
+
+            Employees 1-10                   &                       &                       &                       &                       & -0.187                \\
+            \addlinespace
+            Employees 11-50                  &                       &                       &                       &                       & 0.398                 \\
+            \addlinespace
+            Employees 51-200                 & -0.475\sym{*}         & -0.480\sym{**}        & -0.364                & -0.459\sym{*}         & -0.258                \\
+            \addlinespace
+            Employees 201-500                &                       &                       &                       &                       & 0.135                 \\
+            \addlinespace
+            Employees 501-1,000              &                       &                       &                       &                       & 0.420                 \\
+            \addlinespace
+            Employees 1,001-5,000            &                       &                       &                       &                       & 0.0812                \\
+            \addlinespace
+            Employees 5,001-10,000           &                       &                       &                       &                       & 0.0789                \\
+            \addlinespace
+            Employees 10,000+                &                       &                       &                       &                       & 0.279                 \\
+            \addlinespace
+
+
+            % WOQ, Gap, Attractiveness &      -0.161\sym{***}&                     &                     &                     &                     \\
+            Gap, Attractiveness              &                       & -0.367\sym{***}       &                       & -0.350\sym{***}       & -0.358\sym{***}       \\
+            \addlinespace
+            % WOQ, Gap, Body Language-IT&       0.100         &                     &                     &                     &                     \\
+            Gap, Body Language-IT            & 0.100                 & 0.132                 &                       & 0.106                 & 0.0874                \\
+            \addlinespace
+            % WOQ, Gap, Conscientiousness&     -0.0657         &                     &                     &                     &                     \\
+            Gap, Conscientiousness           & -0.0657               & -0.0845               &                       & -0.132\sym{**}        & -0.134\sym{**}        \\
+            \addlinespace
+            % WOQ, Gap, EQ             &     -0.0966         &                     &                     &                     &                     \\
+            Gap, EQ                          & -0.0966               & -0.0952               &                       &                       &                       \\
+            \addlinespace
+            % Gap, Rule Breaker        &                     &                     &                     &                     &      0.0574         \\
+            Gap, Nonconformity               &                       &                       &                       &                       & 0.0574                \\
+            \addlinespace
+
+
+            % Industry Credentials Legally Required&       0.706\sym{*}  &       0.722\sym{**} &       0.374         &       0.378         &       0.375         \\
+            Industry Credentials Required    & 0.706\sym{*}          & 0.722\sym{**}         & 0.374                 & 0.378                 & 0.375                 \\
+            \addlinespace
+            Industry Credentials Normal      & 0.932\sym{**}         & 0.926\sym{**}         & 0.487\sym{*}          & 0.436\sym{*}          & 0.448\sym{*}          \\
+            \addlinespace
+            % Industry Credentials Sometimes Used&       0.467         &       0.475         &                     &                     &                     \\
+            Industry Credentials Sometimes   & 0.467                 & 0.475                 &                       &                       &                       \\
+            \addlinespace
+            Industry Credentials Unknown     & 0.641\sym{*}          & 0.684\sym{**}         &                       &                       &                       \\
+
+            \addlinespace
+            Industry, Agriculture            & 1.368                 & 1.619\sym{*}          &                       &                       &                       \\
+            \addlinespace
+            Industry, Energy                 & -1.277\sym{*}         & -1.190\sym{*}         & -1.200\sym{*}         & -1.442\sym{**}        & -1.448\sym{**}        \\
+            \addlinespace
+            % Industry, Finance, Investment, or Accounting&      -0.811\sym{***}&      -0.783\sym{***}&      -0.712\sym{***}&      -0.715\sym{***}&      -0.717\sym{***}\\
+            Industry, Finance                & -0.811\sym{***}       & -0.783\sym{***}       & -0.712\sym{***}       & -0.715\sym{***}       & -0.717\sym{***}       \\
+            \addlinespace
+            % TODO: could say like 'Info. Tech.'
+            Industry, Information Technology & 0.335                 & 0.264                 & 0.438\sym{*}          & 0.306                 & 0.337                 \\
+            \addlinespace
+            Industry, Law                    & -1.813\sym{***}       & -1.670\sym{**}        & -1.935\sym{***}       & -1.876\sym{***}       & -1.857\sym{***}       \\
+            \addlinespace
+            Industry, Transportation         & 1.512\sym{*}          & 1.643\sym{**}         & 1.216                 & 1.403\sym{*}          & 1.350\sym{*}          \\
+
+            \addlinespace
+
+            Is Employed Non-Manager          & -0.336                & -0.383\sym{*}         & -0.497\sym{**}        & -0.471\sym{**}        & -0.451\sym{**}        \\
+            \addlinespace
+            Is STEM Worker                   & -0.491\sym{**}        & -0.529\sym{**}        & -0.525\sym{**}        & -0.557\sym{**}        & -0.564\sym{**}        \\
+
+            \addlinespace
+            Rule Breakers Risky              & 0.0732\sym{*}         & 0.0715\sym{*}         & 0.0880\sym{**}        & 0.0747\sym{*}         & 0.0762\sym{*}         \\
+            \addlinespace
+            Rule Breakers Rockstars          & 0.133\sym{**}         & 0.128\sym{**}         & 0.147\sym{**}         & 0.141\sym{**}         & 0.140\sym{**}         \\
+            \addlinespace
+            Rule Breakers Culture Add        & 0.0905                & 0.0974\sym{*}         & 0.115\sym{**}         & 0.112\sym{**}         & 0.110\sym{**}         \\
+
+
+
+            \addlinespace
+            State, Arizona                   & -1.157\sym{**}        & -1.048\sym{**}        & -0.755                & -0.823\sym{*}         & -0.790                \\
+            \addlinespace
+            State, Arkansas                  & -2.690\sym{***}       & -2.817\sym{***}       & -2.489\sym{***}       & -2.664\sym{***}       & -2.770\sym{***}       \\
+            \addlinespace
+            State, California                & -0.575\sym{*}         & -0.570\sym{**}        & -0.488\sym{*}         & -0.435                & -0.446                \\
+            \addlinespace
+            State, Colorado                  & -1.446\sym{**}        & -1.423\sym{**}        & -1.463\sym{**}        & -1.521\sym{***}       & -1.508\sym{***}       \\
+            \addlinespace
+            State, Connecticut               & -1.401                & -1.550                &                       &                       &                       \\
+            \addlinespace
+            State, Florida                   & -0.444                & -0.454                &                       &                       &                       \\
+            \addlinespace
+            State, Hawaii                    & -3.232\sym{***}       & -3.271\sym{***}       & -2.884\sym{***}       & -2.869\sym{***}       & -2.812\sym{***}       \\
+            \addlinespace
+            State, Illinois                  & -0.637                & -0.699\sym{*}         & -0.596                & -0.675\sym{*}         & -0.698\sym{*}         \\
+            \addlinespace
+            State, Kansas                    & -3.283\sym{**}        & -3.486\sym{**}        & -2.923\sym{*}         & -3.116\sym{**}        & -3.101\sym{*}         \\
+            \addlinespace
+            State, Kentucky                  & -3.143\sym{***}       & -3.167\sym{***}       & -2.583\sym{***}       & -2.729\sym{***}       & -2.679\sym{***}       \\
+            \addlinespace
+            State, Louisiana                 & -1.455\sym{*}         & -1.255\sym{*}         & -0.915                & -0.941                & -0.898                \\
+            \addlinespace
+            State, Maryland                  & -0.596                & -0.642                &                       &                       &                       \\
+            \addlinespace
+            State, Nebraska                  & -2.037\sym{*}         & -2.167\sym{*}         & -1.391                & -1.655                & -1.596                \\
+            \addlinespace
+            State, Nevada                    & -1.406                & -1.470                & -1.465                & -1.434                & -1.409                \\
+            \addlinespace
+            State, New Jersey                & -1.145                & -1.139                & -0.976                & -0.936                & -0.963                \\
+            \addlinespace
+            State, New York                  & -0.692\sym{**}        & -0.640\sym{*}         & -0.617\sym{*}         & -0.595\sym{*}         & -0.590\sym{*}         \\
+            \addlinespace
+            State, Ohio                      & -3.943\sym{***}       & -4.024\sym{***}       & -4.051\sym{***}       & -3.808\sym{***}       & -3.761\sym{***}       \\
+            \addlinespace
+            State, Pennsylvania              & -0.752                & -0.687                & -0.608                & -0.534                & -0.539                \\
+            \addlinespace
+            State, South Carolina            & -1.183                & -1.243                & -1.361                & -1.310                & -1.347                \\
+            \addlinespace
+            State, Tennessee                 & -1.878\sym{**}        & -1.909\sym{**}        & -1.545\sym{*}         & -1.843\sym{**}        & -1.799\sym{**}        \\
+            \addlinespace
+            State, Texas                     & -0.906\sym{**}        & -0.851\sym{**}        & -0.797\sym{**}        & -0.790\sym{**}        & -0.789\sym{**}        \\
+            \addlinespace
+            State, Washington                & -0.817                & -0.863\sym{*}         & -0.880\sym{*}         & -0.996\sym{**}        & -1.003\sym{**}        \\
+
+
+            \addlinespace
+            Constant                         & 5.036\sym{***}        & 5.356\sym{***}        & 4.755\sym{***}        & 5.327\sym{***}        & 5.343\sym{***}        \\
+            \midrule
+            Adjusted R-sqr                   & 0.2181                & 0.2512                & 0.2331                & 0.2784                & 0.2654                \\
+            R-sqr                            & 0.3253                & 0.3539                & 0.3310                & 0.3706                & 0.3799                \\
+            p(F)                             & 0.0000                & 0.0000                & 0.0000                & 0.0000                & 0.0000                \\
+            % N                        &         322         &         322         &         322         &         322         &         322         \\
+            % \bottomrule
+            \hline
+            % \multicolumn{6}{l}{\footnotesize Standard errors in parentheses}\\
+            \addlinespace
+            \multicolumn{6}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<.01\)}                                                           \\
+            % \addlinespace
+            % \end{tabular}
+        \end{longtable}
+        % \end{small}
+    }
+\end{center}
+}

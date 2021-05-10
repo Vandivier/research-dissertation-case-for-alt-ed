@@ -27,7 +27,7 @@
 
 \documentclass[11 pt]{report}
 \usepackage{modifiedgmudissertation}
-\usepackage{graphicx}                      %   for imported graphics
+\usepackage{graphicx}
 \usepackage{amsmath}                       %%
 \usepackage{amsfonts}                      %%  for AMS mathematics
 \usepackage{amssymb}                       %%
@@ -36,31 +36,27 @@
 \usepackage[noadjust,verbose,sort]{cite}   %   arranges reference citations neatly
 \usepackage{setspace}                      %   for line spacing commands
 
-% \usepackage{amsmath}
-% \usepackage{booktabs}
-% \usepackage{graphicx}
-% \usepackage{hyperref}
-% \usepackage{lineno}
-% \usepackage{longtable}
-% \usepackage{siunitx}
-% \usepackage{tabularx}
-% \usepackage{threeparttable}
-% \usepackage{tikz}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{lineno}
+\usepackage{longtable}
+\usepackage{siunitx}
+\usepackage{tabularx}
+\usepackage{threeparttable}
+\usepackage{tikz}
 
-% \modulolinenumbers[5]
-% \bibliographystyle{elsarticle-num}
-% \graphicspath{{../alt-ed-survey/figures-and-tables}}
-% \usetikzlibrary{calc,matrix}
+\modulolinenumbers[5]
+\bibliographystyle{elsarticle-num}
+\graphicspath{{./figures-and-tables}}
+\usetikzlibrary{calc,matrix}
 
-% % ref: https://tex.stackexchange.com/questions/50747/options-for-appearance-of-links-in-hyperref
-% \hypersetup{
-%     hidelinks = true,    %%% not grammatical
-% }
+% ref: https://tex.stackexchange.com/questions/50747/options-for-appearance-of-links-in-hyperref
+\hypersetup{
+    hidelinks = true,    %%% not grammatical
+}
 
-% \beforedoc
 \begin{document}
 
-% \onelinetitle{THREE ESSAYS ON THE ECONOMICS OF POSTSECONDARY ALTERNATIVE LEARNING}
 \onelinetitle{Three Essays on the Economics of Postsecondary Alternative Learning}
 \author{John Vandivier}
 \degree{Doctor of Philosophy}
@@ -86,11 +82,8 @@
 \depthead{Department Head}
 \deanITE{Dean's Name}
 
-% Use sig sheet provided by department and merge pdfs outside of latex
-% \signaturepage
 \titlepage
 \copyrightpage
-
 \dedicationpage
 
 \noindent I dedicate this dissertation
@@ -168,7 +161,9 @@ Linan Peng, Patricia Saenz-Armstrong, and Garrett Wood.
 
 This dissertation advances the field of education economics by describing the limits of competition between traditional and alternative postsecondary credentials in the United States. The results and conclusions contained in this set of three papers forms a substantive basis for change in policy, research, education provider behavior, and education consumer behavior. Evidence-based solutions that leverage these insights offer a solution to the student debt crisis, better social and private returns to education, education access improvements, and improvements to the quality and pace of learning.
 
-The first essay, Conformity and Soft Skills as Determinants of Alternatively Credentialed Non-College Graduate Hireability, compares the skills gaps for college graduate and alternatively credentialed non-college graduate (ACNG) job applicants. I provide evidence that employers perceive a soft skills gap in ACNGs, and I demonstrate that employers see ACNGs as a labor pool with high quality variance, rather than a labor pool of general low quality. This paper provides a skill-level diagnostic that can be used by education providers to improve curricula.
+The first essay,
+\textit{Conformity and Soft Skills as Determinants of Alternatively Credentialed Non-College Graduate Hirability},
+compares the skills gaps for college graduate and alternatively credentialed non-college graduate (ACNG) job applicants. I provide evidence that employers perceive a soft skills gap in ACNGs, and I demonstrate that employers see ACNGs as a labor pool with high quality variance, rather than a labor pool of general low quality. This paper provides a skill-level diagnostic that can be used by education providers to improve curricula.
 
 %% Be sure to leave a line of whitespace immediately before this line!!!!!
 %% (If this comment segment runs together with the preceeding text, you might
@@ -182,9 +177,13 @@ The first essay, Conformity and Soft Skills as Determinants of Alternatively Cre
 
 The signaling model of education provides an ideal foundation for the questionnaire design that is utilized in all three essays. Where signaling model theorists have previously suggested that nonconformity creates a stigma for ACNG labor, I show that nonconformity is viewed as a net value add by employers. I propose that productivity variance risk aversion is a better explanation than stigma for the relatively weak average performance of alternative credentials to the traditional degree on the labor market.
 
-The second essay, Hirability and Educational Prestige, tests the hypothesis that educational prestige explains hirability better than accreditation. Ordinary least squares and linear mixed model analyses provide evidence that prestige does explain a greater share of variance in hirability compared to accreditation, but the effect of accreditation also remains independently important. This paper identifies rules of thumb that education consumers can use to identify meaningfully high-prestige learning providers. These meaningful categories can also be used for further research into the return on investment in alternative education. Results suggest a need for accreditation reform to allow maximal social surplus in the market for education.
+The second essay,
+\textit{Hirability and Educational Prestige},
+tests the hypothesis that educational prestige explains hirability better than accreditation. Ordinary least squares and linear mixed model analyses provide evidence that prestige does explain a greater share of variance in hirability compared to accreditation, but the effect of accreditation also remains independently important. This paper identifies rules of thumb that education consumers can use to identify meaningfully high-prestige learning providers. These meaningful categories can also be used for further research into the return on investment in alternative education. Results suggest a need for accreditation reform to allow maximal social surplus in the market for education.
 
-The third paper, COVID-19 and Alternative Postsecondary Learning, investigates the impact of the COVID-19 pandemic on social favorability to remote learning and alternative credentials. Results indicate that the pandemic increased favorability to remote learning and alternative credentials. The conclusion provides some reasons to think that high favorability will persist over time.
+The third paper,
+\textit{COVID-19 and Alternative Postsecondary Learning},
+investigates the impact of the COVID-19 pandemic on social favorability to remote learning and alternative credentials. Results indicate that the pandemic increased favorability to remote learning and alternative credentials. The conclusion provides some reasons to think that high favorability will persist over time.
 
 %%
 %%  the main body of the dissertation
@@ -192,8 +191,8 @@ The third paper, COVID-19 and Alternative Postsecondary Learning, investigates t
 \startofchapters
 
 % %% include the chapters one by one (or paste the chapter text in directly if desired)
-% \include{chapterOne}
-% \include{chapterTwo}
+% \include{../alt-ed-matching-effects-2/alt-ed-matching-effects-2}
+\include{chapter-1-alt-ed-matching-effects-2}
 
 % %% Note: appendix is now put before bibliography.
 % %% include the following directives if there are any appendices
