@@ -1,0 +1,226 @@
+%%
+%% John Vandivier, GMU-formatted dissertation, "THREE ESSAYS ON THE ECONOMICS OF POSTSECONDARY ALTERNATIVE LEARNING"
+%% Submitted to the GMU Library in May 2021 and defended June 1, 2021.
+%% Derived from the GMU LaTeX PhD Dissertation Format Template
+%%
+%% Template Developed by:
+%%      Daniel O. Awduche and Christopher A. St. Jean
+%%      Communications and Networking Lab
+%%      Dept. of Electrical and Computer Engineering
+%%
+%% Notes on usage can be found in the accompanying USAGE_NOTES.txt file.
+%%
+%%**********************************************************************
+%% Legal Notice:
+%% This code is offered as-is without any warranty either
+%% expressed or implied; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE!
+%% User assumes all risk.
+%% In no event shall any contributor to this code be liable for any damages
+%% or losses, including, but not limited to, incidental, consequential, or
+%% any other damages, resulting from the use or misuse of any information
+%% contained here.
+%%**********************************************************************
+%%
+%% $Id: GMU_dissertation_template.tex,v 1.7 2007/05/02 02:20:38 Owner Exp $
+%%
+
+\documentclass[11 pt]{report}
+\usepackage{modifiedgmudissertation}
+\usepackage{graphicx}                      %   for imported graphics
+\usepackage{amsmath}                       %%
+\usepackage{amsfonts}                      %%  for AMS mathematics
+\usepackage{amssymb}                       %%
+\usepackage{amsthm}                        %%
+\usepackage[normalem]{ulem}                %   a nice standard underline package
+\usepackage[noadjust,verbose,sort]{cite}   %   arranges reference citations neatly
+\usepackage{setspace}                      %   for line spacing commands
+
+% \usepackage{amsmath}
+% \usepackage{booktabs}
+% \usepackage{graphicx}
+% \usepackage{hyperref}
+% \usepackage{lineno}
+% \usepackage{longtable}
+% \usepackage{siunitx}
+% \usepackage{tabularx}
+% \usepackage{threeparttable}
+% \usepackage{tikz}
+
+% \modulolinenumbers[5]
+% \bibliographystyle{elsarticle-num}
+% \graphicspath{{../alt-ed-survey/figures-and-tables}}
+% \usetikzlibrary{calc,matrix}
+
+% % ref: https://tex.stackexchange.com/questions/50747/options-for-appearance-of-links-in-hyperref
+% \hypersetup{
+%     hidelinks = true,    %%% not grammatical
+% }
+
+% \beforedoc
+\begin{document}
+
+% \onelinetitle{THREE ESSAYS ON THE ECONOMICS OF POSTSECONDARY ALTERNATIVE LEARNING}
+\onelinetitle{Three Essays on the Economics of Postsecondary Alternative Learning}
+\author{John Vandivier}
+\degree{Doctor of Philosophy}
+\doctype{Dissertation}
+\dept{Economics}
+
+\seconddeg{Master of Public Policy}
+\seconddegschool{George Mason University}
+\seconddegyear{2015}
+
+\firstdeg{Bachelor of Science}
+\firstdegschool{University of Houston}
+\firstdegyear{2012}
+
+\degreeyear{2021}
+\degreesemester{Summer Semester}
+
+\advisor{Bryan D. Caplan}
+
+\firstmember{First Member}
+\secondmember{Second Member}
+\thirdmember{Third Member}
+\depthead{Department Head}
+\deanITE{Dean's Name}
+
+% Use sig sheet provided by department and merge pdfs outside of latex
+% \signaturepage
+\titlepage
+\copyrightpage
+
+\dedicationpage
+
+\noindent I dedicate this dissertation
+to the satisfiable skeptic,
+to the weirdo,
+to the self-taught,
+to the career switcher,
+and to my children, current and future.
+
+\bigskip
+
+\noindent I encourage you to distinguish schooling from learning,
+common wisdom from truth and falsehood,
+a person from people,
+and pain from evil.
+
+\bigskip
+
+\noindent Test all things; hold fast what is good.
+
+% \noindent I encourage you to learn and act in balance as a single process,
+% never confuse schooling for learning,
+% celebrate friction and estrangement only if and always if it results from your pursuit of truth and love,
+% and to test all things and hold fast to what is good.
+
+\acknowledgementspage
+
+\noindent I would like to express appreciation for four groups of people that have contributed to my doctoral education.
+First, I would like to thank my dissertation committee.
+Thanks to Dr. Caplan for reinvigorating the research on the return to university education.
+The value of alternative education is interesting largely because it is comparable to such prerequisite work.
+Thanks to Dr. Hanson for his contribution of big ideas into society and into my writing.
+Thanks to the late Dr. Williams for his focus on improving the lives of individuals.
+His focus was demonstrated with clarity of thought and speech inside and outside of the classroom.
+Thanks to Dr. Klein for his unflinching willingness to join a dissertation-in-progress once Dr. Williams had passed away.
+
+\bigskip
+
+\noindent I would also like to thank Christina Vandivier,
+a wonderful friend of mine from high school,
+a fantastic mother,
+and my wife.
+I expect that I would not have attempted, much less obtained, doctoral education in her absence.
+
+\bigskip
+
+\noindent I would like to thank Mary Jackson for significant amelioration of the miscellaneous administrative inconveniences of graduate life.
+
+\bigskip
+
+\noindent Finally, I would like to thank my peers at George Mason University.
+Many peers contributed to my success in and enjoyment of the program.
+In particular, I would like to thank my regular study group.
+The group included Rob Cripps, Bryan Cutsinger, Bob Hazel, Josh Ingber, Malhaz Jibladze, Slade Mendenhall,
+Linan Peng, Patricia Saenz-Armstrong, and Garrett Wood.
+
+%% // begin salty rant
+% and also to my grandmother, many teachers, anon online individuals, and the media, for making me think a PhD is worth a damn
+% and also to Jeff Bezos, Elon Musk, Mark Zuckerberg, Jack Dorsey, and others like them, who have provided me gainful employment prospects outside of academia and policy
+%% // end salty rant
+
+%%
+%% Table of contents, list of tables, and lists of figures
+%%
+
+\tableofcontents
+\listoftables
+\listoffigures
+
+%%
+%% Abstract
+%%
+
+\abstractpage
+
+This dissertation advances the field of education economics by describing the limits of competition between traditional and alternative postsecondary credentials in the United States. The results and conclusions contained in this set of three papers forms a substantive basis for change in policy, research, education provider behavior, and education consumer behavior. Evidence-based solutions that leverage these insights offer a solution to the student debt crisis, better social and private returns to education, education access improvements, and improvements to the quality and pace of learning.
+
+The first essay, Conformity and Soft Skills as Determinants of Alternatively Credentialed Non-College Graduate Hireability, compares the skills gaps for college graduate and alternatively credentialed non-college graduate (ACNG) job applicants. I provide evidence that employers perceive a soft skills gap in ACNGs, and I demonstrate that employers see ACNGs as a labor pool with high quality variance, rather than a labor pool of general low quality. This paper provides a skill-level diagnostic that can be used by education providers to improve curricula.
+
+%% Be sure to leave a line of whitespace immediately before this line!!!!!
+%% (If this comment segment runs together with the preceeding text, you might
+%%  see the second page of the abstract numbered "0".)
+%%
+%% If the abstract is more than one page, then place this line PRECISELY
+%% at the page break; otherwise, comment it out.  (See note about this line
+%% in the usage notes.)
+%%
+\abstractmultiplepage
+
+The signaling model of education provides an ideal foundation for the questionnaire design that is utilized in all three essays. Where signaling model theorists have previously suggested that nonconformity creates a stigma for ACNG labor, I show that nonconformity is viewed as a net value add by employers. I propose that productivity variance risk aversion is a better explanation than stigma for the relatively weak average performance of alternative credentials to the traditional degree on the labor market.
+
+The second essay, Hirability and Educational Prestige, tests the hypothesis that educational prestige explains hirability better than accreditation. Ordinary least squares and linear mixed model analyses provide evidence that prestige does explain a greater share of variance in hirability compared to accreditation, but the effect of accreditation also remains independently important. This paper identifies rules of thumb that education consumers can use to identify meaningfully high-prestige learning providers. These meaningful categories can also be used for further research into the return on investment in alternative education. Results suggest a need for accreditation reform to allow maximal social surplus in the market for education.
+
+The third paper, COVID-19 and Alternative Postsecondary Learning, investigates the impact of the COVID-19 pandemic on social favorability to remote learning and alternative credentials. Results indicate that the pandemic increased favorability to remote learning and alternative credentials. The conclusion provides some reasons to think that high favorability will persist over time.
+
+%%
+%%  the main body of the dissertation
+%%
+\startofchapters
+
+% %% include the chapters one by one (or paste the chapter text in directly if desired)
+% \include{chapterOne}
+% \include{chapterTwo}
+
+% %% Note: appendix is now put before bibliography.
+% %% include the following directives if there are any appendices
+% \appendix
+% \appendixeqnumbering
+% \include{Appendix}
+
+% %%
+% %%  bibliography
+% %%
+
+\bibliography{./BibFile}
+
+%%
+%% curriculum vitae
+%%
+%% Note: brief CV based on Josh Ingber's CV and Jon Schuler's totally absent CV page
+%% Josh Ref: https://search-proquest-com.mutex.gmu.edu/pqdtlocal1006610/docview/2428073176/55635F0359FC4ECCPQ/1?accountid=14541
+%% Jon Ref: https://search-proquest-com.mutex.gmu.edu/pqdtlocal1006610/docview/305048351/C349E532582D467APQ/1?accountid=14541
+
+\cvpage
+
+\noindent John Vandivier received his Ph.D. in Economics from George Mason University (GMU) in 2021.
+John specialized in the fields of Austrian Economics and Public Choice Economics during his doctoral studies.
+His dissertation includes a focus on applied microeconomic analysis, education economics, statistical analysis, and light experimental analysis.
+In 2015, John earned a Master of Public Policy (MPP) with an emphasis in Fiscal Policy from George Mason University.
+John received a Bachelor of Science (BS) with a double major in Economics in Political Science from the University of Houston in 2012.
+John is currently employed as a Principal Software Developer affiliated with Blue Cross Blue Shield of North Carolina.
+
+\end{document}
