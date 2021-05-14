@@ -37,13 +37,16 @@
 \usepackage{setspace}                      %   for line spacing commands
 
 \usepackage{booktabs}
+\usepackage[hyphens]{url}
 \usepackage{hyperref}
 \usepackage{lineno}
 \usepackage{longtable}
+\usepackage{ragged2e}
 \usepackage{siunitx}
 \usepackage{tabularx}
 \usepackage{threeparttable}
 \usepackage{tikz}
+\urlstyle{same}
 
 \modulolinenumbers[5]
 \graphicspath{{./figures-and-tables}}
@@ -51,6 +54,7 @@
 
 % ref: https://tex.stackexchange.com/questions/50747/options-for-appearance-of-links-in-hyperref
 \hypersetup{
+    breaklinks = true,   %%% not grammatical
     hidelinks = true,    %%% not grammatical
 }
 
@@ -199,6 +203,7 @@ investigates the impact of the COVID-19 pandemic on social favorability to remot
 % %%  bibliography
 % %%
 
+% \Urlmuskip=0mu plus 1mu\relax
 \bibliographystyle{elsarticle-num}
 \bibliography{./BibFile}
 
