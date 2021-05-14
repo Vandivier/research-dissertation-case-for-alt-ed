@@ -1,95 +1,5 @@
-% cleaning note: run:
-% `deno run --allow-read --allow-write ../../../../deno-utility-tex-to-text/tex-to-text.ts --infile /d/Users/vandi/workspace/research-dissertation-case-for-alt-ed/papers/alt-ed-prestige/alt-ed-prestige.tex'
-% `deno run --allow-read --allow-write ../../../../deno-utility-tex-to-text/tex-to-text.ts --infile /d/workspace/github/research-dissertation-case-for-alt-ed/papers/alt-ed-prestige/alt-ed-prestige.tex'
 
-% using Elseveir template per https://www.elsevier.com/authors/author-schemas/latex-instructions
-\documentclass[review]{elsarticle}
-
-\usepackage{amsmath}
-\usepackage{booktabs}
-\usepackage{graphicx}
-\usepackage{hyperref}
-\usepackage{lineno}
-\usepackage{longtable}
-\usepackage{siunitx}
-\usepackage{tabularx}
-\usepackage{threeparttable}
-\usepackage{tikz}
-
-\modulolinenumbers[5]
-\bibliographystyle{elsarticle-num}
-\graphicspath{{../alt-ed-survey/figures-and-tables}}
-\usetikzlibrary{calc,matrix}
-
-% ref: https://tex.stackexchange.com/questions/50747/options-for-appearance-of-links-in-hyperref
-\hypersetup{
-    hidelinks = true,    %%% not grammatical
-}
-
-\begin{document}
-\begin{frontmatter}
-
-    \title{
-        Hirability and Educational Prestige
-    }
-
-    \author[mymainaddress]{John Vandivier}
-    \address[mymainaddress]{4400 University Dr, Fairfax, VA 22030}
-    \ead{jvandivi@masonlive.gmu.edu}
-
-    \begin{abstract}
-        % a4.1
-        Alternative credentials
-        offer a partial solution to the skill gap and student debt crises,
-        supernormal returns for some students,
-        and a tool to support diversity hiring for firms.
-        This paper tests the hypothesis that educational prestige explains hirability
-        better than accreditation.
-        An original questionnaire using repeated measures ($n = 454$)
-        is investigated to determine the effects of accreditation and prestige on willingness to hire.
-        A combination of descriptive statistics, ordinary least squares (OLS), and linear mixed models (LMM)
-        reveal that prestige explains a larger component of hirability variance than accreditation.
-        Accreditation remains independently important.
-        Alternative credentials from a Fortune 50 learning provider are competitive with a traditional degree.
-        Other high prestige alternative credentials demonstrate job search value, albeit at a lower level.
-        The conclusion includes a discussion on industry and policy moves to improve total market surplus.
-        % A discussion on
-        % Partnerships between accredited and alternative institutions
-        % provide a path to improved social outcomes without the difficulty 
-        % below line is true per a4.2 but it's a very weak increase so let's not mention
-        % Exposure to quality ratings for learning providers
-        % is associated with improved relative prestige on alternative credentials.
-        % The conclusion includes a discussion on policy,
-        % and actionable recommendations for employers, students, and quality rating aggregators.
-        % Do I really need to offer policy solutions?
-        % At the same time, situations are revealed in which alternative credentials are preferred.
-        % Hirability is high for alternative credentials,
-        % and these credentials can be obtained at a lower cost and difficulty compared
-        % to certain degrees.
-        % As a result, alternative credentials are sometimes preferred even when comparative prestige is low.
-        % Descriptive statistics show that prestige for alternative credentials is
-        % more dispersed than prestige for the accredited degree,
-        % so some proprtion of respondents prefer alternative credentials.
-    \end{abstract}
-
-    \begin{keyword}
-        alternative education, job search, work norms, education economics, social economics, labor economics, skill gap, prestige, debt crisis    %%% not grammatical
-        % debt crisis               288k
-        % prestige                  1.55m
-        % skill gap                 2.24m
-        % labor economics           3.45m
-        % social economics          3.86m
-        % education economics       4.0m
-        % work norms                4.01m
-        % job search                4.92m
-        % alternative education     5.23m
-        \MSC[2010] I20, I24, J24, B55                                                                     %%% not grammatical
-    \end{keyword}
-
-\end{frontmatter}
-
-\pagebreak
-\linenumbers
+\chapter[]{\large Hirability and Educational Prestige}
 
 \section{Introduction}
 
@@ -416,7 +326,7 @@ it will be at least as prestigious as the average accredited school.
 \begin{table}
     \caption{Average Hirability and Prestige}
     \resizebox{\columnwidth}{!}{
-        \input{./figures-and-tables/table-summary-stats.tex}
+        \input{./figures-and-tables/table-prestige-summary-stats.tex}
     }
     \label{tab:desc_stats}
 \end{table}
@@ -649,20 +559,6 @@ without formal requirements connected to the source of student learning\cite{con
 University support for prior learning is an implementation pattern for course-level accreditation that does not require legislative action.
 Formal and informal partnerships between traditional and alternative institutions can yield increased market surplus for producers and consumers.
 
-% 1. remove accreditation
-% 2. lower the bar for accreditation
-% 3. remove professional requirements that include requirement for accreditation
-% 4. remove legally enshrined preferential treatment of accredited credentials (esp government pay scales and in government contracts)
-% 5. how to fill the gap? define skill-based requirements instead of accreditation (better outcomes for govt and all)
-% 6. (institution based vs skill or course based accreditation)
-% 1. ...see 8 for a non-policy workaround (but working around is likely more costly than direct fix)
-% 6. aggregators need to do a better job
-% 7. individuals don't need to wait for social movement to reap individual-level benefits
-% 8. hybrid approach; universities can (and increasingly already do) partner with external providers for a win-win
-% 1. better university placement rates
-% 2. better university solutioning of the skill gap
-% 3. accreditation given fully or partially (ACE; professional credit) to unaccredited partners (institution based vs skill or course based accreditation)
-
 Finally, this paper evaluated practical alternative credential selection strategies.
 One strategy is to leverage credentials from industry leaders.
 In this study, Google represented an alternative learning provider that is also an industry leader.
@@ -676,6 +572,3 @@ The combination of results with information on typical job search length from Ze
 that these credentials provide meaningful job search benefits,
 albeit with significantly less efficacy than an accredited degree or a credential from Google.
 
-\bibliography{./BibFile}
-
-\end{document}

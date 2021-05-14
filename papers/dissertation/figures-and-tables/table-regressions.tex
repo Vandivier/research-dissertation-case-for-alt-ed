@@ -1,0 +1,98 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{center}
+    {
+        % \fontsize{8pt}{7pt}\selectfont
+        \tabcolsep=2pt
+        \begin{longtable}{l*{3}{c}}
+            \caption{Table of Regression Results with Hirability as Dependent Variable}
+            \label{tab:table_regs}                                                                                                       \\
+
+            \toprule
+                                               & \multicolumn{1}{c}{Model 1} & \multicolumn{1}{c}{Model 2} & \multicolumn{1}{c}{Model 3} \\
+            \midrule
+            \endfirsthead
+
+            \multicolumn{4}{c}%
+            {{\bfseries \tablename\ \thetable{} -- Continued}}                                                                           \\
+            \addlinespace
+            \toprule
+                                               & \multicolumn{1}{c}{Model 1} & \multicolumn{1}{c}{Model 2} & \multicolumn{1}{c}{Model 3} \\
+            \midrule
+            \endhead
+
+            \addlinespace
+            \hline
+            \multicolumn{4}{|c|}{{Continued on Next Page}}                                                                               \\
+            \hline
+            \endfoot
+
+            \hline \hline
+            \endlastfoot
+
+            % \hline
+            %                                    & Model 1 & Model 2  & Model 3  \\
+            % \hline
+            Age, 45-60                         & 0.61***                     & 0.10                        &                             \\
+            % \addlinespace
+            External Facing, High              & 1.23***                     & 0.13                        &                             \\
+            External Facing, Low               & 1.16***                     & 0.10                        &                             \\
+            External Facing, Medium            & 1.16***                     & 0.13                        &                             \\
+            Expected Conventionality           & 0.32***                     & 0.14***                     & 0.17***                     \\
+            Income, 0-9999                     & 0.88                        & -0.87**                     & -1.22***                    \\
+            Income, 100,000-124,999            & 1.25***                     & 0.47**                      & 0.41*                       \\
+            Income, 175,000-199,999            & 1.58*                       & 0.40                        &                             \\
+            Income, 200,000+                   & 1.14                        & -1.09*                      &                             \\
+            Income, 25,000-49,999              & 0.57**                      & 0.19                        &                             \\
+            Income, 50000-74999                & 0.51**                      & 0.26*                       & 0.18                        \\
+            Income, 75000-99999                & 0.81***                     & 0.29*                       &                             \\
+            Industry, Education                & 0.66**                      & 0.40**                      &                             \\
+            Industry, Finance                  & 0.34                        & -0.07                       &                             \\
+            Industry, Information Technology   & 0.46**                      & 0.05                        &                             \\
+            Industry, Manufacturing            & 0.34                        & 0.17                        &                             \\
+            Industry, Other                    & 0.37                        & 0.37**                      &                             \\
+            Is Accredited                      &                             & 1.23***                     & 1.27***                     \\
+            (Is Accredited)(Prestige Response) &                             & -0.09***                    & -0.10***                    \\
+            Is Stipulated High Prestige        &                             &                             & 0.14**                      \\
+            Is Stipulated Other Impressed      &                             & 0.64***                     & 0.59***                     \\
+            Is Stipulated Self Impressed       &                             & -0.05                       &                             \\
+            Online Ed Favorability             & 0.34***                     & 0.09***                     & 0.07**                      \\
+            Prefers Traditional Coworker       & -0.22                       & 0.19*                       & 0.19*                       \\
+            Prestige Response                  &                             & 0.55***                     & 0.53***                     \\
+            State, Arizona                     & 1.35**                      & 0.69**                      &                             \\
+            State, California                  & 0.44**                      & 0.27**                      & 0.37**                      \\
+            State, Connecticut                 & 0.72                        & -0.11                       &                             \\
+            State, Florida                     & 0.79***                     & 0.16                        &                             \\
+            State, Georgia                     & -0.88*                      & -0.22                       &                             \\
+            State, Kansas                      & 1.76                        & 0.52                        &                             \\
+            State, Maryland                    & 0.92**                      & 0.31                        &                             \\
+            State, Massachusetts               & 1.43**                      & 0.49                        &                             \\
+            State, Michigan                    & 1.35***                     & 0.26                        &                             \\
+            State, Mississippi                 & 1.77***                     & 0.45                        &                             \\
+            State, Missouri                    & 0.81*                       & 0.34                        &                             \\
+            State, Nebraska                    & -1.04                       & -0.75                       &                             \\
+            State, New Mexico                  & 1.76*                       & 0.10                        &                             \\
+            State, Pennsylvania                & 0.44                        & 0.44**                      &                             \\
+            State, Tennessee                   & 0.74                        & -0.13                       &                             \\
+            State, Texas                       & 0.39                        & -0.10                       &                             \\
+            State, West Virginia               & -1.31                       & -0.92                       &                             \\
+            Intercept                          & 0.30                        & 0.14                        & 0.50*                       \\
+            % \hline
+            \midrule
+            R-squared                          & 0.47                        &                             &                             \\
+            R-squared Adj.                     & 0.42                        &                             &                             \\
+            N                                  & 454                         & 3600                        & 3600                        \\
+            Measures Per Respondent            & 1                           & 8                           & 8                           \\
+            % \addlinespace
+            % Constant                         & 5.036\sym{***}        & 5.356\sym{***}        & 4.755\sym{***}     \\
+            % \midrule
+            % Adjusted R-sqr                   & 0.2181                & 0.2512                & 0.2331             \\
+            % R-sqr                            & 0.3253                & 0.3539                & 0.3310             \\
+            % p(F)                             & 0.0000                & 0.0000                & 0.0000             \\
+            \hline
+            % \addlinespace
+            \multicolumn{4}{l}{\footnotesize \sym{*} \(p<0.10\), \sym{**} \(p<0.05\), \sym{***} \(p<.01\)}                               \\
+        \end{longtable}
+    }
+\end{center}
+}
