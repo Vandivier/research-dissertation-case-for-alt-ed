@@ -88,8 +88,8 @@
 \def\intercommspace{0.20in}
 \def\commdatespace{0.45in}
 
-\def\tableSpace{\vskip 0.3in}
-\def\figSpace{\vskip 0.3in}
+\def\tableSpace{\vskip 0.67in}
+\def\figSpace{\vskip 0.67in}
 
 \def\siglinewithspace{\rule{\siglinelength}{\siglinedepth} \hspace{\spacesiglinename}}
 
@@ -266,30 +266,28 @@
         \@dottedtocline{0}{0.0em}{1.35em}
 }
 
-% \def\@makechapterhead#1{
-%   { \parindent 0pt \raggedright
-%     \vspace*{0.27 in}%{0.75in}
-% %%%    \centerline{\Large \bf \@chapapp{} \thechapter
-%     \begin{center}
-%      {\Large \bf Chapter \thechapter
-%     \Large \bf
-% %%%   \space : #1} \par
-%     : #1} \par
-% \end{center}
-%     \nobreak
-%     \vskip 22 pt %40pt
-%   }
+\def\@makechapterhead#1{
+  { \parindent 0pt \raggedright
+    \vspace*{0.27 in}
+    \begin{center}
+     {\Large \bf Chapter \thechapter
+    \Large \bf
+    : #1} \par
+\end{center}
+    \nobreak
+    \vskip 22 pt
+  }
 
-% }
+}
 
-% \def\@makeschapterhead#1{
-%   { \parindent 0pt \raggedright
-%     \vspace*{0.6 in}%{0.75in}
-%     \centerline{\Large \bf #1} \par
-%     \nobreak
-%     \vskip 40pt
-%   }
-% }
+\def\@makeschapterhead#1{
+  { \parindent 0pt \raggedright
+    \vspace*{0.6 in}
+    \centerline{\Large \bf #1} \par
+    \nobreak
+    \vskip 40pt
+  }
+}
 
 % %
 % % --- appendix chapters ---

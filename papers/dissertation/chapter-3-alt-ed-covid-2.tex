@@ -1,5 +1,5 @@
 
-\chapter[COVID-19 and Alternative Postsecondary Learning]{\large COVID-19 and Alternative Postsecondary Learning}
+\chapter[COVID-19 and Alternative Postsecondary Learning]{COVID-19 and Alternative Postsecondary Learning}
 
 \section{Introduction}
 
@@ -202,12 +202,13 @@ Analysis with and without outliers does not show a meaningful difference in the 
 
 \begin{figure}[h!]
     \centering
-    \caption{Distribution of Favorability to Alternative Credentials}
     \begin{tikzpicture}[element/.style={minimum width=1.75cm, minimum height=0.85cm}]
         \node (n1) {\includegraphics[width=0.7\textwidth]{./figures-and-tables/figure-1.png}};
         \node (n2) [above=0.25cm] at ($(n1)!0.5!(n1) - (7, 0)$) {\textbf{Count}};
-        \node (n3) [above=0.25cm] at ($(n1)!0.5!(n1) - (0, 5.5)$) {\textbf{Favorability}};
+        \node (n3) [above=0.25cm] at ($(n1)!0.5!(n1) - (1, 5.5)$) {\textbf{Favorability}};
     \end{tikzpicture}
+    \caption{Distribution of Favorability to Alternative Credentials}
+    \figSpace
     \label{fig:one}
 
     % \caption*{A figure}
@@ -217,13 +218,13 @@ Analysis with and without outliers does not show a meaningful difference in the 
 The average response was 7.65 on a 10-point scale.
 Excluding outliers, over 96 percent of responses fall into the normal range.
 The average response in the normal range was about 7.81.
-Table \ref{tab:desc_stats} summarizes statistics about favorability and the direct measure of coronavirus impact.
+Table \ref{tab:desc_stats_ch3} summarizes statistics about favorability and the direct measure of coronavirus impact.
 The table also includes summary results for the two causality questions.
 
-% Table \ref{tab:desc_stats} describes summary statistics for the total sample and also distinctly describes three subsamples.
-Table \ref{tab:desc_stats} reports statistics across the total population and also for three subpopulations.
+% Table \ref{tab:desc_stats_ch3} describes summary statistics for the total sample and also distinctly describes three subsamples.
+Table \ref{tab:desc_stats_ch3} reports statistics across the total population and also for three subpopulations.
 The subpopulations include the normal range, the outlier population, and the Tens.
-Because factors in Table \ref{tab:desc_stats} dummy variables,
+Because factors in Table \ref{tab:desc_stats_ch3} dummy variables,
 with an exception for favorability,
 the mean values for each variable can be interpreted as the proportion of the population
 that affirms the response.
@@ -246,7 +247,8 @@ The Tens report higher coronavirus impact while the outliers cluster around a me
     \resizebox{\columnwidth}{!}{
         \input{./figures-and-tables/table-summary-stats.tex}
     }
-    \label{tab:desc_stats}
+    \tableSpace
+    \label{tab:desc_stats_ch3}
 \end{table}
 
 Table \ref{tab:multiple_regs} provides factor coefficients for four interesting OLS models.
@@ -260,6 +262,7 @@ Model 3 follows the same specification as Model 2, but Model 3 excludes outliers
     \resizebox{\columnwidth}{!}{
         \input{./figures-and-tables/table-regs.tex}
     }
+    \tableSpace
     \label{tab:multiple_regs}
 \end{table}
 
@@ -287,7 +290,7 @@ to favorability about remote learning.
 The exact wording is:
 ``To what degree has coronavirus-induced remote activity improved your favorability to remote learning
 (either for yourself or for other people)?''
-Referring back to Table \ref{tab:desc_stats},
+Referring back to Table \ref{tab:desc_stats_ch3},
 about 83.1 percent of the full population of Americans indicate a small,
 medium, or large increase in favorability of remote learning
 caused by coronavirus-induced remote activity.
@@ -302,7 +305,7 @@ The observation of nonzero responses to the factor for coronavirus-induced remot
 The fact that these nonzero responses are negatively related to favorability is a non-causal association.
 This association indicates that those who gained the most favorability also ended with less than average favorability,
 while those with prior high favorability did not move much higher.
-This interpretation is reinforced by referring back to the summary statistics in Table \ref{tab:desc_stats}.
+This interpretation is reinforced by referring back to the summary statistics in Table \ref{tab:desc_stats_ch3}.
 Notice that the negative outlier group has the highest affirmative response for both a
 medium increase in remote favorability
 and also to a large increase in remote favorability.
@@ -340,6 +343,7 @@ The main result in this table is that none of the effects of interest are import
     \resizebox{\columnwidth}{!}{
         \input{./figures-and-tables/table-robust-model.tex}
     }
+    \tableSpace
     \label{tab:table_robust_reg}
 \end{table}
 
