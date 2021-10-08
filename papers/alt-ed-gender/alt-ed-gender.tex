@@ -47,14 +47,122 @@
 
 \section{Introduction}
 
-i want to know:
-1. grit+ocean+covid+prestige+skill evaluation+standard sociological measures
+single big question: what gender differences, if any, exist in favorability to alternative credentials?
+a survey
 
+bigger questions:
+1. is the college degree going away?
+2. should people prefer alternative credentials to the degree?
+3. if people should, why are they not doing so?
+4. can we create interesting predictions or interventions that generate value?
+5. all of the above, with an eye toward gender.
+[6. as a result, yes people-things distinction matters]
+
+intro 1. review scope (lit review + limitted replication + contribute test for robustness over time)
+pt 2 - do the lit review (review papers, factors, theories previously tested / established)
+pt 3 - preview results
+
+methodology
+
+results
+
+conclusions + future opportunities
+
+data ref: alt-ed-metasurvey
+
+I Want:
+4. Prestige
+
+I Have:
+1. Skill
+2. Grit + OCEAN
+3. COVID
+5. Standard sociological measures
+
+% cite: weak correlation https://wol.iza.org/articles/measuring-individual-risk-preferences/long
+% author above says `Survey measures lack a clear connection to theory' -> signaling model solves that (perceived risk > actual risk in hiring decision)
+% 'enjoy taking risks' phrasing a. taken from above and b. consistent with programming career orientation (an alternative to people-thing orientation measure)
 + add a direct measure of risk tolerance?
-+ add a "people person" question -> person-orientation theory (scale of 1 to 10: beware Dunning-Kruger / overconfidence here)
+
+% in our use case if we ultimately care about landing programmers a job, then RIASEC is not only overkill but it is also a noisey and indirect indicator
+% future work which seeks to look at alternative credentials outside of programming should incorporate a full RIASEC,
+% but i introduce a direct programming interest question instead for now.
+% Not only does RIASEC + PCA introduce measurement error into thing-orientation,
+% but reapplication of the construct onto programming creates an a secondary measurement error because programming is not a purely thing-oriented activity.
+% my wording (enjoyable) is based on the open version https://openpsychometrics.org/tests/RIASEC
+% further, my wording is meant to cause the respondent to think of the whole career, not the narrow activity
+% further, my wording is meant to address the possibility that a respondent may already have a job programming, but I don't want them to anchor on their present job.
+
++ add a "people person" question -> person-orientation theory (scale of 1 to 10: beware Dunning-Kruger / overconfidence here) (extroversion)
 caveat: speak to dunning-kruger; an actual eq test would be more accurate,
     correlation expected though, roughly linear,
     weakly cubic relation: https://www.researchgate.net/publication/12688660_Unskilled_and_Unaware_of_It_How_Difficulties_in_Recognizing_One's_Own_Incompetence_Lead_to_Inflated_Self-Assessments )
+
+```https://onlinelibrary.wiley.com/doi/full/10.1111/j.1751-9004.2010.00320.x
+Results show that gender differences in Big Five personality traits are ‘small’ to ‘moderate,’
+with the largest differences occurring for agreeableness and neuroticism
+(respective ds = 0.40 and 0.34; women higher than men). In contrast,
+gender differences on the people–things dimension of interests are ‘very large’
+(d = 1.18), with women more people-oriented and less thing-oriented than men.
+...
+Research on gender differences in personality needs to focus more attention on Big Five facets and on traits that may not have good representations in the Big Five model
+'''
+
+specific questions modeled after https://pubmed.ncbi.nlm.nih.gov/18712468/
+```
+These results suggest that biological factors may contribute to sex differences in personality and that culture plays a negligible to small role in moderating sex differences in personality.
+'''
+https://pubmed.ncbi.nlm.nih.gov/9569655/
+http://psych.fullerton.edu/rlippa/
+% https://www.hawaiipublicschools.org/DOE%20Forms/CTE/RIASEC.pdf
+how do i complete people-things from RIASEC?
+% Gender-Related Individual Differences and the Structure of Vocational
+% Interests: The Importance of the People-Things Dimension
+% future interesting idea: marital status might be an interesting variable
+
+% RIASEC is a personality type based on activity interest
+% a 2-factor PCA from RIASEC adds importantly to OCEAN
+% and aligns with a personality analysis using the People-Things and Ideas-Data dimensions
+% then we notice "very large" gender differences on the people-things axis, which is orthoganal to OCEAN
+% https://openpsychometrics.org/tests/RIASEC/
+%
+% I conducted factor analyses on the six
+% ipsatized RIASEC scores for all participants as well as for men
+% and women separately (principal-components analysis, extraction of two factors, with orthogonal varimax rotation). Because
+% the two factors that emerged from all three factor analyses were
+% quite similar, only the results for men and women combined are
+% reported here.
+% https://towardsdatascience.com/principal-component-analysis-pca-from-scratch-in-python-7f3e2a540c51
+% https://web-a-ebscohost-com.mutex.gmu.edu/ehost/pdfviewer/pdfviewer?vid=1&sid=056dfdd6-c42b-46ae-b687-4938a191ff87%40sdc-v-sessmgr03
+%
+% python and riasec https://www.learnpythonwithrune.org/pandas-explore-datasets-by-visualization-exploring-the-holland-code-riasec-test/
+
+TODO?
+% 3. "5-Factor Conservatism" and Gender (could be it's own paper)
+%     a. anti-innovation bias, or status quo bias; represents the gradualist aspect
+%     b. antiforeign bias represents the nationalist aspect
+% % new phrasing: https://www.econlib.org/archives/2006/03/framing_antifor.html
+% % "I favor freer trade and migration with other nations"
+%     c. regulatory measure for market orientation or fiscal conservatism.
+%     d. prefer Christianity to religiosity for social conservatism a la United States
+%         i. Agnostic or Atheist
+%         ii. Spiritual or Theistic, No Specific Religion
+%         iii. Religious, Not Christian
+%         iv. Progressive Christian
+%         v. Conservative or Evangelical Christian
+%         vi. Other Christian
+% % 190201-feb-survey-monkey has justification for non-preference of Christianity var
+% % rebuttle to that justification: it's a poor construct
+% % instead of
+
+% Cultural effects include regional and ethnic effects.
+
+% Non-cultural ideological effects include religiosity,
+% christianity,
+% favorability to regulation,
+% favorability to AI (conservatism and anti-innovation bias proxy),
+% and whether American education is important (nationalist / anti-foreign prox)
+
 
 ## the big battlecry
 -> do not test any new theories, just outline them
@@ -82,7 +190,8 @@ minor theories (special mention territory)
     a. weak evidence from derived measures
         i. percent gender by industry; male or female stereotype theory? gender collapse?
         ii. men are more willing to work as a minority compared to females (minority employment as a risky choice + risk aversion)
-        iii. these once again seem to collapse into the Big 3
+        iii. do women say men have lower eq and men say women have higher eq? eq stereotyping norm
+        iv. these once again seem to collapse into the Big 3
     b. stronger evidence would include a purpose-built questionnaire, rather than derived measures
 
 Expected Endogenous Effects
