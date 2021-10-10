@@ -28,6 +28,7 @@ def getData(dropFirstDummy=True):
     print(df.columns)
     print("\n")
 
+    # TODO: split OCEAN, maybe extract value wrangling function
     df = df.replace({
         "Strongly Agree": "10",
         "Strongly Disagree": "1",
@@ -59,6 +60,16 @@ def getData(dropFirstDummy=True):
     })
 
     df = df.rename(fsReformatColumnNames, axis='columns')
+
+    df[[
+        "expected_conventionality",
+        "favor_online_ed",
+        "hirability",
+    ]] = df[[
+        "expected_conventionality",
+        "favor_online_ed",
+        "hirability",
+        ]].apply(pd.to_numeric)
 
     # df = pd.get_dummies(df, columns=['manager_effects']).rename(
     #     fsReformatColumnNames, axis='columns').rename(columns={
@@ -135,7 +146,7 @@ def getTens(dropFirstDummy=True):
 if __name__ == '__main__':
     skewedData = getData()
     skewedData.to_csv('./alt-ed-metasurvey-wrangled.csv')
-    # deskewedData = getDeskewedData()
+    deskewedData = getDeskewedData()
 
     # reg_maxar2 = sm.OLS.from_formula(m5, data=skewedData).fit()
     # reg_str_inserted_impact = sm.OLS.from_formula(m7, data=skewedData).fit()
