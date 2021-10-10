@@ -9,6 +9,7 @@
 import numpy as np
 import matplotlib.pyplot as plt  # To visualize
 import pandas as pd
+import re
 from sklearn.linear_model import LinearRegression
 import statsmodels.api as sm
 from statsmodels.iolib.summary2 import summary_col
@@ -27,10 +28,16 @@ def getData(dropFirstDummy=True):
     print(df.columns)
     print("\n")
 
-    # df = df.replace({
-    #     "Strongly Agree": "10",
-    #     "Strongly Disagree": "0",
-    # })
+    df = df.replace({
+        "Strongly Agree": "10",
+        "Strongly Disagree": "1",
+        "Very Much": "10",
+        "Very Little": "1",
+        "Very Impressed": "10",
+        "Very Unimpressed": "1",
+    })
+
+    df = df.rename(columns=lambda x: re.sub(r'Have you heard of any of the following online course providers\?','familiarity_', x))
 
     df = df.rename(columns={
         "Age?": "age",
@@ -38,7 +45,9 @@ def getData(dropFirstDummy=True):
         "For many professions, alternative credentials can qualify a person for an entry-level position.": "hirability",
         "Gender?": "gender",
         "Household Income?": "income",
-        "It will soon become fairly conventional for high school graduates to obtain alternative credentials instead of going to college.": "conventionality",
+        "How long do you believe it usually takes to obtain an alternative credential?": "expected_duration",
+        "It will soon become common for high school graduates to obtain alternative credentials instead of going to college.": "expected_conventionality",
+        "It will soon become fairly conventional for high school graduates to obtain alternative credentials instead of going to college.": "expected_conventionality",
         "To what degree has coronavirus-induced remote activity improved your favorability to remote learning (either for yourself or for other people)?": "covid_fav_online",
         "To what degree has coronavirus caused you to increase your participation in remote learning, remote working, and other remote activities?": "covid_remote",
         "To what degree has coronavirus negatively impacted your life?": "covid_impact",
