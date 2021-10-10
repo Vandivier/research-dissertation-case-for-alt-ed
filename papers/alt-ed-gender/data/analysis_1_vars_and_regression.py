@@ -10,6 +10,7 @@ import numpy as np
 import matplotlib.pyplot as plt  # To visualize
 import pandas as pd
 import re
+from scipy.stats import ttest_ind
 from sklearn.linear_model import LinearRegression
 import statsmodels.api as sm
 from statsmodels.iolib.summary2 import summary_col
@@ -47,6 +48,7 @@ def getData(dropFirstDummy=True):
         "Gender?": "gender",
         "Household Income?": "income",
         "How long do you believe it usually takes to obtain an alternative credential?": "expected_duration",
+        "I enjoy taking risks": "risk_seeking",
         "It will soon become common for high school graduates to obtain alternative credentials instead of going to college.": "expected_conventionality",
         "It will soon become fairly conventional for high school graduates to obtain alternative credentials instead of going to college.": "expected_conventionality",
         "To what degree has coronavirus-induced remote activity improved your favorability to remote learning (either for yourself or for other people)?": "covid_fav_online",
@@ -65,11 +67,16 @@ def getData(dropFirstDummy=True):
         "expected_conventionality",
         "favor_online_ed",
         "hirability",
+        "risk_seeking",
     ]] = df[[
         "expected_conventionality",
         "favor_online_ed",
         "hirability",
+        "risk_seeking",
         ]].apply(pd.to_numeric)
+
+    # drop Other gender bc n=2 is too small (maybe revisit here or in seperate analysis if over say a dozen)
+    df = df[df.gender != "Other"]
 
     # df = pd.get_dummies(df, columns=['manager_effects']).rename(
     #     fsReformatColumnNames, axis='columns').rename(columns={
@@ -141,12 +148,29 @@ def getTens(dropFirstDummy=True):
     df = getData(dropFirstDummy)
     return df.drop(df[df['hirability'] < 10].index)
 
+# ar2 higher by treating risk independently instead of interacting w gender
+# ar2 higher than independent by treating risk interacted w industry
+m1 = '''hirability ~
+    + gender
+    + industry
+    + risk_seeking
+    + 1'''
 
 # if this file executed as script
 if __name__ == '__main__':
-    skewedData = getData()
+    skewedData = getData(False)
     skewedData.to_csv('./alt-ed-metasurvey-wrangled.csv')
     deskewedData = getDeskewedData()
+
+    # TODO: extract forward feature selection to another file
+    print(sm.OLS.from_formula(m1, data=skewedData).fit().summary())
+    # print(sm.RLM.from_formula(1, data=skewedData).fit().summary())
+
+
+    # are men and women naively different?
+    ttest, pval = ttest_ind(skewedData[skewedData.gender == "Male"].hirability, skewedData[skewedData.gender == "Female"].hirability)
+    # p ~=.5 therefore currently retain null hypothesis of no difference
+    print(pval)
 
     # reg_maxar2 = sm.OLS.from_formula(m5, data=skewedData).fit()
     # reg_str_inserted_impact = sm.OLS.from_formula(m7, data=skewedData).fit()
@@ -154,10 +178,6 @@ if __name__ == '__main__':
     #     m7, data=deskewedData).fit()
     # reg_strong = sm.OLS.from_formula(m6, data=skewedData).fit()
 
-    # robust = sm.RLM.from_formula(m9, data=skewedData).fit()
-    # noobcheck = sm.RLM.from_formula(m11, data=skewedData).fit()
-
-    # print(noobcheck.summary())
     # print('==========END NON-LATEX SUMMARY==========')
 
     # use this file like `py [this_file] >> foo.tex` to get table source
