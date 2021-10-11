@@ -17,8 +17,10 @@ from statsmodels.iolib.summary2 import summary_col
 
 
 def fsReformatColumnNames(sColName):
-    sMassagedName = sColName.replace(',', '').replace(
-        ' ', '_').replace('-', '_').replace('>', '').replace('+', '').lower()
+    sMassagedName = sColName.replace(',', '') \
+        .replace(' ', '_').replace('-', '_').replace('>', '').replace('+', '') \
+        .replace('?', '').replace('.', '') \
+        .lower()
     sMassagedName = sMassagedName.replace('_/_', '_')
     sMassagedName = sMassagedName.replace('__', '_')
     return sMassagedName
@@ -40,28 +42,48 @@ def getData(dropFirstDummy=True):
     })
 
     df = df.rename(columns=lambda x: re.sub(r'Have you heard of any of the following online course providers\?','familiarity_', x))
-
     df = df.rename(columns={
         "Age?": "age",
         "Do you contribute to hiring and firing decisions at your company?": "manager_effects",
         "For many professions, alternative credentials can qualify a person for an entry-level position.": "hirability",
         "Gender?": "gender",
+        "Government regulation helps ensure businesses treat individuals more fairly.": "worldview_pro_regulation",
         "Household Income?": "income",
         "How long do you believe it usually takes to obtain an alternative credential?": "expected_duration",
-        "I enjoy taking risks": "risk_seeking",
+        "I enjoy taking risks": "favor_seeking_risk",
+        "I favor freer trade and migration with other nations": "worldview_pro_foreign",
+        "I have a high level of community engagement, participation, or activism related to my worldview.": "worldview_activism",
+        "I prefer to hire or work with a person that has a college degree rather a person that holds a reputable certification or non-college credential.": "is_prefer_college_peer",
+        "I think of a career in programming as enjoyable": "favor_programming_career",
         "It will soon become common for high school graduates to obtain alternative credentials instead of going to college.": "expected_conventionality",
         "It will soon become fairly conventional for high school graduates to obtain alternative credentials instead of going to college.": "expected_conventionality",
+        "Roughly how many full-time employees currently work for your organization?": "firm_size",
         "To what degree has coronavirus-induced remote activity improved your favorability to remote learning (either for yourself or for other people)?": "covid_fav_online",
         "To what degree has coronavirus caused you to increase your participation in remote learning, remote working, and other remote activities?": "covid_remote",
         "To what degree has coronavirus negatively impacted your life?": "covid_impact",
         "What is the highest level of education you have completed?": "education",
         "What state do you reside in?": "state",
         "When you add up the pros and cons for online education, it's probably a good thing for society overall.": "favor_online_ed",
+        "When you add up the pros and cons for artificial intelligence, it's probably a good thing for society overall.": "worldview_pro_innovation",
         "Which of these industries most closely matches your profession?": "industry",
-        "Which race/ethnicity best describes you? (Please choose only one.) ": "ethnicity",
+        "Which race/ethnicity best describes you?": "ethnicity",
+        "Which worldview best describes you?": "worldview_description",
     })
-
     df = df.rename(fsReformatColumnNames, axis='columns')
+    df = df.rename(columns=lambda x: re.sub(r'people_who_(.)*break_(.)*present_a_risk(.)*','rulebreakers_risky', x))
+    df = df.rename(columns=lambda x: re.sub(r'people_who_(.)*break_(.)*benefit_the_culture(.)*','rulebreakers_culture_value', x))
+    df = df.rename(columns=lambda x: re.sub(r'people_who_(.)*break_(.)*could_(.)*be_high_performers(.)*','rulebreakers_mixed_bag', x))
+    df = df.rename(columns=lambda x: re.sub(r'if_you_do_contribute_to_hiring_and_firing_decisions_please_write_(.)*','job_title', x))
+    df = df.rename(columns=lambda x: re.sub(r'thinking_about_the_job_title_provided_(.)*','job_title_credentials', x))
+    df = df.rename(columns=lambda x: re.sub(r'the_level_of','skill', x))
+    df = df.rename(columns=lambda x: re.sub(r'the_willingness_to','skill', x))
+    df = df.rename(columns=lambda x: re.sub(r'_held_by_a(n)?','', x))
+    df = df.rename(columns=lambda x: re.sub(r'non_college_graduate_with_an_alternative_credential','ncgwac', x))
+    df = df.rename(columns=lambda x: re.sub(r'willingness_to_break_formal_or_informal_rules_and_norms','break_rules', x))
+    df = df.rename(columns=lambda x: re.sub(r'attention_to_detail_work_ethic_timeliness_and_organization_of_work','conscientiousness', x))
+    df = df.rename(columns=lambda x: re.sub(r'commute_or_travel_to_a_workplace_or_even_as_a_part_of_the_daily_work_as_in_commercial_trucking','commute', x))
+    df = df.rename(columns=lambda x: re.sub(r'for_many_professions_learning_at_this_school_can_qualify_a_person_for_an_entry_level_position',
+        'school_hirability_', x))
 
     df[[
         "expected_conventionality",
