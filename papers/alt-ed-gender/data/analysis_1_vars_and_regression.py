@@ -6,14 +6,12 @@
 #    https://www.econjobrumors.com/topic/there-are-no-stata-14-and-stata-15-torrents
 # ref: https://dergipark.org.tr/en/download/article-file/744047
 
-import numpy as np
-import matplotlib.pyplot as plt  # To visualize
+# import numpy as np
+# import matplotlib.pyplot as plt  # To visualize
 import pandas as pd
 import re
-from scipy.stats import ttest_ind
-from sklearn.linear_model import LinearRegression
-import statsmodels.api as sm
-from statsmodels.iolib.summary2 import summary_col
+# from sklearn.linear_model import LinearRegression
+# from statsmodels.iolib.summary2 import summary_col
 
 
 def fsReformatColumnNames(sColName):
@@ -28,8 +26,6 @@ def fsReformatColumnNames(sColName):
 
 def getData(dropFirstDummy=True):
     df = pd.read_csv('alt-ed-metasurvey-100821.csv')
-    print(df.columns)
-    print("\n")
 
     # TODO: split OCEAN, maybe extract value wrangling function
     df = df.replace({
@@ -88,13 +84,15 @@ def getData(dropFirstDummy=True):
     df[[
         "expected_conventionality",
         "favor_online_ed",
+        "favor_programming_career",
+        "favor_seeking_risk",
         "hirability",
-        "risk_seeking",
     ]] = df[[
         "expected_conventionality",
         "favor_online_ed",
+        "favor_programming_career",
+        "favor_seeking_risk",
         "hirability",
-        "risk_seeking",
         ]].apply(pd.to_numeric)
 
     # drop Other gender bc n=2 is too small (maybe revisit here or in seperate analysis if over say a dozen)
@@ -158,59 +156,20 @@ def getData(dropFirstDummy=True):
 # tradeoff is analytical restriction (hopefully unimportant)
 def getDeskewedData(dropFirstDummy=True):
     df = getData(dropFirstDummy)
-    return df.drop(df[df['hirability'] < 4].index)
+    return df.drop(df[df['hirability'] < 5].index)
 
 
-def getOutlierData(dropFirstDummy=True):
+def getLowHirabilityGroup(dropFirstDummy=True):
     df = getData(dropFirstDummy)
-    return df.drop(df[df['hirability'] >= 4].index)
+    return df.drop(df[df['hirability'] >= 5].index)
 
 
 def getTens(dropFirstDummy=True):
     df = getData(dropFirstDummy)
     return df.drop(df[df['hirability'] < 10].index)
 
-# ar2 higher by treating risk independently instead of interacting w gender
-# ar2 higher than independent by treating risk interacted w industry
-m1 = '''hirability ~
-    + gender
-    + industry
-    + risk_seeking
-    + 1'''
-
 # if this file executed as script
 if __name__ == '__main__':
     skewedData = getData(False)
     skewedData.to_csv('./alt-ed-metasurvey-wrangled.csv')
-    deskewedData = getDeskewedData()
 
-    # TODO: extract forward feature selection to another file
-    print(sm.OLS.from_formula(m1, data=skewedData).fit().summary())
-    # print(sm.RLM.from_formula(1, data=skewedData).fit().summary())
-
-
-    # are men and women naively different?
-    ttest, pval = ttest_ind(skewedData[skewedData.gender == "Male"].hirability, skewedData[skewedData.gender == "Female"].hirability)
-    # p ~=.5 therefore currently retain null hypothesis of no difference
-    print(pval)
-
-    # reg_maxar2 = sm.OLS.from_formula(m5, data=skewedData).fit()
-    # reg_str_inserted_impact = sm.OLS.from_formula(m7, data=skewedData).fit()
-    # reg_str_inserted_impact_deskewed = sm.OLS.from_formula(
-    #     m7, data=deskewedData).fit()
-    # reg_strong = sm.OLS.from_formula(m6, data=skewedData).fit()
-
-    # print('==========END NON-LATEX SUMMARY==========')
-
-    # use this file like `py [this_file] >> foo.tex` to get table source
-    # for table in robust.summary().tables:
-    #     print(table.as_latex_tabular())
-
-    # ref: https://stackoverflow.com/questions/23576328/any-python-library-produces-publication-style-regression-tables
-    # print(summary_col([reg_maxar2, reg_str_inserted_impact, reg_str_inserted_impact_deskewed, reg_strong],
-    #                   stars=True, float_format='%0.2f',
-    #                   info_dict={
-    #     'N': lambda x: "{0:d}".format(int(x.nobs)),
-    #     'R2': lambda x: "{:.3f}".format(x.rsquared)
-    # }
-    # ).as_latex())
