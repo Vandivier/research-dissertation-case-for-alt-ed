@@ -87,16 +87,23 @@ def getData(dropFirstDummy=True):
         "favor_programming_career",
         "favor_seeking_risk",
         "hirability",
+        "skill_physical_attractiveness_ideal_job_applicant",
+        "skill_physical_attractiveness_typical_employee_at_my_company",
+        "skill_physical_attractiveness_recent_college_graduate"
     ]] = df[[
         "expected_conventionality",
         "favor_online_ed",
         "favor_programming_career",
         "favor_seeking_risk",
         "hirability",
+        "skill_physical_attractiveness_ideal_job_applicant",
+        "skill_physical_attractiveness_typical_employee_at_my_company",
+        "skill_physical_attractiveness_recent_college_graduate"
         ]].apply(pd.to_numeric)
 
-    # drop Other gender bc n=2 is too small (maybe revisit here or in seperate analysis if over say a dozen)
-    df = df[df.gender != "Other"]
+
+    df['is_serious'] = df.apply(compute_fraud_flag, axis=1)
+    # compute_fraud_flag(df)
 
     # df = pd.get_dummies(df, columns=['manager_effects']).rename(
     #     fsReformatColumnNames, axis='columns').rename(columns={
@@ -150,12 +157,36 @@ def getData(dropFirstDummy=True):
     print("---\n")
     return df
 
+def compute_fraud_flag(row=None):
+    # rudimentary fraud detection algo: if they put the same answer every time for skills, consider it fraud
+    # compute suspected fraud response value as average of first 3 skill questions
+    # give an allowance of varied answers up to arbitrarily threshold, still call it fraud
+    # tuned based on manual input data review, threshold = 3 (like, 3 is OK, less is fraud)
+    allowance_remaining = 2
+    sus_skill_value = (row.skill_physical_attractiveness_ideal_job_applicant \
+            + row.skill_physical_attractiveness_typical_employee_at_my_company \
+            + row.skill_physical_attractiveness_recent_college_graduate)/3
+
+    # for column in row.columns.values.tolist():
+    #     if re.match("skill_", column):
+    #         fraud_candidate_value = int(row[column])
+    #         if fraud_candidate_value == sus_skill_value:
+    #             allowance_remaining -= 1
+    #             if allowance_remaining < 1:
+    #                 return False, sus_skill_value
+
+    return True, sus_skill_value
 
 # drop out-of-quartile to reduce skew
 # intended to reduce skew and kurtosis
 # tradeoff is analytical restriction (hopefully unimportant)
 def getDeskewedData(dropFirstDummy=True):
     df = getData(dropFirstDummy)
+
+    # drop Other gender bc n=2 is too small (maybe revisit here or in seperate analysis if over say a dozen)
+    df = df[df.gender != "Other"]
+    df = df[df.is_serious == True]
+
     return df.drop(df[df['hirability'] < 5].index)
 
 
