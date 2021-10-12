@@ -81,29 +81,16 @@ def getData(dropFirstDummy=True):
     df = df.rename(columns=lambda x: re.sub(r'for_many_professions_learning_at_this_school_can_qualify_a_person_for_an_entry_level_position',
         'school_hirability_', x))
 
-    df[[
+    favorability_columns = [s for s in df.columns if 'favor_' in s]
+    other_column_to_numerize = [
         "expected_conventionality",
-        "favor_online_ed",
-        "favor_programming_career",
-        "favor_seeking_risk",
         "hirability",
-        "skill_physical_attractiveness_ideal_job_applicant",
-        "skill_physical_attractiveness_typical_employee_at_my_company",
-        "skill_physical_attractiveness_recent_college_graduate"
-    ]] = df[[
-        "expected_conventionality",
-        "favor_online_ed",
-        "favor_programming_career",
-        "favor_seeking_risk",
-        "hirability",
-        "skill_physical_attractiveness_ideal_job_applicant",
-        "skill_physical_attractiveness_typical_employee_at_my_company",
-        "skill_physical_attractiveness_recent_college_graduate"
-        ]].apply(pd.to_numeric)
-
+    ]
+    skill_columns = [s for s in df.columns if 'skill_' in s]
+    column_names_to_numerize = favorability_columns + other_column_to_numerize + skill_columns
+    df[column_names_to_numerize] = df[column_names_to_numerize].apply(pd.to_numeric)
 
     df['is_serious'] = df.apply(compute_fraud_flag, axis=1)
-    # compute_fraud_flag(df)
 
     # df = pd.get_dummies(df, columns=['manager_effects']).rename(
     #     fsReformatColumnNames, axis='columns').rename(columns={
@@ -163,19 +150,32 @@ def compute_fraud_flag(row=None):
     # give an allowance of varied answers up to arbitrarily threshold, still call it fraud
     # tuned based on manual input data review, threshold = 3 (like, 3 is OK, less is fraud)
     allowance_remaining = 2
-    sus_skill_value = (row.skill_physical_attractiveness_ideal_job_applicant \
-            + row.skill_physical_attractiveness_typical_employee_at_my_company \
-            + row.skill_physical_attractiveness_recent_college_graduate)/3
+    count_done = 0
+    sus_skill_value = 0
 
-    # for column in row.columns.values.tolist():
-    #     if re.match("skill_", column):
-    #         fraud_candidate_value = int(row[column])
-    #         if fraud_candidate_value == sus_skill_value:
-    #             allowance_remaining -= 1
-    #             if allowance_remaining < 1:
-    #                 return False, sus_skill_value
+    for column in row.index:
+        if re.match("skill_", column):
+            curr_value = row[column]
 
-    return True, sus_skill_value
+            # > 0 is a quick NaN check
+            if curr_value > 0:
+                if count_done < 3:
+                    sus_skill_value += curr_value
+                    count_done += 1
+                elif count_done == 3:
+                    # get average of first three
+                    sus_skill_value = sus_skill_value / 3
+                    count_done += 1
+                elif count_done > 3:
+                    if curr_value != sus_skill_value:
+                        allowance_remaining -= 1
+                        if allowance_remaining < 1:
+                            return True
+
+    if sus_skill_value == 0:
+        return True
+    else:
+        return False
 
 # drop out-of-quartile to reduce skew
 # intended to reduce skew and kurtosis
@@ -204,3 +204,6 @@ if __name__ == '__main__':
     skewedData = getData(False)
     skewedData.to_csv('./alt-ed-metasurvey-wrangled.csv')
 
+    # TODO: touch faster if we implement deskewed as f(skewed)
+    deskewedData = getDeskewedData(False)
+    deskewedData.to_csv('./alt-ed-metasurvey-wrangled-deskewed.csv')
