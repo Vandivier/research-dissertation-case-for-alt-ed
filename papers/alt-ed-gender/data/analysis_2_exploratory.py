@@ -73,9 +73,6 @@ m4 = '''hirability ~
     + gender*favor_programming_career*favor_seeking_risk*industry
     + 1'''
 
-
-
-
 print(sm.OLS.from_formula(m4, data=deskewed).fit().summary())
 # I don't care about RLM bc coefficients are equal anyway
 # print(sm.RLM.from_formula(1, data=skewed).fit().summary())
