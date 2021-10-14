@@ -85,12 +85,15 @@ def getData(dropFirstDummy=True):
     other_column_to_numerize = [
         "expected_conventionality",
         "hirability",
+        "is_prefer_college_peer"
     ]
     skill_columns = [s for s in df.columns if 'skill_' in s]
     column_names_to_numerize = favorability_columns + other_column_to_numerize + skill_columns
     df[column_names_to_numerize] = df[column_names_to_numerize].apply(pd.to_numeric)
 
     df['is_serious'] = df.apply(compute_fraud_flag, axis=1)
+    # df['aetiwo_concientiousness'] = df.concientiousness_ideal - df.concientiousness_ngwac
+    df['is_tech'] = df.industry == "Information Technology"
 
     # df = pd.get_dummies(df, columns=['manager_effects']).rename(
     #     fsReformatColumnNames, axis='columns').rename(columns={
