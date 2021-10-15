@@ -6,7 +6,7 @@
 #    https://www.econjobrumors.com/topic/there-are-no-stata-14-and-stata-15-torrents
 # ref: https://dergipark.org.tr/en/download/article-file/744047
 
-# import numpy as np
+import numpy as np
 # import matplotlib.pyplot as plt  # To visualize
 import pandas as pd
 import re
@@ -81,18 +81,27 @@ def getData(dropFirstDummy=True):
     df = df.rename(columns=lambda x: re.sub(r'for_many_professions_learning_at_this_school_can_qualify_a_person_for_an_entry_level_position',
         'school_hirability_', x))
 
+    df['ocean'] = df['ocean'].replace(regex=r'[a-zA-Z\s]*', value='')
+    df.loc[df['ocean'].str.count(',') != 4, 'ocean'] = ''
+
+    df[['personality_o',
+        'personality_c',
+        'personality_e',
+        'personality_a',
+        'personality_n']] = df['ocean'].str.split(',', n=5, expand=True)
+
     favorability_columns = [s for s in df.columns if 'favor_' in s]
     other_column_to_numerize = [
         "expected_conventionality",
         "hirability",
         "is_prefer_college_peer"
     ]
+    personality_columns = [s for s in df.columns if 'personality_' in s]
     skill_columns = [s for s in df.columns if 'skill_' in s]
-    column_names_to_numerize = favorability_columns + other_column_to_numerize + skill_columns
+    column_names_to_numerize = favorability_columns + other_column_to_numerize + personality_columns + skill_columns
     df[column_names_to_numerize] = df[column_names_to_numerize].apply(pd.to_numeric)
 
     df['is_serious'] = df.apply(compute_fraud_flag, axis=1)
-    # df['aetiwo_concientiousness'] = df.concientiousness_ideal - df.concientiousness_ngwac
     df['is_tech'] = df.industry == "Information Technology"
 
     # df = pd.get_dummies(df, columns=['manager_effects']).rename(
