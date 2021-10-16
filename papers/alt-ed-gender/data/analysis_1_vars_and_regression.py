@@ -163,7 +163,6 @@ def compute_familiarity_count(row, familiarity_columns):
     total = 0
     for column in familiarity_columns:
         curr_value = row[column]
-        # pd.isna() or pd.isnull()
         if not pd.isnull(curr_value):
             total += 1
 
