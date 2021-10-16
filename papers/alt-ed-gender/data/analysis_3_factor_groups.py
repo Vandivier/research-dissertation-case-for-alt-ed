@@ -48,41 +48,32 @@ deskewed = analysis.getDeskewedData()
 
 # thoughts on alt creds
 # kind of question-begging: expected_conventionality
-# ar2 .27, r2 .70, n 86, AIC 275
+# note: surprise expected_conventionality and familiarity_count don't matter!
+# ar2 .42, r2 .77, n 99, AIC 293
 m11 = '''hirability ~
     + gender*favor_programming_career*favor_seeking_risk*industry
-    + TODO
-    + duration + expected_conventionality + familiarity_count + favor_online_ed
+    + expected_duration + expected_conventionality + familiarity_count + familiarity_count^2 + favor_online_ed
     + 1'''
 
 # personality
 # ar2 .27, r2 .70, n 86, AIC 275
-m11 = '''hirability ~
+m12 = '''hirability ~
     + gender*favor_programming_career*favor_seeking_risk*industry
     + grit + personality_o + personality_c + personality_e + personality_a + personality_n
     + 1'''
 
 # worldview
 # ar2 .51, r2 .81, n 99, AIC 276
-m12 = '''hirability ~
+m13 = '''hirability ~
     + gender*favor_programming_career*favor_seeking_risk*industry
     + worldview_description + worldview_continuous_activism + worldview_continuous_pro_foreign + worldview_continuous_pro_innovation + worldview_continuous_pro_regulation
     + 1'''
 
 # state
 # ar2 .43, r2 .83, n 99, AIC 281
-m13 = '''hirability ~
+m14 = '''hirability ~
     + gender*favor_programming_career*favor_seeking_risk*industry
     + state
     + 1'''
 
-# m11 = '''hirability ~
-#     + gender*favor_programming_career*favor_seeking_risk*industry
-#     + grit + personality_o + personality_c + personality_e + personality_a + personality_n
-#     + expected_duration
-#     + age + education + income + ethnicity + state
-#     + manager_effects + is_prefer_college_peer
-#     + worldview_activism + worldview_description + worldview_pro_foreign + worldview_pro_innovation + worldview_pro_regulation
-#     + 1'''
-
-print(sm.OLS.from_formula(m13, data=deskewed).fit().summary())
+print(sm.OLS.from_formula(m11, data=deskewed).fit().summary())
