@@ -88,6 +88,7 @@ def getData(dropFirstDummy=True):
         'personality_a',
         'personality_n']] = df['ocean'].str.split(',', n=5, expand=True)
 
+    familiarity_columns = [s for s in df.columns if 'familiarity_' in s]
     favorability_columns = [s for s in df.columns if 'favor_' in s]
     other_column_to_numerize = [
         "expected_conventionality",
@@ -100,8 +101,9 @@ def getData(dropFirstDummy=True):
     column_names_to_numerize = favorability_columns + other_column_to_numerize + personality_columns + skill_columns + worldview_columns
     df[column_names_to_numerize] = df[column_names_to_numerize].apply(pd.to_numeric)
 
-    df['familiarity_count'] = TODO
-    df['is_serious'] = df.apply(compute_fraud_flag, axis=1)
+    # axis=1 is also axis='columns'
+    df['familiarity_count'] = df.apply(lambda row: compute_familiarity_count(row, familiarity_columns), axis='columns')
+    df['is_serious'] = df.apply(compute_fraud_flag, axis='columns')
     df['is_tech'] = df.industry == "Information Technology"
 
     # df = pd.get_dummies(df, columns=['manager_effects']).rename(
@@ -155,6 +157,18 @@ def getData(dropFirstDummy=True):
     print("done getting data")
     print("---\n")
     return df
+
+
+def compute_familiarity_count(row, familiarity_columns):
+    total = 0
+    for column in familiarity_columns:
+        curr_value = row[column]
+        # pd.isna() or pd.isnull()
+        if not pd.isnull(curr_value):
+            total += 1
+
+    return total
+
 
 def compute_fraud_flag(row=None):
     # rudimentary fraud detection algo: if they put the same answer every time for skills, consider it fraud

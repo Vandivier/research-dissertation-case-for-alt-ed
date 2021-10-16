@@ -416,6 +416,32 @@ so workforce gender discrimination has been a non-issue since 2000 and probably 
 
 \section{Description of Data and Methodology}
 
+my empirical argument that sometimes, including in my use case, ar2>aic for model selection
+1. ar2 selects vars w p-value < .4 (not sure always true, but true for samples in 30-3000 range)
+2. i know from empirical evidence that industry is an important variable; including industry favored by ar2 and not by aic
+3. i should prefer aicc, dic, or waic to aic based on my knowledge anyway bc K>n for me
+4. I'm interested in factor identification and I consider a 'true model' to be one with no spurious or random variables; all vars must p<0.5
+
+%%% a discussion on selection criteria
+%%% AIC vs BIC vs AICc vs DIC vs WAIC vs MDL vs PCA vs stepwise
+%%% maybe should be a completeley different paper
+Economic Efficiency over Information-Theoretic Efficiency
+AIC has been called an 'efficient selection criterion' but this has an information-theoretic meaning rather than an economic-theoretic meaning
+it can be easily shown that a model with AIC informatic inefficiency is efficient under economic analysis.
+Further, AIC can be shown to overfit even on information-theoretic ground
+BIC is supposed to select a 'true model' and AIC makes no such claim but optimizes on error minimization instead
+There seems to be a conse
+# "Is the true model finite-dimensional or infinite-dimensional? There seems to be a consensus that for the
+#   former case, BIC should be preferred and AIC should be chosen for the latter."
+# 1) i think they use 'true model' differently than me, 2) I think my model is infinite-dimensional (and I would expect that for most models)
+# http://users.stat.umn.edu/~yangx374/papers/Pre-Print_2003-10_Biometrika.pdf
+for me, I consider a 'true model' to be one with neither omitted variable bias nor included variables bias, so p should be under 0.5
+  - and it's risky to exclude variables with p < 0.2 (ordinal logic plus signifiance:
+  we can naively dismiss due to possible model or measurement error
+  but it's hard to dismiss when we are still significant after an ordinal correction)
+% https://stats.stackexchange.com/questions/408267/justification-for-and-optimality-of-r2-adj-as-a-model-selection-criterion/548190
+
+
 % # each page of survey has a factor group. they are:
 % # 1. thoughts on alt creds
 % # 2. thoughts on rulebreakers

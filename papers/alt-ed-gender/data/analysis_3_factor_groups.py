@@ -12,6 +12,17 @@
 # well we can use mca instead of pca although i think they are technically equivalent:
 # https://academic.oup.com/ije/article/41/4/1207/690856
 # https://stats.stackexchange.com/questions/364685/is-mca-equivalent-to-pca-when-all-variables-are-binary
+# MDL model selection criteria?
+# https://machinelearningmastery.com/probabilistic-model-selection-measures/
+# AIC vs BIC
+# "Is the true model finite-dimensional or infinite-dimensional? There seems to be a consensus that for the
+#   former case, BIC should be preferred and AIC should be chosen for the latter."
+# 1) i think they use 'true model' differently than me, 2) I think my model is infinite-dimensional (and I would expect that for most models)
+# http://users.stat.umn.edu/~yangx374/papers/Pre-Print_2003-10_Biometrika.pdf
+# a threshold of n/K<40 as cutoff point for whether to use AICc or not, based on Burnham and Anderson
+# https://stats.stackexchange.com/questions/524258/why-does-the-akaike-information-criterion-aic-sometimes-favor-an-overfitted-mo?rq=1
+# i know from prior knowledge that industry matters, eg ar2>aic in my use case
+# https://stats.stackexchange.com/questions/548180/how-to-interpret-increase-to-aic-and-adjusted-r-squared
 
 # each page of survey has a factor group. they are:
 # 1. thoughts on alt creds
