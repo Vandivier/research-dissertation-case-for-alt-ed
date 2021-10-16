@@ -87,6 +87,31 @@ print("is_tech mean (fraction) invariant to gender is: " + str(deskewed.is_tech.
 print("\n")
 ## below analysis using deskewed data
 
+    # # pca and mca explored for dimensionality reduction
+    # # of high-dimension categorical industry and state variables, but not feasible due to partial responses
+    # # import prince
+    # # prince can also do a graph
+    # # 2 components make graphing easier
+    # # https://stackoverflow.com/questions/48521740/using-mca-package-in-python
+    # # https://github.com/MaxHalford/prince#multiple-correspondence-analysis-mca
+    # df_industry = pd.DataFrame(df.industry)
+    # mca = prince.MCA(
+    #     n_components=2,
+    #     n_iter=3,
+    #     copy=True,
+    #     check_input=True,
+    #     engine='auto',
+    #     random_state=7
+    # )
+    # mca = mca.fit(df_industry)
+    # df[['industry_mca_1',
+    #     'industry_mca_2']] = mca.transform(df.industry)
+    # # pca.fit(df.state)
+
+    # m1_mca = '''hirability ~
+    #     + industry_mca_1 + industry_mca_2
+    #     + 1'''
+
 # industry alone
 # ar2 .10, r2 .19, n 105, AIC 339
 m1 = '''hirability ~
@@ -157,7 +182,7 @@ m10 = '''hirability ~
     + covid_impact*gender
     + 1'''
 
-print(sm.OLS.from_formula(m10, data=deskewed).fit().summary())
+print(sm.OLS.from_formula(m1_mca, data=deskewed).fit().summary())
 
 # TODO: 1. swap industry categorical for is_tech boolean
 # TODO: 2. covid_impact*gender

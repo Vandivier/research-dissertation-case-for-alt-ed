@@ -6,11 +6,9 @@
 #    https://www.econjobrumors.com/topic/there-are-no-stata-14-and-stata-15-torrents
 # ref: https://dergipark.org.tr/en/download/article-file/744047
 
-import numpy as np
-# import matplotlib.pyplot as plt  # To visualize
 import pandas as pd
 import re
-# from sklearn.linear_model import LinearRegression
+# from sklearn.decomposition import PCA
 # from statsmodels.iolib.summary2 import summary_col
 
 
@@ -43,12 +41,12 @@ def getData(dropFirstDummy=True):
         "Do you contribute to hiring and firing decisions at your company?": "manager_effects",
         "For many professions, alternative credentials can qualify a person for an entry-level position.": "hirability",
         "Gender?": "gender",
-        "Government regulation helps ensure businesses treat individuals more fairly.": "worldview_pro_regulation",
+        "Government regulation helps ensure businesses treat individuals more fairly.": "worldview_continuous_pro_regulation",
         "Household Income?": "income",
         "How long do you believe it usually takes to obtain an alternative credential?": "expected_duration",
         "I enjoy taking risks": "favor_seeking_risk",
-        "I favor freer trade and migration with other nations": "worldview_pro_foreign",
-        "I have a high level of community engagement, participation, or activism related to my worldview.": "worldview_activism",
+        "I favor freer trade and migration with other nations": "worldview_continuous_pro_foreign",
+        "I have a high level of community engagement, participation, or activism related to my worldview.": "worldview_continuous_activism",
         "I prefer to hire or work with a person that has a college degree rather a person that holds a reputable certification or non-college credential.": "is_prefer_college_peer",
         "I think of a career in programming as enjoyable": "favor_programming_career",
         "It will soon become common for high school graduates to obtain alternative credentials instead of going to college.": "expected_conventionality",
@@ -60,7 +58,7 @@ def getData(dropFirstDummy=True):
         "What is the highest level of education you have completed?": "education",
         "What state do you reside in?": "state",
         "When you add up the pros and cons for online education, it's probably a good thing for society overall.": "favor_online_ed",
-        "When you add up the pros and cons for artificial intelligence, it's probably a good thing for society overall.": "worldview_pro_innovation",
+        "When you add up the pros and cons for artificial intelligence, it's probably a good thing for society overall.": "worldview_continuous_pro_innovation",
         "Which of these industries most closely matches your profession?": "industry",
         "Which race/ethnicity best describes you?": "ethnicity",
         "Which worldview best describes you?": "worldview_description",
@@ -98,9 +96,11 @@ def getData(dropFirstDummy=True):
     ]
     personality_columns = [s for s in df.columns if 'personality_' in s]
     skill_columns = [s for s in df.columns if 'skill_' in s]
-    column_names_to_numerize = favorability_columns + other_column_to_numerize + personality_columns + skill_columns
+    worldview_columns = [s for s in df.columns if 'worldview_continuous_' in s]
+    column_names_to_numerize = favorability_columns + other_column_to_numerize + personality_columns + skill_columns + worldview_columns
     df[column_names_to_numerize] = df[column_names_to_numerize].apply(pd.to_numeric)
 
+    df['familiarity_count'] = TODO
     df['is_serious'] = df.apply(compute_fraud_flag, axis=1)
     df['is_tech'] = df.industry == "Information Technology"
 

@@ -416,6 +416,21 @@ so workforce gender discrimination has been a non-issue since 2000 and probably 
 
 \section{Description of Data and Methodology}
 
+% # each page of survey has a factor group. they are:
+% # 1. thoughts on alt creds
+% # 2. thoughts on rulebreakers
+% # 3. occupational information
+% # 4. demographic information
+% # 5. personality information
+% # 6. ideological
+% # 7. covid impact
+% # 8. learning provider questions
+% # 9. perceived skill questions
+% 10th page is a thank you page that allows for paying participants
+
+% pca and mca explored for dimensionality reduction of high-dimension categorical industry and state variables, but not feasible due to partial responses
+% alternatives include: shrinkage (ridge, lasso, etc) or variable selection (best-subset, BFE), manual feature elimination (if a whole set is unimportant)
+
 1. deskewing data drops 3 samples (nbd)
 2. 2 other-gendered rows dropped bc sample's too small for meaningful analysis
 3. TODO: I still need to find and drop the "non-serious respondents"
@@ -437,6 +452,9 @@ Logistical regression is used to explain employment in the information technolog
 In both of these models, gender and gender interactions are inspected for utility as independent variables.
 
 % TODO: mention cross-validation and also two samples w/ how much of raw is captured in deskewed
+
+
+1. in non-pooled sample (Oct 2021) factors outnumber samples. so i tested models by factor group
 
 \section{Results}
 

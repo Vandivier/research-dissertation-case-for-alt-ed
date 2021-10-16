@@ -10,9 +10,14 @@ deskewed = analysis.getDeskewedData()
 
 # m1-m10 motivate starting with a four-way interaction. here i dump in the other IVs and reduce using various strategies
 # if gender is considered important in any reduced model, that will be interesting.
+# TODO: add skills...maybe PCA skills, industry, state, and personality? and worldview?
 m11 = '''hirability ~
     + gender*favor_programming_career*favor_seeking_risk*industry
     + grit + personality_o + personality_c + personality_e + personality_a + personality_n
+    + expected_duration
+    + age + education + income + ethnicity + state
+    + manager_effects + is_prefer_college_peer
+    + worldview_activism + worldview_description + worldview_pro_foreign + worldview_pro_innovation + worldview_pro_regulation
     + 1'''
 
 print(sm.OLS.from_formula(m11, data=deskewed).fit().summary())
