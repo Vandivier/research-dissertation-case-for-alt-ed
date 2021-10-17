@@ -72,7 +72,7 @@ def getData(dropFirstDummy=True):
     df = df.rename(columns=lambda x: re.sub(r'the_level_of','skill', x))
     df = df.rename(columns=lambda x: re.sub(r'the_willingness_to','skill', x))
     df = df.rename(columns=lambda x: re.sub(r'_held_by_a(n)?','', x))
-    df = df.rename(columns=lambda x: re.sub(r'non_college_graduate_with_an_alternative_credential','ncgwac', x))
+    df = df.rename(columns=lambda x: re.sub(r'non_college_graduate_with_an_alternative_credential','ngwac', x))
     df = df.rename(columns=lambda x: re.sub(r'willingness_to_break_formal_or_informal_rules_and_norms','break_rules', x))
     df = df.rename(columns=lambda x: re.sub(r'attention_to_detail_work_ethic_timeliness_and_organization_of_work','conscientiousness', x))
     df = df.rename(columns=lambda x: re.sub(r'commute_or_travel_to_a_workplace_or_even_as_a_part_of_the_daily_work_as_in_commercial_trucking','commute', x))
@@ -102,7 +102,6 @@ def getData(dropFirstDummy=True):
     column_names_to_numerize = favorability_columns + other_column_to_numerize + personality_columns + school_columns + skill_columns + worldview_columns
     df[column_names_to_numerize] = df[column_names_to_numerize].apply(pd.to_numeric)
 
-    # axis=1 is also axis='columns'
     df['familiarity_count'] = df.apply(lambda row: compute_familiarity_count(row, familiarity_columns), axis='columns')
     df['is_large_firm_size'] = df.apply(compute_is_large_firm_size, axis='columns')
     df['is_serious'] = df.apply(compute_fraud_flag, axis='columns')
@@ -111,52 +110,13 @@ def getData(dropFirstDummy=True):
     df['school_self_impressed'] = df.school_hirability_2 + df.school_hirability_3 + df.school_hirability_6 + df.school_hirability_7
     df['school_other_impressed'] = df.school_hirability_1 + df.school_hirability_3 + df.school_hirability_5 + df.school_hirability_7
 
-    # df = pd.get_dummies(df, columns=['manager_effects']).rename(
-    #     fsReformatColumnNames, axis='columns').rename(columns={
-    #         'manager_effects_yes': 'is_manager'})
-
     # df = pd.get_dummies(df, columns=['industry']).rename(
     #     fsReformatColumnNames, axis='columns')
-
-    # df = pd.get_dummies(df, columns=['income']).rename(
-    #     fsReformatColumnNames, axis='columns')
-
-    # df = pd.get_dummies(df, columns=['age']).rename(
-    #     fsReformatColumnNames, axis='columns')
-
-    # df = pd.get_dummies(df, columns=['education']).rename(
-    #     fsReformatColumnNames, axis='columns')
-
-    # df = pd.get_dummies(df, columns=['ethnicity']).rename(
-    #     fsReformatColumnNames, axis='columns')
-
-    # df = pd.get_dummies(df, columns=['state']).rename(
-    #     fsReformatColumnNames, axis='columns')
-
-    # df = pd.get_dummies(df, columns=['gender']).rename(
-    #     fsReformatColumnNames, axis='columns')
-
-    # df = pd.get_dummies(df, columns=['covid_impact']).rename(
-    #     fsReformatColumnNames, axis='columns')
-
-    # df = pd.get_dummies(df, columns=['covid_remote']).rename(
-    #     fsReformatColumnNames, axis='columns')
-
-    # df = pd.get_dummies(df, columns=['covid_fav_online']).rename(
-    #     fsReformatColumnNames, axis='columns')
-
     # if dropFirstDummy:
-    #     df.drop(columns=['manager_effects_no', 'industry_agriculture', 'income_prefer_not_to_answer',
-    #                      'age_60', 'education_ged', 'ethnicity_american_indian_or_alaskan_native',
-    #                      'state_alabama', 'gender_female', 'covid_impact_no_negative_impact_(or_a_positive_impact)',
-    #                      'covid_remote_no_increase_(or_a_decrease)', 'covid_fav_online_no_more_favorable_(or_less_favorable)'])
+    #     df.drop(columns=['industry_agriculture''])
 
     # help build long model formula
     print("\n+ ".join(list(df.columns)))
-
-    # TODO: custom vars.
-    # custom vars ref: https://kaijento.github.io/2017/04/22/pandas-create-new-column-sum/
-    # df['z'] = df.x + df.y
 
     print("\n---")
     print("done getting data")

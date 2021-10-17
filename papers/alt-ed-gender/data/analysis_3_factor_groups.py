@@ -124,7 +124,7 @@ print(sm.OLS.from_formula(m18_a, data=deskewed).fit().summary())
 # skill questions, p9
 #
 m19 = '''hirability ~
-    TODO
+    school_self_impressed + school_other_impressed
     + 1'''
 
-print(sm.OLS.from_formula(m18_a, data=deskewed).fit().summary())
+print(sm.OLS.from_formula(m19, data=deskewed).fit().summary())
