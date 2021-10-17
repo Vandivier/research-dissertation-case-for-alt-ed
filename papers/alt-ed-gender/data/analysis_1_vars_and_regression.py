@@ -110,6 +110,8 @@ def getData(dropFirstDummy=True):
     df['school_self_impressed'] = df.school_hirability_2 + df.school_hirability_3 + df.school_hirability_6 + df.school_hirability_7
     df['school_other_impressed'] = df.school_hirability_1 + df.school_hirability_3 + df.school_hirability_5 + df.school_hirability_7
 
+    compute_skill_gaps(df, skill_columns)
+
     # df = pd.get_dummies(df, columns=['industry']).rename(
     #     fsReformatColumnNames, axis='columns')
     # if dropFirstDummy:
@@ -171,6 +173,23 @@ def compute_is_large_firm_size(row=None):
     if row.firm_size in ["501-1,000", "1,001-5,000", "5,001-10,000", "10,000+"]:
         return True
     return False
+
+def compute_skill_gaps(df, skill_columns):
+    ideal_substring = "_ideal_job_applicant"
+
+    alt_ed_individual_levels = [s for s in df.columns if '_ngwac' in s]
+    college_grad_levels = [s for s in df.columns if 'recent_college_graduate' in s]
+    ideal_levels = [s for s in df.columns if ideal_substring in s]
+
+    for ideal_skill_name in ideal_levels:
+        # eg skill_commute_ideal_job_applicant -> skill_commute
+        skill_name, *ignored = ideal_skill_name.split(ideal_substring)
+        # ideal - alt_ed_individual_levels[index]
+        df["aetiwo" + "_" + skill_name] = 0
+        # df.apply(lambda row: compute_familiarity_count(row, familiarity_columns), axis='columns')
+        # aetiwno = Math.max(aetiwo, 0)
+        # rcgtiwo = ideal - college_grad_levels[index]
+        # rcgtiwno = Math.max(aetiwo, 0)
 
 # drop out-of-quartile to reduce skew
 # intended to reduce skew and kurtosis
