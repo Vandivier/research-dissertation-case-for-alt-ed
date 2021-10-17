@@ -49,31 +49,82 @@ deskewed = analysis.getDeskewedData()
 # thoughts on alt creds
 # kind of question-begging: expected_conventionality
 # note: surprise expected_conventionality and familiarity_count don't matter!
-# ar2 .42, r2 .77, n 99, AIC 293
+# ar2 .34, r2 .40, n 106, AIC 307
 m11 = '''hirability ~
-    + gender*favor_programming_career*favor_seeking_risk*industry
     + expected_duration + expected_conventionality + familiarity_count + familiarity_count^2 + favor_online_ed
     + 1'''
 
-# personality
-# ar2 .27, r2 .70, n 86, AIC 275
+# rulebreakers, p2
+# ar2 .39, r2 .54, n 105, AIC 309
 m12 = '''hirability ~
-    + gender*favor_programming_career*favor_seeking_risk*industry
+    + rulebreakers_risky + rulebreakers_culture_value + rulebreakers_mixed_bag
+    + 1'''
+
+# occupational info, p3
+# ar2 .04, r2 .28, n 105, AIC 357
+m13 = '''hirability ~
+    + firm_size + industry + is_prefer_college_peer + job_title_credentials + manager_effects
+    + 1'''
+
+# occupational info using is_large_firm_size
+# is_tech is harmful
+# ar2 .07, r2 .24, n 105, AIC 349
+m13_a = '''hirability ~
+    + is_large_firm_size + industry + is_prefer_college_peer + job_title_credentials + manager_effects
+    + 1'''
+
+# demographic info, p4
+# ar2 .26, r2 .61, n 105, AIC 340
+m14 = '''hirability ~
+    + state + gender + income + age + education + ethnicity
+    + 1'''
+
+# personality, p5
+# favor_programming_career is most significant
+# favor_seeking_risk is second most significant
+# ocean + grit alone fairly orthoganal to risk seeking and fav programming career
+# ar2 .01, r2 .10, n 86, AIC 285
+m15 = '''hirability ~
+    + favor_programming_career + favor_seeking_risk
     + grit + personality_o + personality_c + personality_e + personality_a + personality_n
     + 1'''
 
-# worldview
-# ar2 .51, r2 .81, n 99, AIC 276
-m13 = '''hirability ~
-    + gender*favor_programming_career*favor_seeking_risk*industry
-    + worldview_description + worldview_continuous_activism + worldview_continuous_pro_foreign + worldview_continuous_pro_innovation + worldview_continuous_pro_regulation
+# ideological questions, p6
+# interacting worldview_description*worldview_continuous_activism barely ticks up ar2 and also AIC (ambiguous)
+# ar2 .19, r2 .30, n 99, AIC 312
+m16 = '''hirability ~
+    + worldview_description*worldview_continuous_activism + worldview_continuous_pro_foreign + worldview_continuous_pro_innovation + worldview_continuous_pro_regulation
     + 1'''
 
-# state
-# ar2 .43, r2 .83, n 99, AIC 281
-m14 = '''hirability ~
-    + gender*favor_programming_career*favor_seeking_risk*industry
-    + state
+# covid, p7
+# interacting by gender reduces ar2; not helpful
+# ar2 .04, r2 .13, n 99, AIC 324
+m17 = '''hirability ~
+    covid_fav_online + covid_remote + covid_impact
     + 1'''
 
-print(sm.OLS.from_formula(m11, data=deskewed).fit().summary())
+# learning provider questions, p8
+# interacting by gender reduces ar2; not helpful
+# ar2 .01, r2 .09, n 99, AIC 326
+m18 = '''hirability ~
+    + school_hirability_ + school_hirability_1 + school_hirability_2 + school_hirability_3 + school_hirability_4
+    + school_hirability_5 + school_hirability_6 + school_hirability_7
+    + 1'''
+
+# learning provider questions with engineered features
+# school_other_impressed is most important effect
+# AIC suggests this is a better model compared to m18? totally insane
+# ar2 -.01, r2 .02, n 99, AIC 324
+m18_a = '''hirability ~
+    school_unaccredited_hirability + school_self_impressed + school_other_impressed
+    + 1'''
+
+print(sm.OLS.from_formula(m18_a, data=deskewed).fit().summary())
+
+# skill questions, p9
+#
+m19 = '''hirability ~
+    TODO
+    + 1'''
+
+print(sm.OLS.from_formula(m18_a, data=deskewed).fit().summary())

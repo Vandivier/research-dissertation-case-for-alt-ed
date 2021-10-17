@@ -96,15 +96,20 @@ def getData(dropFirstDummy=True):
         "is_prefer_college_peer"
     ]
     personality_columns = [s for s in df.columns if 'personality_' in s]
+    school_columns = [s for s in df.columns if 'school_hirability_' in s]
     skill_columns = [s for s in df.columns if 'skill_' in s]
     worldview_columns = [s for s in df.columns if 'worldview_continuous_' in s]
-    column_names_to_numerize = favorability_columns + other_column_to_numerize + personality_columns + skill_columns + worldview_columns
+    column_names_to_numerize = favorability_columns + other_column_to_numerize + personality_columns + school_columns + skill_columns + worldview_columns
     df[column_names_to_numerize] = df[column_names_to_numerize].apply(pd.to_numeric)
 
     # axis=1 is also axis='columns'
     df['familiarity_count'] = df.apply(lambda row: compute_familiarity_count(row, familiarity_columns), axis='columns')
+    df['is_large_firm_size'] = df.apply(compute_is_large_firm_size, axis='columns')
     df['is_serious'] = df.apply(compute_fraud_flag, axis='columns')
     df['is_tech'] = df.industry == "Information Technology"
+    df['school_unaccredited_hirability'] = df.school_hirability_ + df.school_hirability_1 + df.school_hirability_2 + df.school_hirability_3
+    df['school_self_impressed'] = df.school_hirability_2 + df.school_hirability_3 + df.school_hirability_6 + df.school_hirability_7
+    df['school_other_impressed'] = df.school_hirability_1 + df.school_hirability_3 + df.school_hirability_5 + df.school_hirability_7
 
     # df = pd.get_dummies(df, columns=['manager_effects']).rename(
     #     fsReformatColumnNames, axis='columns').rename(columns={
@@ -201,6 +206,11 @@ def compute_fraud_flag(row=None):
         return True
     else:
         return False
+
+def compute_is_large_firm_size(row=None):
+    if row.firm_size in ["501-1,000", "1,001-5,000", "5,001-10,000", "10,000+"]:
+        return True
+    return False
 
 # drop out-of-quartile to reduce skew
 # intended to reduce skew and kurtosis
