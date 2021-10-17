@@ -119,12 +119,89 @@ m18_a = '''hirability ~
     school_unaccredited_hirability + school_self_impressed + school_other_impressed
     + 1'''
 
-print(sm.OLS.from_formula(m18_a, data=deskewed).fit().summary())
-
 # skill questions, p9
-#
+# ae noncomparative skills with overqualification
+# replicate technical skill don't matter, soft skills more important
+# salary coefficient negative as expected (low demand for high price labor)
+# concientiousness and rulebreaker fx are moderate, interesting + replicated
+# ar2 -.03, r2 .11, n 99, AIC 335
 m19 = '''hirability ~
-    school_self_impressed + school_other_impressed
+    + skill_aetiwo_skill_physical_attractiveness
+    + skill_aetiwo_skill_emotional_intelligence
+    + skill_aetiwo_skill_salary
+    + skill_aetiwo_skill_written_communication_skill
+    + skill_aetiwo_skill_verbal_communication_skill
+    + skill_aetiwo_skill_body_language_communication_skill
+    + skill_aetiwo_skill_technical_job_skills
+    + skill_aetiwo_skill_conscientiousness
+    + skill_aetiwo_skill_break_rules
+    + skill_aetiwo_skill_customer_service_skill
+    + skill_aetiwo_skill_teamwork
+    + skill_aetiwo_skill_commute
+    + skill_aetiwo_skill_work_odd_hours_or_a_strange_schedule
     + 1'''
 
-print(sm.OLS.from_formula(m19, data=deskewed).fit().summary())
+# skill questions, p9
+# ae noncomparative skills without overqualification
+# replicate wno is better model on model specs (AIC, AR2, R2)
+# replicate technical skill don't matter (p>.5), soft skills more important
+# salary coefficient negative as expected (low demand for high price labor)
+# in wno model, attractiveness is p<.5 which gives some theoretical reason to prefer
+# concientiousness and rulebreaker fx are moderate, interesting + replicated
+# ar2 .15, r2 .02, n 99, AIC 330
+m20 = '''hirability ~
+    + skill_aetiwno_skill_physical_attractiveness
+    + skill_aetiwno_skill_emotional_intelligence
+    + skill_aetiwno_skill_salary
+    + skill_aetiwno_skill_written_communication_skill
+    + skill_aetiwno_skill_verbal_communication_skill
+    + skill_aetiwno_skill_body_language_communication_skill
+    + skill_aetiwno_skill_technical_job_skills
+    + skill_aetiwno_skill_conscientiousness
+    + skill_aetiwno_skill_break_rules
+    + skill_aetiwno_skill_customer_service_skill
+    + skill_aetiwno_skill_teamwork
+    + skill_aetiwno_skill_commute
+    + skill_aetiwno_skill_work_odd_hours_or_a_strange_schedule
+    + 1'''
+
+# skill questions, p9
+# ae comparative skills without overqualification
+# ar2 -.03, r2 .11, n 99, AIC 334
+m21 = '''hirability ~
+    + skill_comparative_wnoskill_physical_attractiveness
+    + skill_comparative_wnoskill_emotional_intelligence
+    + skill_comparative_wnoskill_salary
+    + skill_comparative_wnoskill_written_communication_skill
+    + skill_comparative_wnoskill_verbal_communication_skill
+    + skill_comparative_wnoskill_body_language_communication_skill
+    + skill_comparative_wnoskill_technical_job_skills
+    + skill_comparative_wnoskill_conscientiousness
+    + skill_comparative_wnoskill_break_rules
+    + skill_comparative_wnoskill_customer_service_skill
+    + skill_comparative_wnoskill_teamwork
+    + skill_comparative_wnoskill_commute
+    + skill_comparative_wnoskill_work_odd_hours_or_a_strange_schedule
+    + 1'''
+
+# skill questions, p9
+# ae comparative skills with neither relative nor absolute overqualification
+# prefer this bc model is comparable but interpretation is much easier (X never negative)
+# ar2 -.03, r2 .10, n 99, AIC 335
+m22 = '''hirability ~
+    + skill_comparative_no_relative_oqskill_physical_attractiveness
+    + skill_comparative_no_relative_oqskill_emotional_intelligence
+    + skill_comparative_no_relative_oqskill_salary
+    + skill_comparative_no_relative_oqskill_written_communication_skill
+    + skill_comparative_no_relative_oqskill_verbal_communication_skill
+    + skill_comparative_no_relative_oqskill_body_language_communication_skill
+    + skill_comparative_no_relative_oqskill_technical_job_skills
+    + skill_comparative_no_relative_oqskill_conscientiousness
+    + skill_comparative_no_relative_oqskill_break_rules
+    + skill_comparative_no_relative_oqskill_customer_service_skill
+    + skill_comparative_no_relative_oqskill_teamwork
+    + skill_comparative_no_relative_oqskill_commute
+    + skill_comparative_no_relative_oqskill_work_odd_hours_or_a_strange_schedule
+    + 1'''
+
+print(sm.OLS.from_formula(m22, data=deskewed).fit().summary())

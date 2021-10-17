@@ -195,6 +195,9 @@ def compute_skill_gaps(df):
         compute_with_no_overqualification(df, "skill_aetiwo_", "skill_aetiwno_", skill_name)
         df["skill_rcgtiwo_" + skill_name] = df[ideal_skill_name] - df[skill_name + recent_college_grad_substring]
         compute_with_no_overqualification(df, "skill_rcgtiwo_", "skill_rcgtiwno_", skill_name)
+        df["skill_comparative_wo" + skill_name] = df["skill_rcgtiwo_" + skill_name] - df["skill_aetiwo_" + skill_name]
+        df["skill_comparative_wno" + skill_name] = df["skill_rcgtiwo_" + skill_name] - df["skill_aetiwo_" + skill_name]
+        compute_with_no_overqualification(df, "skill_comparative_wno", "skill_comparative_no_relative_oq", skill_name)
 
 
 # drop out-of-quartile to reduce skew
