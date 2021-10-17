@@ -6,6 +6,7 @@
 #    https://www.econjobrumors.com/topic/there-are-no-stata-14-and-stata-15-torrents
 # ref: https://dergipark.org.tr/en/download/article-file/744047
 
+import numpy as np
 import pandas as pd
 import re
 # from sklearn.decomposition import PCA
@@ -72,6 +73,7 @@ def getData(dropFirstDummy=True):
     df = df.rename(columns=lambda x: re.sub(r'the_level_of','skill', x))
     df = df.rename(columns=lambda x: re.sub(r'the_willingness_to','skill', x))
     df = df.rename(columns=lambda x: re.sub(r'_held_by_a(n)?','', x))
+    df = df.rename(columns=lambda x: re.sub(r'_required_by_a(n)?','', x))
     df = df.rename(columns=lambda x: re.sub(r'non_college_graduate_with_an_alternative_credential','ngwac', x))
     df = df.rename(columns=lambda x: re.sub(r'willingness_to_break_formal_or_informal_rules_and_norms','break_rules', x))
     df = df.rename(columns=lambda x: re.sub(r'attention_to_detail_work_ethic_timeliness_and_organization_of_work','conscientiousness', x))
@@ -110,7 +112,7 @@ def getData(dropFirstDummy=True):
     df['school_self_impressed'] = df.school_hirability_2 + df.school_hirability_3 + df.school_hirability_6 + df.school_hirability_7
     df['school_other_impressed'] = df.school_hirability_1 + df.school_hirability_3 + df.school_hirability_5 + df.school_hirability_7
 
-    compute_skill_gaps(df, skill_columns)
+    compute_skill_gaps(df)
 
     # df = pd.get_dummies(df, columns=['industry']).rename(
     #     fsReformatColumnNames, axis='columns')
@@ -174,22 +176,26 @@ def compute_is_large_firm_size(row=None):
         return True
     return False
 
-def compute_skill_gaps(df, skill_columns):
-    ideal_substring = "_ideal_job_applicant"
+def compute_skill_gaps(df):
+    def compute_with_no_overqualification(df, prefix_from, prefix_to, skill_name):
+        df[prefix_to + skill_name] =  np.where(df[prefix_from + skill_name].isnull(), df[prefix_from + skill_name],
+            np.where(df[prefix_from + skill_name] > 0, df[prefix_from + skill_name], 0))
 
-    alt_ed_individual_levels = [s for s in df.columns if '_ngwac' in s]
-    college_grad_levels = [s for s in df.columns if 'recent_college_graduate' in s]
+    alt_ed_individual_substring = "_ngwac"
+    ideal_substring = "_ideal_job_applicant"
+    recent_college_grad_substring = "_recent_college_graduate"
+
     ideal_levels = [s for s in df.columns if ideal_substring in s]
 
     for ideal_skill_name in ideal_levels:
         # eg skill_commute_ideal_job_applicant -> skill_commute
         skill_name, *ignored = ideal_skill_name.split(ideal_substring)
         # ideal - alt_ed_individual_levels[index]
-        df["aetiwo" + "_" + skill_name] = 0
-        # df.apply(lambda row: compute_familiarity_count(row, familiarity_columns), axis='columns')
-        # aetiwno = Math.max(aetiwo, 0)
-        # rcgtiwo = ideal - college_grad_levels[index]
-        # rcgtiwno = Math.max(aetiwo, 0)
+        df["aetiwo_" + skill_name] = df[ideal_skill_name] - df[skill_name + alt_ed_individual_substring]
+        compute_with_no_overqualification(df, "aetiwo_", "aetiwno_", skill_name)
+        df["rcgtiwo_" + skill_name] = df[ideal_skill_name] - df[skill_name + recent_college_grad_substring]
+        df["rcgtiwno_" + skill_name] = np.where(df["rcgtiwo" + "_" + skill_name].isnull(), df["rcgtiwo" + "_" + skill_name],
+            np.where(df["rcgtiwo" + "_" + skill_name] > 0, df["rcgtiwo" + "_" + skill_name], 0))
 
 # drop out-of-quartile to reduce skew
 # intended to reduce skew and kurtosis
