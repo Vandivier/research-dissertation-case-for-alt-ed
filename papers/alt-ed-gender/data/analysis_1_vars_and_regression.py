@@ -191,10 +191,11 @@ def compute_skill_gaps(df):
         # eg skill_commute_ideal_job_applicant -> skill_commute
         skill_name, *ignored = ideal_skill_name.split(ideal_substring)
         # ideal - alt_ed_individual_levels[index]
-        df["aetiwo_" + skill_name] = df[ideal_skill_name] - df[skill_name + alt_ed_individual_substring]
-        compute_with_no_overqualification(df, "aetiwo_", "aetiwno_", skill_name)
-        df["rcgtiwo_" + skill_name] = df[ideal_skill_name] - df[skill_name + recent_college_grad_substring]
-        compute_with_no_overqualification(df, "rcgtiwo_", "rcgtiwno_", skill_name)
+        df["skill_aetiwo_" + skill_name] = df[ideal_skill_name] - df[skill_name + alt_ed_individual_substring]
+        compute_with_no_overqualification(df, "skill_aetiwo_", "skill_aetiwno_", skill_name)
+        df["skill_rcgtiwo_" + skill_name] = df[ideal_skill_name] - df[skill_name + recent_college_grad_substring]
+        compute_with_no_overqualification(df, "skill_rcgtiwo_", "skill_rcgtiwno_", skill_name)
+
 
 # drop out-of-quartile to reduce skew
 # intended to reduce skew and kurtosis
