@@ -16,7 +16,7 @@
 
 
 # import numpy as np
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 from sklearn import feature_selection, linear_model, metrics
 from scipy import stats
@@ -71,20 +71,31 @@ m23 = '''hirability ~
 
 # n = 86, K > 85, can't run a straight OLS
 # try lasso and elasticnet instead
-print(sm.OLS.from_formula(m23, data=deskewed).fit().summary())
+# print(sm.OLS.from_formula(m23, data=deskewed).fit().summary())
 
 kitchen_sink_model = sm.OLS.from_formula(m23, data=deskewed)
 
 y = kitchen_sink_model.endog
 X = kitchen_sink_model.exog
 
+# confirm constant col in X
+print("count of independent variables: " + str(len(kitchen_sink_model.exog_names)))
+print("Intercept is retained: " + str("Intercept" in kitchen_sink_model.exog_names))
+
 # https://scikit-learn.org/stable/auto_examples/linear_model/plot_lasso_and_elasticnet.html
 # https://scikit-learn.org/stable/modules/classes.html#regressors-with-variable-selection
 # note: some kinda issue bc these r2 are -1.609104...wtf that shouldn't happen
 # Split data in train set and test set
-n_samples = X.shape[0]
-X_train, y_train = X[:n_samples // 2], y[:n_samples // 2]
-X_test, y_test = X[n_samples // 2:], y[n_samples // 2:]
+n_X_samples = X.shape[0]
+n_y_samples = y.shape[0]
+
+X_train, y_train = X[:n_X_samples // 2], y[:n_X_samples // 2]
+X_test, y_test = X[n_X_samples // 2:], y[n_X_samples // 2:]
+
+print("count of X and y for full sample, train split, and test split below...")
+print(n_X_samples, n_y_samples)
+print(X_train.shape[0], y_train.shape[0])
+print(X_test.shape[0], y_test.shape[0])
 
 # #############################################################################
 # Lasso
@@ -92,7 +103,10 @@ X_test, y_test = X[n_samples // 2:], y[n_samples // 2:]
 alpha = 0.1
 lasso = linear_model.Lasso(alpha=alpha)
 
-y_pred_lasso = lasso.fit(X_train, y_train).predict(X_test)
+lasso_fit = lasso.fit(X_train, y_train)
+y_test_pred_lasso = lasso_fit.predict(X_train)
+y_train_pred_lasso = lasso_fit.predict(X_test)
+y_pred_lasso = y_train_pred_lasso
 # TODO: compute adjusted r2, formula below
 # https://stackoverflow.com/a/51038943/3931488
 r2_score_lasso = metrics.r2_score(y_test, y_pred_lasso)
@@ -121,4 +135,15 @@ print("r^2 on test data : %f" % r2_score_enet)
 # plt.legend(loc='best')
 # plt.title("Lasso $R^2$: %.3f, Elastic Net $R^2$: %.3f"
 #           % (r2_score_lasso, r2_score_enet))
-# plt.show()
+
+# https://stackoverflow.com/questions/41659535/valueerror-x-and-y-must-be-the-same-size
+plt.scatter(y_train, y_train_pred_lasso, color='red')
+plt.scatter(y_test, y_test_pred_lasso, color='blue')
+plt.show()
+
+
+# note: I'm freaked out that my lasso and elastic net have negative r-squared so trying ridge regression
+# https://stats.stackexchange.com/questions/123572/r-squared-for-elastic-net
+# ref: https://stats.stackexchange.com/questions/184029/what-is-elastic-net-regularization-and-how-does-it-solve-the-drawbacks-of-ridge/184031#184031
+# "elastic net is always preferred over lasso & ridge regression because it solves the limitations of both
+#   methods, while also including each as special cases"
