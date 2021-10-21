@@ -165,3 +165,14 @@ reg = linear_model.ElasticNetCV(cv=cv,
     max_iter=10000).fit(X, y)
 # r-squared .219 on basic optimization
 print(reg.score(X, y))
+print(reg.coef_)
+
+count_nonzero = 0
+for idx, name in enumerate(kitchen_sink_model.exog_names):
+    curr_beta = reg.coef_[idx]
+    if curr_beta != 0:
+        print(name)
+        print("encv beta: " + str())
+        count_nonzero += 1
+
+print("count nonzero: " + str(count_nonzero))
