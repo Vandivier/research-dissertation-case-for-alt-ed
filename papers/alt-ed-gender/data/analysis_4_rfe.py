@@ -159,20 +159,27 @@ if "chart=true" in sys.argv[1:]:
 # max_iter 10x default val, random_state 0 for no particular reason just to seed it
 cv = model_selection.LeaveOneOut()
 # reg = linear_model.LassoCV(cv=cv,
-# alpha=alpha, l1_ratio=0.7
 reg = linear_model.ElasticNetCV(cv=cv,
+    l1_ratio=0.0005,
     random_state=0,
     max_iter=10000).fit(X, y)
-# r-squared .219 on basic optimization
-print(reg.score(X, y))
-print(reg.coef_)
 
 count_nonzero = 0
 for idx, name in enumerate(kitchen_sink_model.exog_names):
     curr_beta = reg.coef_[idx]
     if curr_beta != 0:
         print(name)
-        print("encv beta: " + str())
+        print("encv beta: " + str(curr_beta))
         count_nonzero += 1
 
+print("r2: " + str(reg.score(X, y)))
 print("count nonzero: " + str(count_nonzero))
+
+
+# note "Automatic alpha grid generation is not supported for l1_ratio=0"
+# encv results:
+# [default] l1_ratio=0.5, r2=0.22, count_nonzero=7
+# [lasso] l1_ratio=1, r2=0.22, count_nonzero=5
+# [ridge-like] l1_ratio=0.01, r2=0.43, count_nonzero=78
+# [ridge-like] l1_ratio=0.005, r2=0.43, count_nonzero=105
+# [ridge-like] l1_ratio=0.0005, r2=0.39, count_nonzero=147
