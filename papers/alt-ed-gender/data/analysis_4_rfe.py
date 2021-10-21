@@ -15,13 +15,14 @@
 # https://stats.stackexchange.com/questions/223486/modelling-with-more-variables-than-data-points
 
 
+import analysis_1_vars_and_regression as analysis
+
 # import numpy as np
 import matplotlib.pyplot as plt
-
-from sklearn import feature_selection, linear_model, metrics
+from sklearn import feature_selection, linear_model, model_selection, metrics
 from scipy import stats
 import statsmodels.api as sm
-import analysis_1_vars_and_regression as analysis
+import sys
 
 deskewed = analysis.getDeskewedData()
 
@@ -85,7 +86,8 @@ print("Intercept is retained: " + str("Intercept" in kitchen_sink_model.exog_nam
 # https://scikit-learn.org/stable/auto_examples/linear_model/plot_lasso_and_elasticnet.html
 # https://scikit-learn.org/stable/modules/classes.html#regressors-with-variable-selection
 # note: some kinda issue bc these r2 are -1.609104...wtf that shouldn't happen
-# Split data in train set and test set
+# ref: "Why are my elastic net and lasso r-squared measures negative?" below
+#   https://stats.stackexchange.com/questions/548958/why-are-my-elastic-net-and-lasso-r-squared-measures-negative
 n_X_samples = X.shape[0]
 n_y_samples = y.shape[0]
 
@@ -136,14 +138,30 @@ print("r^2 on test data : %f" % r2_score_enet)
 # plt.title("Lasso $R^2$: %.3f, Elastic Net $R^2$: %.3f"
 #           % (r2_score_lasso, r2_score_enet))
 
-# https://stackoverflow.com/questions/41659535/valueerror-x-and-y-must-be-the-same-size
-plt.scatter(y_train, y_train_pred_lasso, color='red')
-plt.scatter(y_test, y_test_pred_lasso, color='blue')
-plt.show()
-
+if "chart=true" in sys.argv[1:]:
+    # https://stackoverflow.com/questions/41659535/valueerror-x-and-y-must-be-the-same-size
+    plt.scatter(y_train, y_train_pred_lasso, color='red')
+    plt.scatter(y_test, y_test_pred_lasso, color='blue')
+    plt.show()
 
 # note: I'm freaked out that my lasso and elastic net have negative r-squared so trying ridge regression
 # https://stats.stackexchange.com/questions/123572/r-squared-for-elastic-net
 # ref: https://stats.stackexchange.com/questions/184029/what-is-elastic-net-regularization-and-how-does-it-solve-the-drawbacks-of-ridge/184031#184031
 # "elastic net is always preferred over lasso & ridge regression because it solves the limitations of both
 #   methods, while also including each as special cases"
+
+# TODO: Lasso + elastic net with no split if LOO doesn't work...eek danger zone tho from a peer review perspective
+# TODO: leave one out - compute average factor importance rank or...?
+# https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeaveOneOut.html
+# Lasso CV https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LassoCV.html
+
+# https://stackoverflow.com/questions/20681864/lasso-on-sklearn-does-not-converge
+# max_iter 10x default val, random_state 0 for no particular reason just to seed it
+cv = model_selection.LeaveOneOut()
+# reg = linear_model.LassoCV(cv=cv,
+# alpha=alpha, l1_ratio=0.7
+reg = linear_model.ElasticNetCV(cv=cv,
+    random_state=0,
+    max_iter=10000).fit(X, y)
+# r-squared .219 on basic optimization
+print(reg.score(X, y))

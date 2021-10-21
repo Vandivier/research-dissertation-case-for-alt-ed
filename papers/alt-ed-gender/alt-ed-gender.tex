@@ -422,6 +422,13 @@ my empirical argument that sometimes, including in my use case, ar2>aic for mode
 3. i should prefer aicc, dic, or waic to aic based on my knowledge anyway bc K>n for me
 4. I'm interested in factor identification and I consider a 'true model' to be one with no spurious or random variables; all vars must p<0.5
 
+% test/train split LASSO and Elstatic Net were unable to find a decent model
+% i've been told it's due to sample size https://stats.stackexchange.com/questions/548958/why-are-my-elastic-net-and-lasso-r-squared-measures-negative
+% but small-n regularization/penalization is OK, standard rule ~30+ for t-tests is still advised
+% https://stats.stackexchange.com/questions/200242/minimum-number-of-observations-needed-for-penalized-regression
+% however cross-validation with leave-one-out over test/trial split
+% https://stats.stackexchange.com/questions/397722/is-it-a-good-idea-to-do-cross-validation-for-lasso-with-a-small-sample-size
+
 %%% a discussion on selection criteria
 %%% AIC vs BIC vs AICc vs DIC vs WAIC vs MDL vs PCA vs stepwise
 %%% maybe should be a completeley different paper
