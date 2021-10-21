@@ -16,11 +16,8 @@
 
 
 import analysis_1_vars_and_regression as analysis
-
-# import numpy as np
 import matplotlib.pyplot as plt
-from sklearn import feature_selection, linear_model, model_selection, metrics
-from scipy import stats
+from sklearn import linear_model, model_selection, metrics
 import statsmodels.api as sm
 import sys
 
@@ -28,8 +25,6 @@ deskewed = analysis.getDeskewedData()
 
 # If p > n, the lasso selects at most n variables
 # https://stats.stackexchange.com/questions/38299/if-p-n-the-lasso-selects-at-most-n-variables
-
-# maybe we want to do an elastic net?
 
 # large model, after selecting among skill gaps, without 4-way interaction
 m23 = '''hirability ~
@@ -150,8 +145,6 @@ if "chart=true" in sys.argv[1:]:
 # "elastic net is always preferred over lasso & ridge regression because it solves the limitations of both
 #   methods, while also including each as special cases"
 
-# TODO: Lasso + elastic net with no split if LOO doesn't work...eek danger zone tho from a peer review perspective
-# TODO: leave one out - compute average factor importance rank or...?
 # https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LeaveOneOut.html
 # Lasso CV https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LassoCV.html
 
@@ -160,26 +153,45 @@ if "chart=true" in sys.argv[1:]:
 cv = model_selection.LeaveOneOut()
 # reg = linear_model.LassoCV(cv=cv,
 reg = linear_model.ElasticNetCV(cv=cv,
-    l1_ratio=0.0005,
+    l1_ratio=1,
     random_state=0,
     max_iter=10000).fit(X, y)
 
-count_nonzero = 0
+names_nonzero = []
+gender_vars = []
 for idx, name in enumerate(kitchen_sink_model.exog_names):
     curr_beta = reg.coef_[idx]
     if curr_beta != 0:
         print(name)
         print("encv beta: " + str(curr_beta))
-        count_nonzero += 1
+        names_nonzero.append(name)
+        if "gender" in name or "Male" in name:
+            gender_vars.append(name)
 
 print("r2: " + str(reg.score(X, y)))
-print("count nonzero: " + str(count_nonzero))
+print("count nonzero: " + str(len(names_nonzero)))
+print("gender vars" + str(gender_vars))
 
+# 165 vars before any filtering
+# top 5 factors from lasso:
+# expected_conventionality
+# encv beta: 0.0827693639058993
+# favor_online_ed
+# encv beta: 0.1302870909362811
+# personality_o
+# encv beta: 0.006483753647500249
+# worldview_continuous_activism
+# encv beta: 0.01391413495323635
+# school_other_impressed
+# encv beta: 0.006155903666052383
 
 # note "Automatic alpha grid generation is not supported for l1_ratio=0"
 # encv results:
-# [default] l1_ratio=0.5, r2=0.22, count_nonzero=7
-# [lasso] l1_ratio=1, r2=0.22, count_nonzero=5
-# [ridge-like] l1_ratio=0.01, r2=0.43, count_nonzero=78
-# [ridge-like] l1_ratio=0.005, r2=0.43, count_nonzero=105
-# [ridge-like] l1_ratio=0.0005, r2=0.39, count_nonzero=147
+# [lasso] l1_ratio=1, r2=0.22, count_nonzero=5, no gender vars
+# [default] l1_ratio=0.75, r2=0.21, count_nonzero=6, no gender vars
+# [default] l1_ratio=0.5, r2=0.22, count_nonzero=7, no gender vars
+# [ridge-like] l1_ratio=0.1, r2=0.17, count_nonzero=7, no gender vars
+# [ridge-like] l1_ratio=0.05, r2=0.41, count_nonzero=34, no gender vars
+# [ridge-like] l1_ratio=0.01, r2=0.43, count_nonzero=78, gender vars['gender[T.Male]']
+# [ridge-like] l1_ratio=0.005, r2=0.43, count_nonzero=105, gender vars['gender[T.Male]']
+# [ridge-like] l1_ratio=0.0005, r2=0.39, count_nonzero=147, gender vars['gender[T.Male]']
