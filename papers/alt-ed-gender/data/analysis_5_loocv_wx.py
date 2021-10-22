@@ -4,8 +4,7 @@
 
 
 import analysis_1_vars_and_regression as analysis
-import matplotlib.pyplot as plt
-from sklearn import linear_model, model_selection, metrics
+from sklearn import linear_model, model_selection
 import statsmodels.api as sm
 
 deskewed = analysis.getDeskewedData()

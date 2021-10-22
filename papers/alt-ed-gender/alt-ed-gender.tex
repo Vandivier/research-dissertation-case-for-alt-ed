@@ -422,6 +422,11 @@ my empirical argument that sometimes, including in my use case, ar2>aic for mode
 3. i should prefer aicc, dic, or waic to aic based on my knowledge anyway bc K>n for me
 4. I'm interested in factor identification and I consider a 'true model' to be one with no spurious or random variables; all vars must p<0.5
 
+my analysis would be improved by:
+  1. use multivariate selection instead of GenericUnivariateSelect; currently no widely-supported library seems to exist so this would need to be from scratch
+  2. merge data sets
+  3. more sophisticated analysis over time
+
 % test/train split LASSO and Elstatic Net were unable to find a decent model
 % i've been told it's due to sample size https://stats.stackexchange.com/questions/548958/why-are-my-elastic-net-and-lasso-r-squared-measures-negative
 % but small-n regularization/penalization is OK, standard rule ~30+ for t-tests is still advised
