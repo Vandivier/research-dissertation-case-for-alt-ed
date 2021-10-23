@@ -83,7 +83,7 @@ print("r2: " + str(reg.score(X, y)))
 print("count nonzero: " + str(len(names_nonzero)))
 print("gender vars" + str(gender_vars))
 
-# 165 vars before any filtering
+# 246 vars before any filtering
 # TODO: on what basis is LOOCV retaining factors? p-value? i don't think so.
 # top 5 factors from lasso:
 # favor_programming_career:favor_seeking_risk
@@ -97,6 +97,8 @@ print("gender vars" + str(gender_vars))
 # gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Information Technology]
 # encv beta: 0.00035693321766747094
 
+# single effect in top 2% of factors (maybe sus)
+#     strongly represented in top 10% of factors (6 of top 21 factors)
 # note: r2 doesn't have it's usual interpretation under an elastic net
 #   because "regularization wrecks orthogonality"
 #   ref: https://stats.stackexchange.com/questions/494274/why-does-regularization-wreck-orthogonality-of-predictions-and-residuals-in-line
@@ -109,6 +111,12 @@ print("gender vars" + str(gender_vars))
 # [ridge-like] l1_ratio=0.05, r2=0.09, count_nonzero=2, no gender vars
 # [ridge-like] l1_ratio=0.01, r2=0.09, count_nonzero=3, no gender vars
 # [ridge-like] l1_ratio=0.005, r2=0.08, count_nonzero=5, vars['gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Information Technology]']
-# [ridge-like] l1_ratio=0.0005, r2=0.12, count_nonzero=21, gender vars['gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Education]', 'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Finance, Investment, or Accounting]', 'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Health]', 'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Information Technology]', 'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Manufacturing]', 'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Transportation]']
+# [ridge-like] l1_ratio=0.0005, r2=0.12, count_nonzero=21, gender
+#   vars['gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Education]',
+#      'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Finance, Investment, or Accounting]',
+#      'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Health]',
+#      'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Information Technology]',
+#      'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Manufacturing]',
+#      'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Transportation]']
 # [ridge-like] l1_ratio=0.00005, r2=0.14, count_nonzero=116, many gender vars (not counting)
 # [ridge-like] l1_ratio=0.000005, r2=0.10, count_nonzero=187, many gender vars (not counting)

@@ -426,6 +426,7 @@ my analysis would be improved by:
   1. use multivariate selection instead of GenericUnivariateSelect; currently no widely-supported library seems to exist so this would need to be from scratch
   2. merge data sets
   3. more sophisticated analysis over time
+  4. backwards selection instead of forward selection or k-fold cross validation instead of leave-one-out; basically, requires far larger sample
 
 % test/train split LASSO and Elstatic Net were unable to find a decent model
 % i've been told it's due to sample size https://stats.stackexchange.com/questions/548958/why-are-my-elastic-net-and-lasso-r-squared-measures-negative
@@ -500,6 +501,11 @@ In both of these models, gender and gender interactions are inspected for utilit
     * OVERQUALIFICATION IS A FICTION - get Degreed guys to talk about this too; cross-validated in a new temporal context, see factor groups
 2. novel results
     * no relative overqualification; simpler mental model without loss of (statistically significant or economically important) generality
+
+note: we are theoretically safe by identifying a marginal effect as important invariant to it's level
+    so no I don't agree that if you include a higher order interaction you must include the lower order interaction (theoretical reason)
+    although I do agree it's worth checking - looks like stack exchange illuminati say check it and if it's not significant nbd
+    % https://stats.stackexchange.com/questions/236113/are-lower-order-interactions-a-prequisite-for-three-way-interactions-in-regressi
 
 %%% REVIEW PRIOR RESULTS, THEORIZE TRENDS
 1. one would be the covid effect, so test covid_impact*gender
