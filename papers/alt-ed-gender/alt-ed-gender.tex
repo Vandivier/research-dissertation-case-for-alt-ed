@@ -47,7 +47,7 @@
 
 \section{Introduction}
 
-This paper provides a survey of current knowledge and original empirical evidence to solve for the present gendered debt crisis.
+This paper provides a review of current knowledge and original empirical evidence to solve for the present gendered debt crisis.
 Given that sixty percent of college students are female[1],
 it is no surprise that about sixty percent of student debt is held by women in the United States[2].
 The problem of debt payoff is a harder task for the average woman.
@@ -89,64 +89,35 @@ Pew notes that women make up half of those employed in STEM fields,
 but only twenty-five percent of computer jobs
 and fifteen percent of engineering jobs[7].
 
-Software engineering and data engineering are at the intersection of computer-related jobs and engineering jobs.
+Software engineering and data engineering are at the intersection of computer-related jobs and engineering.
 A degree in computer science is the most common degree among software engineers[8].
-Figure TODO provides historic data by gender on computer science degree enrollment,
+Figure [FIG 1] provides historic data by gender on computer science degree enrollment,
 software engineering as a profession,
 and female graduation from coding bootcamps.
 
-Software engineers are referred to by a wide variety of job titles on the market.
-The division of Occupational Employment and Wage Statistics (OEWS)
-within the Bureau of Labor Statistics (BLS) currently captures these roles using OES 15-1256,
-15-1257, and 15-1251.
+Software engineers are also referred to as software developers and a number of other job titles on the market.
+% The division of Occupational Employment and Wage Statistics (OEWS)
+% within the Bureau of Labor Statistics (BLS) currently captures these roles using OES 15-1256,
+% 15-1257, and 15-1251.
 In 2013, the average salary for software developers was 92,820 dollars[10].
 This is a forty percent premium compared to the average STEM job using the earlier Burning Glass data.
-In short, specific facilitation of women into
+In short, increasing female labor in software development is a potent strategy to increase wages.
+Coding bootcamps are a known path to such increased participation, and the utilization of coding bootcamps
+involves a double-benefit because the cost of attendence is generally lower.
 
-TODO:
-"girls drop out of STEM subjects in their teens, discouraged by a lack of role models and a plethora of gender stereotypes."
+If coding bootcamps are so effective, why are they not already widely used?
+The present metastudy answers this question in three ways.
+First, I document that coding bootcamps are already widely used and usage is increasing.
+Second, I show that usage is associated with hirability.
+This provides evidence for specific predictive models that are reused in this paper for an updated future outlook.
+Third, I review ways in which the positive rate of adoption is currently constrained and can be strategically improved.
 
-% TODO: some other study: correct for agreement bias
-% people saying yes govt is good and yes ai is good and yes free trade is good...maybe better 'true feelings' if we normalize for
-% 1. individual effects and
-% 2. cross-individual agreement effects
+% note: the idea here is that present hirability explains both present and future usage
+%    I then technically predict hirability and implicitly predict on usage
 
 
-
-
-
-% # the unhelpful STEM distinction
-% 1. all fields are STEM. Specifically, technology cuts across every industry. Science is moderately useful and math isn't a professional field. Engineering is the only useful component of STEM.
-% 2. The move towards STEAM, inclusive of art, is even worse in regards to the amibguity problem and meaningful salary differences.
-% 3. my regressions show STEM is insignificant in a multiple regression and many people don't know whether their role or industry is STEM.
-% 4. focus on what matters: industry is more predictive than STEM and more meaningful, useful, and specific. It also makes action clearer with respect to the inequality issues that we all care about.
-Women earned 53 percent of STEM college degrees in 2018,
-Women earned 53% of STEM college degrees in 2018, smaller than their 58% share of all college degrees. The gender dynamics in STEM degree attainment mirror many of those seen across STEM job clusters. For instance, women earned 85% of the bachelor’s degrees in health-related fields, but just 22% in engineering and 19% in computer science as of 2018.
-
-[1]https://www.wsj.com/articles/college-university-fall-higher-education-men-women-enrollment-admissions-back-to-school-11630948233
-[2]https://educationdata.org/student-loan-debt-by-gender
-[3]https://fortune.com/2021/09/01/highest-paying-college-majors-starting-salaries/
-[4]https://nwlc.org/resources/january-jobs-day-2021/
-[5]https://www.burning-glass.com/research-project/stem/
-[6]https://www.nasa.gov/press-release/nasa-announces-virtual-webb-steam-day-event-for-students-educators
-[7]https://www.pewresearch.org/science/2021/04/01/stem-jobs-see-uneven-progress-in-increasing-gender-racial-and-ethnic-diversity/
-[8]https://www.careerexplorer.com/careers/software-engineer/education/
-[9]https://www.glassdoor.com/research/gender-pay-gap-2019/
-[10]https://codesubmit.io/blog/the-evolution-of-developer-salaries/#from-2013-to-2019
-
-assertiveness training:
- - https://www.shrm.org/resourcesandtools/hr-topics/behavioral-competencies/global-and-cultural-effectiveness/pages/study-gender-pay-gap-narrows-but-still-exists.aspx
-
-% FED: "For practical applications, 10 percent, on average, is a good estimate of the return [per year]"
-% https://www.stlouisfed.org/publications/regional-economist/january-2010/the-return-to-education-isnt-calculated-easily
-% Bryan would say that's a massive overestimate: probably cut it in half.
-% for one, Fed estimates presume the student is capable of completing another year of education, but according to Caplan this is unlikely
-% I agree w Bryan but alternative pathways can easily beat 10 percent anyway.
-% Table A1 for staters file:///D:/Downloads/.ptmp277819/completion.pdf
-% women are better students than men
-Alternative education allows for better return to education compared to the traditional bachelor's education.
-
-graphic 1
+[FIG 1] - SOURCE
+purpose 1: show share of female enrollment in CS programs vs coding bootcamps over time
 1. from 2017 to 2021, stack overflow consistently shows that about 75 percent of professional programmers have a bachelor's degree or higher
   - https://insights.stackoverflow.com/survey/2021
   - this measure wasn't available in prior years (and neither was gender breakdown by pro dev status)
@@ -168,11 +139,284 @@ graphic 1
    - Since then, Google and many other tech firms have dropped the degree requirement. Coincidence? hardly.
    - So it's true that women are overrepresented in college and underrepresented in CS programs, but that is a less material fact in Third Age of Online Education
 
-% TODO: validate whether prestige var independent from school favorability effects
-% I don't have prestige var here...oops
+[FIG 2] - SOURCE (could be a table)
+purpose: show bootcamps have been increasing relative to cs prog enrollment, and there is a coding bootcamp growth + favorability association
+1. cs program enrollment over time
+2. coding bootcamp enrollment over time
+3. coding bootcamp favorability over time
+
+
+\section{Methodology}
+
+% note: any time 'novel data' is referred to in this paper, it's referring to the new data I gathered in this paper
+The method of this paper follows a five-step process.
+First, I systematically review claims in the existing literature on hirability and alternative credentials.
+Second, I collect novel data for the purpose of replicating and testing claims in the existing literature.
+Third, I test some new hypotheses on the novel data set.
+Fourth, I perform a meta-analysis across current and prior findings.
+
+% note: dataset_vandivier includes "four survey administrations from February 2018 to May 2019"
+The papers in this systematic meta-analysis use a technical definition of hirability that first appears in [11].
+The seminal paper uses a public dataset that is hosted by Mendeley Data[12].
+The first group of papers considered for inclusion in this meta-analysis are
+papers that cite the seminal work or the associated dataset.
+In addition, all papers from any author in the first group are also considered.
+% Finally, the present paper is included as a special case.
+Papers that do not provide new data nor make any new predictions or claims related to hirability are excluded.
+
+Searches were conducted on Google Scholar, Google Dataset Search, Mendeley Data, and the Social Science Research Network (SSRN).
+Ten papers, including the present paper, were considered for inclusion.
+Five candidate papers are included in the analysis and five were excluded\footnote{
+    Three papers are excluded because they are unrelated to a study of hirability.
+    Two other papers are excluded because they lack new data, predictions, and claims.
+}.
+
+Each of the five papers in the meta-analysis follow a questionnaire design.
+Appendex A contains a copy of the questionnaire used to collect the novel data analyzed in this paper.
+This questionnaire was administered in October of 2021.
+Respondents are United States citizens at or over the age of eighteen.
+Qualified respondents participated in the survey through the Amazon Mechanical Turk platform.
+
+Responses are investigated using an exploratory data analysis (EDA),
+descriptive statistics,
+robust feature selection,
+and regression analysis.
+Descriptive statistics focus on identifying differences in questionnaire response by gender.
+Feature selection and regression analysis focus on identifying whether gender or gender-interacted variables
+explain differences in evaluation of alternative credentials or demand for a career in programming.
+Novel results are subsequently compared with other findings from the systematic review.
+
+EDA uncovered an interesting four-way interaction between
+the industry of occupation, gender, risk preference, and naive preference for a programming career.
+The subsequent section provides a detailed description of the whole dataset,
+but this singular finding resulted in a situation where the number of independent variables exceeded the number of samples.
+This fact of the dataset informs the methods of feature selection that are used.
+
+Robust feature selection is accomplished by conducting multiple feature selection algorithms.
+These algorithms include the elastic net, univariate selection, and sequential forward-selection (SFS).
+Leave-one-out cross-validation is used to tune the elastic net and terminate the SFS process.
+The elastic net is an ideal feature selection tool because it combines the benefits of ridge regression and the lasso regression
+while mitigating their respective drawbacks.
+Elastic net can be used with linear and logistic regression, with categorical variables or otherwise,
+and it is a recommended variable selection tool
+when the number of predictors ($k$) is larger than the number of observations ($n$)[13].
+
+Hirability is used as the main dependent variable for regression analysis,
+but two other dependent variables were also studied to ensure completeness and robustness of findings.
+Univariate selection is a trivial process that correlates features one-by-one to the dependent variable,
+or hirability in the case of this study.
+Univariate selection is not preferred to elastic net selection in large part because it does not account for colinearity.
+Still, features that are selected by univariate selection are relatively strong, so employing the method adds an interesting nuance to results.
+
+Several prior studies in the meta-analysis used recursive feature elimination (RFE).
+Recursive feature elimination involves including a large set of variables concurrently in a model and removing them one at a time
+until some condition is reached.
+Because $k > n$ in the current analysis, it is not possible to run a long regression of this type.
+RFE is relatively stable and generally preferred to SFS, but SFS is otherwise similar in nature to RFE.
+As a result, it is a useful tool for the purpose of replication and also for checking the robustness of findings produced by the elastic net.
+SFS is conducted using linear regression and also using scaled vector regression, which is somewhat orthogonal to the way the elastic net is computed.
+This means that SFS could potentially uncover interesting nonlinear relations that the elastic net may not consider.
+
+Finally, regression analysis is used to examine the magnitudes of the relatively small
+number of interesting independent variables identified through robust feature selection.
+Ordinary least squares (OLS) regression is conducted with two different dependent variables.
+Logistic regression is conducted with a third dependent variable.
+
+
+\section{Description of Data}
+
+
+This paper leverages a novel set of online questionnaire responses ($n = 114$)\footnote{
+    The data is available here TODO ANONYMIZE
+}.
+
+Novel dataset variables are a superset of variables from the other four papers, plus
+
+The questionnaire includes ninety-four questions.
+The responses to some questions, such as state of residence, yield categorical variables.
+One hundred and sixty-five
+
+
+my empirical argument that sometimes, including in my use case, ar2>aic for model selection
+1. ar2 selects vars w p-value < .4 (not sure always true, but true for samples in 30-3000 range)
+2. i know from empirical evidence that industry is an important variable; including industry favored by ar2 and not by aic
+3. i should prefer aicc, dic, or waic to aic based on my knowledge anyway bc K>n for me
+4. I'm interested in factor identification and I consider a 'true model' to be one with no spurious or random variables; all vars must p<0.5
+
+my analysis would be improved by:
+  1. use multivariate selection instead of GenericUnivariateSelect; currently no widely-supported library seems to exist so this would need to be from scratch
+  2. merge data sets
+  3. more sophisticated analysis over time
+  4. backwards selection instead of forward selection or k-fold cross validation instead of leave-one-out; basically, requires far larger sample
+
+% test/train split LASSO and Elstatic Net were unable to find a decent model
+% i've been told it's due to sample size https://stats.stackexchange.com/questions/548958/why-are-my-elastic-net-and-lasso-r-squared-measures-negative
+% but small-n regularization/penalization is OK, standard rule ~30+ for t-tests is still advised
+% https://stats.stackexchange.com/questions/200242/minimum-number-of-observations-needed-for-penalized-regression
+
+%%% a discussion on selection criteria
+%%% AIC vs BIC vs AICc vs DIC vs WAIC vs MDL vs PCA vs stepwise
+%%% maybe should be a completeley different paper
+Economic Efficiency over Information-Theoretic Efficiency
+AIC has been called an 'efficient selection criterion' but this has an information-theoretic meaning rather than an economic-theoretic meaning
+it can be easily shown that a model with AIC informatic inefficiency is efficient under economic analysis.
+Further, AIC can be shown to overfit even on information-theoretic ground
+BIC is supposed to select a 'true model' and AIC makes no such claim but optimizes on error minimization instead
+There seems to be a conse
+# "Is the true model finite-dimensional or infinite-dimensional? There seems to be a consensus that for the
+#   former case, BIC should be preferred and AIC should be chosen for the latter."
+# 1) i think they use 'true model' differently than me, 2) I think my model is infinite-dimensional (and I would expect that for most models)
+# http://users.stat.umn.edu/~yangx374/papers/Pre-Print_2003-10_Biometrika.pdf
+for me, I consider a 'true model' to be one with neither omitted variable bias nor included variables bias, so p should be under 0.5
+  - and it's risky to exclude variables with p < 0.2 (ordinal logic plus signifiance:
+  we can naively dismiss due to possible model or measurement error
+  but it's hard to dismiss when we are still significant after an ordinal correction)
+% https://stats.stackexchange.com/questions/408267/justification-for-and-optimality-of-r2-adj-as-a-model-selection-criterion/548190
+
+
+% # each page of survey has a factor group. they are:
+% # 1. thoughts on alt creds
+% # 2. thoughts on rulebreakers
+% # 3. occupational information
+% # 4. demographic information
+% # 5. personality information
+% # 6. ideological
+% # 7. covid impact
+% # 8. learning provider questions
+% # 9. perceived skill questions
+% 10th page is a thank you page that allows for paying participants
+
+% pca and mca explored for dimensionality reduction of high-dimension categorical industry and state variables, but not feasible due to partial responses
+% alternatives include: shrinkage (ridge, lasso, etc) or variable selection (best-subset, BFE), manual feature elimination (if a whole set is unimportant)
+
+1. deskewing data drops 3 samples (nbd)
+2. 2 other-gendered rows dropped bc sample's too small for meaningful analysis
+3. TODO: I still need to find and drop the "non-serious respondents"
+TODO: create flag for basically 'not serious respondent' and operationalize as "gave the same answer for all skill questions, with two or less exceptions"
+
+Regression analysis and mean difference tests are used to analyze the questionnaire responses.
+Differences in means are tested among variables relevant to various explanatory hypotheses.
+Specifically, favor_programming_career, favor_seeking_risk, hirability, is_prefer_college_peer
+
+Three other mean difference tests are used to test whether the present data set is consistent with other results found in the literature
+Specifically, likelihood to work in information technology and grit
+% https://www.sciencedirect.com/science/article/pii/S0732118X1930234X
+
+also test gender*covid_impact significance bc we think women disproportionately impacted by covid
+
+To ensure robustness, multiple regression methods are used with multiple independent variables.
+Ordinary least squares regression and vector regression are used to explain hirability.
+Logistical regression is used to explain employment in the information technology industry.
+In both of these models, gender and gender interactions are inspected for utility as independent variables.
+
+% TODO: mention cross-validation and also two samples w/ how much of raw is captured in deskewed
+
+
+1. in non-pooled sample (Oct 2021) factors outnumber samples. so i tested models by factor group
+
+\section{Results}
+
+1. findings: replicated and disputed compared to prior results
+    * OVERQUALIFICATION IS A FICTION - get Degreed guys to talk about this too; cross-validated in a new temporal context, see factor groups
+2. novel results
+    * no relative overqualification; simpler mental model without loss of (statistically significant or economically important) generality
+
+note: we are theoretically safe by identifying a marginal effect as important invariant to it's level
+    so no I don't agree that if you include a higher order interaction you must include the lower order interaction (theoretical reason)
+    although I do agree it's worth checking - looks like stack exchange illuminati say check it and if it's not significant nbd
+    % https://stats.stackexchange.com/questions/236113/are-lower-order-interactions-a-prequisite-for-three-way-interactions-in-regressi
+
+%%% REVIEW PRIOR RESULTS, THEORIZE TRENDS
+1. one would be the covid effect, so test covid_impact*gender
+2.  Conformity  and  perceived  skillgaps  explain  about  one-third  of  the  hirability  variance -> alt ed matching effects 2.pdf
+    * soft skills matter more than industry effects
+    * conformity reduces hirability on average
+    * Respondents tend to perceive ACNGcandidates as an even mix of high and low performers.  Evidence favors employerrisk aversion toward labor productivity as a preferred explanation of low ACNGdemand.
+
+m18_a vs m18 for anti-AIC
+
+%%% OCTOBER 2021 NOVEL RESULTS
+
+1. no diff in means for hirability, favor_programming_career, favor_seeking_risk by gender
+2. grit is closer to significance then those above, but still failed to detect (n=0.34)
+    - may indicate our sample is underpowered compared to other literature, will include this anyway.
+3. I do detect a strong mean diff with is_prefer_college_peer (men scored significantly higher)
+4. is_tech mean diff by gender expected but not found
+    - about 34 percent of my sample claims to be in information tech industry
+    - but overall economy would expect 7 percent: https://www.prnewswire.com/news-releases/us-tech-employment-surpasses-12-million-workers-accounts-for-10-of-nations-economy-301044415.html
+5. let's try to introduce gender. should it be interacted, added, both, or neither?
+    - we know that gender influences industry choice, so it might already be 'embedded' adding little to overall model power
+    % ref: m1-m4
+    - finding: gender insig in naive simple reg
+    - adding or interacting gender to industry reduces ar2 and aic
+
+
+
+
+
+%%% POOLED / PANELED SAMPLES BELOW
+
+Begin by testing industry alone. Prior research shows that gender plays a role in selecting industry.
+Now test interacting gender. Notice this reduces AIC and AR2. In other words,
+
+Now,
+
+Begin by creating an interaction for gender and risk seeking
+Then an interaction for gender and favor_programming_career
+Finally, an interaction for gender and industry
+
+
+Actionable Things:
+1.  assertiveness training:
+ - https://www.shrm.org/resourcesandtools/hr-topics/behavioral-competencies/global-and-cultural-effectiveness/pages/study-gender-pay-gap-narrows-but-still-exists.aspx
+
+
+\section{Conclusions}
+
+%# two begged questions in my conclusion: expected_conventionality, favor_programming_career -> scope for another study
+
+
+\bibliography{./BibFile}
+
+[1]https://www.wsj.com/articles/college-university-fall-higher-education-men-women-enrollment-admissions-back-to-school-11630948233
+[2]https://educationdata.org/student-loan-debt-by-gender
+[3]https://fortune.com/2021/09/01/highest-paying-college-majors-starting-salaries/
+[4]https://nwlc.org/resources/january-jobs-day-2021/
+[5]https://www.burning-glass.com/research-project/stem/
+[6]https://www.nasa.gov/press-release/nasa-announces-virtual-webb-steam-day-event-for-students-educators
+[7]https://www.pewresearch.org/science/2021/04/01/stem-jobs-see-uneven-progress-in-increasing-gender-racial-and-ethnic-diversity/
+[8]https://www.careerexplorer.com/careers/software-engineer/education/
+[9]https://www.glassdoor.com/research/gender-pay-gap-2019/
+[10]https://codesubmit.io/blog/the-evolution-of-developer-salaries/#from-2013-to-2019
+[11]https://www.tandfonline.com/doi/abs/10.1080/13504851.2020.1767279?journalCode=rael20
+[12]https://data.mendeley.com/datasets/75t88s6sdt/1
+[13]https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1467-9868.2005.00503.x
+
+\end{document}
+
+% POST-PAPER TODO ie FUTURE STUDY
+
+% TODO:
+% "girls drop out of STEM subjects in their teens, discouraged by a lack of role models and a plethora of gender stereotypes."
+
+% TODO: some other study: correct for agreement bias
+% people saying yes govt is good and yes ai is good and yes free trade is good...maybe better 'true feelings' if we normalize for
+% 1. individual effects and
+% 2. cross-individual agreement effects
+
+% % # the unhelpful STEM distinction
+% % 1. all fields are STEM. Specifically, technology cuts across every industry. Science is moderately useful and math isn't a professional field. Engineering is the only useful component of STEM.
+% % 2. The move towards STEAM, inclusive of art, is even worse in regards to the amibguity problem and meaningful salary differences.
+% % 3. my regressions show STEM is insignificant in a multiple regression and many people don't know whether their role or industry is STEM.
+% % 4. focus on what matters: industry is more predictive than STEM and more meaningful, useful, and specific. It also makes action clearer with respect to the inequality issues that we all care about.
+% Women earned 53 percent of STEM college degrees in 2018,
+% Women earned 53% of STEM college degrees in 2018, smaller than their 58% share of all college degrees. The gender dynamics in STEM degree attainment mirror many of those seen across STEM job clusters. For instance, women earned 85% of the bachelor’s degrees in health-related fields, but just 22% in engineering and 19% in computer science as of 2018.
+
+
+
+ASSORTED NOTES TO SELF
 
 single big question: what gender differences, if any, exist in favorability to alternative credentials?
-a survey
 
 bigger questions:
 1. is the college degree going away?
@@ -186,27 +430,9 @@ intro 1. review scope (lit review + limitted replication + contribute test for r
 pt 2 - do the lit review (review papers, factors, theories previously tested / established)
 pt 3 - preview results
 
-methodology
-
-results
-
-conclusions + future opportunities
-
-data ref: alt-ed-metasurvey
-
-I Want:
-4. Prestige
-
-I Have:
-1. Skill
-2. Grit + OCEAN
-3. COVID
-5. Standard sociological measures
-
 % cite: weak correlation https://wol.iza.org/articles/measuring-individual-risk-preferences/long
 % author above says `Survey measures lack a clear connection to theory' -> signaling model solves that (perceived risk > actual risk in hiring decision)
 % 'enjoy taking risks' phrasing a. taken from above and b. consistent with programming career orientation (an alternative to people-thing orientation measure)
-+ add a direct measure of risk tolerance?
 
 % in our use case if we ultimately care about landing programmers a job, then RIASEC is not only overkill but it is also a noisey and indirect indicator
 % future work which seeks to look at alternative credentials outside of programming should incorporate a full RIASEC,
@@ -261,7 +487,6 @@ how do i complete people-things from RIASEC?
 %
 % python and riasec https://www.learnpythonwithrune.org/pandas-explore-datasets-by-visualization-exploring-the-holland-code-riasec-test/
 
-TODO?
 % 3. "5-Factor Conservatism" and Gender (could be it's own paper)
 %     a. anti-innovation bias, or status quo bias; represents the gradualist aspect
 %     b. antiforeign bias represents the nationalist aspect
@@ -414,144 +639,4 @@ https://www.dol.gov/agencies/wb/data/facts-over-time/women-in-the-labor-force#la
 
 so workforce gender discrimination has been a non-issue since 2000 and probably well before then
 
-\section{Description of Data and Methodology}
 
-my empirical argument that sometimes, including in my use case, ar2>aic for model selection
-1. ar2 selects vars w p-value < .4 (not sure always true, but true for samples in 30-3000 range)
-2. i know from empirical evidence that industry is an important variable; including industry favored by ar2 and not by aic
-3. i should prefer aicc, dic, or waic to aic based on my knowledge anyway bc K>n for me
-4. I'm interested in factor identification and I consider a 'true model' to be one with no spurious or random variables; all vars must p<0.5
-
-my analysis would be improved by:
-  1. use multivariate selection instead of GenericUnivariateSelect; currently no widely-supported library seems to exist so this would need to be from scratch
-  2. merge data sets
-  3. more sophisticated analysis over time
-  4. backwards selection instead of forward selection or k-fold cross validation instead of leave-one-out; basically, requires far larger sample
-
-% test/train split LASSO and Elstatic Net were unable to find a decent model
-% i've been told it's due to sample size https://stats.stackexchange.com/questions/548958/why-are-my-elastic-net-and-lasso-r-squared-measures-negative
-% but small-n regularization/penalization is OK, standard rule ~30+ for t-tests is still advised
-% https://stats.stackexchange.com/questions/200242/minimum-number-of-observations-needed-for-penalized-regression
-% however cross-validation with leave-one-out over test/trial split
-% https://stats.stackexchange.com/questions/397722/is-it-a-good-idea-to-do-cross-validation-for-lasso-with-a-small-sample-size
-
-%%% a discussion on selection criteria
-%%% AIC vs BIC vs AICc vs DIC vs WAIC vs MDL vs PCA vs stepwise
-%%% maybe should be a completeley different paper
-Economic Efficiency over Information-Theoretic Efficiency
-AIC has been called an 'efficient selection criterion' but this has an information-theoretic meaning rather than an economic-theoretic meaning
-it can be easily shown that a model with AIC informatic inefficiency is efficient under economic analysis.
-Further, AIC can be shown to overfit even on information-theoretic ground
-BIC is supposed to select a 'true model' and AIC makes no such claim but optimizes on error minimization instead
-There seems to be a conse
-# "Is the true model finite-dimensional or infinite-dimensional? There seems to be a consensus that for the
-#   former case, BIC should be preferred and AIC should be chosen for the latter."
-# 1) i think they use 'true model' differently than me, 2) I think my model is infinite-dimensional (and I would expect that for most models)
-# http://users.stat.umn.edu/~yangx374/papers/Pre-Print_2003-10_Biometrika.pdf
-for me, I consider a 'true model' to be one with neither omitted variable bias nor included variables bias, so p should be under 0.5
-  - and it's risky to exclude variables with p < 0.2 (ordinal logic plus signifiance:
-  we can naively dismiss due to possible model or measurement error
-  but it's hard to dismiss when we are still significant after an ordinal correction)
-% https://stats.stackexchange.com/questions/408267/justification-for-and-optimality-of-r2-adj-as-a-model-selection-criterion/548190
-
-
-% # each page of survey has a factor group. they are:
-% # 1. thoughts on alt creds
-% # 2. thoughts on rulebreakers
-% # 3. occupational information
-% # 4. demographic information
-% # 5. personality information
-% # 6. ideological
-% # 7. covid impact
-% # 8. learning provider questions
-% # 9. perceived skill questions
-% 10th page is a thank you page that allows for paying participants
-
-% pca and mca explored for dimensionality reduction of high-dimension categorical industry and state variables, but not feasible due to partial responses
-% alternatives include: shrinkage (ridge, lasso, etc) or variable selection (best-subset, BFE), manual feature elimination (if a whole set is unimportant)
-
-1. deskewing data drops 3 samples (nbd)
-2. 2 other-gendered rows dropped bc sample's too small for meaningful analysis
-3. TODO: I still need to find and drop the "non-serious respondents"
-TODO: create flag for basically 'not serious respondent' and operationalize as "gave the same answer for all skill questions, with two or less exceptions"
-
-Regression analysis and mean difference tests are used to analyze the questionnaire responses.
-Differences in means are tested among variables relevant to various explanatory hypotheses.
-Specifically, favor_programming_career, favor_seeking_risk, hirability, is_prefer_college_peer
-
-Three other mean difference tests are used to test whether the present data set is consistent with other results found in the literature
-Specifically, likelihood to work in information technology and grit
-% https://www.sciencedirect.com/science/article/pii/S0732118X1930234X
-
-also test gender*covid_impact significance bc we think women disproportionately impacted by covid
-
-To ensure robustness, multiple regression methods are used with multiple independent variables.
-Ordinary least squares regression and vector regression are used to explain hirability.
-Logistical regression is used to explain employment in the information technology industry.
-In both of these models, gender and gender interactions are inspected for utility as independent variables.
-
-% TODO: mention cross-validation and also two samples w/ how much of raw is captured in deskewed
-
-
-1. in non-pooled sample (Oct 2021) factors outnumber samples. so i tested models by factor group
-
-\section{Results}
-
-1. findings: replicated and disputed compared to prior results
-    * OVERQUALIFICATION IS A FICTION - get Degreed guys to talk about this too; cross-validated in a new temporal context, see factor groups
-2. novel results
-    * no relative overqualification; simpler mental model without loss of (statistically significant or economically important) generality
-
-note: we are theoretically safe by identifying a marginal effect as important invariant to it's level
-    so no I don't agree that if you include a higher order interaction you must include the lower order interaction (theoretical reason)
-    although I do agree it's worth checking - looks like stack exchange illuminati say check it and if it's not significant nbd
-    % https://stats.stackexchange.com/questions/236113/are-lower-order-interactions-a-prequisite-for-three-way-interactions-in-regressi
-
-%%% REVIEW PRIOR RESULTS, THEORIZE TRENDS
-1. one would be the covid effect, so test covid_impact*gender
-2.  Conformity  and  perceived  skillgaps  explain  about  one-third  of  the  hireability  variance -> alt ed matching effects 2.pdf
-    * soft skills matter more than industry effects
-    * conformity reduces hireability on average
-    * Respondents tend to perceive ACNGcandidates as an even mix of high and low performers.  Evidence favors employerrisk aversion toward labor productivity as a preferred explanation of low ACNGdemand.
-
-m18_a vs m18 for anti-AIC
-
-%%% OCTOBER 2021 NOVEL RESULTS
-
-1. no diff in means for hirability, favor_programming_career, favor_seeking_risk by gender
-2. grit is closer to significance then those above, but still failed to detect (n=0.34)
-    - may indicate our sample is underpowered compared to other literature, will include this anyway.
-3. I do detect a strong mean diff with is_prefer_college_peer (men scored significantly higher)
-4. is_tech mean diff by gender expected but not found
-    - about 34 percent of my sample claims to be in information tech industry
-    - but overall economy would expect 7 percent: https://www.prnewswire.com/news-releases/us-tech-employment-surpasses-12-million-workers-accounts-for-10-of-nations-economy-301044415.html
-5. let's try to introduce gender. should it be interacted, added, both, or neither?
-    - we know that gender influences industry choice, so it might already be 'embedded' adding little to overall model power
-    % ref: m1-m4
-    - finding: gender insig in naive simple reg
-    - adding or interacting gender to industry reduces ar2 and aic
-
-
-
-
-
-%%% POOLED / PANELED SAMPLES BELOW
-
-Begin by testing industry alone. Prior research shows that gender plays a role in selecting industry.
-Now test interacting gender. Notice this reduces AIC and AR2. In other words,
-
-Now,
-
-Begin by creating an interaction for gender and risk seeking
-Then an interaction for gender and favor_programming_career
-Finally, an interaction for gender and industry
-
-
-\section{Conclusions}
-
-%# two begged questions in my conclusion: expected_conventionality, favor_programming_career -> scope for another study
-
-
-\bibliography{./BibFile}
-
-\end{document}
