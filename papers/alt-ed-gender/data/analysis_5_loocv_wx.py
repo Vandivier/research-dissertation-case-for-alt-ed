@@ -64,7 +64,7 @@ print(n_X_samples, n_y_samples)
 
 cv = model_selection.LeaveOneOut()
 reg = linear_model.ElasticNetCV(cv=cv,
-    l1_ratio=0.000005,
+    l1_ratio=0.0001,
     random_state=0,
     max_iter=30000).fit(X, y)
 
@@ -112,11 +112,9 @@ print("gender vars" + str(gender_vars))
 # [ridge-like] l1_ratio=0.01, r2=0.09, count_nonzero=3, no gender vars
 # [ridge-like] l1_ratio=0.005, r2=0.08, count_nonzero=5, vars['gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Information Technology]']
 # [ridge-like] l1_ratio=0.0005, r2=0.12, count_nonzero=21, gender
-#   vars['gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Education]',
-#      'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Finance, Investment, or Accounting]',
-#      'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Health]',
-#      'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Information Technology]',
-#      'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Manufacturing]',
-#      'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Transportation]']
+# [ridge-like] l1_ratio=0.0003, r2=0.12, count_nonzero=34, many gender vars (not counting)
+# [ridge-like] l1_ratio=0.0002, r2=0.13, count_nonzero=56, many gender vars (not counting)
+# [ridge-like] l1_ratio=0.0001, r2=0.14, count_nonzero=79, many gender vars (not counting)
 # [ridge-like] l1_ratio=0.00005, r2=0.14, count_nonzero=116, many gender vars (not counting)
+# [ridge-like] l1_ratio=0.00001, r2=0.14, count_nonzero=188, many gender vars (not counting)
 # [ridge-like] l1_ratio=0.000005, r2=0.10, count_nonzero=187, many gender vars (not counting)
