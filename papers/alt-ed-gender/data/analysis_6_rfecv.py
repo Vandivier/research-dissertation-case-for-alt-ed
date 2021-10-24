@@ -29,6 +29,7 @@
 # If my understanding is correct, Lasso is intended for situations when you are still interested in the model itself, not only predictions.
 
 
+from mlxtend.feature_selection import SequentialFeatureSelector as sfs
 from sklearn import feature_selection, linear_model, model_selection, metrics, svm
 import statsmodels.api as sm
 import analysis_1_vars_and_regression as analysis
@@ -99,14 +100,23 @@ estimator_svr = svm.SVR(kernel="linear")
 #   It can be seen as a preprocessing step to an estimator."
 
 
-# 5 is default for RFECV but make it clear
-# force 3 features to select; by default only 1 or 2 survived depending on estimator
+# note: we have to do forward selection bc p > n, even though we know this method is non-ideal
 # ref: https://stats.stackexchange.com/questions/328358/fpr-fdr-and-fwe-for-feature-selection
-model_gus_fdr = feature_selection.GenericUnivariateSelect(score_func=feature_selection.f_classif, mode='fdr', param=0.5) # keep features which pass a cumulative p < 0.5
-model_gus_fwe = feature_selection.GenericUnivariateSelect(score_func=feature_selection.f_classif, mode='fwe', param=0.5) # keep features with univariate P < 0.5
-model_lr =  feature_selection.RFECV(estimator_lr, cv=cv, step=1)
-model_svr =  feature_selection.RFECV(estimator_svr, cv=cv, step=1)
+# keep best proportion where false discovery proportion < 0.5
+model_gus_fdr = feature_selection.GenericUnivariateSelect(score_func=feature_selection.f_classif, mode='fdr', param=0.5)
+# keep features which pass a cumulative p < 0.5
+model_gus_fwe = feature_selection.GenericUnivariateSelect(score_func=feature_selection.f_classif, mode='fwe', param=0.5)
+# 25 -> top 10 percent
+# ref: https://www.analyticsvidhya.com/blog/2021/04/forward-feature-selection-and-its-implementation/
+model_lr = sfs(estimator_lr, cv=cv, k_features=25, forward=True, verbose=2, scoring='neg_mean_squared_error')
+model_svr = sfs(estimator_svr, cv=cv, k_features=25, forward=True, verbose=2, scoring='neg_mean_squared_error')
+# model_lr = feature_selection.RFECV(estimator_lr, cv=cv, step=1)
+# model_svr = feature_selection.RFECV(estimator_svr, cv=cv, step=1)
 
+results_fdr = model_gus_fdr.fit(X, y)
+results_fwe = model_gus_fwe.fit(X, y)
+results_lr = model_lr.fit(X, y)
+results_svr = model_svr.fit(X, y)
 
 #   what about the old justification for adjusted r-squared? meh
 # `The algorithm drops features with P values greater than 0.5.`
@@ -130,38 +140,53 @@ model_svr =  feature_selection.RFECV(estimator_svr, cv=cv, step=1)
 # Thus, FDR procedures have greater power at the cost of increased rates of type I errors, i.e., rejecting null hypotheses that are actually true.[16]
 
 
-results_fdr = model_gus_fdr.fit(X, y)
-# results_fwe = model_gus_fwe.fit(X, y)
-# results_lr = model_lr.fit(X, y)
-# results_svr = model_svr.fit(X, y)
+# TODO: implement custom RFE, possibly using statsmodel for p-value access
+#       eh maybe save this for another paper; maxar2, p-value selection (0.5 default), or r-squared selection (1% default)
+#   I could implement as a python lib and write a paper about the python lib
+#   possible way to validate GenericMultivariateSelect:
 
-# # TODO: 1) use feature_importances_
-# # TODO: 2) implement custom RFE, possibly using statsmodel for p-value access
-# #       eh maybe save this for another paper; maxar2, p-value selection (0.5 default), or r-squared selection (1% default)
-# #   possible way to validate GenericMultivariateSelect:
-
+kitchen_sink_gender_columns = [col for col in kitchen_sink_model.exog_names if "gender" in col or "Male" in col]
+print("kitchen sink total var count: " + str(len(kitchen_sink_model.exog_names)))
+print("kitchen sink gender var count: " + str(len(kitchen_sink_gender_columns)))
+print("kitchen sink gender var %: " + str(len(kitchen_sink_gender_columns)/len(kitchen_sink_model.exog_names)))
 
 # ref: https://stackoverflow.com/questions/54560611/getting-the-features-names-form-selectkbest
+fdr_column_names = [column[0] for column in zip(kitchen_sink_model.exog_names, results_fdr.get_support()) if column[1]]
+fdr_gender_columns = [col for col in fdr_column_names if "gender" in col or "Male" in col]
+print("fdr result length: " + str(len(fdr_column_names)))
+print("fdr includes gender count: " + str((len(fdr_gender_columns))))
+# fdr gender percent is lower than input gender percent;
+#   this is consistent with good selection bc 1) it's not just a function of input percent
+#   and 2) we expected many gender interactions to be extraneous
+#   and 3) gender writ large seems to be a variable of moderate importance so we should not expect it to dominate the top variables
+print("fdr gender var %: " + str((len(fdr_gender_columns)/len(fdr_column_names))))
 
-column_names = [column[0]  for column in zip(kitchen_sink_model.exog_names, results_fdr.get_support()) if column[1]]
-print(column_names) # yep includes gender
-# # col_names_fdr = kitchen_sink_model.exog_names[results_fdr.get_support()]
-# # names_nonzero = []
-# # gender_vars = []
-# # for idx, name in enumerate(kitchen_sink_model.exog_names):
-# #     curr_beta = results_fdr.coef_[idx]
-# #     if curr_beta != 0:
-# #         print(name)
-# #         print("encv beta: " + str(curr_beta))
-# #         names_nonzero.append(name)
-# #         if "gender" in name or "Male" in name:
-# #             gender_vars.append(name)
+fwe_column_names = [column[0] for column in zip(kitchen_sink_model.exog_names, results_fwe.get_support()) if column[1]]
+fwe_gender_columns = [col for col in fwe_column_names if "gender" in col or "Male" in col]
+print("fwe result length: " + str(len(fwe_column_names)))
+print("fwe includes gender count: " + str((len(fwe_gender_columns))))
+print("fwe gender var %: " + str((len(fwe_gender_columns)/len(fwe_column_names))))
 
-# for idx, name in enumerate(col_names_fdr):
-#     print(name)
+lr_column_names = results_lr.k_feature_names_
+lr_gender_columns = [col for col in lr_column_names if "gender" in col or "Male" in col]
+print("lr result length: " + str(len(lr_column_names)))
+print("lr includes gender count: " + str((len(lr_gender_columns))))
+print("lr gender var %: " + str((len(lr_gender_columns)/len(lr_column_names))))
 
+svr_column_names = results_svr.k_feature_names_
+svr_gender_columns = [col for col in lr_column_names if "gender" in col or "Male" in col]
+print("lr result length: " + str(len(lr_column_names)))
+print("lr includes gender count: " + str((len(lr_gender_columns))))
+print("lr gender var %: " + str((len(lr_gender_columns)/len(lr_column_names))))
 
-# print("r2: " + str(results_fdr.score(X, y)))
-# print("count nonzero: " + str(len(names_nonzero)))
-# print("gender vars" + str(gender_vars))
+gender_vars = fdr_gender_columns + fwe_gender_columns + lr_gender_columns
+gender_var_counts_dict = {}
+for i in gender_vars:
+  gender_var_counts_dict[i] = gender_var_counts_dict.get(i, 0) + 1
+print("gender var counts across patterns: " + str(gender_var_counts_dict))
+
+# result log:
+# lr result length: 25
+# lr includes gender count: 0
+# lr gender var %: 0.0
 
