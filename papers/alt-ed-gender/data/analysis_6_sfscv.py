@@ -108,18 +108,17 @@ model_gus_fdr = feature_selection.GenericUnivariateSelect(score_func=feature_sel
 model_gus_fwe = feature_selection.GenericUnivariateSelect(score_func=feature_selection.f_classif, mode='fwe', param=0.5)
 # 25/246 -> top 10 percent
 # 62/246 -> top 25 percent
-# 82/246 -> top 33 percent
-# 86/246 -> top 35 percent
+# 86/246 -> top 35 percent (compare to analysis_5 findings at 35 percent)
 # ref: https://www.analyticsvidhya.com/blog/2021/04/forward-feature-selection-and-its-implementation/
 model_lr = sfs(estimator_lr, cv=cv, k_features=86, forward=True, verbose=2, scoring='neg_mean_squared_error')
-# model_svr = sfs(estimator_svr, cv=cv, k_features=123, forward=True, verbose=2, scoring='neg_mean_squared_error')
+model_svr = sfs(estimator_svr, cv=cv, k_features=86, forward=True, verbose=2, scoring='neg_mean_squared_error')
 # model_lr = feature_selection.RFECV(estimator_lr, cv=cv, step=1)
 # model_svr = feature_selection.RFECV(estimator_svr, cv=cv, step=1)
 
 results_fdr = model_gus_fdr.fit(X, y)
 results_fwe = model_gus_fwe.fit(X, y)
 results_lr = model_lr.fit(X, y, custom_feature_names=kitchen_sink_model.exog_names)
-# results_svr = model_svr.fit(X, y)
+results_svr = model_svr.fit(X, y, custom_feature_names=kitchen_sink_model.exog_names)
 
 #   what about the old justification for adjusted r-squared? meh
 # `The algorithm drops features with P values greater than 0.5.`
@@ -182,21 +181,20 @@ print("lr includes gender count: " + str((len(lr_gender_columns))))
 print("lr gender var %: " + str((len(lr_gender_columns)/len(lr_column_names))))
 print("lr gender indices: " + str(lr_gender_indices))
 
-# svr_column_names = results_svr.k_feature_names_
-# svr_gender_columns = []
-# svr_gender_indices = []
-# for idx, name in enumerate(svr_column_names):
-#   if "gender" in name or "Male" in name:
-#     svr_gender_columns.append(name)
-#     svr_gender_indices.append(idx)
+svr_column_names = results_svr.k_feature_names_
+svr_gender_columns = []
+svr_gender_indices = []
+for idx, name in enumerate(svr_column_names):
+  if "gender" in name or "Male" in name:
+    svr_gender_columns.append(name)
+    svr_gender_indices.append(idx)
 
-# print("svr result length: " + str(len(svr_column_names)))
-# print("svr includes gender count: " + str((len(svr_gender_columns))))
-# print("svr gender var %: " + str((len(svr_gender_columns)/len(svr_column_names))))
-# print("svr gender indices: " + str(svr_gender_indices))
+print("svr result length: " + str(len(svr_column_names)))
+print("svr includes gender count: " + str((len(svr_gender_columns))))
+print("svr gender var %: " + str((len(svr_gender_columns)/len(svr_column_names))))
+print("svr gender indices: " + str(svr_gender_indices))
 
-# gender_vars = fdr_gender_columns + fwe_gender_columns + lr_gender_columns + svr_gender_columns
-gender_vars = fdr_gender_columns + fwe_gender_columns + lr_gender_columns
+gender_vars = fdr_gender_columns + fwe_gender_columns + lr_gender_columns + svr_gender_columns
 gender_var_counts_dict = {}
 for i in gender_vars:
   gender_var_counts_dict[i] = gender_var_counts_dict.get(i, 0) + 1
