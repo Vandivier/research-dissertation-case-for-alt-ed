@@ -45,6 +45,7 @@
 \pagebreak
 \linenumbers
 
+
 \section{Introduction}
 
 This paper provides a review of current knowledge and original empirical evidence to solve for the present gendered debt crisis.
@@ -242,57 +243,128 @@ The majority of Likert-type questions use a 10-point scale, and such variables a
 %     particularly when the Likert scale is five or more points\cite{jaccard1996lisrel}.
 % }.
 
-
-Appendix TODO contains summary statistics
-All questions
-Novel dataset variables are a superset of variables from the other four papers, plus
-
-The questionnaire includes ninety-four questions.
-The responses to some questions, such as state of residence, yield categorical variables.
-One hundred and sixty-five
-
-
-
-The main variable of interest is hirability.
-which is a non-price indicator of willingness to hire on the basis of an alternative credential.
+Appendix TODO contains summary statistics for each variable.
+% Variables in this study are a superset of variables from the other four studies in the meta-analysis, plus three additional questions.
+% The three new questions are risk preference, naive preference for a programming career, and a categorical variable for worldview.
+% The three additional questions were each specifically motivated by one or more claims or predictions in one of the other four studies.
+The main dependent variable of interest is hirability,
+a non-price indicator of willingness to hire on the basis of an alternative credential.
+Two other variables that are investigated as both dependent and independent variables are
+employment in the information technology industry
+and naive preference for a programming career.
+% Investigating these three factors allows for both supply-side and demand-side analysis of the importance of gender with respect to alternative credential supply and demand.
 
 
-my empirical argument that sometimes, including in my use case, ar2>aic for model selection
-1. ar2 selects vars w p-value < .4 (not sure always true, but true for samples in 30-3000 range)
-2. i know from empirical evidence that industry is an important variable; including industry favored by ar2 and not by aic
-3. i should prefer aicc, dic, or waic to aic based on my knowledge anyway bc K>n for me
-4. I'm interested in factor identification and I consider a 'true model' to be one with no spurious or random variables; all vars must p<0.5
+% my empirical argument that sometimes, including in my use case, ar2>aic for model selection
+% 1. ar2 selects vars w p-value < .4 (not sure always true, but true for samples in 30-3000 range)
+% 2. i know from empirical evidence that industry is an important variable; including industry favored by ar2 and not by aic
+% 3. i should prefer aicc, dic, or waic to aic based on my knowledge anyway bc K>n for me
+% 4. I'm interested in factor identification and I consider a 'true model' to be one with no spurious or random variables; all vars must p<0.5
 
-my analysis would be improved by:
-  1. use multivariate selection instead of GenericUnivariateSelect; currently no widely-supported library seems to exist so this would need to be from scratch
-  2. merge data sets
-  3. more sophisticated analysis over time
-  4. backwards selection instead of forward selection or k-fold cross validation instead of leave-one-out; basically, requires far larger sample
 
 % test/train split LASSO and Elstatic Net were unable to find a decent model
 % i've been told it's due to sample size https://stats.stackexchange.com/questions/548958/why-are-my-elastic-net-and-lasso-r-squared-measures-negative
 % but small-n regularization/penalization is OK, standard rule ~30+ for t-tests is still advised
 % https://stats.stackexchange.com/questions/200242/minimum-number-of-observations-needed-for-penalized-regression
 
-%%% a discussion on selection criteria
-%%% AIC vs BIC vs AICc vs DIC vs WAIC vs MDL vs PCA vs stepwise
-%%% maybe should be a completeley different paper
-Economic Efficiency over Information-Theoretic Efficiency
-AIC has been called an 'efficient selection criterion' but this has an information-theoretic meaning rather than an economic-theoretic meaning
-it can be easily shown that a model with AIC informatic inefficiency is efficient under economic analysis.
-Further, AIC can be shown to overfit even on information-theoretic ground
-BIC is supposed to select a 'true model' and AIC makes no such claim but optimizes on error minimization instead
-There seems to be a conse
-# "Is the true model finite-dimensional or infinite-dimensional? There seems to be a consensus that for the
-#   former case, BIC should be preferred and AIC should be chosen for the latter."
-# 1) i think they use 'true model' differently than me, 2) I think my model is infinite-dimensional (and I would expect that for most models)
-# http://users.stat.umn.edu/~yangx374/papers/Pre-Print_2003-10_Biometrika.pdf
-for me, I consider a 'true model' to be one with neither omitted variable bias nor included variables bias, so p should be under 0.5
-  - and it's risky to exclude variables with p < 0.2 (ordinal logic plus signifiance:
-  we can naively dismiss due to possible model or measurement error
-  but it's hard to dismiss when we are still significant after an ordinal correction)
-% https://stats.stackexchange.com/questions/408267/justification-for-and-optimality-of-r2-adj-as-a-model-selection-criterion/548190
+% %%% a discussion on selection criteria
+% %%% AIC vs BIC vs AICc vs DIC vs WAIC vs MDL vs PCA vs stepwise
+% %%% maybe should be a completeley different paper
+% Economic Efficiency over Information-Theoretic Efficiency
+% AIC has been called an 'efficient selection criterion' but this has an information-theoretic meaning rather than an economic-theoretic meaning
+% it can be easily shown that a model with AIC informatic inefficiency is efficient under economic analysis.
+% Further, AIC can be shown to overfit even on information-theoretic ground
+% BIC is supposed to select a 'true model' and AIC makes no such claim but optimizes on error minimization instead
+% There seems to be a conse
+% # "Is the true model finite-dimensional or infinite-dimensional? There seems to be a consensus that for the
+% #   former case, BIC should be preferred and AIC should be chosen for the latter."
+% # 1) i think they use 'true model' differently than me, 2) I think my model is infinite-dimensional (and I would expect that for most models)
+% # http://users.stat.umn.edu/~yangx374/papers/Pre-Print_2003-10_Biometrika.pdf
+% for me, I consider a 'true model' to be one with neither omitted variable bias nor included variables bias, so p should be under 0.5
+%   - and it's risky to exclude variables with p < 0.2 (ordinal logic plus signifiance:
+%   we can naively dismiss due to possible model or measurement error
+%   but it's hard to dismiss when we are still significant after an ordinal correction)
+% % https://stats.stackexchange.com/questions/408267/justification-for-and-optimality-of-r2-adj-as-a-model-selection-criterion/548190
 
+
+\section{Results}
+
+% Figure \ref{fig:one}
+The novel questionnaire administered for the present gender analysis resulted in one hundred and fourteen responses.
+The mean hirability response is $8.1$ out of ten, and the median is $8$.
+Mean hirability among males is not significantly different from mean hirability among females ($p < 0.51$).
+Eight responses were dropped for three reasons and the remaining responses include some partial responses.
+In the cleaned dataset ($n = 106$), mean hirability is $8.2$ out of ten,
+the median remains at $8$, and hirability remains invariant by gender ($p < 0.68$).
+
+The purpose of the current study is to detect gender effects, but only two observations of "Other" gender were obtained.
+These responses were dropped because they are insufficient to yield meaningful statistical analysis.
+Three more responses were dropped for lack of variation in skill question responses.
+Three last responses were dropped as negative outliers in hirability response.
+These three negative outliers responded with a hirability of less than five.
+The remaining responses for hirability are approximately normal in distribution.
+
+Table TODO shows dates of observation, sample sizes, and mean hirability for the five papers in the meta-analysis.
+The collective data indicates a positive trend over time.
+Two explanations of a positive trend to hirability exist prior in the literature.
+The earliest theory is the concept of employer-led favorability[14].
+The second explanation is a positive exposure effect that results from coronavirus-induced remote activities[15].
+These theories are compatible with each other and they indiciate that hirability is expected to remain high
+to the extent that social activity remains remote, particularly with respect to industry norms.
+
+% note: does this block provide evidence that female openness dominates risk aversion?
+Risk preference did not differ significantly by gender ($n = 99, p < 0.57$)
+and naive preference for a programming career did not differ by gender ($n = 99, p < 0.74$).
+Preference for working with a peer that is a college graduate did differ significantly by gender ($n = 105, p < 0.05$).
+% TODO: is there a latex for start/end quotes?
+When asked to agree or disagree that, "I prefer to hire or work with a person that has a college degree
+rather [sic] a person that holds a reputable certification or non-college credential,"
+seventy-seven percent of men agreed while only fifty-eight percent of women agreed.
+High female enrollment into coding bootcamps
+relative to accredited computer science programs is not simply explained
+by differential interest in programming as a career,
+risk preference,
+or perceived value of alternative credentials.
+
+% TODO: cite men are things-oriented
+Professional psychology suggests that men tend to be things-oriented and therefore will prefer a career in software development.
+The current study presents conflicting evidence in that women and men do not differ in preference for a career in programming.
+The conflict can be reconciled by realizing that modern software development is largely collaborative and social.
+The social nature of modern programming is consistent with high value for soft skills as emphasized by one paper in the meta-study[16].
+A survey of software developers from Stack Overflow adds a nuance to the relationship between programming and things-oriented work.
+Programmers may specialize in a number of areas.
+Graphic designers, web developers, and mobile application developers are more frequently female.
+Systems and database administrators are more often male.
+Notice that those specialties that tend female are associated with user interfaces and graphics.
+This indicates that an explanation from orientation towards things or people works as a partial explanation of specialty selection,
+but the explanation fails at the aggregate level of the modern software development job family.
+Contrasting holistic and typical software development practices with the curriculum of a typical computer science program
+indicates an emphasis on things that may discourage female interest in the field of study,
+even while interest in the programming occupation persists.
+
+
+% # sample size for grit: 99
+% # grit mean diff test by gender: 0.33946185189778477
+
+
+% Did prestige differ by gender
+% Does time value or value of money differ by gender?
+
+
+
+
+# sample size for is_prefer_college_peer: 105
+# is_prefer_college_peer mean diff test by gender: 0.049402209115799844
+# is_prefer_college_peer mean for male: 0.7681159420289855
+# is_prefer_college_peer mean for female: 0.5833333333333334
+
+
+1. result that risk aversion and naive preference for a programming career no mean diff by gender
+2. reveal explanatory power by factor group
+3. theory-driven discovery of four way interaction validated by elastic net and other feature selection
+4. preferred model and direction of coefficients - appendix w full model and maybe another appendix w summary stats including n and table w selected variables of interest
+5. ways to improve the analysis (constraints/shortcomings)
+6. conclusion!
 
 % # each page of survey has a factor group. they are:
 % # 1. thoughts on alt creds
@@ -309,8 +381,6 @@ for me, I consider a 'true model' to be one with neither omitted variable bias n
 % pca and mca explored for dimensionality reduction of high-dimension categorical industry and state variables, but not feasible due to partial responses
 % alternatives include: shrinkage (ridge, lasso, etc) or variable selection (best-subset, BFE), manual feature elimination (if a whole set is unimportant)
 
-1. deskewing data drops 3 samples (nbd)
-2. 2 other-gendered rows dropped bc sample's too small for meaningful analysis
 3. TODO: I still need to find and drop the "non-serious respondents"
 TODO: create flag for basically 'not serious respondent' and operationalize as "gave the same answer for all skill questions, with two or less exceptions"
 
@@ -334,7 +404,6 @@ In both of these models, gender and gender interactions are inspected for utilit
 
 1. in non-pooled sample (Oct 2021) factors outnumber samples. so i tested models by factor group
 
-\section{Results}
 
 1. findings: replicated and disputed compared to prior results
     * OVERQUALIFICATION IS A FICTION - get Degreed guys to talk about this too; cross-validated in a new temporal context, see factor groups
@@ -396,6 +465,13 @@ Actionable Things:
 %# two begged questions in my conclusion: expected_conventionality, favor_programming_career -> scope for another study
 
 
+my analysis would be improved by:
+  1. use multivariate selection instead of GenericUnivariateSelect; currently no widely-supported library seems to exist so this would need to be from scratch
+  2. merge data sets
+  3. more sophisticated analysis over time
+  4. backwards selection instead of forward selection or k-fold cross validation instead of leave-one-out; basically, requires far larger sample
+
+
 \bibliography{./BibFile}
 
 [1]https://www.wsj.com/articles/college-university-fall-higher-education-men-women-enrollment-admissions-back-to-school-11630948233
@@ -411,6 +487,10 @@ Actionable Things:
 [11]https://www.tandfonline.com/doi/abs/10.1080/13504851.2020.1767279?journalCode=rael20
 [12]https://data.mendeley.com/datasets/75t88s6sdt/1
 [13]https://rss.onlinelibrary.wiley.com/doi/full/10.1111/j.1467-9868.2005.00503.x
+[14]Preliminary Attitudinal Trends in Alternative Postsecondary Learning
+[15]COVID-19 and Alternative Postsecondary Learning
+[16]Conformity and Soft Skills as Determinants of Alternatively Credentialed Non-College Graduate Hirability
+[17]https://insights.stackoverflow.com/survey/2017
 
 \end{document}
 

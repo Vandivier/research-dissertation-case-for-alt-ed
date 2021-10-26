@@ -27,6 +27,18 @@ deskewed_female = deskewed[deskewed.gender == "Female"]
 # p ~=.68 therefore currently retain null hypothesis of no difference
 ttest, pval = stats.ttest_ind(deskewed_male.hirability, deskewed_female.hirability)
 print("hirability mean diff test by gender: " + str(pval))
+print("hirability mean: " + str(deskewed.hirability.mean()))
+print("hirability median: " + str(deskewed.hirability.median()))
+
+print("\n")
+skewed_male = skewed[skewed.gender == "Male"]
+skewed_female = skewed[skewed.gender == "Female"]
+# are men and women naively different?
+# p ~=.68 therefore currently retain null hypothesis of no difference
+ttest, pval = stats.ttest_ind(skewed_male.hirability, skewed_female.hirability)
+print("skewed hirability mean diff test by gender: " + str(pval))
+print("skewed hirability mean: " + str(skewed.hirability.mean()))
+print("skewed hirability median: " + str(skewed.hirability.median()))
 
 
 print("\n")
@@ -182,7 +194,7 @@ m10 = '''hirability ~
     + covid_impact*gender
     + 1'''
 
-print(sm.OLS.from_formula(m1_mca, data=deskewed).fit().summary())
+print(sm.OLS.from_formula(m10, data=deskewed).fit().summary())
 
 # TODO: 1. swap industry categorical for is_tech boolean
 # TODO: 2. covid_impact*gender
@@ -200,3 +212,41 @@ print(sm.OLS.from_formula(m1_mca, data=deskewed).fit().summary())
 # see 2.2.5. Background knowledge and DAG:
 # https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5969114/
 
+
+
+# Result Log:
+# skewed data skew test:
+# SkewtestResult(statistic=-4.995313747050518, pvalue=5.874019108104011e-07)
+
+# deskewed data skew test:
+# SkewtestResult(statistic=-0.7799550948501598, pvalue=0.4354173072572828)
+
+# left_of_skew fails skew test due to insufficient sample size
+
+# hirability mean diff test by gender: 0.6795052638482715
+# hirability mean: 8.20754716981132
+# hirability median: 8.0
+
+# skewed hirability mean diff test by gender: 0.5077110216386149
+# skewed hirability mean: 8.12280701754386
+# skewed hirability median: 8.0
+
+# sample size for favor_programming_career: 99
+# favor_programming_career mean diff test by gender: 0.736950085456267
+
+# sample size for favor_seeking_risk: 99
+# favor_seeking_risk mean diff test by gender: 0.5684161582786189
+
+# sample size for grit: 99
+# grit mean diff test by gender: 0.33946185189778477
+
+# sample size for is_prefer_college_peer: 105
+# is_prefer_college_peer mean diff test by gender: 0.049402209115799844
+# is_prefer_college_peer mean for male: 0.7681159420289855
+# is_prefer_college_peer mean for female: 0.5833333333333334
+
+# sample size for is_tech: 105
+# is_tech mean diff test by gender: 0.2539687917853512
+# is_tech mean for male: 0.30434782608695654
+# is_tech mean for female: 0.4166666666666667
+# is_tech mean (fraction) invariant to gender is: 0.33962264150943394
