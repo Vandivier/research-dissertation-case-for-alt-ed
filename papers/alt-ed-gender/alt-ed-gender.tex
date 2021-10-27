@@ -195,7 +195,10 @@ This fact of the dataset informs the methods of feature selection that are used.
 
 Robust feature selection is accomplished by conducting multiple feature selection algorithms.
 These algorithms include the elastic net, univariate selection, and sequential forward-selection (SFS).
-Leave-one-out cross-validation is used to tune the elastic net and terminate the SFS process.
+Leave-one-out cross-validation is used to tune the elastic net and terminate the SFS process\footnote{
+    Specifically, I use the sklearn.linear_model.ElasticNetCV module of the Scikit-learn library in Python[21].
+    The analytical code and novel data used in this study are available at TODO ANONYMIZE.
+}.
 The elastic net is an ideal feature selection tool because it combines the benefits of ridge regression and the lasso regression
 while mitigating their respective drawbacks.
 Elastic net can be used with linear and logistic regression, with categorical variables or otherwise,
@@ -247,6 +250,9 @@ Appendix TODO contains summary statistics for each variable.
 % Variables in this study are a superset of variables from the other four studies in the meta-analysis, plus three additional questions.
 % The three new questions are risk preference, naive preference for a programming career, and a categorical variable for worldview.
 % The three additional questions were each specifically motivated by one or more claims or predictions in one of the other four studies.
+% cite: weak correlation between self-reported and actual risk aversion https://wol.iza.org/articles/measuring-individual-risk-preferences/long
+% author above says `Survey measures lack a clear connection to theory' -> signaling model solves that (perceived risk > actual risk in hiring decision)
+% 'enjoy taking risks' phrasing a. taken from above and b. consistent with programming career orientation (an alternative to people-thing orientation measure)
 The main dependent variable of interest is hirability,
 a non-price indicator of willingness to hire on the basis of an alternative credential.
 Two other variables that are investigated as both dependent and independent variables are
@@ -296,6 +302,7 @@ Mean hirability among males is not significantly different from mean hirability 
 Eight responses were dropped for three reasons and the remaining responses include some partial responses.
 In the cleaned dataset ($n = 106$), mean hirability is $8.2$ out of ten,
 the median remains at $8$, and hirability remains invariant by gender ($p < 0.68$).
+Invariance of hirability by gender is consistent with the insignificance of gender in three of four other papers in the meta-analysis.
 
 The purpose of the current study is to detect gender effects, but only two observations of "Other" gender were obtained.
 These responses were dropped because they are insufficient to yield meaningful statistical analysis.
@@ -331,7 +338,8 @@ Professional psychology suggests that men tend to be things-oriented and therefo
 The current study presents conflicting evidence in that women and men do not differ in preference for a career in programming.
 The conflict can be reconciled by realizing that modern software development is largely collaborative and social.
 The social nature of modern programming is consistent with high value for soft skills as emphasized by one paper in the meta-study[16].
-A survey of software developers from Stack Overflow adds a nuance to the relationship between programming and things-oriented work.
+
+A survey of software developers from Stack Overflow adds nuance to the relationship between programming and things-oriented work[17].
 Programmers may specialize in a number of areas.
 Graphic designers, web developers, and mobile application developers are more frequently female.
 Systems and database administrators are more often male.
@@ -341,30 +349,6 @@ but the explanation fails at the aggregate level of the modern software developm
 Contrasting holistic and typical software development practices with the curriculum of a typical computer science program
 indicates an emphasis on things that may discourage female interest in the field of study,
 even while interest in the programming occupation persists.
-
-
-% # sample size for grit: 99
-% # grit mean diff test by gender: 0.33946185189778477
-
-
-% Did prestige differ by gender
-% Does time value or value of money differ by gender?
-
-
-
-
-# sample size for is_prefer_college_peer: 105
-# is_prefer_college_peer mean diff test by gender: 0.049402209115799844
-# is_prefer_college_peer mean for male: 0.7681159420289855
-# is_prefer_college_peer mean for female: 0.5833333333333334
-
-
-1. result that risk aversion and naive preference for a programming career no mean diff by gender
-2. reveal explanatory power by factor group
-3. theory-driven discovery of four way interaction validated by elastic net and other feature selection
-4. preferred model and direction of coefficients - appendix w full model and maybe another appendix w summary stats including n and table w selected variables of interest
-5. ways to improve the analysis (constraints/shortcomings)
-6. conclusion!
 
 % # each page of survey has a factor group. they are:
 % # 1. thoughts on alt creds
@@ -377,27 +361,86 @@ even while interest in the programming occupation persists.
 % # 8. learning provider questions
 % # 9. perceived skill questions
 % 10th page is a thank you page that allows for paying participants
+The absence of differences in means is noteworthy,
+but a better analysis accounts for interactions and colinearity between gender and other variables.
+As previously noted, risk aversion did not differ significantly by gender.
+This is surprising, because substantial external literature demonstrates a link between gender and risk aversion[18, 19].
+Further research invariant to gender shows a link between risk aversion and occupational preference[20].
+These prior findings motivated exploration of a three-way interaction that turned out to significantly explain hirability.
+Further exploration showed that naive preference for a programming career varies importantly with respect to the three-way interaction.
+
+When categorical response options are treated as distinct dummy variables,
+the ninety-four question survey produces one hundred and sixty-five variables.
+When the four-way interaction plus related lower-level interactions are counted,
+there are two hundred and fourty-six variables.
+% note: intuitively, the fact that risk preference interacts, for example, captures heterogeneous within-industry risk preference effects.
+
+% This is a count of actual variables rather than possible variables because many categorical response options were never selected.
+These variable pools were seperately subjected to elastic net regularization with leave-one-out cross-validation.
+Male identification is the only gender variable in the pool of one hundred and sixty-five variables.
+Male identification is retained in a second-best regularized model ($ \lambda_1 / \lambda_2 = 0.019, k = 57, r2=0.40 $).
+This places gender in the top thirty-five percent of independent variables.
+A distinct model derived from the same variable pool has trivially better out-of-sample explanatory power,
+but does so with substantially fewer variables ($ \lambda_1 / \lambda_2 = 0.05, k = 34, r2=0.41 $).
+
+When interactions are included, many gender interactions are included in the preferred model.
+One gender interaction is included in a strict model associated with heavy factor penalization.
+This heavily penalized model contains five factors, representing the top two percent of factors according to this measure of factor importance.
+Interestingly, the retained gender variable is gender interacted with risk preference, preference for a programming career,
+and occupation in the information technology industry.
+
+Two kinds of univariate selection and two kinds of SFS
+
+now put all the variables together and reduce using AIC+AR2 (elastic net model 1 plus model 2 plus other factors)
+now compare remaining gender vars to multiply-attested gender vars; test 'big ones' again (2+ or 3+?)
+
+
+% TODO: replicate overqualification effects are bad and extend into comparative overqualification effects
+
+% do i need to explain how i tuned the elastic net?
+% The coefficient estimates from the elastic net are defined by Equation TODO:
+% % TODO: latex equation: https://en.wikipedia.org/wiki/Elastic_net_regularization
+
+% The elastic net is tuned by testing many values of \lambda_1 while holding constant $\lambda_2 = 1$.
+
+% Table TODO shows the count of retained features, the proportion of retained gender features,
+% and the explanatory power of various models obtained
+
+% This elastic net algorithm is tuned by checking many values o f
+% % Whether the respondent is male is the only gender variable in the first pool of one hundred and sixty-five variables.
+
+% Elastic net multiple regression with leave-one-out cross validation accounts for colinearity and protects against overfit.
+
+
+
+
+Table TODO shows explanatory power by factor group on hirability.
+Independent factors for ethnicity, industry of employment, and state of residence
+have been consistently identified as important in other papers,
+so these factor groups provide a meaningful standard for identifying other factors as important.
+Table TODO (the same table) also includes explanatory power of the preferred linear model,
+the model without gender-derivative features,
+and a model of the gender-derivative features in isolation.
+
+
+% # sample size for grit: 99
+% # grit mean diff test by gender: 0.33946185189778477
+
+
+% Did prestige differ by gender
+% Does time value or value of money differ by gender?
+
+2. reveal explanatory power by factor group
+3. theory-driven discovery of four way interaction validated by elastic net and other feature selection
+4. preferred model and direction of coefficients - appendix w full model and maybe another appendix w summary stats including n and table w selected variables of interest
+5. ways to improve the analysis (constraints/shortcomings)
+6. conclusion!
 
 % pca and mca explored for dimensionality reduction of high-dimension categorical industry and state variables, but not feasible due to partial responses
 % alternatives include: shrinkage (ridge, lasso, etc) or variable selection (best-subset, BFE), manual feature elimination (if a whole set is unimportant)
 
-3. TODO: I still need to find and drop the "non-serious respondents"
-TODO: create flag for basically 'not serious respondent' and operationalize as "gave the same answer for all skill questions, with two or less exceptions"
-
-Regression analysis and mean difference tests are used to analyze the questionnaire responses.
-Differences in means are tested among variables relevant to various explanatory hypotheses.
-Specifically, favor_programming_career, favor_seeking_risk, hirability, is_prefer_college_peer
-
-Three other mean difference tests are used to test whether the present data set is consistent with other results found in the literature
 Specifically, likelihood to work in information technology and grit
 % https://www.sciencedirect.com/science/article/pii/S0732118X1930234X
-
-also test gender*covid_impact significance bc we think women disproportionately impacted by covid
-
-To ensure robustness, multiple regression methods are used with multiple independent variables.
-Ordinary least squares regression and vector regression are used to explain hirability.
-Logistical regression is used to explain employment in the information technology industry.
-In both of these models, gender and gender interactions are inspected for utility as independent variables.
 
 % TODO: mention cross-validation and also two samples w/ how much of raw is captured in deskewed
 
@@ -464,6 +507,14 @@ Actionable Things:
 
 %# two begged questions in my conclusion: expected_conventionality, favor_programming_career -> scope for another study
 
+% Do females drop out disproportionately? that might tell if cs aversion is developed on exposure (instititional culture prob) or pre-existing
+% An agnostic estimate would say "some of both effects" however there is a bit of fiction to be dealt with on the pre-enrollment story
+%   - the hollywood theory post-dates that men worked in industry so it can't be causal it can only be a source of lock-in or persitance
+%   other theory: war effects (men and women, men go to war, men come back and hire men) -> but this could be a 'military man' effect rather than a pure male effect
+% theory 1: institutional culture problem; college exposure and some priming through social network effects; curriculum and profs in part to blame
+% theory 2: extra-collegiate culture problem; girls before signing up to college are pre-averse to CS; check freshman enrollment rates.
+% theory 3: EQ repulsion or differential low eq tolerance...again we would prob expect disproportionate drop out (unless eq repulsion is expected prior)
+% theory 4: male tendencey to perfectionism and gatekeeping
 
 my analysis would be improved by:
   1. use multivariate selection instead of GenericUnivariateSelect; currently no widely-supported library seems to exist so this would need to be from scratch
@@ -491,6 +542,10 @@ my analysis would be improved by:
 [15]COVID-19 and Alternative Postsecondary Learning
 [16]Conformity and Soft Skills as Determinants of Alternatively Credentialed Non-College Graduate Hirability
 [17]https://insights.stackoverflow.com/survey/2017
+[18]https://academic.oup.com/jeea/article-abstract/7/2-3/649/2296043
+[19]https://psycnet.apa.org/buy/1999-13573-004
+[20]https://www.sciencedirect.com/science/article/pii/S105353571000154X
+[21]https://scikit-learn.org/stable/about.html#citing-scikit-learn
 
 \end{document}
 
@@ -530,10 +585,6 @@ intro 1. review scope (lit review + limitted replication + contribute test for r
 pt 2 - do the lit review (review papers, factors, theories previously tested / established)
 pt 3 - preview results
 
-% cite: weak correlation https://wol.iza.org/articles/measuring-individual-risk-preferences/long
-% author above says `Survey measures lack a clear connection to theory' -> signaling model solves that (perceived risk > actual risk in hiring decision)
-% 'enjoy taking risks' phrasing a. taken from above and b. consistent with programming career orientation (an alternative to people-thing orientation measure)
-
 % in our use case if we ultimately care about landing programmers a job, then RIASEC is not only overkill but it is also a noisey and indirect indicator
 % future work which seeks to look at alternative credentials outside of programming should incorporate a full RIASEC,
 % but i introduce a direct programming interest question instead for now.
@@ -548,6 +599,8 @@ caveat: speak to dunning-kruger; an actual eq test would be more accurate,
     correlation expected though, roughly linear,
     weakly cubic relation: https://www.researchgate.net/publication/12688660_Unskilled_and_Unaware_of_It_How_Difficulties_in_Recognizing_One's_Own_Incompetence_Lead_to_Inflated_Self-Assessments )
 
+people-oriented
+https://www.linkedin.com/feed/update/urn:li:activity:6858771848033898497/
 ```https://onlinelibrary.wiley.com/doi/full/10.1111/j.1751-9004.2010.00320.x
 Results show that gender differences in Big Five personality traits are ‘small’ to ‘moderate,’
 with the largest differences occurring for agreeableness and neuroticism

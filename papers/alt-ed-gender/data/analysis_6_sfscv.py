@@ -219,4 +219,37 @@ print("gender var counts across patterns: " + str(gender_var_counts_dict))
 # svr includes gender count: 28
 # svr gender var %: 0.32558139534883723
 # svr gender indices: [40, 41, 42, 43, 44, 45, 46, 53, 54, 55, 56, 57, 58, 59, 60, 65, 66, 67, 68, 69, 70, 71, 75, 76, 77, 78, 79, 80]
-# gender var counts across patterns: {'gender[T.Male]:industry[T.Health]': 2, 'gender[T.Male]:favor_programming_career:industry[T.Health]': 2, 'gender[T.Male]:industry[T.Energy]': 2, 'gender[T.Male]:industry[T.Law]': 2, 'gender[T.Male]:industry[T.Manufacturing]': 2, 'gender[T.Male]:industry[T.Real Estate]': 2, 'gender[T.Male]:industry[T.Retail]': 1, 'gender[T.Male]:favor_programming_career:industry[T.Energy]': 2, 'gender[T.Male]:favor_programming_career:industry[T.Law]': 2, 'gender[T.Male]:favor_programming_career:industry[T.Real Estate]': 2, 'gender[T.Male]:favor_seeking_risk:industry[T.Education]': 1, 'gender[T.Male]:favor_seeking_risk:industry[T.Energy]': 2, 'gender[T.Male]:favor_seeking_risk:industry[T.Law]': 2, 'gender[T.Male]:favor_seeking_risk:industry[T.Real Estate]': 2, 'gender[T.Male]:favor_seeking_risk:industry[T.Transportation]': 2, 'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Education]': 1, 'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Energy]': 2, 'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Law]': 2, 'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Real Estate]': 2, 'gender[T.Male]:industry[T.Military]': 1, 'gender[T.Male]:industry[T.Transportation]': 1, 'gender[T.Male]:favor_programming_career:industry[T.Information Technology]': 1, 'gender[T.Male]:favor_programming_career:industry[T.Manufacturing]': 1, 'gender[T.Male]:favor_programming_career:industry[T.Military]': 1, 'gender[T.Male]:favor_programming_career:industry[T.Transportation]': 1, 'gender[T.Male]:favor_seeking_risk:industry[T.Health]': 1, 'gender[T.Male]:favor_seeking_risk:industry[T.Military]': 1, 'gender[T.Male]:favor_programming_career:favor_seeking_risk': 1, 'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Finance, Investment, or Accounting]': 1, 'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Information Technology]': 1, 'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Military]': 1}
+# gender var counts across patterns:
+# {
+#   'gender[T.Male]:industry[T.Health]': 2,
+#   'gender[T.Male]:favor_programming_career:industry[T.Health]': 2,
+#   'gender[T.Male]:industry[T.Energy]': 2,
+#   'gender[T.Male]:industry[T.Law]': 2,
+#   'gender[T.Male]:industry[T.Manufacturing]': 2,
+#   'gender[T.Male]:industry[T.Real Estate]': 2,
+#   'gender[T.Male]:industry[T.Retail]': 1,
+#   'gender[T.Male]:favor_programming_career:industry[T.Energy]': 2,
+#   'gender[T.Male]:favor_programming_career:industry[T.Law]': 2,
+#   'gender[T.Male]:favor_programming_career:industry[T.Real Estate]': 2,
+#   'gender[T.Male]:favor_seeking_risk:industry[T.Education]': 1,
+#   'gender[T.Male]:favor_seeking_risk:industry[T.Energy]': 2,
+#   'gender[T.Male]:favor_seeking_risk:industry[T.Law]': 2,
+#   'gender[T.Male]:favor_seeking_risk:industry[T.Real Estate]': 2,
+#   'gender[T.Male]:favor_seeking_risk:industry[T.Transportation]': 2,
+#   'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Education]': 1,
+#   'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Energy]': 2,
+#   'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Law]': 2,
+#   'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Real Estate]': 2,
+#   'gender[T.Male]:industry[T.Military]': 1,
+#   'gender[T.Male]:industry[T.Transportation]': 1,
+#   'gender[T.Male]:favor_programming_career:industry[T.Information Technology]': 1,
+#   'gender[T.Male]:favor_programming_career:industry[T.Manufacturing]': 1,
+#   'gender[T.Male]:favor_programming_career:industry[T.Military]': 1,
+#   'gender[T.Male]:favor_programming_career:industry[T.Transportation]': 1,
+#   'gender[T.Male]:favor_seeking_risk:industry[T.Health]': 1,
+#   'gender[T.Male]:favor_seeking_risk:industry[T.Military]': 1,
+#   'gender[T.Male]:favor_programming_career:favor_seeking_risk': 1,
+#   'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Finance, Investment, or Accounting]': 1,
+#   'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Information Technology]': 1,
+#   'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Military]': 1
+# }
