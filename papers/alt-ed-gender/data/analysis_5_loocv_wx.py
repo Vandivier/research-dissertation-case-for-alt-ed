@@ -81,7 +81,9 @@ for idx, name in enumerate(kitchen_sink_model.exog_names):
 
 print("r2: " + str(reg.score(X, y)))
 print("count nonzero: " + str(len(names_nonzero)))
-print("gender vars" + str(gender_vars))
+print("count gender vars: " + str(len(gender_vars)))
+print("var names: ")
+print("\n+ ".join(names_nonzero))
 
 # 246 vars before any filtering
 # TODO: on what basis is LOOCV retaining factors? p-value? i don't think so.
@@ -114,7 +116,8 @@ print("gender vars" + str(gender_vars))
 # [ridge-like] l1_ratio=0.0005, r2=0.12, count_nonzero=21, gender
 # [ridge-like] l1_ratio=0.0003, r2=0.12, count_nonzero=34, many gender vars (not counting)
 # [ridge-like] l1_ratio=0.0002, r2=0.13, count_nonzero=56, many gender vars (not counting)
-# [ridge-like] l1_ratio=0.0001, r2=0.14, count_nonzero=79, many gender vars (not counting)
+# [ridge-like] l1_ratio=0.0001, r2=0.14, count_nonzero=79, many gender vars (count = 18)
 # [ridge-like] l1_ratio=0.00005, r2=0.14, count_nonzero=116, many gender vars (not counting)
 # [ridge-like] l1_ratio=0.00001, r2=0.14, count_nonzero=188, many gender vars (not counting)
 # [ridge-like] l1_ratio=0.000005, r2=0.10, count_nonzero=187, many gender vars (not counting)
+

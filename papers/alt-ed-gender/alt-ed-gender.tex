@@ -201,6 +201,7 @@ Leave-one-out cross-validation is used to tune the elastic net and terminate the
 }.
 The elastic net is an ideal feature selection tool because it combines the benefits of ridge regression and the lasso regression
 while mitigating their respective drawbacks.
+These benefits include stable feature selection and accounting for collinearity.
 Elastic net can be used with linear and logistic regression, with categorical variables or otherwise,
 and it is a recommended variable selection tool
 when the number of predictors ($k$) is larger than the number of observations ($n$)[13].
@@ -375,22 +376,36 @@ When the four-way interaction plus related lower-level interactions are counted,
 there are two hundred and fourty-six variables.
 % note: intuitively, the fact that risk preference interacts, for example, captures heterogeneous within-industry risk preference effects.
 
+GENDER IS IMPORTANT BC SURVIVES NET AND MORE IMPORTANT WHEN INTERACTED
+***TODO: REDO PREFERRED MODEL IS HIGHER R^2 of 0.43
+# [ridge-like] l1_ratio=0.015, r2=0.43, count_nonzero=69, gender vars['gender[T.Male]']
+***
 % This is a count of actual variables rather than possible variables because many categorical response options were never selected.
 These variable pools were seperately subjected to elastic net regularization with leave-one-out cross-validation.
 Male identification is the only gender variable in the pool of one hundred and sixty-five variables.
-Male identification is retained in a second-best regularized model ($ \lambda_1 / \lambda_2 = 0.019, k = 57, r2=0.40 $).
+Male identification is retained in a second-best regularized model ($ \lambda_1 / \lambda_2 = 0.019, k = 57, R^2=0.40 $).
 This places gender in the top thirty-five percent of independent variables.
 A distinct model derived from the same variable pool has trivially better out-of-sample explanatory power,
-but does so with substantially fewer variables ($ \lambda_1 / \lambda_2 = 0.05, k = 34, r2=0.41 $).
+but does so with substantially fewer variables ($ \lambda_1 / \lambda_2 = 0.05, k = 34, R^2=0.41 $).
 
-When interactions are included, many gender interactions are included in the preferred model.
-One gender interaction is included in a strict model associated with heavy factor penalization.
-This heavily penalized model contains five factors, representing the top two percent of factors according to this measure of factor importance.
+When the variable pool that includes interactions is reduced, many gender-interacted variables
+are retained in the preferred model ($ \lambda_1 / \lambda_2 = 0.0001, k = 79, R^2=0.14 $).
+From a pool of two hundred and fourty-six variables, seventy-nine variables are retained in this model.
+This represents about thirty-two percent of the variable pool.
+Eighteen of the retained variables are gender-related.
+This confirms the idea that interacted gender effects are more stable and important predictors of hirability
+compared to a simple dummy variable.
+
+% This preferred model doesn't perform as well as the model reduced from pool 1, so an ideal model needs to superset factors and re-reduce
+A second, heavily penalized, non-preferred model that is identified from this pool is also interesting for identifying the most important variables.
+This heavily penalized model contains five factors,
+including one gender-interacted variable ($ \lambda_1 / \lambda_2 = 0.005, k = 5, R^2=0.08 $).
+Five factors represent the most important two percent of factors according to this factor evaluation strategy.
 Interestingly, the retained gender variable is gender interacted with risk preference, preference for a programming career,
 and occupation in the information technology industry.
 
-Two kinds of univariate selection and two kinds of SFS
-
+% TODO: do I guard overfit by removing once-identified vars? or do I try all of them?
+Two kinds of univariate selection and two kinds of SFS are also used to robustly identify interacted gender effects.
 now put all the variables together and reduce using AIC+AR2 (elastic net model 1 plus model 2 plus other factors)
 now compare remaining gender vars to multiply-attested gender vars; test 'big ones' again (2+ or 3+?)
 
@@ -400,15 +415,9 @@ now compare remaining gender vars to multiply-attested gender vars; test 'big on
 % do i need to explain how i tuned the elastic net?
 % The coefficient estimates from the elastic net are defined by Equation TODO:
 % % TODO: latex equation: https://en.wikipedia.org/wiki/Elastic_net_regularization
-
 % The elastic net is tuned by testing many values of \lambda_1 while holding constant $\lambda_2 = 1$.
-
 % Table TODO shows the count of retained features, the proportion of retained gender features,
 % and the explanatory power of various models obtained
-
-% This elastic net algorithm is tuned by checking many values o f
-% % Whether the respondent is male is the only gender variable in the first pool of one hundred and sixty-five variables.
-
 % Elastic net multiple regression with leave-one-out cross validation accounts for colinearity and protects against overfit.
 
 

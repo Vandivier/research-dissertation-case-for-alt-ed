@@ -153,7 +153,7 @@ if "chart=true" in sys.argv[1:]:
 cv = model_selection.LeaveOneOut()
 # reg = linear_model.LassoCV(cv=cv,
 reg = linear_model.ElasticNetCV(cv=cv,
-    l1_ratio=0.019,
+    l1_ratio=0.015,
     random_state=0,
     max_iter=10000).fit(X, y)
 
@@ -170,7 +170,9 @@ for idx, name in enumerate(kitchen_sink_model.exog_names):
 
 print("r2: " + str(reg.score(X, y)))
 print("count nonzero: " + str(len(names_nonzero)))
-print("gender vars" + str(gender_vars))
+print("count gender vars: " + str(len(gender_vars)))
+print("var names: ")
+print("\n+ ".join(names_nonzero))
 
 # 165 vars before any filtering
 # top 5 factors from lasso:
@@ -196,6 +198,7 @@ print("gender vars" + str(gender_vars))
 # [ridge-like] l1_ratio=0.03, r2=0.40, count_nonzero=42, no gender vars
 # [ridge-like] l1_ratio=0.02, r2=0.40, count_nonzero=51, no gender vars
 # [ridge-like] l1_ratio=0.019, r2=0.40, count_nonzero=57, gender vars['gender[T.Male]']
+# [ridge-like] l1_ratio=0.015, r2=0.43, count_nonzero=69, gender vars['gender[T.Male]']
 # [ridge-like] l1_ratio=0.01, r2=0.43, count_nonzero=78, gender vars['gender[T.Male]']
 # [ridge-like] l1_ratio=0.005, r2=0.43, count_nonzero=105, gender vars['gender[T.Male]']
 # [ridge-like] l1_ratio=0.0005, r2=0.39, count_nonzero=147, gender vars['gender[T.Male]']
