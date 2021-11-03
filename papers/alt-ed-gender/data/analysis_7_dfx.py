@@ -163,6 +163,38 @@ model_important_candidates = '''hirability ~
 + skill_comparative_no_relative_oqskill_body_language_communication_skill
 + skill_comparative_no_relative_oqskill_teamwork
 
++ gender[T.Male]:industry[T.Health]
++ gender[T.Male]:favor_programming_career:industry[T.Health]
++ gender[T.Male]:industry[T.Energy]
++ gender[T.Male]:industry[T.Law]
++ gender[T.Male]:industry[T.Manufacturing]
++ gender[T.Male]:industry[T.Real Estate]
++ gender[T.Male]:industry[T.Retail]
++ gender[T.Male]:favor_programming_career:industry[T.Energy]
++ gender[T.Male]:favor_programming_career:industry[T.Law]
++ gender[T.Male]:favor_programming_career:industry[T.Real Estate]
++ gender[T.Male]:favor_seeking_risk:industry[T.Education]
++ gender[T.Male]:favor_seeking_risk:industry[T.Energy]
++ gender[T.Male]:favor_seeking_risk:industry[T.Law]
++ gender[T.Male]:favor_seeking_risk:industry[T.Real Estate]
++ gender[T.Male]:favor_seeking_risk:industry[T.Transportation]
++ gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Education]
++ gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Energy]
++ gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Law]
++ gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Real Estate]
++ gender[T.Male]:industry[T.Military]
++ gender[T.Male]:industry[T.Transportation]
++ gender[T.Male]:favor_programming_career:industry[T.Information Technology]
++ gender[T.Male]:favor_programming_career:industry[T.Manufacturing]
++ gender[T.Male]:favor_programming_career:industry[T.Military]
++ gender[T.Male]:favor_programming_career:industry[T.Transportation]
++ gender[T.Male]:favor_seeking_risk:industry[T.Health]
++ gender[T.Male]:favor_seeking_risk:industry[T.Military]
++ gender[T.Male]:favor_programming_career:favor_seeking_risk
++ gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Finance, Investment, or Accounting]
++ gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Information Technology]
++ gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Military]
+
 + 1'''
 
 important_candidates = sm.OLS.from_formula(model_important_candidates, data=deskewed)
