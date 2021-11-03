@@ -36,7 +36,7 @@ import analysis_1_vars_and_regression as analysis
 
 deskewed = analysis.getDeskewedData()
 
-# large model, after selecting among skill gaps, without 4-way interaction
+# large model, after selecting among skill gaps
 kitchen_sink_formula = '''hirability ~
     + expected_duration + expected_conventionality + familiarity_count + familiarity_count^2 + favor_online_ed
     + rulebreakers_risky + rulebreakers_culture_value + rulebreakers_mixed_bag
@@ -106,12 +106,12 @@ estimator_svr = svm.SVR(kernel="linear")
 model_gus_fdr = feature_selection.GenericUnivariateSelect(score_func=feature_selection.f_classif, mode='fdr', param=0.5)
 # keep features which pass a cumulative p < 0.5
 model_gus_fwe = feature_selection.GenericUnivariateSelect(score_func=feature_selection.f_classif, mode='fwe', param=0.5)
-# 25/246 -> top 10 percent
-# 62/246 -> top 25 percent
-# 86/246 -> top 35 percent (compare to analysis_5 findings at 35 percent)
+# inspecting 56 /224 (top 25 percent)
 # ref: https://www.analyticsvidhya.com/blog/2021/04/forward-feature-selection-and-its-implementation/
-model_lr = sfs(estimator_lr, cv=cv, k_features=86, forward=True, verbose=2, scoring='neg_mean_squared_error')
-model_svr = sfs(estimator_svr, cv=cv, k_features=86, forward=True, verbose=2, scoring='neg_mean_squared_error')
+# https://stackoverflow.com/questions/48244219/is-sklearn-metrics-mean-squared-error-the-larger-the-better-negated
+# differing scoring approaches adds to robustness, if it were the same then svr would just be a superset
+model_lr = sfs(estimator_lr, cv=cv, k_features=56, forward=True, verbose=2, scoring='neg_median_absolute_error')
+model_svr = sfs(estimator_svr, cv=cv, k_features=56, forward=True, verbose=2, scoring='neg_mean_squared_error')
 # model_lr = feature_selection.RFECV(estimator_lr, cv=cv, step=1)
 # model_svr = feature_selection.RFECV(estimator_svr, cv=cv, step=1)
 
@@ -203,53 +203,45 @@ print("gender var counts across patterns: " + str(gender_var_counts_dict))
 
 # result log:
 # note: lr gender substantial in top 20 percent but nonexistant in top 10 percent
+# kitchen sink total var count: 224
 # kitchen sink gender var count: 48
-# kitchen sink gender var %: 0.1951219512195122
-# fdr result length: 14
+# kitchen sink gender var %: 0.21428571428571427
+# fdr result length: 16
 # fdr includes gender count: 2
-# fdr gender var %: 0.14285714285714285
+# fdr gender var %: 0.125
 # fwe result length: 8
 # fwe includes gender count: 0
 # fwe gender var %: 0.0
-# lr result length: 86
-# lr includes gender count: 17
-# lr gender var %: 0.19767441860465115
-# lr gender indices: [43, 44, 45, 46, 47, 53, 54, 55, 60, 61, 62, 63, 64, 69, 70, 71, 72]
-# svr result length: 86
-# svr includes gender count: 28
-# svr gender var %: 0.32558139534883723
-# svr gender indices: [40, 41, 42, 43, 44, 45, 46, 53, 54, 55, 56, 57, 58, 59, 60, 65, 66, 67, 68, 69, 70, 71, 75, 76, 77, 78, 79, 80]
-# gender var counts across patterns:
-# {
-#   'gender[T.Male]:industry[T.Health]': 2,
-#   'gender[T.Male]:favor_programming_career:industry[T.Health]': 2,
-#   'gender[T.Male]:industry[T.Energy]': 2,
-#   'gender[T.Male]:industry[T.Law]': 2,
-#   'gender[T.Male]:industry[T.Manufacturing]': 2,
-#   'gender[T.Male]:industry[T.Real Estate]': 2,
-#   'gender[T.Male]:industry[T.Retail]': 1,
-#   'gender[T.Male]:favor_programming_career:industry[T.Energy]': 2,
-#   'gender[T.Male]:favor_programming_career:industry[T.Law]': 2,
-#   'gender[T.Male]:favor_programming_career:industry[T.Real Estate]': 2,
-#   'gender[T.Male]:favor_seeking_risk:industry[T.Education]': 1,
-#   'gender[T.Male]:favor_seeking_risk:industry[T.Energy]': 2,
-#   'gender[T.Male]:favor_seeking_risk:industry[T.Law]': 2,
-#   'gender[T.Male]:favor_seeking_risk:industry[T.Real Estate]': 2,
-#   'gender[T.Male]:favor_seeking_risk:industry[T.Transportation]': 2,
-#   'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Education]': 1,
-#   'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Energy]': 2,
-#   'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Law]': 2,
-#   'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Real Estate]': 2,
-#   'gender[T.Male]:industry[T.Military]': 1,
-#   'gender[T.Male]:industry[T.Transportation]': 1,
-#   'gender[T.Male]:favor_programming_career:industry[T.Information Technology]': 1,
-#   'gender[T.Male]:favor_programming_career:industry[T.Manufacturing]': 1,
-#   'gender[T.Male]:favor_programming_career:industry[T.Military]': 1,
-#   'gender[T.Male]:favor_programming_career:industry[T.Transportation]': 1,
-#   'gender[T.Male]:favor_seeking_risk:industry[T.Health]': 1,
-#   'gender[T.Male]:favor_seeking_risk:industry[T.Military]': 1,
-#   'gender[T.Male]:favor_programming_career:favor_seeking_risk': 1,
-#   'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Finance, Investment, or Accounting]': 1,
-#   'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Information Technology]': 1,
-#   'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Military]': 1
+# lr result length: 56
+# lr includes gender count: 15
+# lr gender var %: 0.26785714285714285
+# lr gender indices: [27, 28, 29, 30, 31, 38, 39, 40, 43, 44, 45, 48, 49, 50, 51]
+# svr result length: 56
+# svr includes gender count: 18
+# svr gender var %: 0.32142857142857145
+# svr gender indices: [23, 24, 25, 26, 34, 35, 36, 37, 38, 39, 43, 44, 45, 46, 49, 50, 51, 52]
+# gender var counts across patterns: {
+# 'gender[T.Male]:industry[T.Health]': 1,
+# 'gender[T.Male]:favor_programming_career:industry[T.Health]': 1,
+# 'gender[T.Male]:industry[T.Energy]': 2,
+# 'gender[T.Male]:industry[T.Law]': 2,
+# 'gender[T.Male]:industry[T.Military]': 1,
+# 'gender[T.Male]:industry[T.Real Estate]': 2,
+# 'gender[T.Male]:industry[T.Transportation]': 1,
+# 'gender[T.Male]:favor_programming_career:industry[T.Energy]': 2,
+# 'gender[T.Male]:favor_programming_career:industry[T.Law]': 2,
+# 'gender[T.Male]:favor_programming_career:industry[T.Real Estate]': 2,
+# 'gender[T.Male]:favor_seeking_risk:industry[T.Energy]': 2,
+# 'gender[T.Male]:favor_seeking_risk:industry[T.Law]': 2,
+# 'gender[T.Male]:favor_seeking_risk:industry[T.Real Estate]': 2,
+# 'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Energy]': 2,
+# 'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Information Technology]': 1,
+# 'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Law]': 2,
+# 'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Real Estate]': 2,
+# 'gender[T.Male]:industry[T.Retail]': 1,
+# 'gender[T.Male]:favor_programming_career:industry[T.Manufacturing]': 1,
+# 'gender[T.Male]:favor_programming_career:industry[T.Retail]': 1,
+# 'gender[T.Male]:favor_seeking_risk': 1,
+# 'gender[T.Male]:favor_seeking_risk:industry[T.Retail]': 1,
+# 'gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Retail]': 1
 # }

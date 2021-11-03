@@ -9,7 +9,7 @@ import statsmodels.api as sm
 
 deskewed = analysis.getDeskewedData()
 
-# large model, after selecting among skill gaps, without 4-way interaction
+# large model, after selecting among skill gaps
 m23 = '''hirability ~
     + expected_duration + expected_conventionality + familiarity_count + familiarity_count^2 + favor_online_ed
     + rulebreakers_risky + rulebreakers_culture_value + rulebreakers_mixed_bag
