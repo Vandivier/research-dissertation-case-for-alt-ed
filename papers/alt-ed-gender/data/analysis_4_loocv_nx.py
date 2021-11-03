@@ -198,7 +198,7 @@ print("\n+ ".join(names_nonzero))
 # [ridge-like] l1_ratio=0.03, r2=0.40, count_nonzero=42, no gender vars
 # [ridge-like] l1_ratio=0.02, r2=0.40, count_nonzero=51, no gender vars
 # [ridge-like] l1_ratio=0.019, r2=0.40, count_nonzero=57, gender vars['gender[T.Male]']
-# [ridge-like] l1_ratio=0.015, r2=0.43, count_nonzero=69, gender vars['gender[T.Male]']
+# [ridge-like] l1_ratio=0.015, r2=0.43, count_nonzero=69, gender vars['gender[T.Male]'] **preferred**
 # [ridge-like] l1_ratio=0.01, r2=0.43, count_nonzero=78, gender vars['gender[T.Male]']
 # [ridge-like] l1_ratio=0.005, r2=0.43, count_nonzero=105, gender vars['gender[T.Male]']
 # [ridge-like] l1_ratio=0.0005, r2=0.39, count_nonzero=147, gender vars['gender[T.Male]']

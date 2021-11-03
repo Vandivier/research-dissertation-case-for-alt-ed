@@ -117,7 +117,7 @@ def getData(dropFirstDummy=True):
     # df = pd.get_dummies(df, columns=['industry']).rename(
     #     fsReformatColumnNames, axis='columns')
     # if dropFirstDummy:
-    #     df.drop(columns=['industry_agriculture''])
+    #     df.drop(columns=['industry_agriculture'])
 
     # help build long model formula
     print("\n+ ".join(list(df.columns)))
