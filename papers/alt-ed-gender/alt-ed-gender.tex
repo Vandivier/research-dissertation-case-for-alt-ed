@@ -377,8 +377,9 @@ there are two hundred and fourty-six variables.
 % note: intuitively, the fact that risk preference interacts, for example, captures heterogeneous within-industry risk preference effects.
 
 GENDER IS IMPORTANT BC SURVIVES NET AND MORE IMPORTANT WHEN INTERACTED
-***TODO: REDO PREFERRED MODEL IS HIGHER R^2 of 0.43
-# [ridge-like] l1_ratio=0.015, r2=0.43, count_nonzero=69, gender vars['gender[T.Male]']
+***TODO: REDO PREFERRED MODEL
+PREFERED NX MODEL l1_ratio=0.015, INCLUDES GENDER, MALE SURVIVES TO 0.03 l1_ratio
+# note "0.03 l1_ratio -> top 57/143 -> top 40 percent of factors"
 ***
 % This is a count of actual variables rather than possible variables because many categorical response options were never selected.
 These variable pools were seperately subjected to elastic net regularization with leave-one-out cross-validation.

@@ -64,7 +64,7 @@ print(n_X_samples, n_y_samples)
 
 cv = model_selection.LeaveOneOut()
 reg = linear_model.ElasticNetCV(cv=cv,
-    l1_ratio=0.0001,
+    l1_ratio=0.05,
     random_state=0,
     max_iter=30000).fit(X, y)
 
@@ -85,39 +85,28 @@ print("count gender vars: " + str(len(gender_vars)))
 print("var names: ")
 print("\n+ ".join(names_nonzero))
 
-# 246 vars before any filtering
-# TODO: on what basis is LOOCV retaining factors? p-value? i don't think so.
-# top 5 factors from lasso:
-# favor_programming_career:favor_seeking_risk
-# encv beta: 0.004342207347733295
-# favor_programming_career:favor_seeking_risk:industry[T.Health]
-# encv beta: -1.9311614010532145e-05
-# favor_programming_career:favor_seeking_risk:industry[T.Information Technology]
-# encv beta: 0.002978764704554218
-# favor_programming_career:favor_seeking_risk:industry[T.Manufacturing]
-# encv beta: 0.0008553020494987524
-# gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Information Technology]
-# encv beta: 0.00035693321766747094
-
-# single effect in top 2% of factors (maybe sus)
-#     strongly represented in top 10% of factors (6 of top 21 factors)
 # note: r2 doesn't have it's usual interpretation under an elastic net
 #   because "regularization wrecks orthogonality"
 #   ref: https://stats.stackexchange.com/questions/494274/why-does-regularization-wreck-orthogonality-of-predictions-and-residuals-in-line
-# note "Automatic alpha grid generation is not supported for l1_ratio=0"
+
+# 224 vars before any filtering
 # encv results:
-# [lasso] l1_ratio=1, r2=0.09, count_nonzero=2, no gender vars
-# [default] l1_ratio=0.75, r2=0.09, count_nonzero=2, no gender vars
-# [default] l1_ratio=0.5, r2=0.09, count_nonzero=2, no gender vars
-# [ridge-like] l1_ratio=0.1, r2=0.09, count_nonzero=2, no gender vars
+# [lasso]      l1_ratio=1, r2=0.7, count_nonzero=33, 7 gender vars
+# [lasso-like] l1_ratio=0.75, r2=0.7, count_nonzero=33, 7 gender vars
+# [default]    l1_ratio=0.5, r2=0.7, count_nonzero=33, 7 gender vars
+# [ridge-like] l1_ratio=0.25, r2=0.7, count_nonzero=35, 8 gender vars
+# [ridge-like] l1_ratio=0.1, r2=0.71, count_nonzero=47, 10 gender vars
+# [ridge-like] l1_ratio=0.09, r2=0.71, count_nonzero=48, 11 gender vars **prefer bc it's not the lasso and more gender fx**
 # [ridge-like] l1_ratio=0.05, r2=0.09, count_nonzero=2, no gender vars
 # [ridge-like] l1_ratio=0.01, r2=0.09, count_nonzero=3, no gender vars
 # [ridge-like] l1_ratio=0.005, r2=0.08, count_nonzero=5, vars['gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Information Technology]']
-# [ridge-like] l1_ratio=0.0005, r2=0.12, count_nonzero=21, gender
-# [ridge-like] l1_ratio=0.0003, r2=0.12, count_nonzero=34, many gender vars (not counting)
-# [ridge-like] l1_ratio=0.0002, r2=0.13, count_nonzero=56, many gender vars (not counting)
-# [ridge-like] l1_ratio=0.0001, r2=0.14, count_nonzero=79, many gender vars (count = 18) **preferred**
-# [ridge-like] l1_ratio=0.00005, r2=0.14, count_nonzero=116, many gender vars (not counting)
-# [ridge-like] l1_ratio=0.00001, r2=0.14, count_nonzero=188, many gender vars (not counting)
-# [ridge-like] l1_ratio=0.000005, r2=0.10, count_nonzero=187, many gender vars (not counting)
+# [ridge-like] l1_ratio=0.002, r2=0.12, count_nonzero=10, 3 gender vars
+# [ridge-like] l1_ratio=0.001, r2=0.12, count_nonzero=14, 4 gender vars
+# [ridge-like] l1_ratio=0.0005, r2=0.12, count_nonzero=23, 6 gender vars
+# [ridge-like] l1_ratio=0.0003, r2=0.12, count_nonzero=36, 8 gender vars
+# [ridge-like] l1_ratio=0.0002, r2=0.13, count_nonzero=58, many gender vars (not counting)
+# [ridge-like] l1_ratio=0.0001, r2=0.14, count_nonzero=79, many gender vars (count = 18)
+# [ridge-like] l1_ratio=0.00005, r2=0.14, count_nonzero=112, many gender vars (not counting)
+# [ridge-like] l1_ratio=0.00001, r2=0.14, count_nonzero=172, many gender vars (not counting)
+# [ridge-like] l1_ratio=0.000005, r2=0.10, count_nonzero=171, many gender vars (not counting)
 

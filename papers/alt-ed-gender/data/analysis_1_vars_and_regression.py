@@ -98,10 +98,12 @@ def getData(dropFirstDummy=True):
         "is_prefer_college_peer"
     ]
     personality_columns = [s for s in df.columns if 'personality_' in s]
+    rulebreaker_columns = [s for s in df.columns if 'rulebreakers_' in s]
     school_columns = [s for s in df.columns if 'school_hirability_' in s]
     skill_columns = [s for s in df.columns if 'skill_' in s]
     worldview_columns = [s for s in df.columns if 'worldview_continuous_' in s]
-    column_names_to_numerize = favorability_columns + other_column_to_numerize + personality_columns + school_columns + skill_columns + worldview_columns
+
+    column_names_to_numerize = favorability_columns + other_column_to_numerize + personality_columns + rulebreaker_columns + school_columns + skill_columns + worldview_columns
     df[column_names_to_numerize] = df[column_names_to_numerize].apply(pd.to_numeric)
 
     df['familiarity_count'] = df.apply(lambda row: compute_familiarity_count(row, familiarity_columns), axis='columns')
@@ -113,11 +115,6 @@ def getData(dropFirstDummy=True):
     df['school_other_impressed'] = df.school_hirability_1 + df.school_hirability_3 + df.school_hirability_5 + df.school_hirability_7
 
     compute_skill_gaps(df)
-
-    # df = pd.get_dummies(df, columns=['industry']).rename(
-    #     fsReformatColumnNames, axis='columns')
-    # if dropFirstDummy:
-    #     df.drop(columns=['industry_agriculture'])
 
     # help build long model formula
     print("\n+ ".join(list(df.columns)))
@@ -211,6 +208,20 @@ def getDeskewedData(dropFirstDummy=True):
     df = df[df.is_serious == True]
 
     return df.drop(df[df['hirability'] < 5].index)
+
+def getDeskewedDataWithDummies(dropFirstDummy=True):
+    df = getDeskewedData(dropFirstDummy)
+
+    df = pd.get_dummies(df, columns=['industry']).rename(
+        fsReformatColumnNames, axis='columns')
+
+    df = pd.get_dummies(df, columns=['gender']).rename(
+        fsReformatColumnNames, axis='columns')
+
+    if dropFirstDummy:
+        df.drop(columns=['industry_agriculture'])
+
+    return df
 
 
 def getLowHirabilityGroup(dropFirstDummy=True):

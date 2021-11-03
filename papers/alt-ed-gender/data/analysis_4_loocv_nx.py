@@ -153,7 +153,7 @@ if "chart=true" in sys.argv[1:]:
 cv = model_selection.LeaveOneOut()
 # reg = linear_model.LassoCV(cv=cv,
 reg = linear_model.ElasticNetCV(cv=cv,
-    l1_ratio=0.015,
+    l1_ratio=0.04,
     random_state=0,
     max_iter=10000).fit(X, y)
 
@@ -188,17 +188,20 @@ print("\n+ ".join(names_nonzero))
 # encv beta: 0.006155903666052383
 
 # note "Automatic alpha grid generation is not supported for l1_ratio=0"
-# note "0.15 l1_ratio -> top 57/165 -> top 35% of factors"
+# note "0.03 l1_ratio -> top 57/143 -> top 40% of factors"
 # encv results:
-# [lasso] l1_ratio=1, r2=0.22, count_nonzero=5, no gender vars
-# [default] l1_ratio=0.75, r2=0.21, count_nonzero=6, no gender vars
-# [default] l1_ratio=0.5, r2=0.22, count_nonzero=7, no gender vars
-# [ridge-like] l1_ratio=0.1, r2=0.17, count_nonzero=7, no gender vars
-# [ridge-like] l1_ratio=0.05, r2=0.41, count_nonzero=34, no gender vars
-# [ridge-like] l1_ratio=0.03, r2=0.40, count_nonzero=42, no gender vars
-# [ridge-like] l1_ratio=0.02, r2=0.40, count_nonzero=51, no gender vars
-# [ridge-like] l1_ratio=0.019, r2=0.40, count_nonzero=57, gender vars['gender[T.Male]']
-# [ridge-like] l1_ratio=0.015, r2=0.43, count_nonzero=69, gender vars['gender[T.Male]'] **preferred**
-# [ridge-like] l1_ratio=0.01, r2=0.43, count_nonzero=78, gender vars['gender[T.Male]']
-# [ridge-like] l1_ratio=0.005, r2=0.43, count_nonzero=105, gender vars['gender[T.Male]']
-# [ridge-like] l1_ratio=0.0005, r2=0.39, count_nonzero=147, gender vars['gender[T.Male]']
+# [lasso]      l1_ratio=1, r2=0.5, count_nonzero=10, no gender vars
+# [default]    l1_ratio=0.5, r2=0.49, count_nonzero=11, no gender vars
+# [ridge-like] l1_ratio=0.1, r2=0.51, count_nonzero=23, no gender vars
+# [ridge-like] l1_ratio=0.05, r2=0.53, count_nonzero=34, no gender vars
+# [ridge-like] l1_ratio=0.04, r2=0.60, count_nonzero=36, no gender vars
+# [ridge-like] l1_ratio=0.03, r2=0.60, count_nonzero=57, gender vars['gender[T.Male]']
+# [ridge-like] l1_ratio=0.02, r2=0.61, count_nonzero=68, gender vars['gender[T.Male]']
+# [ridge-like] l1_ratio=0.015, r2=0.64, count_nonzero=81, gender vars['gender[T.Male]'] **preferred** r2 drops quickly by removing factors but doesn't increase much adding many
+# [ridge-like] l1_ratio=0.01, r2=0.65, count_nonzero=98, gender vars['gender[T.Male]']
+# [ridge-like] l1_ratio=0.009, r2=0.65, count_nonzero=102, gender vars['gender[T.Male]']
+# [ridge-like] l1_ratio=0.006, r2=0.65, count_nonzero=108, gender vars['gender[T.Male]']
+# [ridge-like] l1_ratio=0.005, r2=0.66, count_nonzero=113, gender vars['gender[T.Male]']
+# [ridge-like] l1_ratio=0.004, r2=0.66, count_nonzero=120, gender vars['gender[T.Male]']
+# [ridge-like] l1_ratio=0.001, r2=0.58, count_nonzero=135, gender vars['gender[T.Male]']
+# [ridge-like] l1_ratio=0.0005, r2=0.48, count_nonzero=133, gender vars['gender[T.Male]']
