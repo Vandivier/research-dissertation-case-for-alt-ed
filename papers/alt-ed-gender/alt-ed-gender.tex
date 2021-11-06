@@ -375,58 +375,83 @@ Further exploration showed that naive preference for a programming career varies
 % would require n ~> 300
 
 When categorical response options are treated as distinct dummy variables,
-the ninety-four question survey produces one hundred and sixty-five variables.
+the ninety-four question survey produces one hundred and fourty-three variables.
 When the four-way interaction plus related lower-level interactions are counted,
-there are two hundred and fourty-six variables.
+there are two hundred and twenty-four variables.
 % note: intuitively, the fact that risk preference interacts, for example, captures heterogeneous within-industry risk preference effects.
 
-GENDER IS IMPORTANT BC SURVIVES NET AND MORE IMPORTANT WHEN INTERACTED
-***TODO: REDO PREFERRED MODEL
-PREFERED NX MODEL l1_ratio=0.015, INCLUDES GENDER, MALE SURVIVES TO 0.03 l1_ratio
-# note "0.03 l1_ratio -> top 57/143 -> top 40 percent of factors"
-***
 % This is a count of actual variables rather than possible variables because many categorical response options were never selected.
 These variable pools were seperately subjected to elastic net regularization with leave-one-out cross-validation.
-Male identification is the only gender variable in the pool of one hundred and sixty-five variables.
-Male identification is retained in a second-best regularized model ($ \lambda_1 / \lambda_2 = 0.019, k = 57, R^2=0.40 $).
-This places gender in the top thirty-five percent of independent variables.
-A distinct model derived from the same variable pool has trivially better out-of-sample explanatory power,
-but does so with substantially fewer variables ($ \lambda_1 / \lambda_2 = 0.05, k = 34, R^2=0.41 $).
+Male identification is the only gender variable in the pool of one hundred and fourty-three variables.
+When these factors are ranked for importance by their contribution to out-of-sample explanatory power,
+gender identification is retained in the top fourty percent of variables, and it is retained in model that maximizes out-of-sample $R^2$.
+% The preferred model eliminates many features without important loss of out-of-sample explanatory power.
 
 When the variable pool that includes interactions is reduced, many gender-interacted variables
-are retained in the preferred model ($ \lambda_1 / \lambda_2 = 0.0001, k = 79, R^2=0.14 $).
-From a pool of two hundred and fourty-six variables, seventy-nine variables are retained in this model.
-This represents about thirty-two percent of the variable pool.
-Eighteen of the retained variables are gender-related.
-This confirms the idea that interacted gender effects are more stable and important predictors of hirability
-compared to a simple dummy variable.
-
-% This preferred model doesn't perform as well as the model reduced from pool 1, so an ideal model needs to superset factors and re-reduce
-A second, heavily penalized, non-preferred model that is identified from this pool is also interesting for identifying the most important variables.
-This heavily penalized model contains five factors,
-including one gender-interacted variable ($ \lambda_1 / \lambda_2 = 0.005, k = 5, R^2=0.08 $).
-Five factors represent the most important two percent of factors according to this factor evaluation strategy.
-Interestingly, the retained gender variable is gender interacted with risk preference, preference for a programming career,
+are retained in the model that maximizes out-of-sample $R^2$ ($ \lambda_1 / \lambda_2 = 0.09, k = 48, R^2=0.71 $).
+From a pool of two hundred and twenty-four variables, fourty-eight variables are retained in this model.
+This approximately represents the top twenty percent variables in the pool by importance.
+Eleven of these important variables are gender-related.
+This confirms the idea that interacted gender effects are more important than gender alone.
+Interestingly, the single most important gender effect using this approach is
+gender interacted with risk preference,
+preference for a programming career,
 and occupation in the information technology industry.
+This aligns with the special relationship that has been observed between alternative education and the information technology industry.
 
-% TODO: do I guard overfit by removing once-identified vars? or do I try all of them?
-Two kinds of univariate selection and two kinds of SFS are also used to robustly identify interacted gender effects.
-now put all the variables together and reduce using AIC+AR2 (elastic net model 1 plus model 2 plus other factors)
-now compare remaining gender vars to multiply-attested gender vars; test 'big ones' again (2+ or 3+?)
+% TODO: I could explain this in the methodology instead of results
+% TODO: I could also put this in table instead of words
+In addition to the elastic net, four kinds of sequential factor selection (SFS) are tested to identify potentially important features.
+The point of this exercise is to identify features in a way that is robust to multiple analytical approaches and multiple concepts of importance.
+Two of the four SFS procedures use univariate selection.
+One approach was to use the Benjamini-Hochberg procedure to estimate the false discovery rate.
+Features were included up to an allowed false discovery rate of fifty percent.
+The secon univariate approach selects combinations of features that minimize the family-wise error rate.
+Features were included up to a family-wise error rate of fifty percent.
+
+The other two SFS procedures use forward selection of variables in a multiple regression.
+The first approach is a multiple support vector regression (SVR) that minimizes mean squared error.
+The second approach is an ordinary least squares (OLS) multiple regression that optimizes for median absolute error.
+OLS optimization against mean squared error was avoided to preclude the linear analysis from becoming an extraneous subset of the vector analysis.
+In both cases, forward selection continued until fifty-six variables were selected.
+This is equivalent to taking the top twenty-five percent of variables.
+
+One hundred and twenty-six features are identified as important by at least one of the six feature selection approaches.
+The next important result relates to the direction of the coefficients of these variables.
+Before those coefficients are identified, however, additional steps must be taken to eliminate overfitting.
+This is because several of the feature selection approaches do not account for collinearity.
+Included variable bias is also an important concern to mitigate.
+
+To address these concerns in an inferrential study, backward feature elimination (BFE) optimizing on the p-value of each feature is useful.
+When $p > 0.5$ it becomes likely that a coefficient is equal to zero.
+Such variables should be eliminated to avoid included variable bias and overfit.
+The sample size of the current study constrains multiple regression of one hundred and twenty-six features.
+As a second-best approach, I reduce the variable pool using stepwise regression.
+% TODO: maybe add a diagram here
+
+I begin by applying BFE as described to those variables identified by the elastic net when considering the pool of variables without interacted gender.
+Sixty-seven features survive this reduction step.
+I then add features identified by the elastic net inclusive of interacted gender.
+I apply BFE again, then I add SFS-selected variables, and apply BFE again.
+In the end, the original pool of one hundred and twenty-six features is reduced to a pool of seventy-six features.
+Each feature in this model has $p < 0.5$,
+the model fully explains the observed data ($R^2 = 0.997$),
+and the Akaike information criterion (AIC) is substantially better compared to a model built on the results of the elastic net alone.
+Table TODO shows the coefficients for this model.
+
+% TODO: we explain hirability but now explain preference for a programming career logit and is_tech logit?
 
 
-% TODO: replicate overqualification effects are bad and extend into comparative overqualification effects
 
-% do i need to explain how i tuned the elastic net?
-% The coefficient estimates from the elastic net are defined by Equation TODO:
+% TODO: discuss that i replicate overqualification effects are bad and extend into comparative overqualification effects
+
+% TODO: gender factors that are consistent across hirability and the logit and instrumentable
+
 % % TODO: latex equation: https://en.wikipedia.org/wiki/Elastic_net_regularization
 % The elastic net is tuned by testing many values of \lambda_1 while holding constant $\lambda_2 = 1$.
 % Table TODO shows the count of retained features, the proportion of retained gender features,
 % and the explanatory power of various models obtained
 % Elastic net multiple regression with leave-one-out cross validation accounts for collinearity and protects against overfit.
-
-
-
 
 Table TODO shows explanatory power by factor group on hirability.
 Independent factors for ethnicity, industry of employment, and state of residence

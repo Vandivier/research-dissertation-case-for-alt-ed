@@ -8,15 +8,20 @@ import statsmodels.api as sm
 
 df_with_dummies = analysis.getDeskewedDataWithDummies(True)
 
+# superset of all models count of x, inclusive of Intercept =
+# (81) + (13) + (10) + (22)
+# = 126
+# reduced to k = 76
+
 # consolidating candidate features from: loocv_nx_preferred + loocv_wx_preferred + sfs_gender_variables
 # steps:
-# 1. analysis_4_loocv.py result
+# 1. analysis_4_loocv.py result (k= 81)
 # 2. BFE on 1
-# 3. 2 + analysis_5_loocv_wx.py non-gender fx
+# 3. 2 + analysis_5_loocv_wx.py non-gender fx (k= 13)
 # 4. BFE on 3
-# 5. 4 + analysis_5_loocv_wx.py gender fx
+# 5. 4 + analysis_5_loocv_wx.py gender fx (k=10)
 # 6. BFE on 5
-# 7. 6 + SFS gender fx
+# 7. 6 + SFS gender fx (k=22)
 # 8. BFE on 7 <--- preferred model!! (should i reduce further from here?)
 
 # r2 = 0.98, ar2 = .68, AIC = 96.67, n = 86, k = 80

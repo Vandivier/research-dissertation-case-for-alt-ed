@@ -30,7 +30,7 @@
 
 
 from mlxtend.feature_selection import SequentialFeatureSelector as sfs
-from sklearn import feature_selection, linear_model, model_selection, metrics, svm
+from sklearn import feature_selection, linear_model, model_selection, svm
 import statsmodels.api as sm
 import analysis_1_var_wrangler as analysis
 
