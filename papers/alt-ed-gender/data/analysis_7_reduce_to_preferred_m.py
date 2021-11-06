@@ -26,7 +26,7 @@ model_important_candidates = '''hirability ~
 + state[T.North Carolina]
 + state[T.Pennsylvania]
 + state[T.Tennessee]
-+ gender[T.Male]
++ gender_male
 + income[T.100,000-124,999]
 + income[T.50,000-74,999]
 + income[T.75,000-99,999]
@@ -41,12 +41,11 @@ model_important_candidates = '''hirability ~
 + covid_fav_online[T.No increase (or a decrease)]
 + covid_fav_online[T.Slight degree]
 + covid_remote[T.No increase (or a decrease)]
-+ covid_remote[T.Slight degree]
 + covid_impact[T.Moderate negative impact]
 + covid_impact[T.Slight negative impact]
 + expected_conventionality
 + familiarity_count
-+ familiarity_count ^ 2
++ familiarity_count^2
 + favor_online_ed
 + rulebreakers_risky
 + rulebreakers_culture_value
@@ -94,17 +93,11 @@ model_important_candidates = '''hirability ~
 + skill_comparative_no_relative_oqskill_commute
 + skill_comparative_no_relative_oqskill_work_odd_hours_or_a_strange_schedule
 
-+ expected_duration[T.Under a year]
 + covid_remote[T.Slight degree]
-+ expected_conventionality
-+ favor_online_ed
-+ rulebreakers_risky
-+ rulebreakers_culture_value
-+ rulebreakers_mixed_bag
-+ gender[T.Male]:favor_programming_career
-+ gender[T.Male]:favor_programming_career:industry[T.Information Technology]
++ gender_male:favor_programming_career
++ gender_male:favor_programming_career:industry[T.Information Technology]
 + favor_programming_career:favor_seeking_risk
-+ gender[T.Male]:favor_programming_career:favor_seeking_risk
++ gender_male:favor_programming_career:favor_seeking_risk
 + favor_programming_career:favor_seeking_risk:industry[T.Education]
 + favor_programming_career:favor_seeking_risk:industry[T.Energy]
 + favor_programming_career:favor_seeking_risk:industry[T.Finance, Investment, or Accounting]
@@ -115,33 +108,14 @@ model_important_candidates = '''hirability ~
 + favor_programming_career:favor_seeking_risk:industry[T.Military]
 + favor_programming_career:favor_seeking_risk:industry[T.Retail]
 + favor_programming_career:favor_seeking_risk:industry[T.Transportation]
-+ gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Education]
-+ gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Finance, Investment, or Accounting]
-+ gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Health]
-+ gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Information Technology]
-+ gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Manufacturing]
-+ gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Military]
-+ gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Retail]
-+ gender[T.Male]:favor_programming_career:favor_seeking_risk:industry[T.Transportation]
-+ personality_o
-+ personality_c
-+ personality_e
-+ personality_a
-+ personality_n
-+ worldview_continuous_activism
++ gender_male:favor_programming_career:favor_seeking_risk:industry[T.Education]
++ gender_male:favor_programming_career:favor_seeking_risk:industry[T.Finance, Investment, or Accounting]
++ gender_male:favor_programming_career:favor_seeking_risk:industry[T.Health]
++ gender_male:favor_programming_career:favor_seeking_risk:industry[T.Manufacturing]
++ gender_male:favor_programming_career:favor_seeking_risk:industry[T.Military]
++ gender_male:favor_programming_career:favor_seeking_risk:industry[T.Retail]
++ gender_male:favor_programming_career:favor_seeking_risk:industry[T.Transportation]
 + worldview_description[T.Conservative or Evangelical Christian]:worldview_continuous_activism
-+ worldview_description[T.Progressive Christian]:worldview_continuous_activism
-+ worldview_description[T.Religious, Not Christian]:worldview_continuous_activism
-+ worldview_continuous_pro_innovation
-+ worldview_continuous_pro_regulation
-+ school_unaccredited_hirability
-+ school_self_impressed
-+ school_other_impressed
-+ skill_aetiwno_skill_physical_attractiveness
-+ skill_aetiwno_skill_written_communication_skill
-+ skill_aetiwno_skill_body_language_communication_skill
-+ skill_aetiwno_skill_break_rules
-+ skill_aetiwno_skill_commute
 
 + gender_male:industry[T.Health]
 + gender_male:favor_programming_career:industry[T.Health]
@@ -165,7 +139,6 @@ model_important_candidates = '''hirability ~
 + gender_male:favor_programming_career:industry[T.Retail]
 + gender_male:favor_seeking_risk
 + gender_male:favor_seeking_risk:industry[T.Retail]
-+ gender_male:favor_programming_career:favor_seeking_risk:industry[T.Retail]
 
 + 1'''
 
