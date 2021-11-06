@@ -153,7 +153,7 @@ if "chart=true" in sys.argv[1:]:
 cv = model_selection.LeaveOneOut()
 # reg = linear_model.LassoCV(cv=cv,
 reg = linear_model.ElasticNetCV(cv=cv,
-    l1_ratio=0.04,
+    l1_ratio=0.015,
     random_state=0,
     max_iter=10000).fit(X, y)
 
@@ -173,19 +173,6 @@ print("count nonzero: " + str(len(names_nonzero)))
 print("count gender vars: " + str(len(gender_vars)))
 print("var names: ")
 print("\n+ ".join(names_nonzero))
-
-# 165 vars before any filtering
-# top 5 factors from lasso:
-# expected_conventionality
-# encv beta: 0.0827693639058993
-# favor_online_ed
-# encv beta: 0.1302870909362811
-# personality_o
-# encv beta: 0.006483753647500249
-# worldview_continuous_activism
-# encv beta: 0.01391413495323635
-# school_other_impressed
-# encv beta: 0.006155903666052383
 
 # note "Automatic alpha grid generation is not supported for l1_ratio=0"
 # note "0.03 l1_ratio -> top 57/143 -> top 40% of factors"

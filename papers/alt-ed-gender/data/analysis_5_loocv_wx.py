@@ -64,7 +64,7 @@ print(n_X_samples, n_y_samples)
 
 cv = model_selection.LeaveOneOut()
 reg = linear_model.ElasticNetCV(cv=cv,
-    l1_ratio=0.05,
+    l1_ratio=0.09,
     random_state=0,
     max_iter=30000).fit(X, y)
 
