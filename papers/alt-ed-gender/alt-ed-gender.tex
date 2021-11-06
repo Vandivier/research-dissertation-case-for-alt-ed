@@ -210,7 +210,7 @@ Hirability is used as the main dependent variable for regression analysis,
 but two other dependent variables were also studied to ensure completeness and robustness of findings.
 Univariate selection is a trivial process that correlates features one-by-one to the dependent variable,
 or hirability in the case of this study.
-Univariate selection is not preferred to elastic net selection in large part because it does not account for colinearity.
+Univariate selection is not preferred to elastic net selection in large part because it does not account for collinearity.
 Still, features that are selected by univariate selection are relatively strong, so employing the method adds an interesting nuance to results.
 
 Several prior studies in the meta-analysis used recursive feature elimination (RFE).
@@ -227,6 +227,7 @@ number of interesting independent variables identified through robust feature se
 Ordinary least squares (OLS) regression is conducted with two different dependent variables.
 Logistic regression is conducted with a third dependent variable.
 
+% method is arguably supervised machine learning
 
 \section{Description of Data}
 
@@ -254,8 +255,8 @@ Appendix TODO contains summary statistics for each variable.
 % cite: weak correlation between self-reported and actual risk aversion https://wol.iza.org/articles/measuring-individual-risk-preferences/long
 % author above says `Survey measures lack a clear connection to theory' -> signaling model solves that (perceived risk > actual risk in hiring decision)
 % 'enjoy taking risks' phrasing a. taken from above and b. consistent with programming career orientation (an alternative to people-thing orientation measure)
-The main dependent variable of interest is hirability,
-a non-price indicator of willingness to hire on the basis of an alternative credential.
+The main dependent variable of interest is hirability.
+Hirability is a non-price indicator of willingness to hire on the basis of an alternative credential.
 Two other variables that are investigated as both dependent and independent variables are
 employment in the information technology industry
 and naive preference for a programming career.
@@ -363,7 +364,7 @@ even while interest in the programming occupation persists.
 % # 9. perceived skill questions
 % 10th page is a thank you page that allows for paying participants
 The absence of differences in means is noteworthy,
-but a better analysis accounts for interactions and colinearity between gender and other variables.
+but a better analysis accounts for interactions and collinearity between gender and other variables.
 As previously noted, risk aversion did not differ significantly by gender.
 This is surprising, because substantial external literature demonstrates a link between gender and risk aversion[18, 19].
 Further research invariant to gender shows a link between risk aversion and occupational preference[20].
@@ -422,7 +423,7 @@ now compare remaining gender vars to multiply-attested gender vars; test 'big on
 % The elastic net is tuned by testing many values of \lambda_1 while holding constant $\lambda_2 = 1$.
 % Table TODO shows the count of retained features, the proportion of retained gender features,
 % and the explanatory power of various models obtained
-% Elastic net multiple regression with leave-one-out cross validation accounts for colinearity and protects against overfit.
+% Elastic net multiple regression with leave-one-out cross validation accounts for collinearity and protects against overfit.
 
 
 
@@ -529,6 +530,18 @@ reduce to preferred model - choose a tighter net (heavier penalty) or backwards 
 2. choose p-value elimination. start w 81 vars (including intercept) in nx elastic net, cut so p < 0.5 (true effects, combats included variable bias)
 3. theoretically supervised stepwise pattern. start w nx elastic net, cut, add unique wx elastic net, cut, add sfs gender vars, cut.
 note: maybe diagram build + reduction process?
+
+note: compare sfs_unique_feature_names and sfs_unique_feature_names_collinearity_dropped
+note: i had to arbitrarily drop from reduction_step_8_model to remove perfect multicollinearity within this group:
+gender_male:favor_programming_career:industry_energy
+gender_male:favor_programming_career:industry_law
+gender_male:favor_programming_career:industry_real_estate
+gender_male:favor_seeking_risk:industry_energy
+gender_male:favor_seeking_risk:industry_law
+gender_male:favor_seeking_risk:industry_real_estate
+gender_male:favor_programming_career:favor_seeking_risk:industry_energy
+gender_male:favor_programming_career:favor_seeking_risk:industry_law
+gender_male:favor_programming_career:favor_seeking_risk:industry_real_estate
 
 \section{Conclusions}
 
