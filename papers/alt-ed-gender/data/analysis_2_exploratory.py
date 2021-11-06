@@ -1,7 +1,7 @@
 
 from scipy import stats
 import statsmodels.api as sm
-import analysis_1_vars_and_regression as analysis
+import analysis_1_var_wrangler as analysis
 
 skewed = analysis.getData()
 deskewed = analysis.getDeskewedData()

@@ -3,7 +3,7 @@
 #   gender*favor_programming_career*favor_seeking_risk*industry
 
 
-import analysis_1_vars_and_regression as analysis
+import analysis_1_var_wrangler as analysis
 from sklearn import linear_model, model_selection
 import statsmodels.api as sm
 

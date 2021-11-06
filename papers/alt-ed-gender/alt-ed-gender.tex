@@ -370,6 +370,9 @@ Further research invariant to gender shows a link between risk aversion and occu
 These prior findings motivated exploration of a three-way interaction that turned out to significantly explain hirability.
 Further exploration showed that naive preference for a programming career varies importantly with respect to the three-way interaction.
 
+% a better analysis could use the r2-maximizing elastic nets without need for stepwise refinement
+% would require n ~> 300
+
 When categorical response options are treated as distinct dummy variables,
 the ninety-four question survey produces one hundred and sixty-five variables.
 When the four-way interaction plus related lower-level interactions are counted,
@@ -523,7 +526,7 @@ note: only two gender interactions were duplicatively identified between SFS and
 
 reduce to preferred model - choose a tighter net (heavier penalty) or backwards elimination by p-value?
 1. former seems good for prediction but latter seems good for inference/explanation of current data
-2. choose p-value elimination. start w 81 vars in nx elastic net, cut so p < 0.5 (true effects, combats included variable bias)
+2. choose p-value elimination. start w 81 vars (including intercept) in nx elastic net, cut so p < 0.5 (true effects, combats included variable bias)
 3. theoretically supervised stepwise pattern. start w nx elastic net, cut, add unique wx elastic net, cut, add sfs gender vars, cut.
 note: maybe diagram build + reduction process?
 

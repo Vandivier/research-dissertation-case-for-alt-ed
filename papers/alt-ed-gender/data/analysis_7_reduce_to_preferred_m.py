@@ -1,122 +1,23 @@
-# the point of this file is: hey, you identified which factors are important but
+# the point of this file is: hey, you identified factors that are important but
 # what are their directions of effect?
-# TODO: use LOOCV-WX model l1_ratio=0.0001 as starting point
 # try reducing high p-value factors, 1-by-1 until we get an optimized AIC and adjusted r2
 # convinient that n < p in this case, so we can to RFE manually (bc automated lacks ar2 maximization algo)
 
-import analysis_1_vars_and_regression as analysis
-from sklearn import linear_model, model_selection
+import analysis_1_var_wrangler as analysis
 import statsmodels.api as sm
 
 df_with_dummies = analysis.getDeskewedDataWithDummies(True)
 
-# model is: loocv_nx_preferred + loocv_wx_preferred + sfs_gender_variables
-model_important_candidates = '''hirability ~
-+ expected_duration[T.Under 3 months]
-+ expected_duration[T.Under 6 months]
-+ expected_duration[T.Under a year]
-+ industry_finance_investment_or_accounting
-+ industry_health
-+ industry_information_technology
-+ industry[T.Manufacturing]
-+ job_title_credentials[T.Yes. Certification, license, or other non-degree credentials are an industry norm.]
-+ job_title_credentials[T.Yes. Certification, license, or other non-degree credentials are required by law.]
-+ manager_effects[T.Yes]
-+ state[T.New York]
-+ state[T.North Carolina]
-+ state[T.Pennsylvania]
-+ state[T.Tennessee]
-+ gender_male
-+ income[T.100,000-124,999]
-+ income[T.50,000-74,999]
-+ income[T.75,000-99,999]
-+ age[T.35-44]
-+ age[T.45-54]
-+ education[T.High School Diploma]
-+ education[T.Obtained Non-Doctoral Graduate Degree]
-+ education[T.Obtained Undergraduate Degree]
-+ education[T.Some Graduate School]
-+ ethnicity[T.Black or African American]
-+ worldview_description[T.Religious, Not Christian]
-+ covid_fav_online[T.No increase (or a decrease)]
-+ covid_fav_online[T.Slight degree]
-+ covid_remote[T.No increase (or a decrease)]
-+ covid_impact[T.Moderate negative impact]
-+ covid_impact[T.Slight negative impact]
-+ expected_conventionality
-+ familiarity_count
-+ familiarity_count^2
-+ favor_online_ed
-+ rulebreakers_risky
-+ rulebreakers_culture_value
-+ rulebreakers_mixed_bag
-+ is_prefer_college_peer
-+ favor_programming_career
-+ favor_seeking_risk
-+ grit
-+ personality_o
-+ personality_c
-+ personality_e
-+ personality_a
-+ personality_n
-+ worldview_continuous_activism
-+ worldview_description[T.Other Christian]:worldview_continuous_activism
-+ worldview_description[T.Progressive Christian]:worldview_continuous_activism
-+ worldview_description[T.Religious, Not Christian]:worldview_continuous_activism
-+ worldview_continuous_pro_foreign
-+ worldview_continuous_pro_innovation
-+ worldview_continuous_pro_regulation
-+ school_unaccredited_hirability
-+ school_self_impressed
-+ school_other_impressed
-+ skill_aetiwno_skill_physical_attractiveness
-+ skill_aetiwno_skill_salary
-+ skill_aetiwno_skill_written_communication_skill
-+ skill_aetiwno_skill_verbal_communication_skill
-+ skill_aetiwno_skill_body_language_communication_skill
-+ skill_aetiwno_skill_conscientiousness
-+ skill_aetiwno_skill_break_rules
-+ skill_aetiwno_skill_teamwork
-+ skill_aetiwno_skill_commute
-+ skill_aetiwno_skill_work_odd_hours_or_a_strange_schedule
-+ skill_comparative_no_relative_oqskill_physical_attractiveness
-+ skill_comparative_no_relative_oqskill_emotional_intelligence
-+ skill_comparative_no_relative_oqskill_salary
-+ skill_comparative_no_relative_oqskill_written_communication_skill
-+ skill_comparative_no_relative_oqskill_verbal_communication_skill
-+ skill_comparative_no_relative_oqskill_body_language_communication_skill
-+ skill_comparative_no_relative_oqskill_technical_job_skills
-+ skill_comparative_no_relative_oqskill_conscientiousness
-+ skill_comparative_no_relative_oqskill_break_rules
-+ skill_comparative_no_relative_oqskill_customer_service_skill
-+ skill_comparative_no_relative_oqskill_teamwork
-+ skill_comparative_no_relative_oqskill_commute
-+ skill_comparative_no_relative_oqskill_work_odd_hours_or_a_strange_schedule
+# consolidating candidate features from: loocv_nx_preferred + loocv_wx_preferred + sfs_gender_variables
+# steps:
+# 1. analysis_4_loocv.py result
+# 2. BFE on 1
+# 3. analysis_5_loocv_wx.py non-gender fx + 2
+# 4. BFE on 3
+# 5. analysis_5_loocv_wx.py gender fx + 4
+# 6. BFE on 5
 
-+ covid_remote[T.Slight degree]
-+ gender_male:favor_programming_career
-+ gender_male:favor_programming_career:industry_information_technology
-+ favor_programming_career:favor_seeking_risk
-+ gender_male:favor_programming_career:favor_seeking_risk
-+ favor_programming_career:favor_seeking_risk:industry[T.Education]
-+ favor_programming_career:favor_seeking_risk:industry[T.Energy]
-+ favor_programming_career:favor_seeking_risk:industry_finance_investment_or_accounting
-+ favor_programming_career:favor_seeking_risk:industry_health
-+ favor_programming_career:favor_seeking_risk:industry_information_technology
-+ favor_programming_career:favor_seeking_risk:industry[T.Law]
-+ favor_programming_career:favor_seeking_risk:industry[T.Manufacturing]
-+ favor_programming_career:favor_seeking_risk:industry[T.Military]
-+ favor_programming_career:favor_seeking_risk:industry[T.Retail]
-+ favor_programming_career:favor_seeking_risk:industry[T.Transportation]
-+ gender_male:favor_programming_career:favor_seeking_risk:industry[T.Education]
-+ gender_male:favor_programming_career:favor_seeking_risk:industry_finance_investment_or_accounting
-+ gender_male:favor_programming_career:favor_seeking_risk:industry_health
-+ gender_male:favor_programming_career:favor_seeking_risk:industry[T.Manufacturing]
-+ gender_male:favor_programming_career:favor_seeking_risk:industry[T.Military]
-+ gender_male:favor_programming_career:favor_seeking_risk:industry[T.Retail]
-+ gender_male:favor_programming_career:favor_seeking_risk:industry[T.Transportation]
-+ worldview_description[T.Conservative or Evangelical Christian]:worldview_continuous_activism
-
+model_important_candidates = '''
 + gender_male:industry_health
 + gender_male:favor_programming_career:industry_health
 + gender_male:industry[T.Energy]
@@ -139,8 +40,7 @@ model_important_candidates = '''hirability ~
 + gender_male:favor_programming_career:industry[T.Retail]
 + gender_male:favor_seeking_risk
 + gender_male:favor_seeking_risk:industry[T.Retail]
-
-+ 1'''
+'''
 
 # r2 = 0.98, ar2 = .68, AIC = 96.67, n = 86, k = 80
 # nx elastic net before cutting by p-values; expect it's overfit (included variable bias)
@@ -311,6 +211,11 @@ reduction_step_2 = '''hirability ~
 
 + 1'''
 
+def get_formula(y_variable_name, curr_feature_names):
+    curr_feature_subformula = " + ".join(list(curr_feature_names))
+    formula = y_variable_name + " ~ " + curr_feature_subformula + " + 1"
+    return formula
+
 # ref: https://www.analyticsvidhya.com/blog/2020/10/a-comprehensive-guide-to-feature-selection-using-wrapper-methods-in-python/
 def backward_elimination(data, candidate_feature_names, y_variable_name, significance_level = 0.5):
     without_index = list(candidate_feature_names)
@@ -318,11 +223,7 @@ def backward_elimination(data, candidate_feature_names, y_variable_name, signifi
     curr_feature_names = without_index
 
     while(len(curr_feature_names) > 0):
-        curr_feature_subformula = " + ".join(list(curr_feature_names))
-        formula = y_variable_name + " ~ " + curr_feature_subformula + " + 1"
-
-        model = sm.OLS.from_formula(formula, data).fit()
-        print(model.summary())
+        model = sm.OLS.from_formula(get_formula(y_variable_name, curr_feature_names), data).fit()
 
         p_values = model.pvalues[1:]
         max_p_value = p_values.max()
@@ -337,8 +238,55 @@ def backward_elimination(data, candidate_feature_names, y_variable_name, signifi
 
 reduction_step_1_model = sm.OLS.from_formula(reduction_step_1, data=df_with_dummies)
 reduction_step_1_feature_names = reduction_step_1_model.exog_names
-reduction_step_2_features = backward_elimination(df_with_dummies, reduction_step_1_feature_names, 'hirability', 0.5)
-print(reduction_step_2_features)
+reduction_step_2_feature_names = backward_elimination(df_with_dummies, reduction_step_1_feature_names, "hirability", 0.5)
 
-# important_candidates = sm.OLS.from_formula(reduction_step_2, data=df_with_dummies)
-# print(important_candidates.fit().summary())
+# nx elastic net after cutting by p-values
+# r2 = 0.98, ar2 = .90, AIC = 77.56, n = 86, k = 67
+reduction_step_2_formula = get_formula("hirability", reduction_step_2_feature_names)
+reduction_step_2_model = sm.OLS.from_formula(reduction_step_2_formula, data=df_with_dummies)
+
+# note: loocv_wx_unique_features is identified by analysis_5_loocv_wx.py
+#     but, it is deduped for features that were already included in analysis_4_loocv
+loocv_wx_unique_feature_names_no_gender_fx = '''
++ covid_remote_slight_degree
++ favor_programming_career:favor_seeking_risk
++ favor_programming_career:favor_seeking_risk:industry_education
++ favor_programming_career:favor_seeking_risk:industry_energy
++ favor_programming_career:favor_seeking_risk:industry_finance_investment_or_accounting
++ favor_programming_career:favor_seeking_risk:industry_health
++ favor_programming_career:favor_seeking_risk:industry_information_technology
++ favor_programming_career:favor_seeking_risk:industry_law
++ favor_programming_career:favor_seeking_risk:industry_manufacturing
++ favor_programming_career:favor_seeking_risk:industry_military
++ favor_programming_career:favor_seeking_risk:industry_retail
++ favor_programming_career:favor_seeking_risk:industry_transportation
++ worldview_description_conservative_or_evangelical_christian:worldview_continuous_activism
+'''
+
+reduction_step_3_formula = get_formula("hirability", reduction_step_2_feature_names) + loocv_wx_unique_feature_names_no_gender_fx
+reduction_step_3_model = sm.OLS.from_formula(reduction_step_3_formula, data=df_with_dummies)
+reduction_step_3_feature_names = reduction_step_3_model.exog_names
+reduction_step_4_feature_names = backward_elimination(df_with_dummies, reduction_step_3_feature_names, "hirability", 0.5)
+
+# step 4 is nx elastic net + wx gender fx, after cutting by p-values
+# r2 = 0.99, ar2 = .94, AIC = 33.39, n = 86, k = 70
+reduction_step_4_formula = get_formula("hirability", reduction_step_4_feature_names)
+reduction_step_4_model = sm.OLS.from_formula(reduction_step_4_formula, data=df_with_dummies)
+print(reduction_step_4_model.fit().summary())
+
+
+
+# note: if this works, why not increase k(nx elastic net)?
+loocv_wx_unique_feature_names_gender_fx  = '''
++ gender_male:favor_programming_career
++ gender_male:favor_programming_career:industry_information_technology
++ gender_male:favor_programming_career:favor_seeking_risk
++ gender_male:favor_programming_career:favor_seeking_risk:industry_education
++ gender_male:favor_programming_career:favor_seeking_risk:industry_finance_investment_or_accounting
++ gender_male:favor_programming_career:favor_seeking_risk:industry_health
++ gender_male:favor_programming_career:favor_seeking_risk:industry_manufacturing
++ gender_male:favor_programming_career:favor_seeking_risk:industry_military
++ gender_male:favor_programming_career:favor_seeking_risk:industry_retail
++ gender_male:favor_programming_career:favor_seeking_risk:industry_transportation
+'''
+
