@@ -212,14 +212,56 @@ def getDeskewedData(dropFirstDummy=True):
 def getDeskewedDataWithDummies(dropFirstDummy=True):
     df = getDeskewedData(dropFirstDummy)
 
-    df = pd.get_dummies(df, columns=['industry']).rename(
+    df = pd.get_dummies(df, columns=['age']).rename(
+        fsReformatColumnNames, axis='columns')
+
+    df = pd.get_dummies(df, columns=['education']).rename(
+        fsReformatColumnNames, axis='columns')
+
+    df = pd.get_dummies(df, columns=['ethnicity']).rename(
+        fsReformatColumnNames, axis='columns')
+
+    df = pd.get_dummies(df, columns=['expected_duration']).rename(
         fsReformatColumnNames, axis='columns')
 
     df = pd.get_dummies(df, columns=['gender']).rename(
         fsReformatColumnNames, axis='columns')
 
+    df = pd.get_dummies(df, columns=['income']).rename(
+        fsReformatColumnNames, axis='columns')
+
+    df = pd.get_dummies(df, columns=['industry']).rename(
+        fsReformatColumnNames, axis='columns')
+
+    df = pd.get_dummies(df, columns=['job_title_credentials']).rename(
+        fsReformatColumnNames, axis='columns')
+
+    df = pd.get_dummies(df, columns=['manager_effects']).rename(
+        fsReformatColumnNames, axis='columns')
+
+    df = pd.get_dummies(df, columns=['state']).rename(
+        fsReformatColumnNames, axis='columns')
+
+    df = pd.get_dummies(df, columns=['worldview_description']).rename(
+        fsReformatColumnNames, axis='columns')
+
+    df = df.rename(columns=lambda x: re.sub(r'certification_license_or_other_non_degree_credentials_are_','are_', x))
+
     if dropFirstDummy:
-        df.drop(columns=['industry_agriculture'])
+        df.drop(columns=['age_65',
+            'education_did_not_graduate_from_high_school',
+            'ethnicity_american_indian_or_alaska_native',
+            'expected_duration_more_than_a_year',
+            'gender_female',
+            'income_0_9999',
+            'industry_agriculture',
+            'job_title_credentials_no_i_do_not_know_of_any_credentials_which_are_common_valued_or_legally_required_in_that_line_of_work',
+            'manager_effects_unemployed',
+            'state_arizona',
+            'worldview_description_agnostic_or_atheist'])
+
+    # help build long model formula
+    print("\n+ ".join(list(df.columns)))
 
     return df
 

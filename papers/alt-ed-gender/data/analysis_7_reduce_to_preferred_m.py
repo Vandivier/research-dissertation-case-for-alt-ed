@@ -15,9 +15,9 @@ model_important_candidates = '''hirability ~
 + expected_duration[T.Under 3 months]
 + expected_duration[T.Under 6 months]
 + expected_duration[T.Under a year]
-+ industry[T.Finance, Investment, or Accounting]
-+ industry[T.Health]
-+ industry[T.Information Technology]
++ industry_finance_investment_or_accounting
++ industry_health
++ industry_information_technology
 + industry[T.Manufacturing]
 + job_title_credentials[T.Yes. Certification, license, or other non-degree credentials are an industry norm.]
 + job_title_credentials[T.Yes. Certification, license, or other non-degree credentials are required by law.]
@@ -95,30 +95,30 @@ model_important_candidates = '''hirability ~
 
 + covid_remote[T.Slight degree]
 + gender_male:favor_programming_career
-+ gender_male:favor_programming_career:industry[T.Information Technology]
++ gender_male:favor_programming_career:industry_information_technology
 + favor_programming_career:favor_seeking_risk
 + gender_male:favor_programming_career:favor_seeking_risk
 + favor_programming_career:favor_seeking_risk:industry[T.Education]
 + favor_programming_career:favor_seeking_risk:industry[T.Energy]
-+ favor_programming_career:favor_seeking_risk:industry[T.Finance, Investment, or Accounting]
-+ favor_programming_career:favor_seeking_risk:industry[T.Health]
-+ favor_programming_career:favor_seeking_risk:industry[T.Information Technology]
++ favor_programming_career:favor_seeking_risk:industry_finance_investment_or_accounting
++ favor_programming_career:favor_seeking_risk:industry_health
++ favor_programming_career:favor_seeking_risk:industry_information_technology
 + favor_programming_career:favor_seeking_risk:industry[T.Law]
 + favor_programming_career:favor_seeking_risk:industry[T.Manufacturing]
 + favor_programming_career:favor_seeking_risk:industry[T.Military]
 + favor_programming_career:favor_seeking_risk:industry[T.Retail]
 + favor_programming_career:favor_seeking_risk:industry[T.Transportation]
 + gender_male:favor_programming_career:favor_seeking_risk:industry[T.Education]
-+ gender_male:favor_programming_career:favor_seeking_risk:industry[T.Finance, Investment, or Accounting]
-+ gender_male:favor_programming_career:favor_seeking_risk:industry[T.Health]
++ gender_male:favor_programming_career:favor_seeking_risk:industry_finance_investment_or_accounting
++ gender_male:favor_programming_career:favor_seeking_risk:industry_health
 + gender_male:favor_programming_career:favor_seeking_risk:industry[T.Manufacturing]
 + gender_male:favor_programming_career:favor_seeking_risk:industry[T.Military]
 + gender_male:favor_programming_career:favor_seeking_risk:industry[T.Retail]
 + gender_male:favor_programming_career:favor_seeking_risk:industry[T.Transportation]
 + worldview_description[T.Conservative or Evangelical Christian]:worldview_continuous_activism
 
-+ gender_male:industry[T.Health]
-+ gender_male:favor_programming_career:industry[T.Health]
++ gender_male:industry_health
++ gender_male:favor_programming_career:industry_health
 + gender_male:industry[T.Energy]
 + gender_male:industry[T.Law]
 + gender_male:industry[T.Military]
@@ -131,7 +131,7 @@ model_important_candidates = '''hirability ~
 + gender_male:favor_seeking_risk:industry[T.Law]
 + gender_male:favor_seeking_risk:industry[T.Real Estate]
 + gender_male:favor_programming_career:favor_seeking_risk:industry[T.Energy]
-+ gender_male:favor_programming_career:favor_seeking_risk:industry[T.Information Technology]
++ gender_male:favor_programming_career:favor_seeking_risk:industry_information_technology
 + gender_male:favor_programming_career:favor_seeking_risk:industry[T.Law]
 + gender_male:favor_programming_career:favor_seeking_risk:industry[T.Real Estate]
 + gender_male:industry[T.Retail]
@@ -142,5 +142,35 @@ model_important_candidates = '''hirability ~
 
 + 1'''
 
-important_candidates = sm.OLS.from_formula(model_important_candidates, data=df_with_dummies)
+model_important_candidates_cleaned = '''hirability ~
++ expected_duration_under_3_months
++ expected_duration_under_6_months
++ expected_duration_under_a_year
++ industry_finance_investment_or_accounting
++ industry_health
++ industry_information_technology
++ industry_manufacturing
++ job_title_credentials_yes_are_an_industry_norm
++ job_title_credentials_yes_are_required_by_law
++ manager_effects_yes
++ state_new_york
++ state_north_carolina
++ state_pennsylvania
++ state_tennessee
++ gender_male
++ income_100000_124999
++ income_50000_74999
++ income_75000_99999
++ age_35_44
++ age_45_54
++ education_high_school_diploma
++ education_obtained_non_doctoral_graduate_degree
++ education_obtained_undergraduate_degree
++ education_some_college
++ ethnicity_black_or_african_american
++ worldview_description_religious_not_christian
+
++ 1'''
+
+important_candidates = sm.OLS.from_formula(model_important_candidates_cleaned, data=df_with_dummies)
 print(important_candidates.fit().summary())
