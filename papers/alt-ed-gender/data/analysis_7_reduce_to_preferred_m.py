@@ -142,7 +142,9 @@ model_important_candidates = '''hirability ~
 
 + 1'''
 
-model_important_candidates_cleaned = '''hirability ~
+# r2 = 0.98, ar2 = .68, AIC = 96.67, n = 86, k = 80
+# nx elastic net before cutting by p-values; expect it's overfit (included variable bias)
+reduction_step_1 = '''hirability ~
 + expected_duration_under_3_months
 + expected_duration_under_6_months
 + expected_duration_under_a_year
@@ -169,8 +171,174 @@ model_important_candidates_cleaned = '''hirability ~
 + education_some_college
 + ethnicity_black_or_african_american
 + worldview_description_religious_not_christian
++ covid_fav_online_no_increase_or_a_decrease
++ covid_fav_online_slight_degree
++ covid_remote_no_increase_or_a_decrease
++ covid_impact_moderate_negative_impact
++ covid_impact_slight_negative_impact
++ expected_conventionality
++ familiarity_count
++ familiarity_count^2
++ favor_online_ed
++ rulebreakers_risky
++ rulebreakers_culture_value
++ rulebreakers_mixed_bag
++ is_prefer_college_peer
++ favor_programming_career
++ favor_seeking_risk
++ grit
++ personality_o
++ personality_c
++ personality_e
++ personality_a
++ personality_n
++ worldview_continuous_activism
++ worldview_description_other_christian:worldview_continuous_activism
++ worldview_description_progressive_christian:worldview_continuous_activism
++ worldview_description_religious_not_christian:worldview_continuous_activism
++ worldview_continuous_pro_foreign
++ worldview_continuous_pro_innovation
++ worldview_continuous_pro_regulation
++ school_unaccredited_hirability
++ school_self_impressed
++ school_other_impressed
++ skill_aetiwno_skill_physical_attractiveness
++ skill_aetiwno_skill_salary
++ skill_aetiwno_skill_written_communication_skill
++ skill_aetiwno_skill_verbal_communication_skill
++ skill_aetiwno_skill_body_language_communication_skill
++ skill_aetiwno_skill_conscientiousness
++ skill_aetiwno_skill_break_rules
++ skill_aetiwno_skill_teamwork
++ skill_aetiwno_skill_commute
++ skill_aetiwno_skill_work_odd_hours_or_a_strange_schedule
++ skill_comparative_no_relative_oqskill_physical_attractiveness
++ skill_comparative_no_relative_oqskill_emotional_intelligence
++ skill_comparative_no_relative_oqskill_salary
++ skill_comparative_no_relative_oqskill_written_communication_skill
++ skill_comparative_no_relative_oqskill_verbal_communication_skill
++ skill_comparative_no_relative_oqskill_body_language_communication_skill
++ skill_comparative_no_relative_oqskill_technical_job_skills
++ skill_comparative_no_relative_oqskill_conscientiousness
++ skill_comparative_no_relative_oqskill_break_rules
++ skill_comparative_no_relative_oqskill_customer_service_skill
++ skill_comparative_no_relative_oqskill_teamwork
++ skill_comparative_no_relative_oqskill_commute
++ skill_comparative_no_relative_oqskill_work_odd_hours_or_a_strange_schedule
 
 + 1'''
 
-important_candidates = sm.OLS.from_formula(model_important_candidates_cleaned, data=df_with_dummies)
-print(important_candidates.fit().summary())
+reduction_step_2 = '''hirability ~
++ expected_duration_under_3_months
++ expected_duration_under_6_months
++ expected_duration_under_a_year
++ industry_finance_investment_or_accounting
++ industry_health
++ industry_information_technology
++ industry_manufacturing
++ job_title_credentials_yes_are_an_industry_norm
++ job_title_credentials_yes_are_required_by_law
++ manager_effects_yes
++ state_new_york
++ state_north_carolina
++ state_pennsylvania
++ state_tennessee
++ gender_male
++ income_100000_124999
++ income_50000_74999
++ income_75000_99999
++ age_35_44
++ age_45_54
++ education_high_school_diploma
++ education_obtained_non_doctoral_graduate_degree
++ education_obtained_undergraduate_degree
++ education_some_college
++ ethnicity_black_or_african_american
++ worldview_description_religious_not_christian
++ covid_fav_online_no_increase_or_a_decrease
++ covid_fav_online_slight_degree
++ covid_remote_no_increase_or_a_decrease
++ covid_impact_moderate_negative_impact
++ covid_impact_slight_negative_impact
++ expected_conventionality
++ familiarity_count
++ familiarity_count^2
++ favor_online_ed
++ rulebreakers_risky
++ rulebreakers_culture_value
++ rulebreakers_mixed_bag
++ is_prefer_college_peer
++ favor_programming_career
++ favor_seeking_risk
++ grit
++ personality_o
++ personality_c
++ personality_e
++ personality_a
++ worldview_continuous_activism
++ worldview_description_other_christian:worldview_continuous_activism
++ worldview_description_progressive_christian:worldview_continuous_activism
++ worldview_description_religious_not_christian:worldview_continuous_activism
++ worldview_continuous_pro_foreign
++ worldview_continuous_pro_innovation
++ worldview_continuous_pro_regulation
++ school_unaccredited_hirability
++ school_self_impressed
++ school_other_impressed
++ skill_aetiwno_skill_physical_attractiveness
++ skill_aetiwno_skill_salary
++ skill_aetiwno_skill_written_communication_skill
++ skill_aetiwno_skill_verbal_communication_skill
++ skill_aetiwno_skill_body_language_communication_skill
++ skill_aetiwno_skill_conscientiousness
++ skill_aetiwno_skill_break_rules
++ skill_aetiwno_skill_teamwork
++ skill_aetiwno_skill_commute
++ skill_aetiwno_skill_work_odd_hours_or_a_strange_schedule
++ skill_comparative_no_relative_oqskill_physical_attractiveness
++ skill_comparative_no_relative_oqskill_emotional_intelligence
++ skill_comparative_no_relative_oqskill_salary
++ skill_comparative_no_relative_oqskill_written_communication_skill
++ skill_comparative_no_relative_oqskill_verbal_communication_skill
++ skill_comparative_no_relative_oqskill_body_language_communication_skill
++ skill_comparative_no_relative_oqskill_technical_job_skills
++ skill_comparative_no_relative_oqskill_conscientiousness
++ skill_comparative_no_relative_oqskill_break_rules
++ skill_comparative_no_relative_oqskill_customer_service_skill
++ skill_comparative_no_relative_oqskill_teamwork
++ skill_comparative_no_relative_oqskill_commute
++ skill_comparative_no_relative_oqskill_work_odd_hours_or_a_strange_schedule
+
++ 1'''
+
+# ref: https://www.analyticsvidhya.com/blog/2020/10/a-comprehensive-guide-to-feature-selection-using-wrapper-methods-in-python/
+def backward_elimination(data, candidate_feature_names, y_variable_name, significance_level = 0.5):
+    without_index = list(candidate_feature_names)
+    without_index.remove("Intercept")
+    curr_feature_names = without_index
+
+    while(len(curr_feature_names) > 0):
+        curr_feature_subformula = " + ".join(list(curr_feature_names))
+        formula = y_variable_name + " ~ " + curr_feature_subformula + " + 1"
+
+        model = sm.OLS.from_formula(formula, data).fit()
+        print(model.summary())
+
+        p_values = model.pvalues[1:]
+        max_p_value = p_values.max()
+
+        if(max_p_value >= significance_level):
+            excluded_feature = p_values.idxmax()
+            curr_feature_names.remove(excluded_feature)
+        else:
+            break
+
+    return curr_feature_names
+
+reduction_step_1_model = sm.OLS.from_formula(reduction_step_1, data=df_with_dummies)
+reduction_step_1_feature_names = reduction_step_1_model.exog_names
+reduction_step_2_features = backward_elimination(df_with_dummies, reduction_step_1_feature_names, 'hirability', 0.5)
+print(reduction_step_2_features)
+
+# important_candidates = sm.OLS.from_formula(reduction_step_2, data=df_with_dummies)
+# print(important_candidates.fit().summary())

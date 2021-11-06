@@ -521,6 +521,12 @@ note: only two gender interactions were duplicatively identified between SFS and
 + gender_male:favor_programming_career:favor_seeking_risk:industry[T.Retail]
 // my guess would be neg coefficient on retail just bc who needs alt ed or higher ed for retail...?
 
+reduce to preferred model - choose a tighter net (heavier penalty) or backwards elimination by p-value?
+1. former seems good for prediction but latter seems good for inference/explanation of current data
+2. choose p-value elimination. start w 81 vars in nx elastic net, cut so p < 0.5 (true effects, combats included variable bias)
+3. theoretically supervised stepwise pattern. start w nx elastic net, cut, add unique wx elastic net, cut, add sfs gender vars, cut.
+note: maybe diagram build + reduction process?
+
 \section{Conclusions}
 
 %# two begged questions in my conclusion: expected_conventionality, favor_programming_career -> scope for another study

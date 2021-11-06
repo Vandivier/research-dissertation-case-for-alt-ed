@@ -16,6 +16,7 @@ import re
 def fsReformatColumnNames(sColName):
     sMassagedName = sColName.replace(',', '') \
         .replace(' ', '_').replace('-', '_').replace('>', '').replace('+', '') \
+        .replace('(', '').replace(')', '') \
         .replace('?', '').replace('.', '') \
         .lower()
     sMassagedName = sMassagedName.replace('_/_', '_')
@@ -215,6 +216,15 @@ def getDeskewedDataWithDummies(dropFirstDummy=True):
     df = pd.get_dummies(df, columns=['age']).rename(
         fsReformatColumnNames, axis='columns')
 
+    df = pd.get_dummies(df, columns=['covid_fav_online']).rename(
+        fsReformatColumnNames, axis='columns')
+
+    df = pd.get_dummies(df, columns=['covid_impact']).rename(
+        fsReformatColumnNames, axis='columns')
+
+    df = pd.get_dummies(df, columns=['covid_remote']).rename(
+        fsReformatColumnNames, axis='columns')
+
     df = pd.get_dummies(df, columns=['education']).rename(
         fsReformatColumnNames, axis='columns')
 
@@ -249,6 +259,9 @@ def getDeskewedDataWithDummies(dropFirstDummy=True):
 
     if dropFirstDummy:
         df.drop(columns=['age_65',
+            'covid_fav_online_large_degree',
+            'covid_impact_large_negative_impact',
+            'covid_remote_large_degree',
             'education_did_not_graduate_from_high_school',
             'ethnicity_american_indian_or_alaska_native',
             'expected_duration_more_than_a_year',
