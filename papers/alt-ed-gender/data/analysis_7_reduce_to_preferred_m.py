@@ -116,13 +116,17 @@ def get_formula(y_variable_name, curr_feature_names):
     return formula
 
 # ref: https://www.analyticsvidhya.com/blog/2020/10/a-comprehensive-guide-to-feature-selection-using-wrapper-methods-in-python/
-def backward_elimination(data, candidate_feature_names, y_variable_name, significance_level = 0.5):
-    without_index = list(candidate_feature_names)
-    without_index.remove("Intercept")
-    curr_feature_names = without_index
+def backward_elimination(data, candidate_feature_names, y_variable_name, significance_level = 0.5, is_logit=False):
+    without_intercept = list(candidate_feature_names)
+    if "Intercept" in without_intercept:
+        without_intercept.remove("Intercept")
+    curr_feature_names = without_intercept
 
     while(len(curr_feature_names) > 0):
-        model = sm.OLS.from_formula(get_formula(y_variable_name, curr_feature_names), data).fit()
+        if is_logit:
+            model = sm.Logit.from_formula(get_formula(y_variable_name, curr_feature_names), data).fit()
+        else:
+            model = sm.OLS.from_formula(get_formula(y_variable_name, curr_feature_names), data).fit()
 
         p_values = model.pvalues[1:]
         max_p_value = p_values.max()

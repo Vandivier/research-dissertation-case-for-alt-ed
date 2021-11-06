@@ -44,12 +44,22 @@ print("done selecting without_singular_matrix")
 
 # n = 86 pr2 = 0.71 k = 41
 # "A fraction 0.36 of observations can be perfectly predicted."
-logit_is_tech_formula = a7.get_formula("industry_information_technology", without_singular_matrix)
-logit_is_tech_model = sm.Logit.from_formula(logit_is_tech_formula, df_with_dummies)
-print(logit_is_tech_model.fit().summary())
+# step 9 is initial logit/probit after removing singular matrix
+reduction_step_9_feature_names = without_singular_matrix
+reduction_step_9_formula = a7.get_formula("industry_information_technology", without_singular_matrix)
+reduction_step_9_logit_model = sm.Logit.from_formula(reduction_step_9_formula, df_with_dummies)
 
 # n = 86 pr2 = 0.71 k = 41
 # "A fraction 0.43 of observations can be perfectly predicted."
-probit_is_tech_formula = logit_is_tech_formula
-probit_is_tech_model = sm.Probit.from_formula(logit_is_tech_formula, df_with_dummies)
-print(probit_is_tech_model.fit().summary())
+reduction_step_9_probit_model = sm.Probit.from_formula(reduction_step_9_formula, df_with_dummies)
+
+# n = 86 pr2 = 0.67 k = 31
+# "A fraction 0.28 of observations can be perfectly predicted."
+reduction_step_10_feature_names = a7.backward_elimination(df_with_dummies, reduction_step_9_feature_names, "industry_information_technology", 0.5, True)
+reduction_step_10_formula = a7.get_formula("industry_information_technology", reduction_step_10_feature_names)
+reduction_step_10_model = sm.Logit.from_formula(reduction_step_10_formula, data=df_with_dummies)
+
+# n = 86 pr2 = 0.66 k = 31
+# "A fraction 0.31 of observations can be perfectly predicted."
+reduction_step_10_probit_model = sm.Probit.from_formula(reduction_step_10_formula, df_with_dummies)
+print(reduction_step_10_probit_model.fit().summary())
