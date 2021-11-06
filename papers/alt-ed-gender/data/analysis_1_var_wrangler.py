@@ -24,7 +24,7 @@ def fsReformatColumnNames(sColName):
     return sMassagedName
 
 
-def getData(dropFirstDummy=True):
+def getData(dropFirstDummy=True, is_verbose=False):
     df = pd.read_csv('alt-ed-metasurvey-100821.csv')
 
     # TODO: split OCEAN, maybe extract value wrangling function
@@ -117,8 +117,9 @@ def getData(dropFirstDummy=True):
 
     compute_skill_gaps(df)
 
-    # help build long model formula
-    print("\n+ ".join(list(df.columns)))
+    if is_verbose:
+        # help build long model formula
+        print("\n+ ".join(list(df.columns)))
 
     print("\n---")
     print("done getting data")
@@ -201,8 +202,8 @@ def compute_skill_gaps(df):
 # drop out-of-quartile to reduce skew
 # intended to reduce skew and kurtosis
 # tradeoff is analytical restriction (hopefully unimportant)
-def getDeskewedData(dropFirstDummy=True):
-    df = getData(dropFirstDummy)
+def getDeskewedData(dropFirstDummy=True, is_verbose=False):
+    df = getData(dropFirstDummy, is_verbose)
 
     # drop Other gender bc n=2 is too small (maybe revisit here or in seperate analysis if over say a dozen)
     df = df[df.gender != "Other"]
@@ -210,8 +211,8 @@ def getDeskewedData(dropFirstDummy=True):
 
     return df.drop(df[df['hirability'] < 5].index)
 
-def getDeskewedDataWithDummies(dropFirstDummy=True):
-    df = getDeskewedData(dropFirstDummy)
+def getDeskewedDataWithDummies(dropFirstDummy=True, is_verbose=False):
+    df = getDeskewedData(dropFirstDummy, is_verbose)
 
     df = pd.get_dummies(df, columns=['age']).rename(
         fsReformatColumnNames, axis='columns')
@@ -273,8 +274,9 @@ def getDeskewedDataWithDummies(dropFirstDummy=True):
             'state_arizona',
             'worldview_description_agnostic_or_atheist'])
 
-    # help build long model formula
-    print("\n+ ".join(list(df.columns)))
+    if is_verbose:
+        # help build long model formula
+        print("\n+ ".join(list(df.columns)))
 
     return df
 

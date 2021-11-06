@@ -247,4 +247,9 @@ reduction_step_7_feature_names = reduction_step_7_model.exog_names
 reduction_step_8_feature_names = backward_elimination(df_with_dummies, reduction_step_7_feature_names, "hirability", 0.5)
 reduction_step_8_formula = get_formula("hirability", reduction_step_8_feature_names)
 reduction_step_8_model = sm.OLS.from_formula(reduction_step_8_formula, data=df_with_dummies)
-print(reduction_step_8_model.fit().summary())
+
+def get_preferred_feature_names():
+    return reduction_step_8_feature_names
+
+if __name__ == '__main__':
+    print(reduction_step_8_model.fit().summary())
