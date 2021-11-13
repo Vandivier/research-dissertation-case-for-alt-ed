@@ -1,7 +1,7 @@
 # https://tutorials.methodsconsultants.com/posts/what-is-the-difference-between-logit-and-probit-models/
 # logit + probit information technology industry outcome
 # maybe logit + probit male gender outcome
-# orthogonal analysis seeking to compliment analysis 2
+# orthogonal analysis seeking to compliment analysis 2 (analysis_7_reduce_to_preferred_m)
 
 # study:
 # industry_information_technology <- "favor_programming_career", but that just begs the question
@@ -45,6 +45,7 @@ print("done selecting without_singular_matrix")
 # n = 86 pr2 = 0.71 k = 41
 # "A fraction 0.36 of observations can be perfectly predicted."
 # step 9 is initial logit/probit after removing singular matrix
+# without_singular_matrix.append("favor_programming_career")
 reduction_step_9_feature_names = without_singular_matrix
 reduction_step_9_formula = a7.get_formula("industry_information_technology", without_singular_matrix)
 reduction_step_9_logit_model = sm.Logit.from_formula(reduction_step_9_formula, df_with_dummies)
@@ -63,3 +64,7 @@ reduction_step_10_model = sm.Logit.from_formula(reduction_step_10_formula, data=
 # "A fraction 0.31 of observations can be perfectly predicted."
 reduction_step_10_probit_model = sm.Probit.from_formula(reduction_step_10_formula, df_with_dummies)
 print(reduction_step_10_probit_model.fit().summary())
+
+print("favor_programming_career in step 9: " + str("favor_programming_career" in reduction_step_9_feature_names))
+print("favor_programming_career in step 10: " + str("favor_programming_career" in reduction_step_10_feature_names))
+

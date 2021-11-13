@@ -441,7 +441,38 @@ Table TODO shows the coefficients for this model.
 
 % TODO: we explain hirability but now explain preference for a programming career logit and is_tech logit?
 
+critical finding of a real problem (not an analytical problem):
+    favor_programming_career in step 9: True
+    favor_programming_career in step 10: False
+so, 'favor_programming_career' doesn't importantly determine whether you end up in a programming career...but gender does...and that's the whole problem folks
 
+note: without_singular_matrix.append("gender_male:favor_programming_career:favor_seeking_risk") also produces singular matrix
+also:
+without_singular_matrix.append("gender_male:favor_seeking_risk")
+without_singular_matrix.append("gender_male:favor_programming_career")
+also:
+without_singular_matrix.append("favor_seeking_risk")
+without_singular_matrix.append("favor_programming_career")
+
+so i checked with dependent vars:
+1. hirability
+2. industry_information_technology
+
+TODO:
+3. favor_programming_career
+
+result: we often want to influence female favor_programming_career but we don't realize it's already high / no different from males!
+the real problem is a breakdown between favor_programming_career and industry_information_technology (invariant to gender interaction)
+    * that happens to disproportionately harm women
+    * ie gender-direct impact without a gender-direct cause (causes are many and largely uninteracted with gender)
+
+what changes can we make so that favored industry -> actual industry? industrial mobility similar to economic mobility concept
+    * reduce switching costs
+    * reduce barriers to entry
+    * provide non-phobic pipelines (pipeline-phobic; ed system)
+    * culture moves? uh I guess so but women don't need inspiration (they're already into it) they need support
+        * maybe culture moves on the part of parents how about that?
+        * reminds me of substituting college for bootcamp stigma which is really a boomer-anti-young stigma not a gender stigma. so maybe there is a boomer-culture interaction.
 
 % TODO: discuss that i replicate overqualification effects are bad and extend into comparative overqualification effects
 
@@ -589,6 +620,8 @@ my analysis would be improved by:
 
 
 \bibliography{./BibFile}
+
+TODO: bib https://scikit-learn.org/dev/about.html#citing-scikit-learn
 
 [1]https://www.wsj.com/articles/college-university-fall-higher-education-men-women-enrollment-admissions-back-to-school-11630948233
 [2]https://educationdata.org/student-loan-debt-by-gender
