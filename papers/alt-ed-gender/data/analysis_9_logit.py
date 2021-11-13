@@ -54,8 +54,16 @@ reduction_step_9_logit_model = sm.Logit.from_formula(reduction_step_9_formula, d
 # "A fraction 0.43 of observations can be perfectly predicted."
 reduction_step_9_probit_model = sm.Probit.from_formula(reduction_step_9_formula, df_with_dummies)
 
+# n = 86 pr2 = 0.67 k = 37
+# "A fraction 0.29 of observations can be perfectly predicted."
+reduction_step_9_dot_5_spurious_feature_names = a7.backward_elimination(df_with_dummies, reduction_step_9_feature_names, "industry_information_technology", 0.8, True)
+reduction_step_9_dot_5_spurious_formula = a7.get_formula("industry_information_technology", reduction_step_9_dot_5_spurious_feature_names)
+reduction_step_9_dot_5_spurious_model = sm.Logit.from_formula(reduction_step_9_dot_5_spurious_formula, data=df_with_dummies)
+print(reduction_step_9_dot_5_spurious_model.fit().summary())
+
 # n = 86 pr2 = 0.67 k = 31
 # "A fraction 0.28 of observations can be perfectly predicted."
+# preferred logit/probit model of industry_information_technology
 reduction_step_10_feature_names = a7.backward_elimination(df_with_dummies, reduction_step_9_feature_names, "industry_information_technology", 0.5, True)
 reduction_step_10_formula = a7.get_formula("industry_information_technology", reduction_step_10_feature_names)
 reduction_step_10_model = sm.Logit.from_formula(reduction_step_10_formula, data=df_with_dummies)
@@ -63,8 +71,13 @@ reduction_step_10_model = sm.Logit.from_formula(reduction_step_10_formula, data=
 # n = 86 pr2 = 0.66 k = 31
 # "A fraction 0.31 of observations can be perfectly predicted."
 reduction_step_10_probit_model = sm.Probit.from_formula(reduction_step_10_formula, df_with_dummies)
-print(reduction_step_10_probit_model.fit().summary())
 
+# just to get direction and size of effect, although 0 confidence in model 9
+print(reduction_step_9_logit_model.fit().summary())
+print(reduction_step_10_model.fit().summary())
+
+# overall result: gender matters more than whether you want to code
 print("favor_programming_career in step 9: " + str("favor_programming_career" in reduction_step_9_feature_names))
+print("favor_programming_career in step 9 dot 5: " + str("favor_programming_career" in reduction_step_9_dot_5_spurious_feature_names))
 print("favor_programming_career in step 10: " + str("favor_programming_career" in reduction_step_10_feature_names))
 
