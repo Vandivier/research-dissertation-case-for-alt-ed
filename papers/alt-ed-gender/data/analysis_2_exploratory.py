@@ -217,6 +217,7 @@ ttest, pval = stats.ttest_ind(deskewed_is_tech.favor_programming_career, deskewe
 print("favor_programming_career mean diff test by is_tech: " + str(pval))
 print("favor_programming_career mean for is_tech: " + str(deskewed_is_tech.favor_programming_career.mean()))
 print("favor_programming_career mean for not_tech: " + str(deskewed_not_tech.favor_programming_career.mean()))
+print("favor_programming_career mean for both pooled: " + str(deskewed_with_dummies.favor_programming_career.mean()))
 ttest, pval = stats.ttest_ind(deskewed_is_tech.favor_seeking_risk, deskewed_not_tech.favor_seeking_risk)
 print("favor_seeking_risk mean diff test by is_tech: " + str(pval))
 print("favor_seeking_risk mean for is_tech: " + str(deskewed_is_tech.favor_seeking_risk.mean()))
@@ -247,6 +248,8 @@ print("favor_seeking_risk mean diff test by is_tech_is_male: " + str(pval))
 print("favor_seeking_risk mean for is_tech_is_male: " + str(deskewed_is_tech_is_male.favor_seeking_risk.mean()))
 print("favor_seeking_risk mean for not_tech_is_male: " + str(deskewed_not_tech_is_male.favor_seeking_risk.mean()))
 
+print("\n")
+print("gender_male average: " + str(deskewed_with_dummies.gender_male.mean()))
 
 # "This makes AIC the preferred choice if the goal is prediction and the evaluation of predictions is the likelihood."
 # over MSE but what about vs ar2?

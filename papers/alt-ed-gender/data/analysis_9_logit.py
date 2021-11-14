@@ -72,8 +72,15 @@ reduction_step_10_model = sm.Logit.from_formula(reduction_step_10_formula, data=
 # "A fraction 0.31 of observations can be perfectly predicted."
 reduction_step_10_probit_model = sm.Probit.from_formula(reduction_step_10_formula, df_with_dummies)
 
-# just to get direction and size of effect, although 0 confidence in model 9
-print(reduction_step_9_logit_model.fit().summary())
+# n = 86 pr2 = 0.67 k = 31
+# "A fraction 0.28 of observations can be perfectly predicted."
+# preferred logit/probit model of industry_information_technology
+reduction_step_11_feature_names = [el for el in reduction_step_10_feature_names]
+reduction_step_11_feature_names.append('favor_programming_career')
+reduction_step_11_formula = a7.get_formula("industry_information_technology", reduction_step_11_feature_names)
+reduction_step_11_model = sm.Logit.from_formula(reduction_step_11_formula, data=df_with_dummies)
+
+# prefer model 10, but check sign of favor_programming_career in model 11 and also in 9; robustly positive
 print(reduction_step_10_model.fit().summary())
 
 # overall result: gender matters more than whether you want to code

@@ -509,7 +509,34 @@ In short, there are reasons to think that the logit model is underfit,
 so one potentially important finding should be noted with skepticism.
 The finding is that gender is an important factor in the preferred logit model,
 but naive preference for a programming career is excluded due to a lack of significance.
-% It is worth noting that if we force the factor for naive preference for a programming career in, the coefficient is positive.
+
+% ref: https://stats.stackexchange.com/questions/552190/is-it-possible-to-conduct-a-coefficient-test-within-a-multiple-regression
+Logistical modeling prior to BFE identifies a large positive coefficient on naive preference for a programming career ($\beta = 0.62, 0.5 < p < 0.51$).
+Forcing the factor into the preferred logit model identifies a small positive coefficient ($\beta = 0.02, p < 0.96$).
+An average of these effect estimates provides a magnitude comparable to the effect for gender\footnote{
+    The average coefficient estimate for naive preference for a programming career is $0.32 = (0.62 + 0.02) / 2$.
+    This factor is measured on a scale from one to ten,
+    so the effect can be multiplied by five for a rough comparison with gender.
+    The resulting dummified coefficient of 1.6 is not meaningfully different from the preferred effect estimate of the
+    gender dummy at 1.65.
+    Also compare the estimated total average effects.
+    The mean response for naive preference for a programming career is 7.54, so the total estimated effect is:
+    $2.4 = 0.32(7.54)$.
+    The estimated effect for male identification is:
+    $1.1 = 0.65(1.65)$.
+    The effect for gender is identified more confidently, but it is not clear that it is larger in magnitude.
+}.
+Because a positive coefficient is robustly identified and consistent with theoretical expectation,
+it is difficult to accept the null hypothesis of a coefficient of zero,
+despite the high p-value of this factor.
+It seems more accurate to claim that the logistic analysis lacks the power to precisely estimate the magnitude of the coefficient,
+but a best estimate of the effect puts it on par with gender.
+
+The logistic analysis does establish that gender better explains current employment in the information technology industry
+compared to naive preference for a programming career.
+This result is consistent with a narrative of sexism in the information technology industry or the hiring process,
+but I argue that this is an inappropriate interpretation of the result.
+
 
 An incorrect interpretation of this data would be to say that it shows
 that preference for a programming job is unrelated to the ability to obtain a programming job.
@@ -523,7 +550,7 @@ even if men and women are hired in proportion to their application rate.
 Further, if men and women are hired proportionally, but women leave disproportionately,
 men will eventually dominate the labor pool.
 
-Women do exit industry at a higher rate than men across industries.
+Women exit industry at a higher rate than men across industries.
 The need to care for children is an important factor of the decision to stay at home
 for American women[22].
 Wealthy women decide to stay at home more frequently than do either lower-income
@@ -533,7 +560,7 @@ and Americans currently engage in a pattern of assortive mating,
 female programmers will tend to have higher personal and household earnings.
 This might lead to high industrial exit.
 As a result, even with equitable hiring practices,
-a high share of male labor could be fully explained by historical and exit effects.
+a high share of male labor could be explained by historical and exit effects.
 
 % like it's ecologically rational; it's not really involuntary; it's just not ideal either
 
