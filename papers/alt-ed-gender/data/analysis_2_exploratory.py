@@ -5,6 +5,7 @@ import analysis_1_var_wrangler as analysis
 
 skewed = analysis.getData()
 deskewed = analysis.getDeskewedData()
+deskewed_with_dummies = analysis.getDeskewedDataWithDummies()
 left_of_skew = analysis.getLowHirabilityGroup()
 
 print('\n')
@@ -196,11 +197,56 @@ m10 = '''hirability ~
 
 print(sm.OLS.from_formula(m10, data=deskewed).fit().summary())
 
-# TODO: 1. swap industry categorical for is_tech boolean
-# TODO: 2. covid_impact*gender
+# note 1: Given industry_information_technology = 1, what is the average favor_programming_career and favor_seeking_risk?
+# result: everyone wants to be in tech; favor_programming_career among is_tech is barely higher (<1 percent diff, not significant)
+# result: favor_seeking_risk among is_tech is significantly lower (p=.1) by about a single point (0.82 on 10 pt scale)
+# result log:
+# sample size for n_favor_programming_career_between_tech: 105
+# favor_programming_career mean diff test by is_tech: 0.896599673272561
+# favor_programming_career mean for is_tech: 7.571428571428571
+# favor_programming_career mean for not_tech: 7.515625
+# favor_seeking_risk mean diff test by is_tech: 0.10153470655055652
+# favor_seeking_risk mean for is_tech: 6.542857142857143
+# favor_seeking_risk mean for not_tech: 7.359375
+print("\n")
+deskewed_is_tech = deskewed_with_dummies[deskewed_with_dummies.industry_information_technology == 1].dropna(subset=['favor_programming_career', 'favor_seeking_risk'])
+deskewed_not_tech = deskewed_with_dummies[deskewed_with_dummies.industry_information_technology == 0].dropna(subset=['favor_programming_career', 'favor_seeking_risk'])
+n_favor_programming_career_between_tech = len(deskewed_is_tech) + len(deskewed_not_tech)
+print("sample size for n_favor_programming_career_between_tech: " + str(n_is_prefer_college_peer))
+ttest, pval = stats.ttest_ind(deskewed_is_tech.favor_programming_career, deskewed_not_tech.favor_programming_career)
+print("favor_programming_career mean diff test by is_tech: " + str(pval))
+print("favor_programming_career mean for is_tech: " + str(deskewed_is_tech.favor_programming_career.mean()))
+print("favor_programming_career mean for not_tech: " + str(deskewed_not_tech.favor_programming_career.mean()))
+ttest, pval = stats.ttest_ind(deskewed_is_tech.favor_seeking_risk, deskewed_not_tech.favor_seeking_risk)
+print("favor_seeking_risk mean diff test by is_tech: " + str(pval))
+print("favor_seeking_risk mean for is_tech: " + str(deskewed_is_tech.favor_seeking_risk.mean()))
+print("favor_seeking_risk mean for not_tech: " + str(deskewed_not_tech.favor_seeking_risk.mean()))
 
-# I don't care about RLM bc coefficients are equal anyway
-# print(sm.RLM.from_formula(1, data=skewed).fit().summary())
+# note 2: same as note 1, but specifically for men
+# result 1: men and women in my sample have identical mean fav prog career within tech; removing women had no change on mean
+# result 2: men in tech are even less risk seeking than women in tech, and wayyyy less risk seeking than men out of tech
+# result log:
+# sample size for n_favor_programming_career_between_tech_is_male: 105
+# favor_programming_career mean diff test by is_tech_is_male: 0.8243948836855572
+# favor_programming_career mean for is_tech_is_male: 7.571428571428571
+# favor_programming_career mean for not_tech_is_male: 7.441860465116279
+# favor_seeking_risk mean diff test by is_tech_is_male: 0.05449401724533943
+# favor_seeking_risk mean for is_tech_is_male: 6.380952380952381
+# favor_seeking_risk mean for not_tech_is_male: 7.558139534883721
+print("\n")
+deskewed_is_tech_is_male = deskewed_is_tech[deskewed_is_tech.gender_male == 1]
+deskewed_not_tech_is_male = deskewed_not_tech[deskewed_not_tech.gender_male == 1]
+n_favor_programming_career_between_tech_is_male = len(deskewed_is_tech_is_male) + len(deskewed_not_tech_is_male)
+print("sample size for n_favor_programming_career_between_tech_is_male: " + str(n_is_prefer_college_peer))
+ttest, pval = stats.ttest_ind(deskewed_is_tech_is_male.favor_programming_career, deskewed_not_tech_is_male.favor_programming_career)
+print("favor_programming_career mean diff test by is_tech_is_male: " + str(pval))
+print("favor_programming_career mean for is_tech_is_male: " + str(deskewed_is_tech_is_male.favor_programming_career.mean()))
+print("favor_programming_career mean for not_tech_is_male: " + str(deskewed_not_tech_is_male.favor_programming_career.mean()))
+ttest, pval = stats.ttest_ind(deskewed_is_tech_is_male.favor_seeking_risk, deskewed_not_tech_is_male.favor_seeking_risk)
+print("favor_seeking_risk mean diff test by is_tech_is_male: " + str(pval))
+print("favor_seeking_risk mean for is_tech_is_male: " + str(deskewed_is_tech_is_male.favor_seeking_risk.mean()))
+print("favor_seeking_risk mean for not_tech_is_male: " + str(deskewed_not_tech_is_male.favor_seeking_risk.mean()))
+
 
 # "This makes AIC the preferred choice if the goal is prediction and the evaluation of predictions is the likelihood."
 # over MSE but what about vs ar2?
@@ -211,8 +257,6 @@ print(sm.OLS.from_formula(m10, data=deskewed).fit().summary())
 # https://www.youtube.com/watch?v=xS4jDHQfP2o
 # see 2.2.5. Background knowledge and DAG:
 # https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5969114/
-
-
 
 # Result Log:
 # skewed data skew test:

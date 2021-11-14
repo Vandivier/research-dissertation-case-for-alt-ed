@@ -324,7 +324,7 @@ to the extent that social activity remains remote, particularly with respect to 
 % note: does this block provide evidence that female openness dominates risk aversion?
 Risk preference did not differ significantly by gender ($n = 99, p < 0.57$)
 and naive preference for a programming career did not differ by gender ($n = 99, p < 0.74$).
-Preference for working with a peer that is a college graduate did differ significantly by gender ($n = 105, p < 0.05$).
+Preference for working with a peer that is a college graduate is significantly higher among men ($n = 105, p < 0.05$).
 % TODO: is there a latex for start/end quotes?
 When asked to agree or disagree that, "I prefer to hire or work with a person that has a college degree
 rather [sic] a person that holds a reputable certification or non-college credential,"
@@ -422,24 +422,189 @@ Before those coefficients are identified, however, additional steps must be take
 This is because several of the feature selection approaches do not account for collinearity.
 Included variable bias is also an important concern to mitigate.
 
-To address these concerns in an inferrential study, backward feature elimination (BFE) optimizing on the p-value of each feature is useful.
+To address these concerns in an inferrential study, backward feature elimination (BFE) optimizing on the p-value of each feature is used.
 When $p > 0.5$ it becomes likely that a coefficient is equal to zero.
 Such variables should be eliminated to avoid included variable bias and overfit.
-The sample size of the current study constrains multiple regression of one hundred and twenty-six features.
-As a second-best approach, I reduce the variable pool using stepwise regression.
+The sample size of the current study precludes multiple regression of one hundred and twenty-six features.
+As a second-best approach, I reduce the variable pool using supervised and theory-driven stepwise regression.
 % TODO: maybe add a diagram here
 
-I begin by applying BFE as described to those variables identified by the elastic net when considering the pool of variables without interacted gender.
+I begin by applying BFE to variables identified by the elastic net, exluding gender interactions.
 Sixty-seven features survive this reduction step.
 I then add features identified by the elastic net inclusive of interacted gender.
 I apply BFE again, then I add SFS-selected variables, and apply BFE again.
 In the end, the original pool of one hundred and twenty-six features is reduced to a pool of seventy-six features.
 Each feature in this model has $p < 0.5$,
-the model fully explains the observed data ($R^2 = 0.997$),
-and the Akaike information criterion (AIC) is substantially better compared to a model built on the results of the elastic net alone.
+the model fully explains the observed data ($R^2 = 0.997$).
+The Akaike information criterion (AIC) for the reduced model is substantially better than the AIC for a model built on the results of the elastic net alone.
 Table TODO shows the coefficients for this model.
-
+% note: this is preferred model reduction_step_8_model
 % TODO: we explain hirability but now explain preference for a programming career logit and is_tech logit?
+
+In the preferred model, gender is independently important, as well as various gender interactions.
+Male identification without qualification or interaction is negatively associated with hirability.
+% , after accounting for personality and many other differences.
+Gender interacted with naive preference for a programming career is positive with a large magnitude.
+The four-way interaction with gender and the information technology industry is significant and negative, but small.
+Summing across relevant effects,
+the total effect of male identification within the information technology industry
+is positive on hirability\footnote{
+    % ref: note 1
+    Among male respondents in the information technology industry, the average level of risk seeking is $6.4$
+    and the average naive preference for a programming career is $7.6$.
+    Within the information technology industry, then, the total male identification effect is:
+    $ 0.6 = \beta_{m} + \beta_{p}(X_{p}) + \beta_{r}(X_{r}) + \beta_{pr}(X_{pr})$
+    $ = -0.765 + 0.634(7.6) - 0.325(6.4) - 0.028(7.6*6.4)$
+}.
+This result indicates that men in the tech industry are actively encouraging the use of alternative credentials.
+This advocacy has a positive impact on women, because coding bootcamps disproportionately enroll women compared to college computer science programs.
+
+% both genders mostly prefer to work with college graduate peers, but particularly men.
+% this encourages the CS Problem...is it concious?
+% naive preference for a programming career did not differ by gender
+% remaining plausible explanations:
+% 1. media / american (non-tech) culture problem
+% 2. parents passing down culture problem (parental discouragement)
+% 3. education system itself, and CS Programs in particular
+
+Further robust validation of the preferred model, associated factors, and theory
+is accomplished by using the same model to explain two other independent variables.
+In theory, an ideal economic system empowers individuals with economic mobility that is not restricted to income mobility.
+If an individual in such a system desired to become a programmer,
+a strong correlation with actually becoming a programmer is to be expected.
+It is troubling to some small extent that current discrepencies by gender in the labor force exist.
+Gender-related exit effects and historical effects could theoretically explain discrepencies in current labor without implying
+a current problem of gender-related economic mobility.
+The greater problem is that women desire to program as much as men, but fewer females in the software engineering labor pipeline are observed.
+% above statement assumes that college degrees and coding bootcamps make up most of the dev labor pipeline, but also i think that's true
+% i also think most no-degree + no-bootcamp people are male
+% there is a question around "with irrelevant degree" so if you count that as the labor pipeline it could throw a wrench in the claim
+
+Two other dependent factors that were analyzed include present employment in the information technology industry
+and naive preference for a programming career.
+Both dependent factors are substantially explained with minimal modification to the preferred model of hirability.
+Both of these factors are independent factors in the preferred model of hirability,
+so dropping them as independent factors is one part of the required minimal modifications.
+After the change in specification, some variables obtained a large p-value, so BFE to a p-value of 0.5 is applied
+to improve AIC and avoid included variable bias.
+Naive preference for a programming career is modeled using OLS and employment.
+Employment in the information technology industry is a binary outcome, so it is investigated using logit and probit.
+
+Table TODO shows the direction of effect for factors in the preferred models of hirability,
+naive preference for a programming career,
+and current employment in the information technology industry.
+A general expectation of a consistent direction of effect is based on the theoretical positive correlation between these variables.
+A case in which variables obtain signs in opposite directions is no threat to any particular theory or finding,
+but it should be taken into account when strategies for creating change are formed.
+% None of this analysis is particularly causal, but correlation might inspire a strategy for change, so that's why this table is important
+Specifically, factors of naive preference for a programming career
+might inspire a strategy to increase female preference for a programming career,
+but such a strategy would probably want to be developed in a way that avoids reducing hirability or current employment in the information technology industry.
+
+The logit and probit analysis show that logit is generally a better fit.
+Many factors are cut from these models to avoid a singular matrix or excessive quasi-seperation.
+Gathering additional samples would likely allow singular matrix and quasi-seperation to be avoided
+without needing to cut as many factors.
+In short, there are reasons to think that the logit model is underfit,
+so one potentially important finding should be noted with skepticism.
+The finding is that gender is an important factor in the preferred logit model,
+but naive preference for a programming career is excluded due to a lack of significance.
+% It is worth noting that if we force the factor for naive preference for a programming career in, the coefficient is positive.
+
+An incorrect interpretation of this data would be to say that it shows
+that preference for a programming job is unrelated to the ability to obtain a programming job.
+This interpretation is incorrect because having a programming job
+is importantly determined by factors other than the ability to obtain such a job.
+Specifically, exit effects and historical effects are large and important.
+Census data from 1970 shows that females made up about $22.5$ percent of programmers\cite{gilchrist1974enumerating}.
+[FIG 1] showed that the proportion of men in programming has trended sideways since 2017 at about ninety percent.
+These historical facts allow for male identification to correlate with holding a programming job,
+even if men and women are hired in proportion to their application rate.
+Further, if men and women are hired proportionally, but women leave disproportionately,
+men will eventually dominate the labor pool.
+
+Women do exit industry at a higher rate than men across industries.
+The need to care for children is an important factor of the decision to stay at home
+for American women[22].
+Wealthy women decide to stay at home more frequently than do either lower-income
+or middle-income women.
+Because programming is a lucrative field,
+and Americans currently engage in a pattern of assortive mating,
+female programmers will tend to have higher personal and household earnings.
+This might lead to high industrial exit.
+As a result, even with equitable hiring practices,
+a high share of male labor could be fully explained by historical and exit effects.
+
+% like it's ecologically rational; it's not really involuntary; it's just not ideal either
+
+% [FIG 1] showed that the proportion of men in programming has trended sideways since 2017.
+% https://homes.luddy.indiana.edu/nensmeng/files/Ensmenger2010-MPM.pdf
+% https://en.wikipedia.org/wiki/Women_in_computing#1940s
+% https://timeline.com/women-pioneered-computer-programming-then-men-took-their-industry-over-c2959b822523
+
+
+
+% ref: https://files.eric.ed.gov/fulltext/EJ1219536.pdf
+% The field of CS has been defined as the ‘incredible
+% shrinking pipeline’ (Camp, 1997). Soe and Yakura
+% (2008) found that at each stage, the pipeline
+% ‘leaks’ more for women than it does for men. The
+% leaking problem is worse at the high school level
+% as the field continues to lose the participation and
+% interest of a broad layer of students, especially
+% females (Goode, Estrella, & Margolis, 2013).
+% Gender differentials, school/family influences,
+% and stereotyping of science are the three main
+% contributors to gender gap in the STEM fields
+% (Acker, 1987)
+
+
+% TODO: what were the minimal modifications? drop Y from X, exempt hirability, more BFE, overcome singular matrix
+% results: gender matters for current employment, but not favor_programming_career: possibly due to exit and historic effects
+% favor_programming_career basically validates factors and model...so what's instrumentable and why care if we boost favor_programming_career?
+% important to balance desire to brute force increase favor_programming_career (almost cheating)
+%  versus desire to ensure that high favor_programming_career -> high involvement in software engineering labor pipeline
+% also important not to get distracted by red herrings including:
+1. general boosting of female involvement in STEM
+2. expanding STEM to STEAM
+3. trying to manipulate current gender share of labor pool over attention to the pipeline (hesitate to correct for historical effects and create new perverse incentives)
+4. trying to manipulate pipeline to out-produce what free agents really want
+
+
+% In a simple model of labor, an industry has current employees and a pipeline of future employees.
+% Current discrepencies are explained by prior labor pool constitution plus recent hiring and exit effects.
+% Trend discrepencies are explained by hiring and exit.
+
+% So we know more women were being hired but then COVID hit and women disproportionately exited.
+% In general women exit more, but the share of male labor in IT is far greater than the share of male labor in the overall economy
+% ref: Women now comprise nearly half of the U.S. labor force at 46.8 percent (U.S. Bureau of Labor Statistics 2015a).
+% possible explanation: women leave IT disproportionately. why? ad hoc and speculative, no data on this. could be bc it pays well,
+% so these women tend to be upper class and such women tend to stay at home at higher rates:
+% https://www.deseret.com/2019/1/24/20664077/rich-and-poor-married-moms-are-more-likely-to-stay-at-home-with-the-kids-but-for-entirely-different
+
+% so in theory, an explanation from exit could explain the entire industry composition problem.
+%   * (although that seems sus bc of magnitude of hiring descrepancy relative to propensity to become stay at home mom
+%       * plus IT is specially friendly to stay at home workers
+% it just doesn't explain the enrollment descrepancy.
+
+% Gender discrepencies in current industrial labor might occur due to gender-related industrial exit after initial employment,
+% or such discrepencies might be built-in to the labor pipeline.
+% Among programmers, women enter the field disproportionately.
+% % if applicants are disproportionate to industrial workers, there is a hiring problem
+% % if applicants are already disproportionate, there is a pipeline problem (or a preference difference)
+
+% should probably diagram this theory
+% other ind vars: is_tech and favor_programming_career
+
+% breakdown between steps 1 and 3...why? either:
+% 1. failure to use existing paths
+% 2. existing paths are ineffective particularly for women
+
+% either:
+% 1. men are not trying keep women out of tech (identification of explanation as myth or false)
+% 2. men are unconciously keeping women out of tech (unconcious bias)
+% 3. men outside of tech are the ones trying to keep women out of tech (jealousy effect or negative special interest)
+% could be all of the above!
 
 critical finding of a real problem (not an analytical problem):
     favor_programming_career in step 9: True
@@ -603,6 +768,23 @@ gender_male:favor_programming_career:favor_seeking_risk:industry_real_estate
 
 \section{Conclusions}
 
+related: The greater problem is that women desire to program as much as men, but fewer females in the software engineering labor pipeline are observed.
+part of conclusion that's not in my data: what about non-degree, non-bootcamp labor pipeline and gender?
+also, what about "with irrelevant degree" -> could easily be disproportionately female
+
+overall pipeline:
+% three questions to discuss:
+% 1. do women want to program? (yes)
+% 2. what paths to programming exist?
+%     a. college degree - do women like this? no, by enrollment
+%     b. coding bootcamps - do women like this? yes, by enrollment
+%     c. self-taught, no bootcamp, no degree or irrelevant degree - do women like this?
+%       - potentially a large group bc most devs have some degree, but many are not relevant
+%     d. other? unknown
+% 3. do women actually program? (no)
+%     a. actually, this is a bit of a non-sequietor because we must account for exit effects and historical effects
+%     b. I'm sus that current descrepency is much bigger than exit effects, but idk about the historical thing they could leave slowly and be big.
+
 %# two begged questions in my conclusion: expected_conventionality, favor_programming_career -> scope for another study
 
 % Do females drop out disproportionately? that might tell if cs aversion is developed on exposure (instititional culture prob) or pre-existing
@@ -646,6 +828,7 @@ TODO: bib https://scikit-learn.org/dev/about.html#citing-scikit-learn
 [19]https://psycnet.apa.org/buy/1999-13573-004
 [20]https://www.sciencedirect.com/science/article/pii/S105353571000154X
 [21]https://scikit-learn.org/stable/about.html#citing-scikit-learn
+[22]https://www.deseret.com/2019/1/24/20664077/rich-and-poor-married-moms-are-more-likely-to-stay-at-home-with-the-kids-but-for-entirely-different
 
 \end{document}
 
