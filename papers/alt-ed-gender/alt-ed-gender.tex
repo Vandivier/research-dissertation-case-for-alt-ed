@@ -193,6 +193,28 @@ The subsequent section provides a detailed description of the whole dataset,
 but this singular finding resulted in a situation where the number of independent variables exceeded the number of samples.
 This fact of the dataset informs the methods of feature selection that are used.
 
+EDA replicates a finding in prior research that skill gaps without absolute overqualification effects
+fit the data better than skill gaps that allow for absolute overqualification. % TODO: cite
+Absolute overqualification occurs when a job candidate is perceived to have a higher level of skill
+compared to an ideal applicant.
+
+I extend the concept of non-overqualification into comparative skill gaps and find the extension increases intuition without an important loss of explanatory power.
+A skill gap is the difference between the ideal skill level and the observed skill level.
+The skill gap for a recent college graduate minus the skill gap for an alternatively educated non-college graduate (ACNG) is a comparative skill gap.
+A positive comparative skill gap is counterintuitive because it may or may not indicate that a
+respondent views a recent college graduate as having relatively ideal skills compared to an ACNG.
+
+Ignoring relative overqualification improves intuition.
+Relative overqualification occurs when an ACNG is perceived with higher skill than a recent college graduate.
+In the current data set, relative overqualification effects are small enough that ignoring them does not importantly change model explanatory power.
+By ignoring both absolute and relative overqualification,
+a comparative skill gap can be intuitively interpreted as a pure economic bad.
+
+I refer to these effects as comparative skill gaps in the remainder of the paper.
+A positive comparative skill gap
+indicates that an ACNG is perceived to have less skill than a recent college graduate
+and also less than an ideal level of that skill.
+
 Robust feature selection is accomplished by conducting multiple feature selection algorithms.
 These algorithms include the elastic net, univariate selection, and sequential forward-selection (SFS).
 Leave-one-out cross-validation is used to tune the elastic net and terminate the SFS process\footnote{
@@ -252,7 +274,7 @@ Appendix TODO contains summary statistics for each variable.
 % Variables in this study are a superset of variables from the other four studies in the meta-analysis, plus three additional questions.
 % The three new questions are risk preference, naive preference for a programming career, and a categorical variable for worldview.
 % The three additional questions were each specifically motivated by one or more claims or predictions in one of the other four studies.
-% cite: weak correlation between self-reported and actual risk aversion https://wol.iza.org/articles/measuring-individual-risk-preferences/long
+% TODO: cite: weak correlation between self-reported and actual risk aversion https://wol.iza.org/articles/measuring-individual-risk-preferences/long
 % author above says `Survey measures lack a clear connection to theory' -> signaling model solves that (perceived risk > actual risk in hiring decision)
 % 'enjoy taking risks' phrasing a. taken from above and b. consistent with programming career orientation (an alternative to people-thing orientation measure)
 The main dependent variable of interest is hirability.
@@ -442,8 +464,7 @@ Table TODO shows the coefficients for this model.
 % TODO: we explain hirability but now explain preference for a programming career logit and is_tech logit?
 
 In the preferred model, gender is independently important, as well as various gender interactions.
-Male identification without qualification or interaction is negatively associated with hirability.
-% , after accounting for personality and many other differences.
+Male identification is negatively associated with hirability.
 Gender interacted with naive preference for a programming career is positive with a large magnitude.
 The four-way interaction with gender and the information technology industry is significant and negative, but small.
 Summing across relevant effects,
@@ -536,10 +557,8 @@ The logistic analysis does establish that gender better explains current employm
 compared to naive preference for a programming career.
 This result is consistent with a narrative of sexism in the information technology industry or the hiring process,
 but I argue that this is an inappropriate interpretation of the result.
-
-
-An incorrect interpretation of this data would be to say that it shows
-that preference for a programming job is unrelated to the ability to obtain a programming job.
+% An incorrect interpretation of this data would be to say that it shows
+% that preference for a programming job is unrelated to the ability to obtain a programming job.
 This interpretation is incorrect because having a programming job
 is importantly determined by factors other than the ability to obtain such a job.
 Specifically, exit effects and historical effects are large and important.
@@ -561,16 +580,9 @@ female programmers will tend to have higher personal and household earnings.
 This might lead to high industrial exit.
 As a result, even with equitable hiring practices,
 a high share of male labor could be explained by historical and exit effects.
-
-% like it's ecologically rational; it's not really involuntary; it's just not ideal either
-
-% [FIG 1] showed that the proportion of men in programming has trended sideways since 2017.
 % https://homes.luddy.indiana.edu/nensmeng/files/Ensmenger2010-MPM.pdf
 % https://en.wikipedia.org/wiki/Women_in_computing#1940s
 % https://timeline.com/women-pioneered-computer-programming-then-men-took-their-industry-over-c2959b822523
-
-
-
 % ref: https://files.eric.ed.gov/fulltext/EJ1219536.pdf
 % The field of CS has been defined as the ‘incredible
 % shrinking pipeline’ (Camp, 1997). Soe and Yakura
@@ -585,18 +597,35 @@ a high share of male labor could be explained by historical and exit effects.
 % contributors to gender gap in the STEM fields
 % (Acker, 1987)
 
+The model that explains naive preference for a programming career
+establishes little when assessed in isolation,
+but some results are interesting when considered alongside prior findings.
+Previous resarch found that alternative learning provider exposure effects are positive on hirability. % TODO: cite
+In the present model we can see that exposure is also associated with positive naive preference for a programming career.
 
-% TODO: what were the minimal modifications? drop Y from X, exempt hirability, more BFE, overcome singular matrix
-% results: gender matters for current employment, but not favor_programming_career: possibly due to exit and historic effects
-% favor_programming_career basically validates factors and model...so what's instrumentable and why care if we boost favor_programming_career?
-% important to balance desire to brute force increase favor_programming_career (almost cheating)
-%  versus desire to ensure that high favor_programming_career -> high involvement in software engineering labor pipeline
-% also important not to get distracted by red herrings including:
-1. general boosting of female involvement in STEM
-2. expanding STEM to STEAM
-3. trying to manipulate current gender share of labor pool over attention to the pipeline (hesitate to correct for historical effects and create new perverse incentives)
-4. trying to manipulate pipeline to out-produce what free agents really want
+Previous research on skill gaps suggested curricula changes that would enable
+candidates to increase hirability in the eyes of employers.
+Specifically, an increased focus on soft skills like teamwork and communication were advised. % TODO: cite
+Current results show that a perceived skill gap in teamwork for alternatively educated individuals
+is negatively associated with naive preference for a programming career.
+An opposite effect is found for communicaiton skills.
+This could indicate that shrinking skill gaps for teamwork are more important
+than shrinking skill gaps for communication
+from the perspective of alternative education consumers.
+A variety of other communication and marketing strategies are suggested
+to programming education providers
+on the basis of age, location, and other effects.
 
+% % TODO: what were the minimal modifications? drop Y from X, exempt hirability, more BFE, overcome singular matrix
+% % results: gender matters for current employment, but not favor_programming_career: possibly due to exit and historic effects
+% % favor_programming_career basically validates factors and model...so what's instrumentable and why care if we boost favor_programming_career?
+% % important to balance desire to brute force increase favor_programming_career (almost cheating)
+% %  versus desire to ensure that high favor_programming_career -> high involvement in software engineering labor pipeline
+% % also important not to get distracted by red herrings including:
+% 1. general boosting of female involvement in STEM
+% 2. expanding STEM to STEAM
+% 3. trying to manipulate current gender share of labor pool over attention to the pipeline (hesitate to correct for historical effects and create new perverse incentives)
+% 4. trying to manipulate pipeline to out-produce what free agents really want
 
 % In a simple model of labor, an industry has current employees and a pipeline of future employees.
 % Current discrepencies are explained by prior labor pool constitution plus recent hiring and exit effects.
@@ -627,49 +656,6 @@ a high share of male labor could be explained by historical and exit effects.
 % 1. failure to use existing paths
 % 2. existing paths are ineffective particularly for women
 
-% either:
-% 1. men are not trying keep women out of tech (identification of explanation as myth or false)
-% 2. men are unconciously keeping women out of tech (unconcious bias)
-% 3. men outside of tech are the ones trying to keep women out of tech (jealousy effect or negative special interest)
-% could be all of the above!
-
-critical finding of a real problem (not an analytical problem):
-    favor_programming_career in step 9: True
-    favor_programming_career in step 10: False
-so, 'favor_programming_career' doesn't importantly determine whether you end up in a programming career...but gender does...and that's the whole problem folks
-
-note: without_singular_matrix.append("gender_male:favor_programming_career:favor_seeking_risk") also produces singular matrix
-also:
-without_singular_matrix.append("gender_male:favor_seeking_risk")
-without_singular_matrix.append("gender_male:favor_programming_career")
-also:
-without_singular_matrix.append("favor_seeking_risk")
-without_singular_matrix.append("favor_programming_career")
-
-so i checked with dependent vars:
-1. hirability
-2. industry_information_technology
-
-TODO:
-3. favor_programming_career
-
-result: we often want to influence female favor_programming_career but we don't realize it's already high / no different from males!
-the real problem is a breakdown between favor_programming_career and industry_information_technology (invariant to gender interaction)
-    * that happens to disproportionately harm women
-    * ie gender-direct impact without a gender-direct cause (causes are many and largely uninteracted with gender)
-
-what changes can we make so that favored industry -> actual industry? industrial mobility similar to economic mobility concept
-    * reduce switching costs
-    * reduce barriers to entry
-    * provide non-phobic pipelines (pipeline-phobic; ed system)
-    * culture moves? uh I guess so but women don't need inspiration (they're already into it) they need support
-        * maybe culture moves on the part of parents how about that?
-        * reminds me of substituting college for bootcamp stigma which is really a boomer-anti-young stigma not a gender stigma. so maybe there is a boomer-culture interaction.
-
-% TODO: discuss that i replicate overqualification effects are bad and extend into comparative overqualification effects
-
-% TODO: gender factors that are consistent across hirability and the logit and instrumentable
-
 % % TODO: latex equation: https://en.wikipedia.org/wiki/Elastic_net_regularization
 % The elastic net is tuned by testing many values of \lambda_1 while holding constant $\lambda_2 = 1$.
 % Table TODO shows the count of retained features, the proportion of retained gender features,
@@ -684,10 +670,8 @@ Table TODO (the same table) also includes explanatory power of the preferred lin
 the model without gender-derivative features,
 and a model of the gender-derivative features in isolation.
 
-
 % # sample size for grit: 99
 % # grit mean diff test by gender: 0.33946185189778477
-
 
 % Did prestige differ by gender
 % Does time value or value of money differ by gender?
@@ -700,16 +684,12 @@ and a model of the gender-derivative features in isolation.
 
 % pca and mca explored for dimensionality reduction of high-dimension categorical industry and state variables, but not feasible due to partial responses
 % alternatives include: shrinkage (ridge, lasso, etc) or variable selection (best-subset, BFE), manual feature elimination (if a whole set is unimportant)
-
-Specifically, likelihood to work in information technology and grit
+% Specifically, likelihood to work in information technology and grit
 % https://www.sciencedirect.com/science/article/pii/S0732118X1930234X
 
 % TODO: mention cross-validation and also two samples w/ how much of raw is captured in deskewed
 
-
 1. in non-pooled sample (Oct 2021) factors outnumber samples. so i tested models by factor group
-
-
 1. findings: replicated and disputed compared to prior results
     * OVERQUALIFICATION IS A FICTION - get Degreed guys to talk about this too; cross-validated in a new temporal context, see factor groups
 2. novel results
@@ -750,54 +730,38 @@ m18_a vs m18 for anti-AIC
         - (.6 on a scale of 1-10 would make a binary transform roughly 5x or 3, comparable to gender_male's 2.8 in reduction_step_9_logit_model)
 
 
-%%% POOLED / PANELED SAMPLES BELOW
+% note: elastic net that tested with interaction effects found no gain from comparative skill gaps!
+% (without interaction effects, comp skill gaps are important...so did the interactions partial out the comparative skill gaps?)
 
-Begin by testing industry alone. Prior research shows that gender plays a role in selecting industry.
-Now test interacting gender. Notice this reduces AIC and AR2. In other words,
-
-Now,
-
-Begin by creating an interaction for gender and risk seeking
-Then an interaction for gender and favor_programming_career
-Finally, an interaction for gender and industry
-
-
-Actionable Things:
-1.  assertiveness training:
- - https://www.shrm.org/resourcesandtools/hr-topics/behavioral-competencies/global-and-cultural-effectiveness/pages/study-gender-pay-gap-narrows-but-still-exists.aspx
-
-note: elastic net that tested with interaction effects found no gain from comparative skill gaps!
-(without interaction effects, comp skill gaps are important...so did the interactions partial out the comparative skill gaps?)
-
-
-note: only two gender interactions were duplicatively identified between SFS and elastic net:
-+ gender_male:favor_programming_career:favor_seeking_risk:industry[T.Information Technology]
-+ gender_male:favor_programming_career:favor_seeking_risk:industry[T.Retail]
-// my guess would be neg coefficient on retail just bc who needs alt ed or higher ed for retail...?
-
-reduce to preferred model - choose a tighter net (heavier penalty) or backwards elimination by p-value?
-1. former seems good for prediction but latter seems good for inference/explanation of current data
-2. choose p-value elimination. start w 81 vars (including intercept) in nx elastic net, cut so p < 0.5 (true effects, combats included variable bias)
-3. theoretically supervised stepwise pattern. start w nx elastic net, cut, add unique wx elastic net, cut, add sfs gender vars, cut.
-note: maybe diagram build + reduction process?
-
-note: compare sfs_unique_feature_names and sfs_unique_feature_names_collinearity_dropped
-note: i had to arbitrarily drop from reduction_step_8_model to remove perfect multicollinearity within this group:
-gender_male:favor_programming_career:industry_energy
-gender_male:favor_programming_career:industry_law
-gender_male:favor_programming_career:industry_real_estate
-gender_male:favor_seeking_risk:industry_energy
-gender_male:favor_seeking_risk:industry_law
-gender_male:favor_seeking_risk:industry_real_estate
-gender_male:favor_programming_career:favor_seeking_risk:industry_energy
-gender_male:favor_programming_career:favor_seeking_risk:industry_law
-gender_male:favor_programming_career:favor_seeking_risk:industry_real_estate
+% note: only two gender interactions were duplicatively identified between SFS and elastic net:
+% + gender_male:favor_programming_career:favor_seeking_risk:industry[T.Information Technology]
+% + gender_male:favor_programming_career:favor_seeking_risk:industry[T.Retail]
+% // my guess would be neg coefficient on retail just bc who needs alt ed or higher ed for retail...?
 
 \section{Conclusions}
 
 related: The greater problem is that women desire to program as much as men, but fewer females in the software engineering labor pipeline are observed.
 part of conclusion that's not in my data: what about non-degree, non-bootcamp labor pipeline and gender?
 also, what about "with irrelevant degree" -> could easily be disproportionately female
+
+% either:
+% 1. men are not trying keep women out of tech (identification of explanation as myth or false)
+% 2. men are unconciously keeping women out of tech (unconcious bias)
+% 3. men outside of tech are the ones trying to keep women out of tech (jealousy effect or negative special interest)
+% could be all of the above!
+
+result: we often want to influence female favor_programming_career but we don't realize it's already high / no different from males!
+the real problem is a breakdown between favor_programming_career and industry_information_technology (invariant to gender interaction)
+    * that happens to disproportionately harm women
+    * ie gender-direct impact without a gender-direct cause (causes are many and largely uninteracted with gender)
+
+what changes can we make so that favored industry -> actual industry? industrial mobility similar to economic mobility concept
+    * reduce switching costs
+    * reduce barriers to entry
+    * provide non-phobic pipelines (pipeline-phobic; ed system)
+    * culture moves? uh I guess so but women don't need inspiration (they're already into it) they need support
+        * maybe culture moves on the part of parents how about that?
+        * reminds me of substituting college for bootcamp stigma which is really a boomer-anti-young stigma not a gender stigma. so maybe there is a boomer-culture interaction.
 
 overall pipeline:
 % three questions to discuss:
@@ -828,6 +792,10 @@ my analysis would be improved by:
   2. merge data sets
   3. more sophisticated analysis over time
   4. backwards selection instead of forward selection or k-fold cross validation instead of leave-one-out; basically, requires far larger sample
+
+  Actionable Things:
+  1.  assertiveness training:
+   - https://www.shrm.org/resourcesandtools/hr-topics/behavioral-competencies/global-and-cultural-effectiveness/pages/study-gender-pay-gap-narrows-but-still-exists.aspx
 
 
 \bibliography{./BibFile}
@@ -876,8 +844,6 @@ TODO: bib https://scikit-learn.org/dev/about.html#citing-scikit-learn
 % % 4. focus on what matters: industry is more predictive than STEM and more meaningful, useful, and specific. It also makes action clearer with respect to the inequality issues that we all care about.
 % Women earned 53 percent of STEM college degrees in 2018,
 % Women earned 53% of STEM college degrees in 2018, smaller than their 58% share of all college degrees. The gender dynamics in STEM degree attainment mirror many of those seen across STEM job clusters. For instance, women earned 85% of the bachelor’s degrees in health-related fields, but just 22% in engineering and 19% in computer science as of 2018.
-
-
 
 ASSORTED NOTES TO SELF
 
@@ -975,7 +941,6 @@ how do i complete people-things from RIASEC?
 % favorability to AI (conservatism and anti-innovation bias proxy),
 % and whether American education is important (nationalist / anti-foreign prox)
 
-
 ## the big battlecry
 -> do not test any new theories, just outline them
 -> this is a survey and a partial replication
@@ -1021,7 +986,6 @@ Expected Endogenous Effects
 
 ***older stuff below
 
-
 we have college student -> college-educated labor
 what about alt ed -> alt ed labor?
 
@@ -1050,8 +1014,6 @@ Byrnes JP, Miller DC, Schafer WD (1999) Gender differences in risk taking: A met
 https://onlinelibrary-wiley-com.mutex.gmu.edu/doi/pdfdirect/10.1111/joes.12069
 Strong Evidence for Gender Differences in Risk Taking https://www.sciencedirect.com/science/article/abs/pii/S0167268111001521
 
-
-
 ---no women are not more risk averse
 Financial Decision-Making: Are Women Really
 More Risk-Averse? https://pubs-aeaweb-org.mutex.gmu.edu/doi/pdfplus/10.1257/aer.89.2.381
@@ -1066,7 +1028,6 @@ knowledge of finance, women are no more risk averse than men." (however
 
 above sides of the analytical debate are totally reconcilable imho as a yes with caveat
 
-
 This paper is a metastudy with an eye toward out-of-sample prediction about the value of an early work strategy by gender.
 
 1. we know there are personality differences with gender;
@@ -1074,7 +1035,6 @@ a. prosocial attitudes may lead to distaste for remote and technical learning
 b. yet, openess may offset that
 2. are women more risk averse? if so, that may reduce appetite for alternative credentials (directly and indirectly)
 3. furtherkl
-
 
 theoretic importance - gender is, in some sense, a post-discriminatory diversity target and a sucess story
 theoretical question: how do we pick between wage parity and employment parity (that allegedly drives innovation through ideological diversity)?
@@ -1093,7 +1053,6 @@ standard sociological controls: age, ethnicity, gender, education, income
 and it remains easy to achieve a high degree of success even when diversity targets are expanded to include non-binary gender identifcation.
 in some sense it is the simplist of all diversity targets
 
-
 less than a 1 percent expected change from 2000 to 2050? from 47 to 48? why? largely preferential not ability
 https://www.bls.gov/opub/mlr/2002/05/art2full.pdf
 
@@ -1101,5 +1060,3 @@ labor force participation has been flat for 30 years:
 https://www.dol.gov/agencies/wb/data/facts-over-time/women-in-the-labor-force#labor-force-participation-rate-of-women-by-age
 
 so workforce gender discrimination has been a non-issue since 2000 and probably well before then
-
-
