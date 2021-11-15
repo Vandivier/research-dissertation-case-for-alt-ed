@@ -480,6 +480,26 @@ is positive on hirability\footnote{
 This result indicates that men in the tech industry are actively encouraging the use of alternative credentials.
 This advocacy has a positive impact on women, because coding bootcamps disproportionately enroll women compared to college computer science programs.
 
+% five papers including this one, diss, and OG
+Two of five papers in the meta-analysis identify gender as important\footnote{
+    This paper and [11].
+}.
+All three papers that did not identify gender as important used OLS estimation
+and selected a preferred model by maximizing the adjusted r-squared value.
+% see reduction_step_8_b_underfit_model
+The current paper replicates that a simple measure of gender is not included in the OLS model
+that maximizes adjusted r-squared.
+This paper argues that such a model is underfit, however, because it omits
+factors where $p < 0.5$ and therefore ignores likely true effects.
+In addition, the preferred model in this paper has a lower AIC.
+In addition, in an underfit model that maximizes adjusted r-squared,
+simple gender is not an included factor but many gender interactions are retained.
+Of note, the four-way interaction that includes gender and the information technology industry is retained
+in such a model.
+Given these results,
+the claim in the current paper that gender has an important effect should not be taken as a
+flat disagreement with any other paper in the meta-study.
+
 % both genders mostly prefer to work with college graduate peers, but particularly men.
 % this encourages the CS Problem...is it concious?
 % naive preference for a programming career did not differ by gender
@@ -580,22 +600,6 @@ female programmers will tend to have higher personal and household earnings.
 This might lead to high industrial exit.
 As a result, even with equitable hiring practices,
 a high share of male labor could be explained by historical and exit effects.
-% https://homes.luddy.indiana.edu/nensmeng/files/Ensmenger2010-MPM.pdf
-% https://en.wikipedia.org/wiki/Women_in_computing#1940s
-% https://timeline.com/women-pioneered-computer-programming-then-men-took-their-industry-over-c2959b822523
-% ref: https://files.eric.ed.gov/fulltext/EJ1219536.pdf
-% The field of CS has been defined as the ‘incredible
-% shrinking pipeline’ (Camp, 1997). Soe and Yakura
-% (2008) found that at each stage, the pipeline
-% ‘leaks’ more for women than it does for men. The
-% leaking problem is worse at the high school level
-% as the field continues to lose the participation and
-% interest of a broad layer of students, especially
-% females (Goode, Estrella, & Margolis, 2013).
-% Gender differentials, school/family influences,
-% and stereotyping of science are the three main
-% contributors to gender gap in the STEM fields
-% (Acker, 1987)
 
 The model that explains naive preference for a programming career
 establishes little when assessed in isolation,
@@ -740,9 +744,119 @@ m18_a vs m18 for anti-AIC
 
 \section{Conclusions}
 
-related: The greater problem is that women desire to program as much as men, but fewer females in the software engineering labor pipeline are observed.
-part of conclusion that's not in my data: what about non-degree, non-bootcamp labor pipeline and gender?
-also, what about "with irrelevant degree" -> could easily be disproportionately female
+This paper systematically investigated the research on hirability to understand the relationship between gender and coding bootcamps.
+This analysis contributes to the development of a solution to the gendered student debt crisis in the United States.
+The results of this paper may also be used by employers seeking to improve employee gender diversity,
+by learning providers,
+consumers of education,
+policymakers,
+and many others.
+A number of results in the literature were replicated, refined, and extended.
+Novel data and analysis were also presented.
+
+A simple model of the labor composition of an industry must account for historical labor composition,
+entry, and exit.
+Ensmenger gives a thoughtful treatment to the history of the subject\cite{ensmenger2010making}.
+A simplistic summary would be to say United States government statistics indicate that men
+have made up roughly eighty percent of professional computer programmers from 1970 through 2018.
+Government statistics consistently show a ten percent difference compared to Stack Overflow developer survey results,
+but the trend is similarly horizontal through 2021[23].
+
+NPR provides a popular explanation from culture for the small share of female programmers[https://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding].
+In this story, male-targeted adverstisements led to a reduction in the share of female computer science enrollment.
+First, this misses important gender-related enrollment effects that have to do with post-war male educational enrollment.
+Second, the share of female computer science enrollment does not seem to be strongly related to the share of professional female programmers.
+
+Ada Lovelace is widely considered to be the first programmer despite lacking a computer science degree[https://www.scientificamerican.com/article/in-celebration-of-ada-lovelace-the-first-computer-programmer/].
+In 1980 and prior, women were a general minority in college rather than uniquely a minority in computer science programs[https://nces.ed.gov/programs/digest/d17/tables/dt17_303.70.asp].
+In 1970 the share of professional female computer programmers was already 22.5 percent.
+That number exceeds the share of female computer science students by over sixty percent[https://www.gcu.edu/blog/gcu-experience/analysis-women-computing].
+Professional female programming appears to historically precede and often exceed female computer science program enrollment,
+rather than to lag it.
+From 1970 to today, the share of female computer programmers has hardly changed despite large variation in the share of female computer science enrollment.
+Third, and most directly, the current study shows that men and women do not differ in their naive preference for a programming career.
+The gender-specific cultural bias for programming does not appear to exist at the individual level.
+% I would be interested to see a quantitative future study that measured the correlation between gender-related media commentary and female programming.
+% I suspect the correlation would be negligible.
+% https://educationalpolicy.org/hello-world/
+% https://nces.ed.gov/programs/digest/d17/tables/dt17_303.70.asp
+
+% https://twitter.com/JohnVandivier/status/1460000262853206017
+% https://tjmisa.com/papers/2019-Misa_Gender-Bias-Computing.pdf
+% https://twitter.com/JohnVandivier/status/1459991633886388233
+% SO begins in 2011, but gender first reported in 2015
+%     SO says "Our internal stats suggest the imbalance isn't quite as severe as the survey results would make it seem"
+%     https://insights.stackoverflow.com/survey/2015
+% https://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding
+% https://homes.luddy.indiana.edu/nensmeng/files/Ensmenger2010-MPM.pdf
+% https://en.wikipedia.org/wiki/Women_in_computing#1940s
+% https://timeline.com/women-pioneered-computer-programming-then-men-took-their-industry-over-c2959b822523
+% ref: https://files.eric.ed.gov/fulltext/EJ1219536.pdf
+% The field of CS has been defined as the ‘incredible
+% shrinking pipeline’ (Camp, 1997). Soe and Yakura
+% (2008) found that at each stage, the pipeline
+% ‘leaks’ more for women than it does for men. The
+% leaking problem is worse at the high school level
+% as the field continues to lose the participation and
+% interest of a broad layer of students, especially
+% females (Goode, Estrella, & Margolis, 2013).
+% Gender differentials, school/family influences,
+% and stereotyping of science are the three main
+% contributors to gender gap in the STEM fields
+% (Acker, 1987)
+% https://insights.stackoverflow.com/survey
+
+Psychological literature indicates that women are significantly more people-oriented than men,
+but the present paper notes that modern programming is not a decidedly things-oriented industry.
+Indeed, employers see a deficit in soft skills among college and bootcamp graduates alike.
+This paper improved such analysis by directly investigating naive preference for a programming career.
+An interesting result is there there was not a difference in mean response by gender.
+This seems to present a problem because the industry is predominantly male,
+but it could be that historical effects and exit effects explain this descrepency without maligning the hiring process,
+so further research is needed.
+
+The current analysis showed that gender effects are independently important
+after holding constant this kind of brute preference for work
+and also while holding constant other psychological variables including variables for Big Five personality traits.
+
+Individual desire to stay at home is an important factor that could be explored in future research.
+This measure works as an opportunity cost of employment that may disproportionately impact women.
+If men and women both have a high naive preference for a programming career,
+but women have a higher relative desire to stay at home,
+then the true preference for a programming career net of opportunity cost is effectively higher for men.
+Computer programming is already a remote-friendly job family,
+but facilitating part-time employment might boost female participation among women that would generally like to stay home
+but perhaps take on an occassional high-paying project.
+
+A strategy of incentivizing women that stay at home to pick up part-time remote work
+is given additional empirical merit by a study from the Bureau of Labor Statistics (BLS).
+The BLS found that married white women were the most likely group to choose part-time work[24].
+As earlier discussed, wealthy women are more likely than other women to choose to stay at home.
+Given that married white women are a large component of wealthy women,
+enabling part-time programming work from home
+is a strategy with the potential to substantially increase the share of female programmers.
+
+Larger sample sizes are suggested as an improvement for future research that intends to explain individual-level employment in the information technology industry.
+Causal analysis and dynamic analysis would be useful improvements as well.
+A model of naive preference for a programming career in the present study disclosed many correlated variables,
+but experimental or causal analysis would better inform strategic application of results.
+For instance, a large negative effect on hirability for the state of New York is identified in the current study.
+Does it follow that marketers should avoid geotargeting ads to New York?
+Precisely the opposite might be true.
+Exposure to digital ads might improve public opinion in New York at a greater rate per dollar spent
+compared to purchasing digital ads in a geography where opinion is already high.
+
+% TODO: duration of program?
+% TODO: curriculum change?
+% TODO: convert STEM to programming specifically
+% TODO: policy changes that are not gender specific but have disproportionate benefits to women
+%    * (stop subsidizing college, privitize accreditation, qualify bootcamps for financial aid)
+% leverage self-similarity bias: hire female coding bootcamp teachers (or female CS profs; the rare that exist)
+
+
+% related: The greater problem is that women desire to program as much as men, but fewer females in the software engineering labor pipeline are observed.
+% part of conclusion that's not in my data: what about non-degree, non-bootcamp labor pipeline and gender?
+% also, what about "with irrelevant degree" -> could easily be disproportionately female
 
 % either:
 % 1. men are not trying keep women out of tech (identification of explanation as myth or false)
@@ -824,6 +938,8 @@ TODO: bib https://scikit-learn.org/dev/about.html#citing-scikit-learn
 [20]https://www.sciencedirect.com/science/article/pii/S105353571000154X
 [21]https://scikit-learn.org/stable/about.html#citing-scikit-learn
 [22]https://www.deseret.com/2019/1/24/20664077/rich-and-poor-married-moms-are-more-likely-to-stay-at-home-with-the-kids-but-for-entirely-different
+[23]https://insights.stackoverflow.com/survey
+[24]https://www.bls.gov/opub/mlr/2018/article/pdf/who-chooses-part-time-work-and-why.pdf
 
 \end{document}
 

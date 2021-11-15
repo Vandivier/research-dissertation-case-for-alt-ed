@@ -252,6 +252,15 @@ reduction_step_8_feature_names = backward_elimination(df_with_dummies, reduction
 reduction_step_8_formula = get_formula("hirability", reduction_step_8_feature_names)
 reduction_step_8_model = sm.OLS.from_formula(reduction_step_8_formula, data=df_with_dummies)
 
+# reduce further to maximize adj r2, but see AIC increases and we lose gender
+# this is a replication of prior papers that say gender isn't important in the ar2-max model
+# but this model is arguably underfit because it cuts too many independent variables
+# yet, many gender interactions survive, including 4-way interaction on IT industry
+# r2 = 1.0, ar2 = .973, AIC = -54.30, n = 86, k = 73
+reduction_step_8_b_underfit_feature_names = backward_elimination(df_with_dummies, reduction_step_7_feature_names, "hirability", 0.15)
+reduction_step_8_b_underfit_formula = get_formula("hirability", reduction_step_8_b_underfit_feature_names)
+reduction_step_8_b_underfit_model = sm.OLS.from_formula(reduction_step_8_b_underfit_formula, data=df_with_dummies)
+
 def get_preferred_feature_names():
     return reduction_step_8_feature_names
 
