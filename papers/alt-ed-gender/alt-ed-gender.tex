@@ -20,23 +20,42 @@
     hidelinks = true,    %%% not grammatical
 }
 
+\usepackage{listings}
+\lstset{
+basicstyle=\small\ttfamily,
+columns=flexible,
+breaklines=true
+}
+
 \begin{document}
 \begin{frontmatter}
 
     \title{
-        % Alternative Credentials and Gender Equity
         Coding Bootcamps and Gender Equity
     }
 
     \author[mymainaddress]{John Vandivier}
-    \ead{john@afterecon.com}
+    \ead{vandivier_john@yahoo.com}
 
     \begin{abstract}
-        TODO
+        Insights from this study empower policymakers and employers to combat the gendered debt crisis in the United States
+        and improve industrial gender diversity.
+        This paper provides a systematic metastudy of the literature on hirability
+        plus novel data and analysis to provide an explanation
+        of the higher levels of gender diversity in coding bootcamps
+        relative to computer science programs.
+        Results show that women display equal preference for a programming career compared to men.
+        Contrastive explanation from people and things personality orientation
+        does not explain desire for a programming career,
+        although it does explain aversion to computer science college enrollment.
+        Evidence indicates that women prefer coding bootcamps
+        in part due to their shorter duration and content.
+        As an industry, information technology can encourage female participation
+        by supporting part-time work from home and hiring individuals that do not hold a computer science degree.
     \end{abstract}
 
     \begin{keyword}
-        TODO %%% not grammatical
+        labor economics, alternative education, coding bootcamps, gender equity, debt crisis, student debt, education economics %%% not grammatical
         \MSC[2010] TODO %%% not grammatical
     \end{keyword}
 
@@ -66,7 +85,6 @@ and that reductions in educational debt subsidy solve the problem of excess debt
 It turns out that non-females benefit from the same activities.
 
 % https://twitter.com/JohnVandivier/status/1447343762024419334
-
 Glassdoor is a leading job search platform.
 Glassdoor reports that in the United States and abroad, occupational sorting alone explains the majority of the wage gap[9].
 The present paper provides original research on the degree to which this sorting is voluntary.
@@ -116,35 +134,34 @@ Third, I review ways in which the positive rate of adoption is currently constra
 % note: the idea here is that present hirability explains both present and future usage
 %    I then technically predict hirability and implicitly predict on usage
 
+% [FIG 1] - SOURCE
+% purpose 1: show share of female enrollment in CS programs vs coding bootcamps over time
+% 1. from 2017 to 2021, stack overflow consistently shows that about 75 percent of professional programmers have a bachelor's degree or higher
+%   - https://insights.stackoverflow.com/survey/2021
+%   - this measure wasn't available in prior years (and neither was gender breakdown by pro dev status)
+% 2. females among SO pro devs: 7.2 percent to 4.8 percent from 2017 to 2021
+%   - males: 89.5 percent to 92.8 percent from 2017 to 2021
+%   - other: 2.1 to 2.0
+%   - non-male within USA was 9.1 percent in 2021, although apples-to-apples trend data isn't present.
+%       * this is the highest percentage of all countries, but still quite asmmetrical
+% 3. cs program female attendance over time
+%   - note this is only a loose correlation bc many programmers don't have a CS degree
+%   - https://codeorg.medium.com/women-computer-science-graduates-finally-surpass-record-set-17-years-ago-20a79a76275
+% 4. course report bootcamp gender share over time
+% 5. are social media, edtech, and digital marketing a larger share of female? what about people management in tech? (experience blocker)
 
-[FIG 1] - SOURCE
-purpose 1: show share of female enrollment in CS programs vs coding bootcamps over time
-1. from 2017 to 2021, stack overflow consistently shows that about 75 percent of professional programmers have a bachelor's degree or higher
-  - https://insights.stackoverflow.com/survey/2021
-  - this measure wasn't available in prior years (and neither was gender breakdown by pro dev status)
-2. females among SO pro devs: 7.2 percent to 4.8 percent from 2017 to 2021
-  - males: 89.5 percent to 92.8 percent from 2017 to 2021
-  - other: 2.1 to 2.0
-  - non-male within USA was 9.1 percent in 2021, although apples-to-apples trend data isn't present.
-      * this is the highest percentage of all countries, but still quite asmmetrical
-3. cs program female attendance over time
-  - note this is only a loose correlation bc many programmers don't have a CS degree
-  - https://codeorg.medium.com/women-computer-science-graduates-finally-surpass-record-set-17-years-ago-20a79a76275
-4. course report bootcamp gender share over time
-5. are social media, edtech, and digital marketing a larger share of female? what about people management in tech? (experience blocker)
+% - in tech, traditional credentials have particularly low value because employers in this industry are particularly quick learners
+%    - `https://econfaculty.gmu.edu/bcaplan/StudyGuide.pdf'
+%    - "Full catch up takes over 10 years"
+%    - But, Google says that degree-oriented models are insignificant predictors after 3 years
+%    - Since then, Google and many other tech firms have dropped the degree requirement. Coincidence? hardly.
+%    - So it's true that women are overrepresented in college and underrepresented in CS programs, but that is a less material fact in Third Age of Online Education
 
-- in tech, traditional credentials have particularly low value because employers in this industry are particularly quick learners
-   - `https://econfaculty.gmu.edu/bcaplan/StudyGuide.pdf'
-   - "Full catch up takes over 10 years"
-   - But, Google says that degree-oriented models are insignificant predictors after 3 years
-   - Since then, Google and many other tech firms have dropped the degree requirement. Coincidence? hardly.
-   - So it's true that women are overrepresented in college and underrepresented in CS programs, but that is a less material fact in Third Age of Online Education
-
-[FIG 2] - SOURCE (could be a table)
-purpose: show bootcamps have been increasing relative to cs prog enrollment, and there is a coding bootcamp growth + favorability association
-1. cs program enrollment over time
-2. coding bootcamp enrollment over time
-3. coding bootcamp favorability over time
+% [FIG 2] - SOURCE (could be a table)
+% purpose: show bootcamps have been increasing relative to cs prog enrollment, and there is a coding bootcamp growth + favorability association
+% 1. cs program enrollment over time
+% 2. coding bootcamp enrollment over time
+% 3. coding bootcamp favorability over time
 
 
 \section{Methodology}
@@ -218,7 +235,8 @@ and also less than an ideal level of that skill.
 Robust feature selection is accomplished by conducting multiple feature selection algorithms.
 These algorithms include the elastic net, univariate selection, and sequential forward-selection (SFS).
 Leave-one-out cross-validation is used to tune the elastic net and terminate the SFS process\footnote{
-    Specifically, I use the sklearn.linear_model.ElasticNetCV module of the Scikit-learn library in Python[21].
+    % ref: sklearn.linear_model.ElasticNetCV
+    Specifically, I use the ElasticNetCV module from the Scikit-learn library in Python[21].
     The analytical code and novel data used in this study are available at TODO ANONYMIZE.
 }.
 The elastic net is an ideal feature selection tool because it combines the benefits of ridge regression and the lasso regression
@@ -262,13 +280,13 @@ The last section is administrative in nature.
 The other nine sections correspond to groups of related factors.
 Personality information includes continuous measures of the Big Five personality traits and for grit.
 Other than those factors, all other variables are categorical or Likert-type responses.
-The majority of Likert-type questions use a 10-point scale, and such variables are often analyzed as continuous data.
-% \footnote{
-%     It is an accepted practice to treat Likert-type responses as either categorical or continuous for regression analysis.
-%     Jaccard and Wan provide support for continuous analysis of Likert-type data.
-%     They note that severe departures from the assumptions on cardinality ``do not seem to affect Type I and Type II errors dramatically,''
-%     particularly when the Likert scale is five or more points\cite{jaccard1996lisrel}.
-% }.
+The majority of Likert-type questions use a 10-point scale, and such variables are often analyzed as continuous data
+\footnote{
+    It is an accepted practice to treat Likert-type responses as either categorical or continuous for regression analysis.
+    Jaccard and Wan provide support for continuous analysis of Likert-type data.
+    They note that severe departures from the assumptions on cardinality ``do not seem to affect Type I and Type II errors dramatically,''
+    particularly when the Likert scale is five or more points\cite{jaccard1996lisrel}.
+}.
 
 Appendix TODO contains summary statistics for each variable.
 % Variables in this study are a superset of variables from the other four studies in the meta-analysis, plus three additional questions.
@@ -284,13 +302,11 @@ employment in the information technology industry
 and naive preference for a programming career.
 % Investigating these three factors allows for both supply-side and demand-side analysis of the importance of gender with respect to alternative credential supply and demand.
 
-
 % my empirical argument that sometimes, including in my use case, ar2>aic for model selection
 % 1. ar2 selects vars w p-value < .4 (not sure always true, but true for samples in 30-3000 range)
 % 2. i know from empirical evidence that industry is an important variable; including industry favored by ar2 and not by aic
 % 3. i should prefer aicc, dic, or waic to aic based on my knowledge anyway bc K>n for me
 % 4. I'm interested in factor identification and I consider a 'true model' to be one with no spurious or random variables; all vars must p<0.5
-
 
 % test/train split LASSO and Elstatic Net were unable to find a decent model
 % i've been told it's due to sample size https://stats.stackexchange.com/questions/548958/why-are-my-elastic-net-and-lasso-r-squared-measures-negative
@@ -343,13 +359,12 @@ The second explanation is a positive exposure effect that results from coronavir
 These theories are compatible with each other and they indiciate that hirability is expected to remain high
 to the extent that social activity remains remote, particularly with respect to industry norms.
 
-% note: does this block provide evidence that female openness dominates risk aversion?
+% TODO: does this block provide evidence that female openness dominates risk aversion?
 Risk preference did not differ significantly by gender ($n = 99, p < 0.57$)
 and naive preference for a programming career did not differ by gender ($n = 99, p < 0.74$).
 Preference for working with a peer that is a college graduate is significantly higher among men ($n = 105, p < 0.05$).
-% TODO: is there a latex for start/end quotes?
-When asked to agree or disagree that, "I prefer to hire or work with a person that has a college degree
-rather [sic] a person that holds a reputable certification or non-college credential,"
+When asked to agree or disagree that, ``I prefer to hire or work with a person that has a college degree
+rather [sic] a person that holds a reputable certification or non-college credential,''
 seventy-seven percent of men agreed while only fifty-eight percent of women agreed.
 High female enrollment into coding bootcamps
 relative to accredited computer science programs is not simply explained
@@ -674,64 +689,52 @@ Table TODO (the same table) also includes explanatory power of the preferred lin
 the model without gender-derivative features,
 and a model of the gender-derivative features in isolation.
 
-% # sample size for grit: 99
-% # grit mean diff test by gender: 0.33946185189778477
-
-% Did prestige differ by gender
-% Does time value or value of money differ by gender?
-
-2. reveal explanatory power by factor group
-3. theory-driven discovery of four way interaction validated by elastic net and other feature selection
-4. preferred model and direction of coefficients - appendix w full model and maybe another appendix w summary stats including n and table w selected variables of interest
-5. ways to improve the analysis (constraints/shortcomings)
-6. conclusion!
-
 % pca and mca explored for dimensionality reduction of high-dimension categorical industry and state variables, but not feasible due to partial responses
 % alternatives include: shrinkage (ridge, lasso, etc) or variable selection (best-subset, BFE), manual feature elimination (if a whole set is unimportant)
 % Specifically, likelihood to work in information technology and grit
 % https://www.sciencedirect.com/science/article/pii/S0732118X1930234X
 
 % TODO: mention cross-validation and also two samples w/ how much of raw is captured in deskewed
+% TODO: explanatory power by factor group
+% TODO: Did prestige differ by gender
+% TODO: Does time value or value of money differ by gender? -> it appears the answer is yes based on enrollment by course length
 
-1. in non-pooled sample (Oct 2021) factors outnumber samples. so i tested models by factor group
-1. findings: replicated and disputed compared to prior results
-    * OVERQUALIFICATION IS A FICTION - get Degreed guys to talk about this too; cross-validated in a new temporal context, see factor groups
-2. novel results
-    * no relative overqualification; simpler mental model without loss of (statistically significant or economically important) generality
+% 1. in non-pooled sample (Oct 2021) factors outnumber samples. so i tested models by factor group
+% 1. findings: replicated and disputed compared to prior results
+%     * OVERQUALIFICATION IS A FICTION - get Degreed guys to talk about this too; cross-validated in a new temporal context, see factor groups
+% 2. novel results
+%     * no relative overqualification; simpler mental model without loss of (statistically significant or economically important) generality
 
-note: we are theoretically safe by identifying a marginal effect as important invariant to it's level
-    so no I don't agree that if you include a higher order interaction you must include the lower order interaction (theoretical reason)
-    although I do agree it's worth checking - looks like stack exchange illuminati say check it and if it's not significant nbd
-    % https://stats.stackexchange.com/questions/236113/are-lower-order-interactions-a-prequisite-for-three-way-interactions-in-regressi
+% note: we are theoretically safe by identifying a marginal effect as important invariant to it's level
+%     so no I don't agree that if you include a higher order interaction you must include the lower order interaction (theoretical reason)
+%     although I do agree it's worth checking - looks like stack exchange illuminati say check it and if it's not significant nbd
+%     % https://stats.stackexchange.com/questions/236113/are-lower-order-interactions-a-prequisite-for-three-way-interactions-in-regressi
 
-%%% REVIEW PRIOR RESULTS, THEORIZE TRENDS
-1. one would be the covid effect, so test covid_impact*gender
-2.  Conformity  and  perceived  skillgaps  explain  about  one-third  of  the  hirability  variance -> alt ed matching effects 2.pdf
-    * soft skills matter more than industry effects
-    * conformity reduces hirability on average
-    * Respondents tend to perceive ACNGcandidates as an even mix of high and low performers.  Evidence favors employerrisk aversion toward labor productivity as a preferred explanation of low ACNGdemand.
+% %%% REVIEW PRIOR RESULTS, THEORIZE TRENDS
+% 1. one would be the covid effect, so test covid_impact*gender
+% 2.  Conformity  and  perceived  skillgaps  explain  about  one-third  of  the  hirability  variance -> alt ed matching effects 2.pdf
+%     * soft skills matter more than industry effects
+%     * conformity reduces hirability on average
+%     * Respondents tend to perceive ACNGcandidates as an even mix of high and low performers.  Evidence favors employerrisk aversion toward labor productivity as a preferred explanation of low ACNGdemand.
 
-m18_a vs m18 for anti-AIC
+% m18_a vs m18 for anti-AIC
 
-%%% OCTOBER 2021 NOVEL RESULTS
+% %%% OCTOBER 2021 NOVEL RESULTS
 
-1. no diff in means for hirability, favor_programming_career, favor_seeking_risk by gender
-2. grit is closer to significance then those above, but still failed to detect (n=0.34)
-    - may indicate our sample is underpowered compared to other literature, will include this anyway.
-3. I do detect a strong mean diff with is_prefer_college_peer (men scored significantly higher)
-4. is_tech mean diff by gender expected but not found
-    - about 34 percent of my sample claims to be in information tech industry
-    - but overall economy would expect 7 percent: https://www.prnewswire.com/news-releases/us-tech-employment-surpasses-12-million-workers-accounts-for-10-of-nations-economy-301044415.html
-5. let's try to introduce gender. should it be interacted, added, both, or neither?
-    - we know that gender influences industry choice, so it might already be 'embedded' adding little to overall model power
-    % ref: m1-m4
-    - finding: gender insig in naive simple reg
-    - adding or interacting gender to industry reduces ar2 and aic
+% 3. I do detect a strong mean diff with is_prefer_college_peer (men scored significantly higher)
+% 4. is_tech mean diff by gender expected but not found
+%     - about 34 percent of my sample claims to be in information tech industry
+%     - but overall economy would expect 7 percent: https://www.prnewswire.com/news-releases/us-tech-employment-surpasses-12-million-workers-accounts-for-10-of-nations-economy-301044415.html
+% 5. let's try to introduce gender. should it be interacted, added, both, or neither?
+%     - we know that gender influences industry choice, so it might already be 'embedded' adding little to overall model power
+%     % ref: m1-m4
+%     - finding: gender insig in naive simple reg
+%     - adding or interacting gender to industry reduces ar2 and aic
 
-    # overall result of logit/probit: gender matters more than whether you want to code (p-value judgement)
-    # good-ish news? if you accept zero-confidence identification,
-        - "favor_programming_career" has a positive coefficient on magnitudinal par with gender
-        - (.6 on a scale of 1-10 would make a binary transform roughly 5x or 3, comparable to gender_male's 2.8 in reduction_step_9_logit_model)
+%     # overall result of logit/probit: gender matters more than whether you want to code (p-value judgement)
+%     # good-ish news? if you accept zero-confidence identification,
+%         - "favor_programming_career" has a positive coefficient on magnitudinal par with gender
+%         - (.6 on a scale of 1-10 would make a binary transform roughly 5x or 3, comparable to gender_male's 2.8 in reduction_step_9_logit_model)
 
 
 % note: elastic net that tested with interaction effects found no gain from comparative skill gaps!
@@ -762,15 +765,15 @@ have made up roughly eighty percent of professional computer programmers from 19
 Government statistics consistently show a ten percent difference compared to Stack Overflow developer survey results,
 but the trend is similarly horizontal through 2021[23].
 
-NPR provides a popular explanation from culture for the small share of female programmers[https://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding].
+NPR provides a popular explanation from culture for the small share of female programmers[25].
 In this story, male-targeted adverstisements led to a reduction in the share of female computer science enrollment.
 First, this misses important gender-related enrollment effects that have to do with post-war male educational enrollment.
 Second, the share of female computer science enrollment does not seem to be strongly related to the share of professional female programmers.
 
-Ada Lovelace is widely considered to be the first programmer despite lacking a computer science degree[https://www.scientificamerican.com/article/in-celebration-of-ada-lovelace-the-first-computer-programmer/].
-In 1980 and prior, women were a general minority in college rather than uniquely a minority in computer science programs[https://nces.ed.gov/programs/digest/d17/tables/dt17_303.70.asp].
+Ada Lovelace is widely considered to be the first programmer despite lacking a computer science degree[26].
+In 1980 and prior, women were a general minority in college rather than uniquely a minority in computer science programs[27].
 In 1970 the share of professional female computer programmers was already 22.5 percent.
-That number exceeds the share of female computer science students by over sixty percent[https://www.gcu.edu/blog/gcu-experience/analysis-women-computing].
+That number exceeds the share of female computer science students by over sixty percent[28].
 Professional female programming appears to historically precede and often exceed female computer science program enrollment,
 rather than to lag it.
 From 1970 to today, the share of female computer programmers has hardly changed despite large variation in the share of female computer science enrollment.
@@ -850,11 +853,10 @@ An explanation from things orientation does not substantially explain
 naive preference for a programming career,
 but it does seem to help explain the low enrollment of women into computer science programs.
 % Women obtain fewer computer science degrees because they enroll in computer science programs at a lower rate,
-% not because they drop out disproportionately[https://medium.com/@uw_data_scientist/girls-are-not-more-likely-to-drop-out-of-cs-and-engineering-70e03fdbfca].
+% not because they drop out disproportionately[29].
 Table TODO shows the percentage for various college majors among respondents that write code professionally and studied at the university level\footnote{
-    This data is derived from the 2020 Stack Overflow Developer Survey.
-    [https://insights.stackoverflow.com/survey/2020#developer-profile-undergraduate-major-professional-developers2]
-    ref: analysis_10...py
+    This data is derived from the 2020 Stack Overflow Developer Survey[30].
+    % ref: analysis_10...py
 }.
 This table shows the percentage of male programmers that studied with a given major.
 Notice that men comprise a larger share of computer science and information technology programs.
@@ -898,20 +900,20 @@ coding bootcamps compared to computer science programs.
 % 3. men outside of tech are the ones trying to keep women out of tech (jealousy effect or negative special interest)
 % could be all of the above!
 
-result: we often want to influence female favor_programming_career but we don't realize it's already high / no different from males!
-the real problem is a breakdown between favor_programming_career and industry_information_technology (invariant to gender interaction)
-    * that happens to disproportionately harm women
-    * ie gender-direct impact without a gender-direct cause (causes are many and largely uninteracted with gender)
+% result: we often want to influence female favor_programming_career but we don't realize it's already high / no different from males!
+% the real problem is a breakdown between favor_programming_career and industry_information_technology (invariant to gender interaction)
+%     * that happens to disproportionately harm women
+%     * ie gender-direct impact without a gender-direct cause (causes are many and largely uninteracted with gender)
 
-what changes can we make so that favored industry -> actual industry? industrial mobility similar to economic mobility concept
-    * reduce switching costs
-    * reduce barriers to entry
-    * provide non-phobic pipelines (pipeline-phobic; ed system)
-    * culture moves? uh I guess so but women don't need inspiration (they're already into it) they need support
-        * maybe culture moves on the part of parents how about that?
-        * reminds me of substituting college for bootcamp stigma which is really a boomer-anti-young stigma not a gender stigma. so maybe there is a boomer-culture interaction.
+% what changes can we make so that favored industry -> actual industry? industrial mobility similar to economic mobility concept
+%     * reduce switching costs
+%     * reduce barriers to entry
+%     * provide non-phobic pipelines (pipeline-phobic; ed system)
+%     * culture moves? uh I guess so but women don't need inspiration (they're already into it) they need support
+%         * maybe culture moves on the part of parents how about that?
+%         * reminds me of substituting college for bootcamp stigma which is really a boomer-anti-young stigma not a gender stigma. so maybe there is a boomer-culture interaction.
 
-overall pipeline:
+% overall pipeline:
 % three questions to discuss:
 % 1. do women want to program? (yes)
 % 2. what paths to programming exist?
@@ -935,21 +937,18 @@ overall pipeline:
 % theory 3: EQ repulsion or differential low eq tolerance...again we would prob expect disproportionate drop out (unless eq repulsion is expected prior)
 % theory 4: male tendencey to perfectionism and gatekeeping
 
-my analysis would be improved by:
-  1. use multivariate selection instead of GenericUnivariateSelect; currently no widely-supported library seems to exist so this would need to be from scratch
-  2. merge data sets
-  3. more sophisticated analysis over time
-  4. backwards selection instead of forward selection or k-fold cross validation instead of leave-one-out; basically, requires far larger sample
+% my analysis would be improved by:
+%   1. use multivariate selection instead of GenericUnivariateSelect; currently no widely-supported library seems to exist so this would need to be from scratch
+%   2. merge data sets
+%   3. more sophisticated analysis over time
+%   4. backwards selection instead of forward selection or k-fold cross validation instead of leave-one-out; basically, requires far larger sample
 
-  Actionable Things:
-  1.  assertiveness training:
-   - https://www.shrm.org/resourcesandtools/hr-topics/behavioral-competencies/global-and-cultural-effectiveness/pages/study-gender-pay-gap-narrows-but-still-exists.aspx
+%   Actionable Things:
+%   1.  assertiveness training:
+%    - https://www.shrm.org/resourcesandtools/hr-topics/behavioral-competencies/global-and-cultural-effectiveness/pages/study-gender-pay-gap-narrows-but-still-exists.aspx
 
-
-\bibliography{./BibFile}
-
-TODO: bib https://scikit-learn.org/dev/about.html#citing-scikit-learn
-
+\begin{lstlisting}
+TODO: format citations
 [1]https://www.wsj.com/articles/college-university-fall-higher-education-men-women-enrollment-admissions-back-to-school-11630948233
 [2]https://educationdata.org/student-loan-debt-by-gender
 [3]https://fortune.com/2021/09/01/highest-paying-college-majors-starting-salaries/
@@ -974,239 +973,248 @@ TODO: bib https://scikit-learn.org/dev/about.html#citing-scikit-learn
 [22]https://www.deseret.com/2019/1/24/20664077/rich-and-poor-married-moms-are-more-likely-to-stay-at-home-with-the-kids-but-for-entirely-different
 [23]https://insights.stackoverflow.com/survey
 [24]https://www.bls.gov/opub/mlr/2018/article/pdf/who-chooses-part-time-work-and-why.pdf
+[25]https://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding
+[26]https://www.scientificamerican.com/article/in-celebration-of-ada-lovelace-the-first-computer-programmer/
+[27]https://nces.ed.gov/programs/digest/d17/tables/dt17_303.70.asp
+[28]https://www.gcu.edu/blog/gcu-experience/analysis-women-computing
+[29]https://medium.com/@uw_data_scientist/girls-are-not-more-likely-to-drop-out-of-cs-and-engineering-70e03fdbfca
+[30]https://insights.stackoverflow.com/survey/2020#developer-profile-undergraduate-major-professional-developers2
+\end{lstlisting}
+
+\bibliography{./BibFile}
 
 \end{document}
 
-% POST-PAPER TODO ie FUTURE STUDY
+% % POST-PAPER TODO ie FUTURE STUDY
 
-% TODO:
-% "girls drop out of STEM subjects in their teens, discouraged by a lack of role models and a plethora of gender stereotypes."
+% % TODO:
+% % "girls drop out of STEM subjects in their teens, discouraged by a lack of role models and a plethora of gender stereotypes."
 
-% TODO: some other study: correct for agreement bias
-% people saying yes govt is good and yes ai is good and yes free trade is good...maybe better 'true feelings' if we normalize for
-% 1. individual effects and
-% 2. cross-individual agreement effects
+% % TODO: some other study: correct for agreement bias
+% % people saying yes govt is good and yes ai is good and yes free trade is good...maybe better 'true feelings' if we normalize for
+% % 1. individual effects and
+% % 2. cross-individual agreement effects
 
-% % # the unhelpful STEM distinction
-% % 1. all fields are STEM. Specifically, technology cuts across every industry. Science is moderately useful and math isn't a professional field. Engineering is the only useful component of STEM.
-% % 2. The move towards STEAM, inclusive of art, is even worse in regards to the amibguity problem and meaningful salary differences.
-% % 3. my regressions show STEM is insignificant in a multiple regression and many people don't know whether their role or industry is STEM.
-% % 4. focus on what matters: industry is more predictive than STEM and more meaningful, useful, and specific. It also makes action clearer with respect to the inequality issues that we all care about.
-% Women earned 53 percent of STEM college degrees in 2018,
-% Women earned 53% of STEM college degrees in 2018, smaller than their 58% share of all college degrees. The gender dynamics in STEM degree attainment mirror many of those seen across STEM job clusters. For instance, women earned 85% of the bachelor’s degrees in health-related fields, but just 22% in engineering and 19% in computer science as of 2018.
+% % % # the unhelpful STEM distinction
+% % % 1. all fields are STEM. Specifically, technology cuts across every industry. Science is moderately useful and math isn't a professional field. Engineering is the only useful component of STEM.
+% % % 2. The move towards STEAM, inclusive of art, is even worse in regards to the amibguity problem and meaningful salary differences.
+% % % 3. my regressions show STEM is insignificant in a multiple regression and many people don't know whether their role or industry is STEM.
+% % % 4. focus on what matters: industry is more predictive than STEM and more meaningful, useful, and specific. It also makes action clearer with respect to the inequality issues that we all care about.
+% % Women earned 53 percent of STEM college degrees in 2018,
+% % Women earned 53% of STEM college degrees in 2018, smaller than their 58% share of all college degrees. The gender dynamics in STEM degree attainment mirror many of those seen across STEM job clusters. For instance, women earned 85% of the bachelor’s degrees in health-related fields, but just 22% in engineering and 19% in computer science as of 2018.
 
-ASSORTED NOTES TO SELF
+% ASSORTED NOTES TO SELF
 
-single big question: what gender differences, if any, exist in favorability to alternative credentials?
+% single big question: what gender differences, if any, exist in favorability to alternative credentials?
 
-bigger questions:
-1. is the college degree going away?
-2. should people prefer alternative credentials to the degree?
-3. if people should, why are they not doing so?
-4. can we create interesting predictions or interventions that generate value?
-5. all of the above, with an eye toward gender.
-[6. as a result, yes people-things distinction matters]
+% bigger questions:
+% 1. is the college degree going away?
+% 2. should people prefer alternative credentials to the degree?
+% 3. if people should, why are they not doing so?
+% 4. can we create interesting predictions or interventions that generate value?
+% 5. all of the above, with an eye toward gender.
+% [6. as a result, yes people-things distinction matters]
 
-intro 1. review scope (lit review + limitted replication + contribute test for robustness over time)
-pt 2 - do the lit review (review papers, factors, theories previously tested / established)
-pt 3 - preview results
+% intro 1. review scope (lit review + limitted replication + contribute test for robustness over time)
+% pt 2 - do the lit review (review papers, factors, theories previously tested / established)
+% pt 3 - preview results
 
-% in our use case if we ultimately care about landing programmers a job, then RIASEC is not only overkill but it is also a noisey and indirect indicator
-% future work which seeks to look at alternative credentials outside of programming should incorporate a full RIASEC,
-% but i introduce a direct programming interest question instead for now.
-% Not only does RIASEC + PCA introduce measurement error into thing-orientation,
-% but reapplication of the construct onto programming creates an a secondary measurement error because programming is not a purely thing-oriented activity.
-% my wording (enjoyable) is based on the open version https://openpsychometrics.org/tests/RIASEC
-% further, my wording is meant to cause the respondent to think of the whole career, not the narrow activity
-% further, my wording is meant to address the possibility that a respondent may already have a job programming, but I don't want them to anchor on their present job.
+% % in our use case if we ultimately care about landing programmers a job, then RIASEC is not only overkill but it is also a noisey and indirect indicator
+% % future work which seeks to look at alternative credentials outside of programming should incorporate a full RIASEC,
+% % but i introduce a direct programming interest question instead for now.
+% % Not only does RIASEC + PCA introduce measurement error into thing-orientation,
+% % but reapplication of the construct onto programming creates an a secondary measurement error because programming is not a purely thing-oriented activity.
+% % my wording (enjoyable) is based on the open version https://openpsychometrics.org/tests/RIASEC
+% % further, my wording is meant to cause the respondent to think of the whole career, not the narrow activity
+% % further, my wording is meant to address the possibility that a respondent may already have a job programming, but I don't want them to anchor on their present job.
 
-+ add a "people person" question -> person-orientation theory (scale of 1 to 10: beware Dunning-Kruger / overconfidence here) (extroversion)
-caveat: speak to dunning-kruger; an actual eq test would be more accurate,
-    correlation expected though, roughly linear,
-    weakly cubic relation: https://www.researchgate.net/publication/12688660_Unskilled_and_Unaware_of_It_How_Difficulties_in_Recognizing_One's_Own_Incompetence_Lead_to_Inflated_Self-Assessments )
+% + add a "people person" question -> person-orientation theory (scale of 1 to 10: beware Dunning-Kruger / overconfidence here) (extroversion)
+% caveat: speak to dunning-kruger; an actual eq test would be more accurate,
+%     correlation expected though, roughly linear,
+%     weakly cubic relation: https://www.researchgate.net/publication/12688660_Unskilled_and_Unaware_of_It_How_Difficulties_in_Recognizing_One's_Own_Incompetence_Lead_to_Inflated_Self-Assessments )
 
-people-oriented
-https://www.linkedin.com/feed/update/urn:li:activity:6858771848033898497/
-```https://onlinelibrary.wiley.com/doi/full/10.1111/j.1751-9004.2010.00320.x
-Results show that gender differences in Big Five personality traits are ‘small’ to ‘moderate,’
-with the largest differences occurring for agreeableness and neuroticism
-(respective ds = 0.40 and 0.34; women higher than men). In contrast,
-gender differences on the people–things dimension of interests are ‘very large’
-(d = 1.18), with women more people-oriented and less thing-oriented than men.
-...
-Research on gender differences in personality needs to focus more attention on Big Five facets and on traits that may not have good representations in the Big Five model
-'''
+% people-oriented
+% https://www.linkedin.com/feed/update/urn:li:activity:6858771848033898497/
+% ```https://onlinelibrary.wiley.com/doi/full/10.1111/j.1751-9004.2010.00320.x
+% Results show that gender differences in Big Five personality traits are ‘small’ to ‘moderate,’
+% with the largest differences occurring for agreeableness and neuroticism
+% (respective ds = 0.40 and 0.34; women higher than men). In contrast,
+% gender differences on the people–things dimension of interests are ‘very large’
+% (d = 1.18), with women more people-oriented and less thing-oriented than men.
+% ...
+% Research on gender differences in personality needs to focus more attention on Big Five facets and on traits that may not have good representations in the Big Five model
+% '''
 
-specific questions modeled after https://pubmed.ncbi.nlm.nih.gov/18712468/
-```
-These results suggest that biological factors may contribute to sex differences in personality and that culture plays a negligible to small role in moderating sex differences in personality.
-'''
-https://pubmed.ncbi.nlm.nih.gov/9569655/
-http://psych.fullerton.edu/rlippa/
-% https://www.hawaiipublicschools.org/DOE%20Forms/CTE/RIASEC.pdf
-how do i complete people-things from RIASEC?
-% Gender-Related Individual Differences and the Structure of Vocational
-% Interests: The Importance of the People-Things Dimension
-% future interesting idea: marital status might be an interesting variable
+% specific questions modeled after https://pubmed.ncbi.nlm.nih.gov/18712468/
+% ```
+% These results suggest that biological factors may contribute to sex differences in personality and that culture plays a negligible to small role in moderating sex differences in personality.
+% '''
+% https://pubmed.ncbi.nlm.nih.gov/9569655/
+% http://psych.fullerton.edu/rlippa/
+% % https://www.hawaiipublicschools.org/DOE%20Forms/CTE/RIASEC.pdf
+% how do i complete people-things from RIASEC?
+% % Gender-Related Individual Differences and the Structure of Vocational
+% % Interests: The Importance of the People-Things Dimension
+% % future interesting idea: marital status might be an interesting variable
 
-% RIASEC is a personality type based on activity interest
-% a 2-factor PCA from RIASEC adds importantly to OCEAN
-% and aligns with a personality analysis using the People-Things and Ideas-Data dimensions
-% then we notice "very large" gender differences on the people-things axis, which is orthoganal to OCEAN
-% https://openpsychometrics.org/tests/RIASEC/
-%
-% I conducted factor analyses on the six
-% ipsatized RIASEC scores for all participants as well as for men
-% and women separately (principal-components analysis, extraction of two factors, with orthogonal varimax rotation). Because
-% the two factors that emerged from all three factor analyses were
-% quite similar, only the results for men and women combined are
-% reported here.
-% https://towardsdatascience.com/principal-component-analysis-pca-from-scratch-in-python-7f3e2a540c51
-% https://web-a-ebscohost-com.mutex.gmu.edu/ehost/pdfviewer/pdfviewer?vid=1&sid=056dfdd6-c42b-46ae-b687-4938a191ff87%40sdc-v-sessmgr03
-%
-% python and riasec https://www.learnpythonwithrune.org/pandas-explore-datasets-by-visualization-exploring-the-holland-code-riasec-test/
+% % RIASEC is a personality type based on activity interest
+% % a 2-factor PCA from RIASEC adds importantly to OCEAN
+% % and aligns with a personality analysis using the People-Things and Ideas-Data dimensions
+% % then we notice "very large" gender differences on the people-things axis, which is orthoganal to OCEAN
+% % https://openpsychometrics.org/tests/RIASEC/
+% %
+% % I conducted factor analyses on the six
+% % ipsatized RIASEC scores for all participants as well as for men
+% % and women separately (principal-components analysis, extraction of two factors, with orthogonal varimax rotation). Because
+% % the two factors that emerged from all three factor analyses were
+% % quite similar, only the results for men and women combined are
+% % reported here.
+% % https://towardsdatascience.com/principal-component-analysis-pca-from-scratch-in-python-7f3e2a540c51
+% % https://web-a-ebscohost-com.mutex.gmu.edu/ehost/pdfviewer/pdfviewer?vid=1&sid=056dfdd6-c42b-46ae-b687-4938a191ff87%40sdc-v-sessmgr03
+% %
+% % python and riasec https://www.learnpythonwithrune.org/pandas-explore-datasets-by-visualization-exploring-the-holland-code-riasec-test/
 
-% 3. "5-Factor Conservatism" and Gender (could be it's own paper)
-%     a. anti-innovation bias, or status quo bias; represents the gradualist aspect
-%     b. antiforeign bias represents the nationalist aspect
-% % new phrasing: https://www.econlib.org/archives/2006/03/framing_antifor.html
-% % "I favor freer trade and migration with other nations"
-%     c. regulatory measure for market orientation or fiscal conservatism.
-%     d. prefer Christianity to religiosity for social conservatism a la United States
-%         i. Agnostic or Atheist
-%         ii. Spiritual or Theistic, No Specific Religion
-%         iii. Religious, Not Christian
-%         iv. Progressive Christian
-%         v. Conservative or Evangelical Christian
-%         vi. Other Christian
-% % 190201-feb-survey-monkey has justification for non-preference of Christianity var
-% % rebuttle to that justification: it's a poor construct
-% % instead of
+% % 3. "5-Factor Conservatism" and Gender (could be it's own paper)
+% %     a. anti-innovation bias, or status quo bias; represents the gradualist aspect
+% %     b. antiforeign bias represents the nationalist aspect
+% % % new phrasing: https://www.econlib.org/archives/2006/03/framing_antifor.html
+% % % "I favor freer trade and migration with other nations"
+% %     c. regulatory measure for market orientation or fiscal conservatism.
+% %     d. prefer Christianity to religiosity for social conservatism a la United States
+% %         i. Agnostic or Atheist
+% %         ii. Spiritual or Theistic, No Specific Religion
+% %         iii. Religious, Not Christian
+% %         iv. Progressive Christian
+% %         v. Conservative or Evangelical Christian
+% %         vi. Other Christian
+% % % 190201-feb-survey-monkey has justification for non-preference of Christianity var
+% % % rebuttle to that justification: it's a poor construct
+% % % instead of
 
-% Cultural effects include regional and ethnic effects.
+% % Cultural effects include regional and ethnic effects.
 
-% Non-cultural ideological effects include religiosity,
-% christianity,
-% favorability to regulation,
-% favorability to AI (conservatism and anti-innovation bias proxy),
-% and whether American education is important (nationalist / anti-foreign prox)
+% % Non-cultural ideological effects include religiosity,
+% % christianity,
+% % favorability to regulation,
+% % favorability to AI (conservatism and anti-innovation bias proxy),
+% % and whether American education is important (nationalist / anti-foreign prox)
 
-## the big battlecry
--> do not test any new theories, just outline them
--> this is a survey and a partial replication
-    1. not a full replication
-    2. if we had data to execute a full replication, why limit ourselves to the battlecry? why not test novel theories?
-    3. the answer to 2 is: "paper brevity, paper clarity of thought / scope focus, and analysis and authoring time"
-    4. however, we might still gather data to permit option 2, and yet execute the battlecry*****have a few papers in the tank
+% ## the big battlecry
+% -> do not test any new theories, just outline them
+% -> this is a survey and a partial replication
+%     1. not a full replication
+%     2. if we had data to execute a full replication, why limit ourselves to the battlecry? why not test novel theories?
+%     3. the answer to 2 is: "paper brevity, paper clarity of thought / scope focus, and analysis and authoring time"
+%     4. however, we might still gather data to permit option 2, and yet execute the battlecry*****have a few papers in the tank
 
-## gender fx theories
-Big 3 Theories
-1. differential personality theory (expected to relate to occupational preference)
-    1. person-orientation vs object-orientation
-    2. Grit+OCEAN cluster difference expected
-2. differential risk tolerance / aversion
-    a. differential norms orientation, ie preference for college
-    b. differential favorability to non-conforming individuals [from skills paper survey https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3829269]
-    c. possibly endogenous to personality
-3. differential education + work experience
+% ## gender fx theories
+% Big 3 Theories
+% 1. differential personality theory (expected to relate to occupational preference)
+%     1. person-orientation vs object-orientation
+%     2. Grit+OCEAN cluster difference expected
+% 2. differential risk tolerance / aversion
+%     a. differential norms orientation, ie preference for college
+%     b. differential favorability to non-conforming individuals [from skills paper survey https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3829269]
+%     c. possibly endogenous to personality
+% 3. differential education + work experience
 
-minor theories (special mention territory)
-4. formal social norms, ie public and private policy effects
-    a. special attention to diversity hiring policies - i think there's external data
-5. (informal) social norms theory (potentially out of scope)
-    a. weak evidence from derived measures
-        i. percent gender by industry; male or female stereotype theory? gender collapse?
-        ii. men are more willing to work as a minority compared to females (minority employment as a risky choice + risk aversion)
-        iii. do women say men have lower eq and men say women have higher eq? eq stereotyping norm
-        iv. these once again seem to collapse into the Big 3
-    b. stronger evidence would include a purpose-built questionnaire, rather than derived measures
+% minor theories (special mention territory)
+% 4. formal social norms, ie public and private policy effects
+%     a. special attention to diversity hiring policies - i think there's external data
+% 5. (informal) social norms theory (potentially out of scope)
+%     a. weak evidence from derived measures
+%         i. percent gender by industry; male or female stereotype theory? gender collapse?
+%         ii. men are more willing to work as a minority compared to females (minority employment as a risky choice + risk aversion)
+%         iii. do women say men have lower eq and men say women have higher eq? eq stereotyping norm
+%         iv. these once again seem to collapse into the Big 3
+%     b. stronger evidence would include a purpose-built questionnaire, rather than derived measures
 
-Expected Endogenous Effects
-4. differential skills
-    a. expect to find it, but expect dominant endogeneity w/ personality theory, education, and work experience
-    b. ie communication skill + teamwork + eq -> people oriented
-5. covid favorability difference -> remote preferences -> expect dominant endogeneity
-6. prestige valuation differences
-    a. interesting result: are women harder to impress OR value different expression content than men (interview heuristic)
+% Expected Endogenous Effects
+% 4. differential skills
+%     a. expect to find it, but expect dominant endogeneity w/ personality theory, education, and work experience
+%     b. ie communication skill + teamwork + eq -> people oriented
+% 5. covid favorability difference -> remote preferences -> expect dominant endogeneity
+% 6. prestige valuation differences
+%     a. interesting result: are women harder to impress OR value different expression content than men (interview heuristic)
 
-## antitheories
-1. i don't think religiosity within-country (USA specifically) is important https://www.pewforum.org/2016/03/22/the-gender-gap-in-religion-around-the-world/
-2. I believe credit by examination effects are captured by other measures of favorability to alternative credentials
-3. veteran bootcamp disproportionately educate men - not really an antitheory just like "duh" and not worth measuring
+% ## antitheories
+% 1. i don't think religiosity within-country (USA specifically) is important https://www.pewforum.org/2016/03/22/the-gender-gap-in-religion-around-the-world/
+% 2. I believe credit by examination effects are captured by other measures of favorability to alternative credentials
+% 3. veteran bootcamp disproportionately educate men - not really an antitheory just like "duh" and not worth measuring
 
-***older stuff below
+% ***older stuff below
 
-we have college student -> college-educated labor
-what about alt ed -> alt ed labor?
+% we have college student -> college-educated labor
+% what about alt ed -> alt ed labor?
 
-course report 2014 - 2020 percent female bootcamp grads
-https://www.coursereport.com/reports/2014-coding-bootcamp-outcomes-demographics-report
+% course report 2014 - 2020 percent female bootcamp grads
+% https://www.coursereport.com/reports/2014-coding-bootcamp-outcomes-demographics-report
 
-let's focus on coding bootcamps bc course report has the data, it's an important microcosm of alt creds, and IT wants women
-(theoretically, minority gender demand commensurate w minority status and varies importantly by industry)
+% let's focus on coding bootcamps bc course report has the data, it's an important microcosm of alt creds, and IT wants women
+% (theoretically, minority gender demand commensurate w minority status and varies importantly by industry)
 
-1. does enrollment track favorability?
-2. does favorability track disparity?
+% 1. does enrollment track favorability?
+% 2. does favorability track disparity?
 
-What if we could combat the student debt crisis while at the same time enabling economic welfare, equity, and diversity?
-Alternative credentials can accomplish all of the above in some cases, and many of the above in general.
-A key unknown is whether alternative credentials drive diversity in general.
-Research shows that students of alternative learning programs are disproportionately ethnic minorities, % this is sus tho...look into research
-but such results constitute a superficial and unsatisfactory analysis of general diversity.
-Employee diversity with respect to sex is the simplist possible diversity
+% What if we could combat the student debt crisis while at the same time enabling economic welfare, equity, and diversity?
+% Alternative credentials can accomplish all of the above in some cases, and many of the above in general.
+% A key unknown is whether alternative credentials drive diversity in general.
+% Research shows that students of alternative learning programs are disproportionately ethnic minorities, % this is sus tho...look into research
+% but such results constitute a superficial and unsatisfactory analysis of general diversity.
+% Employee diversity with respect to sex is the simplist possible diversity
 
-https://www.giveagradago.com/news/2020/12/what-is-diversity-in-the-workplace/424
-https://www.youtube.com/watch?v=3enoWw21j0Q
-https://builtin.com/diversity-inclusion/types-of-diversity-in-the-workplace
+% https://www.giveagradago.com/news/2020/12/what-is-diversity-in-the-workplace/424
+% https://www.youtube.com/watch?v=3enoWw21j0Q
+% https://builtin.com/diversity-inclusion/types-of-diversity-in-the-workplace
 
----yes women are more risk averse
-Byrnes JP, Miller DC, Schafer WD (1999) Gender differences in risk taking: A meta-analysis
-https://onlinelibrary-wiley-com.mutex.gmu.edu/doi/pdfdirect/10.1111/joes.12069
-Strong Evidence for Gender Differences in Risk Taking https://www.sciencedirect.com/science/article/abs/pii/S0167268111001521
+% ---yes women are more risk averse
+% Byrnes JP, Miller DC, Schafer WD (1999) Gender differences in risk taking: A meta-analysis
+% https://onlinelibrary-wiley-com.mutex.gmu.edu/doi/pdfdirect/10.1111/joes.12069
+% Strong Evidence for Gender Differences in Risk Taking https://www.sciencedirect.com/science/article/abs/pii/S0167268111001521
 
----no women are not more risk averse
-Financial Decision-Making: Are Women Really
-More Risk-Averse? https://pubs-aeaweb-org.mutex.gmu.edu/doi/pdfplus/10.1257/aer.89.2.381
-ARE WOMEN MORE RISK AVERSE? http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.500.1334
-"Our findings suggest that when individuals have the same level of education irrespective of their
-knowledge of finance, women are no more risk averse than men." (however
-1. they suppose faculty have the same level of education and men outnumber women 11:3,
-2. gender was significant among faculty (specifically when married)
-3. the regression (table 5) has no education-gender interaction variable)
-4. gender was significant in the pooled faculty test, but not in the split faculty test, indicating a sample size issue; the sign was positive across regs indicating
-.../
+% ---no women are not more risk averse
+% Financial Decision-Making: Are Women Really
+% More Risk-Averse? https://pubs-aeaweb-org.mutex.gmu.edu/doi/pdfplus/10.1257/aer.89.2.381
+% ARE WOMEN MORE RISK AVERSE? http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.500.1334
+% "Our findings suggest that when individuals have the same level of education irrespective of their
+% knowledge of finance, women are no more risk averse than men." (however
+% 1. they suppose faculty have the same level of education and men outnumber women 11:3,
+% 2. gender was significant among faculty (specifically when married)
+% 3. the regression (table 5) has no education-gender interaction variable)
+% 4. gender was significant in the pooled faculty test, but not in the split faculty test, indicating a sample size issue; the sign was positive across regs indicating
+% .../
 
-above sides of the analytical debate are totally reconcilable imho as a yes with caveat
+% above sides of the analytical debate are totally reconcilable imho as a yes with caveat
 
-This paper is a metastudy with an eye toward out-of-sample prediction about the value of an early work strategy by gender.
+% This paper is a metastudy with an eye toward out-of-sample prediction about the value of an early work strategy by gender.
 
-1. we know there are personality differences with gender;
-a. prosocial attitudes may lead to distaste for remote and technical learning
-b. yet, openess may offset that
-2. are women more risk averse? if so, that may reduce appetite for alternative credentials (directly and indirectly)
-3. furtherkl
+% 1. we know there are personality differences with gender;
+% a. prosocial attitudes may lead to distaste for remote and technical learning
+% b. yet, openess may offset that
+% 2. are women more risk averse? if so, that may reduce appetite for alternative credentials (directly and indirectly)
+% 3. furtherkl
 
-theoretic importance - gender is, in some sense, a post-discriminatory diversity target and a sucess story
-theoretical question: how do we pick between wage parity and employment parity (that allegedly drives innovation through ideological diversity)?
-(further, given preference differences, wage partity will likely and perhaps necessarily lead to employment differences)
+% theoretic importance - gender is, in some sense, a post-discriminatory diversity target and a sucess story
+% theoretical question: how do we pick between wage parity and employment parity (that allegedly drives innovation through ideological diversity)?
+% (further, given preference differences, wage partity will likely and perhaps necessarily lead to employment differences)
 
-Make a more interesting hook, but in boring terms:
-1. this paper investigates the relationship between gender and alternative credentials
-2. it's a metaanalysis and replication of prior papers
-3. i look at attitudes but also utilization and impact
-4. differing diversity from education and employer point of view;
-women are the majority in college now but the minority in the work force generally,
-but it varies importantly by industry
-5. from an application standpoint - there are only so many standard sociological c
-standard sociological controls: age, ethnicity, gender, education, income
-6. sex presents one of the most straightforward diversity targets,
-and it remains easy to achieve a high degree of success even when diversity targets are expanded to include non-binary gender identifcation.
-in some sense it is the simplist of all diversity targets
+% Make a more interesting hook, but in boring terms:
+% 1. this paper investigates the relationship between gender and alternative credentials
+% 2. it's a metaanalysis and replication of prior papers
+% 3. i look at attitudes but also utilization and impact
+% 4. differing diversity from education and employer point of view;
+% women are the majority in college now but the minority in the work force generally,
+% but it varies importantly by industry
+% 5. from an application standpoint - there are only so many standard sociological c
+% standard sociological controls: age, ethnicity, gender, education, income
+% 6. sex presents one of the most straightforward diversity targets,
+% and it remains easy to achieve a high degree of success even when diversity targets are expanded to include non-binary gender identifcation.
+% in some sense it is the simplist of all diversity targets
 
-less than a 1 percent expected change from 2000 to 2050? from 47 to 48? why? largely preferential not ability
-https://www.bls.gov/opub/mlr/2002/05/art2full.pdf
+% less than a 1 percent expected change from 2000 to 2050? from 47 to 48? why? largely preferential not ability
+% https://www.bls.gov/opub/mlr/2002/05/art2full.pdf
 
-labor force participation has been flat for 30 years:
-https://www.dol.gov/agencies/wb/data/facts-over-time/women-in-the-labor-force#labor-force-participation-rate-of-women-by-age
+% labor force participation has been flat for 30 years:
+% https://www.dol.gov/agencies/wb/data/facts-over-time/women-in-the-labor-force#labor-force-participation-rate-of-women-by-age
 
-so workforce gender discrimination has been a non-issue since 2000 and probably well before then
+% so workforce gender discrimination has been a non-issue since 2000 and probably well before then
