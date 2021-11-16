@@ -1,18 +1,28 @@
 # questions:
 # q1 - are US programmers less formally educated?
+#    answer: Yes, about 76.9% have bachelor's or higher compared to global 79.5%
 # q2 - do US programmers and/or US fem progs tend to have less relevant ("traditional") degrees?
+#    answer: yes. eg CS globally 62.6% and 55.9% in US
 # q3 - among US programmers, even w trad degrees, do women stay away from comp sci? (eg prefer "Information Technology" or "Web Development", etc)
+#    answer: web dev + design: yes, IT: no
 # q4 - is there an important difference by gender within Computer science, computer engineering, or software engineering
+#    answer: can't tell based on SO data; they are lumped together :(
 
 import pandas as pd
 
 df = pd.read_csv('stack-overflow-survey-2020-country-us.csv')
+
+bachelors_or_higher_values = ['Bachelor’s degree (B.A., B.S., B.Eng., etc.)',
+    'Master’s degree (M.A., M.S., M.Eng., MBA, etc.)',
+    'Other doctoral degree (Ph.D., Ed.D., etc.)',
+    'Professional degree (JD, MD, etc.)']
 
 less_than_some_college_values = ['Secondary school (e.g. American high school, German Realschule or Gymnasium, etc.)',
     'Primary/elementary school',
     'I never completed any formal education']
 
 df_somecollege = df[~df['EdLevel'].isin(less_than_some_college_values)]
+bachelors_or_higher = df[df['EdLevel'].isin(bachelors_or_higher_values)]
 
 # Computer science, computer engineering, or software engineering
 # SO 2020 global - 62.6%
@@ -123,3 +133,5 @@ print("df_undeclared percent male: " + str(100 * df_undeclared['Gender'].eq('Man
 print("df_health_science percent of US people: " + str(100 * df_somecollege['UndergradMajor'].eq('A health science (such as nursing, pharmacy, radiology, etc.)').mean()))
 df_health_science = df_somecollege[df_somecollege.UndergradMajor == 'A health science (such as nursing, pharmacy, radiology, etc.)']
 print("df_health_science percent male: " + str(100 * df_health_science['Gender'].eq('Man').mean()))
+
+print("percent with bachelor's degree or higher for US people: " + str(len(bachelors_or_higher.index) / len(df.index)))
