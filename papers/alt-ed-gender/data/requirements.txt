@@ -40,5 +40,5 @@ statsmodels==0.12.2
 threadpoolctl==2.1.0
 toml==0.10.2
 urllib3==1.26.6
-Werkzeug==2.0.1
+Werkzeug==2.2.3
 wrapt==1.12.1
