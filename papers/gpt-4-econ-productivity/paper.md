@@ -2,6 +2,47 @@
 
 TODO: front matter, author, affiliation, abstract, keywords, topic codes...
 
+TODO: next up:
+
+1. exploratory data analysis! woohoo (in progress)
+2. draft the paper
+3. polish, send to co-authors for review
+4. spend more money to get published
+5. Review `Initial notes` section of [google doc](https://docs.google.com/document/d/1nfoj-e53_16zHdD476N0d6GUvYJvg11skAGcyEESTbs)
+   - and find tweeted paper from patricia
+
+---
+
+EDA notes:
+
+- related thread: https://chat.openai.com/c/28294005-8131-4ae6-a515-6b5fb5af5cf1
+- Doc 8 was written by GPT-4, but less than 27% of people rated that as likely, where "likely" is 6 or more out of 10 on "written by gpt-4" subquestion. n=1 that people can't tell when it's written by GPT
+- Doc 8 avg quality rating of 6.8, so "unlikely GPT" and "high quality" go together for this paper...anti-technology bias? need a multivariate regression to check across docs
+  - IQR from 6 to 8, median of 7, and standard deviation of 1.7, so strong majority think it's high quality
+- Doc 8 calibrated at education level between undergraduate and master's level
+- Looking only at PhD holders for Doc 8 doesn't move the needle on quality: the document is still assessed at a quality of 7 out of 10 although the standard deviation is smaller.
+  - notably, phd holders assign a higher education level: none of them thought it was an undergraduate paper! 3 assigned an education level of master's and 2 assigned a level of phd holder.
+  - still, notable that most phd holders did not consider Doc 8 to be of PhD-level quality
+
+so far we know:
+
+1. for doc 8, people can't tell it's GPT-4
+2. for doc 8, there may be an anti-tech bias demonstrated
+3. for doc 8, there is a phd overvaluation effect
+4. for doc 8, phd holders have a smaller std dev of quality estimated, but the quality estimate is still on par with population norm
+
+more EDA questions:
+
+1. do all the doc 8 findings generalize to other gpt papers?
+2. do people think phd holders have phds to an extent different than they think gpt has a phd?
+3. do people rate phd holder papers higher than gpt?
+4. does gpt perform worse on the austrian question?
+   - and, does it perform better on the LLM question?
+   - and, what is the overall performance spread across questions? (answering the "econ niche" question)
+5. who won between hand-written papers, gpt papers, and webservice papers?
+
+---
+
 ## Background and Introduction
 
 notes:
