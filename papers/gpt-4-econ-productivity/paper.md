@@ -61,7 +61,17 @@ answers:
 4. GPT-4 does worse than its own average and also worse than the average econ PhD holder when discussing Austrian econ in particular, and more generally this is a signal of continued weakness in niche topics.
    1. Econ PhDs outperform GPT for austrian (they were the only other authors on the topic).
    2. for LLM best practices, GPT-4 overperformed all other authors and also overperformed itself compared to other topics. so we confirm that research topic is importantly related to performance.
-   3. TODO
+   3. see table 1 for spread info. notable: GPT-4 had lower performance spread compared to PhDs and all other authors. it also had the highest overall average performance and lowest standard deviation (using quality metrics)
+5. webservice providers didn't answer the austrian question, but see table 1 where we confirm webservice does much worse in general.
+
+<!-- note: see make_table_1.py -->
+
+Table 1: Performance spread:
+| Author Group | Best Performing Topic | Best Topic Avg. Quality | Worst Performing Topic | Worst Topic Avg. Quality | Performance Spread |
+|--------------|------------------------|-------------------------|------------------------|--------------------------|--------------------|
+| GPT Authors | Macro Health | 7.03 | Austrian Neoclassical | 6.23 | 0.80 |
+| Non-GPT Authors | Austrian Neoclassical | 7.13 | Macro Health | 6.03 | 1.10 |
+| PhD Authors | Austrian Neoclassical | 7.13 | LLM Best Practices | 6.27 | 0.87 |
 
 ---
 
