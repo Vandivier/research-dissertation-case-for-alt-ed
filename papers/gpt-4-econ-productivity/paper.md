@@ -23,6 +23,8 @@ EDA notes:
 - Looking only at PhD holders for Doc 8 doesn't move the needle on quality: the document is still assessed at a quality of 7 out of 10 although the standard deviation is smaller.
   - notably, phd holders assign a higher education level: none of them thought it was an undergraduate paper! 3 assigned an education level of master's and 2 assigned a level of phd holder.
   - still, notable that most phd holders did not consider Doc 8 to be of PhD-level quality
+- Approximately 60% of the respondents who hold a Ph.D. also have a postsecondary degree in Economics.
+  - 100% of the human authors have a postsecondary degree in economics
 
 so far we know:
 
@@ -35,11 +37,31 @@ more EDA questions:
 
 1. do all the doc 8 findings generalize to other gpt papers?
 2. do people think phd holders have phds to an extent different than they think gpt has a phd?
-3. do people rate phd holder papers higher than gpt?
-4. does gpt perform worse on the austrian question?
-   - and, does it perform better on the LLM question?
-   - and, what is the overall performance spread across questions? (answering the "econ niche" question)
-5. who won between hand-written papers, gpt papers, and webservice papers?
+3. do people rate phd holder papers higher than gpt papers on quality?
+4. does gpt write with lower quality on the austrian question?
+   1. let's assess relative to GPT scores on other papers, and also on non-gpt scores for the austrian question.
+   2. and, does it perform better on the LLM question?
+   3. and, what is the overall performance spread across questions? (answering the "econ niche" question)
+5. How did GPT-4 perform in terms of quality compared to webservice authors for the Austrian question?
+6. who won between hand-written papers, gpt papers, and webservice papers?
+   - investigate quality and education level
+7. what education level does gpt-4 represent overall?
+8. do phd holders think phd holders have phds to an extent different than they think gpt has a phd?
+9. do phd holders rate phd holder papers higher than gpt papers on quality?
+
+answers:
+
+1. the findings do generalize. in general, people think GPT-4 didn't write papers when it did.
+   - notable that people are directionally correct but not significantly accurate; a difference in means test shows that the average likelihood rating that respondents assigned for GPT authorship across all papers, regardless of the actual author, is approximately 4.39, while the average likelihood rating that GPT wrote the papers it actually did write is approximately 4.63 (p-value diff is P-Value: 0.363).
+2. people can tell phds are smarter than gpt-4
+   - Ph.D. Holder Authors: About 22.22% of the time, respondents perceived the education level of the writer as Ph.D. or higher for documents authored by actual Ph.D. holders.
+   - GPT Authorship: For documents written by GPT, approximately 13.33% of the time, respondents perceived the writer's education level as Ph.D. or higher.
+3. gpt-4 papers and phd holder papers rounded to the same level of quality on average (6.7) however, before rounding, gpt-4 had a slight advantage (6.71 vs 6.67)
+   - this is not just comparing gpt-4 to a random phd holder, but indeed to an econ phd holder!
+4. GPT-4 does worse than its own average and also worse than the average econ PhD holder when discussing Austrian econ in particular, and more generally this is a signal of continued weakness in niche topics.
+   1. Econ PhDs outperform GPT for austrian (they were the only other authors on the topic).
+   2. for LLM best practices, GPT-4 overperformed all other authors and also overperformed itself compared to other topics. so we confirm that research topic is importantly related to performance.
+   3. TODO
 
 ---
 
