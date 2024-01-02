@@ -122,6 +122,8 @@ TODO
 3. regression results (linear + Curvilinear Model)
    - technically prefer Curvilinear Model but the model power difference is trivial
    - see `regressions.py` but prefer `regressions_statsmodel.py`
+   - in both models, `author_credentials_gpt` was insignificant (p > 0.5) and `author_gpt` was insignificant, but they could be partialling each other and we have data that interaction w topic matters. need a bit more regression analysis. also need to rm `doc_id`
+   - interestingly, `participant_assessed_gpt_likelihood` is positive! so no anti tech bias demonstrated
 
 ## Conclusion
 
