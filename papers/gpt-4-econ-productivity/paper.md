@@ -2,13 +2,10 @@
 
 TODO: front matter, author, affiliation, abstract, keywords, topic codes...
 
-TODO: next up:
-
-1. exploratory data analysis! woohoo (in progress)
-2. draft the paper
-3. polish, send to co-authors for review
-4. spend more money to get published
-5. Review `Initial notes` section of [google doc](https://docs.google.com/document/d/1nfoj-e53_16zHdD476N0d6GUvYJvg11skAGcyEESTbs)
+1. draft the paper
+2. polish, send to co-authors for review
+3. spend more money to get published
+4. Review `Initial notes` section of [google doc](https://docs.google.com/document/d/1nfoj-e53_16zHdD476N0d6GUvYJvg11skAGcyEESTbs)
    - and find tweeted paper from patricia
 
 ---
