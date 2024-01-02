@@ -63,6 +63,17 @@ answers:
    2. for LLM best practices, GPT-4 overperformed all other authors and also overperformed itself compared to other topics. so we confirm that research topic is importantly related to performance.
    3. see table 1 for spread info. notable: GPT-4 had lower performance spread compared to PhDs and all other authors. it also had the highest overall average performance and lowest standard deviation (using quality metrics)
 5. webservice providers didn't answer the austrian question, but see table 1 where we confirm webservice does much worse in general.
+6. who won between hand-written papers, gpt papers, and webservice papers?
+   1. Hand-written graduate papers seem to win in terms of perceived education level, but there is no difference in paper quality or even a slight edge for quality and consistency favoring GPT-4.
+   2. The difference in identifiability without difference in quality seems to indicate a difference in style. This means that using GPT-4 with a Plugin Forest seems to produce a paper suitable for journal quality publication, but some stylistic changes may be in order. It does not seem advisable to submit a GPT-produced manuscript directly to a publisher at this time, but instead the researcher can use GPT-4 to assemble and draft the paper, then conduct a researcher-on-GPT review, making updates as necessary prior to journal submission.
+   3. Notably, the single master's-authored paper was not significantly different in perceived quality compared to Ph.D. authors (as perceived by the general public, Chi-Square p=0.163). The small sample size is a limitation of the paper worth further investigation.
+7. Overall, GPT-4 appears calibrated evenly with publication-quality research. In lesser-studied or cutting-edge areas of the field, however, a Plugin Forest with GPT-4 falls significantly short of traditionally-produced research.
+   - Our results indicate that GPT-4 with a Plugin Forest can execute many functions with high reliability to assist the researcher. Literature reviews are a particular case of utility because the content of a literature review emphasizes established works.
+   - GPT-4 seems generally calibrated above the undergraduate level, even after specifying a field of study. GPT-4 further seems calibrated on-par with doctoral-level writing quality for non-niche topics, admittedly with a slightly distinct style. Our limitted data suggests that human niche domination may hold even at the master's level.
+   - Notably, the style difference persists despite the fact that the Plugin Forest was specifically crafted to capture research writing styles. Deeper embedding of research writing style can be imprinted by fine-tuning a model or altering the training set to include more academic work and less informal writing. Another approach would be to use multishot prompting for deeper style reinforcement with a context-based approach. Increasingly generous context sizes for GPT-4 make this an approach worth further investigation.
+8. then 10% distinction rule holds for phd holders as well: About 31.11% of the time, Ph.D. holders perceived that Ph.D.-authored papers were written by someone with a Ph.D. level of education, while Around 20% of the time, Ph.D. holders perceived that GPT-authored papers were written by someone with a Ph.D. level of education.
+   - While the distinction is significant, for practical purposes this might simply mean that a particular journal paper would need to be shopped around a couple more times. We already know that a given paper has a large degree of journal acceptance variation, and that variation will attenuate the 10% distinction rule.
+9. Interestingly, Ph.D.-holding respondents rated GPT-authored economic papers slightly higher in quality on average than those authored by Ph.D. holders, with an average quality rating of 6.65 for GPT vs. 6.49 for Ph.D. authors, and GPT-authored papers also had a lower standard deviation (1.69 vs 1.8)
 
 <!-- note: see make_table_1.py -->
 
@@ -72,6 +83,17 @@ Table 1: Performance spread:
 | GPT Authors | Macro Health | 7.03 | Austrian Neoclassical | 6.23 | 0.80 |
 | Non-GPT Authors | Austrian Neoclassical | 7.13 | Macro Health | 6.03 | 1.10 |
 | PhD Authors | Austrian Neoclassical | 7.13 | LLM Best Practices | 6.27 | 0.87 |
+
+---
+
+future work:
+
+- larger sample
+- more master's-level investigation
+- look in sections other than literature review / background
+- consider more respondent factors such as demographic data
+- model with better training set (specifically more academic papers), fine tuning, larger context window
+  - "textbooks are all you need" already showed supplementing academic training data is a highly effective approach
 
 ---
 
