@@ -455,7 +455,7 @@ participant_id,participant_assessed_writer_edu_level,participant_assessed_gpt_li
 27,P,2,AGraduateDegree,No,10,4,8,macro_health,j,PhD
 27,U,9,AGraduateDegree,No,10,5,6,macro_health,p,PhD
 27,M,3,AGraduateDegree,No,10,6,8,remote_work,t,masters
-27,U,"9""",AGraduateDegree,No,10,7,5,remote_work,p,PhD
+27,U,9,AGraduateDegree,No,10,7,5,remote_work,p,PhD
 27,M,1,AGraduateDegree,No,10,8,9,remote_work,gpt,gpt
 27,M,1,AGraduateDegree,No,10,9,9,remote_work,edubirdie,unspecified_webservice
 27,U,3,AGraduateDegree,No,10,10,7,macro_health,edubirdie,unspecified_webservice
