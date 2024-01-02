@@ -2,11 +2,12 @@
 
 TODO: front matter, author, affiliation, abstract, keywords, topic codes...
 
-1. draft the paper
-2. polish, send to co-authors for review
-3. spend more money to get published
-4. Review `Initial notes` section of [google doc](https://docs.google.com/document/d/1nfoj-e53_16zHdD476N0d6GUvYJvg11skAGcyEESTbs)
+1. fix statsmodel table
+2. draft the paper
+3. Review `Initial notes` section of [google doc](https://docs.google.com/document/d/1nfoj-e53_16zHdD476N0d6GUvYJvg11skAGcyEESTbs) and revise
    - and find tweeted paper from patricia
+4. polish, send to co-authors for review
+5. get published!
 
 ---
 
@@ -116,7 +117,11 @@ TODO
 
 ## Results
 
-TODO
+1. Doc 8 case study
+2. generalized eda with descriptive stats and difference in means
+3. regression results (linear + Curvilinear Model)
+   - technically prefer Curvilinear Model but the model power difference is trivial
+   - see `regressions.py` but prefer `regressions_statsmodel.py`
 
 ## Conclusion
 
