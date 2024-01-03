@@ -1,18 +1,27 @@
+# draft prep notes
+
+This document also serves as a useful tool to prime ChatGPT context.
+
+## Remaining TODO
+
+1. is_own_author flag
 2. draft the paper
 3. Review `Initial notes` section of [google doc](https://docs.google.com/document/d/1nfoj-e53_16zHdD476N0d6GUvYJvg11skAGcyEESTbs) and revise
    - grep `places where GPT can help`
    - and find tweeted paper from patricia
 4. polish, send to co-authors for review
-5. get published!
+5. triple check 'no hallucination' claim
+6. tailor for journal(s)
 
----
+## Related Threads and Links
 
-EDA notes:
+1. https://chat.openai.com/c/28294005-8131-4ae6-a515-6b5fb5af5cf1
+2. https://chat.openai.com/c/97192013-702e-47f6-afd2-e430530d4cbd
 
-- related threads:
-  1. https://chat.openai.com/c/28294005-8131-4ae6-a515-6b5fb5af5cf1
-  2. https://chat.openai.com/c/97192013-702e-47f6-afd2-e430530d4cbd
-  3. paper draft thread:
+## EDA Notes
+
+### Document 8 Case Study
+
 - Doc 8 was written by GPT-4, but less than 27% of people rated that as likely, where "likely" is 6 or more out of 10 on "written by gpt-4" subquestion. n=1 that people can't tell when it's written by GPT
 - Doc 8 avg quality rating of 6.8, so "unlikely GPT" and "high quality" go together for this paper...anti-technology bias? need a multivariate regression to check across docs
   - IQR from 6 to 8, median of 7, and standard deviation of 1.7, so strong majority think it's high quality
@@ -29,6 +38,8 @@ so far we know:
 2. for doc 8, there may be an anti-tech bias demonstrated
 3. for doc 8, there is a phd overvaluation effect
 4. for doc 8, phd holders have a smaller std dev of quality estimated, but the quality estimate is still on par with population norm
+
+### Generalizing Document 8 Findings
 
 more EDA questions:
 
@@ -81,22 +92,7 @@ Table 1: Performance spread:
 | Non-GPT Authors | Austrian Neoclassical | 7.13 | Macro Health | 6.03 | 1.10 |
 | PhD Authors | Austrian Neoclassical | 7.13 | LLM Best Practices | 6.27 | 0.87 |
 
----
-
-future work:
-
-- larger sample
-- more master's-level investigation
-- look in sections other than literature review / background
-- consider more respondent factors such as demographic data
-- model with better training set (specifically more academic papers), fine tuning, larger context window
-  - "textbooks are all you need" already showed supplementing academic training data is a highly effective approach
-
----
-
-## Background and Introduction
-
-notes:
+## Background and Introduction Notes
 
 1.  there seem to be four interesting aspects to this study:
 
@@ -107,8 +103,6 @@ notes:
        <!-- TODO: verify that none of the citations were hallucinated. I think so, but if we are going to claim that directly, let's triple-check -->
 
     2. We are the first to calibrate GPT-4 on the particular task of economic research writing for publication. We know that models perform differently for different tasks due to training sample variation, differential human feedback in RLHF, and for other reasons. Unlike other papers which provide business-oriented research productivity estimates, our paper is of specific interest to other researchers in the academy. GPT-4 has previously shown broad competency across many skills, but competency tends to devolve with the required depth of expertise. By selecting a particular field of research at the publication level, we probe multimodel capabilities to an extent previously unexplored and with specific practical value to many researchers.
-
-    3. i forgot 3 and 4...but the two above are great already
 
 ## Results
 
@@ -127,3 +121,114 @@ notes:
      - `participant_assessed_writer_edu_level_P` is a significant boost and `participant_assessed_writer_edu_level_U` is a significant penalty, with larger and more reliable effects compared to topic effects, but still small compared to practically uncontrolled and independent variation on the part of a journal reviewer: participant and attention effects were much larger.
        - what's the relation between participant_assessed_writer_edu_level_U and is_written_by_gpt? answer: according to chi square test, and simple and multiple regression, people DONT think of material with `is_written_by_gpt` as undergraduate level.
        - GPT-4 is broadly calibrated at the master's level. A simple regression of `is_written_by_gpt` on `participant_assessed_writer_edu_level` has an r-square near zero, indicating general independence of participant educational assessment on their document quality assessment. Further, the master's degree is the only significant feature in this regression and also the only positive coefficient. having an expected undergraduate or lower education, as well as having an expected doctorate-level education, were both negatively and insignificantly related to material actually written by GPT-4 (p > 0.115).
+
+## Conclusions and Future Directions Notes
+
+- takeaways
+  - GPT-4 produces results of quality comparable to standard research with lower quality variance using the Plugin Forest technique.
+- improvements that could be done:
+  - larger sample
+  - more master's-level investigation
+  - look in sections other than literature review / background
+  - consider more respondent factors such as demographic data
+  - model with better training set (specifically more academic papers), fine tuning, larger context window
+  - "textbooks are all you need" already showed supplementing academic training data is a highly effective approach
+  - what if GPT took the questionnaire? what would it say? an orthogonal calibration mode; do it's responses look like master's responses?
+    - does prompting it to act in a different role generate meaningful similarity to the role target by level of education?
+    - how similar is a GPT-produced sample to a crowd-produced sample?
+    - what about getting 5 or 10 samples and asking GPT to "stretch" it to 50 or 100?
+    - what about getting 5 or 10 samples and asking GPT to stand in for underrepresented voices in the sample?
+    - does this sort of "Bean Chili Research Design" add value compared to just using the original 5 or 10 samples?
+- future directions: the tech is getting better
+  - token limit continues to grow; it's already larger for researchers using GPT-4 through the API instead of the ChatGPT interface.
+  - the plugin store continues to grow and Open AI has plans to make an extension marketplace that would be expected to perform better than the plugin store, because the plugin store itself currently lacks a reputation mechanism making efficient utilization more difficult.
+  - academic-quality material is increasingly accessible within generative ai models
+  - While GPT-4 has remain steadfastly the leader since release, and the rate of improvement in generative AI is often overstated, still there is reasonable expectation of continued progress. [Mamba](https://arxiv.org/pdf/2312.00752.pdf) and [Hyena Hierarchy](https://ermongroup.github.io/blog/hyena/)
+  - There's also the new Google model which is natively multimodal trained called [Gemini](https://arxiv.org/abs/2312.10868) from Google, so we see increasing competive attention from tech leaders in the multimodal generative space, which we can anticipate will lead to quality improvements over time.
+
+## March 18, Draft Study Design
+
+### Title
+
+GPT-4 Calibration as a Research Assistant in Economics
+
+### Abstract
+
+GPT-4 is a cutting-edge multimodal model that can be used as a writing assistant, but such models have a number of known problems. This study takes a turing-like practical comparative approach to identify the overall quality of summary literature reviews produced by GPT-4. Participants create summary literature reviews by hand, score their own, then blindly cross-score those written by other researchers and those created by GPT-4. I hypothesize that GPT-4 will perform meaningfully worse than a field-relevant doctoral participant, and therefore GPT-4 is an improper substitute to a by-hand literature review. Additional discussion focuses on the potential value and practice of AI-augmented writing in contrast to AI-driven writing.
+
+### Background
+
+Review known cases of training set bias like the “White Obama” image debacle. Review other known benefits and problems of large language models and multimodal models. Time constraint is a key constraint and failure to execute basic math is another glaring concern. There is evidence that specialty AI can do the job for medical research reviews. Field-specific testing is important because GPT can handle many general cases, but fidelity is lost in relatively niche areas. Through training set bias, mainstream and common views are expected to be well-represented while niche and minority views would be relatively expected to be ignored, misunderstood, or misrepresented. A key part of this paper is assessing GPT-4 for such minority view bias.
+
+On net, there doesn’t seem to be good existing evidence that AI can substitute or drive a literature review, but the hypothesis has yet to be directly tested in the field of economics. It may be the case that the magnitude of concerns is practically dominated by the benefits. In another sense, the use of AI is so low-cost that it should be expected, and researchers will benefit from knowing the expected quality of their activities. In this sense, whether AI should be used is a bit of a foolish question, because it will be used. The interesting question is on how economists and researchers can make the best use of AI and what the expected quality of output will be. That is the point of the current study.
+
+### Methodology
+
+Four research questions are communicated to four participants. All participants hold an economics degree. One is held at the bachelor’s level, one at the master’s level, and two at the doctoral level. Each participant is asked to draft a summary literature review related to the research question. Summary literature reviews are constrained to a single page in length, comparable to the background section of an ordinary scholarly paper, rather than a full-length review paper or survey. Participants were asked to complete their summary reviews within a month, or about one week for each summary review.
+
+The principal investigator additionally prompted GPT-4 using the ChatGPT web interface to produce three additional literature reviews for each research question, resulting in a total of twenty-eight summary literature reviews. The prompts used are conveyed in the appendix along with the dates of prompting and their associated ChatGPT subversions. GPT-4 was prompted after all other drafts were completed.
+
+At this stage, a random selection program was applied to select one review authored by GPT-4 for each research question. This paper was then edited by the principal investigator. This AI-driven editing workflow is interesting for analysis in the case where naive AI authorship is of a low quality. If naive AI authorship is not suitable for literature review, the possibility of AI augmentation remains open, and augmentation can take at least two forms. By assessing AI-driven authorship, a best practice can be identified.
+
+The investigator-driven approach does not need to be distinctly assessed because an investigator can and will simply select whichever revision they prefer after having done the literature review by hand. An investigator-driven literature review which is reviewed by AI and then reselected on by the researcher is simply a traditional literature review with more steps, a new search tool, and not a form of work which is expected to substantially reduce quality or save time compared to the traditional approach.
+
+Participants were informed prior that some papers would be generated by GPT-4, although they were blind to particular origins other than their own products, with the exception of the principal investigator.
+
+Finally, participants scored their own papers and blindly scored papers from other sources using two variables on a scale from one to ten. First, they scored perceived quality. Second, they scored perceived likelihood that the paper was generated by GPT-4. These two measures were kept distinct with the intention to mitigate implicit bias in quality from perceived origin.
+
+Results are produced by statistical comparisons of these variables. Analysis is robustly conducted to account for bias in the ratings of the principal investigator as well as bias in ratings of individuals on their own work.
+
+More Methodology Notes:
+
+- This study uses a partially blind questionnaire design
+- Authors know their own papers. We calculate an is_own_author flag to extract this effect from multiple regression analysis.
+- Further, the Principal investigator is aware of the authorship of each paper
+- The estimated completion time for the questionnaire response including reading time is 45 minutes (at 20 items)
+- Articles normalized in style to minimize the ability to select GPT on the basis of style and formatting alone. Articles were normalized on font, spacing, indentation, the labeling of references, if any, under a section titled “References,” were a variety of names were originally used including “Citations” and “Works Cited.”
+
+### Results
+
+Forthcoming
+
+### Conclusions
+
+Depending on results, naive use of GPT-4 is or isn’t substitutable for literature review by hand.
+
+Compare and contrast naive and augmented GPT-4 use. AI-driven is not substituting the AI for the literature review work, but instead merely substituted the AI for search. This approach should be a strict gain in quality, if not a loss in time, when used alongside traditional search. Quality comes into question when AI is allowed to drive to the neglect of other searching patterns. AI review does not substitute for anything, and we certainly don’t suggest this be seen as a replacement for proper peer review. Since it doesn’t substitute for anything, it also seems like a strict gain to quality, although perhaps at the expense of time and therefore a matter of researcher discretion rather than a best practice.
+
+Disclaim that other AI systems may vary in results compared to GPT-4. In particular, some specialty AI may perform substantially better.
+
+### Misc related notes
+
+How accurate is GPT-4? It is more accurate than GPT-3 and in one case study on cybersecurity analysis, GPT-3 had a false positive statement rate of 4/60 and “many false negatives.” Analysis by OpenAI, the creator of GPT-4 and predecessor GPT models, shows that performance varies by domain. Their analysis estimates the lower bound on GPT-3.5 percentile performance on the AP Macroeconomics exam at about the thirtieth percentile. In contrast, GPT-4 has a lower bound performance percentile estimated at about the eighty-third percentile. Similarly, in the domain of law, GPT-3.5 was in the bottom 10th percentile on the Unifiied Bar Exam and GPT-4 was in the top ten percent.
+Bryan Caplan: GPT Retakes My Midterm and Gets an A
+This is an undergraduate elective course in labor economics, Economics 321.
+Because GPT-4 is not contained in its own training set, it thinks it is GPT-3 and it thinks it is not an ideal code assistance model, but actually it is. GPT-4 outperforms GPT-3 on coding tasks, but GPT-4 doesn’t realize this, so it won’t recommend itself even though it is a more performant tool compared to the tools that it does recommend.
+
+## April 4, Initial Instructions for Participants
+
+Thank you for your interest in participating in the study “GPT-4 Calibration as a Research Assistant in Economics.” Participation involves two steps:
+
+1. Write 1-4 single-page summary literature reviews on the research questions provided below.
+2. Rate literature reviews on a scale from 1 to 10 for quality and likelihood that the paper was generated by GPT-4.
+
+### Four Important Participation Notes
+
+1. Please review the informed consent paragraph below. Submit a summary literature review if and only if you agree to the statement.
+2. Please submit your summary literature review on these topics to John Vandivier by email at john@ladderly.io by June 4, 2023. Use the subject line “Econ RA Lit Review.” The document title should indicate which topic is addressed.
+3. I encourage you to timebox your work on each document to 16 hours or less.
+4. Please do not discuss your work with other participants, but otherwise conduct the literature review however you see fit.
+
+Informed Consent Statement
+I understand that the summary literature review and ratings communicated by me to john@ladderly.io may be used in published academic work and for commercial purposes in an anonymized form. I have had the opportunity to ask questions. I confirm my participation is informed and voluntary. I understand that I can withdraw from the study at any time by providing notice to john@ladderly.io and I acknowledge that any data collected prior to withdrawal may be retained for the purposes of the study.
+
+Research Questions
+
+1. Is modern Austrian economics distinct from neoclassical economics?
+2. What key factors indicate the overall health of the macroeconomy? Include both general concepts and also specific public measures.
+3. What is the impact of remote work on the gender wage gap and career progression in the post-pandemic labor market?
+4. Suggest best practices for literature search with and without a large language model (LLM). Given the benefits and problems of such a process, do you expect the gains to researcher productivity from LLM augmentation to be large, small, or negative?
+
+### Next Steps
+
+Summary literature reviews will be sent for review on June 5, 2023, at latest. An earlier date may be announced if all literature reviews are collected before the cutoff date of June 4. Once summary literature reviews are sent, ratings are requested within two weeks.

@@ -25,6 +25,8 @@ Keywords:
 - Research Productivity
 - Prompt Engineering
 - Tree of Thoughts
+- In-Context Learning
+- Mixture of experts
 
 JEL Codes:
 
@@ -69,3 +71,5 @@ TODO
 ## Appendices
 
 - Questionnaire
+- Links to ChatGPT Source Threads
+- Links to OSF Summary Literature Review Documents
