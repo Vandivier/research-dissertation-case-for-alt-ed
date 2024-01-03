@@ -36,4 +36,5 @@ summary_table = summary_col([model_1, model_2, model_3], stars=True,
                             info_dict={'AIC': lambda x: f"{x.aic:.2f}"})
 
 summary_text = summary_table.as_text()
-print(summary_text)
+with open('../figures/table_2_regressions_raw.txt', 'w') as f:
+    f.write(summary_text)
