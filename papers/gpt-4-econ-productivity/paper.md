@@ -13,7 +13,9 @@ TODO: front matter, author, affiliation, abstract, keywords, topic codes...
 
 EDA notes:
 
-- related thread: https://chat.openai.com/c/28294005-8131-4ae6-a515-6b5fb5af5cf1
+- related threads:
+  1. https://chat.openai.com/c/28294005-8131-4ae6-a515-6b5fb5af5cf1
+  2. https://chat.openai.com/c/97192013-702e-47f6-afd2-e430530d4cbd
 - Doc 8 was written by GPT-4, but less than 27% of people rated that as likely, where "likely" is 6 or more out of 10 on "written by gpt-4" subquestion. n=1 that people can't tell when it's written by GPT
 - Doc 8 avg quality rating of 6.8, so "unlikely GPT" and "high quality" go together for this paper...anti-technology bias? need a multivariate regression to check across docs
   - IQR from 6 to 8, median of 7, and standard deviation of 1.7, so strong majority think it's high quality
@@ -123,7 +125,18 @@ TODO
    - technically prefer Curvilinear Model but the model power difference is trivial
    - see `regressions.py` but prefer `regressions_statsmodel.py`
    - in both models, `author_credentials_gpt` was insignificant (p > 0.5) and `author_gpt` was insignificant, but they could be partialling each other and we have data that interaction w topic matters. need a bit more regression analysis. also need to rm `doc_id`
+   - doc_id was less significant than gpt effects anyway
    - interestingly, `participant_assessed_gpt_likelihood` is positive! so no anti tech bias demonstrated
+   - a curvilinear model with squared attention and gpt likelihood had better (lower) AIC and adjusted r2 compared to the linear model. However the difference was small and this may be fragile for applied practical purposes, because we don't have high confidence in our guess about the reviewer's GPT likelihood assessment
+     - we do, however, have high confidence that on a boolean scale, the reviewer will pick "False" for GPT-4 attribution, so we construct a simpler and more robust applied model using a calculated boolean (participant_expects_gpt)
+     - interestingly, participant_expects_gpt has a positive coefficient, although the usual response will be False, indicating a penalty. neither variable is significant, however `participant_expects_gpt` and `is_written_by_gpt`
+     - for attention, linear and quadratic values are both highly significant.
+     - `participant_assessed_writer_edu_level_P` is a significant boost and `participant_assessed_writer_edu_level_U` is a significant penalty, with larger and more reliable effects compared to topic effects, but still small compared to practically uncontrolled and independent variation on the part of a journal reviewer: participant and attention effects were much larger.
+       - what's the relation between participant_assessed_writer_edu_level_U and is_written_by_gpt? answer: according to chi square test, and simple and multiple regression, people DONT think of material with `is_written_by_gpt` as undergraduate level.
+       - GPT-4 is broadly calibrated at the master's level. A simple regression of `is_written_by_gpt` on `participant_assessed_writer_edu_level` has an r-square near zero, indicating general independence of participant educational assessment on their document quality assessment. Further, the master's degree is the only significant feature in this regression and also the only positive coefficient. having an expected undergraduate or lower education, as well as having an expected doctorate-level education, were both negatively and insignificantly related to material actually written by GPT-4 (p > 0.115).
+
+<!-- tables: statsmodel to md or statsmodel to latex?
+https://stackoverflow.com/questions/30011618/statsmodels-summary-to-latex -->
 
 ## Conclusion
 
