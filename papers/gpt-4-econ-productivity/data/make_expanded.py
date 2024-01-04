@@ -8,6 +8,18 @@ def create_expanded_dataset(main_file_path, doc_data_file_path, output_file_path
     # Number of documents
     num_docs = 18
 
+    # Maps for new columns
+    author_to_participant_id_map = {
+        'b': '31',
+        't': '29',
+        'p': '28'
+    }
+
+    topic_to_march_gpt_model_map = {
+        'macro_health': True,
+        'remote_work': True
+    }
+
     # List to hold expanded data
     expanded_data = []
 
@@ -34,6 +46,12 @@ def create_expanded_dataset(main_file_path, doc_data_file_path, output_file_path
                 author = doc_data.iloc[0]['Author']
                 author_credentials = doc_data.iloc[0]['Author_Credentials']
 
+            # Calculate new boolean columns
+            is_participant_the_author = author_to_participant_id_map.get(author, '') == str(participant_id)
+            is_march_gpt_model = topic_to_march_gpt_model_map.get(topic, False)
+            is_written_by_gpt = author == 'gpt'
+            participant_expects_gpt = assessed_gpt_likelihood and assessed_gpt_likelihood >= 6
+
             # Add a row for each document
             expanded_data.append({
                 'participant_id': participant_id,
@@ -46,7 +64,11 @@ def create_expanded_dataset(main_file_path, doc_data_file_path, output_file_path
                 'quality_rating': quality_rating,
                 'topic': topic,
                 'author': author,
-                'author_credentials': author_credentials
+                'author_credentials': author_credentials,
+                'is_participant_the_author': is_participant_the_author,
+                'is_march_gpt_model': is_march_gpt_model,
+                'is_written_by_gpt': is_written_by_gpt,
+                'participant_expects_gpt': participant_expects_gpt
             })
 
     # Convert expanded data to DataFrame
