@@ -1,28 +1,30 @@
 |                                                     | Model 1 (Linear FE) | Model 2 (Curvilinear) | Model 3 (Expects GPT) |
 | --------------------------------------------------- | ------------------- | --------------------- | --------------------- |
-| Intercept                                           | 2.2169\*\*\*        | 1.1055\*\*\*          | 1.1127\*\*\*          |
-| author_credentials_masters\[T.True\]                | -0.2220             | -0.2324               | -0.2287               |
-| author_credentials_phd_student_webservice\[T.True\] | -0.1369             | -0.1606               | -0.1363               |
-| author_credentials_unspecified_webservice\[T.True\] | -0.4357\*\*\*       | -0.4251\*\*\*         | -0.4345\*\*\*         |
-| is_written_by_gpt\[T.True\]                         | -0.1446             | -0.1566               | -0.1403               |
-| participant_assessed_writer_edu_level\[T.P\]        | 1.1243\*\*\*        | 1.1550\*\*\*          | 1.1123\*\*\*          |
-| participant_assessed_writer_edu_level\[T.U\]        | -1.9008\*\*\*       | -1.8680\*\*\*         | -1.8958\*\*\*         |
-| participant_education\[T.APhD\]                     | 0.2545\*            | -0.0478               | 0.0048                |
-| participant_education\[T.AnUndergraduateDegree\]    | 0.3520\*\*\*        | 0.4015\*\*\*          | 0.4357\*\*\*          |
-| participant_education\[T.HighSchoolorLess\]         | 0.3220\*\*          | 0.5163\*\*\*          | 0.5387\*\*\*          |
-| participant_education\[T.SomeCollege\]              | -0.8528\*\*\*       | -0.5172\*             | -0.5489\*             |
-| participant_with_econ_degree\[T.Yes\]               | 0.5723\*\*\*        | 0.1141                | 0.1406                |
-| topic\[T.llm_best_practices\]                       | 0.0744              | 0.0861                | 0.0763                |
-| topic\[T.macro_health\]                             | -0.0267             | -0.0372               | -0.0347               |
-| topic\[T.remote_work\]                              | 0.2150              | 0.2235                | 0.2145                |
-| participant_assessed_gpt_likelihood                 | 0.0180              | 0.2358\*\*            |                       |
-| participant_attention                               | 0.5450\*\*\*        | 1.2978\*\*\*          | 1.3851\*\*\*          |
-| participant_assessed_gpt_likelihood_squared         |                     | -0.0219\*\*           |                       |
-| participant_attention_squared                       |                     | -0.0712\*\*\*         | -0.0756\*\*\*         |
-| participant_expects_gpt\[T.True\]                   |                     |                       | 0.0284                |
-| R-squared                                           | 0.5439              | 0.5484                | 0.5436                |
-| R-squared Adj.                                      | 0.5064              | 0.5102                | 0.5060                |
-| AIC                                                 | 1911.53             | 1908.24               | 1911.93               |
+| Intercept                                           | 2.1519\*\*\*        | 1.0537\*\*\*          | 1.0718\*\*\*          |
+| author_credentials_masters\[T.True\]                | -0.2235             | -0.2369               | -0.2311               |
+| author_credentials_phd_student_webservice\[T.True\] | -0.1152             | -0.1395               | -0.1144               |
+| author_credentials_unspecified_webservice\[T.True\] | -0.4137\*\*\*       | -0.3951\*\*\*         | -0.4124\*\*\*         |
+| is_march_gpt_model\[T.True\]                        | 0.0639              | 0.0633                | 0.0609                |
+| is_participant_the_author\[T.True\]                 | 1.2930\*\*          | 1.6037\*\*\*          | 1.2913\*\*            |
+| is_written_by_gpt\[T.True\]                         | -0.1021             | -0.1069               | -0.0980               |
+| participant_assessed_writer_edu_level\[T.P\]        | 1.1321\*\*\*        | 1.1723\*\*\*          | 1.1198\*\*\*          |
+| participant_assessed_writer_edu_level\[T.U\]        | -1.9055\*\*\*       | -1.8657\*\*\*         | -1.8994\*\*\*         |
+| participant_education\[T.APhD\]                     | 0.2172              | -0.1006               | -0.0273               |
+| participant_education\[T.AnUndergraduateDegree\]    | 0.3585\*\*\*        | 0.4007\*\*\*          | 0.4408\*\*\*          |
+| participant_education\[T.HighSchoolorLess\]         | 0.3192\*\*          | 0.5025\*\*\*          | 0.5315\*\*\*          |
+| participant_education\[T.SomeCollege\]              | -0.8556\*\*\*       | -0.5250\*             | -0.5592\*             |
+| participant_with_econ_degree\[T.Yes\]               | 0.5113\*\*\*        | 0.0402                | 0.0877                |
+| topic\[T.llm_best_practices\]                       | 0.0758              | 0.0908                | 0.0777                |
+| topic\[T.macro_health\]                             | -0.0887             | -0.1008               | -0.0944               |
+| topic\[T.remote_work\]                              | 0.1526              | 0.1641                | 0.1552                |
+| participant_assessed_gpt_likelihood                 | 0.0181              | 0.2902\*\*\*          |                       |
+| participant_attention                               | 0.5494\*\*\*        | 1.2658\*\*\*          | 1.3731\*\*\*          |
+| participant_assessed_gpt_likelihood_squared         |                     | -0.0273\*\*\*         |                       |
+| participant_attention_squared                       |                     | -0.0686\*\*\*         | -0.0741\*\*\*         |
+| participant_expects_gpt\[T.True\]                   |                     |                       | 0.0219                |
+| R-squared                                           | 0.5486              | 0.5553                | 0.5482                |
+| R-squared Adj.                                      | 0.5104              | 0.5167                | 0.5101                |
+| AIC                                                 | 1908.00             | 1901.96               | 1908.42               |
 
 ---
 

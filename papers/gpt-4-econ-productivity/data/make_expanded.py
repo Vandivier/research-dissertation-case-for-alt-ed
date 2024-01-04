@@ -50,7 +50,10 @@ def create_expanded_dataset(main_file_path, doc_data_file_path, output_file_path
             is_participant_the_author = author_to_participant_id_map.get(author, '') == str(participant_id)
             is_march_gpt_model = topic_to_march_gpt_model_map.get(topic, False)
             is_written_by_gpt = author == 'gpt'
+
+            # it's a scale of 1-10 but let's set 0 as 1
             participant_expects_gpt = assessed_gpt_likelihood and assessed_gpt_likelihood >= 6
+            participant_expects_gpt = False if assessed_gpt_likelihood == 0 else participant_expects_gpt
 
             # Add a row for each document
             expanded_data.append({
