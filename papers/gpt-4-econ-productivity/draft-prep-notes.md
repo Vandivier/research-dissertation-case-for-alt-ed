@@ -163,6 +163,11 @@ Here are four related videos from Andy:
   - While GPT-4 has remain steadfastly the leader since release, and the rate of improvement in generative AI is often overstated, still there is reasonable expectation of continued progress. [Mamba](https://arxiv.org/pdf/2312.00752.pdf) and [Hyena Hierarchy](https://ermongroup.github.io/blog/hyena/)
   - There's also the new Google model which is natively multimodal trained called [Gemini](https://arxiv.org/abs/2312.10868) from Google, so we see increasing competive attention from tech leaders in the multimodal generative space, which we can anticipate will lead to quality improvements over time.
   - there are plausible business reasons why a company might ship a reduced-performance model, but still we see a trend to improvement in the longer run. For example, GPT-4-Turbo, shipped in November 2023 had better performance than any prior model, showing a rate of improvement that we are able to estimate using ChatBot Arena data (~4% per 9 months very roughly)
+- ChatGPT Plugin Count over time
+  1.  Released with 13 plugins on March 23, 2023 [https://openai.com/blog/chatgpt-plugins]
+  2.  Had 83 plugins as of May 18, 2023 [​​https://wgmimedia.com/all-chatgpt-plugins/]
+  3.  401 plugins in July [own measure]
+  4.  1039 plugins on Jan 3 [own measure]
 
 ## March 18, Draft Study Design
 
