@@ -5,13 +5,21 @@ This document also serves as a useful tool to prime ChatGPT context.
 ## Remaining TODO
 
 1. is_own_author flag
-2. draft the paper
-3. Review `Initial notes` section of [google doc](https://docs.google.com/document/d/1nfoj-e53_16zHdD476N0d6GUvYJvg11skAGcyEESTbs) and revise
-   - grep `places where GPT can help`
+2. Analyze May vs June model (there was some discussion about weakining model performance)
+   1. In my data, this is a bool for `did use pristine GPT-4-0314` which may partially explain the poor performance of the austrian paper, besides the topic effect
+   2. May GPT-4 uses GPT-4-0314 then there is a June release that was used by the July chatGPT threads. there were rumors of a performance decline around this time, and those seem bolstered by the [ChatBot Arena Leaderboard](https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard)
+   3. there are plausible business reasons why a company might ship a reduced-performance model, but still we see a trend to improvement in the longer run. For example, GPT-4-Turbo, shipped in November 2023 had better performance than any prior model, showing a rate of improvement that we are able to estimate using ChatBot Arena data (~4% per 9 months very roughly)
+   4. related document on performance decrease - there's a paper not just rumors! https://www.zdnet.com/article/gpt-4-is-getting-significantly-dumber-over-time-according-to-a-study/
+3. draft the paper
+   1. revise methodology to refer to questions and threads in the appendices
+   2. we should call out questionnaire design
+4. Review `Initial notes` section of [google doc](https://docs.google.com/document/d/1nfoj-e53_16zHdD476N0d6GUvYJvg11skAGcyEESTbs) and revise
+   - four sections remain to incorporate from the Google Doc
+   - grep `places where GPT can help` in `GPT Study Participant notification` email
    - and find tweeted paper from patricia
-4. polish, send to co-authors for review
-5. triple check 'no hallucination' claim
-6. tailor for journal(s)
+5. polish, send to co-authors for review
+6. triple check 'no hallucination' claim
+7. tailor for journal(s) (try one or few shot prompting to GPT for style transfer)
 
 ## Related Threads and Links
 
@@ -104,6 +112,17 @@ Table 1: Performance spread:
 
     2. We are the first to calibrate GPT-4 on the particular task of economic research writing for publication. We know that models perform differently for different tasks due to training sample variation, differential human feedback in RLHF, and for other reasons. Unlike other papers which provide business-oriented research productivity estimates, our paper is of specific interest to other researchers in the academy. GPT-4 has previously shown broad competency across many skills, but competency tends to devolve with the required depth of expertise. By selecting a particular field of research at the publication level, we probe multimodel capabilities to an extent previously unexplored and with specific practical value to many researchers.
 
+Also in background section: we want to mention Andy Stapleton
+
+Andy Stapleton, an expert in AI use for academic research, judged that AI tools could not substitute for a traditional literature review as of July 2023: https://www.youtube.com/watch?v=zzFuDPn4lDg
+
+Here are four related videos from Andy:
+
+1. https://www.youtube.com/watch?v=zzFuDPn4lDg
+2. https://www.youtube.com/watch?v=YLa9NWv1wzs
+3. https://www.youtube.com/watch?v=fYZaMXA8Ss0
+4. https://www.youtube.com/watch?v=pO96e22aprc
+
 ## Results
 
 1. Doc 8 case study
@@ -140,7 +159,9 @@ Table 1: Performance spread:
     - what about getting 5 or 10 samples and asking GPT to stand in for underrepresented voices in the sample?
     - does this sort of "Bean Chili Research Design" add value compared to just using the original 5 or 10 samples?
 - future directions: the tech is getting better
-  - token limit continues to grow; it's already larger for researchers using GPT-4 through the API instead of the ChatGPT interface.
+  - token limit continues to grow; it's already larger for researchers using GPT-4 through the API instead of the ChatGPT interface. this is important for at least two reasons:
+    1. researcher productivity is enhanced when entire papers can be read or drafted at once, on the basis of reading multiple papers, textbooks, data reports, and so on.
+    2. having a larger context window allows for multishot prompting with more template samples, allowing GPT-4 to produce a product that better reflects a desired target state for the paper.
   - the plugin store continues to grow and Open AI has plans to make an extension marketplace that would be expected to perform better than the plugin store, because the plugin store itself currently lacks a reputation mechanism making efficient utilization more difficult.
   - academic-quality material is increasingly accessible within generative ai models
   - While GPT-4 has remain steadfastly the leader since release, and the rate of improvement in generative AI is often overstated, still there is reasonable expectation of continued progress. [Mamba](https://arxiv.org/pdf/2312.00752.pdf) and [Hyena Hierarchy](https://ermongroup.github.io/blog/hyena/)
@@ -185,6 +206,7 @@ More Methodology Notes:
 - Further, the Principal investigator is aware of the authorship of each paper
 - The estimated completion time for the questionnaire response including reading time is 45 minutes (at 20 items)
 - Articles normalized in style to minimize the ability to select GPT on the basis of style and formatting alone. Articles were normalized on font, spacing, indentation, the labeling of references, if any, under a section titled “References,” were a variety of names were originally used including “Citations” and “Works Cited.”
+- Prolific.com, a crowdsourcing platform, was used for participant recruitment. Participants were US citizens aged 18 and over, were paid an incentive which averaged at about $15, and were oversampled for graduate degree holders.
 
 ### Results
 
