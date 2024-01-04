@@ -4,22 +4,18 @@ This document also serves as a useful tool to prime ChatGPT context.
 
 ## Remaining TODO
 
-1. is_own_author flag
-2. Analyze May vs June model (there was some discussion about weakining model performance)
-   1. In my data, this is a bool for `did use pristine GPT-4-0314` which may partially explain the poor performance of the austrian paper, besides the topic effect
-   2. May GPT-4 uses GPT-4-0314 then there is a June release that was used by the July chatGPT threads. there were rumors of a performance decline around this time, and those seem bolstered by the [ChatBot Arena Leaderboard](https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard)
-   3. there are plausible business reasons why a company might ship a reduced-performance model, but still we see a trend to improvement in the longer run. For example, GPT-4-Turbo, shipped in November 2023 had better performance than any prior model, showing a rate of improvement that we are able to estimate using ChatBot Arena data (~4% per 9 months very roughly)
-   4. related document on performance decrease - there's a paper not just rumors! https://www.zdnet.com/article/gpt-4-is-getting-significantly-dumber-over-time-according-to-a-study/
-3. draft the paper
+1. draft the paper
    1. revise methodology to refer to questions and threads in the appendices
    2. we should call out questionnaire design
-4. Review `Initial notes` section of [google doc](https://docs.google.com/document/d/1nfoj-e53_16zHdD476N0d6GUvYJvg11skAGcyEESTbs) and revise
+2. Review `Initial notes` section of [google doc](https://docs.google.com/document/d/1nfoj-e53_16zHdD476N0d6GUvYJvg11skAGcyEESTbs) and revise
    - four sections remain to incorporate from the Google Doc
    - grep `places where GPT can help` in `GPT Study Participant notification` email
    - and find tweeted paper from patricia
-5. polish, send to co-authors for review
-6. triple check 'no hallucination' claim
-7. tailor for journal(s) (try one or few shot prompting to GPT for style transfer)
+3. polish, send to co-authors for review
+4. triple check 'no hallucination' claim
+5. tailor for journal(s) (try one or few shot prompting to GPT for style transfer)
+   1. Target JEL (ref [paper](https://www.aeaweb.org/articles?id=10.1257/jel.20231736))
+   2. Author Korinek: https://www.korinek.com/
 
 ## Related Threads and Links
 
@@ -166,6 +162,7 @@ Here are four related videos from Andy:
   - academic-quality material is increasingly accessible within generative ai models
   - While GPT-4 has remain steadfastly the leader since release, and the rate of improvement in generative AI is often overstated, still there is reasonable expectation of continued progress. [Mamba](https://arxiv.org/pdf/2312.00752.pdf) and [Hyena Hierarchy](https://ermongroup.github.io/blog/hyena/)
   - There's also the new Google model which is natively multimodal trained called [Gemini](https://arxiv.org/abs/2312.10868) from Google, so we see increasing competive attention from tech leaders in the multimodal generative space, which we can anticipate will lead to quality improvements over time.
+  - there are plausible business reasons why a company might ship a reduced-performance model, but still we see a trend to improvement in the longer run. For example, GPT-4-Turbo, shipped in November 2023 had better performance than any prior model, showing a rate of improvement that we are able to estimate using ChatBot Arena data (~4% per 9 months very roughly)
 
 ## March 18, Draft Study Design
 

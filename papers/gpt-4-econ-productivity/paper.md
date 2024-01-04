@@ -45,6 +45,8 @@ JEL Codes:
 - lots of discussion about ChatGPT which disregards GPT-4, the most powerful form of ChatGPT
 - people say that chatgpt hallucinates and in many cases it has been directly contraindicated for academic work (eg, Buchanan and Shapoval https://economistwritingeveryday.com/2023/06/04/new-paper-with-evidence-that-chatgpt-hallucinates-nonexistent-citations/)
 - we know prompt strategy drives productivity, but research on GPT-4 that does exist fails to incorporate best-practice prompt techniques and leverage GPT-4 capabilities like plugins. Plugins importantly provide access to academic papers, and we know from research like "textbooks are all you need" that access to academic material is a very important driver of producing high-quality academic-level results.
+- GPT-4 performance has notably varied over time. [Chen et al](https://arxiv.org/abs/2307.09009) notes significant performance decreases for some tasks, and this observation has been independently replicated by the [ChatBot Arena Leaderboard Project](https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard). Importantly, this model shift took place during the observation period for the present study, and as a result we report a coefficient for performance shift relevant to our particular task in economic research.
+  - Our observation period was May-July and the ChatGPT UI at that time used the March GPT-4 API, then switched to the June GPT-4 api during the observation period.
 
 ## Methodology
 
@@ -130,7 +132,7 @@ The methodology of this research was meticulously designed to ensure a thorough 
 
 ## Conclusion
 
-TODO
+TODO: the draft-prep-notes still has two conclusion sections
 
 ## Appendices
 
