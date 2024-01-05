@@ -134,8 +134,82 @@ The methodology of this research was meticulously designed to ensure a thorough 
 
 TODO: the draft-prep-notes still has two conclusion sections
 
-## Appendices
+## Appendix A: Questionnaire
 
-- Questionnaire
-- Links to ChatGPT Source Threads
-- Links to OSF Summary Literature Review Documents
+### Title:
+
+GPT-4 Survey
+
+### Initial Message to Participants:
+
+The purpose of this survey is to determine the academic writing ability of GPT-4 compared to humans. This survey will present 18 articles, each about a page in length, written by a mix of humans at a variety of educational levels and GPT-4. Please read each article and rate the quality. This survey is expected to take 30-90 minutes, varying mainly by reading speed.
+
+### Question 1
+
+On a scale of 1-10, with one being the least attention and 10 being the most attention, please indicate how much attention you applied while completing this study
+
+### Question 2
+
+Enter your email or Participant ID to receive a participation reward.
+
+### Question 3
+
+What is your highest level of education?
+
+Responses:
+
+1. High School or Less
+2. Some College
+3. An Undergraduate Degree
+4. A Graduate Degree
+5. A Ph.D.
+
+### Question 4
+
+Do you have a postsecondary degree in Economics? (Y/N)
+
+### Question 5-23
+
+This question is repeated for a DOCUMENT_ID ranging from 1 to 18
+
+For Document ID [DOCUMENT_ID], please answer the following three questions using a comma-separated format.
+
+1. What education level does the writer appear to have? Use ""u"" for undergraduate or lower, ""m"" for the master's level, or ""p"" for Ph.D. or higher.
+2. Rate the article quality on a scale from 1-10.
+3. Rate the likelihood that the article is written by GPT-4 on a scale from 1-10.
+
+An example answer would be ""u,1,1""
+
+## Appendix B: Documents and ChatGPT Source Threads
+
+1. [Review of Macroeconomic Indicators](https://osf.io/f5tbz?view_only=ca664b55eae243339f13c59cc5dea3ec)
+   1. [Plugin Forest Identification](https://chat.openai.com/share/85bbd3a0-b7ec-4751-be37-63ccb050a88c)
+   2. [Journalist Persona](https://chat.openai.com/share/799526c8-5099-4b5a-96c2-0a9d252fab92)
+   3. [Professor Persona](https://chat.openai.com/share/1c5ce089-15e6-4378-9e44-a2c4f9d4cbf5)
+   4. [Data Scientist Persona](https://chat.openai.com/share/f1de01cb-2885-4619-bf2d-5a8286b8d80b)
+   5. [Ph.D. Student in Economics Persona](https://chat.openai.com/share/24b89476-a314-4656-b7c8-f3d734bc3df0)
+   6. [Synthesis Draft](https://chat.openai.com/share/f7c6aa68-0b23-4098-beec-49a3ee8a6633)
+2. [Review of Gender Effects in the Post-Pandemic Labor Market](https://osf.io/9xeju?view_only=ca664b55eae243339f13c59cc5dea3ec)
+   1. [Plugin Forest Identification](https://chat.openai.com/share/bfec6a29-b0bd-4288-ae08-a84143104ebb)
+   2. [Policy Analyst Persona](https://chat.openai.com/share/4714fbd6-d87f-4708-97a3-41b1614dc96c)
+   3. [Professor Persona](https://chat.openai.com/share/9dd05687-7eb9-4d45-9c40-5f457c9b20fe)
+   4. [Author Persona](https://chat.openai.com/share/60e546aa-7749-4567-8fa0-bc1c0c9d0cbb)
+   5. [Synthesis Draft](https://chat.openai.com/share/90a2bf74-bf30-4f41-8137-719d47a019ec)
+3. [Review of LLM Best Practices](https://osf.io/37a9g?view_only=ca664b55eae243339f13c59cc5dea3ec)\*
+   1. [Plugin Forest Identification](https://chat.openai.com/share/82c30d4b-43ac-4979-9baf-36765b3add59)
+   2. [Journalist Persona](https://chat.openai.com/share/aa50dc44-413b-42b7-b213-8fc54f64a02a)
+   3. [Professor Persona](https://chat.openai.com/share/4542f4a7-584a-4064-8550-2e00a89f4abb)
+   4. [Data Scientist Persona](https://chat.openai.com/share/4cdb8a6c-cefa-420e-a2ed-8313e8b819ae)
+   5. [Policy Analyst Persona](https://chat.openai.com/share/6ba03cb0-26c0-4009-bffb-b77bad736999)
+   6. [Synthesis Draft](https://chat.openai.com/share/60bffb60-d0e0-4537-8b23-6e4de29418ce)\*
+4. [Comparative Review of the Austrian and Neoclassical Schools](https://osf.io/mkn5f?view_only=ca664b55eae243339f13c59cc5dea3ec)\*
+   1. [Plugin Forest Identification](https://chat.openai.com/share/f734a988-c662-4a52-aadd-7492bac1fbbe)\*
+   2. [Policy Analyst Persona](https://chat.openai.com/share/df3f074f-1dec-4763-9848-c28d2cdc6faf)\*
+   3. [Professor Persona](https://chat.openai.com/share/9ccd7128-2d89-4f9a-bde7-21333d964144)\*
+   4. [Education Researcher Persona, Part 1: As Assigned](https://chat.openai.com/share/100a10d6-19c7-4999-b135-abe1dc1a7eee)\*
+   5. [Education Researcher Persona, Part 2: With WebPilot](https://chat.openai.com/share/100a10d6-19c7-4999-b135-abe1dc1a7eee)\*
+   6. [Education Researcher Persona, Part 3: Browser Exploration](https://chat.openai.com/share/c685cdf0-61ea-43e4-8091-ec0c94a9a1ee)\*
+   7. [Education Researcher Persona, Part 4: With BrowerOp Plugin](https://chat.openai.com/share/097687df-8c2a-49a1-afa3-4467d3d4d29d)\*
+   8. [Synthesis Draft](https://chat.openai.com/share/9d18ab22-4001-400b-875d-2f8c5bef53fc)\*
+
+\*Generated using GPT-4 with the July 20th, 2023 version of ChatGPT. All others use the version from May 24th, 2023.
