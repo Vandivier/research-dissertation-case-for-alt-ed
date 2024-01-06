@@ -139,7 +139,88 @@ The methodology of this research was meticulously designed to ensure a thorough 
 
 ## Conclusion
 
-TODO: the draft-prep-notes still has two conclusion sections
+The findings of this study strongly confirm the utility of GPT-4 and the Plugin Forest for use in general research and publication-level work in the field of economics. The demonstrated ability of GPT-4 to generate literature reviews of quality comparable to that of doctorate-level researchers, while demonstrating reduced variation in quality and zero hallucinated citations removes the controversy around such tools and pushes the academy to better understand the value of these tools and the concrete techniques by which they are optimally utilized. This study not only sheds light on the efficacy of GPT-4 but also pioneers the systematic and reproducible use of its plugins, setting clear best practices for the state of usage today, and also marking clear opportunities for future research.
+
+### Key Takeaways
+
+1. **Equivalency in Quality**: GPT-4's output, calibrated with the Plugin Forest technique, matches the quality of doctorate-level research in economics, providing a reliable approach for literature review composition.
+
+2. **Consistency and Reliability**: The consistency of GPT-4’s performance, exhibiting less variance compared to human-authored documents, underscores its reliability as a research tool.
+
+3. **Style Distinction**: Graders, including those with graduate education, could not consistently distinguish between GPT-4 and human-authored documents, indicating the model's advanced capability. However, the distinct style of GPT-4’s outputs, while maintaining quality, suggests room for stylistic refinement to better align with traditional academic writing.
+
+4. **Topic Sensitivity and Limitations**: The study acknowledges GPT-4's lower performance in lesser-studied topics, indicating a need for further development in handling niche academic subjects.
+
+### Related Trends
+
+This paper discussed quality and performance for research tasks using GPT-4 and the Plugin Forest. Two related trends of note include tehnical multimodal improvements and growth in the GPT-4 plugin store.
+
+#### Technical Improvements in Multimodal Generative AI
+
+Analysis of GPT-4 over a generic reference to ChatGPT moves the academy forward along the axis of model architecture from the analysis of large language models to an analysis of multimodal models. In April of 2023, Sam Altman, the CEO of Open AI, commented that "we're at the end of the era where it’s gonna be these giant models, and we'll make them better in other ways," in an interview with [TechCrunch](https://techcrunch.com/2023/04/14/sam-altman-size-of-llms-wont-matter-as-much-moving-forward/).
+
+Less than a week later, an impressive an open-source multimodal model was released called [Llava](https://arxiv.org/abs/2304.08485). Later in 2023, Google unveiled [Gemini](https://arxiv.org/abs/2312.11805), a competitor in the native-multimodal space. See [Yin et al](https://arxiv.org/abs/2306.13549) for a survey of multimodal developments.
+
+GPT-3 was released in [2020](https://arxiv.org/abs/2005.14165) and GPT-3.5 was released in [2022](https://techcrunch.com/2022/12/01/while-anticipation-builds-for-gpt-4-openai-quietly-releases-gpt-3-5/). The halving between the time to release GPT-3, GPT-3.5, and GPT-4 might seem like cause for concern on the velocity of generative artificial intelligence accelaration, but fundamentally GPT-3.5 follows the same language model architecture of GPT-3.
+
+[Mamba](https://arxiv.org/pdf/2312.00752.pdf) and [Heyena Hierarchy](https://arxiv.org/abs/2302.10866) are two examples of fundamentally different model architectures, although the practical improvement from these architectures is yet to be seen.
+
+In general, a trend toward multimodal models with improved technical capabilities is clear, but practical improvements in year-over-year productivity remain nonuniformly increasing and modest. A clear empirical comparison is found between GPT-3.5 and GPT-4. Zheng et al provide a useful and robust approach to comparative quality analysis with a crowdsourced [Chatbot Arena](https://arxiv.org/abs/2306.05685). Table 3 below reproduces the top 3 leaderboard entries from the arena as observed on January 5, 2024, along with the release date for each model.
+
+Table 3
+| Model | Arena Elo rating | MT-bench (score) | Release Date
+|----------------|------------------|------------------|------|
+| GPT-4-Turbo | 1243 | 9.32 | 11/6/2023 |
+| GPT-4-0314 | 1192 | 8.96 | 3/14/2023|
+| GPT-4-0613 | 1158 | 9.18 | 6/13/2023|
+
+The arena data show the dominance of GPT-4 over more than fifty models compared. Using the ratings provided by users, we see an improvement in the Arena Elo Rating for the top-performing model of about 4.02 percent over the course of about eight months. If we use the MT benchmark scores, we observe a slightly higher 4.28 percent increase over the same period, or an approximate improvement of 6.42 percent annualized. This seems decidedly modest compared to much of the popular rhetoric or academic writing on [runaway technology](Fairfield, Joshua AT. Runaway technology: can law keep up?. Cambridge University Press, 2021.) or the dangers of [fast takeoff AI](https://www.lesswrong.com/posts/shnSyzv4Jq3bhMNw5/alphago-zero-and-the-foom-debate).
+
+#### GPT-4 Plugin Growth Over Time
+
+ChatGPT Plugins were opened to the public on [March 23, 2023](https://openai.com/blog/chatgpt-plugins). There was an initial catalogue of 13 plugins. There were 83 plugins available in [May](​​https://wgmimedia.com/all-chatgpt-plugins/), and at the time of writing on January 3, 2024, there are now 1039 plugins listed in the directory. Figure 3 illustrates the growth of these plugins over time.
+
+![ChatGPT Plugins Over Time](https://raw.githubusercontent.com/Vandivier/research-dissertation-case-for-alt-ed/5bb1aa06c4994ffa93234bf924128e44d5271e94/papers/gpt-4-econ-productivity/figures/figure_3.png "ChatGPT Plugins Over Time")
+
+Over this ten-month span, we see an approximate eighty-fold increase in the count of available plugins, or about one hundred new plugins each month. We expect this upward trend to correlate with improved access to academic literature for GPT-4, although the the magnitude of research quality and productivity improvements that may result are an open question.
+
+### Future Research
+
+The study suggests several avenues for future research.
+
+#### 1. Larger Sample Size
+
+A larger sample size with better representation of more varied graduate degree holders and more varied topics under assessment, would provide a more comprehensive understanding of GPT-4's capabilities across different educational backgrounds.
+
+#### 2. Beyond Literature Reviews
+
+Exploring GPT-4’s utility in other sections of academic papers, such as methodology and data analysis, would further expand its applicability.
+
+#### 3. Technical Model and Prompt Improvements
+
+GPT-4 Turbo is a new model of GPT-4 with a higher token limit and improved benchmark results. Token limit expansion will generally facilitate multishot prompting, which is known to independently improve results. Periodic reporting on state-of-the-art model performance will significantly improve on the rough estimation of productivity increases over time that were presented in the conclusion of this paper.
+
+Prompt engineering represents an opportunity for further independent technical improvement. This paper took an AI-driven approach to role selection in the mixture of experts for the Plugin Forest, but perhaps specific roles can be identified that perform better on average compared to AI-selected roles.
+
+#### 4. Journal-Targeted Models
+
+[Textbooks Are All You Need](https://arxiv.org/abs/2306.11644) showed the power of manipulating the training data on a model, and this seems a likely route to solve for the weak academic style adoption demonstrated in this paper. Compared to training on textbooks, publication chances might be further improved by directly training on material for a given journal. Predicting publication odds and constructing research techniques that optimize directly on that outcome would add significantly to the explanatory approach on quality taken in this paper.
+
+#### 5. Tool Selection, Reputation, Price Signals, and the GPT-4 Store
+
+This paper used an AI-driven plugin selection approach. This approach was selected in part due to the absence of alternatives. Identification of product quality is often made on the basis of rating aggregation, price, and other market signals. To date, there is no central repository of plugin ratings which would make this approach feasible.
+
+In 2024, Open AI has announced the release of a GPT-4 Store. This store would operate as a marketplace for some kinds of tools, potentially including plugins. A useful contribution to the literature would be to identify generative artificial intelligence plugins and tools that lead the market based on these or other economic signals.
+
+#### 6. Ethical Considerations
+
+Addressing open ethical considerations remains an important concern for generative AI.
+
+#### 7. AI-Driven Research
+
+This study compared the quality of human-authored summary literature reviews to those produced by GPT-4 with a Plugin Forest. The drafts produced by GPT-4 are high in quality. This is more important than a mere tool addition to the toolset of the researcher. We should take a step back and begin to consider more strongly the broader concept of AI-driven research.
+
+This study directly justifies a systematic literature review implemented by artificial intelligence, but such a process is still fundamentally supervised and therefore constrained. A truly AI-driven approach would begin by asking a multimodal model, or other advanced model, about which research topics are most valuable in the first place.
 
 ## Appendix A: Questionnaire
 
