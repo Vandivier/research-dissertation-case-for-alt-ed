@@ -55,83 +55,58 @@ We find that GPT-4 with a Plugin Forest produces literature review summaries of 
 
 We describe nuances with these results, such as weaker performance for lesser-published topics, we describe novel use cases for GPT-4 that add to known large language model use cases for research, and we make use of GPT-4 plugins with systematic and reprodicible plugin selection, a topic for which there is currently no published empirical work. We conclude with a discussion on expected future productivity trends and open research areas, providing an evidence-based case that productivity over time in the space of generative artificial intelligence is expected to grow at a modest pace.
 
-- TODO: novel tasks include reading and generating images like diagrams, executing, interpreting, and generating code, and translating documents between technical formats like latex, html, and markdown, and knowledge retrieval
-  - GPT-4 provides unique productivity opportunities for researchers due to its ability to generate, improve, and execute code for data analysis and both read and create figures and tables. These tasks are not possible for pure large language models.
-- TODO: more discussion on what a plugin forest is and why it's awesome
-  - more than half a dozen best practices built in, such as tree of thoughts, roles, mixture of experts, and chain of thought prompting, plus making systematic and reprodcible use of gpt-4 plugins
-- we know prompt strategy drives productivity, but research on GPT-4 that does exist fails to incorporate best-practice prompt techniques and leverage GPT-4 capabilities like plugins. Plugins importantly provide access to academic papers, and we know from research like "textbooks are all you need" that access to academic material is a very important driver of producing high-quality academic-level results.
-- GPT-4 performance has notably varied over time. [Chen et al](https://arxiv.org/abs/2307.09009) notes significant performance decreases for some tasks, and this observation has been independently replicated by the [ChatBot Arena Leaderboard Project](https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard). Importantly, this model shift took place during the observation period for the present study, and as a result we report a coefficient for performance shift relevant to our particular task in economic research.
-  - Our observation period was May-July and the ChatGPT UI at that time used the March GPT-4 API, then switched to the June GPT-4 api during the observation period.
+### Beyond Large Language Model Tasks
+
+Accessing GPT-4 through ChatGPT includes [native machine vision support](https://www.datacamp.com/tutorial/gpt-4-vision-comprehensive-guide), enabling tasks like optical character recognition, diagram reading, and image generation. GPT-4 includes a code compiler which allows native execution of code, massively improving mathematical correctness over ordinary large language models.
+
+ChatGPT enables a user to upload data files for in-browser analysis. Combined with the code compiler, a data analyst or researcher can often complete an exploratory data analysis entirely in the browser.
+
+GPT-4 includes ChatGPT plugin access, which enables ChatGPT to overcome the training knowledge cutoff. Various plugins enable general internet access, with some limitations, and there are also plugins connecting ChatGPT to a substantial and growing body of academic literature. Some data sets of interest are also communicated to ChatGPT through a plugin. The World Bank, for example, has a ChatGPT plugin.
+
+In addition to many new technical capabilities, [GPT-4 performs notably better](https://openai.com/research/gpt-4) on many tasks that large language models are already capable of executing, such as code generation.
 
 ## Methodology
 
-### Overview
+This study involves comparative authoring of one-page summary literature reviews across four topics by human authors with varied educational attainment and also GPT-4 using a Plugin Forest prompt strategy. Some documents were also obtained through online services that offer undergraduate paper writing as a service.
 
-This study adopts a comparative approach to evaluate the efficacy of GPT-4 as a tool for conducting economic literature reviews, juxtaposed against human researchers with varying academic credentials in economics. The methodology encompasses participant engagement, GPT-4 interaction, review process, and statistical analysis.
+Once these eighteen summary literature reviews were obtained, a sample of adults from the United States were questioned about their quality. Participants were also asked about the assessed education level of the document author and the likelihood of GPT-4 authorship. Participants were also asked about their own education and whether they have a degree in the field of economics. Appendix A provides further questionnaire details. The documents were normalized on font style and citation format prior to presentation.
 
-### Participant Recruitment and Task Distribution
+Thirty participants were recruited across two channels. Participants were provided an incentive of fifteen dollars each on average. Twenty-seven were recruited using the [Prolific recruitment platform](https://www.prolific.com/) and three others were recruited by word-of-mouth. The participant pool is not balanced to the census and substantially overweights graduate degree holders, as the objective of the study is mainly to calibrate GPT-4 against graduate degree holders and researchers and not to draw a comparison with the typical American adult.
 
-#### Selection Criteria
+TODO: FOOTNOTE FOR THE OPEN DATA AND ANALYTICAL CODE ON GITHUB.
 
-- Participants were selected based on their academic background in economics, comprising one bachelor's degree holder, one master's degree holder, and two doctoral degree holders.
+GPT-4 authored a paper in each of four given topics, while other authors contributed any number of summary literature reviews up to four. The list of topics include:
 
-#### Task Description
+1. Is modern Austrian economics distinct from neoclassical economics?
+2. What key factors indicate the overall health of the macroeconomy? Include both general concepts and also specific public measures.
+3. What is the impact of remote work on the gender wage gap and career progression in the post-pandemic labor market?
+4. Suggest best practices for literature search with and without a large language model (LLM). Given the benefits and problems of such a process, do you expect the gains to researcher productivity from LLM augmentation to be large, small, or negative?
 
-- Each participant was assigned the task of drafting a single-page summary literature review. The scope and format of these reviews were intended to parallel the background section of a standard scholarly article.
+These topics were respectively selected to test a lesser-published topic in economics, a highly-published topic, a recent topic, and a topic in the technical domain of ChatGPT.
 
-### Integration of GPT-4
+### The Plugin Forest
 
-#### ChatGPT Interface Use
+GPT-4 authored summary literature reviews under the supervision of the principal investigator following a novel prompt engineering strategy called the Plugin Forest. The Plugin Forest is designed specifically as a best practice for use with ChatGPT plugins and it incorporates more than half a dozen evidence-based techniques for improving generative artificial intelligence task performance.
 
-- The principal investigator engaged with GPT-4 using the ChatGPT web interface to generate additional literature reviews corresponding to the research questions assigned to human participants.
+The name most directly refers to a [tree of thoughts](https://arxiv.org/abs/2305.10601) that leverages plugins. Over multiple rounds of prompting and across multiple distinct threads, the tree of thoughts is created and resolved by GPT-4 acting under a variety of roles that it deems appropriate to the task. This implements a mixture of experts in which each expert is initially ignorant of their peers. Later, particular expert results are synthesized into a consensus result.
 
-#### Application of Plugin Forest Technique
+To initialize the tree of thoughts, GPT-4 is told to act as a researcher with formal training in economics. As a researcher, GPT-4 is then asked to identify which plugins should be used to assist in authoring a journal-quality academic paper in the field of economics.
 
-- A novel 'Plugin Forest' approach was employed, which entailed the configuration of multiple plugin collections and the execution of a 'tree of thoughts' prompting strategy. The resultant data from each collection was subsequently synthesized.
+At document creation time, many potentially appropriate plugins existed in the ChatGPT plugin directory, but ChatGPT itself only allowed access to three plugins concurrently. Fortunately, the directory included exactly three so-called finder plugins. These finder plugins are able to search across the directory and suggest other plugins for use depending on a user's use case.
 
-### Blind Review and Scoring Mechanism
+In the first round, GPT-4 uses the researcher role and the finder plugin to list nine plugins. That is, each active plugin may suggest three others for use. The plugins suggested often yield duplicates or hallucinations, but eventually a unique list of plugins between three and nine is identified. Given this list of plugins, GPT-4 is asked to identify kinds of people that it would like to discuss research with, and it is asked to assign those people three plugins from the list of plugins to be used. A response might be that GPT-4, as a researcher in economics, would like to discuss research with a seasoned economic policy analyst or a distinguished professor of economics from a top university.
 
-#### Blind Assessment
+For each role and plugin set suggested by GPT-4 in the first round, a new ChatGPT thread is created where GPT-4 takes on the specified role and plugin set. They are then asked to write on whatever the given topic for the tree is. Once all personas have created a draft literature review, a final round of prompting is completed in a synthesis thread. These threads were transfer into PDF files and uploaded to the Open Science Foundation for later anonymized presentation to raters.
 
-- To ensure impartiality, participants were unaware of the authors of the papers they reviewed, except for their own contributions. The principal investigator, however, was privy to the authorship details of all submissions.
+### Performance Variation by Model Version
 
-#### Scoring Parameters
+GPT-4 is a major model version with a number of subversions that have been deployed over time. The document creation period the GPT-authored documents used in this study ran across July 2023, and a new model version was deployed in the midst of authoring. GPT was used to construct four documents. As an accidental observation, two of the four GPT-authored summary literature reviews were constructed using a May version of the ChatGPT interface, which uses GPT-4 subversion GPT-4-0314, and two other documents were created using the July 20th version of the ChatGPT interface, which uses the GPT-4 subversion GPT-4-0613. Appendix B clarifies the specific mapping with links to the original and public ChatGPT threads.
 
-- Participants rated the papers on a scale of 1 to 10, focusing on two aspects: perceived quality of the content and likelihood of the paper being generated by GPT-4. This dual-scale assessment aimed to minimize any bias in quality perception influenced by the assumed origin of the paper.
-
-### Editing Process and Selection for Analysis
-
-#### Randomized Paper Selection
-
-- A random selection algorithm was used to pick one GPT-4 authored review per research question for further analysis. These selected pieces underwent editing by the principal investigator.
-
-#### Editing Workflow Evaluation
-
-- The study considered both the unedited (naive) AI-authored submissions and the potential benefits of AI-assisted editing in refining the final output.
-
-### Analytical Approach
-
-#### Statistical Comparison
-
-- The analysis involved a statistical comparison of the ratings assigned by participants, accounting for potential biases, including those inherent to individual participants and the principal investigator.
-
-#### Methodological Integrity
-
-- The study adhered to rigorous standards of academic research, ensuring the reliability and validity of the findings through methodical data collection and analysis.
-
-### Ethical Compliance
-
-#### Informed Consent
-
-- All participants were provided with a comprehensive informed consent form, elucidating the academic and commercial use of their input in an anonymized format.
-
-#### Voluntariness of Participation
-
-- Participation was voluntary, with the provision for participants to withdraw at any stage of the study. However, data collected prior to withdrawal were retained for analysis as per the study's protocol.
-
-The methodology of this research was meticulously designed to ensure a thorough and unbiased evaluation of GPT-4's capabilities in comparison with human expertise in economic research writing. The study's structured approach aimed at delivering insightful conclusions on the role and effectiveness of AI in academic literature review processes.
+[Chen et al](https://arxiv.org/abs/2307.09009) notes significant performance decreases for some tasks in GPT-4-0613 compared to its predecessor. To partial out this effect, the current paper calculates and reports on a regression coefficient for a dummy variable `is_march_gpt_model`, which takes a positive value when a document under assessment was generated by subversion GPT-4-0314.
 
 ## Results
+
+We begin with a case study discussion by examining results for a particular document, then proceed into descriptive statistics in order to check generalizability of case study findings. Regression analysis using ordinary least squares (OLS) and curvilinear regression is reported in the final section on results.
 
 #### Case Study Results
 
@@ -144,6 +119,16 @@ The methodology of this research was meticulously designed to ensure a thorough 
 
 - 3 model table
 - Regression of assessed education level on GPT Authorship
+
+<!-- ### Analytical Approach
+
+Authors also participated as raters, so author effects including self-authorship are extracted during multiple regression
+
+#### Statistical Comparison
+
+- The analysis involved a statistical comparison of the ratings assigned by participants, accounting for potential biases, including those inherent to individual participants and the principal investigator.
+
+-->
 
 ## Conclusion
 

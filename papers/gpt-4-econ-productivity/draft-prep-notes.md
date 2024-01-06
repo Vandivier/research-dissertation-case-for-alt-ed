@@ -5,9 +5,6 @@ This document also serves as a useful tool to prime ChatGPT context.
 ## Remaining TODO
 
 1. draft the paper
-   1. revise methodology to refer to questions and threads in the appendices
-   2. we should call out questionnaire design
-   3. methodology needs to describe the Plugin Forest in detail
 2. grep `places where GPT can help` in `GPT Study Participant notification` email
 3. polish, send to co-authors for review
    1. co-author question: does it make sense for a technical description of the Plugin Forest to go in the background section or the methodology? maybe both with a little duplication? since we want a bajillion pages?
@@ -89,11 +86,12 @@ answers:
 <!-- note: see make_table_1.py -->
 
 Table 1: Performance spread:
-| Author Group | Best Performing Topic | Best Topic Avg. Quality | Worst Performing Topic | Worst Topic Avg. Quality | Performance Spread |
-|--------------|------------------------|-------------------------|------------------------|--------------------------|--------------------|
-| GPT Authors | Macro Health | 7.03 | Austrian Neoclassical | 6.23 | 0.80 |
-| Non-GPT Authors | Austrian Neoclassical | 7.13 | Macro Health | 6.03 | 1.10 |
-| PhD Authors | Austrian Neoclassical | 7.13 | LLM Best Practices | 6.27 | 0.87 |
+
+| Author Group    | Best Performing Topic | Best Topic Avg. Quality | Worst Performing Topic | Worst Topic Avg. Quality | Performance Spread |
+| --------------- | --------------------- | ----------------------- | ---------------------- | ------------------------ | ------------------ |
+| GPT Authors     | Macro Health          | 7.03                    | Austrian Neoclassical  | 6.23                     | 0.80               |
+| Non-GPT Authors | Austrian Neoclassical | 7.13                    | Macro Health           | 6.03                     | 1.10               |
+| PhD Authors     | Austrian Neoclassical | 7.13                    | LLM Best Practices     | 6.27                     | 0.87               |
 
 ## Background and Introduction Notes
 
