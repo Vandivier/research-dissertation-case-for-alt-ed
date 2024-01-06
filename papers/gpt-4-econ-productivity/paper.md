@@ -1,3 +1,11 @@
+<!-- Note: This md file is intended to be converted to PDF
+So, there are some syntax like `\pagebreak` that look strange in a pure Markdown render
+Example compile command, from within `papers/gpt-4-econ-productivity/`:
+```
+pandoc ./paper.md -o ./paper-from-md.pdf
+```
+-->
+
 # GPT-4 Calibration as a Research Assistant in Economics
 
 ## Abstract
@@ -168,17 +176,18 @@ GPT-3 was released in [2020](https://arxiv.org/abs/2005.14165) and GPT-3.5 was r
 In general, a trend toward multimodal models with improved technical capabilities is clear, but practical improvements in year-over-year productivity remain nonuniformly increasing and modest. A clear empirical comparison is found between GPT-3.5 and GPT-4. Zheng et al provide a useful and robust approach to comparative quality analysis with a crowdsourced [Chatbot Arena](https://arxiv.org/abs/2306.05685). Table 3 below reproduces the top 3 leaderboard entries from the arena as observed on January 5, 2024, along with the release date for each model.
 
 Table 3
-| Model | Arena Elo rating | MT-bench (score) | Release Date
-|----------------|------------------|------------------|------|
-| GPT-4-Turbo | 1243 | 9.32 | 11/6/2023 |
-| GPT-4-0314 | 1192 | 8.96 | 3/14/2023|
-| GPT-4-0613 | 1158 | 9.18 | 6/13/2023|
+
+| Model       | Arena Elo rating | MT-bench (score) | Release Date |
+| ----------- | ---------------- | ---------------- | ------------ |
+| GPT-4-Turbo | 1243             | 9.32             | 11/6/2023    |
+| GPT-4-0314  | 1192             | 8.96             | 3/14/2023    |
+| GPT-4-0613  | 1158             | 9.18             | 6/13/2023    |
 
 The arena data show the dominance of GPT-4 over more than fifty models compared. Using the ratings provided by users, we see an improvement in the Arena Elo Rating for the top-performing model of about 4.02 percent over the course of about eight months. If we use the MT benchmark scores, we observe a slightly higher 4.28 percent increase over the same period, or an approximate improvement of 6.42 percent annualized. This seems decidedly modest compared to much of the popular rhetoric or academic writing on [runaway technology](Fairfield, Joshua AT. Runaway technology: can law keep up?. Cambridge University Press, 2021.) or the dangers of [fast takeoff AI](https://www.lesswrong.com/posts/shnSyzv4Jq3bhMNw5/alphago-zero-and-the-foom-debate).
 
 #### GPT-4 Plugin Growth Over Time
 
-ChatGPT Plugins were opened to the public on [March 23, 2023](https://openai.com/blog/chatgpt-plugins). There was an initial catalogue of 13 plugins. There were 83 plugins available in [May](​​https://wgmimedia.com/all-chatgpt-plugins/), and at the time of writing on January 3, 2024, there are now 1039 plugins listed in the directory. Figure 3 illustrates the growth of these plugins over time.
+ChatGPT Plugins were opened to the public on [March 23, 2023](https://openai.com/blog/chatgpt-plugins). There was an initial catalogue of 13 plugins. There were 83 plugins available in [May](https://wgmimedia.com/all-chatgpt-plugins/), and at the time of writing on January 3, 2024, there are now 1039 plugins listed in the directory. Figure 3 illustrates the growth of these plugins over time.
 
 ![ChatGPT Plugins Over Time](https://raw.githubusercontent.com/Vandivier/research-dissertation-case-for-alt-ed/5bb1aa06c4994ffa93234bf924128e44d5271e94/papers/gpt-4-econ-productivity/figures/figure_3.png "ChatGPT Plugins Over Time")
 
@@ -221,6 +230,8 @@ Addressing open ethical considerations remains an important concern for generati
 This study compared the quality of human-authored summary literature reviews to those produced by GPT-4 with a Plugin Forest. The drafts produced by GPT-4 are high in quality. This is more important than a mere tool addition to the toolset of the researcher. We should take a step back and begin to consider more strongly the broader concept of AI-driven research.
 
 This study directly justifies a systematic literature review implemented by artificial intelligence, but such a process is still fundamentally supervised and therefore constrained. A truly AI-driven approach would begin by asking a multimodal model, or other advanced model, about which research topics are most valuable in the first place.
+
+\pagebreak
 
 ## Appendix A: Questionnaire
 
@@ -267,6 +278,8 @@ For Document ID [DOCUMENT_ID], please answer the following three questions using
 3. Rate the likelihood that the article is written by GPT-4 on a scale from 1-10.
 
 An example answer would be ""u,1,1""
+
+\pagebreak
 
 ## Appendix B: Documents and ChatGPT Source Threads
 
