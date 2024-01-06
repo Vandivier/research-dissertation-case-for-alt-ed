@@ -35,15 +35,22 @@ JEL Codes:
 - C80 - General (Data Collection and Data Estimation Methodology; Computer Programs)
 - B41 - Economic Methodology
 - I23 - Higher Education and Research Institutions
+- A10, B41, J23, O3 [used by Korinek]
 
 ## Background and Introduction
 
-- lots of research on large language models, but less on multimodal models like GPT-4
-- we know generative ai task performance varies widely based on the particular task. today there is research on productivity does exist for knowledge work and research in general, and there is also some research on generative ai for financial analysis, but there is no direct research on the quality of economic research produced by GPT-4. We provide this and dive further to the level of research topics, providing nuance about when and how to use GPT-4 rather than mere top-line productivity estimates.
-- this is really important because GPT-4 has higher task performance and broader task usage compared to LLMs
-- GPT-4 provides unique productivity opportunities for researchers due to its ability to generate, improve, and execute code for data analysis and both read and create figures and tables. These tasks are not possible for pure large language models.
-- lots of discussion about ChatGPT which disregards GPT-4, the most powerful form of ChatGPT
-- people say that chatgpt hallucinates and in many cases it has been directly contraindicated for academic work (eg, Buchanan and Shapoval https://economistwritingeveryday.com/2023/06/04/new-paper-with-evidence-that-chatgpt-hallucinates-nonexistent-citations/)
+Economists are told that generative artificial intelligence tools including ChatGPT are on the one hand [increasingly prolific and useful tool](https://www.aeaweb.org/articles?id=10.1257/jel.20231736), while on the other hand there are critical voices calling such tools risky on quality or even legally problematic[[Bilal](https://twitter.com/MushtaqBilalPhD/status/1639902509274726400), [Buchanan et al](https://journals.sagepub.com/doi/10.1177/05694345231218454)]. There is a lack of empirical work on productivity and output quality, a lack of standard usage guidance, and a mixing up of large language models, ChatGPT, and other tools of artificial intelligence that have distinct usage patterns and productivity implications.
+
+This paper is the first to provide quantitative data calibrating GPT-4 against doctorate-produced research. We provide a level of utility and recognize a level of nuance by task that is absent in many discussions of research productivity by looking at a variety of topics within the field of economics. This paper describes a new best practice and achieves results that represent the cutting edge of generative artificial intelligence through the use of GPT-4 with a novel prompt engineering technique called a Plugin Forest.
+
+We find that GPT-4 with a Plugin Forest produces literature review summaries of comparable point-estimated quality to a doctorate-level researcher while retaining lower variation in quality compared to a human author. Of note, zero hallucinated citations were generated following this process, in contrast to results frequently attributed to ChatGPT, but in fact generally attributable to GPT-3.5, a substantially inferior and architecturally distinct model compared to GPT-4.
+
+We describe nuances with these results, such as weaker performance for lesser-published topics, we describe novel use cases for GPT-4 that add to known large language model use cases for research, and we make use of GPT-4 plugins with systematic and reprodicible plugin selection, a topic for which there is currently no published empirical work. We conclude with a discussion on expected future productivity trends and open research areas, providing an evidence-based case that productivity over time in the space of generative artificial intelligence is expected to grow at a modest pace.
+
+- TODO: novel tasks include reading and generating images like diagrams, executing, interpreting, and generating code, and translating documents between technical formats like latex, html, and markdown, and knowledge retrieval
+  - GPT-4 provides unique productivity opportunities for researchers due to its ability to generate, improve, and execute code for data analysis and both read and create figures and tables. These tasks are not possible for pure large language models.
+- TODO: more discussion on what a plugin forest is and why it's awesome
+  - more than half a dozen best practices built in, such as tree of thoughts, roles, mixture of experts, and chain of thought prompting, plus making systematic and reprodcible use of gpt-4 plugins
 - we know prompt strategy drives productivity, but research on GPT-4 that does exist fails to incorporate best-practice prompt techniques and leverage GPT-4 capabilities like plugins. Plugins importantly provide access to academic papers, and we know from research like "textbooks are all you need" that access to academic material is a very important driver of producing high-quality academic-level results.
 - GPT-4 performance has notably varied over time. [Chen et al](https://arxiv.org/abs/2307.09009) notes significant performance decreases for some tasks, and this observation has been independently replicated by the [ChatBot Arena Leaderboard Project](https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard). Importantly, this model shift took place during the observation period for the present study, and as a result we report a coefficient for performance shift relevant to our particular task in economic research.
   - Our observation period was May-July and the ChatGPT UI at that time used the March GPT-4 API, then switched to the June GPT-4 api during the observation period.

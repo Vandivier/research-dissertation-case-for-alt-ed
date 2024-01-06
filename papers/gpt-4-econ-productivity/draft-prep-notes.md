@@ -7,15 +7,14 @@ This document also serves as a useful tool to prime ChatGPT context.
 1. draft the paper
    1. revise methodology to refer to questions and threads in the appendices
    2. we should call out questionnaire design
-2. Review `Initial notes` section of [google doc](https://docs.google.com/document/d/1nfoj-e53_16zHdD476N0d6GUvYJvg11skAGcyEESTbs) and revise
-   - four sections remain to incorporate from the Google Doc
-   - grep `places where GPT can help` in `GPT Study Participant notification` email
-   - and find tweeted paper from patricia
+   3. methodology needs to describe the Plugin Forest in detail
+2. grep `places where GPT can help` in `GPT Study Participant notification` email
 3. polish, send to co-authors for review
+   1. co-author question: does it make sense for a technical description of the Plugin Forest to go in the background section or the methodology? maybe both with a little duplication? since we want a bajillion pages?
 4. triple check 'no hallucination' claim
-5. tailor for journal(s) (try one or few shot prompting to GPT for style transfer)
-   1. Target JEL (ref [paper](https://www.aeaweb.org/articles?id=10.1257/jel.20231736))
-   2. Author Korinek: https://www.korinek.com/
+5. tailor for JEL following Korinek
+   1. target 40-60 pages; may also make a letters form for a shorter paper
+   2. buchanan's paper is 43p and korinek is ~60+
 
 ## Related Threads and Links
 
@@ -256,3 +255,76 @@ Research Questions
 ### Next Steps
 
 Summary literature reviews will be sent for review on June 5, 2023, at latest. An earlier date may be announced if all literature reviews are collected before the cutoff date of June 4. Once summary literature reviews are sent, ratings are requested within two weeks.
+
+## Plugin Picking Methodology
+
+“What ChatGPT Plugins are ideal for academic research?”
+
+1. OpenAI publicly disclosed plugin support for ChatGPT late in March 2023 with twelve plugins initially available: https://openai.com/blog/chatgpt-plugins
+2. Currently, ChatGPT can only utilize three plugins concurrently. This presents an emergent problem as the store size scales and multiple plugins are added over the same use cases, such as the use case for literature review assistance. It currently stands as technically impossible for the system to autonomously decide how to go about conducting research. At a minimum, the researcher must select the plugins for use.
+3. There are dozens of plugins currently available for academic, research, and scientific use cases. A brute force search is possible, but it would quickly become an out-of-date analysis, it increases exposure to researcher selection bias, and it greatly diminishes the benefits of using AI for automated review in the first place. Presently, we are still able to exploit the plugin store by utilizing finder plugins. This class of plugin is responsible for knowing about the feature sets of other plugins. Currently there are only three. As the store grows, this strategy can be sustainably extended through a grandfathering or cross-validation strategy. In addition, if future tools make things easier, as they likely will, then current results represent a conservative forecast, so the current test remains valuable inasmuch as a preference for an AI-driven strategy today is expected to represent an even stronger preference in the same direction in the future.
+4. An ai-driven approach would be to ask ChatGPT about this…so i did. At the moment the three plugin search tools today are:
+   1. Chat Tool Finder
+   2. PlugFinder
+   3. Pluginpedia
+5. So that’s a happy coincidence that I exploited basically. In the future a researcher could use the same plugins for consistency or they might somehow do an assessment to pick their prefer “finder plugins”
+   ROLE:
+   You are a researcher with formal training in economics.
+
+CONTEXT:
+You have the following top-level goal: You would like to write a journal-quality academic paper in the field of economics.
+
+TASK:
+Identify the three best ChatGPT plugins to assist you achieve your top-level goal.
+
+## Final GPT Prompt notes
+
+This paper describes the Plugin Forest prompt technique, a unified framework for result optimization when using ChatGPT.
+
+High level: Configure N plugin collections, execute tree of thoughts prompting for each collection, then synthesize results.
+
+More tree of thoughts: https://www.reddit.com/r/ChatGPT/comments/13ppc5k/try_the_my_best_guess_is_technique_for_80/
+https://github.com/princeton-nlp/tree-of-thought-llm
+https://www.promptingguide.ai/techniques/tot
+
+Within-collection, construct your trees: a minimum of two variations; implement one or more critics to decide between the two options, then create
+Our trees are different from other ToT papers+self-consistency in a few important ways:
+Our trees are binary, dialectical, and dynamic. An evaluator can provide feedback to a navigator-generator agent beyond a pass/fail statement, and the navigator-generator can use this information to create an improved next step, so there is never a need to backtrack.
+
+Because the trees are binary, there is no consistency competition.
+
+1. Given our unique situation, it might be ideal not to use a tree algorithm at all. Instead, we could have the critic simply write their version of the paper and the navigator-generator could compare notes and they could negotiate a synthesis perhaps more richly and readily.
+2. A “marginalizing-in” approach in contrast to the “marginalizing-out” approach of self-consistency. Potential marginilizing-in pitfall: That “everyone’s opinion is equally valid” issue.
+3. Potential solution? Structured group prompting: give someone in the group veto power (editor, just like they have in the real world) basically, run a prompt simulation of the submission, revision, publishing process. We could do this in multiple steps similar to a “show your work” approach, or we could prompt with a group ROLE: eg you are an expert and highly senior principal investigator, a younger coauthor in the field, a peer reviewer, and an editor; directly write the paper you all agree to (is the multi-round negotiation beneficial or inefficient?)
+4. We use a binary tree. Our binary tree is a dialectical learner: The evaluator function provides accumulated context to the tree search navigator.
+5. Our tree explores a potentially open-ended space
+6. We use DFS, not BFS. Does it matter?
+7. Continue splitting the tree and learning until you run out of tokens, then reflect and synthesize the best answer given all knowledge up to that point. Requires a bit of token budgeting and constraining size for each LLM response but nbd.
+8. ToT+Dialectic Binary Tree (Base case “best practice”)
+   Agentic Peer Review (Accelerated ToT+DBT: “Just tell me what you want insteading of playing the hot/cold game”)
+   Structured Group Prompting (editor has veto power)
+   Process Simulation (GPT-4 has an observer role, not a group role)
+   Incorporate role/task, plan/execute, chaining, and reflection at every stage.
+9. The Plugin Forest incorporates more than half a dozen best practices by default with minimal researcher intervention:
+
+   1. Use a high quality model (plugins are currently tightly coupled to GPT-4)
+   2. Overcome the knowledge cutoff
+   3. ROLE/TASK, supercharged with role diversity
+   4. Mixture of Expert simulation by varying roles
+   5. PLAN/EXECUTE - planning it out improves outcomes and can be done with or without a chain of thought
+   6. Chain of Thought prompting
+   7. Tree of Thoughts prompting
+   8. Reflection, supercharged with critical reflection to help detect and heal hallucinations automatically
+
+10. I then verified the sources used where real...it’s worth noting that GPT-4 did not hallucinate a single fictional source under this prompting scheme (in contrast to the Buchannan GPT-3.5 ChatGPT work in econ)
+11. Search the ChatGPT Plugin Store for plugin search tools, find 3
+12. Use all of them and ROLE/TASK prompt GPT to select the best plugins for economic paper writing/
+13. Appendix B has threads. Current approach at: https://chat.openai.com/share/fc606c0b-e7c5-4781-9e15-cad65fbf8046
+14. Pitfalls: automated duplicate detection occasionally fails and prompting for reflection sometimes induces improper self-critique from the LLM (ie, owning up to mistakes it never made)
+    Asking the LLM to detect duplicates led to frequent mistakes. These mistakes became infrequent by asking the LLM to list the plugins then check whether there were duplicates after restating the list of plugins.
+    Four Solutions:
+    Manual Review: The researcher should already be doing a manual review at some point, catching errors early will save you pain, and an LLM admitting a mistake is a particular indicator for manual intervention.
+    Quadruple-Check Prompting: If the LLM admits a mistake, ask it to reflect on whether it really made such a mistake. If it flip-flops (saying you’re right, I didn’t make a mistake), then ask it to reflect on that flip-flop. If it doubles-down, saying it really didn’t make a mistake, for a total of agreement in three out of four trials, you may choose to proceed as if the statement were true rather than digging in with a manual review, at your own risk. This is my least preferred solution to this problem, but in some low-stakes and time-constrained environments it could be useful.
+    Programmatic Checking: Programmatic duplicate checks are extremely reliable.
+    To maintain a browser-based ChatGPT experience, a researcher could use a browser extension.
+    Alternatively, a researcher could exit the browser experience and interact with GPT-4 programmatically through the API.
