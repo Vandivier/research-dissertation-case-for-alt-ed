@@ -71,9 +71,9 @@ This study involves comparative authoring of one-page summary literature reviews
 
 Once these eighteen summary literature reviews were obtained, a sample of adults from the United States were questioned about their quality. Participants were also asked about the assessed education level of the document author and the likelihood of GPT-4 authorship. Participants were also asked about their own education and whether they have a degree in the field of economics. Appendix A provides further questionnaire details. The documents were normalized on font style and citation format prior to presentation.
 
-Thirty participants were recruited across two channels. Participants were provided an incentive of fifteen dollars each on average. Twenty-seven were recruited using the [Prolific recruitment platform](https://www.prolific.com/) and three others were recruited by word-of-mouth. The participant pool is not balanced to the census and substantially overweights graduate degree holders, as the objective of the study is mainly to calibrate GPT-4 against graduate degree holders and researchers and not to draw a comparison with the typical American adult.
-
-TODO: FOOTNOTE FOR THE OPEN DATA AND ANALYTICAL CODE ON GITHUB.
+Thirty participants were recruited across two channels\footnote{
+Anonymized study data and analytical code are available at https://osf.io/vxgy4.
+}. Participants were provided an incentive of fifteen dollars each on average. Twenty-seven were recruited using the [Prolific recruitment platform](https://www.prolific.com/) and three others were recruited by word-of-mouth. The participant pool is not balanced to the census and substantially overweights graduate degree holders, as the objective of the study is mainly to calibrate GPT-4 against graduate degree holders and researchers and not to draw a comparison with the typical American adult.
 
 GPT-4 authored a paper in each of four given topics, while other authors contributed any number of summary literature reviews up to four. The list of topics include:
 
@@ -108,14 +108,38 @@ GPT-4 is a major model version with a number of subversions that have been deplo
 
 We begin with a case study discussion by examining results for a particular document, then proceed into descriptive statistics in order to check generalizability of case study findings. Regression analysis using ordinary least squares (OLS) and curvilinear regression is reported in the final section on results.
 
-#### Case Study Results
+### Case Study Results
 
-#### Generalized Case Study
+Document 8 was written by GPT-4 on the topic of the impact of remote work on the gender wage gap and career progression in the post-pandemic labor market, but less than twenty-seven percent of respondents rated this document as a likely creation of GPT-4, where a likely event is scored a six or higher on a ten-point scale.
+
+Document 8 had an average quality rating of 6.8, a median of seven, and an interquartile range from six to eight, indicating a strong majority assessment of high quality writing in the document. While the document was rated high in quality, it was not calibrated at the doctorate level. On average, respondents assigned an education level between an undergraduate and a master's degree holder to the author of Document 8.
+
+When responses are subselected for respondents with a doctorate-level education, the median rating remains at seven, although the standard deviation on the estimate shrinks. Notably, no respondent that holds a doctoral degree assigned the writing at the undergraduate level. From five responses by a doctorate, three assigned a master's education level to the author of Document 8, and two assigned it a Doctor of Philosophy or higher.
+
+### Generalized Case Study
+
+In the case of Document 8, respondents assigned a high quality rating and an education level above the undergraduate level to GPT-4, while expecting the author was not GPT-4. These findings generalize across the other documents authored by GPT-4. In general, respondents assign a low likelihood of GPT-4 authorship to all papers, whether or not GPT-4 is in fact the author.
+
+The average likelihood rating that respondents assigned for GPT-4 authorship across all papers, regardless of the actual author, was 4.39, while the average likelihood rating assigned for papers that were authored by GPT-4 was 4.63 (p > 0.36). Still, the output from GPT-4 feels somehow distinct from doctoral writing to the participants. Respondents assigned a Ph.D. education to GPT-4 about thirteen percent of the time, while they assigned such an education to proper Ph.D. authors twenty-two percent of the time.
+
+This difference of approximately ten percent holds when we subselect the responses given by respondents with a doctoral education, although again we see overall ratings more favorable from these respondents. When a doctorate rated a paper authored by a doctorate, they assigned a Ph.D. or higher level of education about thirty-one percent of the time. When a doctorate rated a paper authored by GPT-4, they assigned a Ph.D. or higher level of education about twenty percent of the time.
+
+TODO:
 
 - People couldn't tell it was GPT-4
 - Even field doctorates couldn't tell
+- high quality, low standard deviation
+- worse on austrian + topic variation (see table 1)
 
-#### Regression Results
+Table 1: Performance spread:
+
+| Author Group    | Best Performing Topic | Best Topic Avg. Quality | Worst Performing Topic | Worst Topic Avg. Quality | Performance Spread |
+| --------------- | --------------------- | ----------------------- | ---------------------- | ------------------------ | ------------------ |
+| GPT Authors     | Macro Health          | 7.03                    | Austrian Neoclassical  | 6.23                     | 0.80               |
+| Non-GPT Authors | Austrian Neoclassical | 7.13                    | Macro Health           | 6.03                     | 1.10               |
+| PhD Authors     | Austrian Neoclassical | 7.13                    | LLM Best Practices     | 6.27                     | 0.87               |
+
+### Regression Results
 
 - 3 model table
 - Regression of assessed education level on GPT Authorship

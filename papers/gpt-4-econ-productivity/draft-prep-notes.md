@@ -5,6 +5,8 @@ This document also serves as a useful tool to prime ChatGPT context.
 ## Remaining TODO
 
 1. draft the paper
+   1. insert figures and tables
+   2. discussion on tables
 2. grep `places where GPT can help` in `GPT Study Participant notification` email
 3. polish, send to co-authors for review
    1. co-author question: does it make sense for a technical description of the Plugin Forest to go in the background section or the methodology? maybe both with a little duplication? since we want a bajillion pages?
