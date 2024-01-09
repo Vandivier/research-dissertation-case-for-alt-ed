@@ -72,7 +72,7 @@ This study involves comparative authoring of one-page summary literature reviews
 Once these eighteen summary literature reviews were obtained, a sample of adults from the United States were questioned about their quality. Participants were also asked about the assessed education level of the document author and the likelihood of GPT-4 authorship. Participants were also asked about their own education and whether they have a degree in the field of economics. Appendix A provides further questionnaire details. The documents were normalized on font style and citation format prior to presentation.
 
 Thirty participants were recruited across two channels\footnote{
-Anonymized study data and analytical code are available at https://osf.io/vxgy4.
+Anonymized study data and analytical code are available at \url{https://osf.io/vxgy4?view_only=ca664b55eae243339f13c59cc5dea3ec}.
 }. Participants were provided an incentive of fifteen dollars each on average. Twenty-seven were recruited using the [Prolific recruitment platform](https://www.prolific.com/) and three others were recruited by word-of-mouth. The participant pool is not balanced to the census and substantially overweights graduate degree holders, as the objective of the study is mainly to calibrate GPT-4 against graduate degree holders and researchers and not to draw a comparison with the typical American adult.
 
 GPT-4 authored a paper in each of four given topics, while other authors contributed any number of summary literature reviews up to four. The list of topics include:
