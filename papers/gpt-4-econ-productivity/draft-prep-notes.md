@@ -15,11 +15,6 @@ This document also serves as a useful tool to prime ChatGPT context.
    1. target 40-60 pages; may also make a letters form for a shorter paper
    2. buchanan's paper is 43p and korinek is ~60+
 
-## Related Threads and Links
-
-1. https://chat.openai.com/c/28294005-8131-4ae6-a515-6b5fb5af5cf1
-2. https://chat.openai.com/c/97192013-702e-47f6-afd2-e430530d4cbd
-
 ## EDA Notes
 
 ### Document 8 Case Study

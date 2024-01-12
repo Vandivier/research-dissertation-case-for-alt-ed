@@ -75,6 +75,8 @@ Thirty participants were recruited across two channels\footnote{
 Anonymized study data and analytical code are available at \url{https://osf.io/vxgy4?view_only=ca664b55eae243339f13c59cc5dea3ec}.
 }. Participants were provided an incentive of fifteen dollars each on average. Twenty-seven were recruited using the [Prolific recruitment platform](https://www.prolific.com/) and three others were recruited by word-of-mouth. The participant pool is not balanced to the census and substantially overweights graduate degree holders, as the objective of the study is mainly to calibrate GPT-4 against graduate degree holders and researchers and not to draw a comparison with the typical American adult.
 
+Survey responses were partially blind in that three participants also contributed content for assessment. Such respondents had knowledge over their own authorship, but not the authorship of other documents.
+
 GPT-4 authored a paper in each of four given topics, while other authors contributed any number of summary literature reviews up to four. The list of topics include:
 
 1. Is modern Austrian economics distinct from neoclassical economics?
@@ -124,12 +126,11 @@ The average likelihood rating that respondents assigned for GPT-4 authorship acr
 
 This difference of approximately ten percent holds when we subselect the responses given by respondents with a doctoral education, although again we see overall ratings more favorable from these respondents. When a doctorate rated a paper authored by a doctorate, they assigned a Ph.D. or higher level of education about thirty-one percent of the time. When a doctorate rated a paper authored by GPT-4, they assigned a Ph.D. or higher level of education about twenty percent of the time.
 
-TODO:
+Interestingly, doctors rated GPT-authored economic papers slightly higher on average (6.65) than those authored by their peers (6.49). While the means were not significantly different, GPT-authored papers had an edge on average and the quality variation among GPT-authored papers was smaller than the variation among doctors as assessed by doctors. This constitutes strong evidence that summary literature reviews produced by with a Plugin Forest and GPT-4 are reliably competitive with journal-quality content.
 
-- People couldn't tell it was GPT-4
-- Even field doctorates couldn't tell
-- high quality, low standard deviation
-- worse on austrian + topic variation (see table 1)
+The edge for GPT-4 predictably grows when doctoral assessments are adjusted to exclude self-ratings. The average quality score given by Ph.D. holders to documents authored by other Ph.D. holders with self-authored documents excluded is 6.15. This lower mean quality assessment was not significantly different from documents constructed through the Plugin Forest in our study (t = -1.07, p = 0.292).
+
+Table 1 gives an overview of document quality by topic and the kind of author. Ph.D. authors had the highest performance of all author kinds when writing a comparison between Austrian and Neoclassical economics. This result confirms the hypothesis of weaker performance from GPT-4 on relatively niche topics, which would be less available in GPT-4 training data.
 
 Table 1: Performance spread:
 
