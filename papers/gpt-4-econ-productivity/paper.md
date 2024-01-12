@@ -142,8 +142,31 @@ Table 1: Performance spread:
 
 ### Regression Results
 
+Two ordinary least squares models are investigated to directly explain the relation between GPT-4 authorship, quality, and assessed author education level. The cartesian product of thirty respondents and eighteen documents yields 540 observations for these models, with participant fixed effects included as an independent variable.
+
+Table 2 compares two simple regressions of assessed education level on GPT-4 authorship. Participant effects are excluded for brevity and none of them were significant in the first specification, so the second specification with improved Akaike information criterion (AIC) is preferred. Assessed education for the author of a document has three possible responses and the master's level is the intercept. The intercepts is robustly positive and significant across specifications. Author assessment at the undergraduate or lower level as well as the doctorate level are negatively related to GPT-4 authorship. This model helps to calibrate GPT-4 performance to the level of a master's degree holder.
+
+|                                       | Model 1 (Participant FE) | Model 2 (Without Participant FE) |
+| ------------------------------------- | ------------------------ | -------------------------------- |
+| Intercept (Master's)                  | 0.2587\*\*               | 0.2623\*\*\*                     |
+|                                       | (0.1048)                 | (0.0307)                         |
+| Author Assessed Undergraduate or Less | -0.0863                  | -0.0845                          |
+|                                       | (0.0562)                 | (0.0535)                         |
+| Author Assessed Ph.D. or Higher       | -0.0547                  | -0.0526                          |
+|                                       | (0.0433)                 | (0.0399)                         |
+| R-squared                             | 0.0057                   | 0.0055                           |
+| R-squared Adj.                        | -0.0550                  | 0.0018                           |
+| AIC                                   | 645.48                   | 587.56                           |
+
+---
+
+Standard errors in parentheses.
+
+- p<.1, ** p<.05, \***p<.01
+
+TODO:
+
 - 3 model table
-- Regression of assessed education level on GPT Authorship
 
 <!-- ### Analytical Approach
 

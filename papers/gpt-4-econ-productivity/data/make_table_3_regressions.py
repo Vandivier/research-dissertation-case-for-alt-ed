@@ -43,5 +43,5 @@ summary_table = summary_col([model_1, model_2, model_3], stars=True,
                                          'Model 3 (Expects GPT)'],
                             info_dict={'AIC': lambda x: f"{x.aic:.2f}"})
 
-with open('../figures/table_2_regressions_raw.txt', 'w') as f:
+with open('../figures/table_3_regressions_raw.txt', 'w') as f:
     f.write(summary_table.as_text())
