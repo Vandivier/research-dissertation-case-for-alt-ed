@@ -53,7 +53,7 @@ This paper is the first to provide quantitative evidence comparing GPT-4 researc
 
 We find that GPT-4 with a Plugin Forest reliably produces literature review summaries of superior or comparable quality to doctors in the field. Of note, zero hallucinated citations were generated following this process, in contrast to results frequently attributed to ChatGPT, but in fact generally attributable to GPT-3.5, a substantially inferior and architecturally distinct model compared to GPT-4.
 
-These findings are similar to results found in other fields including medicine. [Taloni et al](https://www.nature.com/articles/s41598-023-45837-2) found that humans performed better than GPT-3.5 in the self-assessment program of American Academy of Ophthalmology, but GPT-4 performed better than humans. [Brin et al](https://www.nature.com/articles/s41598-023-43436-9) reported similar performance in an analysis of soft skill questions from the United States Medical Licensing Examination, and [Mustafa Eray Kılıç](https://www.medrxiv.org/content/10.1101/2023.07.12.23292564v1) found similar results in Turkish Medical Specialization Exam performance.
+These results indicate a general pattern across fields when considered alongside existing research in other fields including medicine. [Taloni et al](https://www.nature.com/articles/s41598-023-45837-2) found that humans performed better than GPT-3.5 in the self-assessment program of American Academy of Ophthalmology, but GPT-4 performed better than humans. [Brin et al](https://www.nature.com/articles/s41598-023-43436-9) reported similar performance in an analysis of soft skill questions from the United States Medical Licensing Examination, and [Mustafa Eray Kılıç](https://www.medrxiv.org/content/10.1101/2023.07.12.23292564v1) found similar results in Turkish Medical Specialization Exam performance.
 
 We describe nuances with these results, such as weaker performance for lesser-published topics, we describe novel use cases for GPT-4 that add to known large language model use cases for research, and we make use of GPT-4 plugins with systematic and reprodicible plugin selection, a topic for which there is currently no published empirical work. We conclude with a discussion on expected future productivity trends and open research areas, providing an evidence-based case that productivity over time in the space of generative artificial intelligence is expected to grow at a modest pace.
 
@@ -89,6 +89,9 @@ GPT-4 authored a paper in each of four given topics, while other authors contrib
 These topics were respectively selected to test a lesser-published topic in economics, a highly-published topic, a recent topic, and a topic in the technical domain of ChatGPT.
 
 ### The Plugin Forest
+
+<!-- TODO: plugin forest figure -->
+<!-- TODO: tables (and figures?) as latex with proper caption and footers -->
 
 GPT-4 authored summary literature reviews under the supervision of the principal investigator following a novel prompt engineering strategy called the Plugin Forest. The Plugin Forest is designed specifically as a best practice for use with ChatGPT plugins and it incorporates more than half a dozen evidence-based techniques for improving generative artificial intelligence task performance.
 
@@ -144,53 +147,82 @@ Table 1: Performance spread:
 
 ### Regression Results
 
-Two ordinary least squares models are investigated to directly explain the relation between GPT-4 authorship, quality, and assessed author education level. The cartesian product of thirty respondents and eighteen documents yields 540 observations for these models, with participant fixed effects included as an independent variable.
+Two ordinary least squares (OLS) models are investigated to directly explain the relation between GPT-4 authorship, assessed author education level, anf quality. The cartesian product of thirty respondents and eighteen documents yields 540 observations for these models, with participant fixed effects included as an independent variable.
 
-Table 2 compares two simple regressions of assessed education level on GPT-4 authorship. Participant effects are excluded for brevity and none of them were significant in the first specification, so the second specification with improved Akaike information criterion (AIC) is preferred. Assessed education for the author of a document has three possible responses and the master's level is the intercept. The intercepts is robustly positive and significant across specifications. Author assessment at the undergraduate or lower level as well as the doctorate level are negatively related to GPT-4 authorship. This model helps to calibrate GPT-4 performance to the level of a master's degree holder.
+Table 2 compares two simple regressions of assessed education level on GPT-4 authorship. Participant effects are excluded for brevity and none of them were significant in the first specification, so the second specification with improved Akaike information criterion (AIC) is preferred. Assessed education for the author of a document has three possible responses and the master's level is the intercept. The intercepts is robustly positive and significant across specifications. Author assessment at the undergraduate or lower level as well as the doctorate level are negatively related to GPT-4 authorship. This model identifies typical GPT-4 authorship with a master's degree education.
+
+Table 2
 
 |                                       | Model 1 (Participant FE) | Model 2 (Without Participant FE) |
 | ------------------------------------- | ------------------------ | -------------------------------- |
 | Intercept (Master's)                  | 0.2587\*\*               | 0.2623\*\*\*                     |
-|                                       | (0.1048)                 | (0.0307)                         |
 | Author Assessed Undergraduate or Less | -0.0863                  | -0.0845                          |
-|                                       | (0.0562)                 | (0.0535)                         |
 | Author Assessed Ph.D. or Higher       | -0.0547                  | -0.0526                          |
-|                                       | (0.0433)                 | (0.0399)                         |
 | R-squared                             | 0.0057                   | 0.0055                           |
 | R-squared Adj.                        | -0.0550                  | 0.0018                           |
 | AIC                                   | 645.48                   | 587.56                           |
 
----
+Participant and author fixed effects excluded for brevity.
 
-Standard errors in parentheses.
+p<.1, ** p<.05, \***p<.01
 
-- p<.1, ** p<.05, \***p<.01
+Table 3 provides three specifications for an OLS model of quality. The initial model is a linear model with participant fixed effects. Model 2 is a curvilinear model that introduces quadratic terms for participant attention and assessed GPT-4 likelihood.
 
-TODO:
+The curvilinear model performs well, but it is more complicated to interpret and apply, so a third model adds a simple boolean about whether the participant expects the document under rating to be authored by GPT-4. This dummy variable takes a value of one when assessed likelihood of GPT-4 authorship is greater than or equal to six on a ten-point scale.
 
-- 3 model table
+Table 3
 
-<!-- ### Analytical Approach
+|                                                  | Model 1 (Linear FE) | Model 2 (Curvilinear) | Model 3 (Expects GPT) |
+| ------------------------------------------------ | ------------------- | --------------------- | --------------------- |
+| Intercept                                        | 2.1519\*\*\*        | 1.0537\*\*\*          | 1.0718\*\*\*          |
+| Author is Master's Level                         | -0.2235             | -0.2369               | -0.2311               |
+| Author is Ph.D. Paper Webservice                 | -0.1152             | -0.1395               | -0.1144               |
+| Author is Other College Paper Webservice         | -0.4137\*\*\*       | -0.3951\*\*\*         | -0.4124\*\*\*         |
+| GPT-4 with March Model is Author                 | 0.0639              | 0.0633                | 0.0609                |
+| Respondent is Author                             | 1.2930\*\*          | 1.6037\*\*\*          | 1.2913\*\*            |
+| GPT-4 is Author                                  | -0.1021             | -0.1069               | -0.0980               |
+| Assessed Author as Ph.D.                         | 1.1321\*\*\*        | 1.1723\*\*\*          | 1.1198\*\*\*          |
+| Assessed Author at Undergraduate Level or Less   | -1.9055\*\*\*       | -1.8657\*\*\*         | -1.8994\*\*\*         |
+| Respondent Education Level is Doctorate          | 0.2172              | -0.1006               | -0.0273               |
+| Respondent Education Level is Undergraduate      | 0.3585\*\*\*        | 0.4007\*\*\*          | 0.4408\*\*\*          |
+| Respondent Education Level is HS or Less         | 0.3192\*\*          | 0.5025\*\*\*          | 0.5315\*\*\*          |
+| Respondent Education Level is Some College       | -0.8556\*\*\*       | -0.5250\*             | -0.5592\*             |
+| Respondent has Degree in Economics               | 0.5113\*\*\*        | 0.0402                | 0.0877                |
+| Topic: LLM Best Practices                        | 0.0758              | 0.0908                | 0.0777                |
+| Topic: Macroeconomic Indicators                  | -0.0887             | -0.1008               | -0.0944               |
+| Topic: Gender Wage Gap, Remote Work, and COVD-19 | 0.1526              | 0.1641                | 0.1552                |
+| Assessed GPT Likelihood                          | 0.0181              | 0.2902\*\*\*          |                       |
+| Assessed GPT Likelihood Squared                  |                     | -0.0273\*\*\*         |                       |
+| Participant Attention                            | 0.5494\*\*\*        | 1.2658\*\*\*          | 1.3731\*\*\*          |
+| Participant Attention Squared                    |                     | -0.0686\*\*\*         | -0.0741\*\*\*         |
+| Participant Expects GPT-4 Authorship             |                     |                       | 0.0219                |
+| R-squared                                        | 0.5486              | 0.5553                | 0.5482                |
+| R-squared Adj.                                   | 0.5104              | 0.5167                | 0.5101                |
+| AIC                                              | 1908.00             | 1901.96               | 1908.42               |
 
-Authors also participated as raters, so author effects including self-authorship are extracted during multiple regression
+Participant and author fixed effects excluded for brevity.
 
-#### Statistical Comparison
+p<.1, ** p<.05, \***p<.01
 
-- The analysis involved a statistical comparison of the ratings assigned by participants, accounting for potential biases, including those inherent to individual participants and the principal investigator.
+The intercept is associated with authorship by a doctor. The main result of interest is that GPT-4 authorship is associated with comparable quality to a doctor. The coefficient is negative and insignificant for GPT-4 authorship. It is also small in size when compared to authors of other kinds. For example, authorship by a Master's degree holder or a Ph.D. level writing service is associated with a larger negative coefficient.
 
--->
+Notice that the negative effect of GPT-4 authorship is attenuated with a positive effect for the use of the older March version of GPT-4, affirming reports of weakened performance with the summer model. See Table 4 in the conclusion which adds external evidence that the latest versions of GPT-4 perform substantially better than both the March and June models. The current net effect is near zero and will be dominated by topical selection, but the projected effect with more recent versions of GPT-4 will be positive even prior to topical selection.
+
+It is interesting to note that anti-innovation bias appears absent with respect to GPT-4. The expectation of GPT-4 authorship, independent of actual authorship, has a positive association with assessed quality. Another interesting note from this regression analysis, in contrast to the case study results, is that the effect of a doctorate-level education on the respondent did not robustly correlate with higher assessed quality.
 
 ## Conclusion
 
-The findings of this study strongly confirm the utility of GPT-4 and the Plugin Forest for use in general research and publication-level work in the field of economics. The demonstrated ability of GPT-4 to generate literature reviews of quality comparable to that of doctorate-level researchers, while demonstrating reduced variation in quality and zero hallucinated citations removes the controversy around such tools and pushes the academy to better understand the value of these tools and the concrete techniques by which they are optimally utilized. This study not only sheds light on the efficacy of GPT-4 but also pioneers the systematic and reproducible use of its plugins, setting clear best practices for the state of usage today, and also marking clear opportunities for future research.
+The findings of this study strongly confirm the utility of GPT-4 and the Plugin Forest for use in general research and publication-level work in the field of economics. The demonstrated ability of GPT-4 to generate literature reviews of quality comparable to that of doctorate-level researchers, while demonstrating reduced variation in quality and zero hallucinated citations reduces the controversy around such tools and pushes the academy toward higher productivity with concrete techniques for optimal utilization.
+
+This study not only sheds light on the efficacy of GPT-4 but also pioneers the systematic and reproducible use of its plugins, setting clear best practices for the state of usage today, and also marking clear opportunities for future research.
 
 ### Key Takeaways
 
-1. **Equivalency in Quality**: GPT-4's output, calibrated with the Plugin Forest technique, matches the quality of doctorate-level research in economics, providing a reliable approach for literature review composition.
+1. **Comparable or Superior Quality**: GPT-4's output, calibrated with the Plugin Forest technique, matches the quality of doctorate-level research in economics, providing a reliable approach for literature review composition.
 
 2. **Consistency and Reliability**: The consistency of GPT-4’s performance, exhibiting less variance compared to human-authored documents, underscores its reliability as a research tool.
 
-3. **Style Distinction**: Graders, including those with graduate education, could not consistently distinguish between GPT-4 and human-authored documents, indicating the model's advanced capability. However, the distinct style of GPT-4’s outputs, while maintaining quality, suggests room for stylistic refinement to better align with traditional academic writing.
+3. **Style Distinction**: Graders, including those with graduate education, could not consistently distinguish between GPT-4 and human-authored documents, indicating the model's advanced capability. However, the distinct style of GPT-4 output, while maintaining quality, suggests room for stylistic refinement to better align with traditional academic writing. Respondents did consistently state that documents authored by GPT-4 were not written by a doctor.
 
 4. **Topic Sensitivity and Limitations**: The study acknowledges GPT-4's lower performance in lesser-studied topics, indicating a need for further development in handling niche academic subjects.
 
@@ -208,9 +240,9 @@ GPT-3 was released in [2020](https://arxiv.org/abs/2005.14165) and GPT-3.5 was r
 
 [Mamba](https://arxiv.org/pdf/2312.00752.pdf) and [Heyena Hierarchy](https://arxiv.org/abs/2302.10866) are two examples of fundamentally different model architectures, although the practical improvement from these architectures is yet to be seen.
 
-In general, a trend toward multimodal models with improved technical capabilities is clear, but practical improvements in year-over-year productivity remain nonuniformly increasing and modest. A clear empirical comparison is found between GPT-3.5 and GPT-4. Zheng et al provide a useful and robust approach to comparative quality analysis with a crowdsourced [Chatbot Arena](https://arxiv.org/abs/2306.05685). Table 3 below reproduces the top 3 leaderboard entries from the arena as observed on January 5, 2024, along with the release date for each model.
+In general, a trend toward multimodal models with improved technical capabilities is clear, but practical improvements in year-over-year productivity remain nonuniformly increasing and modest. A clear empirical comparison is found between GPT-3.5 and GPT-4. Zheng et al provide a useful and robust approach to comparative quality analysis with a crowdsourced [Chatbot Arena](https://arxiv.org/abs/2306.05685). Table 4 below reproduces the top 3 leaderboard entries from the arena as observed on January 5, 2024, along with the release date for each model.
 
-Table 3
+Table 4
 
 | Model       | Arena Elo rating | MT-bench (score) | Release Date |
 | ----------- | ---------------- | ---------------- | ------------ |
