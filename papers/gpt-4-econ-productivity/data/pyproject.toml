@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "gpt-4-study-data-analysis"
+version = "0.1.0"
+description = ""
+authors = ["John Vandivier <john@ladderly.io>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "gpt_4_study_data_analysis"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.1.4"
+statsmodels = "^0.14.1"
+matplotlib = "^3.8.2"
+scipy = "^1.11.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
